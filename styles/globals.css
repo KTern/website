@@ -1,0 +1,326 @@
+@import url("https://use.typekit.net/bib4xqk.css");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: myriad-pro, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: myriad-pro, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-process-primary {
+    background-color: #C70039
+}
+
+.custom-process-secondary {
+    background-color: #feeeec
+}
+
+.custom-labs-primary {
+    background-color: #008000
+}
+
+.custom-labs-secondary {
+    background-color: #e9ffdb
+}
+
+.custom-maps-primary {
+    background-color: #fd5800
+}
+
+.custom-maps-secondary {
+    background-color: #ffe2cc;
+}
+
+.custom-mines-primary {
+    background-color: #BA55D3
+}
+
+.custom-mines-secondary {
+    background-color: #eed2f4
+}
+
+.custom-heading {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    font-style: normal;
+}
+
+.custom-subheading {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+}
+
+.custom-card-heading {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.custom-card-subheading {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1140px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.hello {
+    position: relative;
+    animation: mymove 20s infinite alternate linear;
+    width: fit-content;
+}
+
+.hello:hover {
+    animation-play-state: paused;
+}
+
+@keyframes mymove {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(-100% + (6*300px)));
+    }
+}
+
+.carousel-focus:hover {
+    transition: all 0.8s;
+    transform: scale(1.1);
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #ffb317;
+    /*Set to match the Tailwind colour you want the active one to be */
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden
+}
+
+
+/* Header */
+
+.mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* #hoverable Class Styles */
+
+.hoverable {
+    position: static;
+}
+
+.hoverable>a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+    display: block;
+}
+
+
+/* #toggle Class Styles */
+
+.toggleable>label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:not(checked)~.mega-menu {
+    display: none;
+}
+
+.toggle-input:checked~.mega-menu {
+    display: block;
+}
+
+.toggle-input:checked+label {
+    background: white;
+}
+
+.toggle-input:checked~label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+
+/* Chip */
+
+.click-chip {
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: inline-flex;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.click-chip:hover {
+    transform: scale(1.1);
+    background-color: #CFD2D8;
+}
+
+.outline-green {
+    border: 1.5px solid black;
+    color: black;
+    outline: none;
+}
+
+
+/* Search icon */
+
+#demo-2 {
+    outline: none;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 70px;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+input[type=search]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #B3B7BE;
+    -webkit-box-shadow: 0 0 5px #B3B7BE;
+    -moz-box-shadow: 0 0 5px #B3B7BE;
+    box-shadow: 0 0 5px #B3B7BE;
+}
+
+input:-moz-placeholder {
+    color: #999;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.bots-card {
+    background-color: #EAEDF2;
+    height: 200px;
+    width: 200px;
+}
