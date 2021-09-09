@@ -54,7 +54,7 @@ export default function Footer () {
                         </div>
                        </div>
                     <div>
-                        <p className="text-white custom-card-subheading">Ktern is now Available on SAP Store</p>
+                        <img src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="text-white custom-card-subheading"/>
                     </div>
                 </div>
 

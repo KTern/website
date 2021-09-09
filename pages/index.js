@@ -14,8 +14,8 @@ export default function Home() {
                       <h2 className="mt-4 top-0 mb-2 font-bold  custom-heading">Finish what you started</h2>
                       <p className="p-4 mb-6 max-w-2xl mx-auto mb-12  text-xl md:custom-subheading">Correct annotation helps your customers find their way around new features.</p>
             
-                      <a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300  text-lg text-black  font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Free Trial</a>
-                      <a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Contact Sales</a>
+                      <a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300  text-lg text-black  font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" target="_blank" rel="noopener noreferrer" href="https://app.ktern.com">Free Trial</a>
+                      <a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="/contact">Contact Sales</a>
                   </div>
               </div>
           </section>
@@ -79,12 +79,13 @@ export default function Home() {
                                   <h2 className="custom-card-heading">Digital Projects</h2>
                                   <p className=" leading-relaxed custom-card-subheading">Amet minim mollit non deserunt . </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                      <button to="#" className="icon-link__link">
+                                       <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
                                               <span className="font-bold">Learn more&nbsp;</span>
                                             
                                   </div>
-                                      </button>
+                                
+                                  </a>
                                   </div>
 
                               </div>
@@ -101,13 +102,13 @@ export default function Home() {
                                   <h2 className="custom-card-heading">Digital Process</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                      <button to="#" className="icon-link__link">
+                                      <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
                                               <span className="font-bold">Learn more&nbsp;</span>
                                             
                                   </div>
                                 
-                                  </button>
+                                  </a>
                                   </div>
                               </div>
                           </div>
@@ -123,13 +124,13 @@ export default function Home() {
                                   <h2 className="custom-card-heading">Digital Labs</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt . </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                      <button to="#" className="icon-link__link">
+                                        <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
                                               <span className="font-bold">Learn more&nbsp;</span>
                                             
                                   </div>
                                 
-                                  </button>
+                                  </a>
                                   </div>
                               </div>
                           </div>
@@ -145,13 +146,13 @@ export default function Home() {
                                   <h2 className="custom-card-heading">Digital Maps</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                      <button to="#" className="icon-link__link">
+                                        <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
                                               <span className="font-bold">Learn more&nbsp;</span>
                                             
                                   </div>
                                 
-                                  </button>
+                                  </a>
                                   </div>
                               </div>
                           </div>
@@ -167,13 +168,13 @@ export default function Home() {
                                   <h2 className="custom-card-heading">Digital mines</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                      <button to="#" className="icon-link__link">
+                                      <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
                                               <span className="font-bold">Learn more&nbsp;</span>
-                                              
+                                            
                                   </div>
                                 
-                                  </button>
+                                  </a>
                                   </div>
                               </div>
                           </div>
@@ -188,7 +189,7 @@ export default function Home() {
           <section className="xl:px-20">
           <div className="p-4 md:p-24 flex flex-wrap mx-auto">
             <div className="flex flex-col w-full  mb-5 md:w-1/2 md:mb-0">
-                <a className="relative shadow flex flex-col flex-auto px-5 py-8  overflow-hidden  md:px-8 group border-2 hover:border-black  bg-gray-50" href="/pricing/">
+                <a className="relative shadow flex flex-col flex-auto px-5 py-8  overflow-hidden  md:px-8 group border-2 hover:border-black  bg-gray-50" href="/pricing">
                     <div className="-ml-5 md:-ml-8">
                         <div style={{width: "240px"}}>
                     <div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk max-w-[200px] mx-0 mr-auto md:max-w-none transform transition-transform group-hover:scale-105 duration-700  mx-auto w-full">
@@ -215,7 +216,7 @@ export default function Home() {
                 </a>
             </div>
             <div className="p-1 md:px-8 space-y-5 flex flex-col w-full  md:w-1/2">
-                <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black" href="/features/">
+                <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black" href="">
                     <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                         <div>
                             <h3 className="mt-3 custom-card-heading">Features</h3>
@@ -238,10 +239,10 @@ export default function Home() {
                         </div>
                     </div>
                 </a>
-                <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black" href="/features/">
+                <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black" href="/resources">
                     <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                         <div>
-                            <h3 className="mt-3 custom-card-heading">Integrations</h3>
+                            <h3 className="mt-3 custom-card-heading">Resources</h3>
                             <p className="mt-3 custom-card-subheading">Get to know more up close.</p>
                         </div>
                         <div className="mt-20">
@@ -275,21 +276,42 @@ export default function Home() {
                               <img src="/assets/logo.png" alt=""/>
                           </span>
                           <span className="custom-card-heading">$33,261</span>
-                          <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                              <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                               <a href="/products/digital-projects" className="icon-link__link">
+                                          <div className="icon-link__label">
+                                              <span className="font-bold text-white">Learn more&nbsp;</span>
+                                            
+                                  </div>
+                                
+                                  </a>
                       </div>
                       <div className=" py-4 w-full md:w-1/4 lg:w-1/4 md:p-10   ">
                           <span className="flex  justify-center w-14 h-14  rounded-full">
                               <img src="/assets/logo.png" alt=""/>
                           </span>
                           <span className="custom-card-heading">$33,261</span>
-                          <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                              <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                               <a href="/products/digital-projects" className="icon-link__link">
+                                          <div className="icon-link__label">
+                                              <span className="font-bold text-white">Learn more&nbsp;</span>
+                                            
+                                  </div>
+                                
+                                  </a>
                       </div>
                       <div className="py-4 w-full md:w-1/4 lg:w-1/4 md:p-10   ">
                           <span className="flex  justify-center w-14 h-14  rounded-full">
                               <img src="/assets/logo.png" alt=""/>
                           </span>
                           <span className="custom-card-heading">$33,261</span>
-                          <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                              <h3 className="mb-4 custom-card-subheading">saved in SAP migration costs</h3>
+                               <a href="/products/digital-projects" className="icon-link__link">
+                                          <div className="icon-link__label">
+                                              <span className="font-bold text-white">Learn more&nbsp;</span>
+                                            
+                                  </div>
+                                
+                                  </a>
                       </div>
                   </div>
               </div>
@@ -342,7 +364,7 @@ export default function Home() {
                     <h2 className="my-10 text-4xl md:custom-heading ">The quick brown fox jumps over the lazy dog.</h2>
                     <div className="max-w-md mx-auto pb-10">
                         <p className="mb-5 text-xl md:custom-subheading text-gray-800">A short message that will bring your customers into the world of your imagination.</p>
-                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Contact Sales</a>
+                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</a>
                     </div>
                 </div>
             </div>

@@ -49,7 +49,7 @@ export default function Partners () {
                 Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
                 <div className="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                    <div className="relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6">
+                    <a href="/VAR-partner" className="relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6">
                     <a href="#_" className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/hero-section.svg')"}}>
                     </a>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
@@ -61,9 +61,9 @@ export default function Partners () {
                             </p>
 
                     </div>
-                </div>
+                </a>
 
-                    <div className="relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 ">
+                    <a href="/technical-partner" className="relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 ">
                         <a href="#_" className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}>
                         </a>
                         <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0 border-yellow-200 px-7">
@@ -72,7 +72,7 @@ export default function Partners () {
                             <p className="mb-2 text-lg font-normal text-white opacity-100">Integrate your offerings with any of the KTern.AI&apos;s Five Digital Streams to create combined solutions that deliver ‘wow’ moments for customers.</p>
 
                         </div>
-                    </div>
+                    </a>
 
                     
 

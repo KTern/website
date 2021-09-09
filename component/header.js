@@ -44,22 +44,22 @@ export default function Header () {
                             <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-100 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="custom-card-heading text-black text-bold mb-2">Bespin</h3>
+                                        <h3 className="custom-card-heading text-black text-bold mb-2">Platform</h3>
                                         <li>
-                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Lando Calrissian</a>
+                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Nien Nunb</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Mon Mothma</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Wedge Antilles</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                         <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</a>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Streams</h3>
@@ -163,15 +163,17 @@ export default function Header () {
                         <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</label>
+                    
+                            <a href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</a>
+                       
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</label>
+                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</a>
                         </li>
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Contact Sales</a>
+                    <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</a>
                 </div>
             </div>
         </nav>
@@ -198,22 +200,22 @@ export default function Header () {
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-100 lg:border-b lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="custom-card-heading text-black text-bold mb-2">Bespin</h3>
+                                        <h3 className="custom-card-heading text-black text-bold mb-2">Platform</h3>
                                         <li>
-                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Lando Calrissian</a>
+                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Nien Nunb</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Mon Mothma</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</a>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Wedge Antilles</a>
+                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                         <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</a>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Streams</h3>
@@ -317,16 +319,16 @@ export default function Header () {
                         <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</label>
+                        <a href="/resources" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</a>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</label>
+                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</a>
                         </li>
                      </ul>
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Contact Sales</a>
+                    <a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</a>
                 </div>
                 <div className="mt-auto">
 

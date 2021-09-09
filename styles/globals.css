@@ -87,7 +87,7 @@ video {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .custom-card-subheading {
@@ -207,7 +207,6 @@ video {
 }
 
 .hoverable>a:after {
-    content: "\25BC";
     font-size: 10px;
     padding-left: 6px;
     position: relative;
