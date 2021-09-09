@@ -7,16 +7,19 @@ export default function Home() {
     <div >
       <Layout>
             {/* <!-- Hero Section --> */}
-          <section className=" py-20  relative overflow-hidden bg-white ">
+          <section className=" pt-20  relative overflow-hidden bg-white">
 
-              <div className=" bg-white   h-full" >
-                  <div className="xl:pb-80 bg-cover text-center xl:bg-hero" >
-                      <h2 className="mt-4 top-0 mb-2 font-bold  custom-heading">Finish what you started</h2>
-                      <p className="p-4 mb-6 max-w-2xl mx-auto mb-12  text-xl md:custom-subheading">Correct annotation helps your customers find their way around new features.</p>
+                  <div className=" bg-white  h-full" >
+                      
+                  <div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% " >
+                      <h2 className="mt-4 top-0 mb-2 font-bold  heading">Finish what you started</h2>
+                      <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Correct annotation helps your customers find their way around new features.</p>
             
-                      <a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300  text-lg text-black  font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" target="_blank" rel="noopener noreferrer" href="https://app.ktern.com">Free Trial</a>
-                      <a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="/contact">Contact Sales</a>
-                  </div>
+                      <a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" target="_blank" rel="noopener noreferrer" href="https://app.ktern.com">Free Trial</a>
+                    <a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" href="/contact">Contact Sales</a>
+                          
+                      </div>
+                      
               </div>
           </section>
           {/* <!--/ Hero Section --> */}
@@ -24,7 +27,7 @@ export default function Home() {
           <section className="p-0 " >
               <div className="container px-4 mx-auto ">
 
-                  <p className=" text-center font-bold text-xl text-gray-500 uppercase custom-card-heading ">Trusted by brand all over the world</p>
+                  <p className=" text-center font-bold text-xl text-gray-500 uppercase card-heading ">Trusted by brand all over the world</p>
                   <div className="p-8 md:p-4 flex flex-wrap -m-4 justify-center items-center ">
                       <div className=" w-full md:w-1/3 lg:w-1/6 lg:p-4">
 
@@ -67,7 +70,7 @@ export default function Home() {
           </section>
           {/* <!-- /Customer logos Section --> */}
           {/* <!-- Streams Section --> */}
-          <section className="px-10  ">
+          <section className="pt-10 px-10 bg-white">
               <div className="flex my-10 mx-10 ">
                 <div className="flex-row flex-wrap w-full xl:w-1/3  ">
                     <div className=" w-full lg:mx-10 group p-2 mb-4">
@@ -75,9 +78,9 @@ export default function Home() {
                               <div className=" h-10 h-full lg:h-20 w-20 mx-4 my-auto">
                                   <img className="w-full h-full object-cover " src="/assets/icons/projects.png" alt="" />
                               </div>
-                              <div className="relative  xl:w-2/3 shadow-md p-2 custom-project-secondary rounded-2xl">
-                                  <h2 className="custom-card-heading">Digital Projects</h2>
-                                  <p className=" leading-relaxed custom-card-subheading">Amet minim mollit non deserunt . </p>
+                              <div className="relative  xl:w-2/3 shadow-md p-2 bg-project-secondary rounded-2xl">
+                                  <h2 className="card-heading">Digital Projects</h2>
+                                  <p className=" leading-relaxed card-subheading">Amet minim mollit non deserunt . </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                        <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -98,9 +101,9 @@ export default function Home() {
                               <div className="h-10 h-full lg:h-20 w-20 mx-4 my-auto">
                                   <img className="w-full h-full object-cover " src="/assets/icons/process.svg" alt=""/>
                               </div>
-                              <div className=" xl:w-2/3 shadow p-2 custom-process-secondary rounded-2xl">
-                                  <h2 className="custom-card-heading">Digital Process</h2>
-                                  <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
+                              <div className=" xl:w-2/3 shadow p-2 bg-process-secondary rounded-2xl">
+                                  <h2 className="card-heading">Digital Process</h2>
+                                  <p className="card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                       <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -120,7 +123,7 @@ export default function Home() {
                                   <img className="w-full h-full object-cover " src="/assets/icons/labs.png" alt="" />
                               </div>
 
-                              <div className="xl:w-2/3 shadow p-2 custom-labs-secondary rounded-2xl">
+                              <div className="xl:w-2/3 shadow p-2 bg-labs-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Labs</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt . </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -142,7 +145,7 @@ export default function Home() {
                                   <img className="w-full h-full object-cover " src="/assets/icons/maps.png" alt="" />
                               </div>
 
-                              <div className=" xl:w-2/3 shadow p-2 custom-maps-secondary rounded-2xl">
+                              <div className=" xl:w-2/3 shadow p-2 bg-maps-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Maps</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -164,7 +167,7 @@ export default function Home() {
                                   <img className="w-full h-full object-cover " src="/assets/icons/mines.png" alt="" />
                               </div>
 
-                              <div className=" xl:w-2/3 shadow p-2 custom-mines-secondary rounded-2xl">
+                              <div className=" xl:w-2/3 shadow p-2 bg-mines-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital mines</h2>
                                   <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -364,7 +367,7 @@ export default function Home() {
                     <h2 className="my-10 text-4xl md:custom-heading ">The quick brown fox jumps over the lazy dog.</h2>
                     <div className="max-w-md mx-auto pb-10">
                         <p className="mb-5 text-xl md:custom-subheading text-gray-800">A short message that will bring your customers into the world of your imagination.</p>
-                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</a>
+                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" href="/contact">Contact Sales</a>
                     </div>
                 </div>
             </div>

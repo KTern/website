@@ -2,7 +2,7 @@ import Layout from "../component/Layout";
 export default function TrustCenter () {
     return (
         <Layout>
-             <section className="p-20  bg-gray-50">
+             <section className="p-20  bg-secondary">
         <div className="max-w-screen pl-20  mx-auto">
             <h2 className="mb-10 text-3xl font-bold items-center sm:text-4xl md:text-5xl text-center">KTern Trust Center</h2>
           <hr className="bg-black h-1"/>

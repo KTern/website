@@ -13,7 +13,7 @@ export default function Error () {
             <img className="mx-auto mb-8" src="/404/error-404.svg" alt=""/>
             <div className="max-w-md mx-auto text-center">
               <h2 className="mb-20 text-2xl text-white font-bold font-heading">Sorry, we can&apos;t find that page or something has gone wrong...</h2>
-            <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Return to Home</a>
+            <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="/">Return to Home</a>
             </div>
           </div>
         </div>

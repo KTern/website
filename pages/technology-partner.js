@@ -2,7 +2,7 @@ import Layout from "../component/Layout"
 export default function technical_partner () {
     return (
         <Layout>
-            <section className="w-full py-20 bg-white">
+            <section className="w-full py-20 bg-secondary">
             <div className="flex flex-col items-center px-12 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-5/12">
                     <p className="inline-block px-2 py-1 mb-5 font-medium tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full text-xxs">

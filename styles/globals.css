@@ -39,7 +39,9 @@ video {
     height: auto;
 }
 
-.custom-process-primary {
+
+/* 
+.process-primary {
     background-color: #C70039
 }
 
@@ -69,30 +71,43 @@ video {
 
 .custom-mines-secondary {
     background-color: #eed2f4
-}
+} */
 
-.custom-heading {
+.heading {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-size: 60px;
     font-style: normal;
 }
 
-.custom-subheading {
+.subheading {
     font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
 }
 
-.custom-card-heading {
+.tiny-heading {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.custom-card-subheading {
+.tiny-subheading {
     font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.card-heading {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+}
+
+.card-subheading {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
 }
 
 .container {

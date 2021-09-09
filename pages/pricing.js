@@ -3,7 +3,7 @@ export default function Pricing () {
     return (
         <Layout>
              {/* <!-- Main Pricing Section-->         */}
-            <section className="overflow-hidden text-gray-700 bg-white" >
+            <section className="overflow-hidden text-gray-700 bg-secondary" >
                 <div className="container px-5 pt-20 pb-24 mx-auto">
             
                     <div className="flex flex-col w-full mb-20 text-center">
@@ -54,7 +54,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -86,7 +86,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -119,7 +119,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -151,7 +151,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -183,7 +183,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -247,7 +247,7 @@ export default function Pricing () {
                             <div className="w-full">
                                 <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                     Contact Sales
-                                    <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                    <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                 </button>
                                 <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                             
@@ -258,7 +258,7 @@ export default function Pricing () {
                 </div>
             </section>
             {/* <!-- Logos Customer --> */}
-            <section className="relative pb-12 overflow-x-hidden bg-white border-t border-b border-gray-100 pt-7">
+            <section className="relative pb-12 overflow-x-hidden bg-white border-t border-b border-gray-100 pt-7 text-center">
                 <p className="w-full text-xs font-bold tracking-wider text-center text-black uppercase pb-7 upercase">Trusted by these leading companies</p>
                 <div className="px-8 mx-auto max-w-7xl-xl">
                     <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -298,7 +298,7 @@ export default function Pricing () {
                     <div className="grid mt-16 gap-y-10 sm:grid-cols-2 sm:gap-x-8 md:gap-x-12 lg:grid-cols-3 lg:gap-20">
                         <div>
                             
-                            <img src="Digital Processes.jpg"/>
+                            <img src="/pricing/Digital Processes.jpg"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Maps
                             </h3>
@@ -307,7 +307,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="Digital Projects.jpg"/>
+                            <img src="/pricing/Digital Projects.jpg"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Processes
                             </h3>
@@ -316,7 +316,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="digital maps.jpg"/>
+                            <img src="/pricing/digital maps.jpg"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Projects
                             </h3>
@@ -325,7 +325,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="Digital Labs.jpg"/>
+                            <img src="/pricing/Digital Labs.jpg"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Labs
                             </h3>
@@ -334,7 +334,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <img src="Digital Mines.jpg"/>
+                        <img src="/pricing/Digital Mines.jpg"/>
                             <h3 className="mt-6 text-base font-black text-gray-700">
                                 Digital Mines
                             </h3>
@@ -343,7 +343,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <img src="Digital Mines.jpg"/>
+                        <img src="/pricing/Digital Mines.jpg"/>
                         <h3 className="mt-6 text-base font-black text-gray-700">
                             Digital Workplace
                         </h3>
@@ -358,14 +358,14 @@ export default function Pricing () {
             </section>
             {/* <!-- Customer Case Studies 2--> */}
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-            <img className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" src="zospace-assets/lines/line-two-montain.svg" alt=""/>
+            <img className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" src="/pricing/line-two-montain.svg" alt=""/>
             <div className="relative container px-4 mx-auto">
                 <div className="max-w-4xl mx-auto">
                 <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">Case Studies</h2>
                 <div className="flex flex-wrap justify-center -mx-10 mb-20">
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div>
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="mitsubishi.png" alt=""/>
+                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/mitsubishi.png" alt=""/>
                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
                         <h3 className="mb-2 text-2xl text-black font-bold font-heading">70% SAP Cost Saved</h3>
                         <p className="mb-4 text-xs text-black font-bold">SAP ERP Transformation</p>
@@ -379,7 +379,7 @@ export default function Pricing () {
                     </div>
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="lg:mt-24">
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="asmnew.png" alt=""/>
+                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/asmnew.png" alt=""/>
                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
                         <h3 className="mb-2 text-2xl text-gray-600 font-bold font-heading">30% Automated Results</h3>
                         <p className="mb-4 text-xs text-black font-bold">SAP Assessment</p>
@@ -393,7 +393,7 @@ export default function Pricing () {
                     </div>
                     <div className="w-full lg:w-1/3 px-10">
                     <div>
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="aramconew.png" alt=""/>
+                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/aramconew.png" alt=""/>
                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
                         <h3 className="mb-2 text-2xl text-black font-bold font-heading">20% Automated Testing</h3>
                         <p className="mb-4 text-xs text-gray-600 font-bold">SAP Testing</p>
@@ -443,7 +443,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0 ">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     
                                 
@@ -469,7 +469,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     
                                 
@@ -494,7 +494,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     
                                 
@@ -518,7 +518,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     
                                 
@@ -542,7 +542,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
                                     </button>
                                     
                                 

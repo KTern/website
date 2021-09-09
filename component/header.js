@@ -26,7 +26,7 @@ export default function Header () {
         {/* <!-- Desktop --> */}
         <nav className="p-0 bg-white  w-full   fixed z-50 shadow-md">
             <div className="flex flex-wrap justify-between items-center">
-                <a className="text-lg font-medium xl:mx-20 " href="#">
+                <a className="text-lg font-medium xl:mx-20 " href="/">
                     <img width="148px" height="40px" src="/assets/KternLogo.png"/>
                 </a>
                 <div className="lg:hidden ">
@@ -40,7 +40,7 @@ export default function Header () {
                 <div className="hidden lg:flex p-0">
                     <ul className=" flex space-x-2 xl:space-x-10">
                         <li className="hoverable hover:bg-secondary ">
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 custom-card-subheading font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 tiny-subheading uppercase font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-100 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -160,20 +160,20 @@ export default function Header () {
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Solutions</label>
+                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <a href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</a>
+                            <a href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</a>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</a>
+                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</a>
                         </li>
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</a>
+                    <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</a>
                 </div>
             </div>
         </nav>

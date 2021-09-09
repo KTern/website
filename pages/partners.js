@@ -3,7 +3,7 @@ export default function Partners () {
     return (
         <Layout>
              {/* <!-- Header Section --> */}
-            <section className="w-full py-20 bg-white">
+            <section className="w-full py-20 bg-secondary">
             <div className="flex flex-col items-center px-12 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-5/12">
                     <p className="inline-block px-2 py-1 mb-5 font-medium tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full text-xxs">
@@ -38,7 +38,7 @@ export default function Partners () {
             {/* <!--KTern Partnership Models--> */}
 
             <section className="relative w-full bg-white">
-            <div className="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
+            <div className="absolute w-full h-32 "></div>
             <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
 
                 <h5 className="mb-3 text-2xl font-extrabold leading-none sm:text-4xl lg:text-4xl">
@@ -61,7 +61,7 @@ export default function Partners () {
                   <a href="/technology-partner" className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
                     <img className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">VAR Partner</p>
+                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
                         <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
@@ -76,7 +76,7 @@ export default function Partners () {
 
             {/* <!--KTern's Partners --> */}
             <section className="py-10 bg-gray-100">
-                    <p className="text-lg font-bold font-medium tracking-wide text-gray-400 uppercase">Trusted By Our Partners</p>
+                    <p className="text-lg font-bold font-medium tracking-wide text-gray-400 uppercase text-center">Trusted By Our Partners</p>
             <div className="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                     <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
