@@ -1,4 +1,4 @@
-import Layout from "../component/Layout"
+import Layout from "../../component/Layout"
 export default function Resources () {
     return (
     <Layout>
