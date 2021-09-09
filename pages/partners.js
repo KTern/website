@@ -62,7 +62,7 @@ export default function Partners () {
                     <img className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
-                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
+                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
                         <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
