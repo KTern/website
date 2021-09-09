@@ -43,7 +43,7 @@ function prev(id, token, last) {
   const iWidth = parseFloat(tokStyles.width);
   document.getElementById(id).scrollBy({left: -((iWidth * amount) + gapM), behavior: "smooth"}); 
 }
-export default function Digital_Projects () {
+export default function Digital_Labs () {
     return (
         <Layout>
             {/* Hero Section */}
@@ -53,8 +53,8 @@ export default function Digital_Projects () {
             <div className="relative pt-12 md:pt-16 pb-32 md:pb-64 bg-project-secondary border-b-4 border-project-primary">
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
-                        <h2 className="mb-3 text-4xl lg:text-5xl font-bold custom-heading">Digital Projects</h2>
-                        <span className="mb-3 text-1xl text-black custom-subheading">Gain ultimate control of your SAP projects and teams </span> 
+                        <h2 className="mb-3 text-4xl lg:text-5xl font-bold custom-heading">Digital Labs</h2>
+                        <span className="mb-3 text-1xl text-black custom-subheading">AI Driven Automated SAP Testing</span> 
                             <div><br />
                                 <a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Contact Sales</a>
                             </div>
@@ -134,12 +134,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Plan </span>
+                                        <span className="md:custom-heading">Auto Recommendation </span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">KTern's Intelligent Test Case Recommendation Engine Automatically assess, analyze, recommend test cases for any SAP Transformation Project. </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -175,12 +175,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Collaborate</span>
+                                        <span className="md:custom-heading">Single Source of Truth</span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">The test center gives a 360 degree view of all the information, notes and files pertaining to a test case.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -209,12 +209,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Organize</span>
+                                        <span className="md:custom-heading">Sign Off</span>
                                        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Save time with our templates which can be easily customized to your own Company's workflow, single source of truth for all your SAP Project related files and Documents </p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">KTern's Sign off wizard allows to create multiple sign-off items and Maps multiple test cases under each sign-off item. Stakeholder Hierarchy ensures sign-off items are approved in a hierarchial manner. </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -251,11 +251,11 @@ export default function Digital_Projects () {
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
                                        
-                                        <span className=" md:custom-heading">Govern</span>
+                                        <span className=" md:custom-heading">Auto Test Execution</span>
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">KTern automatically executes test cases generating test evidence and recording the outcomes of execution.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -406,7 +406,7 @@ export default function Digital_Projects () {
                         <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
                         </a>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a>
+                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">SAP S/4HANA Testing using KTern’s Digital Labs: The Beginner’s Guide </a>
                     </div>
                     
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -414,7 +414,7 @@ export default function Digital_Projects () {
                     <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
                     </a>
                     <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Role of a Project Manager in SAP S/4HANA Conversion </a>
+                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">Creating Test Sign-offs using KTern Digital Labs</a>
                     </div>
                     
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -422,7 +422,7 @@ export default function Digital_Projects () {
                     <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
                     </a>
                     <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">SAP Activate – The Heart of KTern and S/4HANA Migration </a>
+                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">The ultimate SAP Tester's Guide - 2021</a>
                     </div>
                     </div>
                 </div>
@@ -435,7 +435,7 @@ export default function Digital_Projects () {
             <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
             <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
             <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
-            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10">Manage SAP Digital Transformation with KTern's Single Cognitive Digital Workplace </h2>
+            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10">Get started with KTern's Automated Testing</h2>
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">

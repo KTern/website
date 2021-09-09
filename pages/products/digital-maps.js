@@ -53,8 +53,8 @@ export default function Digital_Projects () {
             <div className="relative pt-12 md:pt-16 pb-32 md:pb-64 bg-project-secondary border-b-4 border-project-primary">
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
-                        <h2 className="mb-3 text-4xl lg:text-5xl font-bold custom-heading">Digital Projects</h2>
-                        <span className="mb-3 text-1xl text-black custom-subheading">Gain ultimate control of your SAP projects and teams </span> 
+                        <h2 className="mb-3 text-4xl lg:text-5xl font-bold custom-heading">Digital Maps</h2>
+                        <span className="mb-3 text-1xl text-black custom-subheading">Build your Business Case for SAP Digital Transformation with KTern’s Digital Maps </span> 
                             <div><br />
                                 <a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Contact Sales</a>
                             </div>
@@ -134,12 +134,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Plan </span>
+                                        <span className="md:custom-heading">Landscape Assessment </span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Prior to considering an transformation, understanding your Existing Landscape is crucial. KTern gives you a detailed view of your SAP System including but not limited to database type, operating system, version, processor type, Users, Add-on's, archiving recommendations.   </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -175,12 +175,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Collaborate</span>
+                                        <span className="md:custom-heading">Business Process assessment </span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Understand how your Existing Business Processes is getting affected during this transformation.  </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -209,12 +209,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Organize</span>
+                                        <span className="md:custom-heading">Custom Object Assessment</span>
                                        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Save time with our templates which can be easily customized to your own Company's workflow, single source of truth for all your SAP Project related files and Documents </p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Worried what Happens to your SAP Customizations when making a transformation? KTern's Custom Object Analytics provides you with a detailed view of of each impacted custom program and custom object.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -251,11 +251,11 @@ export default function Digital_Projects () {
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
                                        
-                                        <span className=" md:custom-heading">Govern</span>
+                                        <span className=" md:custom-heading">TimeLine assessment</span>
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">KTern Automatically Generates a roadmap for your SAP Transformation and comes along with semi automated tools like Risk Predictor and TCO Estimator</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -406,7 +406,7 @@ export default function Digital_Projects () {
                         <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
                         </a>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a>
+                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">Everything you need to know about SAP S/4HANA Assessment using KTern  </a>
                     </div>
                     
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -414,7 +414,7 @@ export default function Digital_Projects () {
                     <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
                     </a>
                     <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Role of a Project Manager in SAP S/4HANA Conversion </a>
+                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">How to perform SAP Data Archiving Analysis the right way using KTern? </a>
                     </div>
                     
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -422,7 +422,7 @@ export default function Digital_Projects () {
                     <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
                     </a>
                     <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">SAP Activate – The Heart of KTern and S/4HANA Migration </a>
+                    <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">KTern: The ultimate tool to unearth your Enterprise Structure in SAP Material Management (MM) </a>
                     </div>
                     </div>
                 </div>
@@ -435,7 +435,7 @@ export default function Digital_Projects () {
             <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
             <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
             <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
-            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10">Manage SAP Digital Transformation with KTern's Single Cognitive Digital Workplace </h2>
+            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10"> Assess. Understand. Learn. Discover your Existing SAP System today</h2>
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">

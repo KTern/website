@@ -6,7 +6,7 @@ export default function technical_partner () {
             <div className="flex flex-col items-center px-12 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-5/12">
                     <p className="inline-block px-2 py-1 mb-5 font-medium tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full text-xxs">
-                    KTERN TECHNICAL PARTNER PROGRAM
+                    KTERN TECHNOLOGY PARTNER PROGRAM
                 </p>
                 <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl">
                     Become a <br/>KTern Partner
@@ -123,7 +123,7 @@ export default function technical_partner () {
                         <h2 className="mb-2 text-xl font-bold text-center md:text-3xl mb-10">Frequently Asked Questions</h2>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span>Where do I upgrade my account?</span>
+                            <span>Do we need to enter into an agreement in order to become a KTern partner?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
@@ -137,7 +137,7 @@ export default function technical_partner () {
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span>Where do I upgrade my account?</span>
+                            <span>Does KTern levy a membership charge on its partners?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
@@ -151,7 +151,7 @@ export default function technical_partner () {
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span>Where do I upgrade my account?</span>
+                            <span>I have more questions regarding the KTern Partner Program. What should I do?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
