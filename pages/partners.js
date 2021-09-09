@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import Layout from "../component/Layout"
 export default function Partners () {
     return (
@@ -16,19 +18,19 @@ export default function Partners () {
                     <span className="font-bold">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</a>
-                    <a href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 ">
+                   <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</Link>
+                    <Link href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 " passHref>
                         Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 </div>
 
                 <div className="relative z-10 w-full h-full my-16 lg:my-0 lg:w-7/12">
-                    <img className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png"/>
+                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="hero image"/>
                     <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
                     <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
                     <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
@@ -48,25 +50,25 @@ export default function Partners () {
                 Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
                 <div className="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                   <a href="/VAR-partner" className="relative border-2 border-black shadow-md flex flex-col items-start  h-full  overflow-hidden rounded-xl group md:col-span-6">
-                    <img className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/hero-section.svg')"}}/>
+                   <Link href="/VAR-partner" className="relative border-2 border-black shadow-md flex flex-col items-start  h-full  overflow-hidden rounded-xl group md:col-span-6" passHref>
+                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/hero-section.svg')"}} />
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">VAR Partner</p>
                         <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
                         <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
-                </a>
+                </Link>
 
-                  <a href="/technology-partner" className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
-                    <img className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
+                  <Link href="/technology-partner" className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md" passHref>
+                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
                         <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
-                </a>
+                </Link>
 
                     
 
@@ -169,10 +171,10 @@ export default function Partners () {
                 <h2 className="mt-4 text-4xl lg:text-5xl text-white font-bold font-heading">Follow the Steps Below to become a KTern Partner  </h2>
                 </div>
                 <div className="relative flex flex-wrap justify-center -mx-10 mb-5">
-                <img className="hidden lg:block absolute inset-y-0 -mr-80 -mt-16" src="/partner/dots-gray.svg" alt=""/>
+                <Image className="hidden lg:block absolute inset-y-0 -mr-80 -mt-16" src="/partner/dots-gray.svg" alt=""/>
                 <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="relative flex">
-                    <img className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-16" src="/partner/dots-gray.svg" alt=""/>
+                    <Image className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-16" src="/partner/dots-gray.svg" alt=""/>
                     <div className="mr-8">
                         <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">1</span>
                     </div>
@@ -220,8 +222,8 @@ export default function Partners () {
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-            <a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</a>
-           <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</a>
+            <Link className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</Link>
+           <Link className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</Link>
             </div>
             </div>
             </div>

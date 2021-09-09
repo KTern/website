@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import Layout from "../component/Layout"
 export default function Pricing () {
     return (
@@ -35,26 +37,26 @@ export default function Pricing () {
                             <div className="flex flex-col w-full">
                                     <h2 className="mb-1 text-sm font-medium tracking-widest uppercase">Digital Maps</h2>
                                     <h1 className="flex items-center pb-4 mb-4 text-4xl leading-none text-gray-900 border-b border-gray-200"><span>$3000</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Everything in Basic</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Monthly Consultations</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Unlimited Admin Accounts</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Faster Build Times</p>
-                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Premium Support</p>
                                 </div>
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -67,26 +69,26 @@ export default function Pricing () {
                             <div className="flex flex-col w-full">
                                     <h2 className="mb-1 text-sm font-medium tracking-widest uppercase">Digital Projects</h2>
                                     <h1 className="flex items-center pb-4 mb-4 text-4xl leading-none text-gray-900 border-b border-gray-200"><span>$3000</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Everything in Basic</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Monthly Consultations</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Unlimited Admin Accounts</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Faster Build Times</p>
-                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Premium Support</p>
                                 </div>
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -100,26 +102,26 @@ export default function Pricing () {
                             <div className="flex flex-col w-full">
                                     <h2 className="mb-1 text-sm font-medium tracking-widest uppercase">Digital Process</h2>
                                     <h1 className="flex items-center pb-4 mb-4 text-4xl leading-none text-gray-900 border-b border-gray-200"><span>$3000</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Everything in Basic</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Monthly Consultations</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Unlimited Admin Accounts</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Faster Build Times</p>
-                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Premium Support</p>
                                 </div>
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -132,26 +134,26 @@ export default function Pricing () {
                             <div className="flex flex-col w-full">
                                     <h2 className="mb-1 text-sm font-medium tracking-widest uppercase">Digital Labs</h2>
                                     <h1 className="flex items-center pb-4 mb-4 text-4xl leading-none text-gray-900 border-b border-gray-200"><span>$3000</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Everything in Basic</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Monthly Consultations</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Unlimited Admin Accounts</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Faster Build Times</p>
-                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Premium Support</p>
                                 </div>
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -164,26 +166,26 @@ export default function Pricing () {
                             <div className="flex flex-col w-full">
                                     <h2 className="mb-1 text-sm font-medium tracking-widest uppercase">Digital Mines</h2>
                                     <h1 className="flex items-center pb-4 mb-4 text-4xl leading-none text-gray-900 border-b border-gray-200"><span>$3000</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Everything in Basic</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Monthly Consultations</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Unlimited Admin Accounts</p>
-                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-2 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Faster Build Times</p>
-                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
+                                    <p className="flex items-center mb-6 text-gray-600"><span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                                 <path d="M20 6L9 17l-5-5"></path>
                                             </svg></span>Premium Support</p>
                                 </div>
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -202,7 +204,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <img src="/assets/icons/Maps.png"/>
+                                            <Image src="/assets/icons/Maps.png" alt="Digital Maps"/>
                                             </span>
                                             <p className="text-xs font-bold text-black">Digital Maps</p>
                                         </div>
@@ -211,7 +213,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <img src="/assets/icons/Process.svg"/>
+                                            <Image src="/assets/icons/Process.svg" alt="Digital Process"/>
                                             </span>
                                             <p className="text-xs font-bold text-black ">Digital Process</p>
                                         </div>
@@ -220,7 +222,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <img src="/assets/icons/Projects.png"/>
+                                            <Image src="/assets/icons/Projects.png" alt="Digital Projects"/>
                                             </span>
                                             <p className="text-xs font-bold text-black">Digital Projects</p>
                                         </div>
@@ -228,7 +230,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <img src="/assets/icons/Labs.png"/>
+                                            <Image src="/assets/icons/Labs.png" alt="Digital Labs"/>
                                             </span>
                                             <p className="text-xs font-bold text-black">Digital Labs</p>
                                         </div>
@@ -236,7 +238,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <img src="/assets/icons/Mines.png"/>
+                                            <Image src="/assets/icons/Mines.png"alt="Digital Mines"/>
                                             </span>
                                             <p className="text-xs font-bold text-black">Digital Mines</p>
                                             
@@ -247,7 +249,7 @@ export default function Pricing () {
                             <div className="w-full">
                                 <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                     Contact Sales
-                                    <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                    <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                 </button>
                                 <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                             
@@ -298,7 +300,7 @@ export default function Pricing () {
                     <div className="grid mt-16 gap-y-10 sm:grid-cols-2 sm:gap-x-8 md:gap-x-12 lg:grid-cols-3 lg:gap-20">
                         <div>
                             
-                            <img src="/pricing/Digital Processes.jpg"/>
+                            <Image src="/pricing/Digital Processes.jpg" alt="Digital Process"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Maps
                             </h3>
@@ -307,7 +309,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="/pricing/Digital Projects.jpg"/>
+                            <Image src="/pricing/Digital Projects.jpg" alt="Digital Projects"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Processes
                             </h3>
@@ -316,7 +318,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="/pricing/digital maps.jpg"/>
+                            <Image src="/pricing/digital maps.jpg" alt="Digital Maps"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Projects
                             </h3>
@@ -325,7 +327,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <img src="/pricing/Digital Labs.jpg"/>
+                            <Image src="/pricing/Digital Labs.jpg" alt="Digital Labs"/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Labs
                             </h3>
@@ -334,7 +336,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <img src="/pricing/Digital Mines.jpg"/>
+                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines"/>
                             <h3 className="mt-6 text-base font-black text-gray-700">
                                 Digital Mines
                             </h3>
@@ -343,7 +345,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <img src="/pricing/Digital Mines.jpg"/>
+                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines"/>
                         <h3 className="mt-6 text-base font-black text-gray-700">
                             Digital Workplace
                         </h3>
@@ -358,15 +360,15 @@ export default function Pricing () {
             </section>
             {/* <!-- Customer Case Studies 2--> */}
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-            <img className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" src="/pricing/line-two-montain.svg" alt=""/>
+            <Image className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" src="/pricing/line-two-montain.svg" alt=""/>
             <div className="relative container px-4 mx-auto">
                 <div className="max-w-4xl mx-auto">
                 <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">Case Studies</h2>
                 <div className="flex flex-wrap justify-center -mx-10 mb-20">
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div>
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/mitsubishi.png" alt=""/>
-                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
+                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/mitsubishi.png" alt=""/>
+                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
                         <h3 className="mb-2 text-2xl text-black font-bold font-heading">70% SAP Cost Saved</h3>
                         <p className="mb-4 text-xs text-black font-bold">SAP ERP Transformation</p>
                         <div className="flex justify-end">
@@ -374,13 +376,13 @@ export default function Pricing () {
                             <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
                             </svg>
                         </div>
-                        </a>
+                        </Link>
                     </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="lg:mt-24">
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/asmnew.png" alt=""/>
-                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
+                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/asmnew.png" alt=""/>
+                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
                         <h3 className="mb-2 text-2xl text-gray-600 font-bold font-heading">30% Automated Results</h3>
                         <p className="mb-4 text-xs text-black font-bold">SAP Assessment</p>
                         <div className="flex justify-end">
@@ -388,13 +390,13 @@ export default function Pricing () {
                             <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
                             </svg>
                         </div>
-                        </a>
+                        </Link>
                     </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-10">
                     <div>
-                        <img className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/aramconew.png" alt=""/>
-                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#">
+                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/aramconew.png" alt=""/>
+                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
                         <h3 className="mb-2 text-2xl text-black font-bold font-heading">20% Automated Testing</h3>
                         <p className="mb-4 text-xs text-gray-600 font-bold">SAP Testing</p>
                         <div className="flex justify-end">
@@ -402,11 +404,11 @@ export default function Pricing () {
                             <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
                             </svg>
                         </div>
-                        </a>
+                        </Link>
                     </div>
                     </div>
                 </div>
-                <div className="text-center"><a className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 rounded-full font-bold text-white" href="#"> All Case Studies</a></div>
+                <div className="text-center"><Link className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 rounded-full font-bold text-white" href="#"> All Case Studies</Link></div>
                 </div>
             </div>
             </section>
@@ -443,7 +445,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0 ">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     
                                 
@@ -469,7 +471,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     
                                 
@@ -494,7 +496,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     
                                 
@@ -518,7 +520,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     
                                 
@@ -542,7 +544,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <img src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" />
+                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
                                     </button>
                                     
                                 

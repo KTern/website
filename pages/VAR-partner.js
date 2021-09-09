@@ -1,4 +1,6 @@
 import Layout from "../component/Layout";
+import Image from "next/image";
+import Link from "next/link";
 export default function VARpartner(){
     return (
         <Layout>                
@@ -16,19 +18,19 @@ export default function VARpartner(){
                     <span className="font-bold">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</a>
-                    <a href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 ">
+                   <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</Link>
+                    <Link href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 " passHref>
                         Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 </div>
 
                 <div className="relative z-10 w-full h-full my-16 lg:my-0 lg:w-7/12">
-                    <img className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png"/>
+                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="Hero image"/>
                     <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
                     <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
                     <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
@@ -191,24 +193,24 @@ export default function VARpartner(){
                         <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -219,16 +221,16 @@ export default function VARpartner(){
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -240,8 +242,8 @@ export default function VARpartner(){
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -252,16 +254,16 @@ export default function VARpartner(){
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -300,8 +302,8 @@ export default function VARpartner(){
                         <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -309,8 +311,8 @@ export default function VARpartner(){
                         <td className="pl-10"></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -320,24 +322,24 @@ export default function VARpartner(){
                         <td className="pl-16 py-6 text-left">Video chat</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -347,24 +349,24 @@ export default function VARpartner(){
                         <td className="pl-16 py-6 text-left">Real-Time Collaboration</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -376,8 +378,8 @@ export default function VARpartner(){
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -416,24 +418,24 @@ export default function VARpartner(){
                         <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
                         </td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -445,8 +447,8 @@ export default function VARpartner(){
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fill-opacity="0.1"></circle>
-                            <g clip-path="url(#clip0)">
+                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
+                            <g clipPath="url(#clip0)">
                                 <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
                             </g>
                             </svg>
@@ -470,7 +472,7 @@ export default function VARpartner(){
                             </div>
                             <div className="mt-4">
                                 <div className="flex items-center">
-                                    <div className="flex-shrink-0"><img className="object-cover w-12 h-12 mr-4 rounded-full" src="/technical-partner/edson.jpg" alt=""/> </div>
+                                    <div className="flex-shrink-0"><Image className="object-cover w-12 h-12 mr-4 rounded-full" src="/technical-partner/edson.jpg" alt=""/> </div>
                                     <div className="ml-4 lg:ml-0">
                                         <div className="text-base font-medium leading-6 text-black">Edson Frainlar - Sr. Developer, KTern.Ai</div>
                                     </div>
@@ -489,10 +491,10 @@ export default function VARpartner(){
                 <h2 className="mt-4 text-4xl lg:text-5xl text-white font-bold font-heading">Follow the Steps Below to become a KTern Partner  </h2>
                 </div>
                 <div className="relative flex flex-wrap justify-center -mx-10 mb-5">
-                <img className="hidden lg:block absolute inset-y-0 -mr-80 -mt-16" src="/partner/dots-gray.svg" alt=""/>
+                <Image className="hidden lg:block absolute inset-y-0 -mr-80 -mt-16" src="/partner/dots-gray.svg" alt=""/>
                 <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="relative flex">
-                    <img className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-16" src="/partner/dots-gray.svg" alt=""/>
+                    <Image className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-16" src="/partner/dots-gray.svg" alt=""/>
                     <div className="mr-8">
                         <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">1</span>
                     </div>
@@ -539,8 +541,8 @@ export default function VARpartner(){
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-            <a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</a>
-           <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</a>
+            <Link className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</Link>
+           <Link className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</Link>
             </div>
             </div>
             </div>

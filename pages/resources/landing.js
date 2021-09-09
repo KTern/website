@@ -1,5 +1,7 @@
 import Layout from "../../component/Layout"
 import Head from "next/head"
+import Image from "next/image";
+import Link from "next/link";
 export default function Landing () {
     return (
         <>
@@ -12,28 +14,28 @@ export default function Landing () {
                     <div className="py-20 rounded-lg" style={{backgroundImage: "url('/public/gradient-background.jpeg')", backgroundRepeat:' no-repeat', backgroundSize: 'cover'}}>
                         <div className="max-w-2xl mx-auto text-center">
                             <p className="inline-block py-0 pl-4 pr-4  -ml-0 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-black rounded">
-                                <a href="#_" className="text-white hover:underline " rel="category">
+                                <Link href="#_" className="text-white hover:underline " rel="category">
                                     Digital Maps
-                                </a>
+                                </Link>
                             </p>
                             <p className="inline-block pl-4 pr-4   text-xs font-medium leading-5 text-gray-300 transform -translate-y-2  ">
-                                <a href="#_" className="text-black hover:underline " rel="category">
+                                <Link href="#_" className="text-black hover:underline " rel="category">
                                     24th September 2021
-                                </a>
+                                </Link>
                             </p>
                             <div className="mt-2">
                                 <h2 className="mb-6 text-4xl lg:text-5xl text-black font-bold">Digital Transformation</h2>
                                 <div className="flex justify-center">
                                 <div className="mr-4">
-                                    <img className="w-12 h-12 object-cover object-top rounded-full" src="/webinar/edson.jpg" alt=""/>
+                                    <Image className="w-12 h-12 object-cover object-top rounded-full" src="/webinar/edson.jpg" alt=""/>
                                 </div>
                                 <div className="text-left">
-                                    <a href="#">
+                                    <Link href="#" passHref>
                                         <h3 className="text-black hover:underline font-bold">Edson Frainlar</h3>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#" passHref>
                                         <span className="text-xs text-gray-300 font-bold">Author</span>
-                                    </a>
+                                    </Link>
                                 </div>
                                 </div>
                             {/* <!-- ShareThis BEGIN --> */}

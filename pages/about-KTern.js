@@ -1,4 +1,6 @@
 import Layout from "../component/Layout"
+import Image from "next/image";
+import Link from "next/link";
 export default function About () {
     return (
         <Layout>
@@ -22,7 +24,7 @@ export default function About () {
                                     <svg className="w-auto h-8 ml-1 text-white fill-current" viewBox="0 0 52 66" xmlns="http://www.w3.org/2000/svg"><path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z" fillRule="nonzero"></path></svg>
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;h=1603&amp;q=80" className="z-10 object-cover w-full h-full"/>
+                            <Image src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;h=1603&amp;q=80" className="z-10 object-cover w-full h-full" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -42,12 +44,12 @@ export default function About () {
 
                         <div className="w-full mt-5 md:mt-0 md:w-8/12 md:pl-2">
                             <h3 className="mb-5 -mt-1 text-3xl font-bold leading-tight sm:text-4xl">To inspire and Democratize SAP Digital Transformation through our product offerings </h3>
-                            <a href="#_" className="inline-flex items-center pb-1 font-medium text-blue-500 border-b-2 border-gray-200 hover:border-blue-500 group">
+                            <Link href="#_" className="inline-flex items-center pb-1 font-medium text-blue-500 border-b-2 border-gray-200 hover:border-blue-500 group" passHref>
                                 <span>Learn More</span>
                                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -120,7 +122,7 @@ export default function About () {
                         </div>
                     </div>
                     <div className="w-full h-full overflow-hidden leading-7 text-gray-900 border-0 border-gray-200 lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1553484771-047a44eee27a?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1234&amp;h=1600&amp;q=80" className="object-cover w-full h-full"/>
+                        <Image src="https://images.unsplash.com/photo-1553484771-047a44eee27a?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1234&amp;h=1600&amp;q=80" className="object-cover w-full h-full"/>
                     </div>
                     </div>
                 </div>
@@ -191,35 +193,35 @@ export default function About () {
                 <div className="px-10 mx-auto max-w-7xl">
                     <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
                         <h2 className="text-3xl font-bold text-gray-800">Featured</h2>
-                        <a href="#_" className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
+                        <Link href="#_" className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
                             <span>View More Posts</span>
                             <svg className="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="grid grid-cols-12 gap-6">
                         <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                            <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                                <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
-                            </a>
+                            <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                                <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                            </Link>
                             <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                            <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</a>
+                            <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</Link>
                         </div>
 
                         <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                            <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                                <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
-                            </a>
+                            <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                                <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
+                            </Link>
                             <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                            <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</a>
+                            <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</Link>
                         </div>
 
                         <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                            <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                                <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
-                            </a>
+                            <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                                <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
+                            </Link>
                             <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                            <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</a>
+                            <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</Link>
                         </div>
                     </div>
                     </div>
@@ -235,8 +237,8 @@ export default function About () {
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-            <a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</a>
-           <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</a>
+            <Link className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</Link>
+           <Link className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</Link>
             </div>
             </div>
             </div>

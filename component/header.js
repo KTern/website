@@ -12,7 +12,8 @@ function closeNav () {
     }
 }
 
-
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from 'react';
 export default function Header () {
     // const [ headerNew, changeHeader ] = useState(false);
@@ -26,9 +27,9 @@ export default function Header () {
         {/* <!-- Desktop --> */}
         <nav className="p-0 bg-white  w-full   fixed z-50 shadow-md">
             <div className="flex flex-wrap justify-between items-center">
-                <a className="text-lg font-medium xl:mx-20 " href="/">
-                    <img width="148px" height="40px" src="/assets/KternLogo.png"/>
-                </a>
+                <Link className="text-lg font-medium xl:mx-20 " href="/" passHref>
+                    <Image width="148px" height="40px" src="/assets/KternLogo.png" alt="Ktern Logo"/>
+                </Link>
                 <div className="lg:hidden ">
                     <button className="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded" onClick={openNav}>
                           <svg className="block h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -46,42 +47,42 @@ export default function Header () {
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-100 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Platform</h3>
                                         <li>
-                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</a>
+                                            <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</Link>
                                         </li>
                                         {/* <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</Link>
                                         </li> */}
                                     </ul>
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Streams</h3>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProjectShown(true)}
-                                        onMouseLeave={() => setIsProjectShown(false)}>Digital Projects</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProjectShown(true)}
+                                        onMouseLeave={() => setIsProjectShown(false)}>Digital Projects</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProcessShown(true)}
-                                        onMouseLeave={() => setIsProcessShown(false)}>Digital Process</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProcessShown(true)}
+                                        onMouseLeave={() => setIsProcessShown(false)}>Digital Process</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMapsShown(true)}
-                                        onMouseLeave={() => setIsMapsShown(false)}>Digital Maps</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMapsShown(true)}
+                                        onMouseLeave={() => setIsMapsShown(false)}>Digital Maps</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMinesShown(true)}
-                                        onMouseLeave={() => setIsMinesShown(false)}>Digital Mines</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMinesShown(true)}
+                                        onMouseLeave={() => setIsMinesShown(false)}>Digital Mines</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsLabsShown(true)}
-                onMouseLeave={() => setIsLabsShown(false)}>Digital Labs</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsLabsShown(true)}
+                onMouseLeave={() => setIsLabsShown(false)}>Digital Labs</Link>
                                         </li>
                                     </ul>
                                     <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
@@ -91,10 +92,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Projects</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1"/>
                                                     </div>
                                                    
                                                 </div>
@@ -105,10 +106,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Process</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1"/>
                                                     </div>
                                                    
                                                 </div>
@@ -119,10 +120,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Maps</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"/>
                                                     </div>
                                                    
                                                 </div>
@@ -133,10 +134,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Mines</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"/>
                                                     </div>
                                                    
                                                 </div>
@@ -147,10 +148,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Labs</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"/>
                                                     </div>
                                                    
                                                 </div>
@@ -164,16 +165,16 @@ export default function Header () {
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <a href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</a>
+                            <Link href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</Link>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</a>
+                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</Link>
                         </li>
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</a>
+                    <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</Link>
                 </div>
             </div>
         </nav>
@@ -183,9 +184,9 @@ export default function Header () {
             <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav  className="nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div className="flex items-center mb-8">
-                    <a className="mr-auto text-2xl font-medium leading-none" href="#">
-                        <img className="h-12" src="/assets/kternLogo.png" alt="Ktern Logo" width="auto"/>
-                    </a>
+                    <Link className="mr-auto text-2xl font-medium leading-none" href="#" passHref>
+                        <Image className="h-12" src="/assets/kternLogo.png" alt="Ktern Logo" width="auto"/>
+                    </Link>
                     <button className="navbar-close" onClick={closeNav}>
                         <svg className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -202,42 +203,42 @@ export default function Header () {
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-100 lg:border-b lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Platform</h3>
                                         <li>
-                                            <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</a>
+                                            <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Overview</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</Link>
                                         </li>
                                         {/* <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Admiral Gial Ackbar</Link>
                                         </li> */}
                                     </ul>
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="custom-card-heading text-black text-bold mb-2">Streams</h3>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProjectShown(true)}
-                                        onMouseLeave={() => setIsProjectShown(false)}>Digital Projects</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProjectShown(true)}
+                                        onMouseLeave={() => setIsProjectShown(false)}>Digital Projects</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProcessShown(true)}
-                                        onMouseLeave={() => setIsProcessShown(false)}>Digital Process</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProcessShown(true)}
+                                        onMouseLeave={() => setIsProcessShown(false)}>Digital Process</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMapsShown(true)}
-                                        onMouseLeave={() => setIsMapsShown(false)}>Digital Maps</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMapsShown(true)}
+                                        onMouseLeave={() => setIsMapsShown(false)}>Digital Maps</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMinesShown(true)}
-                                        onMouseLeave={() => setIsMinesShown(false)}>Digital Mines</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMinesShown(true)}
+                                        onMouseLeave={() => setIsMinesShown(false)}>Digital Mines</Link>
                                         </li>
                                         <li>
-                                        <a href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsLabsShown(true)}
-                onMouseLeave={() => setIsLabsShown(false)}>Digital Labs</a>
+                                        <Link href="#" className="custom-card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsLabsShown(true)}
+                onMouseLeave={() => setIsLabsShown(false)}>Digital Labs</Link>
                                         </li>
                                     </ul>
                                     <ul className="bg-secondary px-4 w-full  lg:w-2/4  pb-6 pt-6 lg:pt-3">
@@ -247,10 +248,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Projects</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-full lg:w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"/>
                                                     </div>
                                                    
                                                 </div>
@@ -261,10 +262,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Process</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-full lg:w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog"/>
                                                     </div>
                                                    
                                                 </div>
@@ -275,10 +276,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Maps</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-full lg:w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog"/>
                                                     </div>
                                                    
                                                 </div>
@@ -289,10 +290,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Mines</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-full lg:w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog"/>
                                                     </div>
                                                    
                                                 </div>
@@ -303,10 +304,10 @@ export default function Header () {
                                                         <h3 className="mb-4 custom-card-heading">Digital Labs</h3>
                                                         <p className="mb-4 custom-card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <a className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</a>
+                                                        <Link className=" mb-2 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Read More</Link>
                                                     </div>
                                                     <div className="w-full lg:w-1/2">
-                                                        <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" />
+                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog"/>
                                                     </div>
                                                    
                                                 </div>
@@ -319,16 +320,16 @@ export default function Header () {
                         <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <a href="/resources" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</a>
+                        <Link href="/resources" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Resources</Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <a href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</a>
+                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 custom-card-subheading font-bold">Partners</Link>
                         </li>
                      </ul>
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</a>
+                    <Link className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</Link>
                 </div>
                 <div className="mt-auto">
 

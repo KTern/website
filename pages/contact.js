@@ -1,4 +1,5 @@
 import Layout from "../component/Layout"
+import Link from "next/link";
 export default function Contact () {
     return (
         <Layout>
@@ -69,7 +70,7 @@ export default function Contact () {
                                 </div>
                                 <div className="relative">
                                 
-                                    <a href="#_" className="inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200 bg-black rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit </a>
+                                    <Link href="#_" className="inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200 bg-black rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit </Link>
         
                                 </div>
         

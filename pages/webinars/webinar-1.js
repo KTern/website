@@ -1,5 +1,7 @@
 import Layout from "../../component/Layout"
-import WebinarLayout from "../../component/webinar_Layout"
+import WebinarLayout from "../../component/webinar_Layout";
+import Image from "next/image";
+import Link from "next/link";
 export default function WebinarLanding () {
     const data = {
         title: "Reimagining SAP Testing with Digital Labs ",

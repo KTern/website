@@ -1,4 +1,6 @@
-import Layout from "../../component/Layout"
+import Layout from "../../component/Layout";
+import Image from "next/image";
+import Link from "next/link";
 export default function Features () {
     return (
         <Layout>
@@ -15,19 +17,19 @@ export default function Features () {
                     <span className="font-bold">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</a>
-                    <a href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 ">
+                   <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl custom-card-subheading rounded-t-xl transition duration-200 " href="#">Become a Partner</Link>
+                    <Link href="" className="inline-flex items-center text-lg text-gray-400 underline transition-colors duration-200 " passHref>
                         Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 </div>
 
                 <div className="relative z-10 w-full h-full my-16 lg:my-0 lg:w-7/12">
-                    <img className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png"/>
+                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="home image"/>
                     <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
                     <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
                     <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
@@ -46,12 +48,12 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Maps.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Maps.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Digital maps</p>
@@ -65,14 +67,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2 ">
+                                <Link href="#" className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Process.svg" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Process.svg" className="w-8 h-8" />
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
@@ -85,17 +87,17 @@ export default function Features () {
                                         
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Projects.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Projects.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business  Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
@@ -108,14 +110,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2">
+                                <Link href="#" className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Mines.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Mines.png" className="w-8 h-8" />
 
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Custom Assessment</h3>
                                             </div>
@@ -128,7 +130,7 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -137,7 +139,7 @@ export default function Features () {
                             <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                                 <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                                 <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                                    <img src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
+                                    <Image src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
                                 </div>
                             </div>
                         </div>
@@ -158,12 +160,12 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Maps.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Maps.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Digital maps</p>
@@ -177,14 +179,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2 ">
+                                <Link href="#" className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Process.svg" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Process.svg" className="w-8 h-8" />
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
@@ -197,17 +199,17 @@ export default function Features () {
                                         
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Projects.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Projects.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business  Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
@@ -220,14 +222,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2">
+                                <Link href="#" className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Mines.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Mines.png" className="w-8 h-8" />
 
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Custom Assessment</h3>
                                             </div>
@@ -240,7 +242,7 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -249,7 +251,7 @@ export default function Features () {
                             <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                                 <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                                 <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                                    <img src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
+                                    <Image src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
                                 </div>
                             </div>
                         </div>
@@ -270,12 +272,12 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Maps.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Maps.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Digital maps</p>
@@ -289,14 +291,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2 ">
+                                <Link href="#" className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Process.svg" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Process.svg" className="w-8 h-8" />
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
@@ -309,17 +311,17 @@ export default function Features () {
                                         
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Projects.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Projects.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business  Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
@@ -332,14 +334,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2">
+                                <Link href="#" className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Mines.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Mines.png" className="w-8 h-8" />
 
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Custom Assessment</h3>
                                             </div>
@@ -352,7 +354,7 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -361,7 +363,7 @@ export default function Features () {
                             <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                                 <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                                 <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                                    <img src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
+                                    <Image src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
                                 </div>
                             </div>
                         </div>
@@ -382,12 +384,12 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Maps.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Maps.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Digital maps</p>
@@ -401,14 +403,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2 ">
+                                <Link href="#" className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Process.svg" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Process.svg" className="w-8 h-8" />
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
@@ -421,17 +423,17 @@ export default function Features () {
                                         
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Projects.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Projects.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business  Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
@@ -444,14 +446,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2">
+                                <Link href="#" className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Mines.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Mines.png" className="w-8 h-8" />
 
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Custom Assessment</h3>
                                             </div>
@@ -464,7 +466,7 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -473,7 +475,7 @@ export default function Features () {
                             <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                                 <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                                 <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                                    <img src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
+                                    <Image src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
                                 </div>
                             </div>
                         </div>
@@ -494,12 +496,12 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Maps.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Maps.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Digital maps</p>
@@ -513,14 +515,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2 ">
+                                <Link href="#" className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Process.svg" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Process.svg" className="w-8 h-8" />
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
@@ -533,17 +535,17 @@ export default function Features () {
                                         
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <a href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
+                                <Link href="#" className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Projects.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Projects.png" className="w-8 h-8" />
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Business  Assessment</h3>
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
@@ -556,14 +558,14 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="w-full sm:w-1/2">
+                                <Link href="#" className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <img src="/assets/icons/Mines.png" className="w-8 h-8" />
+                                            <Image src="/assets/icons/Mines.png" className="w-8 h-8" />
 
                                             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Custom Assessment</h3>
                                             </div>
@@ -576,7 +578,7 @@ export default function Features () {
                                         </div>
 
                                     </div>
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -585,7 +587,7 @@ export default function Features () {
                             <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                                 <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                                 <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                                    <img src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
+                                    <Image src="/features/kternhero.png" className="object-cover w-full h-full transform"/>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,7 @@
 import Layout from "../../component/Layout"
 import Head from "next/head"
+import Image from "next/image";
+import Link from "next/link";
 {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */}
 export default function Digital_Projects () {
     return (
@@ -14,16 +16,16 @@ export default function Digital_Projects () {
                     <h1 className="custom-heading">The Ultimate Design Collection</h1>
                     <p className="custom-subheading text-gray-500 pb-7">We&apos;ve handcrafted the ultimate design collection that we think you are going to love.</p>
                     <div className="flex flex items-center justify-center w-full sm:w-auto sm:flex-row space-x-10">
-                       <a className="inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Get Started</a>
-                        <a href="#_" className="flex py-3 px-8  hover:bg-gray-300 hover:text-black shadow text-lg font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading">
-                            <img className=" w-6 h-6" src="/save-file.svg" />
+                       <Link className="inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Get Started</Link>
+                        <Link href="" className="flex py-3 px-8  hover:bg-gray-300 hover:text-black shadow text-lg font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" passHref>
+                            <Image className=" w-6 h-6" src="/save-file.svg" alt="save file" />
                                 <span>&nbsp;Download Datasheet</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-                    <img className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png"/>
+                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="hero image"/>
                     <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
                     <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
                     <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
@@ -45,9 +47,9 @@ export default function Digital_Projects () {
                     </div>
                      <div className="flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
-                            <img className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt=""/>
-                            <img className="hidden md:block absolute" style={{top:'2rem', right: '-3rem', zIndex: -1}} src="/features/bullets-gray-left.svg" alt=""/>
-                            <img className="hidden md:block absolute" style={{bottom:'2.5rem', left: '-2.5rem', zIndex: -1}} src="/features/bullets-green-right.svg" alt=""/>
+                            <Image className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt=""/>
+                            <Image className="hidden md:block absolute" style={{top:'2rem', right: '-3rem', zIndex: -1}} src="/features/bullets-gray-left.svg" alt=""/>
+                            <Image className="hidden md:block absolute" style={{bottom:'2.5rem', left: '-2.5rem', zIndex: -1}} src="/features/bullets-green-right.svg" alt=""/>
 
                         </div>
                     </div>    
@@ -57,7 +59,7 @@ export default function Digital_Projects () {
                         <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl"></div>
                         <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl"></div>
                         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-                        <img className=" relative rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-04.png  " alt=""/>
+                        <Image className=" relative rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-04.png  " alt=""/>
                     </div>
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pl-16">
                         <p className="mb-2 text-sm font-semibold leading-none text-left text-indigo-600 uppercase">know your data</p>
@@ -73,7 +75,7 @@ export default function Digital_Projects () {
                         <p className="mt-5 text-lg text-gray-700 text md:text-left">All templates and components are fully customizable. You can use these templates to tell your personal story and convey your message.</p>
                     </div>
                     <div className="flex items-center mb-8 w-1/2">
-                        <img className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-03.png" alt=""/>
+                        <Image className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-03.png" alt=""/>
                     </div>
                 </div>
             </div>
@@ -83,30 +85,30 @@ export default function Digital_Projects () {
                 <div className="px-5 py-10 mx-auto flex flex-wrap flex-col">
                     <h2 className="mb-5 text-xl font-bold text-center md:text-4xl">Find Information Specific to your Role</h2>
                 <div className="flex w-1/2 mx-auto flex-wrap mb-5">
-                    <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
+                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>Project Manager
-                    </a>
-                    <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                    </Link>
+                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                     </svg>Consultant
-                    </a>
-                    <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                    </Link>
+                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                         <circle cx="12" cy="5" r="3"></circle>
                         <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
                     </svg>CEO
-                    </a>
-                    <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                    </Link>
+                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>Basis Consultant
-                    </a>
+                    </Link>
                 </div>
-                <img className="w-1/3 block mx-auto mb-5 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
+                <Image className="w-1/3 block mx-auto mb-5 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
                 <div className="flex flex-col text-center w-full">
                     <h1 className="text-xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven&apos;t heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
@@ -120,7 +122,7 @@ export default function Digital_Projects () {
                     <div className="flex flex-wrap ">
                     <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16 lg:mb-0">
                         <div className="relative flex items-center justify-center mb-10 w-20 h-20">
-                        <img className="absolute inset-0 w-full h-full" src="/features/circle-chart.svg" alt=""/>
+                        <Image className="absolute inset-0 w-full h-full" src="/features/circle-chart.svg" alt=""/>
                         <p className="text-2xl font-bold text-white">
                             <span>8</span>
                             <span className="text-base">%</span>
@@ -132,7 +134,7 @@ export default function Digital_Projects () {
                     </div>
                     <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16 lg:mb-0">
                         <div className="relative flex items-center justify-center mb-10 w-20 h-20">
-                        <img className="absolute inset-0 w-full h-full" src="/features/circle-chart-purple.svg" alt=""/>
+                        <Image className="absolute inset-0 w-full h-full" src="/features/circle-chart-purple.svg" alt=""/>
                         <p className="text-2xl font-bold text-white">
                             <span>45</span>
                             <span className="text-base">%</span>
@@ -144,7 +146,7 @@ export default function Digital_Projects () {
                     </div>
                     <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16 md:mb-0">
                         <div className="relative flex items-center justify-center mb-10 w-20 h-20">
-                        <img className="absolute inset-0 w-full h-full" src="/features/circle-chart-green.svg" alt=""/>
+                        <Image className="absolute inset-0 w-full h-full" src="/features/circle-chart-green.svg" alt=""/>
                         <p className="text-2xl font-bold text-white">
                             <span>5</span>
                             <span className="text-base">/6</span>
@@ -156,7 +158,7 @@ export default function Digital_Projects () {
                     </div>
                     <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14">
                         <div className="relative flex items-center justify-center mb-10 w-20 h-20">
-                        <img className="absolute inset-0 w-full h-full" src="/features/circle-chart-pink.svg" alt=""/>
+                        <Image className="absolute inset-0 w-full h-full" src="/features/circle-chart-pink.svg" alt=""/>
                         <p className="text-2xl font-bold text-white">
                             <span>79</span>
                             <span className="text-base">%</span>
@@ -195,7 +197,7 @@ export default function Digital_Projects () {
                         </ul>
                     </div>
                     </div>
-                    <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img className="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"/></div>
+                    <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><Image className="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"/></div>
                 </div>
                 </div>
             </section> 
@@ -256,35 +258,35 @@ export default function Digital_Projects () {
             <div className="px-10 mx-auto max-w-7xl">
                 <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
                     <h2 className="text-3xl font-bold text-gray-800">Related Resources</h2>
-                    <a href="#_" className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
+                    <Link href="#_" className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
                         <span>View More Posts</span>
                         <svg className="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-12 gap-6">
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                            <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
-                        </a>
+                        <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                        </Link>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</a>
+                        <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                            <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
-                        </a>
+                        <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png"/>
+                        </Link>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</a>
+                        <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <a href="#_" className="relative block w-full h-64 overflow-hidden rounded">
-                            <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
-                        </a>
+                        <Link href="#_" className="relative block w-full h-64 overflow-hidden rounded">
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg"/>
+                        </Link>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</a>
+                        <Link href="#_" className="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</Link>
                     </div>
                 </div>
                 </div>
@@ -300,8 +302,8 @@ export default function Digital_Projects () {
             <p className="w-full mt-5 text-lg leading-6 text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
             </div>
             <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-            <a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</a>
-           <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</a>
+            <Link className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">See Pricing</Link>
+           <Link className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Try it free</Link>
             </div>
             </div>
             </div>
