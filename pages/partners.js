@@ -2,7 +2,7 @@ import Layout from "../component/Layout"
 export default function Partners () {
     return (
         <Layout>
-             {/* <!-- Header Section --> */}
+            {/* <!-- Header Section --> */}
             <section className="w-full py-20 bg-white">
             <div className="flex flex-col items-center px-12 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-5/12">
@@ -35,9 +35,7 @@ export default function Partners () {
                 </div>
             </div>
             </section>
-
             {/* <!--KTern Partnership Models--> */}
-
             <section className="relative w-full bg-white">
             <div className="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
             <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
@@ -63,7 +61,7 @@ export default function Partners () {
                     </div>
                 </a>
 
-                    <a href="/technical-partner" className="relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 ">
+                    <a href="/technical-partner" className="w-full relative border-2 border-black shadow-md flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 ">
                         <a href="#_" className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}>
                         </a>
                         <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0 border-yellow-200 px-7">
@@ -79,7 +77,6 @@ export default function Partners () {
                 </div>
             </div>
             </section>
-
             {/* <!--KTern's Partners --> */}
             <section className="py-10 bg-gray-100">
                     <p className="text-lg font-bold font-medium tracking-wide text-gray-400 uppercase">Trusted By Our Partners</p>
@@ -115,8 +112,6 @@ export default function Partners () {
                 </div>
             </div>
             </section>
-
-
             {/* <!--Faq Section--> */}
                 <section className="py-20">
                     <div className="container mx-auto w-1/2 flex-col space-y-4">
@@ -167,7 +162,6 @@ export default function Partners () {
                 
                 </div>
             </section>
-    
             {/* <!--Steps to join KTern--> */}
             <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
             <div className="container px-14 mx-auto">
@@ -215,9 +209,8 @@ export default function Partners () {
                 
             </div>
             </section>
-
             {/* <!-- Footer CTA --> */}
-              <section className="bg-white">
+            <section className="bg-white">
             <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
             <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-purple-100 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
             <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
@@ -233,7 +226,6 @@ export default function Partners () {
             </div>
             </div>
             </section> 
-        
         </Layout>
     )
 }

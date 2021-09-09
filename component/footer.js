@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 export default function Footer () {
-    return (
-        
-       <section className="py-10 2xl:py-20 bg-black">
+    return (      
+    <section className="py-10 2xl:py-20 bg-black">
         <div className="px-10 mx-auto ">
             <div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
                 <div className="w-full  px-4">
@@ -54,7 +53,7 @@ export default function Footer () {
                         </div>
                        </div>
                     <div>
-                        <img src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="text-white custom-card-subheading"/>
+                        <img width="10%" src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white custom-card-subheading"/>
                     </div>
                 </div>
 
