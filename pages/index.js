@@ -11,8 +11,8 @@ export default function Home() {
 
               <div className=" bg-white   h-full" >
                   <div className="xl:pb-80 bg-cover text-center xl:bg-hero" >
-                      <h2 className="mt-4 top-0 mb-2 font-bold  custom-heading">Finish what you started</h2>
-                      <p className="p-4 mb-6 max-w-2xl mx-auto mb-12  text-xl md:custom-subheading">Correct annotation helps your customers find their way around new features.</p>
+                      <h2 className="mt-4 top-0 mb-2 font-extrabold text-3xl">All-in-one digital workplace for your SAP Digital Transformations</h2>
+                      <p className="p-4 mb-6 max-w-2xl mx-auto mb-12  text-xl md:custom-subheading">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
             
                       <a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300  text-lg text-black  font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" target="_blank" rel="noopener noreferrer" href="https://app.ktern.com">Free Trial</a>
                       <a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="/contact">Contact Sales</a>
@@ -77,7 +77,7 @@ export default function Home() {
                               </div>
                               <div className="relative  xl:w-2/3 shadow-md p-2 custom-project-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Projects</h2>
-                                  <p className=" leading-relaxed custom-card-subheading">Amet minim mollit non deserunt . </p>
+                                  <p className=" leading-relaxed custom-card-subheading">Gain ultimate control of your SAP projects and teams  </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                        <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -100,7 +100,7 @@ export default function Home() {
                               </div>
                               <div className=" xl:w-2/3 shadow p-2 custom-process-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Process</h2>
-                                  <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
+                                  <p className="custom-card-subheading leading-relaxed">Ensure complete process control and governance  </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                       <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -122,7 +122,8 @@ export default function Home() {
 
                               <div className="xl:w-2/3 shadow p-2 custom-labs-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Labs</h2>
-                                  <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt . </p>
+                                  <p className="custom-card-subheading leading-relaxed">Control and Streamline Your Functional Testing Cycles 
+</p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                         <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -144,7 +145,7 @@ export default function Home() {
 
                               <div className=" xl:w-2/3 shadow p-2 custom-maps-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital Maps</h2>
-                                  <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
+                                  <p className="custom-card-subheading leading-relaxed">Analyse your SAP landscape and Business Processes </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                         <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -166,7 +167,7 @@ export default function Home() {
 
                               <div className=" xl:w-2/3 shadow p-2 custom-mines-secondary rounded-2xl">
                                   <h2 className="custom-card-heading">Digital mines</h2>
-                                  <p className="custom-card-subheading leading-relaxed">Amet minim mollit non deserunt .</p>
+                                  <p className="custom-card-subheading leading-relaxed">Ensure ROI on your SAP S/4HANA investment </p>
                                   <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                       <a href="/products/digital-projects" className="icon-link__link">
                                           <div className="icon-link__label">
@@ -325,29 +326,29 @@ export default function Home() {
                           <span className="flex items-center justify-center w-14 h-14 mb-8  rounded-full">
                             <img src="https://static.thenounproject.com/png/925249-200.png" alt="" />
                           </span>
-                          <h3 className="mb-4 custom-card-heading">Collaboration</h3>
-                          <p className="custom-card-subheading text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                          <h3 className="mb-4 custom-card-heading">One Workspace for All SAP Initiatives </h3>
+                          <p className="custom-card-subheading text-gray-500">Simplify your IT Landscape by eliminating disparate applications which you might use for project management, collaboration, testing and process optimization  </p>
                       </div>
                       <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
                           <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlFtvMeuE65QVk7aARCnGZ6IrKur4L5D8cVk4gJCwkCGw6NbYt59RknTDlUe40zsIISA&usqp=CAU" alt=""/>
                           </span>
-                          <h3 className="mb-4 custom-card-heading">Stay Secure</h3>
-                          <p className="custom-card-subheading text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                          <h3 className="mb-4 custom-card-heading">Reduce Testing Efforts by 85% </h3>
+                          <p className="custom-card-subheading text-gray-500">Leverage new-gen screen-based testing and RPA-based testing bots built on SAP Business APIs to reduce manual effort and accelerate SAP releases </p>
                       </div>
                       <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
                           <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
                           <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-9-3/68/438-512.png"alt="" />
                           </span>
-                          <h3 className="mb-4 custom-card-heading">Privacy</h3>
-                          <p className="custom-card-subheading text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                          <h3 className="mb-4 custom-card-heading">Run efficient SAP investments designed for success </h3>
+                          <p className="custom-card-subheading text-gray-500">Plan, execute, collaborate and govern each SAP investment from strategy building to task execution for streamlined and successful business operations  </p>
                       </div>
                       <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center">
                           <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
                           <img src="/assets/cloud.png" alt=""/>
                           </span>
-                          <h3 className="mb-4 custom-card-heading">Privacy</h3>
-                          <p className="custom-card-subheading text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                          <h3 className="mb-4 custom-card-heading">Continuously optimize your SAP Business Processes </h3>
+                          <p className="custom-card-subheading text-gray-500">Mine your existing business processes and optimize them with the inbuilt SAP Tribal Knowledge Base engine which encompasses decades worth of SAP business expertise </p>
                       </div>
                   </div>
               </div>
@@ -361,10 +362,10 @@ export default function Home() {
             {/* <img className="block absolute bottom-0 left-0 h-128 w-128 -mb-96 -ml-24" src="/assets/circle.svg" alt="" /> */}
             <div className="container px-3 mx-auto">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="my-10 text-4xl md:custom-heading ">The quick brown fox jumps over the lazy dog.</h2>
+                    <h2 className="my-10 text-4xl md:custom-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
                     <div className="max-w-md mx-auto pb-10">
-                        <p className="mb-5 text-xl md:custom-subheading text-gray-800">A short message that will bring your customers into the world of your imagination.</p>
-                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</a>
+                        <p className="mb-5 text-xl md:custom-subheading text-gray-800">Manage your entire SAP Digital Transformation from a single place </p>
+                        <a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Start 14-day Free Trial</a>
                     </div>
                 </div>
             </div>

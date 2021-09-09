@@ -54,7 +54,7 @@ export default function Digital_Projects () {
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
                         <h2 className="mb-3 text-4xl lg:text-5xl font-bold custom-heading">Digital Projects</h2>
-                        <span className="mb-3 text-1xl text-black custom-subheading">Description-Automated Enterprise Project Execution</span> 
+                        <span className="mb-3 text-1xl text-black custom-subheading">Gain ultimate control of your SAP projects and teams </span> 
                             <div><br />
                                 <a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-lg text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading" href="#">Contact Sales</a>
                             </div>
@@ -134,12 +134,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Get more done with&nbsp;</span>
-                                        <span className=" md:custom-heading">Digital Projects</span>
+                                        <span className="md:custom-heading">Plan </span>
+                                        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Plan, organize, and collaborate on any project with powerful task management that can be customized for every need.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -175,12 +175,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Get more done with&nbsp;</span>
-                                        <span className=" md:custom-heading">Digital Projects</span>
+                                        <span className="md:custom-heading">Collaborate</span>
+                                        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Plan, organize, and collaborate on any project with powerful task management that can be customized for every need.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -209,12 +209,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Get more done with&nbsp;</span>
-                                        <span className=" md:custom-heading">Digital Projects</span>
+                                        <span className="md:custom-heading">Organize</span>
+                                       
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Plan, organize, and collaborate on any project with powerful task management that can be customized for every need.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Save time with our templates which can be easily customized to your own Company's workflow, single source of truth for all your SAP Project related files and Documents </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -250,12 +250,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 text-xl lg:text-5xl font-bold font-heading">
-                                        <span className="md:custom-heading">Get more done with&nbsp;</span>
-                                        <span className=" md:custom-heading">Digital Projects</span>
+                                       
+                                        <span className=" md:custom-heading">Govern</span>
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Plan, organize, and collaborate on any project with powerful task management that can be customized for every need.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose custom-card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -276,36 +276,36 @@ export default function Digital_Projects () {
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <img className="w-auto" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" />
                         </div>
-                        <p className="custom-card-heading">Bot Name</p>
-                        <p className="custom-card-subheading">Bot description</p>
+                        <p className="custom-card-heading">DX Process Orchestrator Bot</p>
+                        <p className="custom-card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-lg border-2 border-black text-center">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <img className="w-auto" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" />
                         </div>
-                        <p className="custom-card-heading">Bot Name</p>
-                        <p className="custom-card-subheading">Bot description</p>
+                        <p className="custom-card-heading">DX Release Orchestrator Bot</p>
+                        <p className="custom-card-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-lg border-2 border-black text-center">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <img className="w-auto" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" />
                         </div>
-                        <p className="custom-card-heading">Bot Name</p>
-                        <p className="custom-card-subheading">Bot description</p>
+                        <p className="custom-card-heading">DX Event Orchestrator Bot</p>
+                        <p className="custom-card-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-lg border-2 border-black text-center">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <img className="w-auto" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" />
                         </div>
-                        <p className="custom-card-heading">Bot Name</p>
-                        <p className="custom-card-subheading">Bot description</p>
+                        <p className="custom-card-heading">DX Change Management Orchestrator Bot</p>
+                        <p className="custom-card-subheading">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-lg border-2 border-black text-center">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <img className="w-auto" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" />
                         </div>
-                        <p className="custom-card-heading">Bot Name</p>
-                        <p className="custom-card-subheading">Bot description</p>
+                        <p className="custom-card-heading">DX  Security Impact Simulation Bot</p>
+                        <p className="custom-card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-lg border-2 border-black text-center">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
@@ -348,7 +348,7 @@ export default function Digital_Projects () {
                         </button> */}
                         <div className="flex w-full flex-wrap bg-white shadow rounded">
                         <div className="md:py-10 text-center w-full lg:w-1/3 border-r">
-                            <span className="text-5xl lg:text-6xl font-bold">5.0</span>
+                            <span className="text-5xl lg:text-6xl font-bold">4.7</span>
                             <div className="mb-6 lg:mb-12 flex text-green-600 justify-center">
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
@@ -367,14 +367,16 @@ export default function Digital_Projects () {
                             </svg>
                             </div>
                             <div>
-                            <img className="block mx-auto" src="/atis-assets/social/clutch-logo.png" alt=""/>
+                                <a href="https://www.g2.com/products/ktern/reviews" target="_blank">
+                            <img className="block mx-auto w-20 h-20" src="/assets/g2logo.png" alt=""/>
+                            </a>
                             </div>
                         </div>
                         <div className="md:py-10 px-6 w-full lg:w-2/3">
-                            <img className="mb-10 w-10 h-10" src="/atis-assets/elements/left-quote.png" alt=""/>
-                            <p className="mb-10 lg:text-2xl leading-loose text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                            <h4 className="text-2xl font-bold custom-card-heading">Alice Bradley</h4>
-                            <p className="text-gray-400">Backend Developer</p>
+                            <img className="mb-10 w-10 h-10 " src="/atis-assets/elements/left-quote.png" alt=""/>
+                            <p className="mb-10 lg:text-2xl leading-loose text-gray-500">Detailed Evaluation of ECC environment's custom objects/code</p>
+                            <h4 className="text-2xl font-bold custom-card-heading">Jim W</h4>
+                            <p className="text-gray-400">Partner</p>
                         </div>
                         </div>
                         {/* <button className="hidden lg:block bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
@@ -404,7 +406,7 @@ export default function Digital_Projects () {
                         <img className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
                         </a>
                         <p className="text-xs font-bold text-gray-400 uppercase">Resources</p>
-                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</a>
+                        <a href="#_" className="block text-xl font-medium leading-tight text-gray-700 hover:text-gray-900">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a>
                     </div>
                     
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">

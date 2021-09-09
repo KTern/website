@@ -61,8 +61,8 @@ export default function Partners () {
                   <a href="/technology-partner" className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
                     <img className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">VAR Partner</p>
-                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
+                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
+                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
                         <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
@@ -76,7 +76,7 @@ export default function Partners () {
 
             {/* <!--KTern's Partners --> */}
             <section className="py-10 bg-gray-100">
-                    <p className="text-lg font-bold font-medium tracking-wide text-gray-400 uppercase">Trusted By Our Partners</p>
+                    <p className="text-lg font-bold font-medium tracking-wide text-gray-400 uppercase text-center">Trusted By Our Partners</p>
             <div className="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                     <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
