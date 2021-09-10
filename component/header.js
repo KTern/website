@@ -28,7 +28,7 @@ export default function Header () {
         <nav className="p-0 bg-white  w-full   fixed z-50 shadow-md">
             <div className="flex flex-wrap justify-between items-center">
                 <Link className="text-lg font-medium xl:mx-20 " href="/" passHref>
-                    <Image width="148px" height="40px" src="/assets/KternLogo.png" alt="Ktern Logo"/>
+                    <Image width="148" height="40" src="/assets/KternLogo.png" alt="Ktern Logo"/>
                 </Link>
                 <div className="lg:hidden ">
                     <button className="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded" onClick={openNav}>
@@ -165,11 +165,11 @@ export default function Header () {
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <Link href="/resources"  className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</Link>
+                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</a></Link>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</Link>
+                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold"><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</a></Link>
                         </li>
                     </ul>
                </div>
@@ -185,7 +185,7 @@ export default function Header () {
             <nav  className="nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div className="flex items-center mb-8">
                     <Link className="mr-auto text-2xl font-medium leading-none" href="#" passHref>
-                        <Image className="h-12" src="/assets/kternLogo.png" alt="Ktern Logo" width="auto"/>
+                        <Image className="h-12" src="/assets/kternLogo.png" alt="Ktern Logo" width="20" height="20"/>
                     </Link>
                     <button className="navbar-close" onClick={closeNav}>
                         <svg className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

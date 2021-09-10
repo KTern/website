@@ -54,7 +54,7 @@ export default function Footer () {
                         </div>
                        </div>
                     <div>
-                        <Image width="10%" src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white custom-card-subheading" alt="Available on SAP Store"/>
+                        {/* <Image width="10%" src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white custom-card-subheading" alt="Available on SAP Store"  height={150}/> */}
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ export default function Footer () {
                                     <svg width="22" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="none" fillRule="evenodd" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="20" clipRule="evenodd"><path d="M14.862 4.463c-.407-.702-.848-.831-1.747-.88-.898-.059-3.157-.083-5.113-.083-1.96 0-4.22.024-5.117.083-.897.05-1.339.178-1.75.88C.716 5.165.5 6.372.5 8.498v.008c0 2.117.216 3.333.635 4.026.41.701.852.829 1.75.888.897.05 3.156.08 5.117.08 1.956 0 4.215-.03 5.114-.08.899-.059 1.34-.187 1.747-.888.424-.694.638-1.91.638-4.026v-.005-.003c-.001-2.126-.214-3.333-.639-4.035z"/><path d="M6.5 11V6l4 2.5z"/></g></svg>
                                 </Link>
                                 <Link className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full" href="#" passHref>
-                                    <Image className="w-5" src="/assets/icons/xing.png" alt="Xing"/>
+                                    <Image className="w-5" src="/assets/icons/xing.png" alt="Xing" width={150} height={150}/>
                                 </Link>
                             </div>
 
