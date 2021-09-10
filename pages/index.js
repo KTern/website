@@ -17,8 +17,8 @@ export default function Home () {
                             <h2 className="mt-4 top-0 mb-2 font-bold  heading">All-in-one digital workplace for your SAP Digital Transformations</h2>
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
-                            <Link className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" target="_blank" rel="noopener noreferrer" href="https://app.ktern.com">Free Trial</Link>
-                            <Link className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" href="/contact">Contact Sales</Link>
+                            <Link  target="_blank" rel="noopener noreferrer" href="https://app.ktern.com"><a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>
+                            <Link  href="/contact"><a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                           
                         </div>
                       
@@ -74,7 +74,7 @@ export default function Home () {
                 {/* <!-- Streams Section --> */}
                 <section className="pt-10 px-10 bg-white">
                     <div className="flex my-10 mx-10 ">
-                        <div className="flex-row flex-wrap w-full xl:w-1/3  ">
+                        <div className="flex-row flex-wrap w-full xl:w-1/3  pr-5">
                             <div className=" w-full lg:mx-10 group p-2 mb-4">
                                 <div className="flex flex-wrap w-full ">
                                     <div className=" h-10 h-full lg:h-20 w-20 mx-4 my-auto">
@@ -186,7 +186,7 @@ export default function Home () {
                                 </div>
                             </div>
                         </div>
-                        <Image className="hidden xl:block my-auto h-full w-2/3" src="/assets/right-stream.svg" alt="" width={150} height={150}/>
+                        <Image className="hidden xl:block my-auto h-full w-2/3" src="/assets/right-stream.svg" alt="" width="1000" height="500"/>
                     </div>
                 </section>
                 {/* <!-- /Streams Section --> */}
@@ -296,17 +296,17 @@ export default function Home () {
                 </section>
                 {/* <!-- /Why Ktern --> */}
                 {/* <!-- CTA Section --> */}
-                <section className="relative py-5 2xl:py-5 bg-gray-700 overflow-hidden" style={{ backgroundColor: '#EAEDF2' }}>
+                <section className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat " style={{ backgroundColor: '#EAEDF2',backgroundImage:"url('/assets/five-stars.svg')",backgroundPosition: 'bottom right' }}>
                     {/* <Image className="hidden lg:block absolute top-0 right-0 left-50  h-100 w-100 -mt-32 -mr-72" src="/assets/circle.svg" alt="" /> */}
                     {/* <Image className="hidden lg:block absolute left-0 -mb-8 lg:ml-24" src="/assets/full-circle.svg" alt="" /> */}
-                    <Image className="block absolute bottom-0 left-0 h-24 md:h-32 lg:h-72 lg:ml-24 -mb-8" src="/assets/five-stars.svg" alt="" width={150} height={150} />
+                    {/* <Image className="block absolute bottom-0 left-0 h-24 md:h-32 lg:h-72 lg:ml-24 -mb-8" src="/assets/five-stars.svg" alt="" width={250} height={250} /> */}
                     {/* <Image className="block absolute bottom-0 left-0 h-128 w-128 -mb-96 -ml-24" src="/assets/circle.svg" alt="" /> */}
                     <div className="container px-3 mx-auto">
                         <div className="max-w-3xl mx-auto text-center">
                             <h2 className="my-10 text-4xl md:custom-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
                             <div className="max-w-md mx-auto pb-10">
                                 <p className="mb-5 text-xl md:custom-subheading text-gray-800">Manage your entire SAP Digital Transformation from a single place</p>
-                                <Link className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading" href="/contact">Start 14-day Free Trial</Link>
+                                <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Start 14-day Free Trial</a></Link>
                             </div>
                         </div>
                     </div>

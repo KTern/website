@@ -174,7 +174,7 @@ export default function Header () {
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <Link className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 " href="/contact">Contact Sales</Link>
+                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>
         </nav>
@@ -329,7 +329,7 @@ export default function Header () {
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <Link className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="/contact">Contact Sales</Link>
+                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Contact Sales</a></Link>
                 </div>
                 <div className="mt-auto">
 
