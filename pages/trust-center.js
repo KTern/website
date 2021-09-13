@@ -17,7 +17,7 @@ export default function TrustCenter () {
                             <li className="pb-2" >Gain Insights on service availability worldwide</li>
                            <li className="pb-2">Access Cloud service Performance history</li>
                            <li className="pb-4">View Personalized Dashboard</li>
-                           <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                           <Link href="#" passHref><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" >Learn more</a></Link>
                           </ul>
                           
                    
@@ -30,7 +30,7 @@ export default function TrustCenter () {
                         <li className="pb-2" >Gain Insights on service availability worldwide</li>
                        <li className="pb-2">Access Cloud service Performance history</li>
                        <li className="pb-4">View Personalized Dashboard</li>
-                       <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                       <Link  href="#" passHref><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Learn more</a></Link>
                       </ul>
                 </div>
     
@@ -41,7 +41,7 @@ export default function TrustCenter () {
                         <li className="pb-2" >Gain Insights on service availability worldwide</li>
                        <li className="pb-2">Access Cloud service Performance history</li>
                        <li className="pb-4">View Personalized Dashboard</li>
-                       <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                       <Link  href="#"><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Learn more</a></Link>
                       </ul>
                 </div>
                 
@@ -52,7 +52,7 @@ export default function TrustCenter () {
                         <li className="pb-2" >Gain Insights on service availability worldwide</li>
                        <li className="pb-2">Access Cloud service Performance history</li>
                        <li className="pb-4">View Personalized Dashboard</li>
-                       <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                       <Link  href="#" passHref><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Learn more</a></Link>
                       </ul>
                 </div>
                 <div>
@@ -62,7 +62,7 @@ export default function TrustCenter () {
                         <li className="pb-2" >Gain Insights on service availability worldwide</li>
                        <li className="pb-2">Access Cloud service Performance history</li>
                        <li className="pb-4">View Personalized Dashboard</li>
-                       <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                       <Link  href="#"><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Learn more</a></Link>
                       </ul>
                 </div>
                 <div>
@@ -72,47 +72,57 @@ export default function TrustCenter () {
                         <li className="pb-2" >Gain Insights on service availability worldwide</li>
                        <li className="pb-2">Access Cloud service Performance history</li>
                        <li className="pb-4">View Personalized Dashboard</li>
-                       <Link className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200" href="#">Learn more</Link>
+                       <Link  href="#" passHref><a className="lg:inline-block py-1 px-5 bg-black hover:bg-gray-300 hover:text-black shadow text-base text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">Learn more</a></Link>
                       </ul>
                 </div>
             </div>
         </div>
     </section>
     {/* <!--Different Roles--> */}
-       <section className="text-black body-font bg-project-secondary">
+         <section className="text-black body-font bg-project-secondary">
                 <div className="px-5 py-10 mx-auto flex flex-wrap flex-col">
-                    <h2 className="mb-5 text-xl font-bold text-center md:text-4xl">Find Information Specific to your Role</h2>
+                    <h2 className="mb-5 card-heading font-bold text-center md:text-4xl">Find Information Specific to your Role</h2>
                 <div className="flex w-1/2 mx-auto flex-wrap mb-5">
-                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>Project Manager
+                            <Link href="" passHref>
+                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg><span className="tiny-subheading">Project Manager</span>
+                        </a>
                     </Link>
-                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>Consultant
+                            <Link href="" passHref>
+                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg><span className="tiny-subheading">Consultant</span>
+                        </a>
                     </Link>
-                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                        <circle cx="12" cy="5" r="3"></circle>
-                        <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-                    </svg>CEO
+                            <Link href="" passHref>
+                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                        </svg><span className="tiny-subheading">CEO</span>
+                        </a>
                     </Link>
-                    <Link className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>Basis Consultant
+                            <Link href="" passHref>
+                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg><span className="tiny-subheading">Basis Consultant</span>
+                        </a>
                     </Link>
                 </div>
-                <Image className="w-1/3 block mx-auto mb-5 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
+                <div className="w-1/3 block mx-auto mb-5 object-cover object-center rounded">
+                        <Image  alt="hero" src="https://dummyimage.com/720x600" width={500} height={400} />
+                </div>
                 <div className="flex flex-col text-center w-full">
-                    <h1 className="text-xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven&apos;t heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+                    <h1 className="tiny-heading title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+                    <p className="lg:w-2/3 mx-auto leading-relaxed tiny-subheading">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven&apos;t heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
                 </div>
                 </div>
             </section>
-           </Layout>
+              </Layout>
     )
 }

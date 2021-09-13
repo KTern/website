@@ -14,7 +14,7 @@ export default function Home () {
                     <div className=" bg-white  h-full" >
                       
                         <div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% " >
-                            <h2 className="mt-4 top-0 mb-2 font-bold  heading">All-in-one digital workplace for your SAP Digital Transformations</h2>
+                            <h2 className="mt-4 top-0 mb-2 font-bold leading-normal heading">Your SAP Digital Transformations starts here</h2>
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
                             <Link  target="_blank" rel="noopener noreferrer" href="https://app.ktern.com"><a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>

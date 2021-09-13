@@ -56,7 +56,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image src="/pricing/down-arrow-svgrepo-com.svg" layout="fill"  alt="down arrow"/></div>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -88,7 +88,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -121,7 +121,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -153,7 +153,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -185,7 +185,7 @@ export default function Pricing () {
                                 <div className="w-full">
                                     <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         View Details
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                                 
@@ -204,7 +204,7 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Maps.png" alt="Digital Maps"/>
+                                            <Image src="/assets/icons/Maps.png" height={30} width={30} alt="Digital Maps"/>
                                             </span>
                                             <p className="text-xs font-bold text-black">Digital Maps</p>
                                         </div>
@@ -213,34 +213,34 @@ export default function Pricing () {
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Process.svg" alt="Digital Process"/>
+                                            <Image src="/assets/icons/Process.svg" height={30} width={30} alt="Digital Process"/>
                                             </span>
-                                            <p className="text-xs font-bold text-black ">Digital Process</p>
+                                            <p className="text-xs font-bold text-black " >Digital Process</p>
                                         </div>
                                         </div>
 
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Projects.png" alt="Digital Projects"/>
+                                            <Image src="/assets/icons/Projects.png" height={30} width={30} alt="Digital Projects"/>
                                             </span>
-                                            <p className="text-xs font-bold text-black">Digital Projects</p>
+                                            <p className="text-xs font-bold text-black" >Digital Projects</p>
                                         </div>
                                         </div>
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Labs.png" alt="Digital Labs"/>
+                                            <Image src="/assets/icons/Labs.png" alt="Digital Labs" height={30} width={30}/>
                                             </span>
-                                            <p className="text-xs font-bold text-black">Digital Labs</p>
+                                            <p className="text-xs font-bold text-black" >Digital Labs</p>
                                         </div>
                                         </div>
                                         <div className="py-2 px-5 mb-4 bg-white rounded-lg overflow-hidden">
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Mines.png"alt="Digital Mines"/>
+                                            <Image src="/assets/icons/Mines.png"alt="Digital Mines" height={30} width={30}/>
                                             </span>
-                                            <p className="text-xs font-bold text-black">Digital Mines</p>
+                                            <p className="text-xs font-bold text-black" >Digital Mines</p>
                                             
                                         </div>
                                         </div>
@@ -249,7 +249,7 @@ export default function Pricing () {
                             <div className="w-full">
                                 <button className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                     Contact Sales
-                                    <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                    <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                 </button>
                                 <p className="mt-3 text-xs text-center text-gray-500">All plans include a free onboarding call.</p>
                             
@@ -300,7 +300,7 @@ export default function Pricing () {
                     <div className="grid mt-16 gap-y-10 sm:grid-cols-2 sm:gap-x-8 md:gap-x-12 lg:grid-cols-3 lg:gap-20">
                         <div>
                             
-                            <Image src="/pricing/Digital Processes.jpg" alt="Digital Process"/>
+                            <Image src="/pricing/Digital Processes.jpg" alt="Digital Process" height={300} width={300}/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Maps
                             </h3>
@@ -309,7 +309,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <Image src="/pricing/Digital Projects.jpg" alt="Digital Projects"/>
+                            <Image src="/pricing/Digital Projects.jpg" alt="Digital Projects" height={300} width={300}/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Processes
                             </h3>
@@ -318,7 +318,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <Image src="/pricing/digital maps.jpg" alt="Digital Maps"/>
+                            <Image src="/pricing/digital maps.jpg" alt="Digital Maps" height={300} width={300}/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Projects
                             </h3>
@@ -327,7 +327,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                            <Image src="/pricing/Digital Labs.jpg" alt="Digital Labs"/>
+                            <Image src="/pricing/Digital Labs.jpg" alt="Digital Labs" height={300} width={300}/>
                             <h3 className="mt-6 text-base font-black leading-6 text-gray-700">
                                 Digital Labs
                             </h3>
@@ -336,7 +336,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines"/>
+                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines" height={300} width={300}/>
                             <h3 className="mt-6 text-base font-black text-gray-700">
                                 Digital Mines
                             </h3>
@@ -345,7 +345,7 @@ export default function Pricing () {
                             </p>
                         </div>
                         <div>
-                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines"/>
+                        <Image src="/pricing/Digital Mines.jpg" alt="Digital Mines" height={300} width={300}/>
                         <h3 className="mt-6 text-base font-black text-gray-700">
                             Digital Workplace
                         </h3>
@@ -360,55 +360,61 @@ export default function Pricing () {
             </section>
             {/* <!-- Customer Case Studies 2--> */}
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-            <Image className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" src="/pricing/line-two-montain.svg" alt=""/>
+            <div className="hidden lg:block absolute inset-x-0 bottom-0 mb-96" ><Image src="/pricing/line-two-montain.svg" alt="" height={400} width={300}/></div>
             <div className="relative container px-4 mx-auto">
                 <div className="max-w-4xl mx-auto">
                 <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">Case Studies</h2>
                 <div className="flex flex-wrap justify-center -mx-10 mb-20">
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div>
-                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/mitsubishi.png" alt=""/>
-                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
-                        <h3 className="mb-2 text-2xl text-black font-bold font-heading">70% SAP Cost Saved</h3>
-                        <p className="mb-4 text-xs text-black font-bold">SAP ERP Transformation</p>
-                        <div className="flex justify-end">
-                            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
-                            </svg>
-                        </div>
-                        </Link>
+                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/mitsubishi.png" alt=""/></div>
+                                    <Link  href="/" passHref>
+                                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
+                                            <h3 className="mb-2 text-2xl text-black font-bold font-heading">70% SAP Cost Saved</h3>
+                                            <p className="mb-4 text-xs text-black font-bold">SAP ERP Transformation</p>
+                                            <div className="flex justify-end">
+                                                <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </Link>
                     </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="lg:mt-24">
-                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/asmnew.png" alt=""/>
-                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
-                        <h3 className="mb-2 text-2xl text-gray-600 font-bold font-heading">30% Automated Results</h3>
-                        <p className="mb-4 text-xs text-black font-bold">SAP Assessment</p>
-                        <div className="flex justify-end">
-                            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
-                            </svg>
-                        </div>
-                        </Link>
+                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/asmnew.png" alt=""/></div>
+                                    <Link  href="#" passHref>
+                                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
+                                            <h3 className="mb-2 text-2xl text-gray-600 font-bold font-heading">30% Automated Results</h3>
+                                            <p className="mb-4 text-xs text-black font-bold">SAP Assessment</p>
+                                            <div className="flex justify-end">
+                                                <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </Link>
                     </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-10">
                     <div>
-                        <Image className="mb-8 w-full h-112 lg:h-80 object-cover object-top" src="/pricing/aramconew.png" alt=""/>
-                        <Link className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200" href="#" passHref>
-                        <h3 className="mb-2 text-2xl text-black font-bold font-heading">20% Automated Testing</h3>
-                        <p className="mb-4 text-xs text-gray-600 font-bold">SAP Testing</p>
-                        <div className="flex justify-end">
-                            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
-                            </svg>
-                        </div>
-                        </Link>
+                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/aramconew.png" alt=""/></div>
+                                    <Link  href="#" passHref>
+                                        <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
+                                            <h3 className="mb-2 text-2xl text-black font-bold font-heading">20% Automated Testing</h3>
+                                            <p className="mb-4 text-xs text-gray-600 font-bold">SAP Testing</p>
+                                            <div className="flex justify-end">
+                                                <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z" fill="black"></path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </Link>
                     </div>
                     </div>
                 </div>
-                <div className="text-center"><Link className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 rounded-full font-bold text-white" href="#"> All Case Studies</Link></div>
+                <div className="text-center"><Link  href="#" passHref><a className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 rounded-full font-bold text-white"> All Case Studies</a></Link></div>
                 </div>
             </div>
             </section>
@@ -445,7 +451,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0 ">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     
                                 
@@ -471,7 +477,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     
                                 
@@ -496,7 +502,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     
                                 
@@ -520,7 +526,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     
                                 
@@ -544,7 +550,7 @@ export default function Pricing () {
                                 <div className="w-full absolute bottom-0">
                                     <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
-                                        <Image src="/pricing/down-arrow-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="down arrow"/>
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     
                                 

@@ -30,7 +30,7 @@ export default function Header () {
                 <Link  href="/" passHref>
                     <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src="/assets/KternLogo.png" alt="Ktern Logo"/>
                 </Link>
-                <div className="lg:hidden ">
+                <div className="lg:hidden py-2">
                     <button className="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded" onClick={openNav}>
                           <svg className="block h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Mobile menu</title>
@@ -64,7 +64,7 @@ export default function Header () {
                                     </ul>
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                             <h3 className="card-heading text-black text-bold mb-2">Streams</h3>
-                                            <div onMouseLeave={() => setIsProjectShown(true)}>
+                                            <div onMouseLeave={() => setIsProjectShown(true)} onMouseEnter={() => setIsProjectShown(false)}>
                                         <li>
                                         <Link href="#"    ><a onMouseEnter={() => setIsProjectShown(true)}
                                         onMouseLeave={() => setIsProjectShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Projects</a></Link>
@@ -182,9 +182,9 @@ export default function Header () {
         </nav>
 
         {/* <!-- Mobile --> */}
-        <div id="navbar-menu" className="z-50 hidden relative bg-black">
+        <div id="navbar-menu" className="py-20 z-50 hidden relative bg-black">
             <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-            <nav  className="nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <nav  className="py-20  nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm  px-6 bg-white border-r overflow-y-auto">
                 <div className="flex items-center mb-8">
                     <Link className="mr-auto text-2xl font-medium leading-none" href="#" passHref>
                         <Image className="h-12" src="/assets/kternLogo.png" alt="Ktern Logo" width="20" height="20"/>
