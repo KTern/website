@@ -22,14 +22,18 @@ export default function WebinarLayout ({ data }) {
             <div className="relative z-30  px-10 bg-white sm:h-0 ">
                 <div className="flex flex-row  items-center sm:h-20 max-w-lg p-6 mx-auto space-y-3 overflow-hidden transform -translate-y-12 bg-white rounded-lg shadow-md lg:h-24 lg:max-w-6xl lg:flex-row lg:space-y-0 lg:space-x-3">
                         <div className="mb-8  mt-10 flex items-center lg:justify-center w-1/3 px-4">
-                            <Image className="w-10 h-10 mr-4" src="/webinar/calendar.png" alt="Calendar"/>
+                            <div className="block w-10 h-10 mr-4 relative">
+                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/calendar.png" alt="Calendar"/>
+                            </div>
                             <div>
                             <h3 className="text-xs font-bold lg:text-lg">{data.date}</h3>
                             
                             </div>
                         </div>
                         <div className="mb-8 flex items-center lg:justify-center w-1/3 px-4">
-                            <Image className="w-10 h-10 mr-4" src="/webinar/clock.png" alt="Clock"/>
+                        <div className="block w-10 h-10 mr-4 relative">
+                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
+                            </div>
                             <div>
                             <h3 className="text-base sm:text-xs lg:text-lg font-bold">{data.time}</h3>
                             <p className="sm:text-xs lg:text-lg">{data.zone}</p>
@@ -37,7 +41,9 @@ export default function WebinarLayout ({ data }) {
                             </div>
                         </div>
                         <div className="mb-8 flex items-center lg:justify-center w-1/3 px-4">
-                            <Image className="w-10 h-10 mr-4" src="/webinar/tickets.png" alt="Tickets"/>
+                        <div className="block w-10 h-10 mr-4 relative">
+                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/tickets.png" alt="Calendar"/>
+                            </div>
                             <div>
                             <h3 className="text-xs md:text-base font-bold text-gray-500 lg:text-lg">{data.cost}</h3>
                             
@@ -67,7 +73,9 @@ export default function WebinarLayout ({ data }) {
                                 {data.learnlist.map(content => (
                                     <li className="mb-2" key={content}>
                                         <div className="w-fill flex text-md text-gray-600 md:pr-16">
-                                            <Image className="flex-none w-6 h-full" src="/webinar/check.png" alt="Webinar check"/>
+                                            <div className=" block w-4 h-4 relative flex-none">
+                                            <Image layout="fill" className=" " src="/webinar/check.png" alt="Webinar check"/>
+                                            </div>
                                             <span className="ml-2" title="Point 1" >{content}</span>
                                         </div>
                                     </li>
@@ -79,7 +87,9 @@ export default function WebinarLayout ({ data }) {
                                     <div className="flex items-center  p-5 rounded-xl">
                                 {data.panellist.map(member => (
                                     <div className="text-center pr-6 " key={member} >
-                                            <Image className="w-40 h-40 mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.image} alt=""/>
+                                            <div className=" block w-40 h-40 relative ">
+                                            <Image layout="fill" className="mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.image} alt=""/>
+                                            </div>
                                             <h3 className="mb-1 text-2xl font-semibold font-heading">{member.name}</h3>
                                             <p className="text-gray-500">{member.designation}</p>
                                     </div>
@@ -110,9 +120,9 @@ export default function WebinarLayout ({ data }) {
                                         <label className="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">Phone</label>
                                         <input type="number" className="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Phone Number"/>
                                     </div>
-                                    <div className="relative">
+                                    <div className="relative  text-center">
                                     
-                                        <Link href="#_" className="inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200 bg-black rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit </Link>
+                                        <button href="#_" className=" px-5 py-4 text-base font-medium text-center items-center justify-center text-white transition duration-200  bg-black rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit </button>
 
                                     </div>
                                     </div>
