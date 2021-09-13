@@ -9,47 +9,44 @@ export default function Footer () {
                 <div className="w-full  px-4">
                     <div className="flex flex-wrap -mx-4">
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-8  text-white  card-heading">Zospace</h3>
+                            <h3 className="mb-8 lg:mb-8  text-white  card-heading">Company</h3>
                             <ul className="text-lg">
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Hello</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Story</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">About us</a></Link></li>
                                 <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Pricing</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Applications</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Stats</a></Link></li>
-                                <li><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Blog</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Newsroom</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Trust Center</a></Link></li>
+                                
                             </ul>
                         </div>
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-8 card-heading text-white">Products</h3>
                             <ul className="text-lg">
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Newsletter</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Features</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">How it works</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">FAQ&apos;s</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Portfolio</a></Link></li>
-                                <li><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Team</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Digital Maps</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Digital Process</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Digital Projects</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Digital Labs</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Digital Mines</a></Link></li>
                             </ul>
                         </div>
                              <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-8 card-heading text-white">Products</h3>
+                            <h3 className="mb-8 lg:mb-8 card-heading text-white">Resources</h3>
                             <ul className="text-lg">
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Newsletter</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Features</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">How it works</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">FAQ&apos;s</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Portfolio</a></Link></li>
-                                <li><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Team</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Webinars</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Blog</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Case Studies</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">E-Books</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">White Papers</a></Link></li>
+                               
                             </ul>
                         </div>
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-8 card-heading text-white">Products</h3>
+                            <h3 className="mb-8 lg:mb-8 card-heading text-white">Partner</h3>
                             <ul className="text-lg">
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Newsletter</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Features</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">How it works</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">FAQ&apos;s</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Portfolio</a></Link></li>
-                                <li><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Team</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">KTern Partner Program</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">VAR Partner</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">ISV Partner</a></Link></li>
+                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Become a Partner</a></Link></li>
+                                
                             </ul>
                         </div>
                        </div>

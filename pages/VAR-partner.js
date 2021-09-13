@@ -1,7 +1,7 @@
 import Layout from "../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
-export default function VARpartner(){
+export default function varpartner(){
     return (
         <Layout>                
             {/* <!-- Header Section --> */}
@@ -9,7 +9,7 @@ export default function VARpartner(){
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
                     <p className="inline-block px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    KTERN PARTNER PROGRAM
+                    KTERN VAR PARTNER PROGRAM
                 </p>
                 <h5 className="mb-3 heading font-bold leading-none sm:text-4xl ">
                     Become a <br/>KTern Partner
@@ -133,56 +133,7 @@ export default function VARpartner(){
                 </div>
                 </section>
              
-            {/* <!--Faq Section--> */}
-             <section className="py-20">
-                    <div className="container mx-auto w-1/2 flex-col space-y-4">
-                        <h2 className="mb-2 card-heading font-bold text-center md:text-3xl mb-10">Frequently Asked Questions</h2>
-                    <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                        <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">Where do I upgrade my account?</span>
-                            <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                </summary>
-                                <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
-                        </div>
-                </details>
-                    <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                        <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">Where do I upgrade my account?</span>
-                            <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                </summary>
-                                <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
-                        </div>
-                </details>
-                    <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                        <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">Where do I upgrade my account?</span>
-                            <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                </summary>
-                                <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
-                        </div>
-                </details>
-
-                
-                </div>
-            </section>
+           
         {/* <!--Detailed Look at Partnership Benefits--> */}
             <section className="relative py-0 2xl:py-10">
             <div className="container px-20 mx-auto">

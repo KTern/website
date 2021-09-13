@@ -172,11 +172,11 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 font-bold card-heading">
-                                        <span className="card-heading">Plan </span>        
+                                        <span className="card-heading">Organize </span>        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-gray-400  card-subheading">Save time with our templates which can be easily customized to your own Company's workflow, single source of truth for all your SAP Project related files and Documents </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -373,7 +373,7 @@ export default function Digital_Projects () {
                         </a>    
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -383,7 +383,7 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</a></Link>
+                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Role of a Project Manager in SAP S/4HANA Conversion </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -393,7 +393,7 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">SAP Activate – The Heart of KTern and S/4HANA Migration</a></Link>
                     </div>
                 </div>
                 </div>

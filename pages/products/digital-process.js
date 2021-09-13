@@ -45,7 +45,7 @@ function prev(id, token, last) {
   const iWidth = parseFloat(tokStyles.width);
   document.getElementById(id).scrollBy({left: -((iWidth * amount) + gapM), behavior: "smooth"}); 
 }
-export default function Digital_Projects () {
+export default function Digital_Process () {
     return (
         <Layout>
             {/* Hero Section */}
@@ -54,13 +54,13 @@ export default function Digital_Projects () {
             <Image  src="/atis-assets/background/lines.svg" alt="" layout="fill"/>
             </div>
 
-            <div className="relative pt-12 md:pt-16 pb-40  bg-project-secondary border-b-4 border-project-primary">
+            <div className="relative pt-12 md:pt-16 pb-40  bg-process-secondary border-b-4 border-process-primary">
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
-                        <h2 className="mb-3   font-bold heading">Digital Projects</h2>
-                        <span className="mb-3  text-black subheading">Gain ultimate control of your SAP projects and teams </span> 
+                        <h2 className="mb-3   font-bold heading">Digital Process</h2>
+                        <span className="mb-3  text-black subheading">Create a Digital Footprint and continuously optimize your processes with Digital Process  </span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-process-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export default function Digital_Projects () {
                 <div className="absolute inset-0 flex items-center justify-center ">
                     <Link href="/video"  passHref>
                                 <a className="flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse">
-                                <svg className="w-16 h-16 hover:text-project-secondary text-project-primary  transition duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <svg className="w-16 h-16 hover:text-process-secondary text-process-primary  transition duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path>
                                 </svg>
                                </a>
@@ -82,7 +82,7 @@ export default function Digital_Projects () {
             {/* Streams Content Section */}
             <section className="px-4 md:px-28 pb-10 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
-                <div className="relative bg-project-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
+                <div className="relative bg-process-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
@@ -98,11 +98,11 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 font-bold card-heading">
-                                        <span className="card-heading">Plan </span>        
+                                        <span className="card-heading">Tracking, monitoring and orchestration of enterprise operations </span>        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-gray-400  card-subheading">Manage your Business processes in a holistic way, with KTern you can describe your processes both in a business and from an IT perspective ensuring the Business Documentation and System Reality are always synchronized </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -122,7 +122,7 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-project-secondary pt-2  lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative bg-process-secondary pt-2  lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
@@ -139,12 +139,12 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3  font-bold card-heading">
-                                        <span className="card-heading">Collaborate</span>
+                                        <span className="card-heading">Analytics Wizard</span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
+                                    <p className="mb-6 text-gray-400  card-subheading">KTern's Analytics Wizard provides a 360 degree bird view acting as a single source of truth for your Custom process Profiling providing insights about your existing processes.</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -156,7 +156,7 @@ export default function Digital_Projects () {
                         </div>
                         </div>
                 </div>   
-                 <div className="relative bg-project-secondary pt-20  pb-12 lg:pb-24">
+                 <div className="relative bg-process-secondary pt-20  pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
@@ -172,11 +172,11 @@ export default function Digital_Projects () {
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3 font-bold card-heading">
-                                        <span className="card-heading">Plan </span>        
+                                        <span className="card-heading">Custom Code Remediation </span>        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-gray-400  card-subheading">Automated custom code remediation for built upon pre-defined SAP Tribal Simplification Scenarios with auto-learning potential of manual code correction </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -196,7 +196,7 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-project-secondary pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative bg-process-secondary pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
@@ -214,11 +214,11 @@ export default function Digital_Projects () {
                                     <div className="max-w-md mx-auto lg:mx-0">
                                     <h2 className="mb-3  font-bold card-heading">
                                        
-                                        <span className=" card-heading">Govern</span>
+                                        <span className=" card-heading">Enablement Advisory</span>
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
+                                    <p className="mb-6 text-gray-400 leading-loose card-subheading">Automated training scenario and stakeholder recommendations in view of the process transformation is Provided based on the Configuration of your current business process as well as KTern's S4HANAPEDIA Engine's data empowered intelligence</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -234,50 +234,50 @@ export default function Digital_Projects () {
             {/*/ Streams Content Section */}
             {/* Bots Section */}
             <div>
-                <Carousel className="bots flex p-10 bg-project-200 " responsive={responsive}>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                <Carousel className="bots flex p-10 bg-process-200 " responsive={responsive}>
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Process Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Release Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Event Orchestrator Bot</p>
                         <p className="tiny-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Change Management Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate the Change management</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX  Security Impact Simulation Bot</p>
                         <p className="tiny-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">Bot Name</p>
                         <p className="tiny-subheading">Bot description</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-process-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
@@ -373,7 +373,7 @@ export default function Digital_Projects () {
                         </a>    
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">4 Simple Tips for Leveraging the Power of Social Media</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Ultimate SAP Custom Code Migration Guide using KTern </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -383,7 +383,7 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Best Tips for Creating Engaging and Compelling Photos</a></Link>
+                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Why is Custom Code Adaptation required for S/4HANA Conversion process? </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -393,7 +393,7 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">How to Get the Most Engagement from your Online Resources</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">How KTern can alleviate your Custom Code Migration challenges? </a></Link>
                     </div>
                 </div>
                 </div>
@@ -402,7 +402,7 @@ export default function Digital_Projects () {
             {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-process-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
