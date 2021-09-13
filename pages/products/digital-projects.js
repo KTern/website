@@ -353,7 +353,7 @@ export default function Digital_Projects () {
            </section>
             {/* /Testimonial Section */}
             {/* Resources Section */}
-           <section className="w-full py-8 bg-white sm:py-12 md:py-16">
+            <section className="w-full py-8 bg-white sm:py-12 md:py-16">
             <div className="px-10 mx-auto max-w-7xl">
                 <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
                     <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
@@ -398,9 +398,9 @@ export default function Digital_Projects () {
                 </div>
                 </div>
                 </section>
-             {/* / Resources Setion */}
+            {/* / Resources Setion */}
             {/* Cta Section */}
-           <section className="bg-white">
+            <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
                 <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
