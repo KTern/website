@@ -41,7 +41,7 @@ export default function Header () {
                 <div className="hidden lg:flex p-0">
                     <ul className=" flex space-x-2 xl:space-x-10">
                         <li className="hoverable hover:bg-secondary ">
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 tiny-subheading uppercase font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-400 border-b border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -163,20 +163,20 @@ export default function Header () {
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Solutions</label>
+                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Resources</a></Link>
+                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold">Resources</a></Link>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold"><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</a></Link>
+                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold"><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading uppercase font-bold">Partners</a></Link>
                         </li>
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase tiny-subheading rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase header rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>
         </nav>
@@ -199,7 +199,7 @@ export default function Header () {
                     <ul>
                     <li className="toggleable hover:bg-secondary ">
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 card-subheading font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-100 lg:border-b lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -319,13 +319,13 @@ export default function Header () {
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 card-subheading font-bold">Solutions</label>
+                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/resources" className="block cursor-pointer py-6 px-4 lg:p-6 card-subheading font-bold">Resources</Link>
+                        <Link href="/resources" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Resources</Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 card-subheading font-bold">Partners</Link>
+                        <Link href="/partners" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Partners</Link>
                         </li>
                      </ul>
                 </div>
