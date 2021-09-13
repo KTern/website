@@ -54,13 +54,13 @@ export default function Digital_Labs () {
             <Image  src="/atis-assets/background/lines.svg" alt="" layout="fill"/>
             </div>
 
-            <div className="relative pt-12 md:pt-16 pb-40  bg-maps-secondary border-b-4 border-maps-primary">
+            <div className="relative pt-12 md:pt-16 pb-40  bg-labs-secondary border-b-4 border-labs-primary">
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
                         <h2 className="mb-3   font-bold heading">Digital Labs</h2>
                         <span className="mb-3  text-black subheading">AI Driven Automated SAP Testing</span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-maps-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-labs-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export default function Digital_Labs () {
                 <div className="absolute inset-0 flex items-center justify-center ">
                     <Link href="/video"  passHref>
                                 <a className="flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse">
-                                <svg className="w-16 h-16 hover:text-maps-secondary text-maps-primary  transition duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <svg className="w-16 h-16 hover:text-labs-secondary text-labs-primary  transition duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path>
                                 </svg>
                                </a>
@@ -82,14 +82,18 @@ export default function Digital_Labs () {
             {/* Streams Content Section */}
             <section className="px-4 md:px-28 pb-10 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
-                <div className="relative bg-maps-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
+                <div className="relative bg-labs-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
                                     <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
                                 </div>
@@ -102,7 +106,7 @@ export default function Digital_Labs () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">KTern's Intelligent Test Case Recommendation Engine Automatically assess, analyze, recommend test cases for any SAP Transformation maps. </p>
+                                    <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Intelligent Test Case Recommendation Engine Automatically assess, analyze, recommend test cases for any SAP Transformation labs. </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -112,8 +116,12 @@ export default function Digital_Labs () {
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
                                 <div><Image width={500} height={400} className="rounded-3xl md:rounded-br-none" src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>
                                    
@@ -122,14 +130,18 @@ export default function Digital_Labs () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-maps-secondary pt-2  lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative bg-labs-secondary pt-2  lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
                                     <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
                                    
@@ -156,14 +168,18 @@ export default function Digital_Labs () {
                         </div>
                         </div>
                 </div>   
-                 <div className="relative bg-maps-secondary pt-20  pb-12 lg:pb-24">
+                 <div className="relative bg-labs-secondary pt-20  pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
                                     <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
                                 </div>
@@ -176,7 +192,7 @@ export default function Digital_Labs () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">KTern's Sign off wizard allows to create multiple sign-off items and Maps multiple test cases under each sign-off item. Stakeholder Hierarchy ensures sign-off items are approved in a hierarchial manner</p>
+                                    <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Sign off wizard allows to create multiple sign-off items and labs multiple test cases under each sign-off item. Stakeholder Hierarchy ensures sign-off items are approved in a hierarchial manner</p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -186,8 +202,12 @@ export default function Digital_Labs () {
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
                                 <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl md:rounded-br-none" src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>
                                    
@@ -196,14 +216,18 @@ export default function Digital_Labs () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-maps-secondary pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative bg-labs-secondary pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
                                     <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
-                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
-                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#248232"/>
+</svg></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill="#3CCD60"/>
+</svg></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
                                    
@@ -234,50 +258,50 @@ export default function Digital_Labs () {
             {/*/ Streams Content Section */}
             {/* Bots Section */}
             <div>
-                <Carousel className="bots flex p-10 bg-maps-200 " responsive={responsive}>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                <Carousel className="bots flex p-10 bg-labs-200 " responsive={responsive}>
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Process Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                             <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Release Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Event Orchestrator Bot</p>
                         <p className="tiny-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX Change Management Orchestrator Bot</p>
                         <p className="tiny-subheading">Orchestrate the Change management</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">DX  Security Impact Simulation Bot</p>
                         <p className="tiny-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
                         <p className="tiny-heading">Bot Name</p>
                         <p className="tiny-subheading">Bot description</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
                              <div className="w-20 h-12 relative"><Image layout="fill" src="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_chatbot___robot_robo_chatbot_digital_chat_bot-512.png" alt="bot" /></div>
                         </div>
@@ -393,7 +417,7 @@ export default function Digital_Labs () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The ultimate SAP Tester's Guide - 2021</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The ultimate SAP Tester&apos;s Guide - 2021</a></Link>
                     </div>
                 </div>
                 </div>
@@ -402,7 +426,7 @@ export default function Digital_Labs () {
             {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-maps-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-labs-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
@@ -411,7 +435,7 @@ export default function Digital_Labs () {
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  href="#" passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

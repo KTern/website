@@ -60,7 +60,7 @@ export default function Digital_Projects () {
                         <h2 className="mb-3   font-bold heading">Digital Projects</h2>
                         <span className="mb-3  text-black subheading">Gain ultimate control of your SAP projects and teams </span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="/contact" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@ export default function Digital_Projects () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Save time with our templates which can be easily customized to your own Company's workflow, single source of truth for all your SAP Project related files and Documents </p>
+                                    <p className="mb-6 text-gray-400  card-subheading">Save time with our templates which can be easily customized to your own Company&apos;s workflow, single source of truth for all your SAP Project related files and Documents </p>
                                 
                                     <div className="my-12"></div>
                                 
@@ -411,7 +411,7 @@ export default function Digital_Projects () {
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  href="#" passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

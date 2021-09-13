@@ -1,3 +1,7 @@
+
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from 'react';
 function openNav () {
     if (process.browser) {
                     console.log("Clicked")
@@ -12,16 +16,15 @@ function closeNav () {
     }
 }
 
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from 'react';
+
 export default function Header () {
     // const [ headerNew, changeHeader ] = useState(false);
-    const [ isProjectShown, setIsProjectShown ] = useState(false);
+    const [ isProjectShown, setIsProjectShown ] = useState(true);
     const [ isProcessShown, setIsProcessShown ] = useState(false);
     const [ isMapsShown, setIsMapsShown ] = useState(false);
     const [ isMinesShown, setIsMinesShown ] = useState(false);
     const [ isLabsShown, setIsLabsShown ] = useState(false);
+    
     return (
         <section className="container  w-full">      
         {/* <!-- Desktop --> */}
@@ -41,7 +44,7 @@ export default function Header () {
                 <div className="hidden lg:flex p-0">
                     <ul className=" flex space-x-2 xl:space-x-10">
                         <li className="hoverable hover:bg-secondary ">
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase font-bold">Products</label>
                             <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-400 border-b border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -63,27 +66,27 @@ export default function Header () {
                                         </li> */}
                                     </ul>
                                     <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                            <h3 className="card-heading text-black text-bold mb-2">Streams</h3>
-                                            <div onMouseLeave={() => setIsProjectShown(true)} onMouseEnter={() => setIsProjectShown(false)}>
+                                        <h3 className="card-heading text-black text-bold mb-2">Streams</h3>
+                                        <div >
                                         <li>
-                                        <Link href="#"    ><a onMouseEnter={() => setIsProjectShown(true)}
-                                        onMouseLeave={() => setIsProjectShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Projects</a></Link>
+                                                    <Link href="#"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
+                                         className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Projects</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="#"    ><a onMouseEnter={() => setIsProcessShown(true)}
-                                        onMouseLeave={() => setIsProcessShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Process</a></Link>
+                                                    <Link href="#"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
+                                         className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Process</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="#"    ><a onMouseEnter={() => setIsMapsShown(true)}
-                                        onMouseLeave={() => setIsMapsShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Maps</a></Link>
+                                                    <Link href="#"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
+                                         className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Maps</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="#"   ><a  onMouseEnter={() => setIsMinesShown(true)}
-                                        onMouseLeave={() => setIsMinesShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Mines</a></Link>
+                                                    <Link href="#"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+                                                        className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Mines</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="#"   ><a  onMouseEnter={() => setIsLabsShown(true)}
-                onMouseLeave={() => setIsLabsShown(false)} className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Labs</a></Link>
+                                        <Link href="#"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Digital Labs</a></Link>
                                         </li>
                                         </div>
                                     </ul>
@@ -94,7 +97,7 @@ export default function Header () {
                                                         <h3 className="mb-4 card-heading">Digital Projects</h3>
                                                         <p className="mb-4 card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <Link  href="#"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
+                                                        <Link  href="/products/digital-projects"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
                                                     </div>
                                                     <div className="w-1/2">
                                                         <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1"  width='400' height='270'/>
@@ -108,7 +111,7 @@ export default function Header () {
                                                         <h3 className="mb-4 card-heading">Digital Process</h3>
                                                         <p className="mb-4 card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <Link  href="#"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
+                                                        <Link  href="/products/digital-process"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
                                                     </div>
                                                     <div className="w-1/2">
                                                         <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1" width='400' height='270'/>
@@ -122,7 +125,7 @@ export default function Header () {
                                                         <h3 className="mb-4 card-heading">Digital Maps</h3>
                                                         <p className="mb-4 card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <Link  href="#"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
+                                                        <Link  href="/products/digital-maps"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
                                                     </div>
                                                     <div className="w-1/2">
                                                         <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
@@ -136,7 +139,7 @@ export default function Header () {
                                                         <h3 className="mb-4 card-heading">Digital Mines</h3>
                                                         <p className="mb-4 card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <Link  href="#"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
+                                                        <Link  href="/products/digital-mines"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
                                                     </div>
                                                     <div className="w-1/2">
                                                         <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image" width={400} height={ 270}/>
@@ -150,7 +153,7 @@ export default function Header () {
                                                         <h3 className="mb-4 card-heading">Digital Labs</h3>
                                                         <p className="mb-4 card-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
                                                             Vitae libero delectus obcaecati.</p>
-                                                        <Link  href="#"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
+                                                        <Link  href="/products/digital-labs"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-subheading uppercase">Read More</a></Link>
                                                     </div>
                                                     <div className="w-1/2">
                                                         <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
@@ -211,7 +214,7 @@ export default function Header () {
                                         <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">How it Works</Link>
                                         </li>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</Link>
+                                        <Link href="/pricing" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Pricing</Link>
                                         </li>
                                         <li>
                                         <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400">Cloud Status</Link>
@@ -223,27 +226,22 @@ export default function Header () {
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="card-heading text-black text-bold mb-2">Streams</h3>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProjectShown(true)}
-                                        onMouseLeave={() => setIsProjectShown(false)}>Digital Projects</Link>
+                                        <Link href="/products/digital-projects" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   >Digital Projects</Link>
                                         </li>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsProcessShown(true)}
-                                        onMouseLeave={() => setIsProcessShown(false)}>Digital Process</Link>
+                                        <Link href="/products/digital-process" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"  >Digital Process</Link>
                                         </li>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMapsShown(true)}
-                                        onMouseLeave={() => setIsMapsShown(false)}>Digital Maps</Link>
+                                        <Link href="/products/digital-maps" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   >Digital Maps</Link>
                                         </li>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsMinesShown(true)}
-                                        onMouseLeave={() => setIsMinesShown(false)}>Digital Mines</Link>
+                                        <Link href="/products/digital-mines" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"  >Digital Mines</Link>
                                         </li>
                                         <li>
-                                        <Link href="#" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   onMouseEnter={() => setIsLabsShown(true)}
-                onMouseLeave={() => setIsLabsShown(false)}>Digital Labs</Link>
+                                        <Link href="/products/digital-labs" className="card-subheading block p-3 hover:bg-gray-300 text-black hover:text-gray-400"   >Digital Labs</Link>
                                         </li>
                                     </ul>
-                                    <ul className="bg-secondary px-4 w-full  lg:w-2/4  pb-6 pt-6 lg:pt-3">
+                                    <ul className="hidden bg-secondary px-4 w-full  lg:w-2/4  pb-6 pt-6 lg:pt-3">
                                             {isProjectShown && (
                                                 <div className="p-6 w-full relative lg:flex lg:space-x-10 ">
                                                     <div className="w-full lg:w-1/2 mb-4">

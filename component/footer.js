@@ -11,10 +11,10 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-8  text-white  card-heading">Company</h3>
                             <ul className="text-lg">
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">About us</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Pricing</a></Link></li>
+                                <li className="mb-2"><Link  href="/about-ktern"><a className="text-gray-200 hover:text-gray-100 card-subheading">About us</a></Link></li>
+                                <li className="mb-2"><Link  href="/pricing"><a className="text-gray-200 hover:text-gray-100 card-subheading">Pricing</a></Link></li>
                                 <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Newsroom</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="text-gray-200 hover:text-gray-100 card-subheading">Trust Center</a></Link></li>
+                                <li className="mb-2"><Link  href="/trust-center"><a className="text-gray-200 hover:text-gray-100 card-subheading">Trust Center</a></Link></li>
                                 
                             </ul>
                         </div>

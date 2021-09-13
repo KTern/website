@@ -17,7 +17,7 @@ export default function Features () {
                     <span className="font-bold subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <Link  href="#" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
+                   <Link  href="/partners" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
                     <Link href=""  passHref>
                         <a className="inline-flex items-center tiny-heading uppercase text-gray-400 underline transition-colors duration-200 ">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -47,7 +47,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <Link href="#"  passHref>
+                                <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
@@ -62,17 +62,24 @@ export default function Features () {
                                             <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
 
                                             </p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                     </a>
                                 </Link>
 
-                                <Link href="#"  passHref>
+                                <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -85,10 +92,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1 ">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
                                         
 
@@ -99,7 +113,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
@@ -112,10 +126,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         
                                         </div>
 
@@ -123,7 +144,7 @@ export default function Features () {
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -137,10 +158,17 @@ export default function Features () {
                                                 </div>
                                                 <p className="mt-3 mb-1 text-xs font-medium text-gray-800 uppercase">Digital Maps</p>
                                                 <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
-                                                <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                    Learn More
-                                                    {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                                </span>
+                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                             </div>
 
                                         </div>
@@ -178,7 +206,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
@@ -193,17 +221,24 @@ export default function Features () {
                                             <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
 
                                             </p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -216,10 +251,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1 ">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
                                         
 
@@ -230,7 +272,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
@@ -243,10 +285,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         
                                         </div>
 
@@ -254,7 +303,7 @@ export default function Features () {
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -268,10 +317,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-gray-800 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
@@ -308,7 +364,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
@@ -323,17 +379,24 @@ export default function Features () {
                                             <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
 
                                             </p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -346,10 +409,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1 ">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
                                         
 
@@ -360,7 +430,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
@@ -373,10 +443,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         
                                         </div>
 
@@ -384,7 +461,7 @@ export default function Features () {
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -398,10 +475,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-gray-800 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
@@ -438,7 +522,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
@@ -453,17 +537,24 @@ export default function Features () {
                                             <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
 
                                             </p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -476,10 +567,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1 ">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
                                         
 
@@ -490,7 +588,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
@@ -503,10 +601,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         
                                         </div>
 
@@ -514,7 +619,7 @@ export default function Features () {
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -528,10 +633,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-gray-800 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
@@ -568,7 +680,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-col w-full mb-10 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
@@ -583,17 +695,24 @@ export default function Features () {
                                             <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
 
                                             </p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -606,10 +725,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1 ">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
                                         
 
@@ -620,7 +746,7 @@ export default function Features () {
 
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-col w-full mb-5 sm:flex-row">
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 sm:mb-0 sm:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 sm:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
@@ -633,10 +759,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         
                                         </div>
 
@@ -644,7 +777,7 @@ export default function Features () {
                                     </a>
                                 </Link>
 
-                                <Link href="#" passHref>
+                                <Link href="/features/digital-projects" passHref>
                                     <a className="w-full sm:w-1/2">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -658,10 +791,17 @@ export default function Features () {
                                             </div>
                                             <p className="mt-3 mb-1 text-xs font-medium text-gray-800 uppercase">Digital Maps</p>
                                             <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
-                                            <span className="absolute flex items-center tiny-subheading font-bold text-black hover:text-gray-400 bottom-1">
-                                                Learn More
-                                                {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> */}
-                                            </span>
+                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/features/digital-projects"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                           
                                         </div>
 
                                     </div>

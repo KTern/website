@@ -17,7 +17,7 @@ export default function Home () {
                             <h2 className="mt-4 top-0 mb-2 font-bold leading-normal heading">Your SAP Digital Transformations starts here</h2>
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
-                            <Link  target="_blank" rel="noopener noreferrer" href="https://app.ktern.com"><a className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>
+                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>
                             <Link  href="/contact"><a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                           
                         </div>
@@ -80,20 +80,26 @@ export default function Home () {
                                     <div className=" h-10 h-full lg:h-20 w-20 mx-4 my-auto">
                                         <Image className="w-full h-full object-cover " src="/assets/icons/projects.png" alt="" width={150} height={150}/>
                                     </div>
-                                    <div className="relative  xl:w-2/3 shadow-md p-2 bg-project-secondary rounded-2xl">
-                                        <h2 className="tiny-heading">Digital Projects</h2>
-                                        <p className=" leading-relaxed tiny-subheading">Gain control of your SAP projects </p>
-                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                    
+                                        <div className="relative  xl:w-2/3 shadow-md p-2 bg-project-secondary rounded-2xl cursor-pointer">
                                             <Link href="/products/digital-projects" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="font-bold tiny-subheading">Learn more&nbsp;</span>
-                                            
-                                                </div>
-                                
-                                            </Link>
-                                        </div>
-
+                                            <a>
+                                            <h2 className="tiny-heading">Digital Projects</h2>
+                                            <p className=" leading-relaxed tiny-subheading">Gain control of your SAP projects </p>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">                                                
+                                                   <Link href="/products/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>                                                    
+                                            </div>
+                                          </a>
+                                    </Link>
                                     </div>
+                                    
 
                                 </div>
                             </div>
@@ -103,18 +109,25 @@ export default function Home () {
                                     <div className="h-10 h-full lg:h-20 w-20 mx-4 my-auto">
                                         <Image className="w-full h-full object-cover " src="/assets/icons/process.svg" alt="" width={150} height={150}/>
                                     </div>
-                                    <div className=" xl:w-2/3 shadow p-2 bg-process-secondary rounded-2xl">
-                                        <h2 className="tiny-heading">Digital Process</h2>
-                                        <p className="tiny-subheading leading-relaxed">Ensure process control and governance</p>
-                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <Link href="/products/digital-projects" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="font-bold tiny-subheading">Learn more&nbsp;</span>
-                                            
-                                                </div>
-                                
-                                            </Link>
-                                        </div>
+                                    <div className=" xl:w-2/3 shadow p-2 bg-process-secondary rounded-2xl cursor-pointer">
+                                        <Link href="/products/digital-process" className="icon-link__link" passHref>
+                                        <a>
+                                            <h2 className="tiny-heading">Digital Process</h2>
+                                            <p className="tiny-subheading leading-relaxed">Ensure process control and governance</p>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                   <Link href="/products/digital-process"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                                
+                                            </div>
+                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -125,19 +138,27 @@ export default function Home () {
                                         <Image className="w-full h-full object-cover " src="/assets/icons/labs.png" alt="" width={150} height={150} />
                                     </div>
 
-                                    <div className="xl:w-2/3 shadow p-2 bg-labs-secondary rounded-2xl">
-                                        <h2 className="tiny-heading">Digital Labs</h2>
-                                        <p className="tiny-subheading leading-relaxed">Streamline Functional Testing Cycles
-                                        </p>
-                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <Link href="/products/digital-projects" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="font-bold tiny-subheading">Learn more&nbsp;</span>
-                                            
-                                                </div>
-                                
-                                            </Link>
-                                        </div>
+                                    <div className="xl:w-2/3 shadow p-2 bg-labs-secondary rounded-2xl cursor-pointer">
+                                        <Link href="/products/digital-labs" className="icon-link__link">
+                                            <a>
+                                            <h2 className="tiny-heading">Digital Labs</h2>
+                                            <p className="tiny-subheading leading-relaxed">Streamline Functional Testing Cycles
+                                            </p>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                
+                                                   <Link href="/products/digital-labs"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                                
+                                            </div>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -148,18 +169,23 @@ export default function Home () {
                                         <Image className="w-full h-full object-cover " src="/assets/icons/maps.png" alt="" width={150} height={150}/>
                                     </div>
 
-                                    <div className=" xl:w-2/3 shadow p-2 bg-maps-secondary rounded-2xl">
-                                        <h2 className="tiny-heading">Digital Maps</h2>
-                                        <p className="tiny-subheading leading-relaxed">Analyse SAP landscape </p>
-                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <Link href="/products/digital-projects" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="font-bold tiny-subheading">Learn more&nbsp;</span>
-                                            
-                                                </div>
-                                
-                                            </Link>
-                                        </div>
+                                    <div className=" xl:w-2/3 shadow p-2 bg-maps-secondary rounded-2xl cursor-pointer">
+                                        <Link href="/products/digital-maps" className="icon-link__link" passHref>
+                                            <a>
+                                            <h2 className="tiny-heading">Digital Maps</h2>
+                                            <p className="tiny-subheading leading-relaxed">Analyse SAP landscape </p>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                                    <Link href="/products/digital-maps"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                            
+                                            </div>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -171,17 +197,22 @@ export default function Home () {
                                     </div>
 
                                     <div className=" xl:w-2/3 shadow p-2 bg-mines-secondary rounded-2xl">
-                                        <h2 className="tiny-heading">Digital mines</h2>
-                                        <p className="tiny-subheading leading-relaxed">Ensure ROI on SAP S/4HANA investment </p>
-                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <Link href="/products/digital-projects" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="font-bold tiny-subheadng">Learn more&nbsp;</span>
-                                            
-                                                </div>
-                                
-                                            </Link>
-                                        </div>
+                                        <Link href="/products/digital-mines" className="icon-link__link" passHref>
+                                            <a>
+                                            <h2 className="tiny-heading">Digital mines</h2>
+                                            <p className="tiny-subheading leading-relaxed">Ensure ROI on SAP S/4HANA investment </p>
+                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">                                           
+                                                   <Link href="/products/digital-mines"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                                                                                   
+                                            </div>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -208,14 +239,14 @@ export default function Home () {
                                         <p className="mt-2 mb-4 card-subheading">Find a plan that works for you.</p>
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                             <button to="#" className="icon-link__link">
-                                            <div className="icon-link__label">
-                                                        <span className="tiny-heading">Learn more&nbsp;</span>
-                                                        {/* <div className="inline-flex items-center justify-center w-6 h-6 bg-black hover:bg-black rounded-full">
-                                                            <svg className="w-2 h-2" width="7" height="13" viewBox="0 0 7 13" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.152917 0.894235C-0.0509742 0.688658 -0.0509742 0.358375 0.152917 0.15431C0.356808 -0.0497557 0.686228 -0.0505119 0.89012 0.15431L6.84708 6.13116C7.05097 6.33522 7.05097 6.6655 6.84708 6.87108L0.890119 12.8479C0.686227 13.052 0.356807 13.052 0.152916 12.8479C-0.0509753 12.6431 -0.0509753 12.3121 0.152916 12.108L5.5857 6.50074L0.152917 0.894235Z" fill="white"></path>
-                                                            </svg>
-                                                        </div> */}
-                                            </div>
+                                            <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                             </button>
                                         </div>
                                     </div>
@@ -233,9 +264,14 @@ export default function Home () {
                                     <div className="mt-20">
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                             <button to="#" className="icon-link__link">
-                                                <div className="icon-link__label">
-                                                    <span className="tiny-heading">Learn more</span>
-                                                </div>
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                     
                                             </button>
                                         </div>
@@ -258,9 +294,14 @@ export default function Home () {
                                         <div className="mt-20">
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                 <button to="#" className="icon-link__link">
-                                                    <div className="icon-link__label">
-                                                        <span className="tiny-heading">Learn more&nbsp;</span>
-                                                    </div>
+                                                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                         
                                                 </button>
                                             </div>
@@ -289,10 +330,14 @@ export default function Home () {
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
                                 <Link href="/products/digital-projects" className="icon-link__link">
-                                    <div className="icon-link__label">
-                                        <span className="font-bold text-white tiny-heading">Learn more&nbsp;</span>
-                                            
-                                    </div>
+                                    <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-white hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                 
                                 </Link>
                             </div>
@@ -303,9 +348,14 @@ export default function Home () {
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
                                 <Link href="/products/digital-projects" className="icon-link__link">
-                                    <div className="icon-link__label">
-                                        <span className="font-bold text-white tiny-heading">Learn more&nbsp;</span>       
-                                    </div>
+                                    <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-white hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                 </Link>
                             </div>
                             <div className="py-4 w-full md:w-1/4 lg:w-1/4 md:p-10   ">
@@ -315,10 +365,14 @@ export default function Home () {
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
                                 <Link href="/products/digital-projects" className="icon-link__link">
-                                    <div className="icon-link__label">
-                                        <span className="font-bold text-white tiny-heading">Learn more&nbsp;</span>
-                                            
-                                    </div>
+                                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-white hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
                                 
                                 </Link>
                             </div>
