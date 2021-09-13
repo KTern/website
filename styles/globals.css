@@ -100,6 +100,13 @@ video {
     font-size: 14px;
 }
 
+.header {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14px;
+}
+
 .card-heading {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
