@@ -7,11 +7,11 @@ export default function About () {
              <section className="relative flex flex-col items-center justify-center w-full px-6 py-16 bg-white bg-cover lg:py-20 min-w-screen">
                 <div className="flex flex-col items-center justify-center mx-auto sm:p-6 xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0">
                     <div className="container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0">
-                        <h1 className="relative z-20 text-5xl font-extrabold leading-none text-black xl:text-6xl sm:text-center lg:text-left">
+                        <h1 className="relative z-20  font-extrabold leading-none text-black heading  sm:text-center lg:text-left">
                             Unlock Digital<br/>
-                            <span className="mt-1 text-gray-400 lg:mt-0">Transformation Success</span>
+                            <span className="mt-1 text-gray-400 heading lg:mt-0">Transformation Success</span>
                         </h1>
-                        <p className="relative z-20 block mt-6 text-xl text-black xl:text-2xl sm:text-center lg:text-left">We aim to make Digital Transformation simple and easier</p>
+                        <p className="relative z-20 block mt-6 subheading text-black  sm:text-center lg:text-left">We aim to make Digital Transformation simple and easier</p>
                         
                     </div>
                     <div  className="relative w-full px-5 rounded-lg cursor-pointer text-white lg:w-1/2 group xl:px-0">
@@ -36,7 +36,7 @@ export default function About () {
                 {/* <!-- Our Vision--> */}
                 <section className="w-full px-8 py-20 xl:px-0 bg-secondary">
                 <div className="max-w-6xl mx-auto">
-                    <p className="mb-5 card-heading text-black uppercase">Our Vision</p>
+                    <p className="mb-5 card-heading text-black ">Our Vision</p>
                     <div className="flex flex-col md:flex-row">
                         <div className="w-full pr-5 md:w-4/12 xl:pr-12">
                             <p className="card-subheading leading-normal text-gray-700 ">
@@ -61,11 +61,11 @@ export default function About () {
                 </section>
 
                 {/* <!--Our Values--> */}
-                <section className="relative leading-7 text-gray-900 py-10 bg-white border-solid">
+                <section className="relative leading-7  text-gray-900 py-10 bg-white border-solid">
                 <div className="box-border mx-auto border-solid lg:pl-8 max-w-7xl">
                     <div className="flex flex-col items-center leading-7 text-gray-900 border-0 border-gray-200 lg:flex-row">
                     <div className="box-border flex flex-col justify-center w-full h-full p-8 text-gray-900 border-solid lg:w-1/2 md:p-16 lg:p-0 lg:pl-10 lg:pr-20">
-                        <h2 className="m-0 card-heading leading-tight tracking-tight text-left text-black ">Our Values</h2>
+                        <h2 className="m-0 card-heading leading-tight  tracking-normal text-left text-black ">Our Values</h2>
                         <p className="mt-5 card-subheading text-left border-0 border-gray-200 ">At the very heart of KTern&apos;s philosophy, is the core value of excellence, which is embedded in all systems and processes across the organization.
                         </p>
                         <div className="grid gap-4 mt-8 leading-7 border-0 border-gray-200 sm:mt-10 sm:gap-6 lg:mt-12 lg:gap-8">
@@ -179,7 +179,7 @@ export default function About () {
                 </div>
                 </section>
                 {/* <!-- Our Customers--> */}
-                <section className="w-full py-10 pb-16 bg-gray-300">
+                <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
                     <p className="text-md font-bold font-medium tracking-wide text-gray-400 uppercase">Featured and Previously Seen On</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
@@ -241,7 +241,7 @@ export default function About () {
             {/* <!-- Footer CTA Features Page --> */}
                 <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">

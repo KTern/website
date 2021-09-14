@@ -6,26 +6,28 @@ export default function ThankYou ()
     return (
         <Layout>
             
-    <section className="relative py-10 2xl:py-20 bg-gray-800 overflow-hidden flex justify-center ">
+    <section className="relative py-10  bg-gray-800 overflow-hidden flex justify-center ">
      
   <div className="absolute top-0 right-0 h-40 lg:h-80 lg:mr-34 lg:mt-24"><Image  src="/404/five-stars.svg" alt="" width={400} height={300}/></div>
      
       <div className="container px-3 mx-auto">
         <div className="max-w-3xl mx-auto pb-10  text-center">
            
-          <h2 className="my-10 text-5xl lg:text-4xl font-bold font-heading text-white">Thank You for Registering for the Webinar</h2>
+          <h2 className="my-10 heading font-bold font-heading text-white">Thank You for Registering for the Webinar</h2>
                         <div className="max-w-md mx-auto">
                            
-            <p className="mb-10 text-lg text-gray-200">We look forward to you joining our Webinar</p>
+            <p className="mb-10 card-subheading text-gray-200">We look forward to you joining our Webinar</p>
             
                             <Link  href="/" passHref>
-                                <a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading">Return Home</a>
+                                <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 tiny-heading">Return Home</a>
                                 </Link>
             
           </div>
           
         </div>
-       <section className="w-full py-8 bg-white sm:py-12 md:py-8">
+                </div>
+                </section>
+                    <section className="w-full py-8 bg-white sm:py-12 md:py-8">
             <div className="px-10 mx-auto max-w-7xl">
                 <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
                     <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
@@ -71,8 +73,6 @@ export default function ThankYou ()
                 </div>
                 </section>
            
-      </div>
-    </section>
         </Layout>
     )
 }

@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function WebinarLayout ({ data }) {
     return (
         <>
-            <section className="relative" style={{backgroundImage: "url('/webinar/gradient-background.jpeg')"}}>
-            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-30"></div>
+            <section className="relative" >
+            <div className="absolute inset-0 bg-gradient-to-b from-labs-primary to-labs-secondary opacity-30"></div>
         
             <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
                 <div className="flex flex-wrap text-white">
                     <div className="relative w-full px-4 mx-auto text-center xl:flex-grow-0 xl:flex-shrink-0">        
-                            <h1 className="mt-0 mb-2 heading font-bold text-white ">{ data.title}</h1>
-                        <p className="mt-0 mb-4  text-white subheading">
+                            <h1 className="mt-0 mb-2 heading font-bold text-black ">{ data.title}</h1>
+                        <p className="mt-0 mb-4  text-black subheading">
                             {data.type}
                         </p>
         
@@ -56,9 +56,9 @@ export default function WebinarLayout ({ data }) {
                         <div className="flex flex-col items-start md:flex-row">
 
                             <div className="w-full space-y-5 md:w-3/5 md:pr-16">
-                                <p className="inline-block py-1 pl-4 pr-4 mb-0 -ml-0 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-black rounded">
+                                <p className="inline-block py-1 pl-4 pr-4 mb-0 -ml-0 tiny-subheading font-medium leading-5 text-black transform -translate-y-2 bg-labs-secondary rounded">
                                 <Link href="#_"  rel="category">
-                                   <a className="text-white hover:underline uppercase"> {data.category}</a>
+                                   <a className="text-black hover:underline uppercase"> {data.category}</a>
                                 </Link>
                             </p>
                             <h2 className="text-lg font-extrabold leading-none text-black sm:text-xl md:text-2xl">
@@ -121,8 +121,8 @@ export default function WebinarLayout ({ data }) {
                                     </div>
                                     <div className="relative  text-center">
                                     
-                                        <Link href="" passHref>
-                                            <a className="inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200 bg-black 
+                                        <Link href="/thank-you" passHref>
+                                            <a className="inline-block w-full px-5 py-4 uppercase tiny-heading font-bold text-center text-white transition duration-200 bg-black 
                                             rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit</a>
                                         </Link>
 

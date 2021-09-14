@@ -83,7 +83,7 @@ video {
 
 .subheading {
     font-family: 'Work Sans', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .tiny-heading {
@@ -305,8 +305,8 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 /* Chip */
 
 .click-chip {
-    padding: 5px 10px;
-    border-radius: 50px;
+    padding: 6px 10px;
+    border-radius: 10px;
     display: inline-flex;
     margin: 5px;
     cursor: pointer;
@@ -338,20 +338,20 @@ input[type=search] {
 }
 
 input[type=search] {
-    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    background: white url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
     border: solid 1px #ccc;
     padding: 9px 10px 9px 32px;
-    width: 70px;
-    -webkit-border-radius: 10em;
-    -moz-border-radius: 10em;
-    border-radius: 10em;
+    width: 20%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 10px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
 }
 
 input[type=search]:focus {
-    width: 130px;
+    width: 25%;
     background-color: #fff;
     border-color: #B3B7BE;
     -webkit-box-shadow: 0 0 5px #B3B7BE;

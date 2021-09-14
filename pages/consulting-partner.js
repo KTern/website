@@ -1,15 +1,15 @@
 import Layout from "../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
-export default function varpartner(){
+export default function Consultingpartner(){
     return (
         <Layout>                
             {/* <!-- Header Section --> */}
                 <section className="w-full py-20 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                    <p className="inline-block px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    KTERN VAR PARTNER PROGRAM
+                    <p className="inline-block uppercase px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                    KTERN Consulting PARTNER PROGRAM
                 </p>
                 <h5 className="mb-3 heading font-bold leading-none sm:text-4xl ">
                     Become a <br/>KTern Partner
@@ -18,7 +18,7 @@ export default function varpartner(){
                     <span className="font-bold subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <Link  href="#" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
+                   <Link  href="/become-a-partner" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
                     <Link href=""  passHref>
                         <a className="inline-flex items-center tiny-heading uppercase text-gray-400 underline transition-colors duration-200 ">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -36,80 +36,80 @@ export default function varpartner(){
                     <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
                 </div>   </div>
             </section>
-         {/* <!-- Why Become KTern VAR Partner--> */}
-            <section className="relative w-full px-8 font-sans leading-6 bg-gray-800 border-0 border-gray-200 border-solid text-black">
+         {/* <!-- Why Become KTern Consulting Partner--> */}
+            <section className="relative w-full px-8  leading-6 bg-gray-800 border-0 border-gray-200 border-solid text-black">
             <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
-                <h2 className="w-full m-0 font-sans text-4xl font-black tracking-wide text-center border-0 border-gray-200 sm:text-3xl text-white">Why Become a KTern VAR Partner?</h2>
-                <p className="w-full max-w-3xl mx-0 mx-auto mt-4 mb-0 font-sans text-sm font-medium leading-relaxed text-center text-white border-0 border-gray-200 lg:text-md md:text-base">
+                <h2 className="w-full m-0   font-black tracking-wide text-center border-0 border-gray-200 sm:text-3xl card-heading text-white">Why Become a KTern Consulting Partner?</h2>
+                <p className="w-full max-w-3xl card-subheading mx-0 mx-auto mt-4 mb-0   leading-relaxed text-center text-white border-0 border-gray-200 ">
                     Check out some of our award-winning features. We have been trusted by over 250 large name brand companies. We strive to make a product that is revolutionary.
                 </p>
                 <div className="grid grid-cols-3 gap-5 mt-10 sm:grid-cols-8 lg:grid-cols-12">
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-50">Zero Cost</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Becoming a KTern VAR Partner comes at no cost at all.</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Becoming a KTern Consulting Partner comes at no cost at all.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Access to Demo Account</span>
                                 <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Get Exclusive Access to KTern.AI&apos;s Demo account Preloaded with SAP Scenarios </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Exclusive Partner Team</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Apart from a Dedicated Partner Manager, get exclusive access to a Partner team providing 24 x 7 Customer Support</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Apart from a Dedicated Partner Manager,  Customer Support</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Training and Enablement</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Training and Enablement Session is conducted free of cost by KTern&apos;s Enablement team and apart from this KTern&apos;s Partner Portal comes along with a free access to KTern Academy&apos;s Certifications and exclusive Partner Resources</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Training and Enablement Session is conducted free of cost by KTern&apos;s Enablement team</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Fast and Reliable</span>
                                 <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Our system has a 99.9% uptime and is extremely fast and reliable.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">
+                    <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
+                            <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
                                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
                             </span>
-                            <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
+                            <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Incentives</span>
                                 <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Depending upon the tier of Partnership the rewards and incentives just keeps going up</p>
                             </div>
@@ -119,7 +119,7 @@ export default function varpartner(){
             </div>
             </section>
             {/* <!-- Partners --> */}
-            <section className="w-full py-10 pb-16 bg-gray-300">
+            <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
                     <p className="text-md font-bold font-medium tracking-wide text-gray-400 uppercase">Featured and Previously Seen On</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
@@ -440,29 +440,70 @@ export default function varpartner(){
             </div>
             </section>
             {/* <!--KTern Customer Testimonials--> */}
-            <section className="relative py-20 overflow-hidden bg-gray-100 cursor-pointer sm:py-14 md:py-22">
-            <div className="relative max-w-5xl px-16 mx-auto xl:px-0">
-                <svg className="absolute top-0 left-0 hidden w-32 h-32 -mt-3 -ml-16 text-black opacity-50 xl:block" stroke="currentColor" fill="none" viewBox="0 0 144 144"><path strokeWidth="2" d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z"></path></svg>
-                <div className="relative xl:pl-32 lg:flex lg:items-center">
-                    <div className="relative">
-                        <blockquote className="relative">
-                            <div className="font-serif text-xl font-medium leading-9 text-black md:text-2xl">
-                                <p>An Awesome tool for the SAP Projects where Activate Methodology and GSI Is integrated seamlessly</p>
+           <section >
+                <div className="p-10 md:p-20 bg-secondary radius-for-skewed">
+                    <div className="container  px-4 mx-auto">
+                    <div className="lg:flex shadow-2xl bg-white items-center justify-center md:space-x-8">
+                        {/* <div className="mb-10 text-center lg:hidden">
+                        <button className="mr-6 lg:mr-0 bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                        </button>
+                        <button className="bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                        </div>
+                        <button className="hidden lg:block lg:mr-0 bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
+                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        </button> */}
+                        <div className="flex w-full flex-wrap bg-white shadow rounded">
+                        <div className="md:py-10 text-center w-full lg:w-1/3 border-r">
+                            <span className="text-5xl lg:text-6xl font-bold">4.7</span>
+                            <div className="mb-6 lg:mb-12 flex text-black justify-center">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
                             </div>
-                            <div className="mt-4">
-                                <div className="flex items-center">
-                                    <div className="flex-shrink-0 w-12 h-12 relative"><Image layout='fill' className="object-cover  mr-4 rounded-full" src="/technical-partner/edson.jpg" alt=""/> </div>
-                                    <div className="ml-4 lg:ml-0">
-                                        <div className="text-base font-medium leading-6 text-black">Edson Frainlar - Sr. Developer, KTern.Ai</div>
-                                    </div>
-                                </div>
+                            <div>
+                            <Link href="https://www.g2.com/products/ktern/reviews" target="_blank" passHref>
+                                <a><div className="block mx-auto w-20 h-20 relative"><Image layout="fill" src="/assets/g2logo.png" alt=""/></div></a>
+                            </Link>
                             </div>
-                        </blockquote>
+                        </div>
+                        <div className="md:py-10 px-6 w-full lg:w-2/3">
+                            <div className="mb-10 w-10 h-10 relative"><Image layout="fill" src="/atis-assets/elements/left-quote.png" alt=""/></div>
+                            <p className="mb-10 lg:text-2xl leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
+                            <h4 className="text-2xl font-bold card-heading">Jim W</h4>
+                            <p className="text-gray-400">Partner</p>
+                        </div>
+                        </div>
+                        {/* <button className="hidden lg:block bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
+                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                        </button> */}
+                    </div>
                     </div>
                 </div>
-            </div>
-            </section>
-
+           </section>
+          
             {/* <!--KTern FAQ--> */}
 
             <section className="py-20">
@@ -478,7 +519,7 @@ export default function varpartner(){
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
                                 diante.
                         </div>
                 </details>
@@ -492,7 +533,7 @@ export default function varpartner(){
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
                                 diante.
                         </div>
                 </details>
@@ -506,7 +547,7 @@ export default function varpartner(){
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
                                 diante.
                         </div>
                 </details>
@@ -568,7 +609,7 @@ export default function varpartner(){
    {/* <!-- Footer CTA --> */}
            <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-red-200 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">

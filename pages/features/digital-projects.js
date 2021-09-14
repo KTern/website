@@ -43,46 +43,56 @@ export default function Digital_Projects () {
                 </div>
                 <div className="flex mb-8 animated fadeIn space-x-20">
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
-                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-indigo-600 uppercase">Drag-n-drop design</p>
+                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-project-primary uppercase">Drag-n-drop design</p>
                         <h3 className="mt-2 card-heading sm:text-left md:text-4xl">Design Made Easy</h3>
                         <p className="mt-5 card-subheading text-gray-700 text md:text-left">Crafting your user experience has never been easier, with our intuitive drag&apos;n drop interface you will be creating beatiful designs in no time.</p>
                     </div>
                      <div className="flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
-                            <div className="rounded-lg shadow-xl"><Image  src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt="" width={500} height={400}  /></div>
-                            <div className="hidden md:block absolute" style={{top:'2rem', right: '-3rem', zIndex: -1}}><Image  src="/features/bullets-gray-left.svg" alt="" layout="fixed" width={170 } height={140 }/></div>
-                            <div className="hidden md:block absolute" style={{bottom:'2.5rem', left: '-5.5rem', zIndex: -1}}><Image  src="/features/bullets-green-right.svg" alt="" width={170 } height={140 }/></div>
+                            <div className="rounded-lg "><Image  src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt="" width={500} height={400}  /></div>
+                            <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
 
                         </div>
                     </div>    
                 </div>
                 <div className="flex space-x-20 mb-8 animated fadeIn sm:flex-row">
-                    <div className="relative flex items-center mb-8 w-1/2" >
-                        <div className="absolute top-0 -left-16 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-                        <div className="absolute top-0 -right-3 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-                        <div className="absolute -bottom-16 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-                                <div className=" relative rounded-lg shadow-xl">
-                        <Image  src="https://cdn.devdojo.com/images/december2020/dashboard-04.png" alt="" width={500} height={400} />
-                        </div>
+                            <div className="relative flex items-center mb-8 w-1/2" >
+                    <div className="relative" style={{zIndex: 0}}>            
+                                    <div className=" relative rounded-lg"><Image src="https://cdn.devdojo.com/images/december2020/dashboard-04.png" alt="" width={500} height={400} /></div>
+                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
+
+                    </div>
                     </div>
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pl-16">
-                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-indigo-600 uppercase">know your data</p>
+                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-project-primary uppercase">know your data</p>
                         <h3 className="mt-2 card-heading sm:text-left md:text-4xl">Optimized For Conversions</h3>
                         <p className="mt-5 card-subheading text-gray-700 text md:text-left">Backed by data, these templates have been crafted for ultimate optimization. Now, converting your visitors into customers is easier than ever before.</p>
                     </div>
                 </div>
-                <div className="flex space-x-20 mb-8 animated fadeIn sm:flex-row">
-                 
+                 <div className="flex mb-8 animated fadeIn space-x-20">
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
-                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-indigo-600 uppercase">Easy to customize</p>
-                        <h3 className="mt-2 card-heading sm:text-left md:text-4xl">Make It Your Own</h3>
-                        <p className="mt-5 card-subheading text-gray-700 text md:text-left">All templates and components are fully customizable. You can use these templates to tell your personal story and convey your message.</p>
+                        <p className="mb-2 tiny-subheading font-semibold leading-none text-left text-project-primary uppercase">Drag-n-drop design</p>
+                        <h3 className="mt-2 card-heading sm:text-left md:text-4xl">Design Made Easy</h3>
+                        <p className="mt-5 card-subheading text-gray-700 text md:text-left">Crafting your user experience has never been easier, with our intuitive drag&apos;n drop interface you will be creating beatiful designs in no time.</p>
                     </div>
-                    <div className="flex items-center mb-8 w-1/2">
-                        <Image className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-03.png" alt="" width={500} height={400}/>
-                    </div>
+                     <div className="flex items-center mb-8 w-1/2 sm:order-last">
+                        <div className="relative" style={{zIndex: 0}}>
+                            <div className="rounded-lg "><Image className="rounded-lg shadow-xl" src="https://cdn.devdojo.com/images/december2020/dashboard-03.png" alt="" width={500} height={400} /></div>
+                            <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
+                                    <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{ top: '3rem', left: '-8rem', zIndex: -1 }} ><Image layout="fill" src="/atis-assets/elements/bullets-gray-right.svg" alt="" /></div>                                   
+
+                        </div>
+                    </div>    
                 </div>
-            </div>
+                </div>
             </section>
             {/* <!--Different Roles--> */}
             <section className="text-black body-font bg-project-secondary">

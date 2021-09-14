@@ -18,7 +18,7 @@ export default function Partners () {
                     <span className="font-bold subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <Link  href="/partner-contact" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
+                   <Link  href="/become-a-partner" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
                     <Link href=""  passHref>
                         <a className="inline-flex items-center tiny-heading uppercase text-gray-400 underline transition-colors duration-200 ">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -49,13 +49,13 @@ export default function Partners () {
                 Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
                 <div className="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                   <Link href="/var-partner"  passHref>
+                   <Link href="/consulting-partner"  passHref>
                     <a className="relative border-2 border-black shadow-md flex flex-col items-start  h-full  overflow-hidden rounded-xl group md:col-span-6">
                             <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/hero-section.svg')" }} />
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">VAR Partner</p>
-                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
-                        <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
+                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
+                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
+                        <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
                     </a>
@@ -65,9 +65,9 @@ export default function Partners () {
                             <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
                     <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
-                        <h2 className="mb-5 md:text-3xl lg:text-4xl sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
-                        <p className="mb-2 text-lg font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
+                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
+                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
+                        <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
                     </a>
@@ -80,7 +80,7 @@ export default function Partners () {
             </section>
 
             {/* <!--KTern's Partners --> */}
-             <section className="w-full py-10 pb-16 bg-gray-300">
+             <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
                     <p className="text-md font-bold font-medium tracking-wide text-gray-400 uppercase">Featured and Previously Seen On</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
@@ -196,7 +196,7 @@ export default function Partners () {
             {/* <!-- Footer CTA --> */}
              <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-red-200 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
