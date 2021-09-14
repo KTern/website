@@ -100,6 +100,31 @@ video {
     font-size: 14px;
 }
 
+nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
+    z-index: 50;
+}
+
+.navbar-h {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.navbar-s {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.vertical {
+    height: 100%;
+    /* you might need some positioning for this to work, see other questions about 100% height */
+    width: 0;
+    border: 1px solid black;
+}
+
 .header {
     font-family: myriad-pro, sans-serif;
     font-weight: 100;

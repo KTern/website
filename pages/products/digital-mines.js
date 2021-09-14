@@ -7,7 +7,7 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5
+    items: 6
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -80,7 +80,7 @@ export default function Digital_Mines () {
             </section>    
             {/* /Hero Section */}
             {/* Streams Content Section */}
-            <section className="px-4 md:px-28 pb-10 relative overflow-hidden ">
+            <section className="px-5 pb-10 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
                 <div className="relative bg-mines-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
@@ -109,8 +109,15 @@ export default function Digital_Mines () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">Unlock your Organization&apos;s Full Potential by Uncovering and Eliminating Process Complexity. </p>
-                                
-                                    <div className="my-12"></div>
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
+                                      <div className="my-12"></div>
                                 
                                     </div>
                                 </div>
@@ -163,7 +170,14 @@ export default function Digital_Mines () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">To unlock the full potential of process mining and to improve business outcomes for organizations, the transparency and insights gained with process mining must be turned into actions by taking optimization steps.</p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                 </div>
@@ -201,7 +215,14 @@ export default function Digital_Mines () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Anomaly detectors ensure your Processes are running smooth and ensures any anomolies are alerted and rectified earliest. KTern&apos;s proprietery VVV approach ensures high risk anomolies are attended to first followed by the low risk ensuring smooth flow of business processes. </p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                     </div>
@@ -255,7 +276,14 @@ export default function Digital_Mines () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">The Insights from Process Mining is used to Derive ROI of your SAP Transformation</p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                 </div>
@@ -269,7 +297,11 @@ export default function Digital_Mines () {
                 </section>
             {/*/ Streams Content Section */}
             {/* Bots Section */}
-            <div>
+            <div className="py-10">
+                <div className="px-10">
+                <h2 className="card-heading mb-4">Digital Projects Bots</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p>
+                </div>
                 <Carousel className="bots flex p-10 bg-mines-200 " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
@@ -324,10 +356,10 @@ export default function Digital_Mines () {
             </div>
             {/* /Bots Section */}
             {/* Testimonial Section */}
-            <section >
-                <div className="p-10 md:p-20  radius-for-skewed">
-                    <div className="container px-4 mx-auto">
-                    <div className="lg:flex shadow-2xl  items-center justify-center md:space-x-8">
+              <section >
+                <div className="p-10 md:p-20 bg-secondary radius-for-skewed">
+                    <div className="container  px-4 mx-auto">
+                    <div className="lg:flex shadow-2xl bg-white items-center justify-center md:space-x-8">
                         {/* <div className="mb-10 text-center lg:hidden">
                         <button className="mr-6 lg:mr-0 bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -387,7 +419,7 @@ export default function Digital_Mines () {
                     </div>
                 </div>
            </section>
-            {/* /Testimonial Section */}
+          {/* /Testimonial Section */}
             {/* Resources Section */}
             <section className="w-full py-8 bg-white sm:py-12 md:py-16">
             <div className="px-10 mx-auto max-w-7xl">

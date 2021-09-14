@@ -80,7 +80,7 @@ export default function Digital_Maps () {
             </section>    
             {/* /Hero Section */}
             {/* Streams Content Section */}
-            <section className="px-4 md:px-28 pb-10 relative overflow-hidden ">
+           <section className="px-5 pb-10 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
                 <div className="relative bg-maps-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
@@ -108,7 +108,14 @@ export default function Digital_Maps () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">Prior to considering an transformation, understanding your Existing Landscape is crucial. KTern gives you a detailed view of your SAP System including but not limited to database type, operating system, version, processor type, Users, Add-on&apos;s, archiving recommendations.</p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                     </div>
@@ -160,7 +167,14 @@ export default function Digital_Maps () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">Understand how your Existing Business Processes is getting affected during this transformation.</p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                 </div>
@@ -197,7 +211,14 @@ export default function Digital_Maps () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400  card-subheading">Worried what Happens to your SAP Customizations when making a transformation? KTern&apos;s Custom Object Analytics provides you with a detailed view of of each impacted custom program and custom object. </p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                     </div>
@@ -249,7 +270,14 @@ export default function Digital_Maps () {
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">KTern Automatically Generates a roadmap for your SAP Transformation and comes along with semi automated tools like Risk Predictor and TCO Estimator</p>
-                                
+                                <Link href="/features/digital-projects"  passHref>
+                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
                                     <div className="my-12"></div>
                                 
                                 </div>
@@ -263,7 +291,11 @@ export default function Digital_Maps () {
                 </section>
             {/*/ Streams Content Section */}
             {/* Bots Section */}
-            <div>
+             <div className="py-10">
+                <div className="px-10">
+                <h2 className="card-heading mb-4">Digital Projects Bots</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p>
+                </div>
                 <Carousel className="bots flex p-10 bg-maps-200 " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         <div className="h-1/3 w-1/3 mb-2 mx-auto">
@@ -318,10 +350,10 @@ export default function Digital_Maps () {
             </div>
             {/* /Bots Section */}
             {/* Testimonial Section */}
-            <section >
-                <div className="p-10 md:p-20  radius-for-skewed">
-                    <div className="container px-4 mx-auto">
-                    <div className="lg:flex shadow-2xl  items-center justify-center md:space-x-8">
+              <section >
+                <div className="p-10 md:p-20 bg-secondary radius-for-skewed">
+                    <div className="container  px-4 mx-auto">
+                    <div className="lg:flex shadow-2xl bg-white items-center justify-center md:space-x-8">
                         {/* <div className="mb-10 text-center lg:hidden">
                         <button className="mr-6 lg:mr-0 bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -381,7 +413,7 @@ export default function Digital_Maps () {
                     </div>
                 </div>
            </section>
-            {/* /Testimonial Section */}
+          {/* /Testimonial Section */}
             {/* Resources Section */}
             <section className="w-full py-8 bg-white sm:py-12 md:py-16">
             <div className="px-10 mx-auto max-w-7xl">

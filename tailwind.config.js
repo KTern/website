@@ -1,5 +1,5 @@
 module.exports = {
- purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+ purge: ['./pages/**/*.{js,ts,jsx,tsx}', './component/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -10,7 +10,7 @@ module.exports = {
          sm: {'max': '768px'},
     },
       backgroundImage: theme => ({
-         hero: "url('/assets/hero/home-1.png')"
+        hero: "url('/assets/hero/home-1.png')"
       }),
       colors: {
       black: '#0b1320',

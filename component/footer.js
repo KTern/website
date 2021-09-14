@@ -50,7 +50,7 @@ export default function Footer () {
                             </ul>
                         </div>
                        </div>
-                    <div>
+                    <div className="mb-6">
                         <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white card-subheading" alt="Available on SAP Store"  height="50%"/>
                     </div>
                 </div>

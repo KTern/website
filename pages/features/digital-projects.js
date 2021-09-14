@@ -49,7 +49,7 @@ export default function Digital_Projects () {
                     </div>
                      <div className="flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
-                            <div className="rounded-lg shadow-xl"><Image  src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt="" width={500} height={400} /></div>
+                            <div className="rounded-lg shadow-xl"><Image  src="https://cdn.devdojo.com/images/december2020/dashboard-011.png" alt="" width={500} height={400}  /></div>
                             <div className="hidden md:block absolute" style={{top:'2rem', right: '-3rem', zIndex: -1}}><Image  src="/features/bullets-gray-left.svg" alt="" layout="fixed" width={170 } height={140 }/></div>
                             <div className="hidden md:block absolute" style={{bottom:'2.5rem', left: '-5.5rem', zIndex: -1}}><Image  src="/features/bullets-green-right.svg" alt="" width={170 } height={140 }/></div>
 
