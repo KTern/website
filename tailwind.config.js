@@ -10,7 +10,8 @@ module.exports = {
          sm: {'max': '768px'},
     },
       backgroundImage: theme => ({
-        hero: "url('/assets/hero/home-1.png')"
+        hero: "url('/assets/hero/home-1.png')",
+        herogradient:'radial-gradient(circle at 75% calc(100% + 20px),#727272 0,#222 90%)',
       }),
       colors: {
       black: '#0b1320',

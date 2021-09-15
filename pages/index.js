@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from "next/image";
 import Link from "next/link";
-import Card from "../component/card"
 import Layout from "../component/Layout";
 
 export default function Home () {
@@ -72,152 +71,213 @@ export default function Home () {
                 </section>
                 {/* <!-- /Customer logos Section --> */}
                 {/* <!-- Streams Section --> */}
-                <section className="pt-10 px-10 bg-white">
-                    <div className="flex my-10 mx-10 ">
-                        <div className="flex-row flex-wrap w-full xl:w-1/3  pr-5">
-                            <div className=" w-full lg:mx-10 group p-2 mb-4">
-                                <div className="flex flex-wrap w-full ">
-                                    <div className=" h-10 h-full lg:h-20 w-20 mx-4 my-auto">
-                                        <Image className="w-full h-full object-cover " src="/assets/icons/projects.png" alt="Projects" width={150} height={150}/>
-                                    </div>
-                                    
-                                        <div className="relative  xl:w-2/3 shadow-md p-2 bg-project-secondary rounded-2xl cursor-pointer">
-                                            <Link href="/products/digital-projects" className="icon-link__link">
-                                            <a>
-                                            <h2 className="tiny-heading">Digital Projects</h2>
-                                            <p className=" leading-relaxed tiny-subheading">Gain control of your SAP projects </p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">                                                
-                                                   <Link href="/products/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link>                                                    
-                                            </div>
-                                          </a>
-                                    </Link>
-                                    </div>
-                                    
+                <section className="relative items-center overflow-hidden w-full py-12 bg-white sm:py-16 md:py-20">
+                    <svg className="absolute -mt-32 text-gray-300 transform scale-150 fill-current top-1/2" viewBox="0 0 197 31" xmlns="http://www.w3.org/2000/svg"><path d="M4.83 30.3c.945-.18 1.9-.307 2.86-.38.49-.07 1.07-.17 1.65-.28.58-.11 1.15-.18 1.61-.23.9-.11 1.8-.22 2.7-.3.9-.08 1.8-.19 2.71-.22 5.13-.26 10.31-.11 15.5.13l5.14.29h.54c2.35.14 4.72.27 7.09.35 1.34 0 4.64.13 4.94.14.5.06 3.49 0 4 0 .51 0 4.25-.17 5.24-.28 1.16 0 2.32-.09 3.47-.16 1.15-.07 2.61-.19 4.18-.36a41.33 41.33 0 004.21-.73c.84-.19 1.69-.32 2.53-.54l.35-.07c.55-.11 1.17-.28 1.8-.46a47.28 47.28 0 0019.46-10.06c1.84-1.69 3.61-3.24 5.6-3 .987.133 1.95.406 2.86.81l3.09 1.29 6.24 2.64c2 .81 3.34 1.23 6 2.33 1.17.46 3.39 1.3 4.59 1.64a57.05 57.05 0 005.65 1.29 39.75 39.75 0 0015.52-.14l2-.47c.66-.2 1.34-.36 2-.59a18 18 0 005.72-2.89 37.76 37.76 0 004.35-4c2.42-2.58 4.14-5.52 6.35-7.89A12.69 12.69 0 01177.65 4c.35.09.7.16 1.05.27l1 .38c.69.22 1.35.56 2 .8A23.72 23.72 0 01186.46 8c1.49 1 2.9 2.12 4.45 3.36 1.26 1 4.45 3.36 5.11 3.38.39 0 .3-.52.68-.55.85 0-.24-2.56-2-4a59 59 0 00-5.92-4.38 33.42 33.42 0 00-6.89-3.6A23.9 23.9 0 00175.75 1a17.23 17.23 0 00-6.69 1 20.69 20.69 0 00-2.39 1.1 13.51 13.51 0 00-2.16 1.59 28.46 28.46 0 00-3.5 3.83c-2.31 2.9-4.26 5.92-6.9 8.08a22.73 22.73 0 01-9.19 4.47 36.08 36.08 0 01-13.17.74c-6-.8-11.89-2.93-17.66-5.27l-8.7-3.54a15.35 15.35 0 00-4.92-1.38 6.78 6.78 0 00-2.83.48c-.83.341-1.61.792-2.32 1.34-1.37 1-2.45 2.11-3.65 3A40.1 40.1 0 0187.96 19a38.51 38.51 0 01-10.25 4.61l-.6.15h-.1c-1.85.51-4 1.07-5.87 1.48a79.21 79.21 0 01-11.79 1.41c-4.55.21-9.19.32-13.68.16-8.49-.29-17-1-25.65-.9a91.5 91.5 0 00-14.28.63 17.59 17.59 0 00-3.46.91 17.08 17.08 0 00-1.68.67.67.67 0 00-.35.9 2.6 2.6 0 001.62 1.13c.96.29 1.976.34 2.96.15z" fillRule="nonzero"></path></svg>
+                    <div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
+                        <h2 className="mx-auto text-4xl font-bold md:text-5xl">KTern&apos;s Digital Streams</h2>
+                        <p className="max-w-lg mt-5 text-lg text-gray-600 md:mx-auto">Our Digital Workplace Comes with 5 Streams to make your Digital Transformation Clean and Simple</p>
+                    </div>
+                    <div className="relative grid gap-8 px-10 mx-auto md:grid-cols-2 xl:grid-cols-5 max-w-full">
 
-                                </div>
-                            </div>
-                            <div className=" w-full lg:mx-10 group p-2  mb-4">
-                                <div className=" flex flex-wrap ">
+                        <svg className="absolute hidden w-12 h-auto -mt-8 -ml-0 text-black fill-current xl:block" viewBox="0 0 39 50" height="50" xmlns="http://www.w3.org/2000/svg"><g fillRule="nonzero"><path d="M34.31 6.86a19.81 19.81 0 001-1.92l.11-.24.06-.13c0-.09.07-.19.09-.28.02-.09.17-.42 0-.51a21.26 21.26 0 00-3.48-.57l-4.22-.42a26.55 26.55 0 00-3.65-.21 2.28 2.28 0 00-.76.13c-.18 0-.14.24-.11.35.022.115.052.23.09.34l.31.79c.28.68.6 1.45 1.2 2.78.16.42 1.36 3.14 1.58 3.53.204.4.449.78.73 1.13.26.34.6.58.83.91.23.33.58 1 .77 1.19a.2.2 0 010 .11.28.28 0 00-.06.09 1.58 1.58 0 00-.3 1.12.4.4 0 01-.33.49 1.78 1.78 0 01-1.22-.31 6.74 6.74 0 01-2.08-2.42 40.45 40.45 0 01-2.34-5.11c-.35-.87-.67-1.7-.96-2.7l-.21-.71a11.26 11.26 0 01-.3-1.21 3 3 0 010-1.15 3.21 3.21 0 01.24-.45l.07-.12v-.05a1.53 1.53 0 01.18-.18 3.45 3.45 0 01.66-.35 5.54 5.54 0 011.5-.27H24.8c.59 0 1.17 0 1.74.05 1.15.06 2.28.17 3.4.3 1.12.13 2.25.29 3.38.47.56.1 1.13.2 1.7.32l.57.14c.237.05.47.113.7.19a2.88 2.88 0 011.14.64 2 2 0 01.35 1.11 4.31 4.31 0 01-.31 1.3 6.27 6.27 0 01-.27.63L37 6l-.37.76a36.55 36.55 0 01-3.83 5.82 10.57 10.57 0 01-2.15 2.18 3 3 0 01-1.28.54c-.41.06-.85-.13-.88-.44a5.73 5.73 0 00.5-1.15 14 14 0 01.51-1.43A5 5 0 0130.67 11c1.22-.41 2.15-1.85 3-3.13.22-.32.43-.66.64-1.01zM17.31 39.86a19.81 19.81 0 001-1.92l.11-.24.06-.13c0-.09.07-.19.09-.28.02-.09.17-.42 0-.51a21.26 21.26 0 00-3.48-.57l-4.22-.42a26.55 26.55 0 00-3.65-.21 2.28 2.28 0 00-.76.13c-.18 0-.14.24-.11.35.022.115.052.23.09.34l.31.79c.28.68.6 1.45 1.2 2.78.16.42 1.36 3.14 1.58 3.53.204.4.449.78.73 1.13.26.34.6.58.83.91.23.33.58 1 .77 1.19a.2.2 0 010 .11.28.28 0 00-.06.09 1.58 1.58 0 00-.3 1.12.4.4 0 01-.33.49 1.78 1.78 0 01-1.22-.31 6.74 6.74 0 01-2.08-2.42 40.45 40.45 0 01-2.34-5.11c-.35-.87-.67-1.7-.96-2.7l-.21-.71a11.26 11.26 0 01-.3-1.21 3 3 0 010-1.15 3.21 3.21 0 01.24-.45l.07-.12v-.05a1.53 1.53 0 01.18-.18 3.45 3.45 0 01.66-.35 5.54 5.54 0 011.5-.27H7.8c.59 0 1.17 0 1.74.05 1.15.06 2.28.17 3.4.3 1.12.13 2.25.29 3.38.47.56.1 1.13.2 1.7.32l.57.14c.237.05.47.113.7.19a2.88 2.88 0 011.14.64 2 2 0 01.35 1.11 4.31 4.31 0 01-.31 1.3 6.27 6.27 0 01-.27.63L20 39l-.37.76a36.55 36.55 0 01-3.83 5.82 10.57 10.57 0 01-2.15 2.18 3 3 0 01-1.28.54c-.41.06-.85-.13-.88-.44a5.73 5.73 0 00.5-1.15 14 14 0 01.51-1.43A5 5 0 0113.67 44c1.22-.41 2.15-1.85 3-3.13.22-.32.43-.66.64-1.01zM13.874 23.203c.718.071 1.44.103 2.162.095l.264-.002h.143c.082-.038.202-.017.292-.037.09-.02.453-.023.462-.216a21.26 21.26 0 00-.954-3.394l-1.402-4.003a26.55 26.55 0 00-1.353-3.396 2.28 2.28 0 00-.439-.634c-.076-.163-.276-.026-.363.048a2.37 2.37 0 00-.27.225l-.585.615a81.727 81.727 0 00-2.013 2.263c-.313.322-2.27 2.56-2.531 2.923a6.62 6.62 0 00-.716 1.14c-.198.379-.272.788-.474 1.136-.202.348-.661.949-.753 1.201a.2.2 0 01-.1.047.28.28 0 00-.107-.017 1.58 1.58 0 00-1.142.202.4.4 0 01-.583-.092 1.78 1.78 0 01-.235-1.237 6.74 6.74 0 011.315-2.908 40.45 40.45 0 013.642-4.28c.64-.685 1.257-1.326 2.041-2.011l.555-.49c.308-.28.632-.541.97-.784a3 3 0 011.042-.486c.17-.004.34.005.51.027l.138.013.045-.021c.082.022.162.051.24.087.214.128.413.28.595.45.35.373.645.792.879 1.246l.16.344.3.643c.25.535.495 1.06.69 1.599.432 1.067.81 2.138 1.166 3.208.355 1.07.688 2.162 1.002 3.262.146.55.296 1.108.428 1.676l.114.576c.056.235.097.474.124.714a2.88 2.88 0 01-.098 1.304 2 2 0 01-.858.786 4.31 4.31 0 01-1.31.269 6.27 6.27 0 01-.685.021l-.392-.037-.845-.015a36.55 36.55 0 01-6.894-1.011 10.57 10.57 0 01-2.884-1.027 3 3 0 01-1.03-.932c-.228-.346-.242-.825.026-.984a5.73 5.73 0 001.254-.033 14 14 0 011.512-.142 5 5 0 011.654.52c.887.932 2.585 1.167 4.105 1.396.383.064.78.11 1.186.153z"></path></g></svg>
+                        <svg className="absolute right-0 hidden w-12 h-auto -mt-6 -mr-0 text-black fill-current xl:block" viewBox="0 0 38 47" height="47" xmlns="http://www.w3.org/2000/svg"><g fillRule="nonzero"><path d="M6.962 14.533c1.88.249 9.32-10.256 8.596-11.156-.724-.899-12.772-2.782-13.94-1.902-.71.544 3.662 12.87 5.344 13.058zM29.801 33.433c-.904-1.667-13.775-1.511-14.077-.397-.302 1.114 5.256 11.968 6.654 12.395.857.255 8.26-10.526 7.423-11.998zM29.995 23.637c1.306-1.374-2.82-13.568-3.972-13.511-1.153.057-9.758 8.697-9.733 10.16.023.893 12.564 4.601 13.705 3.351z"></path></g></svg>
 
-                                    <div className="h-10 h-full lg:h-20 w-20 mx-4 my-auto">
-                                        <Image className="w-full h-full object-cover " src="/assets/icons/process.svg" alt="Process" width={150} height={150}/>
-                                    </div>
-                                    <div className=" xl:w-2/3 shadow p-2 bg-process-secondary rounded-2xl cursor-pointer">
-                                        <Link href="/products/digital-process" className="icon-link__link" passHref>
-                                        <a>
-                                            <h2 className="tiny-heading">Digital Process</h2>
-                                            <p className="tiny-subheading leading-relaxed">Ensure process control and governance</p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                   <Link href="/products/digital-process"  passHref>
-                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        {/* <!-- Digital Maps --> */}
+                        <div className="relative">
+                            <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Maps </span></h3>
+                                <p className="mt-4 text-sm text-gray-700">Build your Business Case for SAP Digital Transformation with KTern’s Digital Maps</p>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Landscape <span className="inline xl:block"> Assessment</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Business Process Assessment</span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Custom Object Assessment</span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Timeline <span className="inline xl:block"> Assessment</span></span>
+                                    </li>
+                                </ul>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <p className="mb-5 text-gray-600">Assess and evaluate the business impact </p>
+                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-maps-primary hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-maps-300">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
                             </Link>
-                                    
-                                                
-                                            </div>
-                                        </a>
-                                        </Link>
-                                    </div>
-                                </div>
+                                
                             </div>
-                            <div className=" w-full lg:mx-10 group p-2 mb-4">
-                                <div className=" flex flex-wrap ">
-
-                                    <div className="h-10 h-full lg:h-20 w-20 mx-4 my-auto ">
-                                        <Image className="w-full h-full object-cover " src="/assets/icons/labs.png" alt="Labs" width={150} height={150} />
-                                    </div>
-
-                                    <div className="xl:w-2/3 shadow p-2 bg-labs-secondary rounded-2xl cursor-pointer">
-                                        <Link href="/products/digital-labs" className="icon-link__link">
-                                            <a>
-                                            <h2 className="tiny-heading">Digital Labs</h2>
-                                            <p className="tiny-subheading leading-relaxed">Streamline Functional Testing Cycles
-                                            </p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                
-                                                   <Link href="/products/digital-labs"  passHref>
-                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>
-                                    
-                                                
-                                            </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" w-full lg:mx-10 group p-2 mb-4">
-                                <div className=" flex flex-wrap ">
-
-                                    <div className="h-10 h-full lg:h-20 w-20 mx-4 my-auto">
-                                        <Image className="w-full h-full object-cover " src="/assets/icons/maps.png" alt="Maps" width={150} height={150}/>
-                                    </div>
-
-                                    <div className=" xl:w-2/3 shadow p-2 bg-maps-secondary rounded-2xl cursor-pointer">
-                                        <Link href="/products/digital-maps" className="icon-link__link" passHref>
-                                            <a>
-                                            <h2 className="tiny-heading">Digital Maps</h2>
-                                            <p className="tiny-subheading leading-relaxed">Analyse SAP landscape </p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/products/digital-maps"  passHref>
-                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" w-full lg:mx-10  group p-2 mb-4">
-                                <div className=" flex flex-wrap ">
-
-                                    <div className="h-full lg:h-20 w-20 mx-4 my-auto">
-                                        <Image className="w-full h-full object-cover " src="/assets/icons/mines.png" alt="Mines" width={150} height={150}/>
-                                    </div>
-
-                                    <div className=" xl:w-2/3 shadow p-2 bg-mines-secondary rounded-2xl">
-                                        <Link href="/products/digital-mines" className="icon-link__link" passHref>
-                                            <a>
-                                            <h2 className="tiny-heading">Digital mines</h2>
-                                            <p className="tiny-subheading leading-relaxed">Ensure ROI on SAP S/4HANA investment </p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">                                           
-                                                   <Link href="/products/digital-mines"  passHref>
-                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                                   
-                                            </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-maps-secondary border-2 border-gray-800"></div>
                         </div>
-                        <div className="hidden xl:block my-auto h-80 w-80 relative"><Image  src="/assets/right-stream.svg" alt=""  layout="fill"/></div>
+
+                    {/* <!-- Digital Projects --> */}
+                        <div className="relative">
+                            <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Projects </span></h3>
+                                <p className="mt-4 text-sm text-gray-700">Gain ultimate control of your SAP projects and teams with KTern&apos;s Digital projects</p>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Plan <span className="inline xl:block"> Transformation</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Team <span className="inline xl:block"> Collaboration</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Organized <span className="inline xl:block"> Transformation</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Customizable <span className="inline xl:block"> Dashboards</span></span>
+                                    </li>
+                                </ul>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                
+                                <p className="mb-5 text-gray-600">Gain ultimate control of your SAP projects </p>
+                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-project-primary hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-project-300">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                
+                            </div>
+                            <div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-project-secondary border-2 border-gray-800"></div>
+                        </div>
+
+                        {/* <!-- Digital Process  --> */}
+                        <div className="relative">
+                            <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Process </span></h3>
+                                <p className="mt-4 text-sm text-gray-700">Create a Digital Footprint and optimize your processes with KTern&apos;s Digital Process</p>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Process <span className="inline xl:block"> Orchestration</span> </span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Custom Code <span className="inline xl:block"> Remediation</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Change <span className="inline xl:block"> Management</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Materiality <span className="inline xl:block"> Analysis</span> </span>
+                                    </li>
+                                </ul>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <p className="mb-5 text-gray-600"> Process control and Governance  </p>
+                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-process-primary hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-process-300">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>            </div>
+                            <div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-process-secondary border-2 border-gray-800"></div>
+                        </div>
+
+                        {/*<!-- Digital Labs --> */}
+                        <div className="relative">
+                            <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Labs </span></h3>
+                                <p className="mt-4 text-sm text-gray-700">Automate your Testing for modern Enterprises with KTern&apos;s  driven Digital Maps</p>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Auto <span className="inline xl:block"> Recommendation</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Sign off <span className="inline xl:block"> Management</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Auto <span className="inline xl:block"> Execution</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Test Case <span className="inline xl:block"> Management</span></span>
+                                    </li>
+                                </ul>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                            
+                                <p className="mb-5 text-gray-600">Automate your End to End Testing Today</p>
+                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-labs-primary hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-labs-300">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                
+                            </div>
+                            <div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-labs-secondary border-2 border-gray-800"></div>
+                        </div>
+                    
+                    {/*<!-- Digital Mines --> */}
+                        <div className="relative">
+                            <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Mines </span></h3>
+                                <p className="mt-4 text-sm text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Mines</p>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Process <span className="inline xl:block"> Mining</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Optimize <span className="inline xl:block"> Processes</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>Process <span className="inline xl:block"> Monitoring</span></span>
+                                    </li>
+                                    <li className="flex items-center text-gray-700">
+                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                        <span>ROI <span className="inline xl:block"> Estimation</span></span>
+                                    </li>
+                                </ul>
+                                <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
+                                
+                                <p className="mb-5 text-gray-600">BusinessOps for the modern enterprises</p>
+                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1 font-medium text-mines-primary hover:border-blue-500 group ">
+                                <span className="tiny-heading group-hover:text-mines-300">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                
+                            </div>
+                            <div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-mines-secondary border-2 border-gray-800"></div>
+                        </div>
+
                     </div>
                 </section>
                 {/* <!-- /Streams Section --> */}
