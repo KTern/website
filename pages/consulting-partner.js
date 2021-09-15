@@ -30,10 +30,8 @@ export default function Consultingpartner(){
                 </div>
                 </div>
                <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="hero image" width={600 } height={420 }/>
-                    <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
-                    <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
-                    <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
+                    <Image className="relative z-40 w-full h-full" src="/partner/consulting-partner-hero.svg" alt="hero image" width={600 } height={420 }/>
+                   
                 </div>   </div>
             </section>
          {/* <!-- Why Become KTern Consulting Partner--> */}
@@ -41,7 +39,7 @@ export default function Consultingpartner(){
             <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
                 <h2 className="w-full m-0   font-black tracking-wide text-center border-0 border-gray-200 sm:text-3xl card-heading text-white">Why Become a KTern Consulting Partner?</h2>
                 <p className="w-full max-w-3xl card-subheading mx-0 mx-auto mt-4 mb-0   leading-relaxed text-center text-white border-0 border-gray-200 ">
-                    Check out some of our award-winning features. We have been trusted by over 250 large name brand companies. We strive to make a product that is revolutionary.
+                   
                 </p>
                 <div className="grid grid-cols-3 gap-5 mt-10 sm:grid-cols-8 lg:grid-cols-12">
                     <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
@@ -63,7 +61,7 @@ export default function Consultingpartner(){
                             </span>
                             <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Access to Demo Account</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Get Exclusive Access to KTern.AI&apos;s Demo account Preloaded with SAP Scenarios </p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Get Exclusive Access to KTern.AI&apos;s Demo account. </p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +73,7 @@ export default function Consultingpartner(){
                             </span>
                             <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Exclusive Partner Team</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Apart from a Dedicated Partner Manager,  Customer Support</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Exclusive Partner Team to support your Business.</p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +85,7 @@ export default function Consultingpartner(){
                             </span>
                             <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Training and Enablement</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Training and Enablement Session is conducted free of cost by KTern&apos;s Enablement team</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Training is conducted free of cost by KTern&apos;s Enablement team</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +109,7 @@ export default function Consultingpartner(){
                             </span>
                             <div className="mt-6  text-center border-0 border-gray-200 sm:text-left text-gray-50">
                                 <span className="box-border text-xl font-bold leading-none tracking-wider text-center border-solid sm:text-left text-gray-50">Incentives</span>
-                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">Depending upon the tier of Partnership the rewards and incentives just keeps going up</p>
+                                <p className="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center text-gray-300 border-solid sm:text-left">The rewards and incentives just keeps going up</p>
                             </div>
                         </div>
                     </div>
@@ -146,30 +144,30 @@ export default function Consultingpartner(){
                     <table className="table-auto w-full mb-10">
                     <thead className="bg-gray-100">
                         <tr className="text-lg text-left font-bold">
-                        <th className="pl-16 py-5">Feature 1</th>
+                        <th className="pl-16 py-5">Enablement</th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            1 Year
+                            Registered
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            2 Year
+                            Authorized
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            3 Year
+                            Preferred
                             </div>
                         </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
+                        <td className="pl-16 py-6 text-left">Access to Partner Portal</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
@@ -196,7 +194,7 @@ export default function Consultingpartner(){
                         </td>
                         </tr>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Video chat</td>
+                        <td className="pl-16 py-6 text-left">Marketing and Sales Kit</td>
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,7 +214,7 @@ export default function Consultingpartner(){
                         </td>
                         </tr>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Real-Time Collaboration</td>
+                        <td className="pl-16 py-6 text-left">Newsletters and Feature Releases</td>
                         <td></td>
                         <td></td>
                         <td className="pl-10">
@@ -228,8 +226,8 @@ export default function Consultingpartner(){
                             </svg>
                         </td>
                         </tr>
-                        <tr className="text-xl text-center">
-                        <td className="pl-16 py-6 text-left">Technical Support</td>
+                        <tr className="text-lg text-center">
+                        <td className="pl-16 py-6 text-left">Dedicated Channel Manager</td>
                         <td></td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -255,30 +253,30 @@ export default function Consultingpartner(){
                     <table className="table-auto w-full mb-10">
                     <thead className="bg-gray-100">
                         <tr className="text-lg text-left font-bold">
-                        <th className="pl-16 py-5">Feature 2</th>
+                        <th className="pl-16 py-5">Free Training and Certification</th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            1 Year
+                            Registered
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            2 Year
+                            Authorized
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            3 Year
+                            Preferred
                             </div>
                         </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
+                        <td className="pl-16 py-6 text-left">Product Training</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
@@ -298,7 +296,7 @@ export default function Consultingpartner(){
                         </td>
                         </tr>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Video chat</td>
+                        <td className="pl-16 py-6 text-left">Platform Training</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
@@ -325,7 +323,7 @@ export default function Consultingpartner(){
                         </td>
                         </tr>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Real-Time Collaboration</td>
+                        <td className="pl-16 py-6 text-left">Sales Training</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
@@ -351,8 +349,8 @@ export default function Consultingpartner(){
                             </svg>
                         </td>
                         </tr>
-                        <tr className="text-xl text-center">
-                        <td className="pl-16 py-6 text-left">Technical Support</td>
+                        <tr className="text-lg text-center">
+                        <td className="pl-16 py-6 text-left">New Product Beta</td>
                         <td></td>
                         <td></td>
                         <td className="pl-10">
@@ -375,26 +373,26 @@ export default function Consultingpartner(){
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            1 Year
+                            Registered
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            2 Year
+                            Authorized
                             </div>
                         </th>
                         <th className="px-4 py-5">
                             <div className="flex items-center">
                             
-                            3 Year
+                             Preferred
                             </div>
                         </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Statistics &amp; Details</td>
+                        <td className="pl-16 py-6 text-left">Listing on KTern Website</td>
                         <td className="pl-10">
                             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
@@ -421,7 +419,7 @@ export default function Consultingpartner(){
                         </td>
                         </tr>
                         <tr className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left">Video chat</td>
+                        <td className="pl-16 py-6 text-left">KTern Partner Logo</td>
                         <td></td>
                         <td></td>
                         <td className="pl-10">
@@ -516,11 +514,9 @@ export default function Consultingpartner(){
                                 </summary>
                                 <hr/>
                         <div className="p-4">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        Every KTern registered Partner is required to agree to the terms and conditions of the program.  Authorised and Prefered Partners are required to officially sign the partnership agreement with KTern.
+
+
                         </div>
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
@@ -530,11 +526,9 @@ export default function Consultingpartner(){
                                 </summary>
                                 <hr/>
                         <div className="p-4">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        No, KTern does not levy a membership charge on its partners.
+
+
                         </div>
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
@@ -544,11 +538,9 @@ export default function Consultingpartner(){
                                 </summary>
                                 <hr/>
                         <div className="p-4">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar Consultingiações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        If you have any more questions, please write to us at sales@ktern.com
+
+
                         </div>
                 </details>
 
@@ -560,9 +552,9 @@ export default function Consultingpartner(){
 
 
             {/* <!--Steps to join KTern--> */}
-           <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
+            <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
             <div className="container px-14 mx-auto">
-                <div className="mb-10 max-w-xl mx-auto mb-24 text-center">
+                <div className="mb-10 max-w-xl mx-auto sm:mb-24 text-center">
                 <span className="text-lg font-bold text-white">Are you Ready to Join the KTern Ecosystem?</span>
                 <h2 className="mt-4 text-4xl lg:text-5xl text-white font-bold font-heading">Follow the Steps Below to become a KTern Partner  </h2>
                 </div>
@@ -575,8 +567,8 @@ export default function Consultingpartner(){
                         <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">1</span>
                     </div>
                     <div className="max-w-xs">
-                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Send us a Message</h3>
-                        <p className="text-md text-gray-200">You can Fill this Form to Let us Know you are Interested . Our Onboarding Team will review your application and reach out to you. </p>
+                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Reach Out</h3>
+                        <p className="text-md text-gray-200">You can Fill this Form to Let us Know you are Interested .  </p>
                     </div>
                     </div>
                 </div>
@@ -587,7 +579,7 @@ export default function Consultingpartner(){
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-6 text-lg font-bold font-heading text-white">Onboarding</h3>
-                        <p className="text-md text-gray-200">Upon approval of the application, a Partnership agreement is signed.</p>
+                        <p className="text-md text-gray-200">Upon approval, a Partnership agreement is signed.</p>
                     </div>
                     </div>
                 </div>
@@ -598,7 +590,7 @@ export default function Consultingpartner(){
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-6 text-lg font-bold font-heading text-white">Leverage KTern</h3>
-                        <p className="text-md text-gray-200">A dedicated Partnership Manager will be handling your account,providing you with priority issue resolutions and also gain access to our Exclusive Partner Portal Loaded with Resources, Data, Report, you name them you got them!</p>
+                        <p className="text-md text-gray-200">A dedicated Partnership Manager will be handling your account</p>
                     </div>
                     </div>
                 </div>

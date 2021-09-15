@@ -30,11 +30,8 @@ export default function Partners () {
                 </div>
                 </div>
                <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-                    <Image className="relative z-40 w-full h-full" src="https://cdn.devdojo.com/images/june2021/home-hero.png" alt="hero image" width={600 } height={420 }/>
-                    <div className="box-content absolute inset-0 z-30 hidden scale-150 translate-x-40 translate-y-10 rounded-full w-80 lg:block h-80 xl:w-96 xl:h-96 bg-pink-50"></div>
-                    <div className="absolute bottom-0 left-0 z-20 hidden -translate-x-3 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-yellow-50"></div>
-                    <div className="absolute top-0 left-0 z-20 hidden -translate-x-12 -translate-y-12 rounded-full opacity-50 w-72 lg:block h-72 bg-blue-50"></div>
-                </div>   </div>
+                    <Image className="relative z-40 w-full h-full" src="/partner/partner-hero.svg" alt="hero image" width={600 } height={420 }/>
+                    </div>   </div>
             </section>
               {/* <!--KTern Partnership Models--> */}
 
@@ -51,7 +48,7 @@ export default function Partners () {
                 <div className="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
                    <Link href="/consulting-partner"  passHref>
                     <a className="relative border-2 border-black shadow-md flex flex-col items-start  h-full  overflow-hidden rounded-xl group md:col-span-6">
-                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/hero-section.svg')" }} />
+                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/board-meeting.jpg')" }} />
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
@@ -63,7 +60,7 @@ export default function Partners () {
 
                         <Link href="/technology-partner"  passHref>
                             <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
-                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technology-partner.svg')"}}/>
+                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/partner-hand.jpg')"}}/>
                     <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
@@ -97,58 +94,53 @@ export default function Partners () {
             {/* <!--Faq Section--> */}
             <section className="py-20">
                     <div className="container mx-auto w-1/2 flex-col space-y-4">
-                        <h2 className="mb-2 card-heading font-bold text-center md:text-3xl mb-10">Frequently Asked Questions</h2>
+                        <h2 className="mb-2 text-xl font-bold text-center md:text-3xl mb-10">Frequently Asked Questions</h2>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">Do we need to enter into an agreement in order to become a KTern partner?</span>
+                            <span>Do we need to enter into an agreement in order to become a KTern partner?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        <div className="p-4">
+                        Every KTern registered Partner is required to agree to the terms and conditions of the program.  Authorised and Prefered Partners are required to officially sign the partnership agreement with KTern.
+
+
                         </div>
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">Does KTern levy a membership charge on its partners?</span>
+                            <span>Does KTern levy a membership charge on its partners?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        <div className="p-4">
+                        No, KTern does not levy a membership charge on its partners.
+
+
                         </div>
                 </details>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                            <span className="card-subheading">I have more questions regarding the KTern Partner Program. What should I do?</span>
+                            <span>I have more questions regarding the KTern Partner Program. What should I do?</span>
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
-                                CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                diante.
+                        <div className="p-4">
+                        If you have any more questions, please write to us at sales@ktern.com
+
+
                         </div>
                 </details>
 
                 
                 </div>
             </section>
-    
+
+
             {/* <!--Steps to join KTern--> */}
             <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
             <div className="container px-14 mx-auto">
-                <div className="mb-10 max-w-xl mx-auto mb-24 text-center">
+                <div className="mb-10 max-w-xl mx-auto sm:mb-24 text-center">
                 <span className="text-lg font-bold text-white">Are you Ready to Join the KTern Ecosystem?</span>
                 <h2 className="mt-4 text-4xl lg:text-5xl text-white font-bold font-heading">Follow the Steps Below to become a KTern Partner  </h2>
                 </div>
@@ -161,8 +153,8 @@ export default function Partners () {
                         <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">1</span>
                     </div>
                     <div className="max-w-xs">
-                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Send us a Message</h3>
-                        <p className="text-md text-gray-200">You can Fill this Form to Let us Know you are Interested . Our Onboarding Team will review your application and reach out to you. </p>
+                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Reach Out</h3>
+                        <p className="text-md text-gray-200">You can Fill this Form to Let us Know you are Interested .  </p>
                     </div>
                     </div>
                 </div>
@@ -173,7 +165,7 @@ export default function Partners () {
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-6 text-lg font-bold font-heading text-white">Onboarding</h3>
-                        <p className="text-md text-gray-200">Upon approval of the application, a Partnership agreement is signed.</p>
+                        <p className="text-md text-gray-200">Upon approval, a Partnership agreement is signed.</p>
                     </div>
                     </div>
                 </div>
@@ -184,7 +176,7 @@ export default function Partners () {
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-6 text-lg font-bold font-heading text-white">Leverage KTern</h3>
-                        <p className="text-md text-gray-200">A dedicated Partnership Manager will be handling your account,providing you with priority issue resolutions and also gain access to our Exclusive Partner Portal Loaded with Resources, Data, Report, you name them you got them!</p>
+                        <p className="text-md text-gray-200">A dedicated Partnership Manager will be handling your account</p>
                     </div>
                     </div>
                 </div>
