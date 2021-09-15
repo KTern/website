@@ -1,4 +1,4 @@
-import Card from "../component/card1"
+import Card from "../component/card1"       
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from 'react';
@@ -15,6 +15,7 @@ function closeNav () {
         document.getElementById("navbar-menu").style.display = 'none';
     }
 }
+
 
 export default function Trial () {
     // const [ headerNew, changeHeader ] = useState(false);
@@ -71,203 +72,19 @@ className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">
                                         </li>
                                         </div>
                                     </ul>
-                                    <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
                                             {isProjectShown && (
-                                                <Card ></Card>
+                                            <Card data={{title:'Digital Projects',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>
                                             )}
                                             {isProcessShown && (
-                                           <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Process</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-process"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1" width='400' height='270'/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
+                                            <Card data={{title:'Digital Process',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>  )}
                                              {isMapsShown && (
-                                           <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Maps</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-maps"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
+                                            <Card data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>  )}
                                              {isMinesShown && (
-                                               <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Mines</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-mines"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image" width={400} height={ 270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
+                                            <Card data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>  )}
                                              {isLabsShown && (
-                                               <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Labs</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-labs"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                    </ul>
-                               <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
-                                            {isProjectShown && (
-                                                <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Projects</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1"  width='400' height='270'/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                            {isProcessShown && (
-                                           <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Process</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-process"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image 1" width='400' height='270'/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                             {isMapsShown && (
-                                           <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Maps</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-maps"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                             {isMinesShown && (
-                                               <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Mines</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-mines"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image" width={400} height={ 270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                             {isLabsShown && (
-                                               <div className="p-6 flex space-x-10">
-                                                    <div className="w-1/2">
-                                                        <h3 className="mb-4 navbar-h">Digital Labs</h3>
-                                                        <p className="mb-4 navbar-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? 
-                                                            Vitae libero delectus obcaecati.</p>
-                                                         <Link href="/products/digital-labs"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link> 
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="Blog Image"  width={400} height={270}/>
-                                                    </div>
-                                                   
-                                                </div>
-                                            )}
-                                    </ul>
-                                </div>
+                                            <Card data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/> )}
+                                   
+                                               </div>
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
