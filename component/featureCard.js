@@ -6,7 +6,7 @@ export default function FeatureCard ({ data }) {
              <div className="w-1/2">
                  <h3 className="mb-4 navbar-h">{data.title}</h3>
                  <p className="mb-4 navbar-s">{data.description}</p>
-                  <Link href="/products/digital-projects"  passHref>
+                  <Link href={data.url}  passHref>
                  <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
                  <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

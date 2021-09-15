@@ -10,28 +10,28 @@ export default function Card ({ data }) {
     const [ isFeature5Shown, setIsFeature5Shown ] = useState(false);
     return (
 <>
-        <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3">
+            <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
             <h3 className="navbar-h text-black text-bold mb-2">{data.title}</h3>
             <div >
                 <li>
                 <Link href="#"    ><a onMouseEnter={() => { setIsFeature1Shown(true);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
-                className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">{data.feature1}</a></Link>
+                className="navbar-s block p-2 hover:bg-gray-50 text-black hover:text-gray-400">{data.feature1}</a></Link>
                 </li>
                 <li>
                 <Link href="#"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(true);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
-                className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">{data.feature2}</a></Link>
+                className="navbar-s block p-2 hover:bg-gray-50 text-black hover:text-gray-400">{data.feature2}</a></Link>
                 </li>
                 <li>
                 <Link href="#"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(true);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
-                className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">{data.feature3}</a></Link>
+                className="navbar-s block p-2 hover:bg-gray-50 text-black hover:text-gray-400">{data.feature3}</a></Link>
                 </li>
                 <li>
                 <Link href="#"   ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(true);setIsFeature5Shown(false)}}
-                className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">{data.feature4}</a></Link>
+                className="navbar-s block p-2 hover:bg-gray-50 text-black hover:text-gray-400">{data.feature4}</a></Link>
                 </li>
                 <li>
                 <Link href="#"   ><a  onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(true)}}
-                className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">{data.feature5}</a></Link>
+                className="navbar-s block p-2 hover:bg-gray-50 text-black hover:text-gray-400">{data.feature5}</a></Link>
                 </li>
                     <li className="mt-4 mx-2">
                         <Link href={data.url} passHref>
@@ -45,18 +45,19 @@ export default function Card ({ data }) {
             </div>
          
             </ul>
-          <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
+            <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
+                {data.title}
         {isFeature1Shown && (
-          <FeatureCard data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg'}}/>
+          <FeatureCard data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
           )}
         {isFeature2Shown && (
-     <FeatureCard data={{title:'Feature2',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg'}}/> )}
+     <FeatureCard data={{title:'Feature2',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
          {isFeature3Shown && (
-       <FeatureCard data={{title:'Feature3',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg'}}/> )}
+       <FeatureCard data={{title:'Feature3',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
          {isFeature4Shown && (
-       <FeatureCard data={{title:'Feature4',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg'}}/> )}
+       <FeatureCard data={{title:'Feature4',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
          {isFeature5Shown && (
-                    <FeatureCard data={{ title: 'Feature5', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati', image: 'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg' }} />)}
+                    <FeatureCard data={{ title: 'Feature5', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati', image: 'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url }} />)}
                 
 </ul>
  </>
