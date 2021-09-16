@@ -52,11 +52,7 @@ export default function Card ({data }) {
             </div>
 <span className="my-auto"><strong>{data.title}</strong></span></div>
         {isFeature1Shown && (
-<<<<<<< HEAD
             <FeatureCard data={ data.feature_data[0]}/>
-=======
-          <FeatureCard  data={{title:'Feature 1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
           )}
         {isFeature2Shown && (
             <FeatureCard data={ data.feature_data[1]}/> )}

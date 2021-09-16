@@ -211,17 +211,10 @@ export default function Features () {
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
-<<<<<<< HEAD
-                                                    <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
-=======
                                                 <div className="w-8 h-8 relative" >
                                             <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Cutover Orchestrator</h3>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                             </div>
                                             <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>
                                             <p className="mb-2 text-md text-gray-600">Risk-free, Transparent Go-Live with KTern's Cutover Orchestration.
@@ -351,18 +344,6 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-<<<<<<< HEAD
-  <Image
-    src={heroimage}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-=======
                   <Image
                     src={digitalprojects}
                     alt="KTern Hero Image"
@@ -373,7 +354,6 @@ export default function Features () {
                 
                 
                                     </div>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -398,15 +378,8 @@ export default function Features () {
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
                                         <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
-<<<<<<< HEAD
-                                                    <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
-=======
                                                 <div className="w-8 h-8 relative">
                                             <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Process Orchestrator</h3>
                                             </div>
@@ -538,18 +511,6 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-<<<<<<< HEAD
-  <Image
-    src={heroimage}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-=======
                   <Image
                     src={digitalprocess}
                     alt="KTern Hero Image"
@@ -560,7 +521,6 @@ export default function Features () {
                 
                 
                                     </div>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -586,11 +546,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-<<<<<<< HEAD
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-=======
                                                         <Image src="/assets/icons/labs.png" alt="labs"  layout="fill"/>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">SAP Test Case Finder</h3>
                                             </div>
@@ -723,18 +679,6 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-<<<<<<< HEAD
-  <Image
-    src={heroimage}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-=======
                   <Image
                     src={digitallabs}
                     alt="KTern Hero Image"
@@ -745,7 +689,6 @@ export default function Features () {
                 
                 
                                     </div>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -771,11 +714,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-<<<<<<< HEAD
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-=======
                                                         <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Process Mining Wizards</h3>
                                             </div>
@@ -907,15 +846,9 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-<<<<<<< HEAD
-                <Image
-                    src={heroimage}
-                    alt="KTern Hero Image"
-=======
                   <Image
                     src={digitalmines}
                     alt="Ktern Hero Image"
->>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                     width={1000}
                     height={600}
                     objectFit="cover" 
