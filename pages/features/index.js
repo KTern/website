@@ -824,13 +824,13 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-  <Image
-    src={heroimage}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
+                <Image
+                    src={heroimage}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                />
 
 
                     </div>

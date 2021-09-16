@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from 'react';
 import FeatureCard from "./featureCard";
-export default function Card ({ data }) {
+export default function Card ({data }) {
       const [ isFeature1Shown, setIsFeature1Shown ] = useState(true);
     const [ isFeature2Shown, setIsFeature2Shown ] = useState(false);
     const [ isFeature3Shown, setIsFeature3Shown ] = useState(false);
@@ -52,16 +52,16 @@ export default function Card ({ data }) {
             </div>
 <span className="my-auto"><strong>{data.title}</strong></span></div>
         {isFeature1Shown && (
-          <FeatureCard  data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
+            <FeatureCard data={ data.feature_data[0]}/>
           )}
         {isFeature2Shown && (
-     <FeatureCard data={{title:'Feature2',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
+            <FeatureCard data={ data.feature_data[1]}/> )}
          {isFeature3Shown && (
-       <FeatureCard data={{title:'Feature3',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
+            <FeatureCard data={ data.feature_data[2]}/> )}
          {isFeature4Shown && (
-       <FeatureCard data={{title:'Feature4',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
+            <FeatureCard data={ data.feature_data[3]}/> )}
          {isFeature5Shown && (
-                    <FeatureCard data={{ title: 'Feature5', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati', image: 'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url }} />)}
+                    <FeatureCard data={data.feature_data[4]} />)}
                 
 </ul>
  </>
