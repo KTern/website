@@ -1,6 +1,7 @@
 import Layout from "../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function technical_partner () {
     return (
         <Layout>

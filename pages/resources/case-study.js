@@ -13,7 +13,7 @@ export default function Landing () {
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col text-center items-center justify-center w-full h-full ">
                 <p className="inline-block px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    Case Study
+                    Customer Success Story
                 </p>
                     <h1 className="heading text-5xl text-black " >A comprehensive SAP S/4HANA Readiness Assessment using KTern </h1>
 
@@ -25,17 +25,73 @@ export default function Landing () {
             </section>
 
             <section>
-            <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0 overflow-hidden">
-                <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0">
+            <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0 overflow-hidden ">
+                <div className="w-full md:w-1/3 px-10 mb-4 md:mb-0">
 
                     <div className="flex flex-col mt-10 w-full mb-10 ">
-                    <div className="w-full mb-10  ">
+                    <div className="w-full md:mb-20 lg:mb-10  ">
                         <div className="relative h-full ml-5 mr-0 sm:mr-10">
-                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                            <div className="relative w-full h-full p-5 bg-white border-2 border-black rounded-lg">
+                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1  rounded-lg"></span>
+                            <div className="relative w-full h-full p-5 bg-white  rounded-lg">
                             <div className=" lg:block justify-end w-full pl-0 overflow-hidden ">
             <Image width={500} height={400} alt="hero" src="/resources/metus.jpeg" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="w-full mb-10  ">
+                        <div className="relative h-full ml-5 mr-0 sm:mr-10">
+                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
+                            <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
+                            <div className="flex items-center -mt-1">
+                                 <h3 className="my-2 ml-0 text-md font-bold text-gray-800 uppercase">KTern&apos;s Value</h3>
+                                 
+                                </div>
+                            
+                <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-300 hover:shadow-md">
+                                        <Link href="/products/digital-maps" passHref>
+                                        <a>
+                                        <div className="flex items-center" >
+                                            <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/Maps.png" height={30} width={30} alt="Digital Maps"/>
+                                            </span>
+                                            <p className="text-xs font-bold text-black hover:underline hover:shadow-sm ">Digital Maps</p>
+                                        </div>
+                                        </a>
+                                        </Link>
+                                        </div>
+
+                                        <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md hover:bg-gray-300 ">
+                                        <Link href="/products/digital-labs" passHref>
+                                        <a>
+                                        <div className="flex items-center">
+                                            <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/labs.png" height={30} width={30} alt="Digital Labs"/>
+                                            </span>
+                                            <p className="text-xs font-bold text-black hover:underline hover:shadow-sm">Digital Labs</p>
+                                        </div>
+                                        </a>
+                                        </Link>
+                                        </div>
+                                        <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md hover:bg-gray-300">
+                                        <Link href="/products/digital-projects" passHref>
+                                        <a>
+                                        <div className="flex items-center">
+                                            <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/projects.png" height={30} width={30} alt="Digital Projects"/>
+                                            </span>
+                                            <p className="text-xs font-bold text-black hover:shadow-sm hover:underline">Digital Projects</p>
+                                        </div>
+                                        </a>
+                                        </Link>
+                                        </div>
+
+
+
+
+
+                                        
                             </div>
 
                         </div>
@@ -103,11 +159,11 @@ export default function Landing () {
                 </div>
                     
                 
-                 <div className="w-full md:w-2/3 px-4 mb-4 md:mb-0">
-                 <div className="w-full mb-10 md:mt-10 sm:ml-2  mr-10 ">
+                 <div className="w-full md:w-2/3 px-10 mb-4 md:mb-0">
+                 <div className="w-full mb-10 md:mt-10 xl:mt-20 sm:ml-2  mr-10 ">
                         <div className="relative h-full ml-2 mr-0 sm:mr-10">
-                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                            <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
+                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1  rounded-lg"></span>
+                            <div className="relative h-full p-5 bg-white rounded-lg">
                                
                             <div className="grid grid-cols-3 gap-5 sm:grid-cols-12 md:grid-cols-12">
             <div className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50">

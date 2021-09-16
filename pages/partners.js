@@ -37,7 +37,7 @@ export default function Partners () {
 
             <section className="relative w-full bg-white">
             <div className="absolute w-full h-32 "></div>
-            <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
+            <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-10 md:px-10  max-w-7xl">
 
                 <h5 className="mb-3 text-2xl font-extrabold leading-none sm:text-4xl lg:text-4xl">
                     Our Partnership Opportunities
@@ -45,11 +45,11 @@ export default function Partners () {
                 <p className="py-5 mb-5 text-gray-600 lg:text-xl">
                 Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
-                <div className="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+                <div className=" grid h-auto grid-cols-12 gap-5 pb-10 mt-5 sm:mt-16">
                    <Link href="/consulting-partner"  passHref>
-                    <a className="relative border-2 border-black shadow-md flex flex-col items-start  h-full  overflow-hidden rounded-xl group md:col-span-6">
-                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/board-meeting.jpg')" }} />
-                    <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
+                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-full overflow-hidden rounded-xl group md:col-span-6">
+                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
+                    <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
                         <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
@@ -60,8 +60,8 @@ export default function Partners () {
 
                         <Link href="/technology-partner"  passHref>
                             <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
-                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/partner-hand.jpg')"}}/>
-                    <div className="relative z-20 w-full h-auto py-8 text-white bg-black border-t-0  px-7">
+                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
+                    <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
                         <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.

@@ -1,6 +1,7 @@
 import Layout from "../../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
+import heroimage from "/public/features/kternhero.png"
 export default function Features () {
     return (
         <Layout>
@@ -11,8 +12,8 @@ export default function Features () {
                     <p className="subheading text-gray-100 pb-7 pt-2">KTern&apos;s Digital Workplace takes care of your entire DX Transformation from Initial Assessment until your SAP System Goes Live and Beyond Offering Continuous, Constant, Automated Transformation</p>
                     <div className="flex flex-row">
                     
-                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black  font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Free Trial</a></Link>
+                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
                     </div>
                 </div>
 
@@ -38,7 +39,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill"/>
+                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
@@ -162,11 +163,20 @@ export default function Features () {
                         
 
 
-                        <div className="hidden w-1/3 lg:block">
-                <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
+                        <div className="hidden w-1/3  lg:block">
+                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                        <img src="/features/kternhero.png" className="object-cover w-full h-full transform" alt="KTern Hero" />
+                  
+  <Image
+    src={heroimage}
+    alt="KTern Hero Image"
+    width={1000}
+    height={600}
+    objectFit="cover" 
+  />
+
+
                     </div>
                 </div>
             </div>
@@ -193,7 +203,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill"/>
+                                                        <Image src="/assets/icons/Maps.png" alt="maps" layout="fill"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
@@ -321,8 +331,17 @@ export default function Features () {
                 <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                        <img src="/features/kternhero.png" className="object-cover w-full h-full transform" alt="KTern Hero" />
-                    </div>
+                  
+                  <Image
+                    src={heroimage}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
                 </div>
             </div>
 
@@ -348,7 +367,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill"/>
+                                                        <Image src="/assets/icons/Maps.png"  alt="maps" layout="fill"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
@@ -476,8 +495,17 @@ export default function Features () {
                 <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                        <img src="/features/kternhero.png" className="object-cover w-full h-full transform" alt="KTern Hero" />
-                    </div>
+                  
+                  <Image
+                    src={heroimage}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
                 </div>
             </div>
 
@@ -503,7 +531,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill"/>
+                                                        <Image src="/assets/icons/Maps.png" alt="maps"  layout="fill"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
@@ -631,8 +659,17 @@ export default function Features () {
                 <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                        <img src="/features/kternhero.png" className="object-cover w-full h-full transform" alt="KTern Hero" />
-                    </div>
+                  
+                  <Image
+                    src={heroimage}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
                 </div>
             </div>
 
@@ -658,7 +695,7 @@ export default function Features () {
                                         <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill"/>
+                                                        <Image src="/assets/icons/Maps.png" alt="maps " layout="fill"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape Assessment</h3>
                                             </div>
@@ -786,8 +823,17 @@ export default function Features () {
                 <div className="absolute w-full max-w-4xl pl-12 -mt-20 xl:-mt-32">
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                        <img src="/features/kternhero.png" className="object-cover w-full h-full transform" alt="KTern Hero" />
-                    </div>
+                  
+                  <Image
+                    src={heroimage}
+                    alt="Ktern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
                 </div>
             </div>
 
