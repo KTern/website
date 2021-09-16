@@ -31,6 +31,11 @@ export default function Header () {
     const [ isEbooksShown, setIsEbooksShown ] = useState(false);
     const [ isCaseShown, setIsCaseShown ] = useState(false);
     const [ isTrustShown, setIsTrustShown ] = useState(false);
+     const [ isPartnersShown, setIsPartnersShown ] = useState(true);
+    const [ isConsultingShown, setIsConsultingShown ] = useState(false);
+    const [ isTechnologyShown, setIsTechnologyShown ] = useState(false);
+    const [ isBecomeAPartnerShown, setIsBecomeAPartnerShown ] = useState(false);
+    const [ isPortalShown, setIsPortalShown ] = useState(false);
     return (
        <section className="container z-50 w-full">      
         {/* <!-- Desktop --> */}
@@ -148,11 +153,54 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                             </div>
                         </li>
                       
-                        <li className="hoverable hover:bg-secondary ">
-                    
-                            <Link href="/partners"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Partners</a></Link>
-                       
+                           <li className="hoverable hover:bg-secondary " >
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
+                            <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
+                                   <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
+                                        <h3 className="navbar-h text-black text-bold mb-2">Partners</h3>
+                                        <div >
+                                        <li>
+                                                    <Link href="/partners"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partners</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/consoluting-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Consulting Partners</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/technology-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(true);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Technology Partners</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/become-a-partner"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Become A Partner</a></Link>
+                                        </li>
+                                        <li>
+                                        <Link href="/"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(true);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}} 
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></Link>
+                                                </li>
+                                                 <li className="mt-4 mx-2">
+                         </li> 
+                                        </div>
+                                        </ul>
+                                        <div className="w-2/3">
+                                            {isPartnersShown && (
+                                            <FeatureCard data={{title:'Partner',description:'Partner 1 desc',url:'/partners',image:'/partner/partner-hand.jpg'} }/>
+                                            )}
+                                            {isConsultingShown && (
+                                            <FeatureCard data={{title:'Consulting Partner',description:'Consulting Partner desc',url:'/consulting-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                             {isTechnologyShown && (
+                                            <FeatureCard data={{title:'Technology Parter',description:'Technology Parter desc',url:'/technology-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                             {isBecomeAPartnerShown && (
+                                            <FeatureCard data={{title:'Become a Partner',description:'Become a Partner desc',url:'/become-a-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                             {isPortalShown && (
+                                            <FeatureCard data={{title:'Partner Portal',description:'Partner Portal desc',url:'/',image:'/partner/partner-hand.jpg'} }/> )}
+                                        </div>
+                                               </div>
+                            </div>
                         </li>
+                     
                         <li className="hoverable hover:bg-secondary ">
                         <Link href="/about-ktern" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Company</a></Link>
                         </li>
