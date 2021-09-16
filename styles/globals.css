@@ -76,28 +76,29 @@ video {
 
 .heading {
     font-family: myriad-pro, sans-serif;
-    font-weight: 700;
-    font-size: 60px;
+    font-weight: 500;
+    font-size: 48px;
     font-style: normal;
 }
 
 .subheading {
     font-family: 'Work Sans', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .tiny-heading {
     font-family: myriad-pro, sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .tiny-subheading {
     font-family: 'Work Sans', sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
@@ -106,16 +107,16 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 
 .navbar-h {
     font-family: myriad-pro, sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .navbar-s {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .vertical {
@@ -127,21 +128,29 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 
 .header {
     font-family: myriad-pro, sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .card-heading {
     font-family: myriad-pro, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .card-subheading {
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
+    font-weight: 400;
+}
+
+.button {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .container {

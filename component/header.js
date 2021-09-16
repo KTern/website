@@ -45,9 +45,9 @@ export default function Header () {
                 <div className="hidden lg:flex p-0">
                     <ul className=" flex space-x-2 xl:space-x-10">
                         <li className="hoverable hover:bg-secondary " onMouseLeave={()=>{setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase font-bold" >Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " >Products</label>
                             <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
-                                <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
+                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h text-black text-bold mb-2">Streams</h3>
                                         <div >
@@ -74,35 +74,35 @@ className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">
                                         </div>
                                     </ul>
                                             {isProjectShown && (
-                                            <Card data={{title:'Digital Projects',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects'} }/>
+                                            <Card data={{title:'Digital Projects',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>
                                             )}
                                             {isProcessShown && (
-                                            <Card data={{title:'Digital Process',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects'} }/>  )}
+                                            <Card data={{title:'Digital Process',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isMapsShown && (
-                                            <Card data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects'} }/>  )}
+                                            <Card data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isMinesShown && (
-                                            <Card data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects'} }/>  )}
+                                            <Card data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isLabsShown && (
-                                            <Card data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects'} }/> )}
+                                            <Card data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/> )}
                                    
                                                </div>
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold">Solutions</label>
+                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Solutions</label>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold">Resources</a></Link>
+                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Resources</a></Link>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase font-bold">Partners</a></Link>
+                        <Link href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Partners</a></Link>
                         </li>
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white font-bold rounded-l-xl uppercase header rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-l-xl button rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>
         </nav>
@@ -125,7 +125,7 @@ className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">
                     <ul>
                     <li className="toggleable hover:bg-secondary ">
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-heading font-bold" onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-heading " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -201,19 +201,19 @@ className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                         <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Resources</a></Link>
+                         <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Resources</a></Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Partners</a></Link>
+                        <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Partners</a></Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link htmlFor="toggle-one" href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading font-bold">Company</a></Link>
+                        <Link htmlFor="toggle-one" href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Company</a></Link>
                         </li>
                      </ul>
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase">Contact Sales</a></Link>
                 </div>
                 <div className="mt-auto">
 

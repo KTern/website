@@ -9,16 +9,25 @@ export default function Landing () {
                 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons' async='async'></script>
             </Head>
         <Layout>
-        <section className="py-20 w-full sm:py-20 md:pt-10 mt-10 bg-secondary" >
+        <section className="py-8 w-full sm:py-20 md:pt-10 mt-10 bg-secondary" >
             <div className="flex items-center px-12 mx-auto flex-row">
                 <div className="relative flex flex-col items-start justify-center w-full h-full lg:w-2/3">
+                <p className="inline-block px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                    E-book
+                </p>
                     <h1 className="heading">S/4HANA Journey Made Simple</h1>
                     <p className="subheading text-gray-500 pb-7">Digitally Transform to SAP S/4HANA From SAP ECC</p>
-                   
+
+                  <div className="relative">
+                                        <Link href="#downloadbook" passHref>
+                                            <a className="inline-block w-full px-5 py-2 text-xl font-medium text-center text-white transition duration-200 bg-black 
+                                            rounded-l-xl rounded-t-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download E-book</a>
+                                        </Link>
+                                    </div>    
                 </div>
 
                 <div className="hidden lg:block justify-end w-full pl-6 overflow-hidden md:w-1/3 md:pl-0">
-            <Image width={500} height={400} alt="hero" src="/resources/s4ebook.png" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
+            <Image width={500} height={500} alt="hero" src="/resources/s4ebook.png" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
 
                 
@@ -65,7 +74,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         </div>
             
                         <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
-                            <div className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
+                            <div id="downloadbook" className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
                                 <h4 className="w-full font-myriad-pro text-4xl font-medium leading-snug">Download E-Book</h4>
                                 <div className="relative w-full mt-6 space-y-8">
                                     <div className="relative">

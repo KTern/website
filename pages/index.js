@@ -74,7 +74,7 @@ export default function Home () {
                 <section className="relative items-center overflow-hidden w-full py-12 bg-white sm:py-16 md:py-20">
                     <svg className="absolute -mt-32 text-gray-300 transform scale-150 fill-current top-1/2" viewBox="0 0 197 31" xmlns="http://www.w3.org/2000/svg"><path d="M4.83 30.3c.945-.18 1.9-.307 2.86-.38.49-.07 1.07-.17 1.65-.28.58-.11 1.15-.18 1.61-.23.9-.11 1.8-.22 2.7-.3.9-.08 1.8-.19 2.71-.22 5.13-.26 10.31-.11 15.5.13l5.14.29h.54c2.35.14 4.72.27 7.09.35 1.34 0 4.64.13 4.94.14.5.06 3.49 0 4 0 .51 0 4.25-.17 5.24-.28 1.16 0 2.32-.09 3.47-.16 1.15-.07 2.61-.19 4.18-.36a41.33 41.33 0 004.21-.73c.84-.19 1.69-.32 2.53-.54l.35-.07c.55-.11 1.17-.28 1.8-.46a47.28 47.28 0 0019.46-10.06c1.84-1.69 3.61-3.24 5.6-3 .987.133 1.95.406 2.86.81l3.09 1.29 6.24 2.64c2 .81 3.34 1.23 6 2.33 1.17.46 3.39 1.3 4.59 1.64a57.05 57.05 0 005.65 1.29 39.75 39.75 0 0015.52-.14l2-.47c.66-.2 1.34-.36 2-.59a18 18 0 005.72-2.89 37.76 37.76 0 004.35-4c2.42-2.58 4.14-5.52 6.35-7.89A12.69 12.69 0 01177.65 4c.35.09.7.16 1.05.27l1 .38c.69.22 1.35.56 2 .8A23.72 23.72 0 01186.46 8c1.49 1 2.9 2.12 4.45 3.36 1.26 1 4.45 3.36 5.11 3.38.39 0 .3-.52.68-.55.85 0-.24-2.56-2-4a59 59 0 00-5.92-4.38 33.42 33.42 0 00-6.89-3.6A23.9 23.9 0 00175.75 1a17.23 17.23 0 00-6.69 1 20.69 20.69 0 00-2.39 1.1 13.51 13.51 0 00-2.16 1.59 28.46 28.46 0 00-3.5 3.83c-2.31 2.9-4.26 5.92-6.9 8.08a22.73 22.73 0 01-9.19 4.47 36.08 36.08 0 01-13.17.74c-6-.8-11.89-2.93-17.66-5.27l-8.7-3.54a15.35 15.35 0 00-4.92-1.38 6.78 6.78 0 00-2.83.48c-.83.341-1.61.792-2.32 1.34-1.37 1-2.45 2.11-3.65 3A40.1 40.1 0 0187.96 19a38.51 38.51 0 01-10.25 4.61l-.6.15h-.1c-1.85.51-4 1.07-5.87 1.48a79.21 79.21 0 01-11.79 1.41c-4.55.21-9.19.32-13.68.16-8.49-.29-17-1-25.65-.9a91.5 91.5 0 00-14.28.63 17.59 17.59 0 00-3.46.91 17.08 17.08 0 00-1.68.67.67.67 0 00-.35.9 2.6 2.6 0 001.62 1.13c.96.29 1.976.34 2.96.15z" fillRule="nonzero"></path></svg>
                     <div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
-                        <h2 className="mx-auto text-4xl font-bold md:text-5xl">KTern&apos;s Digital Streams</h2>
+                        <h2 className="mx-auto text-4xl font-bold md:text-5xl">KTern.AI Digital Streams</h2>
                         <p className="max-w-lg mt-5 text-lg text-gray-600 md:mx-auto">Our Digital Workplace Comes with 5 Streams to make your Digital Transformation Clean and Simple</p>
                     </div>
                     <div className="relative grid gap-8 px-10 mx-auto md:grid-cols-2 xl:grid-cols-5 max-w-full">
@@ -85,6 +85,9 @@ export default function Home () {
                         {/* <!-- Digital Maps --> */}
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
+                                            </span>
                             <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Maps </span></h3>
                                 <p className="mt-4 text-sm text-gray-700">Build your Business Case for SAP Digital Transformation with KTern’s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -124,6 +127,9 @@ export default function Home () {
                     {/* <!-- Digital Projects --> */}
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/projects.png"alt="Digital Projects" height={30} width={30}/>
+                                            </span>
                             <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Projects </span></h3>
                                 <p className="mt-4 text-sm text-gray-700">Gain ultimate control of your SAP projects and teams with KTern&apos;s Digital projects</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -164,6 +170,9 @@ export default function Home () {
                         {/* <!-- Digital Process  --> */}
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/Process.svg"alt="Digital Process" height={30} width={30}/>
+                                            </span>
                             <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Process </span></h3>
                                 <p className="mt-4 text-sm text-gray-700">Create a Digital Footprint and optimize your processes with KTern&apos;s Digital Process</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -201,6 +210,9 @@ export default function Home () {
                         {/*<!-- Digital Labs --> */}
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/labs.png"alt="Digital Lab" height={30} width={30}/>
+                                            </span>
                             <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Labs </span></h3>
                                 <p className="mt-4 text-sm text-gray-700">Automate your Testing for modern Enterprises with KTern&apos;s  driven Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -241,6 +253,9 @@ export default function Home () {
                     {/*<!-- Digital Mines --> */}
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+                            <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
+                                            <Image src="/assets/icons/mines.png"alt="Digital Mines" height={30} width={30}/>
+                                            </span>
                             <h3 className="text-2xl font-bold">Digital<span className="inline xl:block"> Mines </span></h3>
                                 <p className="mt-4 text-sm text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Mines</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>

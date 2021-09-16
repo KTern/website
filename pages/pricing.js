@@ -290,10 +290,10 @@ export default function Pricing () {
                     <svg className="w-40 h-40 sm:w-48 sm:h-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 41"><defs></defs><defs><linearGradient x1="50%" x2="108.006%" y1="44.344%" y2="62.397%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient><linearGradient x1="50%" x2="108.006%" y1="48.828%" y2="52.569%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient><linearGradient x1="50%" x2="108.006%" y1="48.935%" y2="52.335%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient></defs><g fill="none" fillRule="nonzero"><path fill="url(#a)" d="M42.82.11c11.81.69 23.5 6.44 30.55 16.05A480.23 480.23 0 012.31 23.9C8.54 8 26.24-1.12 42.82.11z"></path><path fill="url(#b)" d="M78.73 26.87c-13.7 1.8-27.46 3-41.23 4.1-12.44.65-24.87 1.42-37.33 1.33A33 33 0 01.71 29c11.86-.44 23.66-1.65 35.47-2.67C49.5 24.54 62.84 23 76 20.28"></path><path fill="url(#c)" d="M80 38.27C53.57 41.54 26.83 41.13.24 40.44 0 39.75.2 38.91 0 38.29v-2c26.56-.52 79.11-8.39 79.35-6.85"></path></g></svg>
 
                     <div className="relative w-full">
-                        <h2 className="text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading bg-clip-text bg-gradient-to-br from-black via-gray-750 to-white">
+                        <h2 className="text-4xl font-bold  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading  text-black">
                             KTern&apos;s Digital Streams
                         </h2>
-                        <p className="mt-3 text-base leading-6 text-gray-600 sm:text-lg md:text-xl">
+                        <p className="mt-4 text-base leading-6 text-gray-600 sm:text-lg md:text-xl">
                             The Cognitive Digital Workplace for SAP Transformation&apos;s
                         </p>
                     </div>
@@ -367,7 +367,7 @@ export default function Pricing () {
                 <div className="flex flex-wrap justify-center -mx-10 mb-20">
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div>
-                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/mitsubishi.png" alt=""/></div>
+                        
                                     <Link  href="/" passHref>
                                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
                                             <h3 className="mb-2 text-2xl text-black font-bold font-heading">70% SAP Cost Saved</h3>
@@ -383,7 +383,7 @@ export default function Pricing () {
                     </div>
                     <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                     <div className="lg:mt-24">
-                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/asmnew.png" alt=""/></div>
+                        
                                     <Link  href="#" passHref>
                                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
                                             <h3 className="mb-2 text-2xl text-gray-600 font-bold font-heading">30% Automated Results</h3>
@@ -399,7 +399,7 @@ export default function Pricing () {
                     </div>
                     <div className="w-full lg:w-1/3 px-10">
                     <div>
-                        <div className="mb-8 w-full h-112 lg:h-80 object-cover object-top"><Image height={400} width={300} src="/pricing/aramconew.png" alt=""/></div>
+                        
                                     <Link  href="#" passHref>
                                         <a className="inline-block w-full p-10 bg-white hover:bg-gray-100 rounded-lg transition duration-200">
                                             <h3 className="mb-2 text-2xl text-black font-bold font-heading">20% Automated Testing</h3>
@@ -429,15 +429,21 @@ export default function Pricing () {
                     <table className="table-auto w-full mb-10">
                     <thead>
                         <tr className="text-lg text-left font-bold ">
-                            <th className="sticky top-0 pb-20"> 
+                            <th className="sticky top-16 pb-20 bg-gray-100"> 
                             
+                            <div className="relative justif-self-end pt-10">
+                        <h2 className="text-2xl font-black text-gray-800 text-center">Features</h2>
+                        
+                    </div>
                                 </th>
                             <th className=" sticky top-16 pb-6 pr-8 bg-gray-100">
-                                <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-black to-white"></div>
-                                <div>
-                                <div className="flex items-center justify-between text-gray-200 py-10">
-                
+                                <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-maps-primary to-maps-secondary"></div>
+                                <div className="">
+                               
+                                <div className="flex items-center justify-between text-gray-200 py-10 b">
+                                    
                                     <div className="relative justif-self-end mr-2 ">
+                                        
                                         <h2 className="text-lg font-black text-black">Digital</h2>
                                         <p className="text-xs font-medium text-black uppercase">Maps</p>
                                     </div>
@@ -448,8 +454,8 @@ export default function Pricing () {
                                     
                                     
                                 </div>
-                                <div className="w-full absolute bottom-0 ">
-                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+                                <div className="w-full absolute bottom-0 text-center">
+                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300  rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
@@ -459,7 +465,7 @@ export default function Pricing () {
                                 </div>
                             </th>
                             <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> 
-                                <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-black to-white"></div>
+                                <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-process-primary to-process-secondary"></div>
                                 <div>
                                 <div className="flex items-center justify-between text-gray-200">
                 
@@ -474,8 +480,8 @@ export default function Pricing () {
                                     
                                     
                                 </div>
-                                <div className="w-full absolute bottom-0">
-                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+                                <div className="w-full absolute bottom-0 text-center">
+                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300  rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
@@ -484,7 +490,7 @@ export default function Pricing () {
                                 </div>
                                 </div>
                             </th>
-                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-black to-white"></div>
+                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-project-primary to-project-secondary"></div>
                                 <div>
                                 <div className="flex items-center justify-between text-gray-200">
                 
@@ -499,8 +505,8 @@ export default function Pricing () {
                                     
                                     
                                 </div>
-                                <div className="w-full absolute bottom-0">
-                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+                                <div className="w-full absolute bottom-0 text-center">
+                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300  rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
@@ -508,7 +514,7 @@ export default function Pricing () {
                                 
                                 </div>
                                 </div></th>
-                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-black to-white"></div>
+                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-labs-primary to-labs-secondary"></div>
                                 <div>
                                 <div className="flex items-center justify-between text-gray-200">
                 
@@ -523,8 +529,8 @@ export default function Pricing () {
                                     
                                     
                                 </div>
-                                <div className="w-full absolute bottom-0">
-                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+                                <div className="w-full absolute bottom-0 text-center">
+                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300  rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
@@ -532,7 +538,7 @@ export default function Pricing () {
                                 
                                 </div>
                                 </div></th>
-                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-black to-white"></div>
+                            <th className="sticky top-16 pb-6 pr-8 bg-gray-100"> <div className="top-0 absolute w-full h-2 bg-gradient-to-r from-mines-primary to-mines-secondary"></div>
                                 <div>
                                 <div className="flex items-center justify-between text-gray-200">
                 
@@ -547,8 +553,8 @@ export default function Pricing () {
                                     
                                     
                                 </div>
-                                <div className="w-full absolute bottom-0">
-                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+                                <div className="w-full absolute bottom-0 text-center">
+                                    <button className="inline-flex items-center justify-center  px-4 py-2  text-xs font-medium  text-gray-600 whitespace-no-wrap bg-white border border-gray-300  rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
                                         Contact Sales
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>

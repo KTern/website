@@ -35,7 +35,7 @@ export default function Card ({ data }) {
                 </li>
                     <li className="mt-4 mx-2">
                         <Link href={data.url} passHref>
-                 <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                  <span className="tiny-heading group-hover:text-gray-400">See All Features</span>
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -45,10 +45,14 @@ export default function Card ({ data }) {
             </div>
          
             </ul>
-            <ul className="bg-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3">
-                {data.title}
+            <ul className={data.class}>
+          <div className="flex">  
+          <div className=" mx-6 relative w-8 h-8">
+            <Image src={data.icon} layout="fill" alt="Digital Maps Icon" />
+            </div>
+<span className="my-auto"><strong>{data.title}</strong></span></div>
         {isFeature1Shown && (
-          <FeatureCard data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
+          <FeatureCard  data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
           )}
         {isFeature2Shown && (
      <FeatureCard data={{title:'Feature2',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}
