@@ -30,7 +30,7 @@ export default function Features () {
              <section className="relative w-full py-12 overflow-hidden bg-white md:py-20  xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Maps</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
 
@@ -197,7 +197,7 @@ export default function Features () {
               <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Projects</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Projects Provides you with <br />Automated Enterprise Project Execution</p>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern&apos;s Digital Projects Provides you with <br />Automated Enterprise Project Execution</p>
 
                     <div className="flex w-full h-full">
 
@@ -217,7 +217,7 @@ export default function Features () {
                                                 <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Cutover Orchestrator</h3>
                                             </div>
                                             <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>
-                                            <p className="mb-2 text-md text-gray-600">Risk-free, Transparent Go-Live with KTern's Cutover Orchestration.
+                                            <p className="mb-2 text-md text-gray-600">Risk-free, Transparent Go-Live with KTern&apos;s Cutover Orchestration.
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -364,7 +364,7 @@ export default function Features () {
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Process</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">Using KTern’s Digital Process  Manage <br />all your Business Processes Better.</p>
+                    <p className="mb-12 card-subheading text-md text-gray-500">Using KTern&apos;s Digital Process  Manage <br />all your Business Processes Better.</p>
 
                     <div className="flex w-full h-full">
 
@@ -531,7 +531,7 @@ export default function Features () {
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Labs</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Labs Automates and enables  <br /> Continous SAP Enterprise Testing. </p>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern&apos;s Digital Labs Automates and enables  <br /> Continous SAP Enterprise Testing. </p>
 
                     <div className="flex w-full h-full">
 
@@ -583,7 +583,7 @@ export default function Features () {
                                             <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Autonomous Test Console</h3>
                                             </div>
                                             <p className="mt-3 mb-1 tiny-subheading font-bold text-labs-primary uppercase">Digital Labs</p>                                       
-                                                 <p className="mb-2 text-md text-gray-600">Customize and Drive your Enterprise's Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
+                                                 <p className="mb-2 text-md text-gray-600">Customize and Drive your Enterprise&apos;s Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -699,7 +699,7 @@ export default function Features () {
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Mines</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
 
