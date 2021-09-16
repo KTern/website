@@ -18,7 +18,7 @@ export default function Partners () {
                     <span className="font-bold subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <Link  href="/become-a-partner" passHref><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
+                   <Link  href="/become-a-partner" passHref><a className=" mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl tiny-heading rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
                     <Link href=""  passHref>
                         <a className="inline-flex items-center tiny-heading uppercase text-gray-400 underline transition-colors duration-200 ">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -45,9 +45,9 @@ export default function Partners () {
                 <p className="py-5 mb-5 text-gray-600 lg:text-xl">
                 Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
-                <div className=" grid h-auto grid-cols-12 gap-5 pb-10 mt-5 sm:mt-16">
+                <div className="grid h-auto grid-cols-12 gap-5 pb-10 mt-5 sm:mt-16 ">
                    <Link href="/consulting-partner"  passHref>
-                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-full overflow-hidden rounded-xl group md:col-span-6">
+                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-full overflow-hidden rounded-xl group sm:col-span-12 md:col-span-6">
                             <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
@@ -59,12 +59,12 @@ export default function Partners () {
                 </Link>
 
                         <Link href="/technology-partner"  passHref>
-                            <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl md:col-span-6 border-2 border-black shadow-md">
+                            <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl sm:col-span-12 md:col-span-6 border-2 border-black shadow-md">
                     <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
-                        <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
+                        <p className="mb-2 card-subheading  font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
                     </a>
@@ -93,7 +93,7 @@ export default function Partners () {
              
             {/* <!--Faq Section--> */}
             <section className="py-20">
-                    <div className="container mx-auto w-1/2 flex-col space-y-4">
+                    <div className=" container mx-auto w-1/2 flex-col space-y-4">
                         <h2 className="mb-2 text-xl font-bold text-center md:text-3xl mb-10">Frequently Asked Questions</h2>
                     <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
                         <summary  className="font-bold flex items-center justify-between text-lg font-medium text-gray-700 cursor-pointer sm:text-xl px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
@@ -131,7 +131,7 @@ export default function Partners () {
 
                         </div>
                 </details>
-
+               
                 
                 </div>
             </section>

@@ -344,71 +344,6 @@ export default function Digital_Labs () {
             </div>
             {/* /Bots Section */}
             {/* Testimonial Section */}
-           <section >
-                <div className="p-10 md:p-20 bg-secondary radius-for-skewed">
-                    <div className="container  px-4 mx-auto">
-                    <div className="lg:flex shadow-2xl bg-white items-center justify-center md:space-x-8">
-                        {/* <div className="mb-10 text-center lg:hidden">
-                        <button className="mr-6 lg:mr-0 bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                            </svg>
-                        </button>
-                        <button className="bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </button>
-                        </div>
-                        <button className="hidden lg:block lg:mr-0 bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                        </button> */}
-                        <div className="flex w-full flex-wrap bg-white shadow rounded">
-                        <div className="md:py-10 text-center w-full lg:w-1/3 border-r">
-                            <span className="text-5xl lg:text-6xl font-bold">4.7</span>
-                            <div className="mb-6 lg:mb-12 flex text-black justify-center">
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            </div>
-                            <div>
-                            <Link href="https://www.g2.com/products/ktern/reviews" target="_blank" passHref>
-                                <a><div className="block mx-auto w-20 h-20 relative"><Image layout="fill" src="/assets/g2logo.png" alt=""/></div></a>
-                            </Link>
-                            </div>
-                        </div>
-                        <div className="md:py-10 px-6 w-full lg:w-2/3">
-                            <div className="mb-10 w-10 h-10 relative"><Image layout="fill" src="/atis-assets/elements/left-quote.png" alt=""/></div>
-                            <p className="mb-10 lg:text-2xl leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
-                            <h4 className="text-2xl font-bold card-heading">Jim W</h4>
-                            <p className="text-gray-400">Partner</p>
-                        </div>
-                        </div>
-                        {/* <button className="hidden lg:block bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                        </button> */}
-                    </div>
-                    </div>
-                </div>
-           </section>
-             {/* /Testimonial Section */}
-            {/* Resources Section */}
             <section className="w-full py-8 bg-white sm:py-12 md:py-16">
             <div className="px-10 mx-auto max-w-7xl">
                 <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
@@ -422,39 +357,178 @@ export default function Digital_Labs () {
                 </div>
 
                 <div className="grid grid-cols-12 gap-6">
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
                         <Link href="#_" passHref>
                         <a className="relative block w-full h-64 overflow-hidden rounded">        
-                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="resource" layout="fill"/>
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
                         </a>    
                         </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">SAP S/4HANA Testing using KTern’s Digital Labs: The Beginner’s Guide </a></Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
                     </div>
 
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
+
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
                         <Link href="#_" passHref>
-                            <a  className="relative block w-full h-64 overflow-hidden rounded">
-                                    <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png" alt="resource" layout="fill"/>
-                            </a>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
+                        </a>    
                         </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Creating Test Sign-offs using KTern Digital Labs</a></Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a Project Manager in SAP S/4HANA Conversion  </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
                     </div>
 
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
                         <Link href="#_" passHref>
-                            <a  className="relative block w-full h-64 overflow-hidden rounded">
-                                    <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg" alt="resource" layout="fill"/>
-                            </a>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                        </a>    
                         </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The ultimate SAP Tester&apos;s Guide - 2021</a></Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
                     </div>
-                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                  </div>
                 </div>
                 </section>
-            {/* / Resources Setion */}
+           
+             {/* /Testimonial Section */}
+            {/* Resources Section */}
+            <section className="w-full py-8 bg-white sm:py-12 md:py-16">
+            <div className="px-10 mx-auto max-w-7xl">
+                <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
+                    <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
+                            <Link href="#_" passHref>
+                                <a className="flex items-center text-base font-semibold text-labs-primary hover:text-labs-secondary group">
+                        <span className="tiny-heading">View More Posts</span>
+                        <svg className="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </Link>
+                </div>
+
+                <div className="grid grid-cols-12 gap-6">
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/labs/labs_1.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP S/4HANA Testing using KTern’s Digital Labs: The Beginner’s Guide</a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-labs-primary hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-labs-secondary pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/labs/labs_2.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Creating Test Sign-offs using KTern Digital Labs </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-labs-primary hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-labs-secondary pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/labs/labs_3.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The ultimate SAP Tester&apos;s Guide - 2021 </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-labs-primary hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-labs-secondary pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                  </div>
+                </div>
+                </section>
+          
+
+
+
+
+ {/* / Resources Setion */}
             {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">

@@ -1,7 +1,13 @@
 import Layout from "../../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
-import heroimage from "/public/features/kternhero.png"
+import digitalmaps from "/public/features/digital-maps-screenshot.png"
+import digitallabs from "/public/features/digital-labs-screenshot.png"
+import digitalprojects from "/public/features/digital-projects-screenshot.png"
+import digitalprocess from "/public/features/digital-process-screenshot.png"
+import digitalmines from "/public/features/digital-mines-screenshot.png"
+
+
 export default function Features () {
     return (
         <Layout>
@@ -21,9 +27,9 @@ export default function Features () {
             </div>
             </section>
 
-             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
+             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20  xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -35,16 +41,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
                                                         <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                                     </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Landscape <br /> Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>
-                                            <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-maps-primary uppercase">Digital maps</p>
+                                            <p className="mb-2 text-md text-gray-600">Gain detailed information about your SAP System. 
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -67,15 +73,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full md:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+                                            <div className="relative w-8 h-8">
+                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+                                                    </div>
+                                            <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Business Process Assessment</h3>
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Assessment</h3>
-                                            </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-maps-primary uppercase">Digital maps</p>                                         
+                                               <p className="mb-2 text-md text-gray-600">Understand how each process in your current system is getting affected.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -100,15 +107,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                            <div className="relative w-8 h-8">
+                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+                                                    </div>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Custom Object Assessment</h3>
                                             </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business  Assessment</h3>
-                                            </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-maps-primary uppercase">Digital maps</p>                                           
+                                             <p className="mb-2 text-md text-gray-600">Automate the entire process of SAP Custom Object Analytics.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 p">
@@ -130,16 +138,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full md:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
+                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
+                                            <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
-                                                </div>
+                                                <div className="relative w-8 h-8">
+                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+                                                    </div>
 
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800"> Transformation <br /> Assessment</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                                <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
+                                                <p className="mt-3 mb-1 tiny-subheading font-bold text-maps-primary uppercase">Digital maps</p>                                              
+                                                  <p className="mb-2 text-md text-gray-600">Get Complete Business Process Mapping at upto 6 Granular Levels</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -169,7 +178,7 @@ export default function Features () {
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
   <Image
-    src={heroimage}
+    src={digitalmaps}
     alt="KTern Hero Image"
     width={1000}
     height={600}
@@ -187,8 +196,8 @@ export default function Features () {
             </section>
               <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Projects</h2>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Projects Provides you with <br />Automated Enterprise Project Execution</p>
 
                     <div className="flex w-full h-full">
 
@@ -199,16 +208,23 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
+<<<<<<< HEAD
                                                     <div className="relative w-8 h-8">
                                                         <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
+=======
+                                                <div className="w-8 h-8 relative" >
+                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>
-                                            <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Cutover Orchestrator</h3>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
+                                            </div>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>
+                                            <p className="mb-2 text-md text-gray-600">Risk-free, Transparent Go-Live with KTern's Cutover Orchestration.
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -231,15 +247,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full md:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+                                            <div className="w-8 h-8 relative" >
+                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Assessment</h3>
+                                            <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Workflow Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>                     
+                                                                   <p className="mb-2 text-md text-gray-600">Customize your own Workflow using KTern&apos;s Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -264,15 +281,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                                 <div className="w-8 h-8 relative" >
                                             <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
                                             </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business  Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Timeline Simulator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>                                          
+                                              <p className="mb-2 text-md text-gray-600">Set, Simulate, Auto-Track and Gain Insights on your Project Timeline. </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 p">
@@ -294,16 +312,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full md:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
+                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
+                                            <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
-                                                </div>
+                                                <div className="w-8 h-8 relative" >
+                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                            </div>
 
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Collaboration Forum</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                                <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
+                                                <p className="mt-3 mb-1 tiny-subheading font-bold text-project-primary uppercase">Digital Projects</p>                                               
+                                                 <p className="mb-2 text-md text-gray-600">Organized Management of your SAP Project Files, Documents, Communication .</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -332,6 +351,7 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
+<<<<<<< HEAD
   <Image
     src={heroimage}
     alt="KTern Hero Image"
@@ -342,6 +362,18 @@ export default function Features () {
 
 
                     </div>
+=======
+                  <Image
+                    src={digitalprojects}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -351,8 +383,8 @@ export default function Features () {
             </section>
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Process</h2>
+                    <p className="mb-12 card-subheading text-md text-gray-500">Using KTern’s Digital Process  Manage <br />all your Business Processes Better.</p>
 
                     <div className="flex w-full h-full">
 
@@ -363,16 +395,23 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
+<<<<<<< HEAD
                                                     <div className="relative w-8 h-8">
                                                         <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
+=======
+                                                <div className="w-8 h-8 relative">
+                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>
-                                            <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Process Orchestrator</h3>
+                                            </div>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-process-primary uppercase">Digital Process</p>
+                                            <p className="mb-2 text-md text-gray-600">Model, implement, integrate, and monitor custom process applications and integration scenarios
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -395,15 +434,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full md:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                             <div className="w-8 h-8 relative">
                                             <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Assessment</h3>
+                                            <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Custom Code Remediation</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-process-primary uppercase">Digital Process</p>                                    
+                                                    <p className="mb-2 text-md text-gray-600">Automated Analysis and Remediation of your Custom Code </p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -428,15 +468,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                            <div className="w-8 h-8 relative">
+                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
                                             </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business  Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">BPML Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-process-primary uppercase">Digital Process</p>                                    
+                                                    <p className="mb-2 text-md text-gray-600">Map your Complex Business Processes, Process Groups and Process Steps </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 p">
@@ -458,16 +499,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full md:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
+                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
+                                            <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
-                                                </div>
+                                                <div className="w-8 h-8 relative">
+                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+                                            </div>
 
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Training Academy</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                                <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
+                                                <p className="mt-3 mb-1 tiny-subheading font-bold text-process-primary uppercase">Digital Process</p>                                               
+                                                 <p className="mb-2 text-md text-gray-600">Automatic Training Scenario Recommendations based on changes made to Business Processes</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -496,6 +538,7 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
+<<<<<<< HEAD
   <Image
     src={heroimage}
     alt="KTern Hero Image"
@@ -506,6 +549,18 @@ export default function Features () {
 
 
                     </div>
+=======
+                  <Image
+                    src={digitalprocess}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -515,8 +570,8 @@ export default function Features () {
             </section>
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
-                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Labs</h2>
+                    <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Labs Automates and enables  <br /> Continous SAP Enterprise Testing. </p>
 
                     <div className="flex w-full h-full">
 
@@ -527,16 +582,20 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
+<<<<<<< HEAD
                                                         <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+=======
+                                                        <Image src="/assets/icons/labs.png" alt="labs"  layout="fill"/>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                                     </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">SAP Test Case Finder</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>
-                                            <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-labs-primary uppercase">Digital Labs</p>
+                                            <p className="mb-2 text-md text-gray-600"> Automated, Continuous Test case Generator for Modern Enterprises  
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -559,15 +618,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full md:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                             <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+                                            <Image src="/assets/icons/labs.png" alt="labs" layout="fill"/>
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Assessment</h3>
+                                            <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Autonomous Test Console</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-labs-primary uppercase">Digital Labs</p>                                       
+                                                 <p className="mb-2 text-md text-gray-600">Customize and Drive your Enterprise's Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -592,15 +652,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                                 <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                            <Image src="/assets/icons/labs.png" alt="labs" layout="fill"/>
                                             </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business  Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Defect Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-labs-primary uppercase">Digital Labs</p>                                         
+                                            
+                                               <p className="mb-2 text-md text-gray-600">Raise and Manage Defects and Issues that Might Raise during your Testing.  </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 p">
@@ -622,16 +684,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full md:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
+                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
+                                            <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
+                                                <Image src="/assets/icons/labs.png"  alt="labs" layout="fill"/>
                                                 </div>
 
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Intelligent Reports</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                                <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
+                                                <p className="mt-3 mb-1 tiny-subheading font-bold text-labs-primary uppercase">Digital Labs</p>                                               
+                                                 <p className="mb-2 text-md text-gray-600">Generate,Customize and Share Detailed Testing Analysis Reports.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -660,6 +723,7 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
+<<<<<<< HEAD
   <Image
     src={heroimage}
     alt="KTern Hero Image"
@@ -670,6 +734,18 @@ export default function Features () {
 
 
                     </div>
+=======
+                  <Image
+                    src={digitallabs}
+                    alt="KTern Hero Image"
+                    width={1000}
+                    height={600}
+                    objectFit="cover" 
+                  />
+                
+                
+                                    </div>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                 </div>
             </div>
 
@@ -679,7 +755,7 @@ export default function Features () {
             </section>
            <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading font-bold leading-tight text-gray-900">Digital Mines</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -691,16 +767,20 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-500 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-yellow-500 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="relative w-8 h-8">
+<<<<<<< HEAD
                                                         <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+=======
+                                                        <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                                                     </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Process Mining Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>
-                                            <p className="mb-2 text-md text-gray-600">Landscape Assessment gives detailed information of the type of SAP system connected to KTern. 
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-mines-primary uppercase">Digital Mines</p>
+                                            <p className="mb-2 text-md text-gray-600">Discover and Improve Hidden Potential in your existing Business Processes.
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -723,15 +803,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects"  passHref>
                                     <a className="w-full md:w-1/2 ">
                                     <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                             <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
+                                            <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Assessment</h3>
+                                            <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">Process Optimizer</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Business Process Assessment gives you a proper understanding of each process is getting affected</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-mines-primary uppercase">Digital mines</p>                                          
+                                              <p className="mb-2 text-md text-gray-600">Run your Processes aligned to Best practices, continuously Improving with Changing Demands.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -756,15 +837,16 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full mb-10 md:mb-0 md:w-1/2">
                                     <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
+                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
                                             <div className="flex items-center -mt-1">
                                                 <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                            <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
                                             </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business  Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">ROI Estimator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                            <p className="mb-2 text-md text-gray-600">Collaborating with members of your team couldn&apos;t be easier.</p>
+                                            <p className="mt-3 mb-1 tiny-subheading font-bold text-mines-primary uppercase">Digital mines</p>                                        
+                                                <p className="mb-2 text-md text-gray-600">Recieve an Estimate how much Savings and ROI your Company could generate from your Transformation Investment.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 p">
@@ -786,16 +868,17 @@ export default function Features () {
                                 <Link href="/features/digital-projects" passHref>
                                     <a className="w-full md:w-1/2">
                                         <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-gray-500 rounded-lg">
+                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
+                                            <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
                                                 <div className="flex items-center -mt-1">
                                                     <div className="w-8 h-8 relative">
                                                 <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
                                                 </div>
 
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Assessment</h3>
+                                                <h3 className="my-2 ml-3 card-subheading font-bold text-gray-800">SAP Business-Ops Cockpit</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-indigo-500 uppercase">Digital maps</p>                                                <p className="mb-2 text-md text-gray-600">Our automation tools will help you build and grow your marketing empire.</p>
+                                                <p className="mt-3 mb-1 tiny-subheading font-bold text-mines-primary uppercase">Digital mines</p>                                              
+                                                  <p className="mb-2 text-md text-gray-600">Gain real time Business Intelligence and Respond quickly.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group bottom-0 ">
@@ -824,9 +907,15 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
+<<<<<<< HEAD
                 <Image
                     src={heroimage}
                     alt="KTern Hero Image"
+=======
+                  <Image
+                    src={digitalmines}
+                    alt="Ktern Hero Image"
+>>>>>>> c16b5dc594e89e059420c2a260d68bce149dd184
                     width={1000}
                     height={600}
                     objectFit="cover" 
