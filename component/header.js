@@ -2,6 +2,7 @@ import Card from "./card1"
 import Image from "next/image";
 import Link from "next/link";
 import Card1 from "./card"
+import FeatureCard from "./featureCard";
 import React, { useState } from 'react';
 function openNav () {
     if (process.browser) {
@@ -25,7 +26,11 @@ export default function Header () {
     const [ isMapsShown, setIsMapsShown ] = useState(false);
     const [ isMinesShown, setIsMinesShown ] = useState(false);
     const [ isLabsShown, setIsLabsShown ] = useState(false);
-    
+    const [ isWebinarsShown, setIsWebinarsShown ] = useState(true);
+    const [ isArticlesShown, setIsArticlesShown ] = useState(false);
+    const [ isEbooksShown, setIsEbooksShown ] = useState(false);
+    const [ isCaseShown, setIsCaseShown ] = useState(false);
+    const [ isTrustShown, setIsTrustShown ] = useState(false);
     return (
        <section className="container z-50 w-full">      
         {/* <!-- Desktop --> */}
@@ -53,44 +58,96 @@ export default function Header () {
                                         <div >
                                         <li>
                                                     <Link href="/products/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
-                                         className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">Digital Projects</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Projects</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/products/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">Digital Process</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Process</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/products/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">Digital Maps</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Maps</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/products/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
-                                                        className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">Digital Mines</a></Link>
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Mines</a></Link>
                                         </li>
                                         <li>
                                         <Link href="/products/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
-className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">Digital Labs</a></Link>
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Link>
                                         </li>
                                         </div>
                                     </ul>
                                             {isProjectShown && (
-                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>
+                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
                                             )}
                                             {isProcessShown && (
-                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
                                              {isMapsShown && (
-                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
                                              {isMinesShown && (
-                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
                                              {isLabsShown && (
-                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/> )}
+                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
                                    
                                                </div>
                             </div>
                         </li>
-                        <li className="hoverable hover:bg-secondary ">
-                        <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Resources</a></Link>
+                          <li className="hoverable hover:bg-secondary " >
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
+                            <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
+                                   <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
+                                        <h3 className="navbar-h text-black text-bold mb-2">Resources</h3>
+                                        <div >
+                                        <li>
+                                                    <Link href="/webinars"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/"    ><a onMouseEnter={()=>{setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/resources/ebook"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(true);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Ebooks</a></Link>
+                                        </li>
+                                        <li>
+                                                    <Link href="/resources/case-study"   ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(true);setIsWebinarsShown(false)}}
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Case study</a></Link>
+                                        </li>
+                                        <li>
+                                        <Link href="/trust-center"   ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(true);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}} 
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Link>
+                                                </li>
+                                                 <li className="mt-4 mx-2">
+                        <Link href='/resources' passHref>
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
+                 <span className="tiny-heading group-hover:text-gray-400">See All Resources</span>
+                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                 </svg>
+                 </a>
+             </Link> </li> 
+                                        </div>
+                                        </ul>
+                                        <div className="w-2/3">
+                                            {isWebinarsShown && (
+                                            <FeatureCard data={{title:'Webinar',description:'Webinar 1 desc',url:'/webinars/webinar-1',image:'/product/projects/project_team_3.svg'} }/>
+                                            )}
+                                            {isArticlesShown && (
+                                            <FeatureCard data={{title:'Article',description:'Article 1 desc',url:'',image:'/product/process/process_1.svg'} }/>  )}
+                                             {isEbooksShown && (
+                                            <FeatureCard data={{title:'Ebook',description:'Ebook 1 desc',url:'/resources/ebook',image:'/product/maps/maps_1.svg'} }/>  )}
+                                             {isCaseShown && (
+                                            <FeatureCard data={{title:'Case Study',description:'Case Study 1 desc',url:'/resources/case-study',image:'/product/mines/mines_1.svg'} }/>  )}
+                                             {isTrustShown && (
+                                            <FeatureCard data={{title:'Trust Center',description:'Trust Center 1 desc',url:'/trust-center',image:'/product/labs/labs_1.svg'} }/> )}
+                                        </div>
+                                               </div>
+                            </div>
                         </li>
+                      
                         <li className="hoverable hover:bg-secondary ">
                     
                             <Link href="/partners"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Partners</a></Link>

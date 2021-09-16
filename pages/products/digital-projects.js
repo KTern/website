@@ -64,8 +64,8 @@ export default function Digital_Projects () {
                             </div>
                     </div>
                 </div>
-                <div className="absolute inset-x-0  max-w-2xl mx-auto px-4">
-                <div className="rounded-3xl md:rounded-6xl md:rounded-br-none h-80 w-100 relative"><Image className="rounded-3xl md:rounded-6xl" layout="fill" src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="" /></div>
+                <div className="absolute inset-x-0  max-w-2xl mx-auto px-4 bg-project-secondary border-2 border-black ">
+                <div className="rounded-3xl md:rounded-6xl md:rounded-br-none h-80 w-100 relative"><Image className="rounded-3xl md:rounded-6xl" layout="fill" src="/product/projects/project_1.svg" alt="" /></div>
                 <div className="absolute inset-0 flex items-center justify-center ">
                     <Link href="/video"  passHref>
                                 <a className="flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse">
@@ -82,12 +82,12 @@ export default function Digital_Projects () {
             {/* Streams Content Section */}
             <section className="px-5 pb-10 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
-                <div className="relative bg-project-secondary pt-20 rounded-t-3xl pb-12 lg:pb-24">
+                <div className="relative  pt-20 rounded-t-3xl pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -118,7 +118,7 @@ export default function Digital_Projects () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div><Image width={500} height={400} className="rounded-3xl md:rounded-br-none" src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                <div><Image width={500} height={400} className="roun bg-gray-200ded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -129,12 +129,12 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-project-secondary pt-2  lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative  pt-2  lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -170,12 +170,12 @@ export default function Digital_Projects () {
                         </div>
                         </div>
                 </div>   
-                 <div className="relative bg-project-secondary pt-20  pb-12 lg:pb-24">
+                 <div className="relative  pt-20  pb-12 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -206,7 +206,7 @@ export default function Digital_Projects () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl md:rounded-br-none" src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="roun bg-gray-200ded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -217,12 +217,12 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative bg-project-secondary pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative  pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none" width={500} height={400}  src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -261,7 +261,7 @@ export default function Digital_Projects () {
                 </section>
             {/*/ Streams Content Section */}
             {/* Bots Section */}
-            <div className="py-10">
+            <div className="px-20 py-10">
                 <div className="px-10">
                 <h2 className="card-heading mb-4">Digital Projects Bots</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p>
@@ -269,38 +269,38 @@ export default function Digital_Projects () {
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">DX Process Orchestrator Bot</p>
-                        <p className="tiny-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
+                        <p className="text-lg font-bold mt-7 mb-7">DX Process Orchestrator Bot</p>
+                        <p className="text-md">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">DX Release Orchestrator Bot</p>
-                        <p className="tiny-subheading">Orchestrate the SAP TR Releases</p>
+                        <p className="text-lg font-bold mt-7 mb-7">DX Release Orchestrator Bot</p>
+                        <p className="text-md">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">DX Event Orchestrator Bot</p>
-                        <p className="tiny-subheading">Event Orchestrations for swift collaborations</p>
+                        <p className="text-lg font-bold mt-7 mb-7">DX Event Orchestrator Bot</p>
+                        <p className="text-md">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">DX Change Management Orchestrator Bot</p>
-                        <p className="tiny-subheading">Orchestrate the Change management</p>
+                        <p className="text-lg font-bold mt-7 mb-7">DX Change Management Orchestrator Bot</p>
+                        <p className="text-md">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">DX  Security Impact Simulation Bot</p>
-                        <p className="tiny-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="text-lg font-bold mt-7 mb-7">DX  Security Impact Simulation Bot</p>
+                        <p className="text-md">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">Bot Name</p>
-                        <p className="tiny-subheading">Bot description</p>
+                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
+                        <p className="text-md">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="tiny-heading">Bot Name</p>
-                        <p className="tiny-subheading">Bot description</p>
+                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
+                        <p className="text-md">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
@@ -329,7 +329,7 @@ export default function Digital_Projects () {
                         </button> */}
                         <div className="flex w-full flex-wrap bg-white shadow rounded">
                         <div className="md:py-10 text-center w-full lg:w-1/3 border-r">
-                            <span className="text-5xl lg:text-6xl font-bold">4.7</span>
+                            <span className="card-heading font-bold">4.7</span>
                             <div className="mb-6 lg:mb-12 flex text-black justify-center">
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
@@ -355,8 +355,8 @@ export default function Digital_Projects () {
                         </div>
                         <div className="md:py-10 px-6 w-full lg:w-2/3">
                             <div className="hidden lg:block mb-10 w-12 h-12 relative"><Image layout="fill" src="/product/projects/left-quote.svg" alt=""/></div>
-                            <p className="mb-10 lg:text-2xl sm:pt-10  leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
-                            <h4 className="text-2xl font-bold card-heading">Jim W</h4>
+                            <p className="mb-10 card-heading sm:pt-10  leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
+                            <h4 className="card-subheading font-bold card-heading">Jim W</h4>
                             <p className="text-gray-400 sm:pb-5">Partner</p>
                         </div>
                         </div>
@@ -373,8 +373,8 @@ export default function Digital_Projects () {
             {/* Resources Section */}
 
             <section className="w-full py-8 bg-white sm:py-12 md:py-16">
-            <div className="px-10 mx-auto max-w-7xl">
-                <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
+            <div className=" mx-auto max-w-7xl">
+                <div className="-mx-2 flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
                     <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
                             <Link href="#_" passHref>
                                 <a className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
@@ -468,7 +468,7 @@ export default function Digital_Projects () {
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
-                <h2 className="card-heading  font-bold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10">Get started with your DXaaS Journey</h2>
+                <h2 className="card-heading  font-bold leading-9 tracking-tight text-white  sm:leading-10">Get started with your DXaaS Journey</h2>
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">

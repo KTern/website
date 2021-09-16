@@ -64,7 +64,7 @@ export default function Digital_Labs () {
                             </div>
                     </div>
                 </div>
-                <div className="absolute inset-x-0  max-w-2xl mx-auto px-4">
+                <div className="absolute inset-x-0  max-w-2xl mx-auto px-4 bg-mines-secondary border-2 border-black ">
                 <div className="rounded-3xl md:rounded-6xl md:rounded-br-none h-80 w-100 relative"><Image className="rounded-3xl md:rounded-6xl" layout="fill" src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="" /></div>
                 <div className="absolute inset-0 flex items-center justify-center ">
                     <Link href="/video"  passHref>
