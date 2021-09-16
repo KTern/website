@@ -11,10 +11,10 @@ export default function Error () {
           <div className="max-w-3xl mx-auto">
             <Link  href="/about-KTern" passHref>
               <a className="inline-block text-white text-xl font-bold">
-              <Image  src="/404/kternlogo.png" width={300} height={100} alt="" />
+              <Image  src="/404/kternlogo.png" width={140} height={50} alt="" />
               </a>
             </Link>
-            <div className="mx-40 "><Image   src="/404/error-404.svg" alt="" width={500} height={300}/></div>
+            <div className="mx-40 "><Image   src="/404/error-404.svg" alt="" width={400} height={300}/></div>
             <div className="max-w-md mx-auto text-center">
             <h2 className="mb-4 text-2xl text-white font-bold font-heading">Sorry, we can&apos;t find that page or something has gone wrong...</h2>
             <Link  href="/"><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 custom-card-subheading">Return to Home</a></Link>

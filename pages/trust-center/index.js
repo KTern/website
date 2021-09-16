@@ -9,6 +9,7 @@ export default function TrustCenter () {
             <section className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col text-center items-center justify-center w-full h-full ">
+                
                     <h1 className="heading text-white "  >Trust Center</h1>
                     <p className="subheading text-gray-100 pb-7">Find the information you need on cloud performance, security, privacy, and compliance.</p>
                     
