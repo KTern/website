@@ -371,56 +371,6 @@ export default function Digital_Projects () {
            </section>
             {/* /Testimonial Section */}
             {/* Resources Section */}
-            <section className="w-full py-8 bg-white sm:py-12 md:py-16">
-            <div className="px-10 mx-auto max-w-7xl">
-                <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
-                    <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
-                            <Link href="#_" passHref>
-                                <a className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
-                        <span className="tiny-heading">View More Posts</span>
-                        <svg className="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </Link>
-                </div>
-
-                <div className="grid grid-cols-12 gap-6">
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <Link href="#_" passHref>
-                        <a className="relative block w-full h-64 overflow-hidden rounded">        
-                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg" alt="resource" layout="fill"/>
-                        </a>    
-                        </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Ultimate SAP Custom Code Migration Guide using KTern </a></Link>
-                    </div>
-
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <Link href="#_" passHref>
-                            <a  className="relative block w-full h-64 overflow-hidden rounded">
-                                    <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-02.png" alt="resource" layout="fill"/>
-                            </a>
-                        </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Why is Custom Code Adaptation required for S/4HANA Conversion process? </a></Link>
-                    </div>
-
-                    <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-                        <Link href="#_" passHref>
-                            <a  className="relative block w-full h-64 overflow-hidden rounded">
-                                    <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-image-03.jpg" alt="resource" layout="fill"/>
-                            </a>
-                        </Link>
-                        <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">How KTern can alleviate your Custom Code Migration challenges? </a></Link>
-                    </div>
-                </div>
-                </div>
-                </section>
-           
-
-
-
-
 
             <section className="w-full py-8 bg-white sm:py-12 md:py-16">
             <div className="px-10 mx-auto max-w-7xl">
