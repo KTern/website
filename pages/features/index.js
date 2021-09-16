@@ -23,7 +23,7 @@ export default function Features () {
 
              <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -187,7 +187,7 @@ export default function Features () {
             </section>
             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -351,7 +351,7 @@ export default function Features () {
             </section>
             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -515,7 +515,7 @@ export default function Features () {
             </section>
             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
@@ -679,7 +679,7 @@ export default function Features () {
             </section>
             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <h2 className="mb-1 card-heading   text-gray-900">Digital Maps</h2>
                     <p className="mb-12 card-subheading text-md text-gray-500">KTern’s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
