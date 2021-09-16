@@ -12,7 +12,7 @@ export default function Landing () {
         <section className="py-8 w-full sm:py-20 md:pt-10 mt-10 bg-secondary" >
             <div className="flex items-center px-12 mx-auto flex-row">
                 <div className="relative flex flex-col items-start justify-center w-full h-full lg:w-2/3">
-                <p className="inline-block px-2 py-1 mb-5 font-medium tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="inline-block px-2 py-1 mb-5  tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     E-book
                 </p>
                     <h1 className="heading">S/4HANA Journey Made Simple</h1>
@@ -20,7 +20,7 @@ export default function Landing () {
 
                   <div className="relative">
                                         <Link href="#downloadbook" passHref>
-                                            <a className="inline-block w-full px-5 py-2 text-xl font-medium text-center text-white transition duration-200 bg-black 
+                                            <a className="button inline-block w-full px-5 py-2  text-center text-white transition duration-200 bg-black 
                                             rounded-l-xl rounded-t-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download E-book</a>
                                         </Link>
                                     </div>    
@@ -44,25 +44,25 @@ export default function Landing () {
                             <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                                 <div className="relative max-w-md">
                                       <div className="pb-16 mb-8 border-b border-gray-400">
-                                      <Link href="/trust-center/landing"  passHref>
-                                <a className="inline-flex items-center pt-5 font-medium text-black hover:border-blue-500 group ">
+                                      <Link href="/resources"  passHref>
+                                <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
                              <span className="tiny-heading group-hover:text-gray-400">Go Back to all Ebooks</span>
                                 
                                 </a>
                             </Link> 
-                <p className="mt-5 text-lg text-gray-700 text md:text-left">KTern is a disruptive all-in-one product built on the SAP Activate framework, the “S/4HANAPEDIA” automation rule engine, a next-gen collaboration platform, and future-ready machine learning algorithms. All these features work in coalition to help ECC customers before their transition, during their transition, and after the transition.
+                <p className="mt-5 card-subheading text-gray-700 text md:text-left">KTern is a disruptive all-in-one product built on the SAP Activate framework, the “S/4HANAPEDIA” automation rule engine, a next-gen collaboration platform, and future-ready machine learning algorithms. All these features work in coalition to help ECC customers before their transition, during their transition, and after the transition.
 
  
 
 
 
 </p>
-<p className="mt-5 text-lg text-gray-700 text md:text-left">
+<p className="mt-5 card-subheading text-gray-700 text md:text-left">
 Before the transition, KTern provides an auto-generated blueprint for your ECC to S/4HANA system conversion by completing a comprehensive automated assessment.
 </p>
 
-<p className="mt-5 text-lg text-gray-700 text md:text-left">
+<p className="mt-5 card-subheading  text-gray-700 text md:text-left">
 
 This blueprint will help you define the right plan, the right effort estimate, the right system sizing, the right execution, the right project management, and the right quality for your ECC to S/4HANA transition - Ensuring up to 53% faster, 37% cheaper, and 99.9% safer S/4HANA migrations.
 </p>
@@ -75,28 +75,28 @@ This blueprint will help you define the right plan, the right effort estimate, t
             
                         <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
                             <div id="downloadbook" className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
-                                <h4 className="w-full font-myriad-pro text-4xl font-medium leading-snug">Download E-Book</h4>
+                                <h4 className="w-full font-myriad-pro card-heading  leading-snug">Download E-Book</h4>
                                 <div className="relative w-full mt-6 space-y-8">
                                     <div className="relative">
-                                        <label className="absolute px-2 ml-2 -mt-3 font-medium text-black bg-white">First Name</label>
-                                        <input type="text" className="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="John"/>
+                                        <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">First Name</label>
+                                        <input type="text" className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="John"/>
                                     </div>
                                     <div className="relative">
-                                        <label className="absolute px-2 ml-2 -mt-3 font-medium text-black bg-white">Last Name</label>
-                                        <input type="text" className="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="Doe"/>
+                                        <label className="absolute px-2 ml-2 -mt-3 card-subheading  text-black bg-white">Last Name</label>
+                                        <input type="text" className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="Doe"/>
                                     </div>
                                     <div className="relative">
-                                        <label className="absolute px-2 ml-2 -mt-3 font-medium text-black bg-white">Email Address</label>
-                                        <input type="text" className="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="janedoe@email.com"/>
+                                        <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">Email Address</label>
+                                        <input type="text" className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="janedoe@email.com"/>
                                     </div>
                                     <div className="relative">
-                                        <label className="absolute px-2 ml-2 -mt-3 font-medium text-black bg-white">Company</label>
-                                        <input type="text" className="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="Company Name"/>
+                                        <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">Company</label>
+                                        <input type="text" className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black" placeholder="Company Name"/>
                                     </div>
                                     <div className="relative">
                                         <Link href="" passHref>
-                                            <a className="inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200 bg-black 
-                                            rounded-l-xl rounded-t-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download</a>
+                                            <a className="inline-block w-full px-5 py-4 text-xl  text-center text-white transition duration-200 bg-black 
+                                            rounded-l-xl rounded-t-xl transition button uppercase duration-200 hover:bg-gray-500 ease">Download</a>
                                         </Link>
                                     </div>            
                                 </div>
