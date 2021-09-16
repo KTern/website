@@ -74,30 +74,30 @@ className="navbar-s block p-2 hover:bg-gray-300 text-black hover:text-gray-400">
                                         </div>
                                     </ul>
                                             {isProjectShown && (
-                                            <Card data={{title:'Digital Projects',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>
+                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>
                                             )}
                                             {isProcessShown && (
-                                            <Card data={{title:'Digital Process',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isMapsShown && (
-                                            <Card data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isMinesShown && (
-                                            <Card data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
+                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/>  )}
                                              {isLabsShown && (
-                                            <Card data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/> )}
+                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3'} }/> )}
                                    
                                                </div>
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Solutions</label>
+                        <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Resources</a></Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
                     
-                            <Link href="/resources"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Resources</a></Link>
+                            <Link href="/partners"  ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Partners</a></Link>
                        
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Partners</a></Link>
+                        <Link href="/about-ktern" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Company</a></Link>
                         </li>
                     </ul>
                </div>

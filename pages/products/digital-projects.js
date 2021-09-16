@@ -331,19 +331,19 @@ export default function Digital_Projects () {
                         <div className="md:py-10 text-center w-full lg:w-1/3 border-r">
                             <span className="text-5xl lg:text-6xl font-bold">4.7</span>
                             <div className="mb-6 lg:mb-12 flex text-black justify-center">
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gold">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
                             </div>
@@ -354,10 +354,10 @@ export default function Digital_Projects () {
                             </div>
                         </div>
                         <div className="md:py-10 px-6 w-full lg:w-2/3">
-                            <div className="mb-10 w-10 h-10 relative"><Image layout="fill" src="/atis-assets/elements/left-quote.png" alt=""/></div>
-                            <p className="mb-10 lg:text-2xl leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
+                            <div className="hidden lg:block mb-10 w-12 h-12 relative"><Image layout="fill" src="/product/projects/left-quote.svg" alt=""/></div>
+                            <p className="mb-10 lg:text-2xl sm:pt-10  leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
                             <h4 className="text-2xl font-bold card-heading">Jim W</h4>
-                            <p className="text-gray-400">Partner</p>
+                            <p className="text-gray-400 sm:pb-5">Partner</p>
                         </div>
                         </div>
                         {/* <button className="hidden lg:block bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
@@ -391,7 +391,7 @@ export default function Digital_Projects () {
                         </a>    
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Ultimate SAP Custom Code Migration Guide using KTern </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -401,7 +401,7 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">The Role of a Project Manager in SAP S/4HANA Conversion </a></Link>
+                        <Link href="#_" passHref ><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">Why is Custom Code Adaptation required for S/4HANA Conversion process? </a></Link>
                     </div>
 
                     <div className="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
@@ -411,9 +411,103 @@ export default function Digital_Projects () {
                             </a>
                         </Link>
                         <p className="tiny-subheading font-bold text-gray-400 uppercase">Resources</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">SAP Activate – The Heart of KTern and S/4HANA Migration</a></Link>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900">How KTern can alleviate your Custom Code Migration challenges? </a></Link>
                     </div>
                 </div>
+                </div>
+                </section>
+           
+
+
+
+
+
+            <section className="w-full py-8 bg-white sm:py-12 md:py-16">
+            <div className="px-10 mx-auto max-w-7xl">
+                <div className="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
+                    <h2 className="card-heading font-bold text-gray-800">Related Resources</h2>
+                            <Link href="#_" passHref>
+                                <a className="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
+                        <span className="tiny-heading">View More Posts</span>
+                        <svg className="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </Link>
+                </div>
+
+                <div className="grid grid-cols-12 gap-6">
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a Project Manager in SAP S/4HANA Conversion  </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
+                        <Link href="#_" passHref>
+                        <a className="relative block w-full h-64 overflow-hidden rounded">        
+                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                        </a>    
+                        </Link>
+                        <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
+                        <Link href="/features/digital-projects"  passHref>
+                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
+                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>  
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                  </div>
                 </div>
                 </section>
             {/* / Resources Setion */}

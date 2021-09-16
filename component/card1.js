@@ -52,7 +52,7 @@ export default function Card ({ data }) {
             </div>
 <span className="my-auto"><strong>{data.title}</strong></span></div>
         {isFeature1Shown && (
-          <FeatureCard  data={{title:'Feature1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
+          <FeatureCard  data={{title:'Feature 1',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/>
           )}
         {isFeature2Shown && (
      <FeatureCard data={{title:'Feature2',description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis eos aut enim autem ducimus dolor rem eaque excepturi delectus, dolore a, vero neque? Vitae libero delectus obcaecati',image:'https://cdn.devdojo.com/images/may2021/blog-image-01.jpg',url:data.feature_url}}/> )}

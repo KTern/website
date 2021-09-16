@@ -25,7 +25,7 @@ export default function Resources () {
             </section>
          
            <section className="container md:p-10 ">
-                {/* <!-- On Demand Webinar Display--> */}
+               
                 <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0 px-10">
                     {/* <!-- On demand Filter Options--> */}
                 <div className="w-full md:w-1/5 px-4 mb-4  md:mb-0">
@@ -115,7 +115,7 @@ export default function Resources () {
                                         <span>Digital Maps</span>
                                     </div>
                                     <div className="block  w-80 h-60 relative transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_1.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -130,7 +130,7 @@ export default function Resources () {
                                         <span>Digital Maps</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_3.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -145,7 +145,7 @@ export default function Resources () {
                                             <span>Digital Projects</span>
                                         </div>
                                         <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                            <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                            <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/projects/project_scrum.svg"/>
                                         </div>
                                         <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                             <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -160,7 +160,7 @@ export default function Resources () {
                                         <span>Digital Mines</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/mines/mines_1.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -175,7 +175,7 @@ export default function Resources () {
                                         <span>Digital Labs</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/labs/labs_1.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -190,7 +190,7 @@ export default function Resources () {
                                         <span>Digital Process</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/process/process_1.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className="tiny-subheading mb-2 mt-2 font-bold text-gray-400 uppercase">White paper</p>
@@ -208,7 +208,7 @@ export default function Resources () {
                                         <span>Digital Maps</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_1.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className=" ont-bold text-gray-400 uppercase">E-book</p>
@@ -223,7 +223,7 @@ export default function Resources () {
                                         <span>Digital Maps</span>
                                     </div>
                                     <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_3.svg"/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
                                         <p className=" ont-bold text-gray-400 uppercase">E-book</p>
