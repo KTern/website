@@ -2,9 +2,10 @@ import Layout from "../../component/Layout"
 import WebinarLayout from "../../component/webinar_Layout";
 import Image from "next/image";
 import Link from "next/link";
-export default function WebinarLanding () {
+export default function WebinarLanding ({ pageProps }) {
+    console.log(pageProps.data)
     const data = {
-        title: "Reimagining SAP Testing with Digital Labs ",
+        title: pageProps.data[0].title,
         type: " ON-DEMAND WEBINAR",
         date: "1st September 2021",
         time: "11 am to Noon",
@@ -20,4 +21,9 @@ export default function WebinarLanding () {
             <WebinarLayout data={data}/>
         </Layout>
     )
+}
+WebinarLanding.getInitialProps=async ()=>{
+    const response = await fetch('http://104.154.73.71:1337/webinars',{method:'get',headers:new Headers({'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDFhNDMzMjQwMDM0Mjg5ZTM2MzYxYSIsImlhdCI6MTYzMjEzMTM4MiwiZXhwIjoxNjM0NzIzMzgyfQ.473sxX5je4A7ddg6udNV7aArOoNdPum2GNvxSQ1A7g8'})});
+    const data = await response.json();
+    return {pageProps:{data}};
 }
