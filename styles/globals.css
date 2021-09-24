@@ -15,6 +15,22 @@ object {
     display: block;
     vertical-align: middle;
 }
+details>summary {
+ 
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none
+  }
+  
+  #arrow::after {
+    content: ' ►';
+  }
+  details[open] #arrow:after {
+    content: " ▼";
+  }
+  
+ 
 
 html,
 body {
