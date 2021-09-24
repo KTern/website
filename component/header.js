@@ -53,10 +53,12 @@ export default function Header () {
                         </button>
                 </div>
                 <div className="hidden lg:flex p-0">
-                    <ul className=" flex space-x-2 xl:space-x-10">
-                        <li className="hoverable hover:bg-secondary " onMouseLeave={()=>{setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " >Products</label>
-                            <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                        <ul className=" flex space-x-2 xl:space-x-10">
+                        <li className="toggleable hover:bg-secondary" >    
+                            {/* <li className="toggleable hover:bg-secondary " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
+                        <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-heading " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
+                            <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h text-black text-bold mb-2">Streams</h3>
