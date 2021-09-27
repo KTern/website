@@ -54,14 +54,14 @@ export default function Header () {
                 </div>
                 <div className="hidden lg:flex p-0">
                         <ul className=" flex space-x-2 xl:space-x-10">
-                        <li className="toggleable hover:bg-secondary" >    
+                        <li className="toggleable  hover:bg-secondary" >    
                             {/* <li className="toggleable hover:bg-secondary " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-heading " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
+                            <label htmlFor="toggle-one"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h text-black text-bold mb-2">Streams</h3>
+                                        <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
                                         <div >
                                         <li>
                                                     <Link href="/products/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
@@ -101,11 +101,11 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                             </div>
                         </li>
                           <li className="hoverable hover:bg-secondary " >
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
                             <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h text-black text-bold mb-2">Resources</h3>
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
                                         <div >
                                         <li>
                                                     <Link href="/webinars"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
@@ -130,7 +130,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                                  <li className="mt-4 mx-2">
                         <Link href='/resources' passHref>
                  <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                 <span className="tiny-heading group-hover:text-gray-400">See All Resources</span>
+                 <span className="hyperlink group-hover:text-gray-400">See All Resources</span>
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
@@ -156,11 +156,11 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                         </li>
                       
                            <li className="hoverable hover:bg-secondary " >
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-6 px-2 lg:p-6 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
                             <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h text-black text-bold mb-2">Partners</h3>
+                                        <h3 className="navbar-h  uppercase text-black text-bold mb-2">Partners</h3>
                                         <div >
                                         <li>
                                                     <Link href="/partners"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}
@@ -204,7 +204,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                         </li>
                      
                         <li className="hoverable hover:bg-secondary ">
-                        <Link href="/about-ktern" ><a className="block cursor-pointer py-6 px-4 lg:p-6 header uppercase ">Company</a></Link>
+                        <Link href="/about-ktern" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
                         </li>
                     </ul>
                </div>
@@ -232,11 +232,11 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                     <ul>
                     <li className="toggleable hover:bg-secondary ">
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 tiny-heading " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="navbar-h text-black text-bold mb-2">Digital Streams</h3>
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Digital Streams</h3>
                                               <li className="hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-two" className="toggle-input "/>
                                                     <label htmlFor="toggle-two" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Maps</label>
@@ -308,13 +308,13 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                             </div>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                         <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Resources</a></Link>
+                         <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 hyperlink ">Resources</a></Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Partners</a></Link>
+                        <Link htmlFor="toggle-one" href="/resources" ><a className="block cursor-pointer py-6 px-4 lg:p-6 hyperlink ">Partners</a></Link>
                         </li>
                         <li className="hoverable hover:bg-secondary ">
-                        <Link htmlFor="toggle-one" href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 tiny-subheading ">Company</a></Link>
+                        <Link htmlFor="toggle-one" href="/partners" ><a className="block cursor-pointer py-6 px-4 lg:p-6 hyperlink ">Company</a></Link>
                         </li>
                      </ul>
                 </div>

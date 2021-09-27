@@ -60,7 +60,7 @@ export default function Digital_Process () {
                         <h2 className="mb-3    heading">Digital Process</h2>
                         <span className="mb-3  text-black subheading">Create a Digital Footprint and continuously optimize your processes with Digital Process  </span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-process-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-process-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ export default function Digital_Process () {
                                     <p className="mb-6 text-gray-400  card-subheading">Manage your Business processes in a holistic way, with KTern you can describe your processes both in a business and from an IT perspective ensuring the Business Documentation and System Reality are always synchronized </p>
                                     <Link href="/features/digital-process"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -172,7 +172,7 @@ export default function Digital_Process () {
                                     <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Analytics Wizard provides a 360 degree bird view acting as a single source of truth for your Custom process Profiling providing insights about your existing processes.</p>
                                     <Link href="/features/digital-process"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -217,7 +217,7 @@ export default function Digital_Process () {
                                     <p className="mb-6 text-gray-400  card-subheading">Automated custom code remediation for built upon pre-defined SAP Tribal Simplification Scenarios with auto-learning potential of manual code correction </p>
                                     <Link href="/features/digital-process"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -278,7 +278,7 @@ export default function Digital_Process () {
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">Automated training scenario and stakeholder recommendations in view of the process transformation is Provided based on the Configuration of your current business process as well as KTern&apos;s S4HANAPEDIA Engine&apos;s data empowered intelligence</p>
                                     <Link href="/features/digital-process"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -424,11 +424,11 @@ export default function Digital_Process () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/process/process_2.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital process: The ultimate guide to KTern’s proces Management Suite </a></Link>
  <Link href="/features/digital-process" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -444,11 +444,11 @@ export default function Digital_Process () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/process/process_1.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a proces Manager in SAP S/4HANA Conversion </a></Link>
  <Link href="/features/digital-process" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -462,11 +462,11 @@ export default function Digital_Process () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/process/process_3.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
  <Link href="/features/digital-process" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -506,8 +506,8 @@ export default function Digital_Process () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

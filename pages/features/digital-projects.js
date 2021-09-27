@@ -13,7 +13,7 @@ export default function Digital_Projects () {
             <section className="w-full py-20 bg-project-secondary" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                <p className="inline-block px-2 py-1 mb-5  tiny-heading tracking-wider heading text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider heading text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Custom Code Remediation
                 </p>
                     <h1 className="heading">Analyse and Remediate your Custom Code Smoothly</h1>
@@ -43,7 +43,7 @@ export default function Digital_Projects () {
                 </div>
                 <div className="flex mb-8 animated fadeIn space-x-20">
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
-                        <p className=" tiny-subheading   text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink   text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Center</h3>
                         <p className="mt-2 card-subheading text-gray-700  md:text-left">Gain Information on each custom program in the Custom code center. KTern assigns a Impact, Optimization and a Security Score based on the Custom program. </p>
                     </div>
@@ -70,14 +70,14 @@ export default function Digital_Projects () {
                     </div>
                     </div>
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pl-16">
-                        <p className=" tiny-subheading  text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink  text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Lab</h3>
                         <p className="mt-2 card-subheading text-gray-700">Gain AI-based custom code insights from Custom Code Lab, with access to a development environment to edit the code manually.</p>
                     </div>
                 </div>
                  <div className="flex mb-8 animated fadeIn space-x-20">
                     <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
-                        <p className=" tiny-subheading   text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink   text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">AI Powered Remediation Engine</h3>
                         <p className="mt-2 card-subheading text-gray-700 md:text-left">Auto Recommended Remediation Suggestions that can be applied at the click of a button recording as an transport request in your SAP System.</p>
                     </div>
@@ -289,7 +289,7 @@ export default function Digital_Projects () {
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
+                        <div className="p-4 hyperlink">
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
@@ -303,7 +303,7 @@ export default function Digital_Projects () {
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
+                        <div className="p-4 hyperlink">
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
@@ -317,7 +317,7 @@ export default function Digital_Projects () {
                             <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </summary>
                                 <hr/>
-                        <div className="p-4 tiny-subheading">
+                        <div className="p-4 hyperlink">
                                 CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
                                 de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
                                 aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
@@ -342,15 +342,15 @@ export default function Digital_Projects () {
                         <ul>
                         <li className="flex items-center py-2 space-x-4 xl:py-3">
                             <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                            <span className="tiny-heading text-gray-500">Reduction in Development effort and Project Cost.</span>
+                            <span className="hyperlink text-gray-500">Reduction in Development effort and Project Cost.</span>
                         </li>
                         <li className="flex items-center py-2 space-x-4 xl:py-3">
                             <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                            <span className="tiny-heading text-gray-500">Improved application performance by remediating SQL statements ​</span>
+                            <span className="hyperlink text-gray-500">Improved application performance by remediating SQL statements ​</span>
                         </li>
                         <li className="flex items-center py-2 space-x-4 xl:py-3">
                             <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                            <span className="tiny-heading text-gray-500">Automated code fixes eliminating the risks of new errors being introduced by manual modifications</span>
+                            <span className="hyperlink text-gray-500">Automated code fixes eliminating the risks of new errors being introduced by manual modifications</span>
                         </li>
                         </ul>
                     </div>
@@ -376,11 +376,11 @@ export default function Digital_Projects () {
                             <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
                         </a>    
                         </Link>
-                        <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
                         <Link href="#_" passHref><a className="block card-subheading   leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
                         <Link href="/features/digital-projects"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -396,11 +396,11 @@ export default function Digital_Projects () {
                             <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
                         </a>    
                         </Link>
-                        <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
                         <Link href="#_" passHref><a className="block card-subheading   leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a Project Manager in SAP S/4HANA Conversion  </a></Link>
                         <Link href="/features/digital-projects"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -415,11 +415,11 @@ export default function Digital_Projects () {
                             <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
                         </a>    
                         </Link>
-                        <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+                        <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
                         <Link href="#_" passHref><a className="block card-subheading   leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
                         <Link href="/features/digital-projects"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>

@@ -14,7 +14,7 @@ export default function Features () {
              <section className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col text-center items-center justify-center w-full h-full ">
-                <p className="inline-block px-2 py-1 mb-5  tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     All Features
                 </p>
                     <h1 className="heading text-white "  >Transform your DX Experience</h1>
@@ -22,7 +22,7 @@ export default function Features () {
                     <div className="flex flex-row">
                     
                     <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" button inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-l-xl rounded-t-xl transition duration-200 uppercase">Free Trial</a></Link>
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                     </div>
                 </div>
 
@@ -52,14 +52,14 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape <br /> Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-maps-primary uppercase">Digital maps</p>
+                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>
                                             <p className="mb-2  text-gray-600">Gain detailed information about your SAP System. 
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -84,12 +84,12 @@ export default function Features () {
                                                     </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Process Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-maps-primary uppercase">Digital maps</p>                                         
+                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                         
                                                <p className="mb-2  text-gray-600">Understand how each process in your current system is getting affected.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -118,12 +118,12 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Object Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-maps-primary uppercase">Digital maps</p>                                           
+                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                           
                                              <p className="mb-2  text-gray-600">Automate the entire process of SAP Custom Object Analytics.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -150,12 +150,12 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800"> Transformation <br /> Assessment</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-maps-primary uppercase">Digital maps</p>                                              
+                                                <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                              
                                                   <p className="mb-2  text-gray-600">Get Complete Business Process Mapping at upto 6 Granular Levels</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -219,14 +219,14 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Cutover Orchestrator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-project-primary uppercase">Digital Projects</p>
+                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>
                                             <p className="mb-2  text-gray-600">Risk-free, Transparent Go-Live with KTern&apos;s Cutover Orchestration.
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -251,12 +251,12 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Workflow Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-project-primary uppercase">Digital Projects</p>                     
+                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                     
                                                                    <p className="mb-2  text-gray-600">Customize your own Workflow using KTern&apos;s Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -285,12 +285,12 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Timeline Simulator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-project-primary uppercase">Digital Projects</p>                                          
+                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                                          
                                               <p className="mb-2  text-gray-600">Set, Simulate, Auto-Track and Gain Insights on your Project Timeline. </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -317,12 +317,12 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Collaboration Forum</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-project-primary uppercase">Digital Projects</p>                                               
+                                                <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                                               
                                                  <p className="mb-2  text-gray-600">Organized Management of your SAP Project Files, Documents, Communication .</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -386,14 +386,14 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Orchestrator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-process-primary uppercase">Digital Process</p>
+                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>
                                             <p className="mb-2  text-gray-600">Model, implement, integrate, and monitor custom process applications and integration scenarios
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -418,12 +418,12 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Code Remediation</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-process-primary uppercase">Digital Process</p>                                    
+                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                    
                                                     <p className="mb-2  text-gray-600">Automated Analysis and Remediation of your Custom Code </p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -452,12 +452,12 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">BPML Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-process-primary uppercase">Digital Process</p>                                    
+                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                    
                                                     <p className="mb-2  text-gray-600">Map your Complex Business Processes, Process Groups and Process Steps </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -484,12 +484,12 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Training Academy</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-process-primary uppercase">Digital Process</p>                                               
+                                                <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                               
                                                  <p className="mb-2  text-gray-600">Automatic Training Scenario Recommendations based on changes made to Business Processes</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -553,14 +553,14 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Test Case Finder</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-labs-primary uppercase">Digital Labs</p>
+                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>
                                             <p className="mb-2  text-gray-600"> Automated, Continuous Test case Generator for Modern Enterprises  
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -585,12 +585,12 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Autonomous Test Console</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-labs-primary uppercase">Digital Labs</p>                                       
+                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                       
                                                  <p className="mb-2  text-gray-600">Customize and Drive your Enterprise&apos;s Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -619,13 +619,13 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Defect Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-labs-primary uppercase">Digital Labs</p>                                         
+                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                         
                                             
                                                <p className="mb-2  text-gray-600">Raise and Manage Defects and Issues that Might Raise during your Testing.  </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -652,12 +652,12 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Intelligent Reports</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-labs-primary uppercase">Digital Labs</p>                                               
+                                                <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                               
                                                  <p className="mb-2  text-gray-600">Generate,Customize and Share Detailed Testing Analysis Reports.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -721,14 +721,14 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Mining Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-mines-primary uppercase">Digital Mines</p>
+                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital Mines</p>
                                             <p className="mb-2  text-gray-600">Discover and Improve Hidden Potential in your existing Business Processes.
 
                                             </p>
                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -753,12 +753,12 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Optimizer</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-mines-primary uppercase">Digital mines</p>                                          
+                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                          
                                               <p className="mb-2  text-gray-600">Run your Processes aligned to Best practices, continuously Improving with Changing Demands.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -787,12 +787,12 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">ROI Estimator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 tiny-subheading  text-mines-primary uppercase">Digital mines</p>                                        
+                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                        
                                                 <p className="mb-2  text-gray-600">Recieve an Estimate how much Savings and ROI your Company could generate from your Transformation Investment.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -819,12 +819,12 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Business-Ops Cockpit</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 tiny-subheading  text-mines-primary uppercase">Digital mines</p>                                              
+                                                <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                              
                                                   <p className="mb-2  text-gray-600">Gain real time Business Intelligence and Respond quickly.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/digital-projects"  passHref>
                                 <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>

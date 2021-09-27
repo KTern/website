@@ -60,7 +60,7 @@ export default function Digital_Labs () {
                         <h2 className="mb-3    heading">Digital Labs</h2>
                         <span className="mb-3  text-black subheading">AI Driven Automated SAP Testing</span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-labs-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-labs-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ export default function Digital_Labs () {
                                     <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Intelligent Test Case Recommendation Engine Automatically assess, analyze, recommend test cases for any SAP Transformation labs. </p>
                                 <Link href="/features/digital-labs"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -166,7 +166,7 @@ export default function Digital_Labs () {
                                     <p className="mb-6 text-gray-400  card-subheading">The test center gives a 360 degree view of all the information, notes and files pertaining to a test case.</p>
                                 <Link href="/features/digital-labs"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -209,7 +209,7 @@ export default function Digital_Labs () {
                                     <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Sign off wizard allows to create multiple sign-off items and labs multiple test cases under each sign-off item. Stakeholder Hierarchy ensures sign-off items are approved in a hierarchial manner</p>
                                 <Link href="/features/digital-labs"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -266,7 +266,7 @@ export default function Digital_Labs () {
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">KTern automatically executes test cases generating test evidence and recording the outcomes of execution.</p>
                                 <Link href="/features/digital-labs"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -409,11 +409,11 @@ export default function Digital_Labs () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/labs/labs_2.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital labs: The ultimate guide to KTern’s labs Management Suite </a></Link>
  <Link href="/features/digital-labs" passHref>
  <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -429,11 +429,11 @@ export default function Digital_Labs () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/labs/labs_1.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a labs Manager in SAP S/4HANA Conversion </a></Link>
  <Link href="/features/digital-labs" passHref>
  <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -447,11 +447,11 @@ export default function Digital_Labs () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/labs/labs_3.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
  <Link href="/features/digital-labs" passHref>
  <a className="absolute inline-flex items-center pb-1  text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -493,8 +493,8 @@ export default function Digital_Labs () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

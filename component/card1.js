@@ -11,7 +11,7 @@ export default function Card ({data }) {
     return (
 <>
             <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-            <h3 className="navbar-h text-black text-bold mb-2">{data.title}</h3>
+            <h3 className="navbar-h text-black text-bold mb-2 uppercase">{data.title}</h3>
             <div >
                 <li>
                 <Link href="/features/digital-projects"    ><a onMouseEnter={() => { setIsFeature1Shown(true);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
@@ -36,7 +36,7 @@ export default function Card ({data }) {
                     <li className="mt-4 mx-2">
                         <Link href='/features' passHref>
                  <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                 <span className="tiny-heading group-hover:text-gray-400">See All Features</span>
+                 <span className="hyperlink group-hover:text-gray-400">See All Features</span>
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
@@ -50,7 +50,7 @@ export default function Card ({data }) {
           <div className=" mx-6 relative w-8 h-8">
             <Image src={data.icon} layout="fill" alt="Digital Maps Icon" />
             </div>
-<span className="my-auto"><strong>{data.title}</strong></span></div>
+<span className="my-auto uppercase"><strong>{data.title}</strong></span></div>
         {isFeature1Shown && (
           <FeatureCard  data={{title:data.feature1,description:data.feature1_desc,url:data.feature_url,image:data.image }}/>
           )}

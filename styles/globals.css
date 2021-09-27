@@ -1,9 +1,38 @@
-@import url("https://use.typekit.net/bib4xqk.css");
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import 'react-multi-carousel/lib/styles.css';
+@font-face {
+    font-family: gilmer;
+    src: url(./gilmer/gilmer-light.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: gilmer-500;
+    src: url(./gilmer/gilmer-500-normal.18a9997c2278a9d76f6967dac75a953d.woff2);
+}
+
+@font-face {
+    font-family: gilmer-700;
+    src: url(./gilmer/gilmer-700-normal.703ca0a7da73f44d95a0de90c3306b2b.woff2);
+}
+
+@font-face {
+    font-family: metro;
+    src: url(./metro/metro-400-normal.d6abf2e28327f21876a6a26c40489f0f.woff2);
+}
+
+@font-face {
+    font-family: metro-600;
+    src: url(./metro/metro-600-normal.dfbb76b5a611a661d8fab7dbcd658944.woff2);
+}
+
+@font-face {
+    font-family: metro-700;
+    src: url(./metro/metro-700-normal.d71b75a258a4c3c2cbfc2f1d3120adc2.woff2);
+}
+
 img,
 svg,
 video,
@@ -20,18 +49,18 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: myriad-pro, sans-serif;
+    font-family: gilmer;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    font-family: myriad-pro, sans-serif;
+    font-family: gilmer;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    font-family: metro;
 }
 
 img,
@@ -41,121 +70,102 @@ video {
 }
 
 
-/* 
-.process-primary {
-    background-color: #C70039
+/* Fonts */
+
+.header {
+    font-family: metro;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
 }
 
-.custom-process-secondary {
-    background-color: #feeeec
+.navbar-h {
+    font-family: gilmer-700;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
 }
 
-.custom-labs-primary {
-    background-color: #008000
+.navbar-s {
+    font-family: metro;
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 15px;
 }
 
-.custom-labs-secondary {
-    background-color: #e9ffdb
+.hyperlink {
+    font-family: metro;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
 }
 
-.custom-maps-primary {
-    background-color: #fd5800
+.button {
+    font-family: metro;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
 }
-
-.custom-maps-secondary {
-    background-color: #ffe2cc;
-}
-
-.custom-mines-primary {
-    background-color: #BA55D3
-}
-
-.custom-mines-secondary {
-    background-color: #eed2f4
-} */
 
 .heading {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 0;
-    font-size: 48px;
-    font-style: normal;
+    font-family: gilmer;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
 }
 
 .subheading {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 24px;
-    font-weight: 200;
-}
-
-.tiny-heading {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 0;
-    font-style: normal;
-    font-size: 16px;
-}
-
-.tiny-subheading {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 12px;
+    font-family: metro;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
 }
 
 nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
     z-index: 50;
 }
 
-.navbar-h {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 0;
-    font-style: normal;
-    font-size: 16px;
-}
 
-.navbar-s {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 14px;
-}
-
+/* 
 .vertical {
     height: 100%;
-    /* you might need some positioning for this to work, see other questions about 100% height */
+    
     width: 0;
     border: 1px solid black;
-}
-
-.header {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 0;
-    font-style: normal;
-    font-size: 16px;
-}
+} */
 
 .card-heading {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 0;
-    font-style: normal;
-    font-size: 36px;
+    font-family: gilmer-700;
+    font-weight: 700;
+    line-height: 34px;
+    font-size: 24px;
 }
 
 .card-subheading {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
+    font-family: metro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
 }
 
-.button {
-    font-family: myriad-pro, sans-serif;
-    font-weight: 50;
-    font-size: 16px;
-    text-transform: uppercase;
+.section-heading {
+    font-family: gilmer-700;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.section-subheading {
+    font-family: metro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 31px;
 }
 
 .container {
     width: 100%;
-    font-family: myriad-pro, sans-serif;
+    font-family: metro;
     font-style: normal;
 }
 

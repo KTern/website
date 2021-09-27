@@ -39,7 +39,7 @@ export default function TrustCenter () {
                            <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                            <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -59,7 +59,7 @@ export default function TrustCenter () {
                        <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                        <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -77,7 +77,7 @@ export default function TrustCenter () {
                        <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                        <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -95,7 +95,7 @@ export default function TrustCenter () {
                        <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                        <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -112,7 +112,7 @@ export default function TrustCenter () {
                        <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                        <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -129,7 +129,7 @@ export default function TrustCenter () {
                        <li className="pb-4 card-subheading">View Personalized Dashboard</li>
                        <Link href="/trust-center/landing"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -151,14 +151,14 @@ export default function TrustCenter () {
                                 <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg><span className="tiny-subheading">Customer</span>
+                        </svg><span className="hyperlink">Customer</span>
                         </a>
                     </Link>
                             <Link href="" passHref>
                                 <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg><span className="tiny-subheading">Partner</span>
+                        </svg><span className="hyperlink">Partner</span>
                         </a>
                     </Link>
                     
@@ -176,7 +176,7 @@ export default function TrustCenter () {
                 <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
                 <Link href="#_"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -193,7 +193,7 @@ export default function TrustCenter () {
                 <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
                 <Link href="#_"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -212,7 +212,7 @@ export default function TrustCenter () {
                 <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
                 <Link href="#_"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                                <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>

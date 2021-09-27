@@ -60,7 +60,7 @@ export default function Digital_Maps () {
                         <h2 className="mb-3   heading">Digital Maps</h2>
                         <span className="mb-3  text-black subheading">Build your Business Case for SAP Digital Transformation with KTern’s Digital Maps</span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-maps-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-maps-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Digital_Maps () {
                                     <p className="mb-6 text-gray-400  card-subheading">Prior to considering an transformation, understanding your Existing Landscape is crucial. KTern gives you a detailed view of your SAP System including but not limited to database type, operating system, version, mapsor type, Users, Add-on&apos;s, archiving recommendations.</p>
                                 <Link href="/features/digital-maps"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -169,7 +169,7 @@ export default function Digital_Maps () {
                                     <p className="mb-6 text-gray-400  card-subheading">Understand how your Existing Business mapses is getting affected during this transformation.</p>
                                 <Link href="/features/digital-maps"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -213,7 +213,7 @@ export default function Digital_Maps () {
                                     <p className="mb-6 text-gray-400  card-subheading">Worried what Happens to your SAP Customizations when making a transformation? KTern&apos;s Custom Object Analytics provides you with a detailed view of of each impacted custom program and custom object. </p>
                                 <Link href="/features/digital-maps"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -272,7 +272,7 @@ export default function Digital_Maps () {
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">KTern Automatically Generates a roadmap for your SAP Transformation and comes along with semi automated tools like Risk Predictor and TCO Estimator</p>
                                 <Link href="/features/digital-maps"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -415,11 +415,11 @@ export default function Digital_Maps () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_2.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital maps: The ultimate guide to KTern’s maps Management Suite </a></Link>
  <Link href="/features/digital-maps" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -435,11 +435,11 @@ export default function Digital_Maps () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a maps Manager in SAP S/4HANA Conversion </a></Link>
  <Link href="/features/digital-maps" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -453,11 +453,11 @@ export default function Digital_Maps () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_3.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading  text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink  text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
  <Link href="/features/digital-maps" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -502,8 +502,8 @@ export default function Digital_Maps () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-   <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+   <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

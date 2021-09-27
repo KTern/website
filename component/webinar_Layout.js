@@ -25,7 +25,7 @@ export default function WebinarLayout ({ data }) {
                             <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/calendar.png" alt="Calendar"/>
                             </div>
                             <div>
-                            <h3 className="tiny-heading  lg:">{data.date}</h3>
+                            <h3 className="hyperlink  lg:">{data.date}</h3>
                             
                             </div>
                         </div>
@@ -34,8 +34,8 @@ export default function WebinarLayout ({ data }) {
                             <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
                             </div>
                             <div>
-                            <h3 className=" sm: lg: tiny-heading">{data.time}</h3>
-                            <p className="sm: lg: tiny-heading">{data.zone}</p>
+                            <h3 className=" sm: lg: hyperlink">{data.time}</h3>
+                            <p className="sm: lg: hyperlink">{data.zone}</p>
                             
                             </div>
                         </div>
@@ -44,7 +44,7 @@ export default function WebinarLayout ({ data }) {
                             <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/tickets.png" alt="Calendar"/>
                             </div>
                             <div>
-                            <h3 className=" md: tiny-heading  lg:">{data.cost}</h3>
+                            <h3 className=" md: hyperlink  lg:">{data.cost}</h3>
                             
                             </div>
                         </div>
@@ -56,9 +56,9 @@ export default function WebinarLayout ({ data }) {
                         <div className="flex flex-col items-start md:flex-row">
 
                             <div className="w-full space-y-5 md:w-3/5 md:pr-16">
-                                <p className="inline-block py-1 pl-4 pr-4 mb-0 -ml-0 tiny-subheading  leading-5 text-black transform -translate-y-2 bg-labs-secondary rounded">
+                                <p className="inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2 bg-labs-secondary rounded">
                                 <Link href="#_"  rel="category">
-                                   <a className="text-black tiny-heading uppercase"> {data.category}</a>
+                                   <a className="text-black hyperlink uppercase"> {data.category}</a>
                                 </Link>
                             </p>
                             <h2 className=" card-heading leading-none text-black sm: md:">
@@ -122,7 +122,7 @@ export default function WebinarLayout ({ data }) {
                                     <div className="relative  text-center">
                                     
                                         <Link href="/thank-you" passHref>
-                                            <a className="inline-block w-full px-5 py-4 uppercase tiny-heading  text-center text-white transition duration-200 bg-black 
+                                            <a className="inline-block w-full px-5 py-4 uppercase hyperlink  text-center text-white transition duration-200 bg-black 
                                             rounded-l-xl rounded-t-xl button transition duration-200 hover:bg-gray-500 ease">Submit</a>
                                         </Link>
 

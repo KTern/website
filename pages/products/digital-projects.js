@@ -60,7 +60,7 @@ export default function Digital_Projects () {
                         <h2 className="mb-3   font-bold heading">Digital Projects</h2>
                         <span className="mb-3  text-black subheading">Gain ultimate control of your SAP projects and teams </span> 
                             <div><br />
-                                <Link  href="/contact" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase tiny-heading">Contact Sales</a></Link>
+                                <Link  href="/contact" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export default function Digital_Projects () {
                                     <p className="mb-6 text-gray-400  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
                                      <Link href="/features/digital-projects"  passHref>
                                                         <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -154,7 +154,7 @@ export default function Digital_Projects () {
                                     <p className="mb-6 text-gray-400  card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
                                     <Link href="/features/digital-projects"  passHref>
                                                         <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -193,7 +193,7 @@ export default function Digital_Projects () {
                                     <p className="mb-6 text-gray-400  card-subheading">Save time with our templates which can be easily customized to your own Company&apos;s workflow, single source of truth for all your SAP Project related files and Documents </p>
                                 <Link href="/features/digital-projects"  passHref>
                                                         <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -242,7 +242,7 @@ export default function Digital_Projects () {
                                     <p className="mb-6 text-gray-400 leading-loose card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
                                     <Link href="/features/digital-projects"  passHref>
                                                         <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
-                                                        <span className="tiny-heading group-hover:text-gray-400">Learn More</span>
+                                                        <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                         </svg>
@@ -385,11 +385,11 @@ export default function Digital_Projects () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
  <Link href="/features/digital-projects" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -405,11 +405,11 @@ export default function Digital_Projects () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a Project Manager in SAP S/4HANA Conversion </a></Link>
  <Link href="/features/digital-projects" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -423,11 +423,11 @@ export default function Digital_Projects () {
  <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
  </a> 
  </Link>
- <p className="tiny-subheading font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
+ <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
  <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
  <Link href="/features/digital-projects" passHref>
  <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="tiny-heading group-hover:text-blue-500 pl-4">View Article</span>
+ <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
  </svg>
@@ -465,8 +465,8 @@ export default function Digital_Projects () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow tiny-heading  uppercase text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow tiny-heading uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

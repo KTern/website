@@ -12,7 +12,7 @@ export default function Landing () {
         <section className="py-8 w-full sm:py-20 md:pt-10 mt-10 bg-secondary" >
             <div className="flex items-center px-12 mx-auto flex-row">
                 <div className="relative flex flex-col items-start justify-center w-full h-full lg:w-2/3">
-                <p className="inline-block px-2 py-1 mb-5  tiny-heading tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     E-book
                 </p>
                     <h1 className="heading">S/4HANA Journey Made Simple</h1>
@@ -47,7 +47,7 @@ export default function Landing () {
                                       <Link href="/resources"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
-                             <span className="tiny-heading group-hover:text-gray-400">Go Back to all Ebooks</span>
+                             <span className="hyperlink group-hover:text-gray-400">Go Back to all Ebooks</span>
                                 
                                 </a>
                             </Link> 

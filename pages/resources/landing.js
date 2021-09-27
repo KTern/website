@@ -15,12 +15,12 @@ export default function Landing () {
                         <div className="max-w-2xl mx-auto text-center">
                             <p className="inline-block py-0 hover:bg-gray-400 pl-4 pr-4  -ml-0 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-black rounded">
                                 <Link href="#_"  rel="category" passHref>
-                                    <a className="text-white tiny-subheading uppercase ">Digital Maps</a>
+                                    <a className="text-white hyperlink uppercase ">Digital Maps</a>
                                 </Link>
                             </p>
                             <p className="inline-block pl-4   text-xs font-medium leading-5 text-gray-300 transform -translate-y-2  ">
                                 <Link href="#_"  rel="category" passHref>
-                                    <a className="text-black tiny-subheading uppercase   ">24th September 2021</a>
+                                    <a className="text-black hyperlink uppercase   ">24th September 2021</a>
                                 </Link>
                             </p>
                             <div className="mt-2">
@@ -31,10 +31,10 @@ export default function Landing () {
                                 </div>
                                 <div className="text-left ">
                                     <Link href="#" passHref>
-                                        <a><h3 className="text-black  font-bold tiny-heading ">Edson Frainlar</h3></a>
+                                        <a><h3 className="text-black  font-bold hyperlink ">Edson Frainlar</h3></a>
                                     </Link>
                                     <Link href="#" passHref>
-                                        <a><span className=" text-gray-300 font-bold tiny-subheading uppercase ">Author</span></a>
+                                        <a><span className=" text-gray-300 font-bold hyperlink uppercase ">Author</span></a>
                                     </Link>
                                 </div>
                                 </div>

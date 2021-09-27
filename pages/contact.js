@@ -70,7 +70,7 @@ export default function Contact () {
                                     </div>
                                     <div className="relative">
                                         <Link href="" passHref>
-                                            <a className="inline-block w-full button px-5 py-4 uppercase tiny-heading text-center text-white transition duration-200 bg-black 
+                                            <a className="inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-l-xl rounded-t-xl transition duration-200 hover:bg-gray-500 ease">Submit</a>
                                         </Link>
                                     </div>            
