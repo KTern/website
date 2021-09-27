@@ -16,7 +16,7 @@ export default function Home () {
                             <h2 className="mt-4 top-0 mb-2  leading-normal heading">Your SAP Digital Transformations starts here</h2>
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
-                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black   rounded-l-xl rounded-t-xl transition duration-200 uppercase header button border-2">Free Trial</a></Link>
+                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black   rounded-l-xl rounded-t-xl transition duration-200 uppercase header button border-2 border-black">Free Trial</a></Link>
                             <Link  href="/contact"><a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase header button">Contact Sales</a></Link>
                           
                         </div>

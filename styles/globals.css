@@ -91,7 +91,7 @@ video {
 .header {
     font-family: metro;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 24px;
 }
 
@@ -118,7 +118,7 @@ video {
 
 .button {
     font-family: metro;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
