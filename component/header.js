@@ -56,7 +56,7 @@ export default function Header () {
                         <ul className=" flex space-x-2 xl:space-x-10">
                         <li className="toggleable  hover:bg-secondary" >    
                             {/* <li className="toggleable hover:bg-secondary " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
-                        <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
+                        <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
                             <label htmlFor="toggle-one"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
@@ -100,9 +100,10 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                                </div>
                             </div>
                         </li>
-                          <li className="hoverable hover:bg-secondary " >
+                            <li className="toggleable hover:bg-secondary " >
+                                 <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
                             <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
-                            <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
@@ -151,13 +152,14 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                              {isTrustShown && (
                                             <FeatureCard data={{title:'Trust Center',description:'Trust Center 1 desc',url:'/trust-center',image:'/product/labs/labs_1.svg'} }/> )}
                                         </div>
-                                               </div>
+                                </div>
                             </div>
                         </li>
                       
-                           <li className="hoverable hover:bg-secondary " >
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
-                            <div role="toggle-resources" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <li className="toggleable hover:bg-secondary " >
+                                 <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
+                            <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
+                            <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h  uppercase text-black text-bold mb-2">Partners</h3>
@@ -203,7 +205,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                             </div>
                         </li>
                      
-                        <li className="hoverable hover:bg-secondary ">
+                        <li className="toggleable hover:bg-secondary ">
                         <Link href="/about-ktern" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
                         </li>
                     </ul>
