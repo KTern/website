@@ -11,7 +11,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4
+    items: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -87,7 +87,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-200 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -108,7 +108,7 @@ export default function Digital_Mines () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Unlock your Organization&apos;s Full Potential by Uncovering and Eliminating Process Complexity. </p>
+                                    <p className="mb-6 text-black  card-subheading">Unlock your Organization&apos;s Full Potential by Uncovering and Eliminating Process Complexity. </p>
                                 <Link href="/features/digital-mines"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
@@ -124,7 +124,7 @@ export default function Digital_Mines () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4 " style={{zIndex: 0}}>
-                                <div className="" ><Image width={500} height={400} className="bg-gray-200 rounded-3xl md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
+                                <div className="" ><Image width={500} height={400} className="bg-gray-100 rounded-3xl md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -146,7 +146,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-200 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -169,7 +169,7 @@ export default function Digital_Mines () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">To unlock the full potential of process mining and to improve business outcomes for organizations, the transparency and insights gained with process mining must be turned into actions by taking optimization steps.</p>
+                                    <p className="mb-6 text-black  card-subheading">To unlock the full potential of process mining and to improve business outcomes for organizations, the transparency and insights gained with process mining must be turned into actions by taking optimization steps.</p>
                                 <Link href="/features/digital-mines"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
@@ -193,7 +193,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-200 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -214,7 +214,7 @@ export default function Digital_Mines () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">KTern&apos;s Anomaly detectors ensure your Processes are running smooth and ensures any anomolies are alerted and rectified earliest. KTern&apos;s proprietery VVV approach ensures high risk anomolies are attended to first followed by the low risk ensuring smooth flow of business processes. </p>
+                                    <p className="mb-6 text-black  card-subheading">KTern&apos;s Anomaly detectors ensure your Processes are running smooth and ensures any anomolies are alerted and rectified earliest. KTern&apos;s proprietery VVV approach ensures high risk anomolies are attended to first followed by the low risk ensuring smooth flow of business processes. </p>
                                 <Link href="/features/digital-mines"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
@@ -230,7 +230,7 @@ export default function Digital_Mines () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl bg-gray-200 md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
+                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl bg-gray-100 md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -252,7 +252,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-200 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -275,7 +275,7 @@ export default function Digital_Mines () {
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose card-subheading">The Insights from Process Mining is used to Derive ROI of your SAP Transformation</p>
+                                    <p className="mb-6 text-black leading-loose card-subheading">The Insights from Process Mining is used to Derive ROI of your SAP Transformation</p>
                                 <Link href="/features/digital-mines"  passHref>
                                                         <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
@@ -299,44 +299,44 @@ export default function Digital_Mines () {
             {/* Bots Section */}
           <div className="px-20 py-10">
                 <div className="px-10">
-                <h2 className="card-heading mb-4">Digital mines Bots</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p>
+                <h2 className="section-heading text-center mb-4">Digital mines Bots</h2>
+                {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
                 </div>
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Process Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate Process Lifecycle with a Digital footprint</p>
+                        <p className="card-heading mt-7 mb-7">DX Process Orchestrator Bot</p>
+                        <p className="card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Release Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the SAP TR Releases</p>
+                        <p className="card-heading mt-7 mb-7">DX Release Orchestrator Bot</p>
+                        <p className="card-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Event Orchestrator Bot</p>
-                        <p className="text-md">Event Orchestrations for swift collaborations</p>
+                        <p className="card-heading mt-7 mb-7">DX Event Orchestrator Bot</p>
+                        <p className="card-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Change Management Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the Change management</p>
+                        <p className="card-heading mt-7 mb-7">DX Change Management Orchestrator Bot</p>
+                        <p className="card-subheading">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX  Security Impact Simulation Bot</p>
-                        <p className="text-md">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="card-heading mt-7 mb-7">DX  Security Impact Simulation Bot</p>
+                        <p className="card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading mt-7 mb-7">Bot Name</p>
+                        <p className="card-subheading">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading mt-7 mb-7">Bot Name</p>
+                        <p className="card-subheading">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
@@ -407,90 +407,118 @@ export default function Digital_Mines () {
            </section>
             {/* /Testimonial Section */}
             {/* Resources Section */}
-        <section className="w-full pt-8 bg-mines-secondary sm:pt-12 md:pt-16">
- <div className="px-10 mx-auto max-w-7xl">
- <div className="flex justify-center w-full pb-5 mb-8 border-gray-200">
- <h2 className="card-heading font-bold text-gray-800 ">Related Resources</h2>
- 
- </div>
- 
- <div className="grid grid-cols-12 gap-6">
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_2.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital mines: The ultimate guide to KTern’s mines Management Suite </a></Link>
- <Link href="/features/digital-mines" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
+            <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
+                            <div className="px-2 mx-auto max-w-7xl">
+                            <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
+                            <h2 className="section-heading  text-gray-800 ">Related Resources</h2>
+                            
+                            </div>
+                            
+                            <div className="grid grid-cols-12 gap-6 mb-6">
+                        <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                            <div className="p-4">
+                            <Link href="#_" passHref>
+                            <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                            <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_3.svg" alt="resource" layout="fill"/>
+                            </a> 
+                            </Link>
+                            </div>
+                            <div className="p-4">
+                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                        <Link href="#_"  passHref>
+                                        <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                            </div>
+                            </div>
+
+        
+                            <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                            <div className="p-4">
+                            <Link href="#_" passHref>
+                            <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                            <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_3.svg" alt="resource" layout="fill"/>
+                            </a> 
+                            </Link>
+                            </div>
+                            <div className="p-4">
+                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                        <Link href="#_"  passHref>
+                                        <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                            </div>
+                            </div>
 
 
- 
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_1.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a mines Manager in SAP S/4HANA Conversion </a></Link>
- <Link href="/features/digital-mines" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
- 
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_3.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
- <Link href="/features/digital-mines" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
+                            <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                            <div className="p-4">
+                            <Link href="#_" passHref>
+                            <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                            <Image className="object-cover bg-secondary object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_3.svg" alt="resource" layout="fill"/>
+                            </a> 
+                            </Link>
+                            </div>
+                            <div className="p-4">
+                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                        <Link href="#_"  passHref>
+                                        <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                            </div>
+                            </div>
 
+                            <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                                            <div className="p-4">
+                                            <Link href="#_" passHref>
+                                            <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                            <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/mines/mines_3.svg" alt="resource" layout="fill"/>
+                                            </a> 
+                                            </Link>
+                                            </div>
+                                            <div className="p-4">
+                                            <p className="hyperlink text-gray-400  ">Resources</p>
+                                            <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                        <Link href="#_"  passHref>
+                                                        <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                        <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                        </svg>
+                                                        </a>
+                                                    </Link>
+                                            </div>
+                                            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- </div>
- <div className="text-center"><Link href="#" passHref><a className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 hover:bg-gray-100 rounded-full font-bold text-black"> View All</a></Link></div>
- </div>
- </section>  {/* / Resources Setion */}
-            {/* Cta Section */}
+                            </div>
+                            <div className="text-center">
+                                <Link href="#_"  passHref>
+                                        <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">View All Articles</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                            </div>
+                            </div>
+                    </section>  {/* / Resources Setion */}
+                {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
                 <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-mines-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
@@ -501,8 +529,8 @@ export default function Digital_Mines () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="button  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="button  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200  border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

@@ -11,7 +11,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4
+    items: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -57,10 +57,10 @@ export default function Digital_Projects () {
             <div className="relative pt-12 md:pt-16 pb-40  bg-project-secondary border-b-4 border-project-primary">
                 <div className="relative container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center mb-12 md:mb-20">
-                        <h2 className="mb-3   font-bold heading">Digital Projects</h2>
+                        <h2 className="mb-3   heading">Digital Projects</h2>
                         <span className="mb-3  text-black subheading">Gain ultimate control of your SAP projects and teams </span> 
                             <div><br />
-                                <Link  href="/contact" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
+                                <Link  href="/contact" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-project-primary hover:bg-gray-100 hover:text-black shadow text-white rounded-l-xl rounded-t-xl transition duration-200 button">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
@@ -80,14 +80,14 @@ export default function Digital_Projects () {
             </section>    
             {/* /Hero Section */}
             {/* Streams Content Section */}
-            <section className="px-5 pb-10 relative overflow-hidden ">
+            <section className="px-5 0 relative overflow-hidden ">
                 {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
-                <div className="relative  pt-20 rounded-t-3xl pb-12 lg:pb-24">
+                <div className="relative  pt-20 rounded-t-3xl 2 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-100" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -97,14 +97,14 @@ export default function Digital_Projects () {
                             <div className="w-full lg:w-1/2 md:px-20 lg:mb-12 lg:mb-20 lg:mb-0 flex items-center">
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
-                                    <h2 className="mb-3 font-bold card-heading">
+                                    <h2 className="mb-3 card-heading">
                                         <span className="card-heading">Plan </span>        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
+                                    <p className="mb-6 text-black  card-subheading">Easiest way to plan your Project. Organize all your Project Planning such as Project Roadmaps, Users in one Place, enabling you to keep track 24*7. </p>
                                      <Link href="/features/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <a className="inline-flex items-center  font-medium text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -118,7 +118,7 @@ export default function Digital_Projects () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div><Image width={500} height={400} className="roun bg-gray-200 rounded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
+                                <div><Image width={500} height={400} className="roun bg-gray-100 rounded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -129,12 +129,12 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative  pt-2  lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative  pt-2  lg:pb-24 2 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-100" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -145,15 +145,15 @@ export default function Digital_Projects () {
                             <div className="w-full lg:w-1/2 md:px-20  lg:mb-20 lg:mb-0 flex items-center">
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
-                                    <h2 className="mb-3  font-bold card-heading">
+                                    <h2 className="mb-3  card-heading">
                                         <span className="card-heading">Collaborate</span>
                                         
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
+                                    <p className="mb-6 text-black  card-subheading">Empower your Teams with Digital Projects, designed for Companies of all sizes bringing in all your discussions, emails, notes into one digital Workplace.</p>
                                     <Link href="/features/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <a className="inline-flex items-center  font-medium text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -170,12 +170,12 @@ export default function Digital_Projects () {
                         </div>
                         </div>
                 </div>   
-                 <div className="relative  pt-20  pb-12 lg:pb-24">
+                 <div className="relative  pt-20  2 lg:pb-24">
                     <div className="w-full md:container mx-auto px-4">
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-200 md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none bg-gray-100" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -185,14 +185,14 @@ export default function Digital_Projects () {
                              <div className="w-full lg:w-1/2 md:px-20 lg:mb-12 lg:mb-20 lg:mb-0 flex items-center">
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
-                                    <h2 className="mb-3 font-bold card-heading">
+                                    <h2 className="mb-3 card-heading">
                                         <span className="card-heading">Organize </span>        
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400  card-subheading">Save time with our templates which can be easily customized to your own Company&apos;s workflow, single source of truth for all your SAP Project related files and Documents </p>
+                                    <p className="mb-6 text-black  card-subheading">Save time with our templates which can be easily customized to your own Company&apos;s workflow, single source of truth for all your SAP Project related files and Documents </p>
                                 <Link href="/features/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <a className="inline-flex items-center  font-medium text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -206,7 +206,7 @@ export default function Digital_Projects () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="roun bg-gray-200 rounded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
+                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="roun bg-gray-100 rounded-3xl md:rounded-br-none" src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -217,12 +217,12 @@ export default function Digital_Projects () {
                        </div>
                         </div>
                 </div>
-                <div className="relative  pt-2  rounded-b-3xl lg:pb-24 pb-12 lg:pb-24">
+                <div className="relative  pt-2  rounded-b-3xl lg:pb-24 2 lg:pb-24">
                     <div className="container mx-auto px-20">
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-200" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl md:rounded-br-none bg-gray-100" width={500} height={400}  src="/product/projects/project_team_3.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -233,15 +233,15 @@ export default function Digital_Projects () {
                             <div className="w-full lg:w-1/2 md:px-20  lg:mb-20 lg:mb-0 flex items-center">
                                 <div className="w-full text-center lg:text-left">
                                     <div className="max-w-md mx-auto lg:mx-0">
-                                    <h2 className="mb-3  font-bold card-heading">
+                                    <h2 className="mb-3  card-heading">
                                        
                                         <span className=" card-heading">Govern</span>
                                     </h2>
                                     </div>
                                     <div className="max-w-sm mx-auto lg:mx-0">
-                                    <p className="mb-6 text-gray-400 leading-loose card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
+                                    <p className="mb-6 text-black  card-subheading">Create Insightful Dashboards, Meaningful Reports On-The-Go.</p>
                                     <Link href="/features/digital-projects"  passHref>
-                                                        <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                                        <a className="inline-flex items-center  font-medium text-black hover:border-blue-500 group ">
                                                         <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -263,44 +263,44 @@ export default function Digital_Projects () {
             {/* Bots Section */}
             <div className="px-20 py-10">
                 <div className="px-10">
-                <h2 className="card-heading mb-4">Digital Projects Bots</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p>
+                <h2 className="section-heading text-center mb-4">Digital Projects Bots</h2>
+               
                 </div>
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Process Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate Process Lifecycle with a Digital footprint</p>
+                        <p className="card-heading">DX Process Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Release Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the SAP TR Releases</p>
+                        <p className="card-heading">DX Release Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Event Orchestrator Bot</p>
-                        <p className="text-md">Event Orchestrations for swift collaborations</p>
+                        <p className="card-heading">DX Event Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Change Management Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the Change management</p>
+                        <p className="card-heading">DX Change Management Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX  Security Impact Simulation Bot</p>
-                        <p className="text-md">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="card-heading">DX  Security Impact Simulation Bot</p>
+                        <p className="text-md card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-project-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
@@ -356,7 +356,7 @@ export default function Digital_Projects () {
                         <div className="md:py-10 px-6 w-full lg:w-2/3">
                             <div className="hidden lg:block mb-10 w-12 h-12 relative"><Image layout="fill" src="/product/projects/left-quote.svg" alt=""/></div>
                             <p className="mb-10 card-heading sm:pt-10  leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
-                            <h4 className="card-subheading font-bold card-heading">Jim W</h4>
+                            <h4 className="card-subheading card-heading">Jim W</h4>
                             <p className="text-gray-400 sm:pb-5">Partner</p>
                         </div>
                         </div>
@@ -371,89 +371,117 @@ export default function Digital_Projects () {
            </section>
             {/* /Testimonial Section */}
             {/* Resources Section */}
-<section className="w-full pt-8 bg-project-secondary sm:pt-12 md:pt-16">
- <div className="px-10 mx-auto max-w-7xl">
- <div className="flex justify-center w-full pb-5 mb-8 border-gray-200">
- <h2 className="card-heading font-bold text-gray-800 ">Related Resources</h2>
- 
- </div>
- 
- <div className="grid grid-cols-12 gap-6">
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">Digital Projects: The ultimate guide to KTern’s Project Management Suite </a></Link>
- <Link href="/features/digital-projects" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
+            <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
+                    <div className="px-2 mx-auto max-w-7xl">
+                    <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
+                    <h2 className="section-heading  text-gray-800 ">Related Resources</h2>
+                    
+                    </div>
+                    
+                    <div className="grid grid-cols-12 gap-6 mb-6">
+                   <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  ">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
+
+  
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  ">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
 
 
- 
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">The Role of a Project Manager in SAP S/4HANA Conversion </a></Link>
- <Link href="/features/digital-projects" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
- 
- <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
- <Link href="#_" passHref>
- <a className="relative block w-full h-64 overflow-hidden rounded"> 
- <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
- </a> 
- </Link>
- <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">Resources</p>
- <Link href="#_" passHref><a className="block card-subheading font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">SAP Activate – The Heart of KTern and S/4HANA Migration </a></Link>
- <Link href="/features/digital-projects" passHref>
- <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
- <span className="hyperlink group-hover:text-blue-500 pl-4">View Article</span>
- <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
- </svg>
- </a>
- </Link> 
- </div>
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="object-cover bg-secondary object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  ">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
 
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                                    <div className="p-4">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="p-4">
+                                    <p className="hyperlink text-gray-400  ">Resources</p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- </div>
- <div className="text-center"><Link href="#" passHref><a className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 hover:bg-gray-100 rounded-full font-bold text-black"> View All</a></Link></div>
- </div>
- </section>  {/* / Resources Setion */}
+                    </div>
+                    <div className="text-center">
+                        <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">View All Articles</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
+            </section>  {/* / Resources Setion */}
             {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
@@ -461,12 +489,12 @@ export default function Digital_Projects () {
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
-                <h2 className="card-heading  font-bold leading-9 tracking-tight text-white  sm:leading-10">Get started with your DXaaS Journey</h2>
+                <h2 className="card-heading  leading-9 tracking-tight text-white  sm:leading-10">Get started with your DXaaS Journey</h2>
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white font-bold rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 ">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink   text-white rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-l-xl rounded-t-xl transition duration-200 border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>
                 </div>
