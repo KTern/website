@@ -16,8 +16,8 @@ export default function Digital_Projects () {
                    
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                         <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                              <div className="flex hyperlink mb-5">
-                    <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600" inactiveItemClassName="text-gray-400" listClassName="flex space-x-1" transformLabel={(title) =>' / '+ title }/>
+                              <div className="flex hyperlink mb-5 breadcrumb">
+                    <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
                     </div>
                 <p className="inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Custom Code Remediation
