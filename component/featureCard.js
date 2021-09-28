@@ -4,7 +4,7 @@ export default function FeatureCard ({ data }) {
     return (
           <div className="p-6 flex space-x-10">
              <div className="w-1/2">
-                 <h3 className="mb-4 navbar-h uppercase">{data.title}</h3>
+                 <h3 className="navbar-h text-black text-bold mb-2 uppercase">{data.title}</h3>
                  <p className="mb-4 navbar-s">{data.description}</p>
                   <Link href={data.url}  passHref>
                  <a className="inline-flex items-center pb-1 text-black hover:border-blue-500 group ">

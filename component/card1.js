@@ -14,23 +14,23 @@ export default function Card ({data }) {
             <h3 className="navbar-h text-black text-bold mb-2 uppercase">{data.title}</h3>
             <div >
                 <li>
-                <Link href="/features/digital-projects"    ><a onMouseEnter={() => { setIsFeature1Shown(true);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
+                <Link href="/features/custom-code-remediation"    ><a onMouseEnter={() => { setIsFeature1Shown(true);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
                 className="navbar-s block p-2 hover:bg-gray-50 text-black">{data.feature1}</a></Link>
                 </li>
                 <li>
-                <Link href="/features/digital-projects"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(true);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
+                <Link href="/features/custom-code-remediation"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(true);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
                 className="navbar-s block p-2 hover:bg-gray-50 text-black">{data.feature2}</a></Link>
                 </li>
                 <li>
-                <Link href="/features/digital-projects"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(true);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
+                <Link href="/features/custom-code-remediation"    ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(true);setIsFeature4Shown(false);setIsFeature5Shown(false)}}
                 className="navbar-s block p-2 hover:bg-gray-50 text-black">{data.feature3}</a></Link>
                 </li>
                 <li>
-                <Link href="/features/digital-projects"   ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(true);setIsFeature5Shown(false)}}
+                <Link href="/features/custom-code-remediation"   ><a onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(true);setIsFeature5Shown(false)}}
                 className="navbar-s block p-2 hover:bg-gray-50 text-black">{data.feature4}</a></Link>
                 </li>
                 <li>
-                <Link href="/features/digital-projects"   ><a  onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(true)}}
+                <Link href="/features/custom-code-remediation"   ><a  onMouseEnter={() => { setIsFeature1Shown(false);setIsFeature2Shown(false);setIsFeature3Shown(false);setIsFeature4Shown(false);setIsFeature5Shown(true)}}
                 className="navbar-s block p-2 hover:bg-gray-50 text-black">{data.feature5}</a></Link>
                 </li>
                     <li className="mt-4 mx-2">
@@ -50,7 +50,7 @@ export default function Card ({data }) {
           <div className=" mx-6 relative w-8 h-8">
             <Image src={data.icon} layout="fill" alt="Digital Maps Icon" />
             </div>
-<span className="my-auto uppercase"><strong>{data.title}</strong></span></div>
+<span className="my-auto navbar-h text-black text-bold mb-2 uppercase">{data.title}</span></div>
         {isFeature1Shown && (
           <FeatureCard  data={{title:data.feature1,description:data.feature1_desc,url:data.feature_url,image:data.image }}/>
           )}

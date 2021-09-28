@@ -211,7 +211,7 @@ export default function About () {
                         </Link>
                         <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
                         <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern News 1 </a></Link>
-                        <Link href="/features/digital-projects"  passHref>
+                        <Link href="/features/custom-code-remediation"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
                                                         <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +231,7 @@ export default function About () {
                         </Link>
                         <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
                         <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern News 2  </a></Link>
-                        <Link href="/features/digital-projects"  passHref>
+                        <Link href="/features/custom-code-remediation"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
                                                         <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -250,7 +250,7 @@ export default function About () {
                         </Link>
                         <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
                         <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern-News 3 </a></Link>
-                        <Link href="/features/digital-projects"  passHref>
+                        <Link href="/features/custom-code-remediation"  passHref>
                                                         <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
                                                         <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
                                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

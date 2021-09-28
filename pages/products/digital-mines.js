@@ -305,38 +305,38 @@ export default function Digital_Mines () {
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">DX Process Orchestrator Bot</p>
-                        <p className="text-md card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
+                        <p className="text-lg font-bold mt-7 mb-4">DX Process Orchestrator Bot</p>
+                        <p className="text-md ">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">DX Release Orchestrator Bot</p>
-                        <p className="text-md card-subheading">Orchestrate the SAP TR Releases</p>
+                        <p className="text-lg font-bold mt-7 mb-4">DX Release Orchestrator Bot</p>
+                        <p className="text-md ">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">DX Event Orchestrator Bot</p>
-                        <p className="text-md card-subheading">Event Orchestrations for swift collaborations</p>
+                        <p className="text-lg font-bold mt-7 mb-4">DX Event Orchestrator Bot</p>
+                        <p className="text-md ">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">DX Change Management Orchestrator Bot</p>
-                        <p className="text-md card-subheading">Orchestrate the Change management</p>
+                        <p className="text-lg font-bold mt-7 mb-4">DX Change Management Orchestrator Bot</p>
+                        <p className="text-md ">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">DX  Security Impact Simulation Bot</p>
-                        <p className="text-md card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="text-lg font-bold mt-7 mb-4">DX  Security Impact Simulation Bot</p>
+                        <p className="text-md ">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">Bot Name</p>
-                        <p className="text-md card-subheading">Bot description</p>
+                        <p className="text-lg font-bold mt-7 mb-4">Bot Name</p>
+                        <p className="text-md ">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
                         
-                        <p className="card-heading">Bot Name</p>
-                        <p className="text-md card-subheading">Bot description</p>
+                        <p className="text-lg font-bold mt-7 mb-4">Bot Name</p>
+                        <p className="text-md ">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
@@ -424,7 +424,7 @@ export default function Digital_Mines () {
                             </Link>
                             </div>
                             <div className="p-4">
-                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                             <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                         <Link href="#_"  passHref>
                                         <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
@@ -447,7 +447,7 @@ export default function Digital_Mines () {
                             </Link>
                             </div>
                             <div className="p-4">
-                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                             <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                         <Link href="#_"  passHref>
                                         <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
@@ -470,7 +470,7 @@ export default function Digital_Mines () {
                             </Link>
                             </div>
                             <div className="p-4">
-                            <p className="hyperlink text-gray-400  ">Resources</p>
+                            <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                             <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                         <Link href="#_"  passHref>
                                         <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
@@ -492,7 +492,7 @@ export default function Digital_Mines () {
                                             </Link>
                                             </div>
                                             <div className="p-4">
-                                            <p className="hyperlink text-gray-400  ">Resources</p>
+                                            <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                                             <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                                         <Link href="#_"  passHref>
                                                         <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
@@ -509,7 +509,7 @@ export default function Digital_Mines () {
                             <div className="text-center">
                                 <Link href="#_"  passHref>
                                         <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
-                                        <span className="hyperlink group-hover:text-gray-300">View All Articles</span>
+                                        <span className="hyperlink group-hover:text-gray-300">View All Resources</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                         </svg>
@@ -529,8 +529,8 @@ export default function Digital_Mines () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="button  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow hyperlink  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="button  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow hyperlink uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200  border-2 border-black">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="button  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow button  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
+                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="button  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200  border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

@@ -86,16 +86,16 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         </div>
                                     </ul>
                                             {isProjectShown && (
-                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
+                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
                                             )}
                                             {isProcessShown && (
-                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
+                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
                                              {isMapsShown && (
-                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
+                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
                                              {isMinesShown && (
-                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
+                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
                                              {isLabsShown && (
-                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/digital-projects',feature_url:'/features/digital-projects',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
+                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
                                    
                                                </div>
                             </div>
@@ -244,7 +244,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     <label htmlFor="toggle-two" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Maps</label>
                                                     <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                            <Card1 data={{ title: 'Digital Maps', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />       
+                                                            <Card1 data={{ title: 'Digital Maps', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
                                                     </div>
                                                 </li>
@@ -254,7 +254,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     <label htmlFor="toggle-three" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Labs</label>
                                                     <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                            <Card1 data={{ title: 'Digital Labs', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />       
+                                                            <Card1 data={{ title: 'Digital Labs', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
                                                     </div>
                                                 </li>
@@ -263,7 +263,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     <label htmlFor="toggle-four" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Projects</label>
                                                     <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                            <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />       
+                                                            <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
                                                     </div>
                                                 </li>
@@ -272,7 +272,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     <label htmlFor="toggle-five" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Process</label>
                                                     <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                            <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />       
+                                                            <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
                                                     </div>
                                                 </li>
@@ -281,7 +281,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     <label htmlFor="toggle-six" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Mines</label>
                                                     <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                            <Card1 data={{ title: 'Digital Mines', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />       
+                                                            <Card1 data={{ title: 'Digital Mines', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
                                                     </div>
                                                 </li>   
@@ -290,21 +290,21 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         {isProjectShown && (
                                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                    <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />
+                                                    <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />
                                                     </div>
                                                     </div>
                                             )}
                                         {isProcessShown && (
                                             <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                                                    <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/digital-projects' }} />  
+                                                    <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />  
                                             </div></div>)}
                                              {isMapsShown && (
-                                            <Card1 data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>  )}
+                                            <Card1 data={{title:'Digital Maps',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/custom-code-remediation'} }/>  )}
                                              {isMinesShown && (
-                                            <Card1 data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/>  )}
+                                            <Card1 data={{title:'Digital Mines',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/custom-code-remediation'} }/>  )}
                                              {isLabsShown && (
-                                            <Card1 data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/digital-projects'} }/> )}
+                                            <Card1 data={{title:'Digital Labs',feature1:'Feature 1',feature2:'Feature 2',feature3:'Feature 3',feature4:'Feature 4',feature5:'Feature 5',url:'/features/custom-code-remediation'} }/> )}
                                    
                                 </div>
                             </div>
