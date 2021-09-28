@@ -287,44 +287,44 @@ export default function Digital_Labs () {
             {/* Bots Section */}
             <div className="px-20 py-10">
                 <div className="px-10">
-                <h2 className="section-heading mb-4 text-center">Digital labs Bots</h2>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+                <h2 className="section-heading text-center mb-4">Digital Labs Bots</h2>
+               
                 </div>
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">DX labs Orchestrator Bot</p>
-                        <p className="card-subheading">Orchestrate labs Lifecycle with a Digital footprint</p>
+                        <p className="card-heading">DX Process Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">DX Release Orchestrator Bot</p>
-                        <p className="card-subheading">Orchestrate the SAP TR Releases</p>
+                        <p className="card-heading">DX Release Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">DX Event Orchestrator Bot</p>
-                        <p className="card-subheading">Event Orchestrations for swift collaborations</p>
+                        <p className="card-heading">DX Event Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">DX Change Management Orchestrator Bot</p>
-                        <p className="card-subheading">Orchestrate the Change management</p>
+                        <p className="card-heading">DX Change Management Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">DX  Security Impact Simulation Bot</p>
-                        <p className="card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="card-heading">DX  Security Impact Simulation Bot</p>
+                        <p className="text-md card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">Bot Name</p>
-                        <p className="card-subheading">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-labs-400 text-center rounded-3xl">
                         
-                        <p className="card-heading mt-7 mb-7">Bot Name</p>
-                        <p className="card-subheading">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
@@ -378,7 +378,7 @@ export default function Digital_Labs () {
                             </div>
                         </div>
                         <div className="md:py-10 px-6 w-full lg:w-2/3">
-                            <div className="hidden lg:block mb-10 w-12 h-12 relative"><Image layout="fill" src="/product/projects/left-quote.svg" alt=""/></div>
+                            <div className="hidden lg:block mb-10 w-12 h-12 relative"><Image layout="fill" src="/product/labss/left-quote.svg" alt=""/></div>
                             <p className="mb-10 card-heading sm:pt-10  leading-loose text-gray-500">Detailed Evaluation of ECC environment&apos;s custom objects/code</p>
                             <h4 className="card-subheading font-bold card-heading">Jim W</h4>
                             <p className="text-gray-400 sm:pb-5">Partner</p>

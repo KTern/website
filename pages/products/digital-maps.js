@@ -293,44 +293,44 @@ export default function Digital_Maps () {
             {/* Bots Section */}
             <div className="px-20 py-10">
                 <div className="px-10">
-                <h2 className="section-heading text-center mb-4">Digital maps Bots</h2>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+                <h2 className="section-heading text-center mb-4">Digital Maps Bots</h2>
+               
                 </div>
                 <Carousel className="bots flex p-10  " responsive={responsive}>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX maps Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate maps Lifecycle with a Digital footprint</p>
+                        <p className="card-heading">DX Process Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Release Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the SAP TR Releases</p>
+                        <p className="card-heading">DX Release Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the SAP TR Releases</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Event Orchestrator Bot</p>
-                        <p className="text-md">Event Orchestrations for swift collaborations</p>
+                        <p className="card-heading">DX Event Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Event Orchestrations for swift collaborations</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX Change Management Orchestrator Bot</p>
-                        <p className="text-md">Orchestrate the Change management</p>
+                        <p className="card-heading">DX Change Management Orchestrator Bot</p>
+                        <p className="text-md card-subheading">Orchestrate the Change management</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">DX  Security Impact Simulation Bot</p>
-                        <p className="text-md">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
+                        <p className="card-heading">DX  Security Impact Simulation Bot</p>
+                        <p className="text-md card-subheading">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
                      <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>
                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center rounded-3xl">
                         
-                        <p className="text-lg font-bold mt-7 mb-7">Bot Name</p>
-                        <p className="text-md">Bot description</p>
+                        <p className="card-heading">Bot Name</p>
+                        <p className="text-md card-subheading">Bot description</p>
                     </div>   
                 </Carousel>
             </div>
