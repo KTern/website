@@ -6,12 +6,27 @@ import digitallabs from "/public/features/digital-labs-screenshot.png"
 import digitalprojects from "/public/features/digital-projects-screenshot.png"
 import digitalprocess from "/public/features/digital-process-screenshot.png"
 import digitalmines from "/public/features/digital-mines-screenshot.png"
-
-
+import React, { useEffect, useState } from "react";
+import Router from 'next/router'
 export default function Features () {
+    // const [loaded,setLoaded] = useState(false)
+    // useEffect(() => {
+    //     const {pathname} = Router
+    //     // conditional redirect
+    //     if(pathname == '/features' ){
+    //         // with router.push the page may be added to history
+    //         // the browser on history back will  go back to this page and then forward again to the redirected page
+    //         // you can prevent this behaviour using location.replace
+    //         Router.push('#features')
+    //        //location.replace("/hello-nextjs")
+    //     }else{
+    //         setLoaded(true)
+    //     }
+    //   },[]);
     return (
         <Layout>
-             <section className="w-full py-20 bg-herogradient" >
+
+             <section id="features" className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col text-center items-center justify-center w-full h-full ">
                 <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
@@ -29,146 +44,172 @@ export default function Features () {
                
             </div>
             </section>
-
-             <section className="relative w-full py-12 overflow-hidden bg-white md:py-20  xl:pt-32 xl:pb-40">
+            <section className="flex space-x-10 justify-center items-center p-5 bg-white shadow-2xl  sticky z-50 top-16 border-2">    
+                <Link  href="/features#digital-maps"><a className="hyperlink uppercase hover:text-maps-primary">Digital Maps</a></Link>
+                <Link href="/features#digital-projects"><a  className="hyperlink uppercase hover:text-project-primary">Digital Projects</a></Link>
+                <Link  href="/features#digital-process"><a className="hyperlink uppercase hover:text-process-primary">Digital Process</a></Link>
+                <Link  href="/features#digital-labs"><a className="hyperlink uppercase hover:text-labs-primary">Digital Labs</a></Link>
+                <Link  href="/features#digital-mines"><a className="hyperlink uppercase hover:text-mines-primary">Digital Mines</a></Link>
+            </section>
+             <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Maps</h2>
-                    <p className="mb-12 card-subheading  text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Maps</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and assess the entire landscape</p>
 
                     <div className="flex w-full h-full">
 
                         <div className="w-full lg:w-2/3">
 
                             {/* <!-- Feature blocks first column --> */}
-                            <div className="flex flex-row w-full mb-10 sm:flex-col">
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                    <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape <br /> Assessment</h3>
-                                            </div>
-                                            
-                                            <p className="mb-2  text-gray-600">Gain detailed information about your SAP System. 
-
-                                            </p>
-                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-maps-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full md:w-1/2 ">
-                                    <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Process Assessment</h3>
+                                    
                                             </div>
-                                                                                     
-                                               <p className="mb-2  text-gray-600">Understand how each process in your current system is getting affected.</p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-maps-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                         </div>
                                         
-
+                                         
+                            </a>
+                            </Link>
+                           
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-maps-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-maps-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
-                            <div className="flex flex-row w-full mb-5 sm:flex-col">
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Object Assessment</h3>
-                                            </div>
-                                                                                       
-                                             <p className="mb-2  text-gray-600">Automate the entire process of SAP Custom Object Analytics.</p>
-                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
+                                
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-maps-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full md:w-1/2">
-                                        <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-maps-secondary rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-maps-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
-                                                    </div>
-
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800"> Transformation <br /> Assessment</h3>
-                                                </div>
-                                                                                              
-                                                  <p className="mb-2  text-gray-600">Get Complete Business Process Mapping at upto 6 Granular Levels</p>
-                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-maps-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                            </div>
-
+                            </Link>
+                                    
+                                            </button>
                                         </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-maps-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Maps.png"  layout="fill" alt="Digital Maps Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-maps-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           </div>
 
                         </div>
 
@@ -197,480 +238,165 @@ export default function Features () {
                 </div>
 
             </section>
-              <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
+              <section id="digital-projects" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Projects</h2>
-                    <p className="mb-12 card-subheading  text-gray-500">KTern&apos;s Digital Projects Provides you with <br />Automated Enterprise Project Execution</p>
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Projects</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">KTern&apos;s Digital Projects Provides you with Automated Enterprise Project Execution</p>
 
                     <div className="flex w-full h-full">
 
                         <div className="w-full lg:w-2/3">
 
                             {/* <!-- Feature blocks first column --> */}
-                            <div className="flex flex-row w-full mb-10 sm:flex-col">
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Cutover Orchestrator</h3>
-                                            </div>
-                                            
-                                            <p className="mb-2  text-gray-600">Risk-free, Transparent Go-Live with KTern&apos;s Cutover Orchestration.
-
-                                            </p>
-                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
+                                 <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/projects.png"  layout="fill" alt="Digital project Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full md:w-1/2 ">
-                                    <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
+                                    
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Workflow Wizard</h3>
-                                            </div>
-                                                                 
-                                                                   <p className="mb-2  text-gray-600">Customize your own Workflow using KTern&apos;s Digitally Special Bots.</p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-project-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                         </div>
                                         
-
-                                    </div>
-                                    </a>
-                                </Link>
-                            </div>
-
-                            {/* <!-- Feature blocks second column --> */}
-                            <div className="flex flex-row w-full mb-5 sm:flex-col">
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Timeline Simulator</h3>
-                                            </div>
-                                                                                      
-                                              <p className="mb-2  text-gray-600">Set, Simulate, Auto-Track and Gain Insights on your Project Timeline. </p>
-                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        
-                                        </div>
-
-                                    </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full md:w-1/2">
-                                        <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-project-secondary rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-project-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/Projects.png" alt="Projects" layout="fill"/>
-                                            </div>
-
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Collaboration Forum</h3>
-                                                </div>
-                                                                                               
-                                                 <p className="mb-2  text-gray-600">Organized Management of your SAP Project Files, Documents, Communication .</p>
-                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-
-                        </div>
-
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-                  <Image
-                    src={digitalprojects}
-                    alt="KTern Hero Image"
-                    width={1000}
-                    height={600}
-                    objectFit="cover" 
-                  />
-                
-                
-                                    </div>
-                </div>
-            </div>
-
-                    </div>
-                </div>
-
-            </section>
-           <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Process</h2>
-                    <p className="mb-12 card-subheading  text-gray-500">Using KTern&apos;s Digital Process  Manage <br />all your Business Processes Better.</p>
-
-                    <div className="flex w-full h-full">
-
-                        <div className="w-full lg:w-2/3">
-
-                            {/* <!-- Feature blocks first column --> */}
-                            <div className="flex flex-row w-full mb-10 sm:flex-col">
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Orchestrator</h3>
-                                            </div>
-                                            
-                                            <p className="mb-2  text-gray-600">Model, implement, integrate, and monitor custom process applications and integration scenarios
-
-                                            </p>
-                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-
-                                    </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full md:w-1/2 ">
-                                    <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
-                                            </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Code Remediation</h3>
-                                            </div>
-                                                                                
-                                                    <p className="mb-2  text-gray-600">Automated Analysis and Remediation of your Custom Code </p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-                                        
-
-                                    </div>
-                                    </a>
-                                </Link>
-                            </div>
-
-                            {/* <!-- Feature blocks second column --> */}
-                            <div className="flex flex-row w-full mb-5 sm:flex-col">
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">BPML Wizard</h3>
-                                            </div>
-                                                                                
-                                                    <p className="mb-2  text-gray-600">Map your Complex Business Processes, Process Groups and Process Steps </p>
-                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        
-                                        </div>
-
-                                    </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full md:w-1/2">
-                                        <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-process-secondary rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-process-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/Process.svg" alt="Process" layout="fill"/>
-                                            </div>
-
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Training Academy</h3>
-                                                </div>
-                                                                                               
-                                                 <p className="mb-2  text-gray-600">Automatic Training Scenario Recommendations based on changes made to Business Processes</p>
-                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-
-                        </div>
-
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-                  <Image
-                    src={digitalprocess}
-                    alt="KTern Hero Image"
-                    width={1000}
-                    height={600}
-                    objectFit="cover" 
-                  />
-                
-                
-                                    </div>
-                </div>
-            </div>
-
-                    </div>
-                </div>
-
-            </section>
-           <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Labs</h2>
-                    <p className="mb-12 card-subheading  text-gray-500">KTern&apos;s Digital Labs Automates and enables  <br /> Continous SAP Enterprise Testing. </p>
-
-                    <div className="flex w-full h-full">
-
-                        <div className="w-full lg:w-2/3">
-
-                            {/* <!-- Feature blocks first column --> */}
-                            <div className="flex flex-row w-full mb-10 sm:flex-col">
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                    <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/labs.png" alt="labs"  layout="fill"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Test Case Finder</h3>
-                                            </div>
+                                         
+                            </a>
+                            </Link>
                            
-                                            <p className="mb-2  text-gray-600"> Automated, Continuous Test case Generator for Modern Enterprises  
-
-                                            </p>
-                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/projects.png"  layout="fill" alt="Digital project Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full md:w-1/2 ">
-                                    <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/labs.png" alt="labs" layout="fill"/>
+                                    
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Autonomous Test Console</h3>
-                                            </div>
-                                                                  
-                                                 <p className="mb-2  text-gray-600">Customize and Drive your Enterprise&apos;s Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-project-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                         </div>
                                         
-
-                                    </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                         
+                            </a>
+                            </Link>
+                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
-                            <div className="flex flex-row w-full mb-5 sm:flex-col">
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/labs.png" alt="labs" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Defect Wizards</h3>
-                                            </div>
-                                                                    
-                                            
-                                               <p className="mb-2  text-gray-600">Raise and Manage Defects and Issues that Might Raise during your Testing.  </p>
-                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
+                                
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/projects.png"  layout="fill" alt="Digital project Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full md:w-1/2">
-                                        <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-labs-secondary rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-labs-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                    <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/labs.png"  alt="labs" layout="fill"/>
-                                                </div>
-
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Intelligent Reports</h3>
-                                                </div>
-                                                                              
-                                                 <p className="mb-2  text-gray-600">Generate,Customize and Share Detailed Testing Analysis Reports.</p>
-                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-project-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                            </div>
-
+                            </Link>
+                                    
+                                            </button>
                                         </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/projects.png"  layout="fill" alt="Digital project Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-project-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           </div>
 
                         </div>
 
@@ -682,162 +408,182 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-                  <Image
-                    src={digitallabs}
-                    alt="KTern Hero Image"
-                    width={1000}
-                    height={600}
-                    objectFit="cover" 
-                  />
-                
-                
-                                    </div>
+  <Image
+    src={digitalprojects}
+    alt="KTern Hero Image"
+    width={1000}
+    height={600}
+    objectFit="cover" 
+  />
+
+
+                    </div>
                 </div>
             </div>
 
                     </div>
-                </div>
+                 </div>
 
             </section>
-           <section className="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
+           <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 card-heading  leading-tight text-gray-900">Digital Mines</h2>
-                    <p className="mb-12 card-subheading  text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and <br />assess the entire landscape</p>
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Process</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">Using KTern&apos;s Digital Process  Manage all your Business Processes Better.</p>
 
                     <div className="flex w-full h-full">
 
                         <div className="w-full lg:w-2/3">
 
                             {/* <!-- Feature blocks first column --> */}
-                            <div className="flex flex-row w-full mb-10 sm:flex-col">
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2   ">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                    <div className="relative w-8 h-8">
-                                                        <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
-                                                    </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Mining Wizards</h3>
-                                            </div>
-                                            
-                                            <p className="mb-2  text-gray-600">Discover and Improve Hidden Potential in your existing Business Processes.
-
-                                            </p>
-                                           <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
+                                 <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-process-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Process.svg"  layout="fill" alt="Digital process Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation"  passHref>
-                                    <a className="w-full md:w-1/2 ">
-                                    <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                            <div className="w-8 h-8 relative">
-                                            <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
+                                    
                                             </div>
-                                            <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Optimizer</h3>
-                                            </div>
-                                                                                      
-                                              <p className="mb-2  text-gray-600">Run your Processes aligned to Best practices, continuously Improving with Changing Demands.</p>
-                                            <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-process-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                         </div>
                                         
-
+                                         
+                            </a>
+                            </Link>
+                           
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-process-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Process.svg"  layout="fill" alt="Digital process Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-process-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                             </div>
 
                             {/* <!-- Feature blocks second column --> */}
-                            <div className="flex flex-row w-full mb-5 sm:flex-col">
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full mb-10 md:mb-0 md:w-1/2">
-                                    <div className="relative h-full ml-0 mr-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
-                                        <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
-                                            <div className="flex items-center -mt-1">
-                                                <div className="w-8 h-8 relative" >
-                                            <Image src="/assets/icons/mines.png" alt="mines" layout="fill"/>
-                                            </div>
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">ROI Estimator</h3>
-                                            </div>
-                                                                                    
-                                                <p className="mb-2  text-gray-600">Recieve an Estimate how much Savings and ROI your Company could generate from your Transformation Investment.</p>
-                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 p">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                        
-                                        </div>
-
+                            <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
+                                
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-process-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Process.svg"  layout="fill" alt="Digital process Icon"/>
                                     </div>
-                                    </a>
-                                </Link>
-
-                                <Link href="/features/custom-code-remediation" passHref>
-                                    <a className="w-full md:w-1/2">
-                                        <div className="relative h-full ml-0 md:mr-10 shadow hover:shadow-xl transition-all duration-500">
-                                            <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-mines-secondary rounded-lg"></span>
-                                            <div className="relative h-full p-5 bg-white border-2 border-mines-primary rounded-lg">
-                                                <div className="flex items-center -mt-1">
-                                                    <div className="w-8 h-8 relative">
-                                                <Image src="/assets/icons/Mines.png"  alt="Mines" layout="fill"/>
-                                                </div>
-
-                                                <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Business-Ops Cockpit</h3>
-                                                </div>
-                                                                                              
-                                                  <p className="mb-2  text-gray-600">Gain real time Business Intelligence and Respond quickly.</p>
-                                                <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                    <Link href="/features/custom-code-remediation"  passHref>
-                                <a className="absolute inline-flex items-center pb-1  text-black hover:border-blue-500 group bottom-0 ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-process-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
-                            </Link>                                                                            
-                                            </div>
-                                           
-                                            </div>
-
+                            </Link>
+                                    
+                                            </button>
                                         </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-process-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/Process.svg"  layout="fill" alt="Digital process Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-process-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           </div>
 
                         </div>
 
@@ -849,13 +595,13 @@ export default function Features () {
                     <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
                     <div className="relative overflow-hidden border-2 border-black rounded-2xl">
                   
-                  <Image
-                    src={digitalmines}
-                    alt="Ktern Hero Image"
-                    width={1000}
-                    height={600}
-                    objectFit="cover" 
-                />
+  <Image
+    src={digitalprocess}
+    alt="KTern Hero Image"
+    width={1000}
+    height={600}
+    objectFit="cover" 
+  />
 
 
                     </div>
@@ -863,7 +609,381 @@ export default function Features () {
             </div>
 
                     </div>
+                  </div>
+
+            </section>
+           <section id="digital-labs" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
+                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Labs</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">KTern&apos;s Digital Labs Automates and enables Continous SAP Enterprise Testing. </p>
+
+                    <div className="flex w-full h-full">
+
+                        <div className="w-full lg:w-2/3">
+
+                            {/* <!-- Feature blocks first column --> */}
+                            <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
+                                 <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-labs-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/labs.png"  layout="fill" alt="Digital labs Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-labs-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-labs-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/labs.png"  layout="fill" alt="Digital labs Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-labs-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                             </div>
+
+                            {/* <!-- Feature blocks second column --> */}
+                            <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
+                                
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-labs-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/labs.png"  layout="fill" alt="Digital labs Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-labs-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-labs-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/labs.png"  layout="fill" alt="Digital labs Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-labs-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           </div>
+
+                        </div>
+
+                        
+
+
+                        <div className="hidden w-1/3  lg:block">
+                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
+                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
+                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
+                  
+  <Image
+    src={digitallabs}
+    alt="KTern Hero Image"
+    width={1000}
+    height={600}
+    objectFit="cover" 
+  />
+
+
+                    </div>
                 </div>
+            </div>
+
+                    </div>
+                  </div>
+
+            </section>
+           <section id="digital-mines" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
+                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Mines</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">KTern&apos;s Digital Maps connects to an ECC system and assess the entire landscape</p>
+
+                    <div className="flex w-full h-full">
+
+                        <div className="w-full lg:w-2/3">
+
+                            {/* <!-- Feature blocks first column --> */}
+                            <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
+                                 <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-mines-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/mines.png"  layout="fill" alt="Digital mines Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-mines-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                               <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-mines-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/mines.png"  layout="fill" alt="Digital mines Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-mines-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                             </div>
+
+                            {/* <!-- Feature blocks second column --> */}
+                            <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
+                                
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-mines-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/mines.png"  layout="fill" alt="Digital mines Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-mines-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           
+                                <Link href="/features">
+                                     
+                                    <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2  border-black hover:border-mines-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                            <div className="flex ">
+                                    <div className="relative w-8 h-8">
+                                    <Image src="/assets/icons/mines.png"  layout="fill" alt="Digital mines Icon"/>
+                                    </div>
+                                    
+                                            </div>
+                                            <h3 className="my-2 card-heading  text-gray-800">Business Process Assessment</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">Understand how each process in your current system is getting affected.</p>
+                                    <div className="mt-2">
+                                        <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
+                                            <button to="#" className="icon-link__link">
+                                                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pb-1  text-black group ">
+                                <span className="hyperlink group-hover:text-mines-primary">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                                    
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                        
+                                         
+                            </a>
+                            </Link>
+                           </div>
+
+                        </div>
+
+                        
+
+
+                        <div className="hidden w-1/3  lg:block">
+                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
+                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
+                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
+                  
+  <Image
+    src={digitalmines}
+    alt="KTern Hero Image"
+    width={1000}
+    height={600}
+    objectFit="cover" 
+  />
+
+
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+                 </div>
 
             </section>
                    
