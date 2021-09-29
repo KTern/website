@@ -9,34 +9,27 @@ export default function Landing () {
                 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons' async='async'></script>
             </Head>
         <Layout>
-        <section className="py-8 w-full sm:py-20 md:pt-10 mt-10 bg-secondary" >
-            <div className="flex items-center px-12 mx-auto flex-row">
-                <div className="relative flex flex-col items-start justify-center w-full h-full lg:w-2/3">
-                <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+      <section id="features" className="w-full pt-10 bg-herogradient" >
+            <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
+                <div className="relative z-20 flex flex-col  w-full h-full ">
+                <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     E-book
                 </p>
-                    <h1 className="heading">S/4HANA Journey Made Simple</h1>
-                    <p className="subheading text-gray-500 pb-7">Digitally Transform to SAP S/4HANA From SAP ECC</p>
-
-                  <div className="relative">
-                                        <Link href="#downloadbook" passHref>
-                                            <a className="button inline-block w-full px-5 py-2  text-center text-white transition duration-200 bg-black 
-                                            rounded-r-xl rounded-b-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download E-book</a>
-                                        </Link>
-                                    </div>    
+                    <h1 className="heading text-white "  >S/4 HANA Journey Made Simple</h1>
+                    <p className="subheading text-gray-100 pb-7 pt-2">Digitally Transform to SAP S/4HANA From SAP ECC</p>
+                    <div className="flex flex-row">
+                    
+                   
+                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Download E-book</a></Link>
+                    </div>
                 </div>
-
-                <div className="hidden lg:block justify-end w-full pl-6 overflow-hidden md:w-1/3 md:pl-0">
+<div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
             <Image width={500} height={500} alt="hero" src="/resources/s4ebook.png" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
-
-                
-
-
-                
+               
             </div>
             </section>
-
+            
             <section className="relative py-0 bg-white  lg:py-10">
                 <div className="flex flex-col items-center justify-between px-10 mx-auto max-w-7xl xl:px-5 lg:flex-row">
                     <div className="flex flex-col items-center w-full px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
@@ -75,7 +68,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
             
                         <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
                             <div id="downloadbook" className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
-                                <h4 className="w-full font-myriad-pro card-heading  leading-snug">Download E-Book</h4>
+                                <h4 className="w-full  card-heading  ">Download E-Book</h4>
                                 <div className="relative w-full mt-6 space-y-8">
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">First Name</label>
@@ -95,7 +88,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                                     </div>
                                     <div className="relative">
                                         <Link href="" passHref>
-                                            <a className="inline-block w-full px-5 py-4 text-xl  text-center text-white transition duration-200 bg-black 
+                                            <a className="inline-block w-full px-5 py-4   text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition button uppercase duration-200 hover:bg-gray-500 ease">Download</a>
                                         </Link>
                                     </div>            

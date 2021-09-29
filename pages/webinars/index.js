@@ -167,9 +167,7 @@ export default function Webinar () {
                 {/* <!-- On demand Webinar Card Display--> */}
                 <div className="w-full md:w-4/5 pl-20 mb-4 md:mb-0">
                         {/* Chips Section */}
-                        <section className=" flex pb-10 items-center justify-end">
-                          
-                        </section>
+                        
                         <div className="container mx-auto space-y-10">
                             <div className="grid grid-cols-12 col-span-12 gap-7">
                                 <Link href="/webinars/webinar-1" passHref>

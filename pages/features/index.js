@@ -9,20 +9,7 @@ import digitalmines from "/public/features/digital-mines-screenshot.png"
 import React, { useEffect, useState } from "react";
 import Router from 'next/router'
 export default function Features () {
-    // const [loaded,setLoaded] = useState(false)
-    // useEffect(() => {
-    //     const {pathname} = Router
-    //     // conditional redirect
-    //     if(pathname == '/features' ){
-    //         // with router.push the page may be added to history
-    //         // the browser on history back will  go back to this page and then forward again to the redirected page
-    //         // you can prevent this behaviour using location.replace
-    //         Router.push('#features')
-    //        //location.replace("/hello-nextjs")
-    //     }else{
-    //         setLoaded(true)
-    //     }
-    //   },[]);
+
     return (
         <Layout>
 
