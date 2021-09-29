@@ -211,7 +211,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                     </ul>
                </div>
                 <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
-                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-l-xl button rounded-t-xl transition duration-200 ">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>
         </nav>
