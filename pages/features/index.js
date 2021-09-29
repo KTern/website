@@ -52,7 +52,7 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Landscape <br /> Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>
+                                            
                                             <p className="mb-2  text-gray-600">Gain detailed information about your SAP System. 
 
                                             </p>
@@ -84,7 +84,7 @@ export default function Features () {
                                                     </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Business Process Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                         
+                                                                                     
                                                <p className="mb-2  text-gray-600">Understand how each process in your current system is getting affected.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -118,7 +118,7 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Object Assessment</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                           
+                                                                                       
                                              <p className="mb-2  text-gray-600">Automate the entire process of SAP Custom Object Analytics.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -150,7 +150,7 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800"> Transformation <br /> Assessment</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 hyperlink  text-maps-primary uppercase">Digital maps</p>                                              
+                                                                                              
                                                   <p className="mb-2  text-gray-600">Get Complete Business Process Mapping at upto 6 Granular Levels</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -219,7 +219,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Cutover Orchestrator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>
+                                            
                                             <p className="mb-2  text-gray-600">Risk-free, Transparent Go-Live with KTern&apos;s Cutover Orchestration.
 
                                             </p>
@@ -251,7 +251,7 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Workflow Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                     
+                                                                 
                                                                    <p className="mb-2  text-gray-600">Customize your own Workflow using KTern&apos;s Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -285,7 +285,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Timeline Simulator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                                          
+                                                                                      
                                               <p className="mb-2  text-gray-600">Set, Simulate, Auto-Track and Gain Insights on your Project Timeline. </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -317,7 +317,7 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Collaboration Forum</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 hyperlink  text-project-primary uppercase">Digital Projects</p>                                               
+                                                                                               
                                                  <p className="mb-2  text-gray-600">Organized Management of your SAP Project Files, Documents, Communication .</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -386,7 +386,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Orchestrator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>
+                                            
                                             <p className="mb-2  text-gray-600">Model, implement, integrate, and monitor custom process applications and integration scenarios
 
                                             </p>
@@ -418,7 +418,7 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Custom Code Remediation</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                    
+                                                                                
                                                     <p className="mb-2  text-gray-600">Automated Analysis and Remediation of your Custom Code </p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -452,7 +452,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">BPML Wizard</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                    
+                                                                                
                                                     <p className="mb-2  text-gray-600">Map your Complex Business Processes, Process Groups and Process Steps </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -484,7 +484,7 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Training Academy</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 hyperlink  text-process-primary uppercase">Digital Process</p>                                               
+                                                                                               
                                                  <p className="mb-2  text-gray-600">Automatic Training Scenario Recommendations based on changes made to Business Processes</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -553,7 +553,7 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Test Case Finder</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>
+                           
                                             <p className="mb-2  text-gray-600"> Automated, Continuous Test case Generator for Modern Enterprises  
 
                                             </p>
@@ -585,7 +585,7 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Autonomous Test Console</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                       
+                                                                  
                                                  <p className="mb-2  text-gray-600">Customize and Drive your Enterprise&apos;s Automated SAP Testing Workflow driven by our Digitally Special Bots.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -619,7 +619,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Defect Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                         
+                                                                    
                                             
                                                <p className="mb-2  text-gray-600">Raise and Manage Defects and Issues that Might Raise during your Testing.  </p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
@@ -652,7 +652,7 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Intelligent Reports</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 hyperlink  text-labs-primary uppercase">Digital Labs</p>                                               
+                                                                              
                                                  <p className="mb-2  text-gray-600">Generate,Customize and Share Detailed Testing Analysis Reports.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -721,7 +721,7 @@ export default function Features () {
                                                     </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Mining Wizards</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital Mines</p>
+                                            
                                             <p className="mb-2  text-gray-600">Discover and Improve Hidden Potential in your existing Business Processes.
 
                                             </p>
@@ -753,7 +753,7 @@ export default function Features () {
                                             </div>
                                             <h3 className="my-2 ml-3 card-subheading  text-gray-800">Process Optimizer</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                          
+                                                                                      
                                               <p className="mb-2  text-gray-600">Run your Processes aligned to Best practices, continuously Improving with Changing Demands.</p>
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -787,7 +787,7 @@ export default function Features () {
                                             </div>
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">ROI Estimator</h3>
                                             </div>
-                                            <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                        
+                                                                                    
                                                 <p className="mb-2  text-gray-600">Recieve an Estimate how much Savings and ROI your Company could generate from your Transformation Investment.</p>
                                              <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
@@ -819,7 +819,7 @@ export default function Features () {
 
                                                 <h3 className="my-2 ml-3 card-subheading  text-gray-800">SAP Business-Ops Cockpit</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 hyperlink  text-mines-primary uppercase">Digital mines</p>                                              
+                                                                                              
                                                   <p className="mb-2  text-gray-600">Gain real time Business Intelligence and Respond quickly.</p>
                                                 <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                                     <Link href="/features/custom-code-remediation"  passHref>
