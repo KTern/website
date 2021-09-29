@@ -14,7 +14,9 @@ export default function WebinarLanding ({ pageProps }) {
         about: "Manual testing  increases the required costs and timelines during SAP Digital Transformation. However, considering today’s complex landscapes, integrated processes, and future innovations, automation of the SAP testing lifecycle is just the first step.Auto-detecting process changes to execute autonomous testing based on business process criticality is the path forward.",
         category: "Digital Maps",
         learnlist: [ "Auto-generation of test scripts based on business process criticality.", "No-code API testing bots and screen-based testing bots.", "Orchestrating remote UAT and go-lives through a Digital Workplace Platform." ],
-        panellist:[{name:"Ratnakumar",designation:"CEO & Founder",image:"/webinar/ratna.webp"}]
+        panellist: [ { name: "Ratnakumar", designation: "CEO & Founder", image: "/webinar/ratna.webp" } ],
+        class: 'absolute inset-0 bg-gradient-to-b from-labs-primary to-labs-secondary opacity-30',
+        categoryStyle:'bg-labs-secondary'
     }
     return (
         <Layout>

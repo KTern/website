@@ -28,15 +28,15 @@ export default function Features () {
 
              <section id="features" className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
-                <div className="relative z-20 flex flex-col text-center items-center justify-center w-full h-full ">
-                <p className="inline-block px-2 py-1 mb-5  hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <div className="relative z-20 flex flex-col  w-full h-full ">
+                <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     All Features
                 </p>
                     <h1 className="heading text-white "  >Transform your DX Experience</h1>
                     <p className="subheading text-gray-100 pb-7 pt-2">KTern&apos;s Digital Workplace takes care of your entire DX Transformation from Initial Assessment until your SAP System Goes Live and Beyond Offering Continuous, Constant, Automated Transformation</p>
                     <div className="flex flex-row">
                     
-                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" button inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase">Free Trial</a></Link>
+                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" button inline-block mr-10  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black">Free Trial</a></Link>
                     <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                     </div>
                 </div>

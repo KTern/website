@@ -4,7 +4,7 @@ export default function WebinarLayout ({ data }) {
     return (
         <>
             <section className="relative" >
-            <div className="absolute inset-0 bg-gradient-to-b from-labs-primary to-labs-secondary opacity-30"></div>
+            <div className={`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}></div>
         
             <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
                 <div className="flex flex-wrap text-white">
@@ -34,8 +34,8 @@ export default function WebinarLayout ({ data }) {
                             <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
                             </div>
                             <div>
-                            <h3 className=" sm: lg: hyperlink">{data.time}</h3>
-                            <p className="sm: lg: hyperlink">{data.zone}</p>
+                            <h3 className=" hyperlink">{data.time}</h3>
+                            <p className="hyperlink">{data.zone}</p>
                             
                             </div>
                         </div>
@@ -56,16 +56,16 @@ export default function WebinarLayout ({ data }) {
                         <div className="flex flex-col items-start md:flex-row">
 
                             <div className="w-full space-y-5 md:w-3/5 md:pr-16">
-                                <p className="inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2 bg-labs-secondary rounded">
+                                <p className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded ${data.categoryStyle}`} >
                                 <Link href="#_"  rel="category">
-                                   <a className="text-black hyperlink uppercase"> {data.category}</a>
+                                   <a className="text-black hyperlink uppercase" > {data.category}</a>
                                 </Link>
                             </p>
-                            <h2 className=" card-heading leading-none text-black sm: md:">
+                            <h2 className=" card-heading  text-black sm: md:">
                                 About
                             </h2>
                             <p className=" text-gray-600 card-subheading md:pr-16">{ data.about}</p>
-                                <h2 className=" card-heading leading-none text-black sm: md:">
+                                <h2 className=" card-heading  text-black sm: md:">
                                 You&apos;ll Learn
                                 </h2>
                                 <ul className="w-full rounded-lg mt-2 mb-3 text-black">
@@ -80,7 +80,7 @@ export default function WebinarLayout ({ data }) {
                                     </li>
                                 ))}
                                  </ul>
-                                    <h2 className="card-heading  leading-none text-black sm: md:">
+                                    <h2 className="card-heading   text-black sm: md:">
                                     Your Panelists
                                 </h2>
                                     <div className="flex items-center  p-5 rounded-xl">
@@ -89,8 +89,8 @@ export default function WebinarLayout ({ data }) {
                                             <div className=" block w-40 h-40 relative ">
                                                 <Image layout="fill" className="mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.image} alt=""/>
                                             </div>
-                                            <h3 className="mb-1   text-xl font-bold">{member.name}</h3>
-                                            <p className="text-gray-500 text-sm">{member.designation}</p>
+                                            <h3 className="mb-1   card-heading">{member.name}</h3>
+                                            <p className="text-gray-500 card-subheading">{member.designation}</p>
                                     </div>
                                 ))}
 
@@ -122,7 +122,7 @@ export default function WebinarLayout ({ data }) {
                                     <div className="relative  text-center">
                                     
                                         <Link href="/thank-you" passHref>
-                                            <a className="inline-block w-full px-5 py-4 uppercase hyperlink  text-center text-white transition duration-200 bg-black 
+                                            <a className="inline-block w-full px-5 py-4 button  text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl button transition duration-200 hover:bg-gray-500 ease">Submit</a>
                                         </Link>
 
