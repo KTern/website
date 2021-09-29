@@ -25,9 +25,9 @@ export default function Digital_Projects () {
                     <h1 className="heading">Analyse and Remediate your Custom Code Smoothly</h1>
                     <p className=" text-gray-500 pb-7 subheading">KTern Digital Workplace enables you to analyse the syntatical change impact of all custom Z tables, Z programs and Z objects passing it to AI-Powered Remediation Engine which comes up with the remediation recommendations.   </p>
                     <div className="flex flex items-center  w-full sm:w-auto sm:flex-row space-x-10">
-                       <Link  href="#" passHref><a className="button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200">Get Started</a></Link>
+                       <Link  href="#" passHref><a className="button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">Get Started</a></Link>
                         <Link href="" passHref>
-                        <a  className="flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-l-xl rounded-t-xl transition duration-200 button inline-block">        
+                        <a  className="flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block">        
                                         <Image className=" w-6 h-6" src="/save-file.svg" alt="save file" width={15 } height={20 }/>
                                 <span className="button">&nbsp;&nbsp;Download Datasheet</span>
                         </a>
@@ -56,7 +56,7 @@ export default function Digital_Projects () {
                     </div>
                      <div className="flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
-                            <div className="rounded-lg "><Image  src="/features/custom-code-center.png" alt="" width={500} height={400}  /></div>
+                            <div className=" "><Image  src="/features/custom-code-center.png" alt="" width={500} height={400}  /></div>
                             <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -68,7 +68,7 @@ export default function Digital_Projects () {
                 <div className="flex space-x-20 mb-8 mx-auto animated fadeIn sm:flex-row">
                             <div className="relative flex items-center mb-8 w-1/2" >
                     <div className="relative" style={{zIndex: 0}}>            
-                                    <div className=" relative rounded-lg"><Image src="/features/custom-code-lab.png" alt="" width={500} height={400} /></div>
+                                    <div className=" relative "><Image src="/features/custom-code-lab.png" alt="" width={500} height={400} /></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -90,7 +90,7 @@ export default function Digital_Projects () {
                     </div>
                      <div className="flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
-                            <div className="rounded-lg "><Image className="rounded-lg shadow-xl" src="/features/ai-powered-remediation.png" alt="" width={500} height={400} /></div>
+                            <div className=" "><Image className=" shadow-xl" src="/features/ai-powered-remediation.png" alt="" width={500} height={400} /></div>
                             <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'-2rem',right: '-2rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/wing-yellow-down.svg" alt=""/></div>
                                     <div className="animate-pulse hidden md:block absolute w-60 h-40" style={{bottom:'2.5rem', right: '-4.5rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/bullets-gray-left.svg" alt=""/></div>
@@ -116,7 +116,7 @@ export default function Digital_Projects () {
 
         <div className="z-10 grid gap-5 md:grid-cols-6 lg:grid-cols-9">
             
-            <div className="col-span-3 font-sans text-gray-700 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -132,7 +132,7 @@ export default function Digital_Projects () {
                 </div>
             </div>
            
-            <div className="col-span-3 font-sans text-gray-700 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -149,7 +149,7 @@ export default function Digital_Projects () {
                 </div>
             </div>
            
-            <div className="col-span-3 font-sans text-gray-700 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -165,7 +165,7 @@ export default function Digital_Projects () {
                 </div>
             </div>
             
-            <div className="col-span-3 font-sans text-gray-700 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -181,7 +181,7 @@ export default function Digital_Projects () {
                 </div>
             </div>
            
-            <div className="col-span-3 font-sans text-gray-700 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -197,7 +197,7 @@ export default function Digital_Projects () {
                 </div>
             </div>
             
-            <div className="col-span-3 font-sans text-gray-700 border-0 bg-white rounded-3xl">
+            <div className="col-span-3 font-sans text-gray-700 border-0 bg-white ">
                 <div className="box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left">
                     <div className="flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -292,7 +292,7 @@ export default function Digital_Projects () {
                     <div className="flex space-x-10 p-10">
                         <div className="container  w-1/2  space-y-4">
                             
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">How does KTern Connect to my SAP System?</span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -306,7 +306,7 @@ export default function Digital_Projects () {
                                             diante.
                                     </div>
                             </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -320,7 +320,7 @@ export default function Digital_Projects () {
                                             diante.
                                     </div>
                             </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -339,7 +339,7 @@ export default function Digital_Projects () {
                             </div>
                         <div className="container  w-1/2  space-y-4">
                             
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">How does KTern Connect to my SAP System?</span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -353,7 +353,7 @@ export default function Digital_Projects () {
                                             diante.
                                     </div>
                             </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -367,7 +367,7 @@ export default function Digital_Projects () {
                                             diante.
                                     </div>
                             </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
                                         <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -534,16 +534,16 @@ export default function Digital_Projects () {
           {/* <!-- Footer CTA Features Page --> */}
            <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
-                <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
+                <div className="relative p-6  md:p-0 md:pb-4">
                 <h2 className="card-heading  leading-9 tracking-tight text-white  sm:leading-10">Get started with your DXaaS Journey</h2>
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow  button  text-white rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-l-xl rounded-t-xl transition duration-200 border-2 border-black">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 ">See Pricing</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

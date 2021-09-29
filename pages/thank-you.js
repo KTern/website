@@ -19,7 +19,7 @@ export default function ThankYou ()
             <p className="mb-10 card-subheading text-gray-200">We look forward to you joining our Webinar</p>
             
                             <Link  href="/" passHref>
-                                <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-l-xl rounded-t-xl transition duration-200 hyperlink">Return Home</a>
+                                <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">Return Home</a>
                                 </Link>
             
           </div>

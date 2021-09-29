@@ -322,7 +322,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase">Contact Sales</a></Link>
+                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase">Contact Sales</a></Link>
                 </div>
                 <div className="mt-auto">
 

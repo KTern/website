@@ -60,12 +60,12 @@ export default function Digital_Mines () {
                         <h2 className="mb-3   heading">Digital Mines</h2>
                         <span className="mb-3  text-black subheading">Run your Processes better to run your Business better </span> 
                             <div><br />
-                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-mines-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
+                                <Link  href="#" passHref><a className="hidden  lg:inline-block py-3 px-10 bg-mines-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                             </div>
                     </div>
                 </div>
                 <div className="absolute inset-x-0  max-w-2xl mx-auto px-4 bg-mines-secondary shadow-2xl rounded-2xl ">
-                <div className="rounded-3xl  md:rounded-6xl md:rounded-br-none h-80 w-100 relative"><Image className="rounded-3xl md:rounded-6xl" layout="fill" src="/product/mines/mines_1.svg" alt="" /></div>
+                <div className="rounded-3xl  md:rounded-6xl md:rounded-tl-none h-80 w-100 relative"><Image className="rounded-3xl md:rounded-6xl" layout="fill" src="/product/mines/mines_1.svg" alt="" /></div>
                 <div className="absolute inset-0 flex items-center justify-center ">
                     <Link href="/video"  passHref>
                                 <a className="flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse">
@@ -87,7 +87,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-tl-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -124,7 +124,7 @@ export default function Digital_Mines () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4 " style={{zIndex: 0}}>
-                                <div className="" ><Image width={500} height={400} className="bg-gray-100 rounded-3xl md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
+                                <div className="" ><Image width={500} height={400} className="bg-gray-100 rounded-3xl md:rounded-tl-none" src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -146,7 +146,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-tl-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -193,7 +193,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-4">
                             <div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-tl-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -230,7 +230,7 @@ export default function Digital_Mines () {
                             </div>
                             <div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
                             <div className="absolute mr-4" style={{zIndex: 0}}>
-                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl bg-gray-100 md:rounded-br-none" src="/product/mines/mines_2.svg" alt=""/></div>
+                                <div className="h-100 w-100 relative "><Image width={500} height={400}  className="rounded-3xl bg-gray-100 md:rounded-tl-none" src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -252,7 +252,7 @@ export default function Digital_Mines () {
                         <div className="flex flex-wrap -mx-20">
                             <div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
                                 <div className="relative" style={{zIndex: 0}}>
-                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-br-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
+                                    <div className="h-128 w-full relative"><Image className="rounded-3xl bg-gray-100 md:rounded-tl-none" width={500} height={400}  src="/product/mines/mines_2.svg" alt=""/></div>
                                     <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill="#AA2A32"/>
 </svg>
@@ -303,37 +303,37 @@ export default function Digital_Mines () {
                
                 </div>
                 <Carousel className="bots flex p-10  " responsive={responsive}>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX Process Orchestrator Bot</p>
                         <p className="text-md ">Orchestrate Process Lifecycle with a Digital footprint</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX Release Orchestrator Bot</p>
                         <p className="text-md ">Orchestrate the SAP TR Releases</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX Event Orchestrator Bot</p>
                         <p className="text-md ">Event Orchestrations for swift collaborations</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX Change Management Orchestrator Bot</p>
                         <p className="text-md ">Orchestrate the Change management</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX  Security Impact Simulation Bot</p>
                         <p className="text-md ">Simulate the Security Impact - Helping to mitigate Security and Compliance Risk</p>
                     </div>
-                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                     <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">Bot Name</p>
                         <p className="text-md ">Bot description</p>
                     </div>
-                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center rounded-3xl">
+                    <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-mines-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">Bot Name</p>
                         <p className="text-md ">Bot description</p>
@@ -510,16 +510,16 @@ export default function Digital_Mines () {
                 {/* Cta Section */}
             <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
-                <div className="relative py-6 overflow-hidden rounded-lg bg-gradient-to-r from-black to-mines-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-mines-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
-                <div className="relative p-6 rounded-lg md:p-0 md:pb-4">
+                <div className="relative p-6  md:p-0 md:pb-4">
                 <h2 className="card-heading   leading-9 tracking-tight text-white sm:leading-10">Get started with your DXaaS Journey</h2>
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="button  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow button  uppercase text-white  rounded-l-xl rounded-t-xl transition duration-200 ">See Pricing</a></Link>
-                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="button  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black  rounded-l-xl rounded-t-xl transition duration-200  border-2 border-black">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="button  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow button  uppercase text-white  rounded-r-xl rounded-b-xl transition duration-200 ">See Pricing</a></Link>
+                  <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="button  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

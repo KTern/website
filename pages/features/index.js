@@ -36,20 +36,20 @@ export default function Features () {
                     <p className="subheading text-gray-100 pb-7 pt-2">KTern&apos;s Digital Workplace takes care of your entire DX Transformation from Initial Assessment until your SAP System Goes Live and Beyond Offering Continuous, Constant, Automated Transformation</p>
                     <div className="flex flex-row">
                     
-                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" button inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-l-xl rounded-t-xl transition duration-200 uppercase">Free Trial</a></Link>
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-l-xl rounded-t-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
+                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" button inline-block mx-5   shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase">Free Trial</a></Link>
+                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Contact Sales</a></Link>
                     </div>
                 </div>
 
                
             </div>
             </section>
-            <section className="flex space-x-10 justify-center items-center p-5 bg-white shadow-2xl  sticky z-50 top-16 border-2">    
-                <Link  href="/features#digital-maps"><a className="hyperlink uppercase hover:text-maps-primary">Digital Maps</a></Link>
-                <Link href="/features#digital-projects"><a  className="hyperlink uppercase hover:text-project-primary">Digital Projects</a></Link>
-                <Link  href="/features#digital-process"><a className="hyperlink uppercase hover:text-process-primary">Digital Process</a></Link>
-                <Link  href="/features#digital-labs"><a className="hyperlink uppercase hover:text-labs-primary">Digital Labs</a></Link>
-                <Link  href="/features#digital-mines"><a className="hyperlink uppercase hover:text-mines-primary">Digital Mines</a></Link>
+            <section className="flex space-x-10 justify-center items-center p-5 bg-white shadow-2xl  sticky z-10 top-16 border-2">    
+                <Link  href="/features#digital-maps"><a className="hyperlink  uppercase hover:text-maps-primary">Digital Maps</a></Link>
+                <Link href="/features#digital-projects"><a  className="hyperlink  uppercase hover:text-project-primary">Digital Projects</a></Link>
+                <Link  href="/features#digital-process"><a className="hyperlink  uppercase hover:text-process-primary">Digital Process</a></Link>
+                <Link  href="/features#digital-labs"><a className="hyperlink  uppercase hover:text-labs-primary">Digital Labs</a></Link>
+                <Link  href="/features#digital-mines"><a className="hyperlink  uppercase hover:text-mines-primary">Digital Mines</a></Link>
             </section>
              <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">

@@ -123,7 +123,7 @@ export default function WebinarLayout ({ data }) {
                                     
                                         <Link href="/thank-you" passHref>
                                             <a className="inline-block w-full px-5 py-4 uppercase hyperlink  text-center text-white transition duration-200 bg-black 
-                                            rounded-l-xl rounded-t-xl button transition duration-200 hover:bg-gray-500 ease">Submit</a>
+                                            rounded-r-xl rounded-b-xl button transition duration-200 hover:bg-gray-500 ease">Submit</a>
                                         </Link>
 
                                     </div>

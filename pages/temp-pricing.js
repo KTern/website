@@ -1176,7 +1176,7 @@ export default function Pricing () {
                                         <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                     <Link href="" passHref>
-                        <a  className="flex flex-row justify-center text-center mt-2 py-3 px-8 rounded-l-xl rounded-t-xl  button  ">        
+                        <a  className="flex flex-row justify-center text-center mt-2 py-3 px-8 rounded-r-xl rounded-b-xl  button  ">        
                         <span className="flex items-center justify-center w-5 h-5 bg-transparent rounded-lg ">
                                                 <Image src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
                                                 </span>        

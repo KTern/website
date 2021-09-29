@@ -21,7 +21,7 @@ export default function Landing () {
                   <div className="relative">
                                         <Link href="#downloadbook" passHref>
                                             <a className="button inline-block w-full px-5 py-2  text-center text-white transition duration-200 bg-black 
-                                            rounded-l-xl rounded-t-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download E-book</a>
+                                            rounded-r-xl rounded-b-xl transition uppercase duration-200 hover:bg-gray-500 ease">Download E-book</a>
                                         </Link>
                                     </div>    
                 </div>
@@ -96,7 +96,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                                     <div className="relative">
                                         <Link href="" passHref>
                                             <a className="inline-block w-full px-5 py-4 text-xl  text-center text-white transition duration-200 bg-black 
-                                            rounded-l-xl rounded-t-xl transition button uppercase duration-200 hover:bg-gray-500 ease">Download</a>
+                                            rounded-r-xl rounded-b-xl transition button uppercase duration-200 hover:bg-gray-500 ease">Download</a>
                                         </Link>
                                     </div>            
                                 </div>
