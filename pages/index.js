@@ -111,7 +111,7 @@ export default function Home () {
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <p className="mb-5 text-gray-600">Assess and evaluate the business impact </p>
-                                <Link href="#_"  passHref>
+                                <Link href="/products/digital-maps"  passHref>
                                 <a className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-maps-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +154,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
                                 <p className="mb-5 text-gray-600">Gain ultimate control of your SAP projects </p>
-                                <Link href="#_"  passHref>
+                                <Link href="/products/digital-projects"  passHref>
                                 <a className="inline-flex items-center pb-1  text-project-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-project-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ export default function Home () {
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <p className="mb-5 text-gray-600"> Process control and Governance  </p>
-                                <Link href="#_"  passHref>
+                                <Link href="/products/digital-process"  passHref>
                                 <a className="inline-flex items-center pb-1  text-process-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-process-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -237,7 +237,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                             
                                 <p className="mb-5 text-gray-600">Automate your End to End Testing Today</p>
-                                <Link href="#_"  passHref>
+                                <Link href="/products/digital-labs"  passHref>
                                 <a className="inline-flex items-center pb-1  text-labs-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-labs-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -280,7 +280,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
                                 <p className="mb-5 text-gray-600">BusinessOps for the modern enterprises</p>
-                                <Link href="#_"  passHref>
+                                <Link href="/products/digital-mines"  passHref>
                                 <a className="inline-flex items-center pb-1  text-mines-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-mines-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
