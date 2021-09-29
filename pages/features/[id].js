@@ -551,4 +551,7 @@ const Feature_Landing = () => {
             </>
     )
 }
+export const getStaticProps = async () => {
+    
+}
 export default Feature_Landing;
