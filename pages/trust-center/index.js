@@ -12,8 +12,8 @@ export default function TrustCenter () {
                  <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Trust Center
                 </p>
-                    <h1 className="heading  mb-5"  >Trust Center</h1>
-                    <p className="subheading text-gray-400 pb-7">Find the information you need on cloud performance, security, privacy, and compliance.</p>
+                    <h1 className="heading text-white mb-5"  >Trust Center</h1>
+                    <p className="subheading text-gray-100 pb-7">Find the information you need on cloud performance, security, privacy, and compliance.</p>
                     
                 </div>
 
