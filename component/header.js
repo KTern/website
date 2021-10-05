@@ -196,7 +196,7 @@ export default function Header () {
                 </div>
                 <div className="hidden lg:flex p-0">
                         <ul className=" flex space-x-2 xl:space-x-10">
-                        <li className="toggleable  hover:bg-blue-300" ref={products}>    
+                        <li className="toggleable  hover:bg-secondary" ref={products}>    
                             {/* <li className="toggleable hover:bg-secondary " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
                             <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
@@ -242,7 +242,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                                </div>
                             </div>
                         </li>
-                        <li className="toggleable hover:bg-green-200 " ref={resources} >
+                        <li className="toggleable hover:bg-secondary " ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
                             <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
                             <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
