@@ -242,7 +242,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                                </div>
                             </div>
                         </li>
-                        <li className="toggleable  " ref={resources} >
+                        <li className="toggleable  hover:bg-secondary" ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
                             <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
                             <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
@@ -297,7 +297,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                 </div>
                             </div>
                         </li>  
-                        <li className="toggleable  " ref={partners}>
+                        <li className="toggleable  hover:bg-secondary" ref={partners}>
                                  <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
                             <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
                             <div id="toggle-3" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
@@ -345,8 +345,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                </div>
                             </div>
                         </li>
-                        <li className="toggleable  ">
-                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
+                        <li className="toggleable hover:bg-secondary ">
+                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase hover:bg-secondary ">Company</a></Link>
                         </li>
                     </ul>
                </div>
