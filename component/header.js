@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Card1 from "./card"
 import FeatureCard from "./featureCard";
-import React, { useState } from 'react';
+import React, { useState,useRef, useEffect  } from 'react';
 function openNav () {
     if (process.browser) {
                     console.log("Clicked")
@@ -18,8 +18,149 @@ function closeNav () {
     }
 }
 
+function useOutsideAlerter (ref) {
+    
+    useEffect(() => {
+        /**
+         * Alert if clicked on outside of element
+         */
+        function handleClickOutside (event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+             
+                document.getElementById('toggle-1').style.display = "none";
+                  document.getElementById('toggle-2').style.display = "none";
+                 document.getElementById('toggle-3').style.display = "none";
+            }
+            // else if (ref.current.contains(event.target)) {
+            //     console.log("Clicked on")
+               
+            //     if (document.getElementById('toggle-1').style.display == "block") {
+            //         document.getElementById('toggle-1').style.display = "none";
+            //         document.getElementById('toggle-2').style.display = "none";
+            //           document.getElementById('toggle-3').style.display = "none";
+                   
+            //     }
+            //     else {
+            //         document.getElementById('toggle-1').style.display = "block";
+                  
+            //     }
+            // }
+        }
 
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref]);
+}
+function checkAll (a, b) {
+    if (document.getElementById(a).style.display == "block") {
+         document.getElementById(a).style.display = "none";
+    }
+     if (document.getElementById(b).style.display == "block") {
+         document.getElementById(b).style.display = "none";
+    }
+}
+function useProducts () {
+     const ref = useRef();
+  const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        function handleClickOutside (event) {
+            if (ref.current.contains(event.target)) {
+                
+               
+                if (document.getElementById('toggle-1').style.display == "block") {
+                    document.getElementById('toggle-1').style.display = "none";
+                    document.getElementById('toggle-2').style.display = "none";
+                    document.getElementById('toggle-3').style.display = "none";
+                   
+                }
+                else {
+                    checkAll('toggle-2','toggle-3');
+                    document.getElementById('toggle-1').style.display = "block";
+                  
+                }
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+  }, [ref.current]);
+
+  return [ref, ready];
+}
+function useResources () {
+     const ref = useRef();
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    function handleClickOutside (event) {
+            if (ref.current.contains(event.target)) {
+               
+               
+                if (document.getElementById('toggle-2').style.display == "block") {
+                    document.getElementById('toggle-1').style.display = "none";
+                    document.getElementById('toggle-2').style.display = "none";
+                    document.getElementById('toggle-3').style.display = "none";
+                   
+                }
+                else {
+                     checkAll('toggle-1','toggle-3');
+                    document.getElementById('toggle-2').style.display = "block";
+                  
+                }
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+  }, [ref.current]);
+
+  return [ref, ready];
+}
+function usePartners () {
+     const ref = useRef();
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+     function handleClickOutside (event) {
+            if (ref.current.contains(event.target)) {
+               
+               
+                if (document.getElementById('toggle-3').style.display == "block") {
+                    document.getElementById('toggle-1').style.display = "none";
+                    document.getElementById('toggle-2').style.display = "none";
+                    document.getElementById('toggle-3').style.display = "none";
+                   
+                }
+                else {
+                     checkAll('toggle-1','toggle-2');
+                    document.getElementById('toggle-3').style.display = "block";
+                  
+                }
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+  }, [ref.current]);
+
+  return [ref, ready];
+}
 export default function Header () {
+    const overall = useRef(null);
+    useOutsideAlerter(overall)
+    const [ products,productReady] = useProducts();
+    const [ resources, resourceReady ] = useResources();
+    const [ partners, partnersReady ] = usePartners();
     // const [ headerNew, changeHeader ] = useState(false);
     const [ isProjectShown, setIsProjectShown ] = useState(true);
     const [ isProcessShown, setIsProcessShown ] = useState(false);
@@ -37,7 +178,7 @@ export default function Header () {
     const [ isBecomeAPartnerShown, setIsBecomeAPartnerShown ] = useState(false);
     const [ isPortalShown, setIsPortalShown ] = useState(false);
     return (
-       <section className="container z-50 w-full">      
+       <section className="container z-50 w-full" ref={overall}>      
         {/* <!-- Desktop --> */}
         <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
             <div className="flex flex-wrap justify-between items-center">
@@ -55,11 +196,11 @@ export default function Header () {
                 </div>
                 <div className="hidden lg:flex p-0">
                         <ul className=" flex space-x-2 xl:space-x-10">
-                        <li className="toggleable  hover:bg-secondary" >    
+                        <li className="toggleable  hover:bg-blue-300" ref={products}>    
                             {/* <li className="toggleable hover:bg-secondary " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
-                            <label htmlFor="toggle-one"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
-                            <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
+                            <div id="toggle-1" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
@@ -101,10 +242,10 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                                </div>
                             </div>
                         </li>
-                            <li className="toggleable hover:bg-secondary " >
+                        <li className="toggleable hover:bg-green-200 " ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
                             <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
-                            <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
@@ -155,12 +296,11 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                         </div>
                                 </div>
                             </div>
-                        </li>
-                      
-                            <li className="toggleable hover:bg-secondary " >
+                        </li>  
+                        <li className="toggleable hover:bg-secondary " ref={partners}>
                                  <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
                             <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
-                            <div role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <div id="toggle-3" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h  uppercase text-black text-bold mb-2">Partners</h3>
@@ -205,7 +345,6 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                </div>
                             </div>
                         </li>
-                     
                         <li className="toggleable hover:bg-secondary ">
                         <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
                         </li>
@@ -238,14 +377,14 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                     <li className="toggleable hover:bg-secondary ">
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
                             <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
-                            <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                            <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Digital Streams</h3>
                                               <li className="hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-two" className="toggle-input "/>
                                                     <label htmlFor="toggle-two" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Maps</label>
-                                                    <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                                    <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Maps', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
@@ -255,7 +394,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                             <li className=" hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-three" className="toggle-input "/>
                                                     <label htmlFor="toggle-three" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Labs</label>
-                                                    <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                                    <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Labs', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
@@ -264,7 +403,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         <li className="hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-four" className="toggle-input "/>
                                                     <label htmlFor="toggle-four" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Projects</label>
-                                                    <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                                    <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
@@ -273,7 +412,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         <li className=" hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-five" className="toggle-input "/>
                                                     <label htmlFor="toggle-five" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Process</label>
-                                                    <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                                    <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
@@ -282,7 +421,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         <li className="toggleable hover:bg-secondary ">
                                                 <input type="checkbox" value="selected" id="toggle-six" className="toggle-input "/>
                                                     <label htmlFor="toggle-six" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Mines</label>
-                                                    <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                                    <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Mines', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
                                                         </div>
@@ -291,14 +430,14 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                     </ul>
                                     
                                         {isProjectShown && (
-                                            <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                            <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                     <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />
                                                     </div>
                                                     </div>
                                             )}
                                         {isProcessShown && (
-                                            <div role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                            <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                     <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />  
                                             </div></div>)}

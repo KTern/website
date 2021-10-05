@@ -4,37 +4,6 @@
 @import 'react-multi-carousel/lib/styles.css';
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@400;500;600;700;800;900&display=swap');
-@font-face {
-    font-family: 'Prompt', sans-serif;
-    src: url(./gilmer/gilmer-light.otf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: gilmer-500;
-    src: url(./gilmer/gilmer-500-normal.18a9997c2278a9d76f6967dac75a953d.woff2);
-}
-
-@font-face {
-    font-family: 'Prompt', sans-serif;
-    src: url(./gilmer/gilmer-700-normal.703ca0a7da73f44d95a0de90c3306b2b.woff2);
-}
-
-@font-face {
-    font-family: 'Noto Sans Display', sans-serif;
-    src: url(./metro/metro-400-normal.d6abf2e28327f21876a6a26c40489f0f.woff2);
-}
-
-@font-face {
-    font-family: metro-600;
-    src: url(./metro/metro-600-normal.dfbb76b5a611a661d8fab7dbcd658944.woff2);
-}
-
-@font-face {
-    font-family: metro-700;
-    src: url(./metro/metro-700-normal.d71b75a258a4c3c2cbfc2f1d3120adc2.woff2);
-}
-
 img,
 svg,
 video,
@@ -335,7 +304,7 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 }
 
 .toggle-input:checked~label:after {
-    content: "\25B2";
+    content: "\25BC";
     font-size: 10px;
     padding-left: 6px;
     position: relative;
