@@ -69,7 +69,9 @@ function useProducts () {
 
     useEffect(() => {
         function handleClickOutside (event) {
-            if (ref.current.contains(event.target)) {
+            console.log(event.target.tagName.toLowerCase() === 'a')
+           
+            if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                 
                
                 if (document.getElementById('toggle-1').style.display == "block") {
@@ -99,7 +101,7 @@ function useResources () {
   const [ready, setReady] = useState(false);
   useEffect(() => {
     function handleClickOutside (event) {
-            if (ref.current.contains(event.target)) {
+            if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                
                
                 if (document.getElementById('toggle-2').style.display == "block") {
@@ -130,7 +132,7 @@ function usePartners () {
 
   useEffect(() => {
      function handleClickOutside (event) {
-            if (ref.current.contains(event.target)) {
+            if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                
                
                 if (document.getElementById('toggle-3').style.display == "block") {
@@ -228,18 +230,18 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         </div>
                                     </ul>
                                             {isProjectShown && (
-                                            <Card data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
+                                            <Card id="toggle-1" data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
                                             )}
                                             {isProcessShown && (
-                                            <Card data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
                                              {isMapsShown && (
-                                            <Card data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
                                              {isMinesShown && (
-                                            <Card data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
                                              {isLabsShown && (
-                                            <Card data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
+                                            <Card id="toggle-1" data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
                                    
-                                               </div>
+                                </div>
                             </div>
                         </li>
                         <li className="toggleable  hover:bg-secondary" ref={resources} >
