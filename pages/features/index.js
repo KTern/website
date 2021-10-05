@@ -16,7 +16,7 @@ export default function Features () {
              <section id="features" className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="w-28 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     All Features
                 </p>
                     <h1 className="heading text-white "  >Transform your DX Experience</h1>

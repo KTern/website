@@ -22,31 +22,31 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
-                                    <li className="mb-2"><Link href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
-                                     <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
+                                <li className="mb-2"><Link  href="/products/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
+                                    <li className="mb-2"><Link href="/products/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
+                                     <li className="mb-2"><Link  href="/products/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
+                                <li className="mb-2"><Link  href="/products/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
+                                <li className="mb-2"><Link  href="/products/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
                             </ul>
                         </div>
                              <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Resources</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Blog</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Case Studies</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">White Papers</a></Link></li>
+                                <li className="mb-2"><Link  href="/webinars"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
+                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Blog</a></Link></li>
+                                <li className="mb-2"><Link  href="/resources/case-study"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Case Studies</a></Link></li>
+                                <li className="mb-2"><Link  href="/resources/ebook"><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
+                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">White Papers</a></Link></li>
                                
                             </ul>
                         </div>
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Partner</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">KTern Partner Program</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">VAR Partner</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">ISV Partner</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
+                                <li className="mb-2"><Link  href="/partners"><a className="navbar-s text-gray-200 hover:text-gray-100 ">KTern Partner Program</a></Link></li>
+                                <li className="mb-2"><Link  href="/consulting-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Consulting Partner</a></Link></li>
+                                <li className="mb-2"><Link  href="/technology-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Technology Partner</a></Link></li>
+                                <li className="mb-2"><Link  href="/become-a-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
                                 
                             </ul>
                         </div>
