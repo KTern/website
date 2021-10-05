@@ -388,7 +388,7 @@ export default function Digital_Projects () {
                 </section>
    
 
-            {/* <!-- What do you Get from KTern.AI Section --> */}
+            {/* <!-- What do you Get from KTern Section --> */}
             <section className="py-10 bg-white">
                 <div className="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
                 <div className="flex flex-wrap items-center -mx-3">

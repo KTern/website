@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import StarRatings from 'react-star-ratings';
 export default function Footer () {
     return (      
     <section className="py-10 px-10 bg-black">
@@ -11,7 +12,7 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="/about-ktern"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
+                                <li className="mb-2"><Link  href="/about"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
                                 <li className="mb-2"><Link  href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
                                 <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a></Link></li>
                                 <li className="mb-2"><Link  href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
@@ -49,10 +50,24 @@ export default function Footer () {
                                 
                             </ul>
                         </div>
-                       </div>
-                    <div className="mb-6">
+                        </div>
+                       <div className="flex"> 
+                    <div className="mb-6 mt-10 mr-10">
                         <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white " alt="Available on SAP Store"  height="50%"/>
-                    </div>
+                        </div>
+                    <div className="mb-6">
+                                <Link href="https://www.g2.com"><a className="ml-20 x-g2-link-home" title="G2"> <Image width="50px" height="50px" src="https://tracking.g2crowd.com/logo/light" alt="G2" /></a></Link>
+                                <br/>
+                         <StarRatings
+                            rating={4.7}
+                            starRatedColor="#FF492C"
+                            starEmptyColor="white"
+                            numberOfStars={5}
+                            starDimension='30px'
+                            name='rating'
+                                />
+                            </div>
+        </div>
                 </div>
 
             </div>
@@ -61,19 +76,20 @@ export default function Footer () {
                     <div className="md:flex  items-center ">
                         <Link className="  text-white   " href="#" passHref>
                             <Image  src="/assets/WhiteKTern-01.svg" alt="" width={150} height={150} />
-                        </Link>   
+                            </Link>
+                            
                         <span className="hidden md:inline-block mx-8 w-px h-8 bg-gray-500"></span>
                         
                         <p className="navbar-h space-x-5 lg:block  text-white ">
-                            <span className="navbar-s">Privacy Policy</span>
-                            <span className="navbar-s">Cookies Policy</span>
-                            <span className="navbar-s">Terms & Conditions</span>
+                            <span className="text-xs">Privacy Policy</span>
+                            <span className="text-xs">Cookies Policy</span>
+                            <span className="text-xs">Terms of Service</span>
                         </p>
 
                     </div>
                     <p className="py-0 hidden lg:block  text-white ">
-                        <span className="navbar-s">© 2021 KTern.AI All rights reserved.</span><br/>
-                        <span className="navbar-s text-gray-200">KTern.AI is a registered trademark of Kaar Technologies (i) Pvt. Ltd.</span>
+                        <span className="text-xs">© 2021 KTern All rights reserved.</span><br/>
+                        <span className="text-xs text-gray-200">KTern is a registered trademark of Kaar Technologies  Pvt. Ltd.</span>
                     </p>
                 </div>
                 <div className="w-full md:w-1/2 ">
@@ -140,9 +156,10 @@ export default function Footer () {
 
             </div>
             <p className="lg:hidden  text-white ">
-                <span>© 2021 KTern.AI All rights reserved.</span>
-                <span className="navbar-s text-gray-200">©2001-2021 All Rights Reserved. KTern.AI is a registered trademark of Kaar Technologies (i) Pvt. Ltd.</span>
-            </p>
+                <span>© 2021 KTern All rights reserved.</span>
+                <span className="navbar-s text-gray-200">©2001-2021 All Rights Reserved. KTern is a registered trademark of Kaar Technologies  Pvt. Ltd.</span>
+                </p>
+                   
         </div>
     </section>
     )

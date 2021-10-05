@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About () {
     return (
         <Layout>
-             <section className="relative flex flex-col items-center justify-center w-full px-6 py-16 bg-white bg-cover lg:py-20 min-w-screen">
+             <section className="relative flex flex-col items-center justify-center w-full px-6 py-10 bg-secondary bg-cover lg:py-20 min-w-screen">
                 <div className="flex flex-col items-center justify-center mx-auto sm:p-6 xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0">
                     <div className="container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0">
                         <h1 className="relative z-20  font-extrabold leading-none text-black heading  sm:text-center lg:text-left">
@@ -34,21 +34,21 @@ export default function About () {
             </section>
 
                 {/* <!-- Our Vision--> */}
-                <section className="w-full px-8 py-20 xl:px-0 bg-secondary">
+                <section className="w-full px-8 py-20 xl:px-0 bg-white">
                 <div className="max-w-6xl mx-auto">
-                    <p className="mb-5 card-heading text-black ">Our Vision</p>
+                    <p className="mb-5 section-heading text-black ">Our Vision</p>
                     <div className="flex flex-col md:flex-row">
-                        <div className="w-full pr-5 md:w-4/12 xl:pr-12">
-                            <p className="card-subheading leading-normal text-gray-700 ">
+                        <div className="w-full pr-5 md:w-6/12 xl:pr-12">
+                            <p className="section-subheading leading-normal text-gray-700 ">
                                 With technology at our core, we automate and manage your SAP investments and drive business productivity for the complete SAP ecosystem. 
                             </p>
 
                         </div>
 
                         <div className="w-full mt-5 md:mt-0 md:w-8/12 md:pl-2">
-                            <h3 className="mb-5 -mt-1 card-heading font-semibold leading-tight">To inspire and Democratize SAP Digital Transformation through our product offerings </h3>
+                            <h3 className="mb-5 -mt-1 card-heading  ">To inspire and Democratize SAP Digital Transformation through our product offerings </h3>
                             <Link href="#_"  passHref>
-                                <a className="inline-flex items-center pb-1 font-medium text-black hover:border-blue-500 group ">
+                                <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -65,8 +65,8 @@ export default function About () {
                 <div className="box-border mx-auto border-solid lg:pl-8 max-w-7xl">
                     <div className="flex flex-col items-center leading-7 text-gray-900 border-0 border-gray-200 lg:flex-row">
                     <div className="box-border flex flex-col justify-center w-full h-full p-8 text-gray-900 border-solid lg:w-1/2 md:p-16 lg:p-0 lg:pl-10 lg:pr-20">
-                        <h2 className="m-0 card-heading leading-tight  tracking-normal text-left text-black ">Our Values</h2>
-                        <p className="mt-5 card-subheading text-left border-0 border-gray-200 ">At the very heart of KTern&apos;s philosophy, is the core value of excellence, which is embedded in all systems and processes across the organization.
+                        <h2 className="m-0 section-heading    text-left text-black ">Our Values</h2>
+                        <p className="mt-5 section-subheading text-left border-0 border-gray-200 ">At the very heart of KTern&apos;s philosophy, is the core value of excellence, which is embedded in all systems and processes across the organization.
                         </p>
                         <div className="grid gap-4 mt-8 leading-7 border-0 border-gray-200 sm:mt-10 sm:gap-6 lg:mt-12 lg:gap-8">
                         <div className="box-border flex items-start text-gray-900 border-solid">
@@ -76,8 +76,8 @@ export default function About () {
                             </p>
                             </div>
                             <div className="flex-1 ml-6 leading-7 border-0 border-gray-200">
-                            <h3 className="box-border m-0 text-lg font-semibold leading-tight tracking-tight text-black border-solid sm:text-xl md:text-2xl">Aspiring</h3>
-                            <p className="box-border mt-2 text-base leading-normal text-gray-900 border-solid">No more wasting time on manual tasks, you can leverage our automated tasks to make your life easier.</p>
+                            <h3 className="box-border m-0 card-heading text-black border-solid sm:text-xl ">Aspiring</h3>
+                            <p className="box-border mt-2 card-subheading text-gray-900 border-solid">No more wasting time on manual tasks, you can leverage our automated tasks to make your life easier.</p>
                             </div>
                         </div>
                         <div className="box-border flex items-start text-gray-900 border-solid">
@@ -87,8 +87,8 @@ export default function About () {
                             </p>
                             </div>
                             <div className="flex-1 ml-6 leading-7 border-0 border-gray-200">
-                            <h3 className="box-border m-0 text-lg font-semibold leading-tight tracking-tight text-black border-solid sm:text-xl md:text-2xl">Teamwork</h3>
-                            <p className="box-border mt-2 text-base leading-normal text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
+                            <h3 className="box-border m-0 card-heading text-black border-solid sm:text-xl ">Teamwork</h3>
+                            <p className="box-border mt-2 card-subheading text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
                             </div>
                         </div>
                         <div className="box-border flex items-start text-gray-900 border-solid">
@@ -98,8 +98,8 @@ export default function About () {
                             </p>
                             </div>
                             <div className="flex-1 ml-6 leading-7 border-0 border-gray-200">
-                            <h3 className="box-border m-0 text-lg font-semibold leading-tight tracking-tight text-black border-solid sm:text-xl md:text-2xl">Great Support</h3>
-                            <p className="box-border mt-2 text-base leading-normal text-gray-900 border-solid">We offer some of the best support available. Contact us anytime of the day and we&apos;ll help you out ASAP.</p>
+                            <h3 className="box-border m-0 card-heading text-black border-solid sm:text-xl ">Great Support</h3>
+                            <p className="box-border mt-2 card-subheading text-gray-900 border-solid">We offer some of the best support available. Contact us anytime of the day and we&apos;ll help you out ASAP.</p>
                             </div>
                         </div>
                         <div className="box-border flex items-start text-gray-900 border-solid">
@@ -109,8 +109,8 @@ export default function About () {
                             </p>
                             </div>
                             <div className="flex-1 ml-6 leading-7 border-0 border-gray-200">
-                            <h3 className="box-border m-0 text-lg font-semibold leading-tight tracking-tight text-black border-solid sm:text-xl md:text-2xl">Stay Humble</h3>
-                            <p className="box-border mt-2 text-base leading-normal text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
+                            <h3 className="box-border m-0 card-heading text-black border-solid sm:text-xl ">Stay Humble</h3>
+                            <p className="box-border mt-2 card-subheading text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
                             </div>
                         </div>
                         <div className="box-border flex items-start text-gray-900 border-solid">
@@ -120,8 +120,8 @@ export default function About () {
                             </p>
                             </div>
                             <div className="flex-1 ml-6 leading-7 border-0 border-gray-200">
-                            <h3 className="box-border m-0 text-lg font-semibold leading-tight tracking-tight text-black border-solid sm:text-xl md:text-2xl">Diversity</h3>
-                            <p className="box-border mt-2 text-base leading-normal text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
+                            <h3 className="box-border m-0 card-heading text-black border-solid sm:text-xl ">Diversity</h3>
+                            <p className="box-border mt-2 card-subheading text-gray-900 border-solid">Utilize our email campaigns to send your users up-to-date information about your product and services.</p>
                             </div>
                         </div>
                         </div>
@@ -136,11 +136,11 @@ export default function About () {
                 {/* <!--What We do--> */}
                 <section className="bg-black">
                 <div className="relative px-16 pt-10 pb-12 mx-auto max-w-7xl xl:px-16">
-                    <svg className="relative z-10 w-16 mb-12 text-yellow-300 transform opacity-100 fill-current sm:w-20 -rotate-0 rotate rotate-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 46"><defs></defs><g fillRule="nonzero"><path d="M46.651 2.666c1.892-.812 1.06-1.401-1.337-1.81A4.827 4.827 0 0044.323 0a3.914 3.914 0 00-.614.64C34.376-.395 11.639.36 8.676 1.976 6.99 1.437 1.364 9.542.344 13.552c-.436.1-.436.632-.12 1.487a.84.84 0 00.1.28v-.05a2.8 2.8 0 00.247.668h.06c2.814 5.749 14.356 19.796 15 20.673l-.149-.158c2.418 2.587 3.963 5.547 6.291 8.17 2.626 2.213 3.478 1.437 3.399-.065 2.784-1.171 3.289-3.73 4.775-5.655 5.608-7.904 14.742-14.651 19.498-22.763a2.347 2.347 0 00-.09-.575c1.725-2.429-.296-9.018-2.704-12.898zM38.25 24.093c-4.38 5.863-12.355 11.432-13.693 18.15-.33-.903-.903-1.75-1.684-2.493C15.987 31.616 10.4 22.828 3.088 14.931c3.101-1.997 3.636-6.021 5.469-8.615l-.09.187.199-.41-.06.13.08-.151c.31-1.051.463-2.123.455-3.198.876.312 1.796.553 2.745.719 10.333-.633 20.805-.144 31.129-.417.198 1.71 1.387 3.514 1.982 5.094 0-.057 0-.122-.08-.18 1.11 2.243.803 4.937 2.616 6.92-2.953 1.337-8.342 8.048-9.283 9.083zM7.5 14.505v-.01.01z"></path><path d="M9.567 12.925c-.022.243.175.468.486.556 0 .065.05.13.08.094l.139-.05h.069c-1.015.233-1.858.754-2.341 1.445.908.243 1.84.436 2.787.578.208.5.484.985.824 1.445v.094-.036c.387.607.763 1.214 1.16 1.814v-.072c.516.816.992 1.64 1.548 2.457.555.817 1.13 1.9 1.736 2.782a.241.241 0 01-.05-.08c1.587 2.169 2.599 4.59 4.444 6.635 3.482 2.002-.536-3.874-1.2-4.777-1.101-1.662-2.232-3.324-3.294-5-.892-1.446-1.845-2.892-2.787-4.337-.149-.354-.298-.65-.446-.925 2.975-.152 5.951-.455 8.927-.513 3.849-.145 7.737 0 11.606 0-.466 1.604-.526 4.025-.992 4.85-.387 3.403-3.968 7.096-2.46 10.37.605-.477 1.029-1.06 1.23-1.692 1.21-4.43 3.918-8.99 3.75-13.535 2.579.03 5.159-.045 7.727-.224 3.65-.853 3.134-2.32-.546-2.349h.218c-2.55.05-5.098.058-7.648.05a27.367 27.367 0 00-3.095-5.181.511.511 0 01-.089-.13c-1.408 1.257.308 3.714 1.597 5.304-4.85 0-9.7 0-14.551.217h.218c-2.113.333-5.168.116-7.53.564.165-.11.255-.265.249-.427a.376.376 0 000-.151c2.48-2.212 7.241-8.166 3.115-6.367l-4.88 6.59zm3.68 3.526a.19.19 0 010 .065.285.285 0 010-.08v.015zM11.5 17.505v-.01z"></path><path d="M14.499 21.55v-.1a.54.54 0 010 .1zM41.874 10c.462-1.423-.366-2.884-2.197-3.876A.87.87 0 0139.522 6c-1.373.757.287 2.644 1.266 3.49.303.209.671.382 1.086.51zM40.5 9.505v-.01z"></path></g></svg>
+                    <svg className="relative z-10 w-16 mb-8 text-yellow-300 transform opacity-100 fill-current sm:w-20 -rotate-0 rotate rotate-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 46"><defs></defs><g fillRule="nonzero"><path d="M46.651 2.666c1.892-.812 1.06-1.401-1.337-1.81A4.827 4.827 0 0044.323 0a3.914 3.914 0 00-.614.64C34.376-.395 11.639.36 8.676 1.976 6.99 1.437 1.364 9.542.344 13.552c-.436.1-.436.632-.12 1.487a.84.84 0 00.1.28v-.05a2.8 2.8 0 00.247.668h.06c2.814 5.749 14.356 19.796 15 20.673l-.149-.158c2.418 2.587 3.963 5.547 6.291 8.17 2.626 2.213 3.478 1.437 3.399-.065 2.784-1.171 3.289-3.73 4.775-5.655 5.608-7.904 14.742-14.651 19.498-22.763a2.347 2.347 0 00-.09-.575c1.725-2.429-.296-9.018-2.704-12.898zM38.25 24.093c-4.38 5.863-12.355 11.432-13.693 18.15-.33-.903-.903-1.75-1.684-2.493C15.987 31.616 10.4 22.828 3.088 14.931c3.101-1.997 3.636-6.021 5.469-8.615l-.09.187.199-.41-.06.13.08-.151c.31-1.051.463-2.123.455-3.198.876.312 1.796.553 2.745.719 10.333-.633 20.805-.144 31.129-.417.198 1.71 1.387 3.514 1.982 5.094 0-.057 0-.122-.08-.18 1.11 2.243.803 4.937 2.616 6.92-2.953 1.337-8.342 8.048-9.283 9.083zM7.5 14.505v-.01.01z"></path><path d="M9.567 12.925c-.022.243.175.468.486.556 0 .065.05.13.08.094l.139-.05h.069c-1.015.233-1.858.754-2.341 1.445.908.243 1.84.436 2.787.578.208.5.484.985.824 1.445v.094-.036c.387.607.763 1.214 1.16 1.814v-.072c.516.816.992 1.64 1.548 2.457.555.817 1.13 1.9 1.736 2.782a.241.241 0 01-.05-.08c1.587 2.169 2.599 4.59 4.444 6.635 3.482 2.002-.536-3.874-1.2-4.777-1.101-1.662-2.232-3.324-3.294-5-.892-1.446-1.845-2.892-2.787-4.337-.149-.354-.298-.65-.446-.925 2.975-.152 5.951-.455 8.927-.513 3.849-.145 7.737 0 11.606 0-.466 1.604-.526 4.025-.992 4.85-.387 3.403-3.968 7.096-2.46 10.37.605-.477 1.029-1.06 1.23-1.692 1.21-4.43 3.918-8.99 3.75-13.535 2.579.03 5.159-.045 7.727-.224 3.65-.853 3.134-2.32-.546-2.349h.218c-2.55.05-5.098.058-7.648.05a27.367 27.367 0 00-3.095-5.181.511.511 0 01-.089-.13c-1.408 1.257.308 3.714 1.597 5.304-4.85 0-9.7 0-14.551.217h.218c-2.113.333-5.168.116-7.53.564.165-.11.255-.265.249-.427a.376.376 0 000-.151c2.48-2.212 7.241-8.166 3.115-6.367l-4.88 6.59zm3.68 3.526a.19.19 0 010 .065.285.285 0 010-.08v.015zM11.5 17.505v-.01z"></path><path d="M14.499 21.55v-.1a.54.54 0 010 .1zM41.874 10c.462-1.423-.366-2.884-2.197-3.876A.87.87 0 0139.522 6c-1.373.757.287 2.644 1.266 3.49.303.209.671.382 1.086.51zM40.5 9.505v-.01z"></path></g></svg>
                     <div className="relative z-20">
-                        <h3 className="text-5xl font-bold leading-tight text-left text-white md:text-6xl lg:text-7xl xl:text-7xl xl:leading-tight">What we do</h3>
-                        <div className="flex flex space-x-5 mt-14 sm:flex-row items-center">
-                            <p className="text-xl font-normal text-left text-yellow-300">We help automate and Govern Digital Transformations</p>
+                        <h3 className="section-heading text-left text-white ">What we do</h3>
+                        <div className="flex flex space-x-5 mt-4 sm:flex-row items-center">
+                            <p className="section-subheading text-left text-yellow-300">We help automate and Govern Digital Transformations</p>
                             <div className="flex mt-5 space-x-1 sm:mt-1 sm:ml-3 items-center my-auto">
                                 <div className="w-10 h-2 bg-yellow-300 rounded-full opacity-100"></div>
                                 <div className="w-8 h-2 bg-yellow-300 rounded-full opacity-75"></div>
@@ -151,28 +151,28 @@ export default function About () {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 mt-24 gap-14 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 mt-10 gap-14 lg:grid-cols-3">
                         <div className="flex text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19 11v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path><path d="M13 13l9 3l-4 2l-2 4l-3 -9"></path><line x1="3" y1="3" x2="3" y2="3.01"></line><line x1="7" y1="3" x2="7" y2="3.01"></line><line x1="11" y1="3" x2="11" y2="3.01"></line><line x1="15" y1="3" x2="15" y2="3.01"></line><line x1="3" y1="7" x2="3" y2="7.01"></line><line x1="3" y1="11" x2="3" y2="11.01"></line><line x1="3" y1="15" x2="3" y2="15.01"></line></svg>
                             <div className="relative space-y-2">
-                                <h4 className="text-xl font-bold leading-relaxed">ERP Transformations</h4>
-                                <p className="text-lg text-gray-300">With KTern&apos;s DXaaS&#8482; Platform , you could manage your entire ERP Transformation right from your Home .
+                                <h4 className="card-heading">ERP Transformations</h4>
+                                <p className="card-subheading text-gray-300">With KTern&apos;s DXaaS&#8482; Platform , you could manage your entire ERP Transformation right from your Home .
                             </p></div>
                         </div>
 
                         <div className="flex text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 13.5v-7.5a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-6m-8 -10h16m-10 -6v11.5m-8 3.5h7m-3 -3l3 3l-3 3"></path></svg>
                             <div className="relative space-y-2">
-                                <h4 className="text-xl font-bold leading-relaxed">Enterprise Release Impact</h4>
-                                <p className="text-lg text-gray-300">Simulate and forecast the release impact with the use of digital bots for impact mining
+                                <h4 className="card-heading">Enterprise Release Impact</h4>
+                                <p className="card-subheading text-gray-300">Simulate and forecast the release impact with the use of digital bots for impact mining
                             </p></div>
                         </div>
 
                         <div className="flex text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"></path><path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"></path><path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path><line x1="17" y1="17" x2="17" y2="17.01"></line></svg>
                             <div className="relative space-y-2">
-                                <h4 className="text-xl font-bold leading-relaxed">Automated Testing</h4>
-                                <p className="text-lg text-gray-300">Identify Test gaps and automatically updates your Test Plan
+                                <h4 className="card-heading">Automated Testing</h4>
+                                <p className="card-subheading text-gray-300">Identify Test gaps and automatically updates your Test Plan
                             </p></div>
                         </div>
                     </div>
@@ -181,7 +181,7 @@ export default function About () {
                 {/* <!-- Our Customers--> */}
                 <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
-                    <p className="text-md font-bold font-medium tracking-wide text-gray-400 uppercase">Our customers</p>
+                    <p className="card-heading text-gray-400 uppercase">Our customers</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
                         <svg className="w-auto h-12 mt-8 text-black fill-current" viewBox="0 0 2418 2428" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><path d="M1209 .77C541.628.77.62 543.968.62 1214c0 670.044 541.02 1213.244 1208.38 1213.244 667.346 0 1208.38-543.2 1208.38-1213.244C2417.38 543.969 1876.346.77 1209 .77zM615.504 1565.493v-100.425c-50.842 57.845-108.778 96.391-194.119 95.924-201.926-1.102-365.644-164.379-365.644-367.122 0-202.743 163.718-367.096 365.644-367.096 201.94 0 377.602 163.069 377.602 365.838l.207 371.597-183.69 1.284zm602.6 5.771c-201.938 0-377.601-163.069-377.601-365.838l-.207-617.685h183.418l.246 345.216c50.868-57.832 108.79-96.391 194.145-95.924 201.887 1.128 365.63 164.379 365.63 367.122 0 202.756-163.743 367.11-365.63 367.11zm786.215-8.625c-201.94 0-365.657-164.353-365.657-367.096s163.718-367.096 365.657-367.096c176.233 0 323.894 129.179 358.497 295.827l-183.885-.61c-28.17-66.859-94.381-112.032-171.266-112.032-102.487 0-185.584 83.395-185.584 186.297 0 102.916 83.084 186.35 185.584 186.35 76.885 0 143.913-44.68 172.083-111.566l183.86-.856c-34.111 167.271-182.602 290.782-359.29 290.782h.001z"></path><path d="M1213.397 1008.027c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324zm-789.742 0c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324z"></path></g></g></svg>
                         <svg className="w-auto h-12 mt-8 text-black fill-current" viewBox="0 0 2280 670" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><path d="M.295.16h467.378v669.68H.295V.16zM67.66 602.424h332.415V67.602H67.66v534.822zM778.13 300.617h-28.909c-37.975-53.643-75.64-106.949-113.252-167.193h-.272v167.193h-31.958V67.5h28.936c37.975 53.266 75.587 106.196 112.85 166.13h.661V67.498h31.958v233.118h-.013zm75.965-92.267c9.273-30.647 18.611-58.947 26.95-94.925h.675c9.312 35.978 17.652 64.29 26.303 94.925h-53.928zM869.373 67.5L788.83 300.617h34.629l20.259-63.63h70.309l18.3 63.63h44.655L902.693 67.5h-33.32zm145.21 233.118V98.77h-61.296v-31.27h162.498v31.27h-61.243v201.848h-39.96zM1128.742 67.5h39.687v233.118h-39.688V67.5zm162.9 203.768c-41.672 0-56.315-45.952-56.315-90.581 0-42.943 16.64-83.915 56.314-83.915 39.623 0 56.211 40.972 56.211 83.915 0 44.629-14.616 90.58-56.21 90.58zm0 33.293c60.918 0 98.868-54.253 98.868-123.887 0-65.251-41.892-117.195-98.869-117.195-56.924 0-98.998 51.944-98.998 117.195.013 69.647 38.028 123.887 98.998 123.887zm297.669-3.943h-28.949c-38.001-53.643-75.64-106.949-113.226-167.193h-.324v167.193h-31.919V67.5h28.949c37.923 53.266 75.562 106.196 112.798 166.13h.687V67.498h31.997v233.118h-.013zm75.925-92.267c9.35-30.647 18.624-58.947 27.003-94.925h.661c9.325 35.978 17.626 64.29 26.264 94.925h-53.928zM1680.593 67.5l-80.581 233.118h34.655l20.259-63.63h70.296l18.313 63.63h44.603L1713.86 67.5h-33.267zm119.153 0h39.7v201.796h78.883v31.322h-118.583V67.5zM753.566 495.605v96.21c-21.335 8.365-43.656 14.318-66.237 14.318-68.623 0-111.903-53.28-111.903-121.89 0-63.63 43.28-119.218 113.213-119.218 21.608 0 43.267 8.028 56.6 18.002l-12.995 27.639c-10.636-6.602-27.328-12.27-42.62-12.27-42.592 0-71.592 33.644-71.592 86.6 0 55.238 33.32 87.844 67.624 87.844 10.61 0 19.65-1.271 28.015-5.642v-71.593h39.895zm142.927-95.211h-66.678v63.902h65.264v31.309h-65.264v75.211H908.4v31.348h-118.57V369.033h106.664v31.36zm123.2 172.433c-41.672 0-56.341-45.913-56.341-90.568 0-42.917 16.653-83.876 56.34-83.876 39.597 0 56.211 40.959 56.211 83.876 0 44.655-14.681 90.568-56.21 90.568zm0 33.306c60.905 0 98.842-54.279 98.842-123.887 0-65.251-41.931-117.234-98.843-117.234-57.015 0-98.92 51.983-98.92 117.234-.013 69.621 37.885 123.887 98.92 123.887zm290.626-110.528v96.21c-21.335 8.365-43.591 14.318-66.263 14.318-68.57 0-111.89-53.28-111.89-121.89 0-63.63 43.32-119.218 113.252-119.218 21.66 0 43.267 8.028 56.561 18.002l-12.995 27.639c-10.661-6.602-27.21-12.27-42.554-12.27-42.684 0-71.658 33.644-71.658 86.6 0 55.238 33.332 87.844 67.637 87.844 10.687 0 19.636-1.271 27.989-5.642v-71.593h39.921zm76.677-95.211h17.6c23.58 0 36.938 13.592 36.938 37.599 0 31.27-18.949 45.238-37.95 46.237-4.007.402-13.345.74-16.588 1.025v-84.861zm101.203 201.77l-47.041-96.534c25.641-13.618 40.375-41.334 40.375-69.31 0-45.33-27.69-67.287-72.32-67.287h-62.267v233.131h40.05v-87.909h17.963l37.56 87.91h45.68zm65.913-92.254c9.299-30.686 18.624-58.96 26.977-94.925h.661c9.325 35.965 17.626 64.239 26.29 94.925h-53.928zm15.291-140.877l-80.607 233.131h34.63l20.336-63.63h70.296l18.21 63.63h44.706l-74.304-233.131h-33.267zm182.472 0h-62.268v233.131h39.973v-87.909h17.937c47.65 0 76.651-38.637 76.651-77.935 0-45.342-27.664-67.287-72.293-67.287zm-5.603 115.21c-4.15.376-13.904.687-16.692.96v-84.81h17.937c23.306 0 36.678 13.593 36.678 37.6 0 31.27-18.923 45.251-37.923 46.25zm263.014 117.921h-39.947V489.976h-82.98v112.188h-39.52V369.033h39.52v89.582h82.98v-88.92h39.947v232.47zm38.26-233.131h39.714v233.131h-39.714V369.033zm219.462 42.32c-9.676-6.005-25.59-12.97-40.985-12.97-40.686 0-70.218 33.644-70.218 86.6 0 55.238 32.606 87.844 71.256 87.844a75.406 75.406 0 0039.947-11.673l11.024 29c-12.062 8.314-33.306 15.979-52.592 15.979-68.623 0-111.942-53.28-111.942-121.89 0-63.63 42.942-119.218 112.525-119.218 20.7 0 39.947 8.716 53.682 18.002l-12.697 28.326z"></path></g></g></svg>
@@ -195,91 +195,118 @@ export default function About () {
 
 
                 {/* <!--Resources About the Company--> */}
-                <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16 pb-10">
-            <div className="px-10 mx-auto max-w-7xl">
-                <div className="flex justify-center w-full pb-5 mb-8  border-gray-200">
-                    <h2 className="card-heading font-bold text-gray-800 ">Latest at KTern.AI</h2>
-                            
-                </div>
+               <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
+                    <div className="px-2 mx-auto max-w-7xl">
+                    <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
+                    <h2 className="section-heading  text-gray-800 ">Related Resources</h2>
+                    
+                    </div>
+                    
+                    <div className="grid grid-cols-12 gap-6 mb-6">
+                   <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
 
-                <div className="grid grid-cols-12 gap-6">
-                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
-                        <Link href="#_" passHref>
-                        <a className="relative block w-full h-64 overflow-hidden rounded">        
-                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_scrum.svg" alt="resource" layout="fill"/>
-                        </a>    
-                        </Link>
-                        <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern News 1 </a></Link>
-                        <Link href="/features/custom-code-remediation"  passHref>
-                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link>  
+  
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
                     </div>
 
 
-
-                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
-                        <Link href="#_" passHref>
-                        <a className="relative block w-full h-64 overflow-hidden rounded">        
-                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_1.svg" alt="resource" layout="fill"/>
-                        </a>    
-                        </Link>
-                        <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern News 2  </a></Link>
-                        <Link href="/features/custom-code-remediation"  passHref>
-                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link>  
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="p-4">
+                    <Link href="#_" passHref>
+                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                    <Image className="object-cover bg-secondary object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                    </a> 
+                    </Link>
+                    </div>
+                    <div className="p-4">
+                    <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
+                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                   <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
                     </div>
 
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                                    <div className="p-4">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="p-4">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                    </div>
 
-                    <div className="relative col-span-12 mb-10 pb-10 space-y-4 md:col-span-6 lg:col-span-4 shadow-lg hover:shadow-xl rounded " >
-                        <Link href="#_" passHref>
-                        <a className="relative block w-full h-64 overflow-hidden rounded">        
-                            <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"  src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
-                        </a>    
-                        </Link>
-                        <p className="hyperlink font-bold text-gray-400 uppercase pl-4 pr-2">News</p>
-                        <Link href="#_" passHref><a className="block card-subheading  font-semibold leading-tight text-gray-700 hover:text-gray-900 pl-4 pr-2">KTern-News 3 </a></Link>
-                        <Link href="/features/custom-code-remediation"  passHref>
-                                                        <a className="absolute inline-flex items-center pb-1 font-medium text-blue-400 hover:border-blue-500 group bottom-0">
-                                                        <span className="hyperlink group-hover:text-blue-500 pl-4">Read More</span>
-                                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                        </svg>
-                                                        </a>
-                                                    </Link>  
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
-                  </div>
-                  <div className="text-center"><Link  href="#" passHref><a className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 hover:bg-gray-100 rounded-full font-bold text-black">Visit News Center</a></Link></div>
-                </div>
-                </section>
-         
+                    <div className="text-center">
+                        <Link href="#_"  passHref>
+                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">View All Resources</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+                    </div>
+                    </div>
+            </section>  {/* / Resources Setion */}
+           
   {/* <!-- Footer CTA Features Page --> */}
                 <section className="bg-white">
                 <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">

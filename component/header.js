@@ -41,8 +41,9 @@ export default function Header () {
         {/* <!-- Desktop --> */}
         <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
             <div className="flex flex-wrap justify-between items-center">
-                <Link  href="/" passHref>
-                    <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src="/assets/KternLogo.png" alt="Ktern Logo"/>
+                    <Link href="/" passHref>
+                        <a>
+                    <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src="/assets/KternLogo.png" alt="Ktern Logo"/></a>
                 </Link>
                 <div className="lg:hidden py-2">
                     <button className="navbar-burger flex items-center p-2 hover:bg-gray-50 rounded" onClick={openNav}>
@@ -169,7 +170,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partners</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/consoluting-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
+                                                    <Link href="/consulting-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Consulting Partners</a></Link>
                                         </li>
                                         <li>
@@ -206,7 +207,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                         </li>
                      
                         <li className="toggleable hover:bg-secondary ">
-                        <Link href="/about-ktern" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
+                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase ">Company</a></Link>
                         </li>
                     </ul>
                </div>
@@ -221,8 +222,10 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
             <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav  className="py-5  nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm  px-6 bg-white border-r overflow-y-auto">
                 <div className="flex items-center justify-between mb-8">
-                    <Link className="mr-auto text-2xl font-medium leading-none" href="#" passHref>
+                        <Link  href="/" passHref>
+                            <a className="mr-auto text-2xl font-medium leading-none cursor-pointer">
                         <Image  src="/assets/kternLogo.png" alt="Ktern Logo" width="100%" height="30%"/>
+                        </a>
                     </Link>
                     <button className="navbar-close" onClick={closeNav}>
                         <svg className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

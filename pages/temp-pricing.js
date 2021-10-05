@@ -16,7 +16,7 @@ export default function Pricing () {
                     <div className="flex flex-col w-full mb-20 text-center">
 
                         <div className="relative z-10 max-w-3xl px-12 mx-auto space-y-5 text-center lg:px-0">
-                            <h1 className="text-6xl font-black text-black lg:text-6xl">Get Started With KTern.AI</h1>
+                            <h1 className="text-6xl font-black text-black lg:text-6xl">Get Started With KTern</h1>
                             <p className="mx-auto text-lg leading-relaxed text-gray-500 lg:w-2/3">Digital Transformation made simple</p>
                         </div>
 

@@ -5,22 +5,22 @@ export default function Partners () {
     return (
         <Layout>
              {/* <!-- Header Section --> */}
-             <section className="w-full py-20 bg-secondary">
+             <section className="w-full py-10 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                    <p className="inline-block px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
+                    <p className="inline-block px-2 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
                     KTERN PARTNER PROGRAM
                 </p>
-                <h5 className="mb-3 heading font-bold leading-none sm:text-4xl ">
+                <h5 className="mb-3 heading  sm:text-4xl ">
                     Become a <br/>KTern Partner
                 </h5>
                 <p className="py-5 mb-5 text-gray-600 subheading">
-                    <span className="font-bold subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="font-bold">#DXaaS</span> Approach
+                    <span className=" subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="">#DXaaS</span> Approach
                 </p>
                 <div className="flex items-center space-x-4">
-                   <Link  href="/become-a-partner" passHref><a className=" mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white font-bold rounded-l-xl hyperlink rounded-t-xl transition duration-200 ">Become a Partner</a></Link>
+                   <Link  href="/become-a-partner" passHref><a className=" mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-l-xl hyperlink rounded-t-xl transition duration-200 button ">Become a Partner</a></Link>
                     <Link href=""  passHref>
-                        <a className="inline-flex items-center hyperlink uppercase text-gray-400 underline transition-colors duration-200 ">Partner Portal
+                        <a className="inline-flex items-center hyperlink uppercase text-gray-400 underline transition-colors duration-200 button ">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
@@ -36,35 +36,35 @@ export default function Partners () {
               {/* <!--KTern Partnership Models--> */}
 
             <section className="relative w-full bg-white">
-            <div className="absolute w-full h-32 "></div>
-            <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-10 md:px-10  max-w-7xl">
+           
+            <div className="relative w-full px-5 py-10 mx-auto  md:px-10  max-w-7xl">
 
-                <h5 className="mb-3 text-2xl font-extrabold leading-none sm:text-4xl lg:text-4xl">
+                <h5 className="mb-3 section-heading">
                     Our Partnership Opportunities
                 </h5>
-                <p className="py-5 mb-5 text-gray-600 lg:text-xl">
-                Explore our <span className="font-bold">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
+                <p className=" mb-5 text-gray-600 section-subheading">
+                Explore our <span className="section-subheading">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
-                <div className="grid h-auto grid-cols-12 gap-5 pb-10 mt-5 sm:mt-16 ">
+                <div className="grid w-full h-auto grid-cols-12 gap-20 ml-28  sm:mt-16 ">
                    <Link href="/consulting-partner"  passHref>
-                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-full overflow-hidden rounded-xl group sm:col-span-12 md:col-span-6">
-                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
+                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-5">
+                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
-                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Consulting Partner</p></h2>
-                        <p className="mb-2 card-subheading font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
+                        <p className="inline-block text-xs  absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
+                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl "><p>Become a <br/>Consulting Partner</p></h2>
+                        <p className="mb-2 card-subheading  text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
                     </a>
                 </Link>
 
                         <Link href="/technology-partner"  passHref>
-                            <a className="relative h-full items-start flex flex-col group overflow-hidden rounded-xl sm:col-span-12 md:col-span-6 border-2 border-black shadow-md">
-                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
+                            <a className="relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-5">
+                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
-                        <p className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
-                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl font-bold"><p>Become a <br/>Technology Partner</p></h2>
-                        <p className="mb-2 card-subheading  font-normal text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern.AI&apos;s Digital Workplace for businesses globally.
+                        <p className="inline-block text-xs absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
+                        <h2 className="mb-5 md:text-3xl card-heading sm:text-xl "><p>Become a <br/>Technology Partner</p></h2>
+                        <p className="mb-2 card-subheading  text-white opacity-100">Leverage your technical and sales capabilities to consult, sell, customize and implement KTern&apos;s Digital Workplace for businesses globally.
                         </p>
                     </div>
                     </a>
@@ -79,7 +79,7 @@ export default function Partners () {
             {/* <!--KTern's Partners --> */}
              <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
-                    <p className="text-md font-bold font-medium tracking-wide text-gray-400 uppercase">Featured and Previously Seen On</p>
+                    <p className="card-heading text-gray-400 uppercase">Featured and Previously Seen On</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
                         <svg className="w-auto h-12 mt-8 text-black fill-current" viewBox="0 0 2418 2428" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><path d="M1209 .77C541.628.77.62 543.968.62 1214c0 670.044 541.02 1213.244 1208.38 1213.244 667.346 0 1208.38-543.2 1208.38-1213.244C2417.38 543.969 1876.346.77 1209 .77zM615.504 1565.493v-100.425c-50.842 57.845-108.778 96.391-194.119 95.924-201.926-1.102-365.644-164.379-365.644-367.122 0-202.743 163.718-367.096 365.644-367.096 201.94 0 377.602 163.069 377.602 365.838l.207 371.597-183.69 1.284zm602.6 5.771c-201.938 0-377.601-163.069-377.601-365.838l-.207-617.685h183.418l.246 345.216c50.868-57.832 108.79-96.391 194.145-95.924 201.887 1.128 365.63 164.379 365.63 367.122 0 202.756-163.743 367.11-365.63 367.11zm786.215-8.625c-201.94 0-365.657-164.353-365.657-367.096s163.718-367.096 365.657-367.096c176.233 0 323.894 129.179 358.497 295.827l-183.885-.61c-28.17-66.859-94.381-112.032-171.266-112.032-102.487 0-185.584 83.395-185.584 186.297 0 102.916 83.084 186.35 185.584 186.35 76.885 0 143.913-44.68 172.083-111.566l183.86-.856c-34.111 167.271-182.602 290.782-359.29 290.782h.001z"></path><path d="M1213.397 1008.027c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324zm-789.742 0c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324z"></path></g></g></svg>
                         <svg className="w-auto h-12 mt-8 text-black fill-current" viewBox="0 0 2280 670" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><path d="M.295.16h467.378v669.68H.295V.16zM67.66 602.424h332.415V67.602H67.66v534.822zM778.13 300.617h-28.909c-37.975-53.643-75.64-106.949-113.252-167.193h-.272v167.193h-31.958V67.5h28.936c37.975 53.266 75.587 106.196 112.85 166.13h.661V67.498h31.958v233.118h-.013zm75.965-92.267c9.273-30.647 18.611-58.947 26.95-94.925h.675c9.312 35.978 17.652 64.29 26.303 94.925h-53.928zM869.373 67.5L788.83 300.617h34.629l20.259-63.63h70.309l18.3 63.63h44.655L902.693 67.5h-33.32zm145.21 233.118V98.77h-61.296v-31.27h162.498v31.27h-61.243v201.848h-39.96zM1128.742 67.5h39.687v233.118h-39.688V67.5zm162.9 203.768c-41.672 0-56.315-45.952-56.315-90.581 0-42.943 16.64-83.915 56.314-83.915 39.623 0 56.211 40.972 56.211 83.915 0 44.629-14.616 90.58-56.21 90.58zm0 33.293c60.918 0 98.868-54.253 98.868-123.887 0-65.251-41.892-117.195-98.869-117.195-56.924 0-98.998 51.944-98.998 117.195.013 69.647 38.028 123.887 98.998 123.887zm297.669-3.943h-28.949c-38.001-53.643-75.64-106.949-113.226-167.193h-.324v167.193h-31.919V67.5h28.949c37.923 53.266 75.562 106.196 112.798 166.13h.687V67.498h31.997v233.118h-.013zm75.925-92.267c9.35-30.647 18.624-58.947 27.003-94.925h.661c9.325 35.978 17.626 64.29 26.264 94.925h-53.928zM1680.593 67.5l-80.581 233.118h34.655l20.259-63.63h70.296l18.313 63.63h44.603L1713.86 67.5h-33.267zm119.153 0h39.7v201.796h78.883v31.322h-118.583V67.5zM753.566 495.605v96.21c-21.335 8.365-43.656 14.318-66.237 14.318-68.623 0-111.903-53.28-111.903-121.89 0-63.63 43.28-119.218 113.213-119.218 21.608 0 43.267 8.028 56.6 18.002l-12.995 27.639c-10.636-6.602-27.328-12.27-42.62-12.27-42.592 0-71.592 33.644-71.592 86.6 0 55.238 33.32 87.844 67.624 87.844 10.61 0 19.65-1.271 28.015-5.642v-71.593h39.895zm142.927-95.211h-66.678v63.902h65.264v31.309h-65.264v75.211H908.4v31.348h-118.57V369.033h106.664v31.36zm123.2 172.433c-41.672 0-56.341-45.913-56.341-90.568 0-42.917 16.653-83.876 56.34-83.876 39.597 0 56.211 40.959 56.211 83.876 0 44.655-14.681 90.568-56.21 90.568zm0 33.306c60.905 0 98.842-54.279 98.842-123.887 0-65.251-41.931-117.234-98.843-117.234-57.015 0-98.92 51.983-98.92 117.234-.013 69.621 37.885 123.887 98.92 123.887zm290.626-110.528v96.21c-21.335 8.365-43.591 14.318-66.263 14.318-68.57 0-111.89-53.28-111.89-121.89 0-63.63 43.32-119.218 113.252-119.218 21.66 0 43.267 8.028 56.561 18.002l-12.995 27.639c-10.661-6.602-27.21-12.27-42.554-12.27-42.684 0-71.658 33.644-71.658 86.6 0 55.238 33.332 87.844 67.637 87.844 10.687 0 19.636-1.271 27.989-5.642v-71.593h39.921zm76.677-95.211h17.6c23.58 0 36.938 13.592 36.938 37.599 0 31.27-18.949 45.238-37.95 46.237-4.007.402-13.345.74-16.588 1.025v-84.861zm101.203 201.77l-47.041-96.534c25.641-13.618 40.375-41.334 40.375-69.31 0-45.33-27.69-67.287-72.32-67.287h-62.267v233.131h40.05v-87.909h17.963l37.56 87.91h45.68zm65.913-92.254c9.299-30.686 18.624-58.96 26.977-94.925h.661c9.325 35.965 17.626 64.239 26.29 94.925h-53.928zm15.291-140.877l-80.607 233.131h34.63l20.336-63.63h70.296l18.21 63.63h44.706l-74.304-233.131h-33.267zm182.472 0h-62.268v233.131h39.973v-87.909h17.937c47.65 0 76.651-38.637 76.651-77.935 0-45.342-27.664-67.287-72.293-67.287zm-5.603 115.21c-4.15.376-13.904.687-16.692.96v-84.81h17.937c23.306 0 36.678 13.593 36.678 37.6 0 31.27-18.923 45.251-37.923 46.25zm263.014 117.921h-39.947V489.976h-82.98v112.188h-39.52V369.033h39.52v89.582h82.98v-88.92h39.947v232.47zm38.26-233.131h39.714v233.131h-39.714V369.033zm219.462 42.32c-9.676-6.005-25.59-12.97-40.985-12.97-40.686 0-70.218 33.644-70.218 86.6 0 55.238 32.606 87.844 71.256 87.844a75.406 75.406 0 0039.947-11.673l11.024 29c-12.062 8.314-33.306 15.979-52.592 15.979-68.623 0-111.942-53.28-111.942-121.89 0-63.63 42.942-119.218 112.525-119.218 20.7 0 39.947 8.716 53.682 18.002l-12.697 28.326z"></path></g></g></svg>
@@ -198,42 +198,43 @@ export default function Partners () {
             <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
             <div className="container px-14 mx-auto">
                 <div className="mb-10 max-w-xl mx-auto sm:mb-24 text-center">
-                <span className="text-lg font-bold text-white">Are you Ready to Join the KTern Ecosystem?</span>
-                <h2 className="mt-4 text-4xl lg:text-5xl text-white font-bold font-heading">Follow the Steps Below to become a KTern Partner  </h2>
+                <span className="section-heading  text-white">Are you Ready to Join the KTern Ecosystem?</span>
+                <h2 className="mt-4 section-subheading text-white">Follow the Steps Below to become a KTern Partner  </h2>
                 </div>
                 <div className="relative flex flex-wrap justify-center -mx-10 mb-5">
-                <div className="hidden lg:block absolute inset-y-0 -mr-80 -mt-24"><Image  width={200} height={100} src="/partner/dots-gray.svg" alt=""/></div>
-                <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
+                        <div className="hidden lg:block absolute inset-y-0 -mr-80 -mt-18"><Image width={200} height={100} src="/partner/dots-gray.svg" alt="" /></div>
+                        <div  className="hidden lg:block absolute top-0 left-0 ml-72 -mt-18"><Image src="/partner/dots-gray.svg" width={200} height={100}  alt=""/></div>
+                <div className="w-full lg:w-1/3 px-10 mt-20 mb-20 lg:mb-0">
                     <div className="relative flex">
-                    <div  className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-24"><Image src="/partner/dots-gray.svg" width={200} height={100}  alt=""/></div>
+                    
                     <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">1</span>
+                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">1</span>
                     </div>
                     <div className="max-w-xs">
-                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Reach Out</h3>
-                        <p className="text-md text-gray-200">You can Fill this Form to Let us Know you are Interested .  </p>
+                        <h3 className="mb-6 card-heading text-white">Reach Out</h3>
+                        <p className="card-subheading text-gray-200">You can Fill this Form to Let us Know you are Interested .  </p>
                     </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
+                <div className="w-full lg:w-1/3 mt-20 px-10 mb-20 lg:mb-0">
                     <div className="flex">
                     <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">2</span>
+                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">2</span>
                     </div>
                     <div className="max-w-xs">
-                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Onboarding</h3>
-                        <p className="text-md text-gray-200">Upon approval, a Partnership agreement is signed.</p>
+                        <h3 className="mb-6 card-heading text-white">Onboarding</h3>
+                        <p className="card-subheading text-gray-200">Upon approval, a Partnership agreement is signed.</p>
                     </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/3 px-10">
+                <div className="w-full lg:w-1/3 mt-20 px-10">
                     <div className="flex">
                     <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white text-lg font-bold rounded-full">3</span>
+                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">3</span>
                     </div>
                     <div className="max-w-xs">
-                        <h3 className="mb-6 text-lg font-bold font-heading text-white">Leverage KTern</h3>
-                        <p className="text-md text-gray-200">A dedicated Partnership Manager will be handling your account</p>
+                        <h3 className="mb-6 card-heading text-white">Leverage KTern</h3>
+                        <p className="card-subheading text-gray-200">A dedicated Partnership Manager will be handling your account</p>
                     </div>
                     </div>
                 </div>
@@ -249,12 +250,12 @@ export default function Partners () {
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="relative p-6  md:p-0 md:pb-4">
-                <h2 className="card-heading  font-bold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10">Get started with your DXaaS Journey</h2>
+                <h2 className="card-heading   tracking-tight text-white sm:text-4xl sm:leading-10">Get started with your DXaaS Journey</h2>
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow   text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 button ">See Pricing</a></Link>
-                <Link  href="#" passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black font-bold rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button">Try it free</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button ">See Pricing</a></Link>
+                <Link  href="#" passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button">Try it free</a></Link>
                 </div>
                 </div>
                 </div>

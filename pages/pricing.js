@@ -11,7 +11,7 @@ export default function Pricing () {
                     <div className="flex flex-col w-full mb-20 text-center">
 
                         <div className="relative z-10 max-w-3xl px-12 mx-auto space-y-5 text-center lg:px-0">
-                            <h1 className="text-6xl font-black text-black lg:text-6xl">Get Started With KTern.AI</h1>
+                            <h1 className="text-6xl font-black text-black lg:text-6xl">Get Started With KTern</h1>
                             <p className="mx-auto text-lg leading-relaxed text-gray-500 lg:w-2/3">Digital Transformation made simple</p>
                         </div>
 
@@ -284,7 +284,7 @@ export default function Pricing () {
                     </div>
                 </div>
             </section>
-            {/* <!-- Five Streams of KTern.AI--> */}
+            {/* <!-- Five Streams of KTern--> */}
             <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 md:pt-12 md:pb-24" style={{backgroundColor:'#f5f6f7'}}>
                 <div className="px-5 mx-auto max-w-7xl md:px-8 lg:px-16">
                     <svg className="w-40 h-40 sm:w-48 sm:h-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 41"><defs></defs><defs><linearGradient x1="50%" x2="108.006%" y1="44.344%" y2="62.397%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient><linearGradient x1="50%" x2="108.006%" y1="48.828%" y2="52.569%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient><linearGradient x1="50%" x2="108.006%" y1="48.935%" y2="52.335%"><stop offset="0%" stopColor="#FDC530"></stop><stop offset="100%" stopColor="#FF42E9"></stop></linearGradient></defs><g fill="none" fillRule="nonzero"><path fill="url(#a)" d="M42.82.11c11.81.69 23.5 6.44 30.55 16.05A480.23 480.23 0 012.31 23.9C8.54 8 26.24-1.12 42.82.11z"></path><path fill="url(#b)" d="M78.73 26.87c-13.7 1.8-27.46 3-41.23 4.1-12.44.65-24.87 1.42-37.33 1.33A33 33 0 01.71 29c11.86-.44 23.66-1.65 35.47-2.67C49.5 24.54 62.84 23 76 20.28"></path><path fill="url(#c)" d="M80 38.27C53.57 41.54 26.83 41.13.24 40.44 0 39.75.2 38.91 0 38.29v-2c26.56-.52 79.11-8.39 79.35-6.85"></path></g></svg>
