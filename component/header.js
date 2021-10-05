@@ -196,7 +196,7 @@ export default function Header () {
                 </div>
                 <div className="hidden lg:flex p-0">
                         <ul className=" flex space-x-2 xl:space-x-10">
-                        <li className="toggleable  " ref={products}>    
+                        <li className="toggleable  hover:bg-secondary  " ref={products}>    
                             {/* <li className="toggleable  " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
                             <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
