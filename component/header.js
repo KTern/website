@@ -206,7 +206,11 @@ export default function Header () {
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
-                                        <div >
+                                            <div >
+                                                <li>
+                                                    <Link href="/products/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Maps</a></Link>
+                                        </li>
                                         <li>
                                                     <Link href="/products/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Projects</a></Link>
@@ -215,18 +219,15 @@ export default function Header () {
                                                     <Link href="/products/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Process</a></Link>
                                         </li>
-                                        <li>
-                                                    <Link href="/products/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Maps</a></Link>
+                                         <li>
+                                        <Link href="/products/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/products/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Mines</a></Link>
                                         </li>
-                                        <li>
-                                        <Link href="/products/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Link>
-                                        </li>
+                                       
                                         </div>
                                     </ul>
                                             {isProjectShown && (
@@ -274,8 +275,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                                 </li>
                                                  <li className="mt-4 mx-2">
                         <Link href='/resources' passHref>
-                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                 <span className="hyperlink group-hover:text-gray-400">See All Resources</span>
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">See All Resources
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>

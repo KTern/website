@@ -13,7 +13,7 @@ export default function Footer () {
                             <h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
                             <ul className="">
                                 <li className="mb-2"><Link  href="/about"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
-                                <li className="mb-2"><Link  href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
+                                <li className="mb-2"><Link  href="/temp-pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
                                 <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a></Link></li>
                                 <li className="mb-2"><Link  href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
                                 
@@ -23,8 +23,8 @@ export default function Footer () {
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
                             <ul className="">
                                 <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
-                                <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
+                                    <li className="mb-2"><Link href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
+                                     <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
                                 <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
                                 <li className="mb-2"><Link  href="#"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
                             </ul>
@@ -81,9 +81,9 @@ export default function Footer () {
                         <span className="hidden md:inline-block mx-8 w-px h-8 bg-gray-500"></span>
                         
                         <p className="navbar-h space-x-5 lg:block  text-white ">
-                            <span className="text-xs">Privacy Policy</span>
-                            <span className="text-xs">Cookies Policy</span>
-                            <span className="text-xs">Terms of Service</span>
+                            <span className="text-xs"><Link href="/trust-center/landing"><a >Privacy Policy</a></Link></span>
+                            <span className="text-xs"><Link href="/trust-center/landing"><a >Cookies Policy</a></Link></span>
+                            <span className="text-xs"><Link href="/trust-center/landing"><a >Terms of Service</a></Link></span>
                         </p>
 
                     </div>

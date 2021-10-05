@@ -12,7 +12,7 @@ export default function Landing () {
       <section id="features" className="w-full pt-10 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="w-20 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     E-book
                 </p>
                     <h1 className="heading text-white "  >S/4 HANA Journey Made Simple</h1>

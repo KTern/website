@@ -89,7 +89,7 @@ export default function Home () {
                                             <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
                                             </span>
                             <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Maps </span></h3>
-                                <p className="mt-4 card-subheading text-gray-700">Build your Business Case for SAP Digital Transformation with KTern’s Digital Maps</p>
+                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
@@ -131,7 +131,7 @@ export default function Home () {
                                             <Image src="/assets/icons/projects.png"alt="Digital Projects" height={30} width={30}/>
                                             </span>
                             <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Projects </span></h3>
-                                <p className="mt-4 card-subheading text-gray-700">Gain ultimate control of your SAP projects and teams with KTern&apos;s Digital projects</p>
+                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital projects</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
@@ -174,7 +174,7 @@ export default function Home () {
                                             <Image src="/assets/icons/Process.svg"alt="Digital Process" height={30} width={30}/>
                                             </span>
                             <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Process </span></h3>
-                                <p className="mt-4 card-subheading text-gray-700">Create a Digital Footprint and optimize your processes with KTern&apos;s Digital Process</p>
+                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Process</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
@@ -214,7 +214,7 @@ export default function Home () {
                                             <Image src="/assets/icons/labs.png"alt="Digital Lab" height={30} width={30}/>
                                             </span>
                             <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Labs </span></h3>
-                                <p className="mt-4 card-subheading text-gray-700">Automate your Testing for modern Enterprises with KTern&apos;s  driven Digital Maps</p>
+                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">

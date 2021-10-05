@@ -9,7 +9,7 @@ export default function TrustCenter () {
             <section className="w-full py-28 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                 <p className="w-40 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+                 <p className="w-32 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Trust Center
                 </p>
                     <h1 className="heading text-white mb-5"  >Trust Center</h1>
@@ -29,7 +29,7 @@ export default function TrustCenter () {
            <section className=" flex pb-10 items-center justify-end">
                           <input id="demo-2" type="search" placeholder="Search"/>
                         </section>
-          <hr className="bg-black h-1"/>
+          <hr className="bg-secondary h-1"/>
             <div className="grid grid-cols-1 mt-16 sm:grid-cols-2 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20">
                 <div>
                     <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>

@@ -7,7 +7,7 @@ export default function Resources () {
             <section className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                <p className="inline-block px-2 py-1 mb-5 font-medium hyperlink w-40 text-gray-900 uppercase bg-gray-200 rounded-full ">
+                <p className="inline-block px-2 py-1 mb-5 font-medium hyperlink w-28 text-gray-900 uppercase bg-gray-200 rounded-full ">
                      Resources
                 </p>
                     <h1 className="heading text-white "  >DXaaS Resource Center</h1>

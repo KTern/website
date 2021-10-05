@@ -35,8 +35,7 @@ export default function Card ({data }) {
                 </li>
                     <li className="mt-4 mx-2">
                         <Link href='/features' passHref>
-                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                 <span className="hyperlink group-hover:text-gray-400">See All Features</span>
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group   hyperlink group-hover:text-gray-400">See All Features
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
