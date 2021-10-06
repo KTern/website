@@ -229,7 +229,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         </li>
                                        
                                         </div>
-                                    </ul>
+                                        </ul>
+                                        
                                             {isProjectShown && (
                                             <Card id="toggle-1" data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Projects.png',class:'bg-project-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
                                             )}
@@ -252,7 +253,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
-                                        <div >
+                                      
+                                            <div >
                                         <li>
                                                     <Link href="/webinars"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>

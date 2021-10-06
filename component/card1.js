@@ -10,7 +10,7 @@ export default function Card ({data }) {
     const [ isFeature5Shown, setIsFeature5Shown ] = useState(false);
     return (
 <>
-            <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
+            <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6  lg:pt-1" >
             <h3 className="navbar-h text-black text-bold mb-2 uppercase">{data.title}</h3>
             <div >
                 <li>
