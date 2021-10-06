@@ -87,26 +87,26 @@ export default function Home () {
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
-                                            </span>
-                            <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Maps </span></h3>
+                            </span>
+                            <h3 className="card-heading font-bold">Digital Maps</h3>
                                 <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2">
+                                <ul className="space-y-2 h-100">
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Landscape <span className="inline xl:block"> Assessment</span></span>
+                                        <span>Landscape Assessment</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Business Process Assessment</span>
+                                        <span>Business Assessment</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Custom Object <span className="inline xl:block"> Assessment</span></span>
+                                        <span>Custom Object  Assessment</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Timeline <span className="inline xl:block"> Assessment</span></span>
+                                        <span>Timeline Assessment</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -130,25 +130,25 @@ export default function Home () {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/projects.png"alt="Digital Projects" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Projects </span></h3>
+                            <h3 className="card-heading font-bold">Digital Projects</h3>
                                 <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital projects</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Plan <span className="inline xl:block"> Transformation</span></span>
+                                        <span>Plan Transformation</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Team <span className="inline xl:block"> Collaboration</span></span>
+                                        <span>Team Collaboration</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Organized <span className="inline xl:block"> Transformation</span></span>
+                                        <span>Organized Transformation</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Customizable <span className="inline xl:block"> Dashboards</span></span>
+                                        <span>Customizable Dashboards</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -173,25 +173,25 @@ export default function Home () {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/Process.svg"alt="Digital Process" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Process </span></h3>
+                            <h3 className="card-heading font-bold">Digital Process</h3>
                                 <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Process</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process <span className="inline xl:block"> Orchestration</span> </span>
+                                        <span>Process Orchestration</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Custom Code <span className="inline xl:block"> Remediation</span></span>
+                                        <span>Custom Code Remediation</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Change <span className="inline xl:block"> Management</span></span>
+                                        <span>Change Management</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Materiality <span className="inline xl:block"> Analysis</span> </span>
+                                        <span>Materiality Analysis </span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -213,25 +213,25 @@ export default function Home () {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/labs.png"alt="Digital Lab" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Labs </span></h3>
+                            <h3 className="card-heading font-bold">Digital Labs</h3>
                                 <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Auto <span className="inline xl:block"> Recommendation</span></span>
+                                        <span>Auto Recommendation</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Sign off <span className="inline xl:block"> Management</span></span>
+                                        <span>Sign off Management</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Auto <span className="inline xl:block"> Execution</span></span>
+                                        <span>Auto Execution</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Test Case <span className="inline xl:block"> Management</span></span>
+                                        <span>Test Case Management</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -256,25 +256,25 @@ export default function Home () {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/mines.png"alt="Digital Mines" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital<span className="card-heading inline xl:block"> Mines </span></h3>
+                            <h3 className="card-heading font-bold">Digital Mines</h3>
                                 <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Mines</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2">
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process <span className="inline xl:block"> Mining</span></span>
+                                        <span>Process Mining</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Optimize <span className="inline xl:block"> Processes</span></span>
+                                        <span>Optimize Processes</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process <span className="inline xl:block"> Monitoring</span></span>
+                                        <span>Process Monitoring</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>ROI <span className="inline xl:block"> Estimation</span></span>
+                                        <span>ROI Estimation</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
