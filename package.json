@@ -10,12 +10,13 @@
     },
     "dependencies": {
         "next": "11.1.0",
+        "next-seo": "4.28.1",
         "nextjs-breadcrumbs": "^1.1.9",
         "react": "17.0.2",
+        "react-awesome-stars-rating": "0.6.0",
         "react-dom": "17.0.2",
         "react-multi-carousel": "2.6.5",
         "react-radial-menu": "1.0.0",
-        "react-star-ratings": "2.3.0",
         "sharp": "^0.29.1"
     },
     "devDependencies": {

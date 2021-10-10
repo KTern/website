@@ -69,7 +69,7 @@ function useProducts () {
 
     useEffect(() => {
         function handleClickOutside (event) {
-            console.log(event.target.tagName.toLowerCase() === 'a')
+            // console.log(event.target.tagName.toLowerCase() === 'a')
            
             if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                 
@@ -179,10 +179,43 @@ export default function Header () {
     const [ isTechnologyShown, setIsTechnologyShown ] = useState(false);
     const [ isBecomeAPartnerShown, setIsBecomeAPartnerShown ] = useState(false);
     const [ isPortalShown, setIsPortalShown ] = useState(false);
+    const [ isResourceLibraryShown, setIsResourceLibraryShown ] = useState(false);
+    const [ isPricingShown, setIsPricingShown ] = useState(false);
+    const [ isDocumentationShown, setIsDocumentationShown ] = useState(false);
+    const [ isCloudLiveShown, setIsCloudLiveShown ] = useState(false);
+    const [ isVisible, setIsVisible ] = useState(true);
+    const listenToScroll = () => {
+  let heightToHideFrom = 0;
+  const winScroll = document.body.scrollTop || 
+      document.documentElement.scrollTop;
+     
+  if (winScroll > heightToHideFrom) { 
+     isVisible &&      // to limit setting state only the first time         
+          setIsVisible(false);
+  } else {
+       setIsVisible(true);
+  }  
+};
+    useEffect(() => {   
+  window.addEventListener("scroll", listenToScroll);
+  return () => 
+     window.removeEventListener("scroll", listenToScroll); 
+    }, [])
+    
     return (
-       <section className="container z-50 w-full" ref={overall}>      
-        {/* <!-- Desktop --> */}
-        <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
+        
+       <section className=" z-50 w-full pb-10" ref={overall}>      
+            {/* <!-- Desktop --> */}
+          
+            <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
+                 {isVisible &&
+                <div id="banner" className="w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;<Link href="/" passHref>
+                 <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">Learn More
+                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                 </svg>
+                 </a>
+             </Link>  </div>} 
             <div className="flex flex-wrap justify-between items-center">
                     <Link href="/" passHref>
                         <a>
@@ -201,7 +234,7 @@ export default function Header () {
                         <li className="toggleable  hover:bg-secondary  " ref={products}>    
                             {/* <li className="toggleable  " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
-                            <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
+                            <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
                             <div id="toggle-1" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
@@ -228,7 +261,18 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Mines</a></Link>
                                         </li>
                                        
-                                        </div>
+                                        
+                                   <li><Link href="/"  passHref>
+                 <a className="inline-flex items-center ml-2 mt-4 text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400"><span className="group-hover:text-gray-400">See Pricing</span>
+                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                 </svg>
+                 </a>
+             </Link> </li>         
+                                            
+                                            
+                                            
+                                            </div>
                                         </ul>
                                         
                                             {isProjectShown && (
@@ -248,32 +292,48 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                         </li>
                         <li className="toggleable  hover:bg-secondary" ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
                             <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
                                       
                                             <div >
+                                                  <li>
+                                                    <Link href="/resources"    ><a onMouseEnter={() => {setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Resource Library</a></Link>
+                                        </li>
                                         <li>
-                                                    <Link href="/webinars"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
+                                                    <Link href="/webinars"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false); setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/"    ><a onMouseEnter={()=>{setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href="/"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/resources/ebook"    ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(true);setIsCaseShown(false);setIsWebinarsShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Ebooks</a></Link>
+                                                    <Link href="/resources/ebook"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(true);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">E-Books</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/resources/case-study"   ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(true);setIsWebinarsShown(false)}}
-                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Case study</a></Link>
+                                                    <Link href="/resources/customer-success-story"   ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(true);setIsWebinarsShown(false)}}
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Customer Success Stories</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="/trust-center"   ><a onMouseEnter={()=>{setIsArticlesShown(false);setIsTrustShown(true);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}} 
+                                        <Link href="/trust-center"   ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(true);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}} 
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Link>
+                                                </li>
+                                                 <li>
+                                                    <Link href="/pricing"   ><a onMouseEnter={() => {setIsDocumentationShown(false);setIsCloudLiveShown(false); setIsPricingShown(true);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Pricing</a></Link>
+                                                </li>
+                                                 <li>
+                                                    <Link href="/"   ><a onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Documentation</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/"   ><a onMouseEnter={() => { setIsCloudLiveShown(true);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
                         <Link href='/resources' passHref>
@@ -294,16 +354,24 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
                                              {isEbooksShown && (
                                             <FeatureCard data={{title:'Ebook',description:'Ebook 1 desc',url:'/resources/ebook',image:'/product/maps/maps_1.svg'} }/>  )}
                                              {isCaseShown && (
-                                            <FeatureCard data={{title:'Case Study',description:'Case Study 1 desc',url:'/resources/case-study',image:'/product/mines/mines_1.svg'} }/>  )}
+                                            <FeatureCard data={{title:'Case Study',description:'Case Study 1 desc',url:'/resources/customer-success-story',image:'/product/mines/mines_1.svg'} }/>  )}
                                              {isTrustShown && (
-                                            <FeatureCard data={{title:'Trust Center',description:'Trust Center 1 desc',url:'/trust-center',image:'/product/labs/labs_1.svg'} }/> )}
+                                                <FeatureCard data={{ title: 'Trust Center', description: 'Trust Center 1 desc', url: '/trust-center', image: '/product/labs/labs_1.svg' }} />)}
+                                            {isPricingShown && (
+                                                <FeatureCard data={{ title: 'Pricing', description: 'Pricing 1 desc', url: '/pricing', image: '/product/labs/labs_1.svg' }} />)}
+                                            {isDocumentationShown && (
+                                                <FeatureCard data={{ title: 'Documentation', description: 'Documentation 1 desc', url: '/', image: '/product/labs/labs_1.svg' }} />)}
+                                            {isCloudLiveShown && (
+                                                <FeatureCard data={{ title: 'Cloud Live Status', description: 'Live Status 1 desc', url: '/', image: '/product/labs/labs_1.svg' }} />)}
+                                            {isResourceLibraryShown && (
+                                            <FeatureCard data={{title:'Resource Library',description:'Resource Library 1 desc',url:'/resources',image:'/product/labs/labs_1.svg'} }/> )}
                                         </div>
                                 </div>
                             </div>
                         </li>  
                         <li className="toggleable  hover:bg-secondary" ref={partners}>
                                  <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
-                            <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header uppercase " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
+                            <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
                             <div id="toggle-3" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
@@ -350,11 +418,12 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                             </div>
                         </li>
                         <li className="toggleable hover:bg-secondary ">
-                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header uppercase hover:bg-secondary ">Company</a></Link>
+                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
                         </li>
                     </ul>
                </div>
-                <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4">
+                    <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
+                        <Link href="/"><a className="button">Login</a></Link>
                     <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>

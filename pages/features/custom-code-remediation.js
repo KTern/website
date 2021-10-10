@@ -2,7 +2,7 @@ import Layout from "../../component/Layout"
 import Head from "next/head"
 import Image from "next/image";
 import Link from "next/link";
-import Breadcrumbs from 'nextjs-breadcrumbs';
+// import Breadcrumbs from 'nextjs-breadcrumbs';
 {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */}
 export default function Digital_Projects () {
     return (
@@ -16,9 +16,9 @@ export default function Digital_Projects () {
                    
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                         <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                              <div className="flex hyperlink mb-5 breadcrumb">
+                              {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
-                    </div>
+                    </div> */}
                 <p className="inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Custom Code Remediation
                 </p>
@@ -39,7 +39,45 @@ export default function Digital_Projects () {
                     <Image className="relative z-40 w-full h-full" src="/features/custom-code-hero.svg" alt="hero image" width={600 } height={420 }/>
                     </div>
             </div>
-            </section>
+                </section>
+                 {/* <!-- Why Ktern --> */}
+                <section className="md:px-20">
+                    <h2 className="section-heading text-center mt-10 mb-3">Uncomplicate customer support with a consumer-grade solution that’s fast to launch and scale.</h2>
+                    <p className="section-subheading text-center">Everything you need to empower your teams with more meaningful conversations and deliver effortless customer support.</p>
+                    <div className="flex justify-center items-center   mx-auto space-x-10 ">
+                        <div className="flex flex-wrap justify-center items-center">
+                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 mt-8 justify-center items-center ">
+                                <span className="flex items-center justify-center w-14 h-14 mb-8  rounded-full">
+                                    <Image src="https://static.thenounproject.com/png/925249-200.png" alt="" width={150} height={150}/>
+                                </span>
+                                <h3 className="mb-4  card-heading">One Workspace for All SAP Initiatives </h3>
+                                <p className="card-subheading text-gray-500">Simplify your IT Landscape by eliminating disparate applications which you might use for project management, collaboration, testing and process optimization  </p>
+                            </div>
+                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
+                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
+                                    <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlFtvMeuE65QVk7aARCnGZ6IrKur4L5D8cVk4gJCwkCGw6NbYt59RknTDlUe40zsIISA&usqp=CAU" alt="" width={150} height={150} />
+                                </span>
+                                <h3 className="mb-4 card-heading  ">Reduce Testing Efforts by 85% </h3>
+                                <p className="card-subheading text-gray-500">Leverage new-gen screen-based testing and RPA-based testing bots built on SAP Business APIs to reduce manual effort and accelerate SAP releases </p>
+                            </div>
+                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
+                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
+                                    <Image src="https://cdn0.iconfinder.com/data/icons/business-and-finance-9-3/68/438-512.png" width={150} height={150} alt="" />
+                                </span>
+                                <h3 className="mb-4 card-heading  ">Run efficient SAP investments  </h3>
+                                <p className="card-subheading text-gray-500">Plan, execute, collaborate and govern each SAP investment from strategy building to task execution for streamlined and successful business operations  </p>
+                            </div>
+                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center">
+                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
+                                    <Image src="/assets/cloud.png" alt=""  width={150} height={150}/>
+                                </span>
+                                <h3 className="mb-4 card-heading  ">Optimize your SAP Business Processes </h3>
+                                <p className="card-subheading text-gray-500">Mine and optimize your existing business processes with the inbuilt SAP Tribal Knowledge Base engine which encompasses decades worth of SAP business expertise </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* <!-- /Why Ktern --> */}
             {/* <!-- Criss Cross Features--> */}
                 <section className="px-10 py-10 bg-white">
                      <div className="relative">
@@ -389,7 +427,7 @@ export default function Digital_Projects () {
    
 
             {/* <!-- What do you Get from KTern Section --> */}
-            <section className="py-10 bg-white">
+            {/* <section className="py-10 bg-white">
                 <div className="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
                 <div className="flex flex-wrap items-center -mx-3">
                     <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
@@ -416,7 +454,7 @@ export default function Digital_Projects () {
                                 <Image className="mx-auto sm:max-w-sm lg:max-w-full" src="/features/ktern-footer-cta.png" alt="feature image" width={415 } height={320 } layout="responsive"/></div>
                 </div>
                 </div>
-            </section> 
+            </section>  */}
 
             {/* <!--Resources Section--> */}
            <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">

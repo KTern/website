@@ -17,10 +17,10 @@ export default function Home () {
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
                             <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Free Trial</a></Link>
-                            <Link  href="/contact"><a className="xl:mb-60 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Contact Sales</a></Link>
-                          
+                            <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Contact Sales</a></Link>
+                          <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">No Credit Card required</p>
                         </div>
-                      
+                        
                     </div>
                 </section>
                 {/* <!--/ Hero Section --> */}
@@ -342,8 +342,8 @@ export default function Home () {
                                 </span>
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/case-study" className="icon-link__link" passHref>
-                                    <Link href="/resources/case-study"  passHref>
+                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
+                                    <Link href="/resources/customer-success-story"  passHref>
                                 <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -360,8 +360,8 @@ export default function Home () {
                                 </span>
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/case-study" className="icon-link__link" passHref>
-                                    <Link href="/resources/case-study"  passHref>
+                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
+                                    <Link href="/resources/customer-success-story"  passHref>
                                 <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -377,8 +377,8 @@ export default function Home () {
                                 </span>
                                 <span className="card-heading">$33,261</span>
                                 <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/case-study" className="icon-link__link" passHref>
-                                   <Link href="/resources/case-study"  passHref>
+                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
+                                   <Link href="/resources/customer-success-story"  passHref>
                                 <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-gray-400">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

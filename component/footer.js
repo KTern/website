@@ -1,9 +1,14 @@
-
+import Head from "next/head"
 import Image from "next/image";
 import Link from "next/link";
-import StarRatings from 'react-star-ratings';
+
+import ReactStarsRating from 'react-awesome-stars-rating';
 export default function Footer () {
-    return (      
+    return (
+        <>
+            <Head>
+                <Link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css" key="star rating"/>
+            </Head>
     <section className="py-10 px-10 bg-black">
         <div className="px-10 mx-auto ">
             <div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
@@ -13,7 +18,7 @@ export default function Footer () {
                             <h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
                             <ul className="">
                                 <li className="mb-2"><Link  href="/about"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
-                                <li className="mb-2"><Link  href="/temp-pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
+                                <li className="mb-2"><Link  href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
                                 <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a></Link></li>
                                 <li className="mb-2"><Link  href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
                                 
@@ -31,41 +36,39 @@ export default function Footer () {
                         </div>
                              <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Resources</h3>
-                            <ul className="">
+                                <ul className="">
+                                    <li className="mb-2"><Link  href="/resources"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
                                 <li className="mb-2"><Link  href="/webinars"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Blog</a></Link></li>
-                                <li className="mb-2"><Link  href="/resources/case-study"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Case Studies</a></Link></li>
+                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
                                 <li className="mb-2"><Link  href="/resources/ebook"><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
-                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">White Papers</a></Link></li>
+                                    <li className="mb-2"><Link href="/resources/customer-success-story"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
+                                    <li className="mb-2"><Link href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
+                                    <li className="mb-2"><Link href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
+                                    <li className="mb-2"><Link href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
+                                    
+                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
                                
                             </ul>
                         </div>
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Partner</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="/partners"><a className="navbar-s text-gray-200 hover:text-gray-100 ">KTern Partner Program</a></Link></li>
+                                <li className="mb-2"><Link  href="/partners"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partners</a></Link></li>
                                 <li className="mb-2"><Link  href="/consulting-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Consulting Partner</a></Link></li>
                                 <li className="mb-2"><Link  href="/technology-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Technology Partner</a></Link></li>
-                                <li className="mb-2"><Link  href="/become-a-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
+                                    <li className="mb-2"><Link href="/become-a-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
+                                    <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partner Portal</a></Link></li>
                                 
                             </ul>
                         </div>
                         </div>
                        <div className="flex"> 
-                    <div className="mb-6 mt-10 mr-10">
+                    <div className="mb-6 mt-10 ">
                         <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white " alt="Available on SAP Store"  height="50%"/>
                         </div>
-                    <div className="mb-6">
-                                <Link href="https://www.g2.com"><a className="ml-20 x-g2-link-home" title="G2"> <Image width="50px" height="50px" src="https://tracking.g2crowd.com/logo/light" alt="G2" /></a></Link>
-                                <br/>
-                         <StarRatings
-                            rating={4.7}
-                            starRatedColor="#FF492C"
-                            starEmptyColor="white"
-                            numberOfStars={5}
-                            starDimension='30px'
-                            name='rating'
-                                />
+                    <div className="shadow-xl shadow-gray-100 border-2 border-white mx-5 mb-7 rounded-lg px-8">
+                                <Link href="https://www.g2.com"><a className="mx-auto x-g2-link-home" title="G2"> <Image width="100px" height="50px" src="https://logodix.com/logo/2006253.png" alt="G2" /></a></Link>
+                    <ReactStarsRating className="flex mx-auto  " value={4.7} />
                             </div>
         </div>
                 </div>
@@ -161,6 +164,7 @@ export default function Footer () {
                 </p>
                    
         </div>
-    </section>
+            </section>
+            </>
     )
 }
