@@ -6,54 +6,39 @@ import FeatureCard from "./featureCard";
 import React, { useState,useRef, useEffect  } from 'react';
 function openNav () {
     if (process.browser) {
-                    console.log("Clicked")
+                
             document.getElementById("navbar-menu").style.display = 'block';
             
         }
     }
 function closeNav () {
     if (process.browser) {
-        console.log("Clicked as well")
+      
         document.getElementById("navbar-menu").style.display = 'none';
     }
 }
 
 function useOutsideAlerter (ref) {
     
-    useEffect(() => {
-        /**
-         * Alert if clicked on outside of element
-         */
+   
         function handleClickOutside (event) {
             if (ref.current && !ref.current.contains(event.target)) {
-             
-                document.getElementById('toggle-1').style.display = "none";
-                  document.getElementById('toggle-2').style.display = "none";
-                 document.getElementById('toggle-3').style.display = "none";
+                if (process.browser) {
+                    document.getElementById('toggle-1').style.display = "none";
+                    document.getElementById('toggle-2').style.display = "none";
+                    document.getElementById('toggle-3').style.display = "none";
+                }
             }
-            // else if (ref.current.contains(event.target)) {
-            //     console.log("Clicked on")
-               
-            //     if (document.getElementById('toggle-1').style.display == "block") {
-            //         document.getElementById('toggle-1').style.display = "none";
-            //         document.getElementById('toggle-2').style.display = "none";
-            //           document.getElementById('toggle-3').style.display = "none";
-                   
-            //     }
-            //     else {
-            //         document.getElementById('toggle-1').style.display = "block";
-                  
-            //     }
-            // }
         }
-
+    if (process.browser) {
         // Bind the event listener
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
+            
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [ref]);
+    }
 }
 function checkAll (a, b) {
     if (document.getElementById(a).style.display == "block") {
@@ -67,7 +52,7 @@ function useProducts () {
      const ref = useRef();
   const [ready, setReady] = useState(false);
 
-    useEffect(() => {
+    if (process.browser) {
         function handleClickOutside (event) {
             // console.log(event.target.tagName.toLowerCase() === 'a')
            
@@ -81,26 +66,28 @@ function useProducts () {
                    
                 }
                 else {
-                    checkAll('toggle-2','toggle-3');
+                    checkAll('toggle-2', 'toggle-3');
                     document.getElementById('toggle-1').style.display = "block";
                   
                 }
             }
         }
+    }
+    if (process.browser) {
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-  }, [ref.current]);
+    }
 
   return [ref, ready];
 }
 function useResources () {
      const ref = useRef();
   const [ready, setReady] = useState(false);
-  useEffect(() => {
-    function handleClickOutside (event) {
+    if (process.browser) {
+        function handleClickOutside (event) {
             if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                
                
@@ -111,27 +98,27 @@ function useResources () {
                    
                 }
                 else {
-                     checkAll('toggle-1','toggle-3');
+                    checkAll('toggle-1', 'toggle-3');
                     document.getElementById('toggle-2').style.display = "block";
                   
                 }
             }
         }
+    }
+    if (process.browser) {
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-  }, [ref.current]);
-
+    }
   return [ref, ready];
 }
 function usePartners () {
      const ref = useRef();
   const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-     function handleClickOutside (event) {
+    if (process.browser) {
+        function handleClickOutside (event) {
             if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                
                
@@ -142,19 +129,21 @@ function usePartners () {
                    
                 }
                 else {
-                     checkAll('toggle-1','toggle-2');
+                    checkAll('toggle-1', 'toggle-2');
                     document.getElementById('toggle-3').style.display = "block";
                   
                 }
             }
         }
+    }
+    if (process.browser) {
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-  }, [ref.current]);
 
+    }
   return [ref, ready];
 }
 export default function Header () {
@@ -185,10 +174,11 @@ export default function Header () {
     const [ isCloudLiveShown, setIsCloudLiveShown ] = useState(false);
     const [ isVisible, setIsVisible ] = useState(true);
     const listenToScroll = () => {
-  let heightToHideFrom = 0;
-  const winScroll = document.body.scrollTop || 
-      document.documentElement.scrollTop;
-     
+        let heightToHideFrom = 0;
+        if (process.browser) {
+            const winScroll = document.body.scrollTop ||
+                document.documentElement.scrollTop;
+        }
   if (winScroll > heightToHideFrom) { 
      isVisible &&      // to limit setting state only the first time         
           setIsVisible(false);

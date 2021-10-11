@@ -15,7 +15,6 @@ function handleClick (selectedOption) {
   }
   else{
     selectedOptions.splice(selectedOptions.indexOf(selectedOption), 1)}
-  console.log(selectedOptions);
   total = selectedOptions.length * 3;
   if (selectedOptions.length == 5)
     total=10

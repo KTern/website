@@ -3,7 +3,6 @@ import WebinarLayout from "../../component/webinar_Layout";
 import Image from "next/image";
 import Link from "next/link";
 export default function WebinarLanding ({ pageProps }) {
-    console.log(pageProps.data)
     const data = {
         title: pageProps.data[0].title,
         type: " ON-DEMAND WEBINAR",

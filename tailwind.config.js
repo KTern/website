@@ -58,6 +58,7 @@ module.exports = {
         300: '#CD838C',
         400:'#B93F4A'
         },
+         
           labs: {
         primary:'#1C8720',
         secondary: '#EFFBF1',
