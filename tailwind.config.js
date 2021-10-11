@@ -19,7 +19,7 @@ module.exports = {
       secondary: '#EAEDF2',
       white:'#ffffff',
       project: {
-        primary:'#0066F5',
+        primary:'#2666BA',
         secondary: '#F2F4FA',
         bg: '#E7EAEF',
         50: '#EBF0FA',
@@ -29,7 +29,7 @@ module.exports = {
         400:'#79ADF8'
         },
        process: {
-        primary:'#170C76',
+        primary:'#281C87',
         secondary: '#E0DDEE',
        
         50: '#EEEDF8',
@@ -39,7 +39,7 @@ module.exports = {
         400:'#2011A7'
         },
         maps: {
-        primary:'#DB3E00',
+        primary:'#F28900',
         secondary: '#FFE2D6',
        
         50: '#FFE2D6',
@@ -49,7 +49,7 @@ module.exports = {
         400:'#FF8A5C'
         },
          mines: {
-        primary:'#AA2A32',
+        primary:'#BA2926',
         secondary: '#FDE3ED',
        
         50: '#FAF0F0',
@@ -59,7 +59,7 @@ module.exports = {
         400:'#B93F4A'
         },
           labs: {
-        primary:'#248232',
+        primary:'#1C8720',
         secondary: '#EFFBF1',
        
         50: '#F0F9F3',
