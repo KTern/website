@@ -6,8 +6,8 @@
 // import digitalprojects from "/public/features/digital-projects-screenshot.png"
 // import digitalprocess from "/public/features/digital-process-screenshot.png"
 // import digitalmines from "/public/features/digital-mines-screenshot.png"
-const Feature_index = ({ features_Data }) => {
-    return (<div></div>)
+const Feature_index = () => {
+    return (<div>Hello</div>)
 }
 // const Feature_index = ({features_Data}) => {
 //     return (

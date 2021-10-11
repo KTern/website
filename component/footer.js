@@ -7,7 +7,7 @@ export default function Footer () {
     return (
         <>
             <Head>
-                <Link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css" key="star rating"/>
+                <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css" key="star rating"></link>
             </Head>
     <section className="py-10 px-10 bg-black">
         <div className="px-10 mx-auto ">

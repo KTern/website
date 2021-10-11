@@ -1,5 +1,5 @@
 import Header from "./header";
-import Footer from "./footer";
+// import Footer from "./footer";
 export default function Layout ({ children }) {
     return (
         <div className="relative ">
@@ -10,7 +10,7 @@ export default function Layout ({ children }) {
                  {children}
             </div>
            
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }
