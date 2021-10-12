@@ -693,7 +693,7 @@ export default function Pricing () {
                                     <h2 className="mb-1 card-heading">Overall</h2>
                                     <h1 className="flex items-center pb-4 mb-4 card-heading text-gray-900 border-b border-gray-200"><span>${total}K</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
                     </div>
-                    <div className="w-1/2 border-2 text-center mb-7 rounded-lg bg-black text-white justify-center flex items-center">
+                      <div className="w-1/2  border-2 text-center mb-14 rounded-lg  text-black justify-center flex items-center" onClick={() => { setIsMinesSelected(true); setIsProjectsSelected(true); setIsLabsSelected(true); setIsMapsSelected(true); setIsProcessSelected(true); handleClick('mines'); handleClick('labs'); handleClick('projects'); handleClick('process');handleClick('maps')}}>
                                    Select all to save $5K  🎉
                     </div></div>
                                     {isMapsSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">

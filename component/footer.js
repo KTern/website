@@ -39,14 +39,14 @@ export default function Footer () {
                                 <ul className="">
                                     <li className="mb-2"><Link  href="/resources"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
                                 <li className="mb-2"><Link  href="/webinars"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
+                                <li className="mb-2"><Link  href="/article"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
                                 <li className="mb-2"><Link  href="/resources/ebook"><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
                                     <li className="mb-2"><Link href="/resources/customer-success-story"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
                                     <li className="mb-2"><Link href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
                                     <li className="mb-2"><Link href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
-                                    <li className="mb-2"><Link href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
+                                    <li className="mb-2"><Link href="/docs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
                                     
-                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
+                                <li className="mb-2"><Link  href="https://live.ktern.com"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
                                
                             </ul>
                         </div>
@@ -86,7 +86,8 @@ export default function Footer () {
                         <p className="navbar-h space-x-5 lg:block  text-white ">
                             <span className="text-xs"><Link href="/trust-center/landing"><a >Privacy Policy</a></Link></span>
                             <span className="text-xs"><Link href="/trust-center/landing"><a >Cookies Policy</a></Link></span>
-                            <span className="text-xs"><Link href="/trust-center/landing"><a >Terms of Service</a></Link></span>
+                                    <span className="text-xs"><Link href="/trust-center/landing"><a >Terms of Service</a></Link></span>
+                                     <span className="text-xs"><Link href="/trust-center/landing"><a >GDPR Compliance</a></Link></span>
                         </p>
 
                     </div>

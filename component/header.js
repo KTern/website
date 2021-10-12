@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Card1 from "./card"
 import FeatureCard from "./featureCard";
-import React, { useState,useRef, useEffect  } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import DoubleBanner from "./doubleBanner"
 function openNav () {
     if (process.browser) {
                     console.log("Clicked")
@@ -31,20 +32,7 @@ function useOutsideAlerter (ref) {
                   document.getElementById('toggle-2').style.display = "none";
                  document.getElementById('toggle-3').style.display = "none";
             }
-            // else if (ref.current.contains(event.target)) {
-            //     console.log("Clicked on")
-               
-            //     if (document.getElementById('toggle-1').style.display == "block") {
-            //         document.getElementById('toggle-1').style.display = "none";
-            //         document.getElementById('toggle-2').style.display = "none";
-            //           document.getElementById('toggle-3').style.display = "none";
-                   
-            //     }
-            //     else {
-            //         document.getElementById('toggle-1').style.display = "block";
-                  
-            //     }
-            // }
+        
         }
 
         // Bind the event listener
@@ -208,14 +196,26 @@ export default function Header () {
             {/* <!-- Desktop --> */}
           
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
-                 {isVisible &&
-                <div id="banner" className="w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;<Link href="/" passHref>
-                 <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">Learn More
-                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                 </svg>
-                 </a>
-             </Link>  </div>} 
+                {isVisible &&
+                    <div className="flex">
+                    <div id="banner" className="w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;
+                        <Link href="/" passHref>
+                    <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">Learn More
+                    <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    </Link>
+                     
+                    </div>
+                    <button className="navbar-close justify-end bg-black pr-5" onClick={()=>setIsVisible(false)}>
+                        <svg className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    </div>
+                }
+
             <div className="flex flex-wrap justify-between items-center">
                     <Link href="/" passHref>
                         <a>
@@ -234,7 +234,7 @@ export default function Header () {
                         <li className="toggleable  hover:bg-secondary  " ref={products}>    
                             {/* <li className="toggleable  " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
-                            <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}>Products</label>
+                            <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(true); setIsProcessShown(false); setIsProjectShown(false) }}>Products</label>
                             <div id="toggle-1" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
@@ -262,8 +262,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         </li>
                                        
                                         
-                                   <li><Link href="/"  passHref>
-                 <a className="inline-flex items-center ml-2 mt-4 text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400"><span className="group-hover:text-gray-400">See Pricing</span>
+                                   <li><Link href="/pricing"  passHref>
+                 <a className="inline-flex items-center ml-2 mt-4 text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400 "><span className="group-hover:text-gray-400">See Pricing</span>
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
@@ -292,7 +292,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                         </li>
                         <li className="toggleable  hover:bg-secondary" ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}>Resources</label>
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}>Resources</label>
                             <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
@@ -308,7 +308,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href="/article"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
                                         </li>
                                         <li>
@@ -328,11 +328,11 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Pricing</a></Link>
                                                 </li>
                                                  <li>
-                                                    <Link href="/"   ><a onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href="/docs"   ><a onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Documentation</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/"   ><a onMouseEnter={() => { setIsCloudLiveShown(true);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href="https://live.ktern.com" passhref   ><a onMouseEnter={() => { setIsCloudLiveShown(true);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
@@ -347,24 +347,24 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a
                                         </ul>
                                         <div className="w-2/3">
                                             {isWebinarsShown && (
-                                            <FeatureCard data={{title:'Webinar',description:'Webinar 1 desc',url:'/webinars/webinar-1',image:'/product/projects/project_team_3.svg'} }/>
+                                            <DoubleBanner data={{title1:'Webinar',title2:'Webinar',title3:'Webinar',description:'Webinar 1 desc',url1:'/webinars/webinar-1',url2:'/webinars/webinar-1',url3:'/webinars/webinar-1',image1:'/product/projects/project_team_3.svg',image2:'/product/projects/project_team_3.svg',image3:'/product/projects/project_team_3.svg'} }/>
                                             )}
                                             {isArticlesShown && (
-                                            <FeatureCard data={{title:'Article',description:'Article 1 desc',url:'',image:'/product/process/process_1.svg'} }/>  )}
+                                            <DoubleBanner data={{title1:'Article',title2:'Article',title3:'Article',description:'Article 1 desc',url1:'',url2:'',url3:'',image1:'/product/process/process_1.svg',image2:'/product/process/process_1.svg',image3:'/product/process/process_1.svg'} }/>  )}
                                              {isEbooksShown && (
-                                            <FeatureCard data={{title:'Ebook',description:'Ebook 1 desc',url:'/resources/ebook',image:'/product/maps/maps_1.svg'} }/>  )}
+                                            <DoubleBanner data={{title1:'Ebook',title2:'Ebook',title3:'Ebook',description:'Ebook 1 desc',url1:'/resources/ebook',url2:'/resources/ebook',url3:'/resources/ebook',image1:'/product/maps/maps_1.svg',image2:'/product/maps/maps_1.svg',image3:'/product/maps/maps_1.svg'} }/>  )}
                                              {isCaseShown && (
-                                            <FeatureCard data={{title:'Case Study',description:'Case Study 1 desc',url:'/resources/customer-success-story',image:'/product/mines/mines_1.svg'} }/>  )}
+                                            <DoubleBanner data={{title1:'Case Study',title2:'Case Study',title3:'Case Study',description:'Case Study 1 desc',url1:'/resources/customer-success-story',url2:'/resources/customer-success-story',url3:'/resources/customer-success-story',image1:'/product/mines/mines_1.svg',image2:'/product/mines/mines_1.svg',image3:'/product/mines/mines_1.svg'} }/>  )}
                                              {isTrustShown && (
-                                                <FeatureCard data={{ title: 'Trust Center', description: 'Trust Center 1 desc', url: '/trust-center', image: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={{ title1: 'Trust Center', title2: 'Trust Center', title3: 'Trust Center', description: 'Trust Center 1 desc', url1: '/trust-center', url2: '/trust-center', url3: '/trust-center', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
                                             {isPricingShown && (
-                                                <FeatureCard data={{ title: 'Pricing', description: 'Pricing 1 desc', url: '/pricing', image: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={{ title1: 'Pricing',title2: 'Pricing',title3: 'Pricing', description: 'Pricing 1 desc', url1: '/pricing',url2: '/pricing',url3: '/pricing', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
                                             {isDocumentationShown && (
-                                                <FeatureCard data={{ title: 'Documentation', description: 'Documentation 1 desc', url: '/', image: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={{ title1: 'Documentation',title2: 'Documentation',title3: 'Documentation', description: 'Documentation 1 desc', url1: '/',url2: '/',url3: '/', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
                                             {isCloudLiveShown && (
-                                                <FeatureCard data={{ title: 'Cloud Live Status', description: 'Live Status 1 desc', url: '/', image: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={{ title1: 'Cloud Live Status',  title2: 'Cloud Live Status',  title3: 'Cloud Live Status', description: 'Live Status 1 desc', url1: '/',url2: '/',url3: '/', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
                                             {isResourceLibraryShown && (
-                                            <FeatureCard data={{title:'Resource Library',description:'Resource Library 1 desc',url:'/resources',image:'/product/labs/labs_1.svg'} }/> )}
+                                            <DoubleBanner data={{title1:'Resource Library',title2:'Resource Library',title3:'Resource Library',description:'Resource Library 1 desc',url1:'/resources',url2:'/resources',url3:'/resources',image1:'/product/labs/labs_1.svg',image2:'/product/labs/labs_1.svg',image3:'/product/labs/labs_1.svg'} }/> )}
                                         </div>
                                 </div>
                             </div>
@@ -423,8 +423,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                     </ul>
                </div>
                     <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
-                        <Link href="/"><a className="button">Login</a></Link>
-                    <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">Contact Sales</a></Link>
+                        <Link href="https://app.ktern.com" passhref><a className="button">Login</a></Link>
+                    <Link  href="/contact"><a className="border-2 border-black hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">Contact Sales</a></Link>
                 </div>
             </div>
         </nav>

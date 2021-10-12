@@ -204,14 +204,14 @@ export default function About () {
                     
                     <div className="grid grid-cols-12 gap-6 mb-6">
                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
-                    <div className="p-4">
+                    <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
                     </a> 
                     </Link>
                     </div>
-                    <div className="p-4">
+                    <div className="">
                     <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                    <Link href="#_"  passHref>
@@ -227,14 +227,14 @@ export default function About () {
 
   
                     <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
-                    <div className="p-4">
+                    <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
                     </a> 
                     </Link>
                     </div>
-                    <div className="p-4">
+                    <div className="">
                     <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                    <Link href="#_"  passHref>
@@ -250,14 +250,14 @@ export default function About () {
 
 
                     <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
-                    <div className="p-4">
+                    <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
                     <Image className="object-cover bg-secondary object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
                     </a> 
                     </Link>
                     </div>
-                    <div className="p-4">
+                    <div className="">
                     <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                    <Link href="#_"  passHref>
@@ -272,14 +272,14 @@ export default function About () {
                     </div>
 
                     <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
-                                    <div className="p-4">
+                                    <div className="">
                                     <Link href="#_" passHref>
                                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
                                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/projects/project_team_3.svg" alt="resource" layout="fill"/>
                                     </a> 
                                     </Link>
                                     </div>
-                                    <div className="p-4">
+                                    <div className="">
                                     <p className="hyperlink text-gray-400  uppercase mb-4">Resources</p>
                                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
                                 <Link href="#_"  passHref>
@@ -318,7 +318,7 @@ export default function About () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-100 hover:text-black shadow   text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 button ">See Pricing</a></Link>
+                <Link  href="/pricing" passHref><a className="   border-2 border-black inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 button ">See Pricing</a></Link>
                 <Link  href="#" passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black font-bold rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button">Try it free</a></Link>
                 </div>
                 </div>

@@ -16,8 +16,8 @@ export default function Home () {
                             <h2 className="mt-4 top-0 mb-2  leading-normal heading">Your SAP Digital Transformations starts here</h2>
                             <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
-                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="mb-4 inline-block mx-5   shadow-md py-3 px-14 bg-white-500  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Free Trial</a></Link>
-                            <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Contact Sales</a></Link>
+                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" inline-block py-3 px-16 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Free Trial</a></Link>
+                            <Link  href="/contact"><a className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Contact Sales</a></Link>
                           <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">No Credit Card required</p>
                         </div>
                         
@@ -144,11 +144,11 @@ export default function Home () {
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Organized Transformation</span>
+                                        <span>Sign Off Management</span>
                                     </li>
                                     <li className="flex items-center text-gray-700 card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Customizable Dashboards</span>
+                                        <span>Project Dashboards</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
@@ -502,7 +502,7 @@ export default function Home () {
                             <h2 className="my-5  card-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
                             <div className="max-w-md mx-auto pb-10">
                                 <p className="mb-5  card-subheading text-gray-800">Manage your entire SAP Digital Transformation from a single place</p>
-                                <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
+                                <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
                             </div>
                         </div>
                     </div>
