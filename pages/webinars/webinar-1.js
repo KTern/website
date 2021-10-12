@@ -24,7 +24,7 @@ export default function WebinarLanding ({ pageProps }) {
     )
 }
 WebinarLanding.getInitialProps=async ()=>{
-    const response = await fetch('http://104.154.73.71:1337/webinars',{method:'get',headers:new Headers({'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDFhNDMzMjQwMDM0Mjg5ZTM2MzYxYSIsImlhdCI6MTYzMjEzMTM4MiwiZXhwIjoxNjM0NzIzMzgyfQ.473sxX5je4A7ddg6udNV7aArOoNdPum2GNvxSQ1A7g8'})});
+    const response = await fetch('https://api.ktern.com/webinars',{method:'get',headers:new Headers({'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDFhNDMzMjQwMDM0Mjg5ZTM2MzYxYSIsImlhdCI6MTYzMjEzMTM4MiwiZXhwIjoxNjM0NzIzMzgyfQ.473sxX5je4A7ddg6udNV7aArOoNdPum2GNvxSQ1A7g8'})});
     const data = await response.json();
     return {pageProps:{data}};
 }
