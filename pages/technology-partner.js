@@ -239,7 +239,7 @@ export default function technical_partner () {
                             </svg>
                             </div>
                             <div>
-                            <Link href="https://www.g2.com/products/ktern/reviews" target="_blank" passHref>
+                            <Link href="https://www.g2.com/product/ktern/reviews" target="_blank" passHref>
                                 <a><div className="block mx-auto w-20 h-20 relative"><Image layout="fill" src="/assets/g2logo.png" alt=""/></div></a>
                             </Link>
                             </div>

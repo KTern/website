@@ -9,7 +9,8 @@ import digitalmines from "/public/features/digital-mines-screenshot.png"
 
 const Feature_index = ({features_Data}) => {
     return (
-         <Layout>
+        <Layout>
+            {/* HEader */}
             <section id="features" className="w-full py-20 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
@@ -26,6 +27,8 @@ const Feature_index = ({features_Data}) => {
                 </div>
             </div>
             </section>
+            {/* Header */}
+            {/* sticky nav */}
             <section className="flex space-x-10 justify-center items-center p-5 bg-white shadow-2xl  sticky z-10 top-16 border-2">    
                 <Link  href="/features/digital-maps"><a className="hyperlink  uppercase hover:text-maps-primary">Digital Maps</a></Link>
                 <Link href="/features/digital-projects"><a  className="hyperlink  uppercase hover:text-project-primary">Digital Projects</a></Link>
@@ -33,6 +36,8 @@ const Feature_index = ({features_Data}) => {
                 <Link  href="/features/digital-labs"><a className="hyperlink  uppercase hover:text-labs-primary">Digital Labs</a></Link>
                 <Link  href="/features/digital-mines"><a className="hyperlink  uppercase hover:text-mines-primary">Digital Mines</a></Link>
             </section>
+            {/* Sticky nav */}
+            {/* digital Maps */}
             <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Maps</h2>
@@ -218,6 +223,8 @@ const Feature_index = ({features_Data}) => {
                 </div>
 
             </section>
+            {/* /digital maps */}
+            {/* digital Projects */}
             <section id="digital-projects" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Projects</h2>
@@ -405,6 +412,8 @@ const Feature_index = ({features_Data}) => {
                  </div>
 
             </section>
+            {/* /Digital Projects */}
+            {/* Digital Process */}
             <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Process</h2>
@@ -592,6 +601,8 @@ const Feature_index = ({features_Data}) => {
                   </div>
 
             </section>
+            {/* /Digital Process */}
+            {/* Digital Labs */}
             <section id="digital-labs" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Labs</h2>
@@ -779,6 +790,8 @@ const Feature_index = ({features_Data}) => {
                   </div>
 
             </section>
+            {/* /Digital Labs */}
+            {/* Digital Mines */}
             <section id="digital-mines" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Mines</h2>
@@ -965,7 +978,8 @@ const Feature_index = ({features_Data}) => {
                     </div>
                  </div>
 
-            </section>          
+            </section>
+            {/* /Digital Mines */}
         </Layout>
     )
 }

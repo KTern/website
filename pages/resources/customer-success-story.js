@@ -53,7 +53,7 @@ export default function Landing () {
                                 </div>
                             
                 <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-300 hover:shadow-md">
-                                        <Link href="/products/digital-maps" passHref>
+                                        <Link href="/product/digital-maps" passHref>
                                         <a>
                                         <div className="flex items-center" >
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
@@ -66,7 +66,7 @@ export default function Landing () {
                                         </div>
 
                                         <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md hover:bg-gray-300 ">
-                                        <Link href="/products/digital-labs" passHref>
+                                        <Link href="/product/digital-labs" passHref>
                                         <a>
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
@@ -78,7 +78,7 @@ export default function Landing () {
                                         </Link>
                                         </div>
                                         <div className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md hover:bg-gray-300">
-                                        <Link href="/products/digital-projects" passHref>
+                                        <Link href="/product/digital-projects" passHref>
                                         <a>
                                         <div className="flex items-center">
                                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">

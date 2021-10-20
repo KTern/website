@@ -101,6 +101,13 @@ video {
     line-height: 24px;
 }
 
+.sm-hyperlink {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
 .breadcrumb {
     content: '>'
 }
@@ -113,6 +120,14 @@ video {
     text-transform: uppercase;
 }
 
+.sm-button {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
 .heading {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
@@ -120,9 +135,23 @@ video {
     line-height: 50px;
 }
 
+.sm-heading {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+}
+
 .subheading {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
+    font-weight: 500;
+    line-height: 31px;
+}
+
+.sm-subheading {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
     font-weight: 500;
     line-height: 31px;
 }
@@ -147,9 +176,23 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
     font-size: 24px;
 }
 
+.sm-card-heading {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 24px;
+}
+
 .card-subheading {
     font-family: 'Jost', sans-serif;
     font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.sm-card-subheading {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
     font-weight: 500;
     line-height: 25px;
 }
@@ -161,9 +204,23 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
     line-height: 50px;
 }
 
+.sm-section-heading {
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
 .section-subheading {
     font-family: 'Jost', sans-serif;
     font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+}
+
+.sm-section-subheading {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
     font-weight: 500;
     line-height: 31px;
 }

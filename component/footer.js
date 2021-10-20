@@ -9,8 +9,8 @@ export default function Footer () {
             <Head>
                 <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css" key="star rating"></link>
             </Head>
-    <section className="py-10 px-10 bg-black">
-        <div className="px-10 mx-auto ">
+    <section className="px-4 py-4 md:py-10 md:px-10 bg-black">
+        <div className="md:px-10 mx-auto ">
             <div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
                 <div className="w-full  px-4">
                     <div className="flex flex-wrap -mx-4">
@@ -27,11 +27,11 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="/products/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
-                                    <li className="mb-2"><Link href="/products/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
-                                     <li className="mb-2"><Link  href="/products/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
-                                <li className="mb-2"><Link  href="/products/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
-                                <li className="mb-2"><Link  href="/products/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
+                                <li className="mb-2"><Link  href="/product/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
+                                    <li className="mb-2"><Link href="/product/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
+                                     <li className="mb-2"><Link  href="/product/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
+                                <li className="mb-2"><Link  href="/product/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
+                                <li className="mb-2"><Link  href="/product/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
                             </ul>
                         </div>
                              <div className="w-1/2 lg:w-1/4 px-4 mb-12">

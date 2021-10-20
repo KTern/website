@@ -13,11 +13,11 @@ export default function Home () {
                     <div className=" bg-white  h-full" >
                       
                         <div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% " >
-                            <h2 className="mt-4 top-0 mb-2  leading-normal heading">Your SAP Digital Transformations starts here</h2>
-                            <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10  subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
+                            <h2 className="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading">Your SAP Digital Transformations starts here</h2>
+                            <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10 sm:sm-subheading subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
 
-                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" inline-block py-3 px-16 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Free Trial</a></Link>
-                            <Link  href="/contact"><a className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Contact Sales</a></Link>
+                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="sm:mb-5 sm:sm-button inline-block py-3 px-14 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Free Trial</a></Link>
+                            <Link  href="/contact"><a className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Contact Sales</a></Link>
                           <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">No Credit Card required</p>
                         </div>
                         
@@ -25,12 +25,12 @@ export default function Home () {
                 </section>
                 {/* <!--/ Hero Section --> */}
                 {/* <!-- Customer logos Section --> */}
-                <section className="p-0 " >
+                <section className="p-0 sm:mt-6" >
                     <div className="container px-4 mx-auto ">
 
-                        <p className=" text-center  text-gray-500 section-heading ">Trusted by brand all over the world</p>
-                        <div className="p-8 md:p-4 flex flex-wrap -m-4 justify-center items-center ">
-                            <div className=" w-full md:w-1/3 lg:w-1/6 lg:p-4">
+                        <p className=" text-center  text-gray-500 section-heading sm:sm-section-heading ">Trusted by brands all over the world</p>
+                        <div className="p-8 sm:p-2 md:p-4 flex flex-wrap md:-m-4 justify-center items-center ">
+                            <div className="sm:p-0 w-50 h-50 md:w-1/3 lg:w-1/6 lg:p-4">
 
                                 <Image className=" w-auto lg:w-100" src="data:image/png;base64,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"
                                     alt="" width={250} height={250} layout="responsive"/>
@@ -74,8 +74,8 @@ export default function Home () {
               <section className="relative items-center overflow-hidden w-full py-12 bg-white sm:py-16 md:py-20">
                     <svg className="absolute -mt-32 text-gray-300 transform scale-150 fill-current top-1/2" viewBox="0 0 197 31" xmlns="http://www.w3.org/2000/svg"><path d="M4.83 30.3c.945-.18 1.9-.307 2.86-.38.49-.07 1.07-.17 1.65-.28.58-.11 1.15-.18 1.61-.23.9-.11 1.8-.22 2.7-.3.9-.08 1.8-.19 2.71-.22 5.13-.26 10.31-.11 15.5.13l5.14.29h.54c2.35.14 4.72.27 7.09.35 1.34 0 4.64.13 4.94.14.5.06 3.49 0 4 0 .51 0 4.25-.17 5.24-.28 1.16 0 2.32-.09 3.47-.16 1.15-.07 2.61-.19 4.18-.36a41.33 41.33 0 004.21-.73c.84-.19 1.69-.32 2.53-.54l.35-.07c.55-.11 1.17-.28 1.8-.46a47.28 47.28 0 0019.46-10.06c1.84-1.69 3.61-3.24 5.6-3 .987.133 1.95.406 2.86.81l3.09 1.29 6.24 2.64c2 .81 3.34 1.23 6 2.33 1.17.46 3.39 1.3 4.59 1.64a57.05 57.05 0 005.65 1.29 39.75 39.75 0 0015.52-.14l2-.47c.66-.2 1.34-.36 2-.59a18 18 0 005.72-2.89 37.76 37.76 0 004.35-4c2.42-2.58 4.14-5.52 6.35-7.89A12.69 12.69 0 01177.65 4c.35.09.7.16 1.05.27l1 .38c.69.22 1.35.56 2 .8A23.72 23.72 0 01186.46 8c1.49 1 2.9 2.12 4.45 3.36 1.26 1 4.45 3.36 5.11 3.38.39 0 .3-.52.68-.55.85 0-.24-2.56-2-4a59 59 0 00-5.92-4.38 33.42 33.42 0 00-6.89-3.6A23.9 23.9 0 00175.75 1a17.23 17.23 0 00-6.69 1 20.69 20.69 0 00-2.39 1.1 13.51 13.51 0 00-2.16 1.59 28.46 28.46 0 00-3.5 3.83c-2.31 2.9-4.26 5.92-6.9 8.08a22.73 22.73 0 01-9.19 4.47 36.08 36.08 0 01-13.17.74c-6-.8-11.89-2.93-17.66-5.27l-8.7-3.54a15.35 15.35 0 00-4.92-1.38 6.78 6.78 0 00-2.83.48c-.83.341-1.61.792-2.32 1.34-1.37 1-2.45 2.11-3.65 3A40.1 40.1 0 0187.96 19a38.51 38.51 0 01-10.25 4.61l-.6.15h-.1c-1.85.51-4 1.07-5.87 1.48a79.21 79.21 0 01-11.79 1.41c-4.55.21-9.19.32-13.68.16-8.49-.29-17-1-25.65-.9a91.5 91.5 0 00-14.28.63 17.59 17.59 0 00-3.46.91 17.08 17.08 0 00-1.68.67.67.67 0 00-.35.9 2.6 2.6 0 001.62 1.13c.96.29 1.976.34 2.96.15z" fillRule="nonzero"></path></svg>
                     <div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
-                        <h2 className="mx-auto section-heading  ">KTern Digital Streams</h2>
-                        <p className="max-w-lg mt-5 section-subheading text-gray-600 md:mx-auto">Our Digital Workplace Comes with 5 Streams to make your Digital Transformation Clean and Simple</p>
+                        <h2 className="mx-auto section-heading sm:sm-section-heading ">KTern Digital Streams</h2>
+                        <p className="max-w-lg mt-5 section-subheading text-gray-600 md:mx-auto sm:sm-section-subheading">Our Digital Workplace Comes with 5 Streams to make your Digital Transformation Clean and Simple</p>
                     </div>
                     <div className="relative grid gap-8 px-10 mx-auto md:grid-cols-2 xl:grid-cols-5 max-w-full">
 
@@ -88,32 +88,32 @@ export default function Home () {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
                             </span>
-                            <h3 className="card-heading font-bold">Digital Maps</h3>
-                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
+                            <h3 className="card-heading font-bold sm:sm-card-heading">Digital Maps</h3>
+                                <p className="mt-4 card-subheading text-gray-700 sm:sm-card-subheading">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2 h-100">
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                         <span>Landscape Assessment</span>
                                     </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                         <span>Business Assessment</span>
                                     </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                         <span>Custom Object  Assessment</span>
                                     </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                         <span>Timeline Assessment</span>
                                     </li>
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <p className="mb-5 text-gray-600">Assess and evaluate the business impact </p>
-                                <Link href="/products/digital-maps"  passHref>
+                                <Link href="/product/digital-maps"  passHref>
                                 <a className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-maps-300">Learn More</span>
+                                <span className="hyperlink sm:sm-hyperlink group-hover:text-maps-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -154,7 +154,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
                                 <p className="mb-5 text-gray-600">Gain ultimate control of your SAP projects </p>
-                                <Link href="/products/digital-projects"  passHref>
+                                <Link href="/product/digital-projects"  passHref>
                                 <a className="inline-flex items-center pb-1  text-project-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-project-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ export default function Home () {
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <p className="mb-5 text-gray-600"> Process control and Governance  </p>
-                                <Link href="/products/digital-process"  passHref>
+                                <Link href="/product/digital-process"  passHref>
                                 <a className="inline-flex items-center pb-1  text-process-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-process-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -237,7 +237,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                             
                                 <p className="mb-5 text-gray-600">Automate your End to End Testing Today</p>
-                                <Link href="/products/digital-labs"  passHref>
+                                <Link href="/product/digital-labs"  passHref>
                                 <a className="inline-flex items-center pb-1  text-labs-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-labs-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -280,7 +280,7 @@ export default function Home () {
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
                                 <p className="mb-5 text-gray-600">BusinessOps for the modern enterprises</p>
-                                <Link href="/products/digital-mines"  passHref>
+                                <Link href="/product/digital-mines"  passHref>
                                 <a className="inline-flex items-center pb-1  text-mines-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-mines-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +333,7 @@ export default function Home () {
                 </section>
                 {/* <!-- /Why Ktern --> */}
                 {/* <!-- Customer Success Story --> */}
-                <section className="py-10 bg-black text-white">
+                <section className="py-10 sm:mx-4 bg-black text-white ">
                     <div className=" mx-auto ">
                         <div className=" md:divide-x flex flex-wrap justify-center space-x-10  rounded-lg  ">
                             <div className=" py-4 w-full md:w-1/4 lg:w-1/4 p-10 md:py-10  ">
@@ -427,7 +427,7 @@ export default function Home () {
                             </Link>
                         </div>
                         <div className="p-1 md:px-8 space-y-5 flex flex-col w-full  md:w-1/2">
-                            <Link  href="/features">
+                            <Link  href="/product/features">
                                 <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black">
                                 <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                                     <div>
@@ -492,7 +492,7 @@ export default function Home () {
                 </section>
                 {/* <!-- /Redirect content Section --> */}
                 {/* <!-- CTA Section --> */}
-                <section className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat " style={{ backgroundColor: '#EAEDF2',backgroundImage:"url('/assets/five-stars.svg')",backgroundPosition: 'bottom right' }}>
+                <section className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat md:bg-cta" style={{ backgroundColor: '#EAEDF2',backgroundPosition: 'bottom right' }}>
                     {/* <Image className="hidden lg:block absolute top-0 right-0 left-50  h-100 w-100 -mt-32 -mr-72" src="/assets/circle.svg" alt="" /> */}
                     {/* <Image className="hidden lg:block absolute left-0 -mb-8 lg:ml-24" src="/assets/full-circle.svg" alt="" /> */}
                     {/* <Image className="block absolute bottom-0 left-0 h-24 md:h-32 lg:h-72 lg:ml-24 -mb-8" src="/assets/five-stars.svg" alt="" width={250} height={250} /> */}
@@ -502,7 +502,7 @@ export default function Home () {
                             <h2 className="my-5  card-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
                             <div className="max-w-md mx-auto pb-10">
                                 <p className="mb-5  card-subheading text-gray-800">Manage your entire SAP Digital Transformation from a single place</p>
-                                <Link  href="/contact"><a className="hidden mb-1 lg:inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
+                                <Link  href="/contact"><a className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
                             </div>
                         </div>
                     </div>

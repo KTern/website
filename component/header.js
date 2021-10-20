@@ -197,8 +197,8 @@ export default function Header () {
           
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
                 {isVisible &&
-                    <div className="flex">
-                    <div id="banner" className="w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;
+                    <div className="flex sm:hidden">
+                    <div id="banner" className="  w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;
                         <Link href="/" passHref>
                     <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">Learn More
                     <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -241,23 +241,23 @@ export default function Header () {
                                         <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
                                             <div >
                                                 <li>
-                                                    <Link href="/products/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
+                                                    <Link href="/product/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Maps</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/products/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
+                                                    <Link href="/product/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Projects</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/products/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
+                                                    <Link href="/product/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Process</a></Link>
                                         </li>
                                          <li>
-                                        <Link href="/products/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+                                        <Link href="/product/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/products/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+                                                    <Link href="/product/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Mines</a></Link>
                                         </li>
                                        
@@ -448,15 +448,15 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                 <div>
                     <ul>
                     <li className="toggleable hover:bg-secondary ">
-                        <input type="checkbox" value="selected" id="toggle-one" className="toggle-input "/>
-                            <label htmlFor="toggle-one" className="block cursor-pointer py-6 px-4 lg:p-6 header " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
+                        <input type="checkbox" value="selected" id="toggle-sm-one" className="toggle-input "/>
+                            <label htmlFor="toggle-sm-one" className="block cursor-pointer py-6 px-4 lg:p-6 header " onMouseEnter={() => setIsProjectShown(true)}>Products</label>
                             <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">Digital Streams</h3>
                                               <li className="hover:bg-secondary ">
-                                                <input type="checkbox" value="selected" id="toggle-two" className="toggle-input "/>
-                                                    <label htmlFor="toggle-two" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Maps</label>
+                                                <input type="checkbox" value="selected" id="toggle-sm-two" className="toggle-input "/>
+                                                    <label htmlFor="toggle-sm-two" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Maps</label>
                                                     <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Maps', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
@@ -465,8 +465,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                 </li>
                      
                                             <li className=" hover:bg-secondary ">
-                                                <input type="checkbox" value="selected" id="toggle-three" className="toggle-input "/>
-                                                    <label htmlFor="toggle-three" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Labs</label>
+                                                <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input "/>
+                                                    <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Labs</label>
                                                     <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Labs', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
@@ -474,8 +474,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     </div>
                                                 </li>
                                         <li className="hover:bg-secondary ">
-                                                <input type="checkbox" value="selected" id="toggle-four" className="toggle-input "/>
-                                                    <label htmlFor="toggle-four" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Projects</label>
+                                                <input type="checkbox" value="selected" id="toggle-sm-four" className="toggle-input "/>
+                                                    <label htmlFor="toggle-sm-four" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Projects</label>
                                                     <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Projects', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
@@ -483,8 +483,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     </div>
                                                 </li>
                                         <li className=" hover:bg-secondary ">
-                                                <input type="checkbox" value="selected" id="toggle-five" className="toggle-input "/>
-                                                    <label htmlFor="toggle-five" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Process</label>
+                                                <input type="checkbox" value="selected" id="toggle-sm-five" className="toggle-input "/>
+                                                    <label htmlFor="toggle-sm-five" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Process</label>
                                                     <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Process', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
@@ -492,8 +492,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                                     </div>
                                                 </li>
                                         <li className="toggleable hover:bg-secondary ">
-                                                <input type="checkbox" value="selected" id="toggle-six" className="toggle-input "/>
-                                                    <label htmlFor="toggle-six" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Mines</label>
+                                                <input type="checkbox" value="selected" id="toggle-sm-six" className="toggle-input "/>
+                                                    <label htmlFor="toggle-sm-six" className="block cursor-pointer py-2 lg:p-6  " onMouseEnter={() => setIsProjectShown(true)}>Digital Mines</label>
                                                     <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                                         <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                                             <Card1 data={{ title: 'Digital Mines', feature1: 'Feature 1', feature2: 'Feature 2', feature3: 'Feature 3', feature4: 'Feature 4', feature5: 'Feature 5', url: '/features/custom-code-remediation' }} />       
