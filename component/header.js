@@ -192,7 +192,7 @@ export default function Header () {
     
     return (
         
-       <section className=" z-50 w-full pb-10" ref={overall}>      
+       <section className=" z-50 w-full " ref={overall}>      
             {/* <!-- Desktop --> */}
           
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
