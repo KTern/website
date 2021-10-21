@@ -5,7 +5,7 @@ export default function Partners () {
     return (
         <Layout>
              {/* <!-- Header Section --> */}
-             <section className="w-full py-10 bg-secondary">
+             <section className="w-full py-28 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
                     <p className="inline-block px-2 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
@@ -17,10 +17,10 @@ export default function Partners () {
                 <p className="py-5 mb-5 text-gray-600 subheading">
                     <span className=" subheading">Leverage KTern&apos;s Cognitive Workplace</span> to deliver SAP Digital Transformation Success to your customers through our Proprietery  <span className="">#DXaaS</span> Approach
                 </p>
-                <div className="flex items-center space-x-4">
-                   <Link  href="/become-a-partner" passHref><a className=" mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-l-xl hyperlink rounded-t-xl transition duration-200 button ">Become a Partner</a></Link>
+                <div className="md:flex md:items-center md:space-x-4 sm:space-y-6">
+                   <Link  href="/partner-register" passHref><a className="lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">Become a Partner</a></Link>
                     <Link href=""  passHref>
-                        <a className="inline-flex items-center hyperlink uppercase text-gray-400 underline transition-colors duration-200 button ">Partner Portal
+                        <a className=" inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">Partner Portal
                         <svg className="inline-block w-2 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
@@ -45,7 +45,7 @@ export default function Partners () {
                 <p className=" mb-5 text-gray-600 section-subheading">
                 Explore our <span className="section-subheading">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
-                <div className="grid w-full h-auto grid-cols-12 gap-20 ml-28  sm:mt-16 ">
+                <div className="grid w-full h-auto md:grid-cols-12 md:gap-20 md:ml-28 gap-4 sm:mt-16 ">
                    <Link href="/consulting-partner"  passHref>
                     <a className="relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-5">
                             <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
@@ -92,11 +92,57 @@ export default function Partners () {
                 </section>
              
             {/* <!--Faq Section--> */}
-           <section className="py-10 bg-project-white">
+       <section className="py-10 bg-project-white">
                     <h2 className="mb-2 section-heading  text-center">Frequently Asked Questions</h2>
                     <div className="flex space-x-10 p-10">
-                        <div className="container  w-1/2  space-y-4">
+                        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
                             
+                             
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+             <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+
+                            
+                       
                                 <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
                                     <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
                                         <span className="card-subheading">How does KTern Connect to my SAP System?</span>
@@ -139,54 +185,6 @@ export default function Partners () {
                                             diante.
                                     </div>
                             </details>
-
-                            
-                            </div>
-                        <div className="container  w-1/2  space-y-4">
-                            
-                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
-                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                                        <span className="card-subheading">How does KTern Connect to my SAP System?</span>
-                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                            </summary>
-                                            <hr/>
-                                    <div className="p-4 hyperlink">
-                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                            diante.
-                                    </div>
-                            </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
-                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                                        <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
-                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                            </summary>
-                                            <hr/>
-                                    <div className="p-4 hyperlink">
-                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                            diante.
-                                    </div>
-                            </details>
-                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
-                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
-                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                            </summary>
-                                            <hr/>
-                                    <div className="p-4 hyperlink">
-                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
-                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
-                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
-                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
-                                            diante.
-                                    </div>
-                            </details>
-
                             
                             </div>
                     </div>
@@ -204,7 +202,7 @@ export default function Partners () {
                 <div className="relative flex flex-wrap justify-center -mx-10 mb-5">
                         <div className="hidden lg:block absolute inset-y-0 -mr-80 -mt-18"><Image width={200} height={100} src="/partner/dots-gray.svg" alt="" /></div>
                         <div  className="hidden lg:block absolute top-0 left-0 ml-72 -mt-18"><Image src="/partner/dots-gray.svg" width={200} height={100}  alt=""/></div>
-                <div className="w-full lg:w-1/3 px-10 mt-20 mb-20 lg:mb-0">
+                <div className="w-full lg:w-1/3 px-10 md:mt-20 md:mb-20 lg:mb-0">
                     <div className="relative flex">
                     
                     <div className="mr-8">
@@ -216,7 +214,7 @@ export default function Partners () {
                     </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/3 mt-20 px-10 mb-20 lg:mb-0">
+                <div className="w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0">
                     <div className="flex">
                     <div className="mr-8">
                         <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">2</span>
@@ -245,7 +243,7 @@ export default function Partners () {
 
             {/* <!-- Footer CTA --> */}
              <section className="bg-white">
-                <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
+                <div className="md:px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
                 <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>

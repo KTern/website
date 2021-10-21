@@ -390,7 +390,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Technology Partners</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/become-a-partner"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
+                                                    <Link href="/partner-register"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Become A Partner</a></Link>
                                         </li>
                                         <li>
@@ -410,7 +410,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                              {isTechnologyShown && (
                                             <FeatureCard data={{title:'Technology Parter',description:'Technology Parter desc',url:'/technology-partner',image:'/partner/partner-hand.jpg'} }/>  )}
                                              {isBecomeAPartnerShown && (
-                                            <FeatureCard data={{title:'Become a Partner',description:'Become a Partner desc',url:'/become-a-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                            <FeatureCard data={{title:'Become a Partner',description:'Become a Partner desc',url:'/partner-register',image:'/partner/partner-hand.jpg'} }/>  )}
                                              {isPortalShown && (
                                             <FeatureCard data={{title:'Partner Portal',description:'Partner Portal desc',url:'/',image:'/partner/partner-hand.jpg'} }/> )}
                                         </div>
@@ -418,7 +418,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                             </div>
                         </li>
                         <li className="toggleable hover:bg-secondary ">
-                        <Link href="/about" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
+                        <Link href="/about-company" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
                         </li>
                     </ul>
                </div>

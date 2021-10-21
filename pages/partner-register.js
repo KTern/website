@@ -5,7 +5,7 @@ export default function PartnerContact () {
     return(
         <Layout>
             <div className="py-20 w-full min-h-screen bg-white flex justify-center ">      
-            <div className="w-1/3 py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
+            <div className="w-full p-4 md:w-1/3 py-12 md:px-12 bg-white rounded-2xl md:shadow-xl z-20">
                 <div>
                 <h1 className="  text-center mb-4 cursor-pointer section-heading">Become a Partner</h1>
                 <p className=" text-center  mb-8  section-subheading text-gray-700 cursor-pointer">For General queries <Link href="/contact" passhref><a className="font-bold hover:text-gray-200">Contact us</a></Link > </p>

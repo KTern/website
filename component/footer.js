@@ -17,7 +17,7 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="/about"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
+                                <li className="mb-2"><Link  href="/about-company"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
                                 <li className="mb-2"><Link  href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
                                 <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a></Link></li>
                                 <li className="mb-2"><Link  href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
@@ -56,7 +56,7 @@ export default function Footer () {
                                 <li className="mb-2"><Link  href="/partners"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partners</a></Link></li>
                                 <li className="mb-2"><Link  href="/consulting-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Consulting Partner</a></Link></li>
                                 <li className="mb-2"><Link  href="/technology-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Technology Partner</a></Link></li>
-                                    <li className="mb-2"><Link href="/become-a-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
+                                    <li className="mb-2"><Link href="/partner-register"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
                                     <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partner Portal</a></Link></li>
                                 
                             </ul>

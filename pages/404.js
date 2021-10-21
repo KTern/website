@@ -9,7 +9,7 @@ export default function Error () {
           <div className="absolute bottom-0 left-0 h-80"><Image  src="/404/half-double-circle.svg" alt="" width={400} height={300}/></div>
           <div className="relative mt-10  px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
-            <Link  href="/about" passHref>
+            <Link  href="/about-company" passHref>
               <a className="inline-block text-white text-xl font-bold">
               <Image  src="/404/kternlogo.png" width={140} height={50} alt="" />
               </a>
