@@ -431,4 +431,5 @@ export const getStaticProps = async () => {
         props:{features_Data:data}
     }
 }
+
  export default Feature_index;

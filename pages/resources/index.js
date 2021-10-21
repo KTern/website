@@ -1,10 +1,10 @@
 import Layout from "../../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
-export default function Resources () {
+export default function Resources ({resources_data}) {
     return (
     <Layout>
-            <section className="w-full py-20 bg-herogradient" >
+            <section className="w-full py-32 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <p className="inline-block px-2 py-1 mb-5 font-medium hyperlink w-28 text-gray-900 uppercase bg-gray-200 rounded-full ">
@@ -12,9 +12,9 @@ export default function Resources () {
                 </p>
                     <h1 className="heading text-white "  >DXaaS Resource Center</h1>
                     <p className="subheading text-gray-100 pb-7">Digital Transformation is what we do. Get insights on DXaaS and SAP Transformations with our Transformation Success Stories, Videos, E-Books, Datasheets, Infographics and more.   </p>
-                    <div className="flex flex-row">
+                    <div className="md:flex md:flex-row">
                     
-                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" inline-block  mr-4  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button">Free Trial</a></Link>
+                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="sm:mb-4 inline-block  mr-4  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button">Free Trial</a></Link>
                     <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button">Contact Sales</a></Link>
                     </div>
                 </div>
@@ -25,9 +25,9 @@ export default function Resources () {
          
            <section className="container md:p-10 ">
                
-                <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0 px-10">
+                <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
                     {/* <!-- On demand Filter Options--> */}
-                <div className="w-full md:w-1/5 px-4 mb-4  md:mb-0">
+                <div className="hidden md:block w-full md:w-1/5 md:px-4 mb-4  md:mb-0">
                     <form action="#" method="post" className="">
                             <div className="mb-6">
                                 <h1 className="text-2xl mt-2 mb-2 card-heading">Streams</h1>
@@ -90,9 +90,9 @@ export default function Resources () {
                     </div>
                 {/* <!-- On demand Webinar Card Display--> */}
            
-                    <div className="w-full md:w-4/5 pl-20 mb-4 md:mb-0">
+                    <div className="w-full md:w-4/5 md:pl-20 mb-4 md:mb-0">
                         {/* Chips Section */}
-                         <section className=" flex  pb-10 items-center justify-end ">
+                         <section className=" flex sm:pt-5  pb-10 items-center justify-end ">
                           <input id="demo-2" style={{width:'35%'}} type="search" placeholder="Search"/>
                         </section>
                         <section className="pb-10 ">
@@ -106,7 +106,25 @@ export default function Resources () {
                             <Link href="/resources#best-practice-guides"><a className=" hyperlink click-chip outline-green mr-3">Best Practice guides</a></Link>
                             <Link href="/resources#presentations"><a className=" hyperlink click-chip outline-green mr-3">Presentations</a></Link>
                         </section>
-                        <div className="container mx-auto space-y-10">
+                        <div className="container mx-auto space-y-10 p-6">
+{/* {resources_data.map(resource=>(
+    {`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}
+    <Link href="/webinars/webinar-1" passHref key="resource">
+                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
+                                    <div className={`z-20  ${data.secondary}   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}>
+                                        <span>{data.stream}</span>
+                                    </div>
+                                    <div className="block  w-full h-60 relative transition duration-200 ease-out transform hover:scale-110">
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src={data.image_src}/>
+                                    </div>
+                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
+                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">{data.resource_type}</p>
+                                        <h2 className=" card-heading">{data.heading}</h2>
+                                        <p className="mb-2 card-subheading text-gray-500">{data.subheading}</p>
+                                    </div>
+                                    </a>
+                                </Link>
+))} */}
                             <div id="white-papers" className=" grid grid-cols-12 col-span-12 gap-7">
                                     <Link href="/webinars/webinar-1" passHref>
                                     <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
@@ -534,3 +552,13 @@ export default function Resources () {
     </Layout>
     )
 }
+
+
+export const getStaticProps = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    return {
+        props:{resources_data:data}
+    }
+}
+
