@@ -24,8 +24,8 @@ export default function Digital_Projects () {
                 </p>
                     <h1 className="heading">Analyse and Remediate your Custom Code Smoothly</h1>
                     <p className=" text-gray-500 pb-7 subheading">KTern Digital Workplace enables you to analyse the syntatical change impact of all custom Z tables, Z programs and Z objects passing it to AI-Powered Remediation Engine which comes up with the remediation recommendations.   </p>
-                    <div className="flex flex items-center  w-full sm:w-auto sm:flex-row space-x-10">
-                       <Link  href="#" passHref><a className="button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">Get Started</a></Link>
+                    <div className="md:flex md:flex-row  w-full sm:w-auto sm:flex-row md:space-x-10">
+                       <Link  href="#" passHref><a className="sm:mb-4 button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">Get Started</a></Link>
                         <Link href="" passHref>
                         <a  className="flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block">        
                                         <Image className=" w-6 h-6" src="/save-file.svg" alt="save file" width={15 } height={20 }/>
@@ -85,14 +85,14 @@ export default function Digital_Projects () {
                     <p className="w-full py-8 mx-auto -mt-2 section-subheading text-center text-gray-700  sm:max-w-3xl">Each custom object object and program has its own Custom Code information wizard. The Information Wizard Allows you to leverage the Custom Code Center, Custom Code Lab, AI-Powered Remediation Engine</p>
                 </div>
                 
-            <div className="flex flex-col p-20  mx-auto space-y-12  ">
-               <div className="flex mb-8 animated mx-auto fadeIn space-x-20">
-                    <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
+            <div className="flex flex-col md:p-20  md:mx-auto md:space-y-12  ">
+               <div className="flex mb-8 animated mx-auto fadeIn md:space-x-20">
+                    <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
                         <p className=" hyperlink  text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Center</h3>
                         <p className="mt-2 card-subheading text-gray-700  md:text-left">Gain Information on each custom program in the Custom code center. KTern assigns a Impact, Optimization and a Security Score based on the Custom program. </p>
                     </div>
-                     <div className="flex items-center mb-8 w-1/2 sm:order-last">
+                     <div className="hidden md:block flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
                             <div className=" "><Image  src="/features/custom-code-center.png" alt="" width={500} height={400}  /></div>
                             <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
@@ -103,8 +103,8 @@ export default function Digital_Projects () {
                         </div>
                     </div>    
                 </div>
-                <div className="flex space-x-20 mb-8 mx-auto animated fadeIn sm:flex-row">
-                            <div className="relative flex items-center mb-8 w-1/2" >
+                <div className="flex mb-8 animated mx-auto fadeIn md:space-x-20">
+                            <div className="hidden md:block relative flex items-center mb-8 w-1/2" >
                     <div className="relative" style={{zIndex: 0}}>            
                                     <div className=" relative "><Image src="/features/custom-code-lab.png" alt="" width={500} height={400} /></div>
                                      <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
@@ -114,19 +114,19 @@ export default function Digital_Projects () {
 
                     </div>
                     </div>
-                    <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pl-16">
+                 <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
                         <p className=" hyperlink  text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Lab</h3>
                         <p className="mt-2 card-subheading text-gray-700">Gain AI-based custom code insights from Custom Code Lab, with access to a development environment to edit the code manually.</p>
                     </div>
                 </div>
-                 <div className="flex mb-8 animated mx-auto fadeIn space-x-20">
-                    <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 w-1/2 sm:pr-16">
+                 <div className="flex mb-8 animated mx-auto fadeIn md:space-x-20">
+                   <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
                         <p className=" hyperlink   text-left text-project-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">AI Powered Remediation Engine</h3>
                         <p className="mt-2 card-subheading text-gray-700 md:text-left">Auto Recommended Remediation Suggestions that can be applied at the click of a button recording as an transport request in your SAP System.</p>
                     </div>
-                     <div className="flex items-center mb-8 w-1/2 sm:order-last">
+                     <div className="hidden md:block flex items-center mb-8 w-1/2 sm:order-last">
                         <div className="relative" style={{zIndex: 0}}>
                             <div className=" "><Image className=" shadow-xl" src="/features/ai-powered-remediation.png" alt="" width={500} height={400} /></div>
                             <div  className="animate-pulse hidden md:block absolute w-60 h-40" style={{top:'-2rem', right: '3rem', zIndex: -1}}><Image layout="fill" src="/atis-assets/elements/purple-up.svg" alt=""/></div>
@@ -424,40 +424,163 @@ export default function Digital_Projects () {
                             </div>
                     </div>
                 </section>
-   
+ <section className="py-10 bg-project-white">
+                    <h2 className="mb-2 section-heading  text-center">Frequently Asked Questions</h2>
+                    <div className="flex space-x-10 p-10">
+                        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+                            
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">How does KTern Connect to my SAP System?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
 
-            {/* <!-- What do you Get from KTern Section --> */}
-            {/* <section className="py-10 bg-white">
-                <div className="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
-                <div className="flex flex-wrap items-center -mx-3">
-                    <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-                    <div className="w-full lg:max-w-md">
-                        <h2 className="mb-2 section-heading ">Manage your Custom Code Better</h2>
-                        <p className="mb-4 section-subheading text-gray-400 xl:mb-6"> KTern can be used in the entire lifecycle of custom code remediation. the key benefits of using KTern for custom code remediation include:</p>
-                        <ul>
-                        <li className="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                            <span className="card-subheading text-gray-500">Reduction in Development effort and Project Cost.</span>
-                        </li>
-                        <li className="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                            <span className="card-subheading text-gray-500">Improved application performance by remediating SQL statements ​</span>
-                        </li>
-                        <li className="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                            <span className="card-subheading text-gray-500">Automated code fixes eliminating the risks of new errors being introduced by manual modifications</span>
-                        </li>
-                        </ul>
-                    </div>
-                    </div>
-                            <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
-                                <Image className="mx-auto sm:max-w-sm lg:max-w-full" src="/features/ktern-footer-cta.png" alt="feature image" width={415 } height={320 } layout="responsive"/></div>
-                </div>
-                </div>
-            </section>  */}
+                            
+                       
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">How does KTern Connect to my SAP System?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+             <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
 
+                            
+                       
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">How does KTern Connect to my SAP System?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Which SAP System&apos;s are supported by KTern?</span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                                <details className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
+                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
+                                        <span className="card-subheading">Does KTern Offer Enablement Session for System Integrators? </span>
+                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                            </summary>
+                                            <hr/>
+                                    <div className="p-4 hyperlink">
+                                            CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem
+                                            de marcação como HTML. O CSS separa o conteúdo da representação visual do site. É ele que é responsável pela
+                                            aparência do seu site. USando o CSS é possível alterar a cor do texto, fonte, imagem entre outros.
+                                            Também pode criar tabelas, usar variações de layouts, ajustar imagens para suas respectivas telas e assim por
+                                            diante.
+                                    </div>
+                            </details>
+                            
+                            </div>
+                    </div>
+                </section>
             {/* <!--Resources Section--> */}
-           <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
+         <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
                     <div className="px-2 mx-auto max-w-7xl">
                     <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
                     <h2 className="section-heading  text-gray-800 ">Related Resources</h2>
@@ -465,7 +588,7 @@ export default function Digital_Projects () {
                     </div>
                     
                     <div className="grid grid-cols-12 gap-6 mb-6">
-                   <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                   <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4" >
                     <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
@@ -488,7 +611,7 @@ export default function Digital_Projects () {
                     </div>
 
   
-                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4" >
                     <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
@@ -511,7 +634,7 @@ export default function Digital_Projects () {
                     </div>
 
 
-                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4" >
                     <div className="">
                     <Link href="#_" passHref>
                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
@@ -533,7 +656,7 @@ export default function Digital_Projects () {
                     </div>
                     </div>
 
-                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4" >
+                    <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4" >
                                     <div className="">
                                     <Link href="#_" passHref>
                                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
@@ -570,8 +693,8 @@ export default function Digital_Projects () {
             </section>  {/* / Resources Setion */}
            
           {/* <!-- Footer CTA Features Page --> */}
-           <section className="bg-white">
-                <div className="px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
+             <section className="bg-white">
+                <div className="md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl">
                 <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
@@ -580,7 +703,7 @@ export default function Digital_Projects () {
                 <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black ">See Pricing</a></Link>
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">See Pricing</a></Link>
                 <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">Try it free</a></Link>
                 </div>
                 </div>

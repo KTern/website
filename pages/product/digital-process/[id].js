@@ -1,4 +1,4 @@
-import Layout from "../../component/Layout"
+import Layout from "../../../component/Layout"
 import Head from "next/head"
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +15,7 @@ const Feature_Landing = ({data}) => {
 export const getStaticPaths = async () => {
     // const res = await fetch('https://jsonplaceholder.typicode.com/users');
     // const data = await res.json();
+    // Must contain page names /custom-cde-rememdiation
     const data=[{id:'digital-maps'},{id:'digital-process'},{id:'digital-projects'},{id:'digital-maps'},{id:'digital-labs'}]
     // console.log(data)
     const paths = data.map(feature => {
