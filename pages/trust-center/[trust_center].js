@@ -1,5 +1,5 @@
 import Layout from "../../component/Layout";
-export default function TrustCenter () {
+export default function TrustCenter ({trust_center}) {
     return (
         <Layout>
             {/* Header Section */}
@@ -21,7 +21,7 @@ export default function TrustCenter () {
 
 
 <section>
-<div className="flex flex-wrap mx-20">
+<div className="flex flex-wrap p-6 md:mx-20">
   <div className="w-full md:w-2/3  mb-4 md:mb-0">
   <div className="max-w-full ">
   <div className="text-left mb-10">
@@ -66,4 +66,29 @@ KTern uses a multi-tenant data model to host all its applications. Each applicat
 
         
     )
+}
+// Return a list of possible value for trust_center
+export const getStaticPaths = async () => {
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    // const data = await res.json();
+    const data=[{trust_center:'eula'},{trust_center:'consulting-partner-agreement'},{trust_center:'security'},{trust_center:'privacy'},{trust_center:'gdpr'}]
+    // console.log(data)
+    const paths = data.map(trust_center => {
+        return ({
+            params:{trust_center:trust_center.trust_center}
+        })
+    })
+    return {
+        paths,
+        fallback:false
+    }
+}
+// Fetch necessary data for the blog post using params.trust_center
+export const getStaticProps = async (context) => {
+    const trust_center = context.params.trust_center;
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + trust_center);
+    // const data = await res.json();
+    return {
+        props:{data:trust_center}
+    }
 }

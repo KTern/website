@@ -8,7 +8,6 @@ import { isPlainObject } from "lodash";
 
 let selectedOptions = ['maps','projects','process','labs','mines']
 let total = 10;
-
 function handleClick (selectedOption) {
   if(!selectedOptions.includes(selectedOption)){
     selectedOptions.push(selectedOption)
@@ -18,8 +17,11 @@ function handleClick (selectedOption) {
   total = selectedOptions.length * 3;
   if (selectedOptions.length == 5)
     total=10
-  
-  }
+}
+function handleTotal () {
+  selectedOptions = ['maps','projects','process','labs','mines']
+  total = 10;
+}
 export default function Pricing () {
   const [ isMapsSelected, setIsMapsSelected ] = useState(true);
   const [ isProjectsSelected, setIsProjectsSelected ] = useState(true);
@@ -30,7 +32,7 @@ export default function Pricing () {
         <Layout>
              {/* <!-- Main Pricing Section-->         */}
             <section className="overflow-hidden text-gray-700 " >
-                <div className="container px-5 pt-20 pb-4 mx-auto">
+                <div className="container px-5 pt-32 pb-4 mx-auto">
             
                     <div className="flex flex-col w-full mb-24 text-center">
 
@@ -45,7 +47,7 @@ export default function Pricing () {
             </div>
              
               <div className="flex flex-row">    
-                    <div className="w-3/5  mr-10">                    
+                    <div className="md:w-3/5 w-full  mr-10">                    
                     <div className="flex flex-wrap">
                     
                    
@@ -679,9 +681,186 @@ export default function Pricing () {
                   
                         
                          </div>
-                
+                 <div className="hidden sm:block w-full">
+                    <div className="w-full ">
+                            
+
+                            <div className="cursor-pointer relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 bg-gray-100 rounded-lg">
+    
+                  <div className="flex flex-col w-full">
+                    <div className="flex">
+                                 <div className="w-1/2">
+                                    <h2 className="mb-1 card-heading">Overall</h2>
+                                    <h1 className="flex items-center pb-4 mb-4 card-heading text-gray-900 border-b border-gray-200"><span>${total}K</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
+                    </div>
+                      <div className="w-1/2  border-2 text-center mb-14 rounded-lg  text-black justify-center flex items-center" onClick={() => { setIsMinesSelected(true); setIsProjectsSelected(true); setIsLabsSelected(true); setIsMapsSelected(true); setIsProcessSelected(true); handleTotal()}}>
+                                   Select all to save $5K  🎉
+                    </div></div>
+                                    {isMapsSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
+                                            <div className="flex items-center">
+                                                <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                                <Image src="/assets/icons/maps.png" alt="Digital Maps" height={30} width={30}/>
+                                                </span>
+                                                <h2 className="mb-1 pr-2 card-subheading ">Digital Maps</h2>
+                                            </div>
+                                            <div>
+                                             {isMapsSelected && 
+                                    <div className="flex flex-arrow ">
+                              <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={() => { setIsMapsSelected(false); handleClick('maps')}}>
+                               
+                                  <p>Unselect</p>
+                                 
+                                    </button>
+                                   
+                                    </div>}
+                                    {!isMapsSelected && <div className="flex flex-arrow ">
+                              <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={() => { setIsMapsSelected(true);handleClick('maps')}}>
+                               
+                                  <p>Select</p>
+                                 
+                                    </button>
+                                   
+                                   
+                                    </div>}
+                                            </div>
+                                            
+                                            </div>}
+    
+                                            {isProjectsSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
+                                            <div className="flex items-center">
+                                                <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                                <Image src="/assets/icons/projects.png" alt="Digital Projects" height={30} width={30}/>
+                                                </span>
+                                                <h2 className="mb-1 pr-2 card-subheading ">Digital Projects</h2>
+                                            </div>
+                                            <div>
+                                            { isProjectsSelected &&  
+                                    <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsProjectsSelected(false);handleClick('projects')}}> 
+                                        Unselect   
+                                    </button>
+                                   
+                                    
+                                   
+                              </div>
+                            }
+                                  { !isProjectsSelected &&  <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsProjectsSelected(true);handleClick('projects')}}> 
+                                        Select   
+                                    </button>
+                                   
+                                    
+                                   
+                                    </div>}
+                                            </div>
+                                            
+                                            </div>}
+    
+                                           {isProcessSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
+                                            <div className="flex items-center">
+                                                <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                                <Image src="/assets/icons/process.svg" alt="Digital Process" height={30} width={30}/>
+                                                </span>
+                                                <h2 className="mb-1 pr-2 card-subheading ">Digital Process</h2>
+                                            </div>
+                                            <div>
+                                            {isProcessSelected && <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsProcessSelected(false);handleClick('process')}}> 
+                                        Unselect   
+                                    </button>
+                                   
+                                    
+                                   
+                            </div>}
+                           { !isProcessSelected && <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsProcessSelected(true);handleClick('process')}}> 
+                                        Select   
+                                    </button>
+                                   
+                                    
+                                   
+                                    </div>}
+                                            </div>
+                                            
+                                            </div>}
+                                           {isLabsSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
+                                            <div className="flex items-center">
+                                                <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                                <Image src="/assets/icons/Labs.png" alt="Digital Labs" height={30} width={30}/>
+                                                </span>
+                                                <h2 className="mb-1 pr-2 card-subheading ">Digital Labs</h2>
+                                            </div>
+                                            <div>
+                                           {isLabsSelected && <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsLabsSelected(false);handleClick('labs')}}> 
+                                        Unselect   
+                                    </button>
+                                   
+                                    
+                                   
+                            </div>}
+                           {!isLabsSelected && <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsLabsSelected(true);handleClick('labs')}}> 
+                                        Select   
+                                    </button>
+                                   
+                                    
+                                   
+                                    </div>}
+                                            </div>
+                                            
+                                            </div>}
+                                           {isMinesSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
+                                            <div className="flex items-center">
+                                                <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
+                                                <Image src="/assets/icons/Mines.png" alt="Digital Mines" height={30} width={30}/>
+                                                </span>
+                                                <h2 className="mb-1 pr-2 card-subheading ">Digital Mines</h2>
+                                            </div>
+                                            <div>
+                                           {isMinesSelected && <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsMinesSelected(false);handleClick('mines')}}> 
+                                        Unselect   
+                                    </button>
+                                   
+                                    
+                                   
+                            </div>}
+{!isMinesSelected &&                            <div className="flex flex-arrow ">
+                                    <button id="hey" className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none" onClick={()=>{setIsMinesSelected(true);handleClick('mines')}}> 
+                                        Select   
+                                    </button>
+                                   
+                                    
+                                   
+                                    </div>
+} 
+                                            </div>
+                                            
+                                            </div>}
+                                </div>
+                                
+                                <div className="w-full">
+                                    <button className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none"> 
+                                        Contact Sales
+                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                    </button>
+                                    {/* <Link href="" passHref>
+                        <a  className="flex flex-row justify-center text-center mt-2 py-3 px-8 rounded-r-xl rounded-b-xl  button  ">        
+                        <span className="flex items-center justify-center w-5 h-5 bg-transparent rounded-lg ">
+                                                <Image src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
+                                                </span>        
+                                <span className="button ">&nbsp;&nbsp;Share Price</span>
+                        </a>
+                        </Link> */}
+                                
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
                 </div>
-                    <div className="w-2/5">
+                    <div className="hidden md:block w-2/5">
                     <div className="w-full p-2">
                             
 
@@ -693,7 +872,7 @@ export default function Pricing () {
                                     <h2 className="mb-1 card-heading">Overall</h2>
                                     <h1 className="flex items-center pb-4 mb-4 card-heading text-gray-900 border-b border-gray-200"><span>${total}K</span><span className="ml-1 text-lg font-normal text-gray-500">/MO</span></h1>
                     </div>
-                      <div className="w-1/2  border-2 text-center mb-14 rounded-lg  text-black justify-center flex items-center" onClick={() => { setIsMinesSelected(true); setIsProjectsSelected(true); setIsLabsSelected(true); setIsMapsSelected(true); setIsProcessSelected(true); handleClick('mines'); handleClick('labs'); handleClick('projects'); handleClick('process');handleClick('maps')}}>
+                      <div className="w-1/2  border-2 text-center mb-14 rounded-lg  text-black justify-center flex items-center" onClick={() => { setIsMinesSelected(true); setIsProjectsSelected(true); setIsLabsSelected(true); setIsMapsSelected(true); setIsProcessSelected(true); handleTotal()}}>
                                    Select all to save $5K  🎉
                     </div></div>
                                     {isMapsSelected && <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">

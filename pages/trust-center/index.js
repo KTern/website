@@ -24,13 +24,13 @@ export default function TrustCenter () {
 
 
             {/* KTern Trust Center */}
-            <section className="p-20  bg-secondary">
-        <div className="max-w-screen pl-20  mx-auto">
+            <section className="md:p-20 p-10 bg-secondary">
+        <div className="max-w-screen md:pl-20  mx-auto">
            <section className=" flex pb-10 items-center justify-end">
                           <input id="demo-2" type="search" placeholder="Search"/>
                         </section>
           <hr className="bg-secondary h-1"/>
-            <div className="grid grid-cols-1 mt-16 sm:grid-cols-2 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20">
+            <div className="grid grid-cols-1 mt-16 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20">
                 <div>
                     <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
                     <h3 className="mt-4 mb-2 card-heading  text-gray-900 lg:">Cloud services</h3>
@@ -148,7 +148,7 @@ export default function TrustCenter () {
          <section className="text-black body-font bg-white">
                 <div className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col">
                     <h2 className="mb-5 section-heading  text-center md:">Find Information Specific to your Role</h2>
-                <div className="flex w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center">
+                <div className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center">
                             <Link href="" passHref>
                                 <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
@@ -168,8 +168,8 @@ export default function TrustCenter () {
                             
                 </div>
                 <section className="pt-20 pb-32 bg-white">
-    <div className="px-20 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
+    <div className="md:px-20 p-4 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
             <div>
             <div className=" block w-60 h-60 relative ">
                 <Image layout="fill" className="mx-auto  mb-6 object-cover border-2 border-black" src="/trust-center/cloud.png" alt=""/>
@@ -187,7 +187,7 @@ export default function TrustCenter () {
             
             </div>
 
-            <div>
+            <div className="overflow-hidden">
             <div className=" block w-60 h-60 relative ">
                 <Image layout="fill" className="mx-auto  mb-6 object-cover border-2 border-black" src="/trust-center/customer.png" alt=""/>
                      </div>
