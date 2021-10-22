@@ -1,15 +1,21 @@
 import Layout from "../../component/Layout";
 import Image from "next/image";
+import Head from "next/head"
 import Link from "next/link";
+import { useState } from "react";
 export default function TrustCenter () {
+    const [ isCustomerVisible, setIsCustomerVisible ] = useState(true);
+    const [ isPartnerVisible, setIsPartnerVisible ] = useState(false);
     return (
+
         <Layout>
+           
             {/* Header Section */}
 
             <section className="w-full py-28 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                 <p className="w-32 inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+                 <p className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     Trust Center
                 </p>
                     <h1 className="heading text-white mb-5"  >Trust Center</h1>
@@ -22,14 +28,13 @@ export default function TrustCenter () {
             </section>
 
 
-
             {/* KTern Trust Center */}
-            <section className="md:p-20 p-10 bg-secondary">
+            <section className="md:p-20 p-10 ">
         <div className="max-w-screen md:pl-20  mx-auto">
            <section className=" flex pb-10 items-center justify-end">
                           <input id="demo-2" type="search" placeholder="Search"/>
                         </section>
-          <hr className="bg-secondary h-1"/>
+          {/* <hr className="bg-black "/> */}
             <div className="grid grid-cols-1 mt-16 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20">
                 <div>
                     <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
@@ -149,25 +154,82 @@ export default function TrustCenter () {
                 <div className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col">
                     <h2 className="mb-5 section-heading  text-center md:">Find Information Specific to your Role</h2>
                 <div className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center">
-                            <Link href="" passHref>
-                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
-                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg><span className="hyperlink">Customer</span>
-                        </a>
-                    </Link>
-                            <Link href="" passHref>
-                                <a className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
-                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg><span className="hyperlink">Partner</span>
-                        </a>
-                    </Link>
+                    
+                        <button onClick={() => { setIsCustomerVisible(true);setIsPartnerVisible(false);}} className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 focus:border-indigo-500 text-gray-900  focus:text-indigo-500 tracking-wider rounded-t">
+                       <span className="hyperlink">Customer</span>
+                        </button>
+                    
+                    
+                                <button onClick={()=>{setIsPartnerVisible(true);setIsCustomerVisible(false)}} className="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start focus:bg-gray-100 border-b-2 title-font  inline-flex items-center leading-none border-gray-200 text-gray-900 tracking-wider focus:border-indigo-500 focus:text-indigo-500">
+                        <span className="hyperlink">Partner</span>
+                        </button>
+                    
                     
                             
                             
                 </div>
-                <section className="pt-20 pb-32 bg-white">
+              {isCustomerVisible &&  <section className="pt-20 pb-32 bg-white" >
+    <div className="md:px-20 p-4 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
+            <div>
+            <div className=" block w-60 h-60 relative ">
+                <Image layout="fill" className="mx-auto  mb-6 object-cover border-2 border-black" src="/trust-center/cloud.png" alt=""/>
+                     </div>
+                <h3 className="mb-2 card-heading  text-gray-900 lg:">Cloud Agreement</h3>
+                <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
+                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+            
+            </div>
+
+            <div className="overflow-hidden">
+            <div className=" block w-60 h-60 relative ">
+                <Image layout="fill" className="mx-auto  mb-6 object-cover border-2 border-black" src="/trust-center/customer.png" alt=""/>
+                     </div>
+                <h3 className="mb-2 card-heading  text-gray-900 lg:">Customer Agreement</h3>
+                <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
+                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+            
+            </div>
+
+
+
+            <div>
+            <div className=" block w-60 h-60 relative ">
+                <Image layout="fill" className="mx-auto  mb-6 object-cover border-2 border-black" src="/trust-center/eula.png" alt=""/>
+                     </div>
+                <h3 className="mb-2 card-heading  text-gray-900 lg:">Ea Agreement</h3>
+                <p className=" text-gray-500 card-subheading">Faster processing to help you build your applications quicker and with more efficiency.</p>
+                <Link href="#_"  passHref>
+                                <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>
+            
+            </div>
+
+            
+
+        </div>
+    </div>
+                    </section>}
+                  {isPartnerVisible && <section className="pt-20 pb-32 bg-white" >
     <div className="md:px-20 p-4 mx-auto max-w-7xl">
         <div className="grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
             <div>
@@ -227,14 +289,13 @@ export default function TrustCenter () {
 
         </div>
     </div>
-</section>
+</section>    }
                 </div>
                 
             </section>
              
             
               </Layout>
-
 
         
     )

@@ -35,11 +35,11 @@ const Feature_index = ({features_Data}) => {
             {/* Header */}
             {/* sticky nav */}
             <section className="flex sm:space-x-2 md:space-x-10 justify-center items-center  sm:py-5 md:p-5 bg-white shadow-2xl  sticky z-10 md:top-16 sm:top-10 border-2">    
-                <Link  href="/product/features#digital-maps"><a className="hyperlink  uppercase hover:text-maps-primary">Digital Maps</a></Link>
-                <Link href="/product/features#digital-projects"><a  className="hyperlink  uppercase hover:text-project-primary">Digital Projects</a></Link>
-                <Link  href="/product/features#digital-process"><a className="hyperlink  uppercase hover:text-process-primary">Digital Process</a></Link>
-                <Link  href="/product/features#digital-labs"><a className="hyperlink  uppercase hover:text-labs-primary">Digital Labs</a></Link>
-                <Link  href="/product/features#digital-mines"><a className="hyperlink  uppercase hover:text-mines-primary">Digital Mines</a></Link>
+                <Link  href="/features#digital-maps"><a className="hyperlink  uppercase hover:text-maps-primary">Digital Maps</a></Link>
+                <Link href="/features#digital-projects"><a  className="hyperlink  uppercase hover:text-project-primary">Digital Projects</a></Link>
+                <Link  href="/features#digital-process"><a className="hyperlink  uppercase hover:text-process-primary">Digital Process</a></Link>
+                <Link  href="/features#digital-labs"><a className="hyperlink  uppercase hover:text-labs-primary">Digital Labs</a></Link>
+                <Link  href="/features#digital-mines"><a className="hyperlink  uppercase hover:text-mines-primary">Digital Mines</a></Link>
             </section>
             {/* Sticky nav */}
             {/* digital Maps */}
@@ -54,7 +54,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks first column --> */}
                             {features_Data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -127,7 +127,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks first column --> */}
                             {features_Data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -204,7 +204,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks first column --> */}
                             {features_Data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -280,7 +280,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks first column --> */}
                             {features_Data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -356,7 +356,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks first column --> */}
                             {features_Data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>

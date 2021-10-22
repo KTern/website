@@ -1,6 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 export default function WebinarLayout ({ data }) {
+    const router = useRouter();
+    const handleSearch = (event) => {
+        console.log("clicked" +data.type+event)
+       
+            router.push({
+              pathname:`${data.title}`+"/thank-you",
+               state:`${ data.type}`
+            });
+      
+    }
     return (
         <>
             <section className="relative" >
@@ -121,11 +132,12 @@ export default function WebinarLayout ({ data }) {
                                     </div>
                                     <div className="relative  text-center">
                                     
-                                        <Link href="/thank-you" passHref>
+                                        {/* <Link href={data.redirect_url} onClick={()=>{handleSearch(event)}} forwardHref>
                                             <a className="inline-block w-full px-5 py-4 button  text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl button transition duration-200 hover:bg-gray-500 ease">Submit</a>
-                                        </Link>
-
+                                        </Link> */}
+<button onClick={()=>handleSearch(event)} className="inline-block w-full px-5 py-4 button  text-center text-white transition duration-200 bg-black 
+                                            rounded-r-xl rounded-b-xl button transition duration-200 hover:bg-gray-500 ease">Submit</button>
                                     </div>
                                     </div>
 

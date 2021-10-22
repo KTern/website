@@ -1,11 +1,12 @@
-import Layout from "../../component/Layout"
-import WebinarLayout from "../../component/webinar_Layout";
+import Layout from "../../../component/Layout"
+import WebinarLayout from "../../../component/webinar_Layout";
 import Image from "next/image";
 import Link from "next/link";
-export default function WebinarLanding ({webinar_data}) {
+export default function WebinarLanding ({ webinar_data }) {
+    
     const data = {
         title: webinar_data,
-        type: " ON-DEMAND WEBINAR",
+        type: "ON-DEMAND WEBINAR",
         date: "1st September 2021",
         time: "11 am to Noon",
         zone: "Pacific Time",
@@ -15,7 +16,8 @@ export default function WebinarLanding ({webinar_data}) {
         learnlist: [ "Auto-generation of test scripts based on business process criticality.", "No-code API testing bots and screen-based testing bots.", "Orchestrating remote UAT and go-lives through a Digital Workplace Platform." ],
         panellist: [ { name: "Ratnakumar", designation: "CEO & Founder", image: "/webinar/ratna.webp" } ],
         class: 'absolute inset-0 bg-gradient-to-b from-labs-primary to-labs-secondary opacity-30',
-        categoryStyle:'bg-labs-secondary'
+        categoryStyle: 'bg-labs-secondary',
+        redirect_url:webinar_data+"/thank-you"
     }
     return (
         <Layout>

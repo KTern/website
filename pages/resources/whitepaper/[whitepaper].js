@@ -3,7 +3,7 @@ import Head from "next/head"
 import Image from "next/image";
 import Link from "next/link";
 
-const Ebook_Landing = ({data}) => {
+const WhitePaper_Landing = ({data}) => {
     return (
                 <>
             <Head>
@@ -14,14 +14,14 @@ const Ebook_Landing = ({data}) => {
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <div className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    E-book
+                    White Paper
                 </div>
                     <h1 className="heading text-white "  >S/4 HANA Journey Made Simple</h1>
                     <p className="subheading text-gray-100 pb-7 pt-2">Digitally Transform to SAP S/4HANA From SAP ECC</p>
                     <div className="flex flex-row">
                     
                    
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Download E-book</a></Link>
+                    <Link  href="/contact"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Download White Paper</a></Link>
                     </div>
                 </div>
 <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
@@ -41,7 +41,7 @@ const Ebook_Landing = ({data}) => {
                                       <Link href="/resources"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
-                             <span className="hyperlink group-hover:text-gray-400">Go Back to all Ebooks</span>
+                             <span className="hyperlink group-hover:text-gray-400">Go Back to all White Papers</span>
                                 
                                 </a>
                             </Link> 
@@ -69,7 +69,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
             
                         <div className=" z-10 w-full md:max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
                             <div id="downloadbook" className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
-                                <h4 className="w-full  card-heading  ">Download E-Book</h4>
+                                <h4 className="w-full  card-heading  ">Download White paper</h4>
                                 <div className="relative w-full mt-6 space-y-8">
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">First Name</label>
@@ -108,15 +108,15 @@ This blueprint will help you define the right plan, the right effort estimate, t
     )
 }
 
-// Return a list of possible value for ebook
+// Return a list of possible value for whitepaper
 export const getStaticPaths = async () => {
     // const res = await fetch('https://jsonplaceholder.typicode.com/users');
     // const data = await res.json();
-    const data=[{ebook:'definitive-guide-sap-s4hana-assessment'},{ebook:'sap-custom-code-migration-guide'},{ebook:'sap-s4hana-testing-guide'},{ebook:'manage-digital-transformation-effectively'},{ebook:'unlocking-digital-transformation-guide'}]
+    const data=[{whitepaper:'get-started-with-move-ecc-to-s4hana'},{whitepaper:'organizational-change-management-sap-s4hana'},{whitepaper:'definitive-guide-to-sap-s4hana'},{whitepaper:'manage-digital-transformation-effectively'},{whitepaper:'unlocking-digital-transformation-guide'}]
     // console.log(data)
-    const paths = data.map(ebook => {
+    const paths = data.map(whitepaper => {
         return ({
-            params:{ebook:ebook.ebook}
+            params:{whitepaper:whitepaper.whitepaper}
         })
     })
     return {
@@ -124,13 +124,13 @@ export const getStaticPaths = async () => {
         fallback:false
     }
 }
-// Fetch necessary data for the blog post using params.ebook
+// Fetch necessary data for the blog post using params.whitepaper
 export const getStaticProps = async (context) => {
-    const ebook = context.params.ebook;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + ebook);
+    const whitepaper = context.params.whitepaper;
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + whitepaper);
     // const data = await res.json();
     return {
-        props:{data:ebook}
+        props:{data:whitepaper}
     }
 }
-export default Ebook_Landing;
+export default WhitePaper_Landing;

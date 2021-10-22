@@ -6,9 +6,7 @@ import ReactStarsRating from 'react-awesome-stars-rating';
 export default function Footer () {
     return (
         <>
-            <Head>
-                <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css" key="star rating"></link>
-            </Head>
+           
     <section className="px-4 py-4 md:py-10 md:px-10 bg-black">
         <div className="md:px-10 mx-auto ">
             <div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
@@ -68,7 +66,7 @@ export default function Footer () {
                         </div>
                     <div className="shadow-xl shadow-gray-100 border-2 border-white mx-5 mb-7 rounded-lg px-8">
                                 <Link href="https://www.g2.com"><a className="mx-auto x-g2-link-home" title="G2"> <Image width="100px" height="50px" src="https://logodix.com/logo/2006253.png" alt="G2" /></a></Link>
-                    <ReactStarsRating className="flex mx-auto  " value={4.7} />
+                    {/* <ReactStarsRating className="flex mx-auto  " value={4.7} /> */}
                             </div>
         </div>
                 </div>

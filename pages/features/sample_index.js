@@ -229,7 +229,7 @@ const Feature_index = ({features_Data}) => {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -265,7 +265,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                               <Link href="/product/features">
+                               <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -305,7 +305,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
                                 
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -341,7 +341,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
@@ -416,7 +416,7 @@ const Feature_index = ({features_Data}) => {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
@@ -452,7 +452,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                               <Link href="/product/features">
+                               <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
@@ -492,7 +492,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
                                 
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
@@ -528,7 +528,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
@@ -603,7 +603,7 @@ const Feature_index = ({features_Data}) => {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
@@ -639,7 +639,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                               <Link href="/product/features">
+                               <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
@@ -679,7 +679,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
                                 
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
@@ -715,7 +715,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
@@ -790,7 +790,7 @@ const Feature_index = ({features_Data}) => {
 
                             {/* <!-- Feature blocks first column --> */}
                             <div className="flex flex-row w-full mb-10 sm:flex-col space-x-10">
-                                 <Link href="/product/features">
+                                 <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
@@ -826,7 +826,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                               <Link href="/product/features">
+                               <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
@@ -866,7 +866,7 @@ const Feature_index = ({features_Data}) => {
                             {/* <!-- Feature blocks second column --> */}
                             <div className="flex flex-row w-full mb-5 sm:flex-col space-x-10">
                                 
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
@@ -902,7 +902,7 @@ const Feature_index = ({features_Data}) => {
                             </a>
                             </Link>
                            
-                                <Link href="/product/features">
+                                <Link href="/features">
                                      
                                     <a className="relative flex flex-auto p-1 px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>

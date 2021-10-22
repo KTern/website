@@ -1,462 +1,452 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import 'react-multi-carousel/lib/styles.css';
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-    display: block;
-    vertical-align: middle;
-}
-
-details>summary {
-    list-style: none;
-}
-
-summary::-webkit-details-marker {
-    display: none
-}
-
-#arrow::after {
-    content: ' ►';
-}
-
-details[open] #arrow:after {
-    content: " ▼";
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    font-family: 'Rubik', sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Jost', sans-serif;
-    font-weight: 500;
-}
-
-img,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-::-moz-selection {
-    /* Code for Firefox */
-    color: #EAEDF2;
-    background: #0B1320;
-}
-
-::selection {
-    color: #EAEDF2;
-    background: #0B1320;
-}
-
-
-/* Fonts */
-
-.header {
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.navbar-h {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.navbar-s {
-    font-family: 'Jost', sans-serif;
-    font-weight: 500;
-    line-height: 18px;
-    font-size: 15px;
-}
-
-.hyperlink {
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: 600;
-    line-height: 24px;
-}
-
-.sm-hyperlink {
-    font-family: 'Jost', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 24px;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.breadcrumb {
-    content: '>'
-}
-
-.button {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 24px;
-    text-transform: uppercase;
-}
-
-.sm-button {
-    font-family: 'Rubik', sans-serif;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 24px;
-    text-transform: uppercase;
-}
-
-.heading {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
-}
-
-.sm-heading {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 50px;
-}
-
-.subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 31px;
-}
-
-.sm-subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 31px;
-}
-
-nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
-    z-index: 50;
-}
-
-
-/* 
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	@import 'react-multi-carousel/lib/styles.css';
+	@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@400;500;600;700;800;900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+	img,
+	svg,
+	video,
+	canvas,
+	audio,
+	iframe,
+	embed,
+	object {
+	    display: block;
+	    vertical-align: middle;
+	}
+	
+	.anchor {
+	    scroll-margin-top: 80px;
+	}
+	
+	details>summary {
+	    list-style: none;
+	}
+	
+	summary::-webkit-details-marker {
+	    display: none
+	}
+	
+	#arrow::after {
+	    content: ' ►';
+	}
+	
+	details[open] #arrow:after {
+	    content: " ▼";
+	}
+	
+	html,
+	body {
+	    padding: 0;
+	    margin: 0;
+	    font-family: 'Rubik', sans-serif;
+	}
+	
+	a {
+	    color: inherit;
+	    text-decoration: none;
+	    font-family: 'Rubik', sans-serif;
+	}
+	
+	* {
+	    box-sizing: border-box;
+	    font-family: 'Jost', sans-serif;
+	    font-weight: 500;
+	}
+	
+	img,
+	video {
+	    max-width: 100%;
+	    height: auto;
+	}
+	
+	::-moz-selection {
+	    /* Code for Firefox */
+	    color: #EAEDF2;
+	    background: #0B1320;
+	}
+	
+	::selection {
+	    color: #EAEDF2;
+	    background: #0B1320;
+	}
+	/* Fonts */
+	
+	.header {
+	    font-family: 'Jost', sans-serif;
+	    font-weight: 600;
+	    font-size: 16px;
+	    line-height: 24px;
+	}
+	
+	.navbar-h {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    font-size: 14px;
+	    line-height: 18px;
+	}
+	
+	.navbar-s {
+	    font-family: 'Jost', sans-serif;
+	    font-weight: 500;
+	    line-height: 18px;
+	    font-size: 15px;
+	}
+	
+	.hyperlink {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 14px;
+	    text-decoration: none;
+	    font-weight: 600;
+	    line-height: 24px;
+	}
+	
+	.sm-hyperlink {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 10px;
+	    font-weight: 600;
+	    line-height: 24px;
+	}
+	
+	a:hover {
+	    text-decoration: none;
+	}
+	
+	.breadcrumb {
+	    content: '>'
+	}
+	
+	.button {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    text-decoration: none;
+	    font-size: 14px;
+	    line-height: 24px;
+	    text-transform: uppercase;
+	}
+	
+	.sm-button {
+	    font-family: 'Rubik', sans-serif;
+	    text-decoration: none;
+	    font-weight: 700;
+	    font-size: 10px;
+	    line-height: 24px;
+	    text-transform: uppercase;
+	}
+	
+	.heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    font-size: 40px;
+	    line-height: 50px;
+	}
+	
+	.sm-heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    font-size: 36px;
+	    line-height: 50px;
+	}
+	
+	.subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 20px;
+	    font-weight: 500;
+	    line-height: 31px;
+	}
+	
+	.sm-subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 16px;
+	    font-weight: 500;
+	    line-height: 31px;
+	}
+	
+	nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
+	    z-index: 50;
+	}
+	/* 
 .vertical {
     height: 100%;
     
     width: 0;
     border: 1px solid black;
 } */
-
-.card-heading {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    line-height: 34px;
-    font-size: 24px;
-}
-
-.sm-card-heading {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    line-height: 30px;
-    font-size: 24px;
-}
-
-.card-subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
-}
-
-.sm-card-subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 25px;
-}
-
-.section-heading {
-    font-family: 'Rubik', sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 50px;
-}
-
-.sm-section-heading {
-    font-family: 'Rubik', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 50px;
-}
-
-.section-subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 31px;
-}
-
-.sm-section-subheading {
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 31px;
-}
-
-.container {
-    width: 100%;
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-}
-
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-}
-
-@media (min-width: 1140px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-.hello {
-    position: relative;
-    animation: mymove 20s infinite alternate linear;
-    width: fit-content;
-}
-
-.hello:hover {
-    animation-play-state: paused;
-}
-
-@keyframes mymove {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(calc(-100% + (6*300px)));
-    }
-}
-
-.carousel-focus:hover {
-    transition: all 0.8s;
-    transform: scale(1.1);
-}
-
-.carousel-open:checked+.carousel-item {
-    position: static;
-    opacity: 100;
-}
-
-.carousel-item {
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-
-#carousel-1:checked~.control-1,
-#carousel-2:checked~.control-2,
-#carousel-3:checked~.control-3 {
-    display: block;
-}
-
-.carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-
-#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #ffb317;
-    /*Set to match the Tailwind colour you want the active one to be */
-}
-
-.overflow-x-hidden {
-    overflow-x: hidden
-}
-
-
-/* Header */
-
-.mega-menu {
-    display: none;
-    left: 0;
-    position: absolute;
-    text-align: left;
-    width: 100%;
-}
-
-
-/* #hoverable Class Styles */
-
-.hoverable {
-    position: static;
-}
-
-.hoverable>a:after {
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-}
-
-.hoverable:hover .mega-menu {
-    display: block;
-}
-
-
-/* #toggle Class Styles */
-
-.toggleable>label:after {
-    content: "\25BC";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-}
-
-.toggle-input {
-    display: none;
-}
-
-.toggle-input:not(checked)~.mega-menu {
-    display: none;
-}
-
-.toggle-input:checked~.mega-menu {
-    display: block;
-}
-
-.toggle-input:checked+label {
-    background: white;
-}
-
-.toggle-input:checked~label:after {
-    content: "\25BC";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-}
-
-
-/* Chip */
-
-.click-chip {
-    padding: 6px 10px;
-    border-radius: 10px;
-    display: inline-flex;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.click-chip:hover {
-    transform: scale(1.1);
-    background-color: #CFD2D8;
-}
-
-.outline-green {
-    border: 1.5px solid black;
-    color: black;
-    outline: none;
-}
-
-
-/* Search icon */
-
-#demo-2 {
-    outline: none;
-}
-
-input[type=search] {
-    -webkit-appearance: textfield;
-    -webkit-box-sizing: content-box;
-    font-family: inherit;
-    font-size: 100%;
-}
-
-input[type=search] {
-    background: white url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-    border: solid 1px #ccc;
-    padding: 9px 10px 9px 32px;
-    width: 25%;
-    -webkit-border-radius: 25%;
-    -moz-border-radius: 25%;
-    border-radius: 10px;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
-}
-
-input[type=search]:focus {
-    background-color: #fff;
-    border-color: #B3B7BE;
-    -webkit-box-shadow: 0 0 5px #B3B7BE;
-    -moz-box-shadow: 0 0 5px #B3B7BE;
-    box-shadow: 0 0 5px #B3B7BE;
-}
-
-input:-moz-placeholder {
-    color: #999;
-}
-
-input::-webkit-input-placeholder {
-    color: #999;
-}
-
-.bots-card {
-    background-color: white;
-    height: 200px;
-    width: 300px;
-}
+	
+	.card-heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    line-height: 34px;
+	    font-size: 24px;
+	}
+	
+	.sm-card-heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-weight: 700;
+	    line-height: 30px;
+	    font-size: 24px;
+	}
+	
+	.card-subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 15px;
+	    font-weight: 500;
+	    line-height: 25px;
+	}
+	
+	.sm-card-subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 11px;
+	    font-weight: 500;
+	    line-height: 25px;
+	}
+	
+	.section-heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-size: 34px;
+	    font-weight: 700;
+	    line-height: 50px;
+	}
+	
+	.sm-section-heading {
+	    font-family: 'Rubik', sans-serif;
+	    font-size: 30px;
+	    font-weight: 700;
+	    line-height: 50px;
+	}
+	
+	.section-subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 18px;
+	    font-weight: 500;
+	    line-height: 31px;
+	}
+	
+	.sm-section-subheading {
+	    font-family: 'Jost', sans-serif;
+	    font-size: 14px;
+	    font-weight: 500;
+	    line-height: 31px;
+	}
+	
+	.container {
+	    width: 100%;
+	    font-family: 'Jost', sans-serif;
+	    font-style: normal;
+	    font-weight: 500;
+	}
+	
+	@media (min-width: 640px) {
+	    .container {
+	        max-width: 640px;
+	    }
+	}
+	
+	@media (min-width: 768px) {
+	    .container {
+	        max-width: 768px;
+	    }
+	}
+	
+	@media (min-width: 1024px) {
+	    .container {
+	        max-width: 1024px;
+	    }
+	}
+	
+	@media (min-width: 1140px) {
+	    .container {
+	        max-width: 1140px;
+	    }
+	}
+	
+	.hello {
+	    position: relative;
+	    animation: mymove 20s infinite alternate linear;
+	    width: fit-content;
+	}
+	
+	.hello:hover {
+	    animation-play-state: paused;
+	}
+	
+	@keyframes mymove {
+	    from {
+	        transform: translate(0, 0);
+	    }
+	    to {
+	        transform: translate(calc(-100% + (6*300px)));
+	    }
+	}
+	
+	.carousel-focus:hover {
+	    transition: all 0.8s;
+	    transform: scale(1.1);
+	}
+	
+	.carousel-open:checked+.carousel-item {
+	    position: static;
+	    opacity: 100;
+	}
+	
+	.carousel-item {
+	    -webkit-transition: opacity 0.6s ease-out;
+	    transition: opacity 0.6s ease-out;
+	}
+	
+	#carousel-1:checked~.control-1,
+	#carousel-2:checked~.control-2,
+	#carousel-3:checked~.control-3 {
+	    display: block;
+	}
+	
+	.carousel-indicators {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    position: absolute;
+	    bottom: 2%;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    z-index: 10;
+	}
+	
+	#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+	#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+	#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+	    color: #ffb317;
+	    /*Set to match the Tailwind colour you want the active one to be */
+	}
+	
+	.overflow-x-hidden {
+	    overflow-x: hidden
+	}
+	/* Header */
+	
+	.mega-menu {
+	    display: none;
+	    left: 0;
+	    position: absolute;
+	    text-align: left;
+	    width: 100%;
+	}
+	/* #hoverable Class Styles */
+	
+	.hoverable {
+	    position: static;
+	}
+	
+	.hoverable>a:after {
+	    font-size: 10px;
+	    padding-left: 6px;
+	    position: relative;
+	    top: -1px;
+	}
+	
+	.hoverable:hover .mega-menu {
+	    display: block;
+	}
+	/* #toggle Class Styles */
+	
+	.toggleable>label:after {
+	    content: "\25BC";
+	    font-size: 10px;
+	    padding-left: 6px;
+	    position: relative;
+	    top: -1px;
+	}
+	
+	.toggle-input {
+	    display: none;
+	}
+	
+	.toggle-input:not(checked)~.mega-menu {
+	    display: none;
+	}
+	
+	.toggle-input:checked~.mega-menu {
+	    display: block;
+	}
+	
+	.toggle-input:checked+label {
+	    background: white;
+	}
+	
+	.toggle-input:checked~label:after {
+	    content: "\25BC";
+	    font-size: 10px;
+	    padding-left: 6px;
+	    position: relative;
+	    top: -1px;
+	}
+	/* Chip */
+	
+	.click-chip {
+	    padding: 6px 10px;
+	    border-radius: 10px;
+	    display: inline-flex;
+	    margin: 5px;
+	    cursor: pointer;
+	}
+	
+	.click-chip:hover {
+	    transform: scale(1.1);
+	    background-color: #CFD2D8;
+	}
+	
+	.outline-green {
+	    border: 1.5px solid black;
+	    color: black;
+	    outline: none;
+	}
+	/* Search icon */
+	
+	#demo-2 {
+	    outline: none;
+	}
+	
+	input[type=search] {
+	    -webkit-appearance: textfield;
+	    -webkit-box-sizing: content-box;
+	    font-family: inherit;
+	    font-size: 100%;
+	}
+	
+	input[type=search] {
+	    background: white url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	    border: solid 1px #ccc;
+	    padding: 9px 10px 9px 32px;
+	    width: 25%;
+	    -webkit-border-radius: 25%;
+	    -moz-border-radius: 25%;
+	    border-radius: 10px;
+	    -webkit-transition: all .5s;
+	    -moz-transition: all .5s;
+	    transition: all .5s;
+	}
+	
+	input[type=search]:focus {
+	    background-color: #fff;
+	    border-color: #B3B7BE;
+	    -webkit-box-shadow: 0 0 5px #B3B7BE;
+	    -moz-box-shadow: 0 0 5px #B3B7BE;
+	    box-shadow: 0 0 5px #B3B7BE;
+	}
+	
+	input:-moz-placeholder {
+	    color: #999;
+	}
+	
+	input::-webkit-input-placeholder {
+	    color: #999;
+	}
+	
+	.bots-card {
+	    background-color: white;
+	    height: 200px;
+	    width: 300px;
+	}
