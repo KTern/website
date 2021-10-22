@@ -7,7 +7,7 @@ export default function WebinarLayout ({ data }) {
         console.log("clicked" +data.type+event)
        
             router.push({
-              pathname:`${data.title}`+"/thank-you",
+              pathname:"thanks/"+`${data.title}`,
                state:`${ data.type}`
             });
       

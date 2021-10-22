@@ -22,9 +22,13 @@ const responsive = {
     items: 1
   }
 };
-export default function Home ({index_Data}) {
+export default function Home ({locale,data}) {
     return (
         <div >
+            {/* <h1>{locale}</h1> */}
+            {/* {data.map(item => (
+                <h2 key="item">{item.phone}</h2>
+            ))} */}
             <Layout>
                 {/* <!-- Hero Section --> */}
                 <section className=" pt-20  relative overflow-hidden bg-white">
@@ -567,12 +571,14 @@ export default function Home ({index_Data}) {
     )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({locale}) => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
+    // console.log(data)
     return {
         props: {
-            index_Data: data
+            locale: locale,
+            data:data
         }
     }
 }

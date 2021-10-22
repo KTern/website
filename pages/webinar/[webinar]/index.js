@@ -3,7 +3,7 @@ import WebinarLayout from "../../../component/webinar_Layout";
 import Image from "next/image";
 import Link from "next/link";
 export default function WebinarLanding ({ webinar_data }) {
-    
+
     const data = {
         title: webinar_data,
         type: "ON-DEMAND WEBINAR",
@@ -17,7 +17,7 @@ export default function WebinarLanding ({ webinar_data }) {
         panellist: [ { name: "Ratnakumar", designation: "CEO & Founder", image: "/webinar/ratna.webp" } ],
         class: 'absolute inset-0 bg-gradient-to-b from-labs-primary to-labs-secondary opacity-30',
         categoryStyle: 'bg-labs-secondary',
-        redirect_url:webinar_data+"/thank-you"
+        redirect_url:"/thanks/"+webinar_data
     }
     return (
         <Layout>
