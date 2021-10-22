@@ -2,7 +2,14 @@ import Head from 'next/head'
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../component/Layout";
+
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
+
+import { SoftwareAppJsonLd } from 'next-seo';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -24,6 +31,124 @@ const responsive = {
 };
 export default function Home ({locale,data}) {
     return (
+        <>
+            <NextSeo
+                title="Simple Usage Example"
+                description="A short description goes here."
+                canonical="https://www.canonical.ie/"
+                openGraph={{
+                    url: 'https://www.url.ie/a',
+                    title: 'Open Graph Title',
+                                description: 'Open Graph Description',
+                    images: [
+                    {
+                        url: 'https://www.example.ie/og-image-01.jpg',
+                        width: 800,
+                        height: 600,
+                        alt: 'Og Image Alt',
+                        type: 'image/jpeg',
+                    },
+                    {
+                        url: 'https://www.example.ie/og-image-02.jpg',
+                        width: 900,
+                        height: 800,
+                        alt: 'Og Image Alt Second',
+                        type: 'image/jpeg',
+                    },
+                    { url: 'https://www.example.ie/og-image-03.jpg' },
+                    { url: 'https://www.example.ie/og-image-04.jpg' },
+                    ],
+                    site_name: 'SiteName',
+                }}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
+                facebook={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                    appId: '1234567890',
+                }}
+                languageAlternates={[{
+                    hrefLang: 'de',
+                    href: 'https://www.canonical.ie/de',
+                } ]}
+                additionalMetaTags={[{
+                    property: 'dc:creator',
+                    content: 'Jane Doe'
+                    }, {
+                    name: 'application-name',
+                    content: 'NextSeo'
+                    }, {
+                    httpEquiv: 'x-ua-compatible',
+                    content: 'IE=edge; chrome=1'
+                    } ]}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: 'https://www.test.ie/favicon.ico',
+                    },
+                    {
+                        rel: 'apple-touch-icon',
+                        href: 'https://www.test.ie/touch-icon-ipad.jpg',
+                        sizes: '76x76'
+                    },
+                    {
+                        rel: 'manifest',
+                        href: '/manifest.json'
+                    }
+                ]}
+                 
+    />
+<BreadcrumbJsonLd
+      itemListElements={[
+        {
+          position: 1,
+          name: 'Books',
+          item: 'https://example.com/books',
+        },
+        {
+          position: 2,
+          name: 'Authors',
+          item: 'https://example.com/books/authors',
+        },
+        {
+          position: 3,
+          name: 'Ann Leckie',
+          item: 'https://example.com/books/authors/annleckie',
+        },
+        {
+          position: 4,
+          name: 'Ancillary Justice',
+          item: 'https://example.com/books/authors/ancillaryjustice',
+        },
+      ]}
+    />
+ <LogoJsonLd
+      logo="http://www.your-site.com/images/logo.jpg"
+      url="http://www.your-site.com"
+    />
+<SocialProfileJsonLd
+      type="Person"
+      name="your name"
+      url="http://www.your-site.com"
+      sameAs={[
+        'http://www.facebook.com/your-profile',
+        'http://instagram.com/yourProfile',
+        'http://www.linkedin.com/in/yourprofile',
+        'http://plus.google.com/your_profile',
+      ]}
+            />
+             <SoftwareAppJsonLd
+      name="Angry Birds"
+      price="1.00"
+      priceCurrency="USD"
+      aggregateRating={{ ratingValue: '4.6', reviewCount: '8864' }}
+      operatingSystem="ANDROID"
+      applicationCategory="GameApplication"
+    />
         <div >
             {/* <h1>{locale}</h1> */}
             {/* {data.map(item => (
@@ -567,7 +692,8 @@ export default function Home ({locale,data}) {
                     </div>
                 </section>
             </Layout>
-        </div>
+            </div>
+            </>
     )
 }
 

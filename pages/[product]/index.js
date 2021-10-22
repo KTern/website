@@ -1,8 +1,15 @@
 import Layout from "../../component/Layout";
 import Carousel from 'react-multi-carousel';
-
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
 import Image from "next/image";
 import Link from "next/link";
+import { ProductJsonLd } from 'next-seo';
+import { VideoJsonLd } from 'next-seo';
+
+import { SoftwareAppJsonLd } from 'next-seo';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -66,6 +73,220 @@ function prev(id, token, last) {
 }
 export default function Digital_Maps () {
     return (
+        <>
+             <NextSeo
+                title="Simple Usage Example"
+                description="A short description goes here."
+                canonical="https://www.canonical.ie/"
+                openGraph={{
+                    url: 'https://www.url.ie/a',
+                    title: 'Open Graph Title',
+                                description: 'Open Graph Description',
+                    images: [
+                    {
+                        url: 'https://www.example.ie/og-image-01.jpg',
+                        width: 800,
+                        height: 600,
+                        alt: 'Og Image Alt',
+                        type: 'image/jpeg',
+                    },
+                    {
+                        url: 'https://www.example.ie/og-image-02.jpg',
+                        width: 900,
+                        height: 800,
+                        alt: 'Og Image Alt Second',
+                        type: 'image/jpeg',
+                    },
+                    { url: 'https://www.example.ie/og-image-03.jpg' },
+                    { url: 'https://www.example.ie/og-image-04.jpg' },
+                    ],
+                    site_name: 'SiteName',
+                }}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
+                facebook={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                    appId: '1234567890',
+                }}
+                languageAlternates={[{
+                    hrefLang: 'de',
+                    href: 'https://www.canonical.ie/de',
+                } ]}
+                additionalMetaTags={[{
+                    property: 'dc:creator',
+                    content: 'Jane Doe'
+                    }, {
+                    name: 'application-name',
+                    content: 'NextSeo'
+                    }, {
+                    httpEquiv: 'x-ua-compatible',
+                    content: 'IE=edge; chrome=1'
+                    } ]}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: 'https://www.test.ie/favicon.ico',
+                    },
+                    {
+                        rel: 'apple-touch-icon',
+                        href: 'https://www.test.ie/touch-icon-ipad.jpg',
+                        sizes: '76x76'
+                    },
+                    {
+                        rel: 'manifest',
+                        href: '/manifest.json'
+                    }
+                ]}
+                 
+    />
+<BreadcrumbJsonLd
+      itemListElements={[
+        {
+          position: 1,
+          name: 'Books',
+          item: 'https://example.com/books',
+        },
+        {
+          position: 2,
+          name: 'Authors',
+          item: 'https://example.com/books/authors',
+        },
+        {
+          position: 3,
+          name: 'Ann Leckie',
+          item: 'https://example.com/books/authors/annleckie',
+        },
+        {
+          position: 4,
+          name: 'Ancillary Justice',
+          item: 'https://example.com/books/authors/ancillaryjustice',
+        },
+      ]}
+    />
+ <LogoJsonLd
+      logo="http://www.your-site.com/images/logo.jpg"
+      url="http://www.your-site.com"
+    />
+<SocialProfileJsonLd
+      type="Person"
+      name="your name"
+      url="http://www.your-site.com"
+      sameAs={[
+        'http://www.facebook.com/your-profile',
+        'http://instagram.com/yourProfile',
+        'http://www.linkedin.com/in/yourprofile',
+        'http://plus.google.com/your_profile',
+      ]}
+            />
+             <ProductJsonLd
+      productName="Executive Anvil"
+      images={[
+        'https://example.com/photos/1x1/photo.jpg',
+        'https://example.com/photos/4x3/photo.jpg',
+        'https://example.com/photos/16x9/photo.jpg',
+      ]}
+      description="Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height."
+      brand="ACME"
+      color="blue"
+      manufacturerName="Gary Meehan"
+      manufacturerLogo="https://www.example.com/photos/logo.jpg"
+      material="steel"
+      slogan="For the business traveller looking for something to drop from a height."
+      disambiguatingDescription="Executive Anvil, perfect for the business traveller."
+      releaseDate="2014-02-05T08:00:00+08:00"
+      productionDate="2015-02-05T08:00:00+08:00"
+      purchaseDate="2015-02-06T08:00:00+08:00"
+      award="Best Executive Anvil Award."
+      reviews={[
+        {
+          author: {
+            type: 'Person',
+            name: 'Jim',
+          },
+          datePublished: '2017-01-06T03:37:40Z',
+          reviewBody:
+            'This is my favorite product yet! Thanks Nate for the example products and reviews.',
+          name: 'So awesome!!!',
+          reviewRating: {
+            bestRating: '5',
+            ratingValue: '5',
+            worstRating: '1',
+          },
+          publisher: {
+            type: 'Organization',
+            name: 'TwoVit',
+          },
+        },
+      ]}
+      aggregateRating={{
+        ratingValue: '4.4',
+        reviewCount: '89',
+      }}
+      offers={[
+        {
+          price: '119.99',
+          priceCurrency: 'USD',
+          priceValidUntil: '2020-11-05',
+          itemCondition: 'https://schema.org/UsedCondition',
+          availability: 'https://schema.org/InStock',
+          url: 'https://www.example.com/executive-anvil',
+          seller: {
+            name: 'Executive Objects',
+          },
+        },
+        {
+          price: '139.99',
+          priceCurrency: 'CAD',
+          priceValidUntil: '2020-09-05',
+          itemCondition: 'https://schema.org/UsedCondition',
+          availability: 'https://schema.org/InStock',
+          url: 'https://www.example.ca/executive-anvil',
+          seller: {
+            name: 'Executive Objects',
+          },
+        },
+      ]}
+      mpn="925872"
+            />
+            <VideoJsonLd
+      name="How to make a Party Coffee Cake"
+      description="This is how you make a Party Coffee Cake."
+      contentUrl="http://www.example.com/video123.mp4"
+      embedUrl="http://www.example.com/videoplayer?video=123"
+      uploadDate="2018-02-05T08:00:00+08:00"
+      duration="PT1M33S"
+      thumbnailUrls={[
+        'https://example.com/photos/1x1/photo.jpg',
+        'https://example.com/photos/4x3/photo.jpg',
+        'https://example.com/photos/16x9/photo.jpg',
+      ]}
+      expires="2019-02-05T08:00:00+08:00"
+      hasPart={{
+        name: 'Preheat oven',
+        startOffset: 30,
+        url: 'http://www.example.com/example?t=30',
+      }}
+      watchCount={2347}
+      publication={{
+        isLiveBroadcast: true,
+        startDate: '2020-10-24T14:00:00+00:00',
+        endDate: '2020-10-24T14:37:14+00:00',
+      }}
+      regionsAllowed={['IT', 'NL']}
+            />
+             <SoftwareAppJsonLd
+      name="Angry Birds"
+      price="1.00"
+      priceCurrency="USD"
+      aggregateRating={{ ratingValue: '4.6', reviewCount: '8864' }}
+      operatingSystem="ANDROID"
+      applicationCategory="GameApplication"
+    />
         <Layout>
             {/* Hero Section */}
             <section className="relative md:py-10 pb-auto pb-72">
@@ -592,6 +813,7 @@ export default function Digital_Maps () {
                 </div>
             </section> 
               {/* /Cta Section */}
-        </Layout>
+            </Layout>
+            </>
     )
 }
