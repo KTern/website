@@ -14,7 +14,7 @@ export default function WebinarLayout ({ data }) {
     }
     return (
         <>
-            <section className="relative" >
+            <section className="relative sm:mb-20" >
             <div className={`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}></div>
         
             <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
@@ -60,8 +60,8 @@ export default function WebinarLayout ({ data }) {
                             </div>
                         </div>
                         </div>
-                    </div>
-                    </section>
+            </div>
+            </section>
             <section className="w-full px-8 pt-20 py-10 bg-white xl:px-8">
                     <div className="max-w-5xl mx-auto">
                         <div className="flex flex-col items-start md:flex-row">
@@ -84,7 +84,7 @@ export default function WebinarLayout ({ data }) {
                                     <li className="mb-2" key={content}>
                                         <div className="w-fill flex  text-gray-600 md:pr-16">
                                             <div className=" block w-4 h-4 relative flex-none">
-                                            <Image layout="fill" className=" " src="/webinar/check.png" alt="Webinar check"/>
+                               <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                             </div>
                                             <span className="ml-2 card-subheading" title="Point 1" >{content}</span>
                                         </div>
