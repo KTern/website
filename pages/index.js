@@ -29,7 +29,8 @@ const responsive = {
     items: 1
   }
 };
-export default function Home ({locale,data}) {
+export default function Home ({data}) {
+// export default function Home ({locale,data}) {
     return (
         <>
             <NextSeo
@@ -697,13 +698,13 @@ export default function Home ({locale,data}) {
     )
 }
 
-export const getStaticProps = async ({locale}) => {
+export const getStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
     // console.log(data)
     return {
         props: {
-            locale: locale,
+            // locale: locale,
             data:data
         }
     }

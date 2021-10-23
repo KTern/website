@@ -822,7 +822,7 @@ export default function Digital_Maps () {
 export const getStaticPaths = async () => {
     // const res = await fetch('https://jsonplaceholder.typicode.com/users');
     // const data = await res.json();
-    const data=[{product:'digital-maps'},{product:'digital-projects'},{product:'digital-process'},{product:'digital-labs'},{product:'digital-mines'},{product:''}]
+    const data=[{product:'digital-maps'},{product:'digital-projects'},{product:'digital-process'},{product:'digital-labs'},{product:'digital-mines'}]
     // console.log(data)
     const paths = data.map(index => {
         return ({
