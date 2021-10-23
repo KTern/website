@@ -2,10 +2,8 @@
 	@tailwind components;
 	@tailwind utilities;
 	@import 'react-multi-carousel/lib/styles.css';
-	@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@400;500;600;700;800;900&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 	img,
 	svg,
 	video,
@@ -53,7 +51,7 @@
 	
 	* {
 	    box-sizing: border-box;
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-weight: 500;
 	}
 	
@@ -76,7 +74,7 @@
 	/* Fonts */
 	
 	.header {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-weight: 600;
 	    font-size: 16px;
 	    line-height: 24px;
@@ -90,14 +88,14 @@
 	}
 	
 	.navbar-s {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-weight: 500;
 	    line-height: 18px;
 	    font-size: 15px;
 	}
 	
 	.hyperlink {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 14px;
 	    text-decoration: none;
 	    font-weight: 600;
@@ -105,7 +103,7 @@
 	}
 	
 	.sm-hyperlink {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 10px;
 	    font-weight: 600;
 	    line-height: 24px;
@@ -152,14 +150,14 @@
 	}
 	
 	.subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 20px;
 	    font-weight: 500;
 	    line-height: 31px;
 	}
 	
 	.sm-subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 16px;
 	    font-weight: 500;
 	    line-height: 31px;
@@ -191,14 +189,14 @@
 	}
 	
 	.card-subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 15px;
 	    font-weight: 500;
 	    line-height: 25px;
 	}
 	
 	.sm-card-subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 11px;
 	    font-weight: 500;
 	    line-height: 25px;
@@ -219,14 +217,14 @@
 	}
 	
 	.section-subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 18px;
 	    font-weight: 500;
 	    line-height: 31px;
 	}
 	
 	.sm-section-subheading {
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-size: 14px;
 	    font-weight: 500;
 	    line-height: 31px;
@@ -234,7 +232,7 @@
 	
 	.container {
 	    width: 100%;
-	    font-family: 'Jost', sans-serif;
+	    font-family: 'Barlow', sans-serif;
 	    font-style: normal;
 	    font-weight: 500;
 	}

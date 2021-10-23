@@ -61,13 +61,13 @@ export default function Footer () {
                         </div>
                         </div>
                        <div className="flex"> 
-                    <div className="mb-6 mt-10 ">
+                    <div className=" ">
                         <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white " alt="Available on SAP Store"  height="50%"/>
                         </div>
-                    <div className="shadow-xl shadow-gray-100 border-2 border-white mx-5 mb-7 rounded-lg px-8">
-                                <Link href="https://www.g2.com"><a className="mx-auto x-g2-link-home" title="G2"> <Image width="100px" height="50px" src="https://logodix.com/logo/2006253.png" alt="G2" /></a></Link>
-                    {/* <ReactStarsRating className="flex mx-auto  " value={4.7} /> */}
-                            </div>
+                    
+                                <Link href="https://www.g2.com/products/ktern/reviews"><a target="_blank" className="mb-4 x-g2-link-home" title="G2"> <Image width="150px" height="50%" src="/g2.svg" alt="G2" /></a></Link>
+                    
+
         </div>
                 </div>
 
