@@ -353,11 +353,11 @@
 	/* #toggle Class Styles */
 	
 	.toggleable>label:after {
-	    content: "\25BC";
 	    font-size: 10px;
 	    padding-left: 6px;
 	    position: relative;
 	    top: -1px;
+	    z-index: 10;
 	}
 	
 	.toggle-input {
@@ -377,9 +377,8 @@
 	}
 	
 	.toggle-input:checked~label:after {
-	    content: "\25BC";
-	    font-size: 10px;
-	    padding-left: 6px;
+	    font-size: 20px;
+	    padding-bottom: 6px;
 	    position: relative;
 	    top: -1px;
 	}

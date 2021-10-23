@@ -180,7 +180,7 @@ export default function Home ({locale,data}) {
                 <h2 className=" text-center  text-gray-500 section-heading sm:sm-section-heading">Trusted by brands all over the world</h2>
                 {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
                 </div>
-                <Carousel className="bots flex p-10  " responsive={responsive}>
+                <Carousel className="bots flex p-10  z-10" responsive={responsive}>
                     {/* <div className="p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-maps-400 text-center ">
                         
                         <p className="text-lg font-bold mt-7 mb-4">DX maps Orchestrator Bot</p>
