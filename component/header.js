@@ -5,6 +5,7 @@ import Card1 from "./card"
 import FeatureCard from "./featureCard";
 import React, { useState, useRef, useEffect } from 'react';
 import DoubleBanner from "./doubleBanner"
+import { useRouter } from 'next/router'
 function openNav () {
     if (process.browser) {
                     console.log("Clicked")
@@ -146,6 +147,8 @@ function usePartners () {
   return [ref, ready];
 }
 export default function Header () {
+    const router = useRouter();
+   
     const overall = useRef(null);
     useOutsideAlerter(overall)
     const [ products,productReady] = useProducts();
@@ -172,6 +175,9 @@ export default function Header () {
     const [ isDocumentationShown, setIsDocumentationShown ] = useState(false);
     const [ isCloudLiveShown, setIsCloudLiveShown ] = useState(false);
     const [ isVisible, setIsVisible ] = useState(true);
+    const [ isOpen, setIsOpen ] = useState(true);
+    // console.log(router.pathname==='/')
+   
     const listenToScroll = () => {
   let heightToHideFrom = 0;
   const winScroll = document.body.scrollTop || 
@@ -181,6 +187,8 @@ export default function Header () {
      isVisible &&      // to limit setting state only the first time         
           setIsVisible(false);
   } else {
+    //   console.log(isOpen)
+      if(isOpen)
        setIsVisible(true);
   }  
 };
@@ -196,7 +204,7 @@ export default function Header () {
             {/* <!-- Desktop --> */}
           
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
-                {isVisible &&
+                {isVisible && isOpen && (router.pathname==='/') &&
                     <div className="flex sm:hidden">
                     <div id="banner" className="  w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;
                         <Link href="/" passHref>
@@ -208,7 +216,7 @@ export default function Header () {
                     </Link>
                      
                     </div>
-                    <button className="navbar-close justify-end bg-black pr-5" onClick={()=>setIsVisible(false)}>
+                    <button className="navbar-close justify-end bg-black pr-5" onClick={()=>setIsOpen(false)}>
                         <svg className="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -241,23 +249,23 @@ export default function Header () {
                                         <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
                                             <div >
                                                 <li>
-                                                    <Link href="/product/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
+                                                    <Link href="/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Maps</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/product/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
+                                                    <Link href="/digital-projects"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Projects</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/product/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
+                                                    <Link href="/digital-process"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Process</a></Link>
                                         </li>
                                          <li>
-                                        <Link href="/product/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+                                        <Link href="/digital-labs"   ><a  onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/product/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
+                                                    <Link href="/digital-mines"   ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Mines</a></Link>
                                         </li>
                                        
