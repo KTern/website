@@ -29,7 +29,7 @@ const responsive = {
     items: 1
   }
 };
-export default function Home ({data}) {
+export default function Home ({locale,data}) {
 // export default function Home ({locale,data}) {
     return (
         <>
@@ -698,13 +698,13 @@ export default function Home ({data}) {
     )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({locale}) => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
     // console.log(data)
     return {
         props: {
-            // locale: locale,
+            locale: locale,
             data:data
         }
     }
