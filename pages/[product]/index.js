@@ -817,3 +817,29 @@ export default function Digital_Maps () {
             </>
     )
 }
+
+
+export const getStaticPaths = async () => {
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    // const data = await res.json();
+    const data=[{product:'digital-maps'},{product:'digital-projects'},{product:'digital-process'},{product:'digital-labs'},{product:'digital-mines'}]
+    // console.log(data)
+    const paths = data.map(index => {
+        return ({
+            params:{product:index.product}
+        })
+    })
+    return {
+        paths,
+        fallback:false
+    }
+}
+// Fetch necessary data for the blog post using params.index
+export const getStaticProps = async (context) => {
+    const index = context.params.index;
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + index);
+    // const data = await res.json();
+    return {
+        props:{data:index}
+    }
+}

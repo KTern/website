@@ -748,7 +748,7 @@ export const getStaticPaths = async () => {
     // console.log(data)
     const paths = data.map(feature => {
         return ({
-            params:{product:'digital-maps',feature:feature.feature}
+            params:{product:feature.product,feature:feature.feature}
         })
     })
     return {

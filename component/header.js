@@ -309,7 +309,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/article"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href="/article/"   ><a target="_blank"  onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
                                         </li>
                                         <li>
