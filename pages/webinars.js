@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-export default function Webinar () {
+export default function Webinar ({webinar_data}) {
     return (
         <>
             <NextSeo
@@ -306,7 +306,24 @@ export default function Webinar () {
                         {/* Chips Section */}
                         
                         <div className="container mx-auto space-y-10">
-                            <div className="grid grid-cols-12 col-span-12 gap-7">
+                                <div className="grid grid-cols-12 col-span-12 gap-7">
+                                    {/* {webinar_data.map(data => (
+                                        <Link href="/webinars/webinar-1" passHref key="data">
+                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
+                                    <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Maps</span>
+                                    </div>
+                                    <div className="block  w-full h-60 relative transition duration-200 ease-out transform hover:scale-110">
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    </div>
+                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
+                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
+                                        <h2 className=" card-heading">Landscape Assessment</h2>
+                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    </div>
+                                    </a>
+                                </Link>
+                                    ))} */}
                                 <Link href="/webinars/webinar-1" passHref>
                                     <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
                                     <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
@@ -425,4 +442,15 @@ export default function Webinar () {
             </Layout>
             </>
     )
+}
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            webinar_data:data
+        }
+    }
 }

@@ -71,7 +71,7 @@ function prev(id, token, last) {
   const iWidth = parseFloat(tokStyles.width);
   document.getElementById(id).scrollBy({left: -((iWidth * amount) + gapM), behavior: "smooth"}); 
 }
-export default function Digital_Maps () {
+export default function Digital_Maps ({stream_data}) {
     return (
         <>
              <NextSeo
@@ -820,10 +820,9 @@ export default function Digital_Maps () {
 
 
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+  // dynamic route array values must be acquired here from strapi
     const data=[{product:'digital-maps'},{product:'digital-projects'},{product:'digital-process'},{product:'digital-labs'},{product:'digital-mines'}]
-    // console.log(data)
+    
     const paths = data.map(index => {
         return ({
             params:{product:index.product}
@@ -834,13 +833,14 @@ export const getStaticPaths = async () => {
         fallback:false
     }
 }
-// Fetch necessary data for the blog post using params.index
-export const getStaticProps = async (context) => {
-    const index = context.params.product;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + index);
-    // const data = await res.json();
-  
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
     return {
-        props:{data:index}
+        props: {
+           stream_data:data
+        }
     }
 }

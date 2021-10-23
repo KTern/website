@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { CorporateContactJsonLd } from 'next-seo';
-export default function Contact () {
+export default function Contact ({data}) {
     return (
         <>
             <NextSeo
@@ -227,4 +227,15 @@ export default function Contact () {
             </Layout>
             </>
     )
+}
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            data:data
+        }
+    }
 }

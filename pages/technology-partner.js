@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
-export default function technical_partner () {
+export default function technical_partner ({data}) {
     return (
         <>
             
@@ -448,4 +448,15 @@ export default function technical_partner () {
             </Layout>
             </>
     )
+}
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            data:data
+        }
+    }
 }

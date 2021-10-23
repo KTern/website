@@ -169,7 +169,29 @@ export default function TrustCenter () {
                           
                    
                 </div>
-    
+                            {/* {
+                                trust_center_data.map(data => (
+                                    <div key="data">
+                    <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    <h3 className="mt-4 mb-2 card-heading  text-gray-900 lg:">Cloud services</h3>
+                    
+                        <ul className="list-disc  text-gray-500 lg:">
+                            <li className="pb-2 card-subheading" >Gain Insights on service availability worldwide</li>
+                           <li className="pb-2 card-subheading">Access Cloud service Performance history</li>
+                           <li className="pb-4 card-subheading">View Personalized Dashboard</li>
+                           <Link href="/trust-center/landing"  passHref>
+                                <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
+                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                </a>
+                            </Link>                         
+                             </ul>
+                          
+                   
+                </div>
+                                ))} */}
                 <div>
                     <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                     <h3 className="mt-4 mb-2 card-heading  text-gray-900 lg:">SAP Security</h3>

@@ -9,7 +9,7 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 // import Breadcrumbs from 'nextjs-breadcrumbs';
 {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */}
-export default function Feature_Landing ({data}) {
+export default function Feature_Landing ({feature_data}) {
     return (
         <>
              <NextSeo
@@ -742,13 +742,12 @@ export default function Feature_Landing ({data}) {
     )
 }
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+    // dynamic route array values must be acquired here from strapi
     const data=[{product:'digital-maps',feature:'business-process-assessment'},{product:'digital-maps',feature:'landscape-assessment'},{product:'digital-maps',feature:'custom-objects-assessment'},{product:'digital-maps',feature:'business-transformation-assessment'},{product:'digital-maps',feature:'timeline-effort-estimation'}]
-    // console.log(data)
-    const paths = data.map(feature => {
+    
+    const paths = data.map(index => {
         return ({
-            params:{product:feature.product,feature:feature.feature}
+            params:{product:index.product,feature:index.feature}
         })
     })
     return {
@@ -756,12 +755,15 @@ export const getStaticPaths = async () => {
         fallback:false
     }
 }
-// Fetch necessary data for the blog post using params.feature
-export const getStaticProps = async (context) => {
-    const feature = context.params.feature;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + feature);
-    // const data = await res.json();
+
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
     return {
-        props:{data:feature}
+        props: {
+            feature_data:data
+        }
     }
 }

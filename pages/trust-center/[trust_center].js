@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-export default function TrustCenter ({trust_center}) {
+export default function TrustCenter ({t_data}) {
     return (
         <>
             <NextSeo
@@ -193,13 +193,12 @@ KTern uses a multi-tenant data model to host all its applications. Each applicat
 }
 // Return a list of possible value for trust_center
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+  // dynamic route array values must be acquired here from strapi
     const data=[{trust_center:'eula'},{trust_center:'consulting-partner-agreement'},{trust_center:'security'},{trust_center:'privacy'},{trust_center:'gdpr'}]
-    // console.log(data)
-    const paths = data.map(trust_center => {
+    
+    const paths = data.map(index => {
         return ({
-            params:{trust_center:trust_center.trust_center}
+            params:{trust_center:index.trust_center}
         })
     })
     return {
@@ -209,10 +208,10 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.trust_center
 export const getStaticProps = async (context) => {
-    const trust_center = context.params.trust_center;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + trust_center);
-    // const data = await res.json();
+//    fetch strapi data
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + trust_center);
+    const data = await res.json();
     return {
-        props:{data:trust_center}
+        props:{t_data:data}
     }
 }

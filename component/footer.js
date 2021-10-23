@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ReactStarsRating from 'react-awesome-stars-rating';
-export default function Footer () {
+export default function Footer ({footer_data}) {
     return (
         <>
            
@@ -25,26 +25,26 @@ export default function Footer () {
                         <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
                             <ul className="">
-                                <li className="mb-2"><Link  href="/product/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
-                                    <li className="mb-2"><Link href="/product/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
-                                     <li className="mb-2"><Link  href="/product/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
-                                <li className="mb-2"><Link  href="/product/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
-                                <li className="mb-2"><Link  href="/product/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
+                                <li className="mb-2"><Link  href="/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
+                                    <li className="mb-2"><Link href="/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
+                                     <li className="mb-2"><Link  href="/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
+                                <li className="mb-2"><Link  href="/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
+                                <li className="mb-2"><Link  href="/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
                             </ul>
                         </div>
                              <div className="w-1/2 lg:w-1/4 px-4 mb-12">
                             <h3 className="mb-8 lg:mb-2 navbar-h text-white">Resources</h3>
                                 <ul className="">
-                                    <li className="mb-2"><Link  href="/resources"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
-                                <li className="mb-2"><Link  href="/webinars"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="/article"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
-                                <li className="mb-2"><Link  href="/resources/ebook"><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
-                                    <li className="mb-2"><Link href="/resources/customer-success-story"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
-                                    <li className="mb-2"><Link href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
-                                    <li className="mb-2"><Link href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
-                                    <li className="mb-2"><Link href="/docs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
+                                    <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
+                                <li className="mb-2"><Link  href="/webinars" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
+                                <li className="mb-2"><Link  href="/article" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
+                                <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
+                                    <li className="mb-2"><Link href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
+                                    <li className="mb-2"><Link href="/trust-center" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
+                                    <li className="mb-2"><Link href="/pricing" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
+                                    <li className="mb-2"><Link href="/docs" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
                                     
-                                <li className="mb-2"><Link  href="https://live.ktern.com"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
+                                <li className="mb-2"><Link  href="https://live.ktern.com" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
                                
                             </ul>
                         </div>
@@ -82,10 +82,10 @@ export default function Footer () {
                         <span className="hidden md:inline-block mx-8 w-px h-8 bg-gray-500"></span>
                         
                         <p className="navbar-h space-x-5 lg:block  text-white ">
-                            <span className="text-xs"><Link href="/trust-center/landing"><a >Privacy Policy</a></Link></span>
-                            <span className="text-xs"><Link href="/trust-center/landing"><a >Cookies Policy</a></Link></span>
-                                    <span className="text-xs"><Link href="/trust-center/landing"><a >Terms of Service</a></Link></span>
-                                     <span className="text-xs"><Link href="/trust-center/landing"><a >GDPR Compliance</a></Link></span>
+                            <span className="text-xs"><Link href="/trust-center"><a >Privacy Policy</a></Link></span>
+                            <span className="text-xs"><Link href="/trust-center"><a >Cookies Policy</a></Link></span>
+                                    <span className="text-xs"><Link href="/trust-center"><a >Terms of Service</a></Link></span>
+                                     <span className="text-xs"><Link href="/trust-center"><a >GDPR Compliance</a></Link></span>
                         </p>
 
                     </div>
@@ -166,4 +166,16 @@ export default function Footer () {
             </section>
             </>
     )
+}
+
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            footer_data:data
+        }
+    }
 }

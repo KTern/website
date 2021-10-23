@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const WhitePaper_Landing = ({data}) => {
+const WhitePaper_Landing = ({w_data}) => {
     return (
         <>
             <NextSeo
@@ -222,13 +222,12 @@ This blueprint will help you define the right plan, the right effort estimate, t
 
 // Return a list of possible value for whitepaper
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+  // dynamic route array values must be acquired here from strapi
     const data=[{whitepaper:'get-started-with-move-ecc-to-s4hana'},{whitepaper:'organizational-change-management-sap-s4hana'},{whitepaper:'definitive-guide-to-sap-s4hana'},{whitepaper:'manage-digital-transformation-effectively'},{whitepaper:'unlocking-digital-transformation-guide'}]
-    // console.log(data)
-    const paths = data.map(whitepaper => {
+    
+    const paths = data.map(index => {
         return ({
-            params:{whitepaper:whitepaper.whitepaper}
+            params:{whitepaper:index.whitepaper}
         })
     })
     return {
@@ -238,11 +237,11 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.whitepaper
 export const getStaticProps = async (context) => {
-    const whitepaper = context.params.whitepaper;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + whitepaper);
-    // const data = await res.json();
+    // strapi data url to be acquired
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + whitepaper);
+    const data = await res.json();
     return {
-        props:{data:whitepaper}
+        props:{w_data:data}
     }
 }
 export default WhitePaper_Landing;

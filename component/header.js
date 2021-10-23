@@ -146,7 +146,7 @@ function usePartners () {
 
   return [ref, ready];
 }
-export default function Header () {
+export default function Header ({header_data}) {
     const router = useRouter();
    
     const overall = useRef(null);
@@ -624,4 +624,17 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
     </section>
 )
  
+}
+
+
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            header_data:data
+        }
+    }
 }

@@ -11,7 +11,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Feature_index = ({features_Data}) => {
+const Feature_index = ({features_data}) => {
     return (
         <>
           <NextSeo
@@ -163,7 +163,7 @@ const Feature_index = ({features_Data}) => {
         
                         <div className="grid  md:grid-cols-2 md:gap-4 w-2/3 ">
                             {/* <!-- Feature blocks first column --> */}
-                            {features_Data.map(feature=>(
+                            {features_data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href="/features">
                                      
@@ -236,7 +236,7 @@ const Feature_index = ({features_Data}) => {
 
                         <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
                             {/* <!-- Feature blocks first column --> */}
-                            {features_Data.map(feature=>(
+                            {features_data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href="/features">
                                      
@@ -304,16 +304,16 @@ const Feature_index = ({features_Data}) => {
             </section>
             {/* /Digital Projects */}
             {/* Digital Process */}
-            <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
+           <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
                 <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital Process</h2>
-                    <p className="mb-12 section-subheading  text-gray-500">Using KTern&apos;s Digital Process  Manage all your Business Processes Better.</p>
+                    <h2 className="mb-1 section-heading  leading-tight text-gray-900">Digital process</h2>
+                    <p className="mb-12 section-subheading  text-gray-500">KTern&apos;s Digital process Provides you with Automated Enterprise Project Execution</p>
 
                     <div className="flex w-full h-full">
 
-                      <div className="grid md:grid-cols-2 md:gap-4w-2/3 ">
+                        <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
                             {/* <!-- Feature blocks first column --> */}
-                            {features_Data.map(feature=>(
+                            {features_data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href="/features">
                                      
@@ -353,6 +353,7 @@ const Feature_index = ({features_Data}) => {
                              </div>
                             ))}
                         </div>
+
                         
 
 
@@ -389,7 +390,7 @@ const Feature_index = ({features_Data}) => {
 
                         <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
                             {/* <!-- Feature blocks first column --> */}
-                            {features_Data.map(feature=>(
+                            {features_data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href="/features">
                                      
@@ -465,7 +466,7 @@ const Feature_index = ({features_Data}) => {
 
                        <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
                             {/* <!-- Feature blocks first column --> */}
-                            {features_Data.map(feature=>(
+                            {features_data.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href="/features">
                                      
@@ -536,10 +537,11 @@ const Feature_index = ({features_Data}) => {
     )
 }
 export const getStaticProps = async () => {
+    // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
     return {
-        props:{features_Data:data}
+        props:{features_data:data}
     }
 }
 

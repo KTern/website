@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Ebook_Landing = ({data}) => {
+const Ebook_Landing = ({e_data}) => {
     return (
         <>
             <NextSeo
@@ -222,13 +222,12 @@ This blueprint will help you define the right plan, the right effort estimate, t
 
 // Return a list of possible value for ebook
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+  // dynamic route array values must be acquired here from strapi
     const data=[{ebook:'definitive-guide-sap-s4hana-assessment'},{ebook:'sap-custom-code-migration-guide'},{ebook:'sap-s4hana-testing-guide'},{ebook:'manage-digital-transformation-effectively'},{ebook:'unlocking-digital-transformation-guide'}]
-    // console.log(data)
-    const paths = data.map(ebook => {
+    
+    const paths = data.map(index => {
         return ({
-            params:{ebook:ebook.ebook}
+            params:{ebook:index.ebook}
         })
     })
     return {
@@ -238,11 +237,11 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.ebook
 export const getStaticProps = async (context) => {
-    const ebook = context.params.ebook;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + ebook);
-    // const data = await res.json();
+// strapi data to be acquired
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + ebook);
+    const data = await res.json();
     return {
-        props:{data:ebook}
+        props:{e_data:data}
     }
 }
 export default Ebook_Landing;

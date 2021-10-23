@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Customer_Success_Story_Landing = ({data}) => {
+const Customer_Success_Story_Landing = ({c_data}) => {
     return (
         <>
             <NextSeo
@@ -352,13 +352,12 @@ Our customer used KTern to assess their current SAP ECC system to determine the 
 
 // Return a list of possible value for id
 export const getStaticPaths = async () => {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    // const data = await res.json();
+  // dynamic route array values must be acquired here from strapi
     const data=[{id:'comprehensive-sap-s4-hana-readiness-assessment-tech-advance-solution'},{id:'sap-s4-hana-assessment-ktern-asm'},{id:'digital-projects'},{id:'digital-maps'},{id:'digital-labs'}]
-    // console.log(data)
-    const paths = data.map(customer_success_story => {
+    
+    const paths = data.map(index => {
         return ({
-            params:{id:customer_success_story.id}
+            params:{id:index.id}
         })
     })
     return {
@@ -368,11 +367,11 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.id
 export const getStaticProps = async (context) => {
-    const id = context.params.id;
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
-    // const data = await res.json();
+    // strapi data url to be fetched
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+    const data = await res.json();
     return {
-        props:{data:id}
+        props:{c_data:data}
     }
 }
 export default Customer_Success_Story_Landing;

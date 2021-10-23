@@ -44,7 +44,7 @@ function handleTotal () {
   selectedOptions = ['maps','projects','process','labs','mines']
   total = 10;
 }
-export default function Pricing () {
+export default function Pricing ({data}) {
   const [ isMapsSelected, setIsMapsSelected ] = useState(true);
   const [ isProjectsSelected, setIsProjectsSelected ] = useState(true);
   const [ isProcessSelected, setIsProcessSelected ] = useState(true);
@@ -1259,4 +1259,15 @@ export default function Pricing () {
       </Layout>
       </>
     )
+}
+export const getStaticProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            data:data
+        }
+    }
 }
