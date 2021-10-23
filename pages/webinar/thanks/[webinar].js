@@ -132,7 +132,7 @@ export default function Thanks ({webinar_data})
       <div className="container px-3 mx-auto">
         <div className="max-w-3xl mx-auto pb-10  text-center">
            
-                        <h2 className="my-10 heading font-bold font-heading text-white">Thank You for Registering for { webinar_data}</h2>
+                        <h2 className="my-10 heading font-bold font-heading text-white">Thank You for Registering for the webinar</h2>
                         <div className="max-w-md mx-auto">
                            
             <p className="mb-10 card-subheading text-gray-200">We look forward to you joining our Webinar</p>
@@ -343,9 +343,10 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.webinar
 export const getStaticProps = async (context) => {
+    const id = context.params.webinar;
 //    acquire data from  strapi
-    const response = await fetch('https://api.ktern.com/webinars',{method:'get',headers:new Headers({'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDFhNDMzMjQwMDM0Mjg5ZTM2MzYxYSIsImlhdCI6MTYzMjEzMTM4MiwiZXhwIjoxNjM0NzIzMzgyfQ.473sxX5je4A7ddg6udNV7aArOoNdPum2GNvxSQ1A7g8'})});
-    const data = await response.json();
+  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
     return {
         props:{webinar_data:data}
     }

@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Customer_Success_Story_Landing = ({c_data}) => {
+const Customer_Success_Story_Landing = ({data}) => {
     return (
         <>
             <NextSeo
@@ -367,11 +367,12 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.id
 export const getStaticProps = async (context) => {
-    // strapi data url to be fetched
+    const id = context.params.id;
+    // strapi data to be fetched
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
     const data = await res.json();
     return {
-        props:{c_data:data}
+        props:{data:data,url:id}
     }
 }
 export default Customer_Success_Story_Landing;

@@ -756,13 +756,15 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (context) => {
+    const id = context.params.feature;
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
     
     return {
         props: {
+            
             feature_data:data
         }
     }

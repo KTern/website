@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Ebook_Landing = ({e_data}) => {
+const Ebook_Landing = ({data}) => {
     return (
         <>
             <NextSeo
@@ -237,11 +237,14 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.ebook
 export const getStaticProps = async (context) => {
-// strapi data to be acquired
+    const ebook = context.params.ebook;
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' + ebook);
     const data = await res.json();
     return {
-        props:{e_data:data}
+        props: {
+            url: ebook,
+            data: data
+        }
     }
 }
 export default Ebook_Landing;

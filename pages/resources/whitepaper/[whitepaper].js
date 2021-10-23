@@ -237,10 +237,12 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.whitepaper
 export const getStaticProps = async (context) => {
+    const id = context.params.whitepaper;
     // strapi data url to be acquired
-    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + whitepaper);
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' );
     const data = await res.json();
     return {
+        
         props:{w_data:data}
     }
 }

@@ -208,10 +208,12 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.trust_center
 export const getStaticProps = async (context) => {
+    const id = context.params.trust_center;
 //    fetch strapi data
-    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + trust_center);
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/');
     const data = await res.json();
     return {
+        
         props:{t_data:data}
     }
 }
