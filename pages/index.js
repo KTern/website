@@ -10,7 +10,7 @@ import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 
 import { SoftwareAppJsonLd } from 'next-seo';
-import { Authorization } from '../auth';
+import { Authorization ,getToken} from '../auth';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -30,11 +30,11 @@ const responsive = {
     items: 1
   }
 };
-export default  function Home ({ data }) {
+export default  function Home ({ data,token }) {
     // const token = await Authorization();
     // console.log(token+"HELLLLLLLOOOOOOOO")
-   if (process.browser) 
-    console.log("Hello2" +localStorage.getItem('accessToken'));
+  
+    // console.log(token);
 // export default function Home ({locale,data}) {
     return (
         <>
@@ -665,7 +665,9 @@ export default  function Home ({ data }) {
 }
 
 export const getStaticProps = async () => {
-    
+   
+    let token = await Authorization()
+    console.log("in index",token);
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
