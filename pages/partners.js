@@ -158,7 +158,8 @@ export default function Partners ({data}) {
                 </div>
                <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
                     <Image className="relative z-40 w-full h-full" src="/partner/partner-hero.svg" alt="hero image" width={600 } height={420 }/>
-                    </div>   </div>
+                        </div>
+                    </div>
             </section>
               {/* <!--KTern Partnership Models--> */}
 
@@ -172,10 +173,10 @@ export default function Partners ({data}) {
                 <p className=" mb-5 text-gray-600 section-subheading">
                 Explore our <span className="section-subheading">Flexible Partnership Programs </span> to connect with new opportunities and Leverage our Cognitive Digitial Workplace to Automate and Govern and drive your SAP Digital Transformation towards Success
                 </p>
-                <div className="grid w-full h-auto md:grid-cols-12 md:gap-20 md:ml-28 gap-4 sm:mt-16 ">
+                <div className="grid  w-full h-auto md:grid-cols-10 md:gap-24 gap-4 sm:mt-16 ">
                    <Link href="/consulting-partner"  passHref>
-                    <a className="relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-5">
-                            <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
+                    <a className="bg-black relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-4">
+                            <div className="block bg-white w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }} />
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs  absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Consulting Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl "><p>Become a <br/>Consulting Partner</p></h2>
@@ -186,8 +187,8 @@ export default function Partners ({data}) {
                 </Link>
 
                         <Link href="/technology-partner"  passHref>
-                            <a className="relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-5">
-                    <div className="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
+                            <a className="bg-black relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-4">
+                    <div className="block w-full  bg-white transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110" style={{backgroundImage:"url('/partner/technical-partner-card.svg')"}}/>
                     <div className="relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7">
                         <p className="inline-block text-xs absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200">Technology Partner</p>
                         <h2 className="mb-5 md:text-3xl card-heading sm:text-xl "><p>Become a <br/>Technology Partner</p></h2>

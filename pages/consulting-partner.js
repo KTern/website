@@ -168,7 +168,7 @@ export default function Consultingpartner({data}){
             <div className="flex flex-col items-center max-w-6xl md:px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
                 <h2 className="w-full m-0   font-black tracking-wide text-center border-0 border-gray-200 sm:text-3xl section-heading text-white">Why Become a KTern Consulting Partner?</h2>
                 
-                <div className="grid grid-cols-3 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
+                <div className="grid grid-cols-3 mx-auto md:grid-cols-2 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
                     <div className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
                         <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
                             <span className="flex-shrink-0 p-5  border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
