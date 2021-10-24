@@ -137,11 +137,11 @@ export default function Resources ({resources_data}) {
             </div>
             </section>
          
-           <section className="container md:p-10 ">
+           <section className="w-full lg:p-10 ">
                
                 <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
                     {/* <!-- On demand Filter Options--> */}
-                <div className="hidden md:block w-full md:w-1/5 md:px-4 mb-4  md:mb-0">
+                <div className="hidden md:block w-full md:w-1/5 md:px-4 mb-4 mt-10  md:mb-0">
                     <form action="#" method="post" className="">
                             <div className="mb-6">
                                 <h1 className="text-2xl mt-2 mb-2 card-heading">Streams</h1>
@@ -204,9 +204,9 @@ export default function Resources ({resources_data}) {
                     </div>
                 {/* <!-- On demand Webinar Card Display--> */}
            
-                    <div className="w-full md:w-4/5 md:pl-20 mb-4 md:mb-0">
+                    <div className="w-full md:w-4/5 md:pl-20 mb-4 md:mb-0  mt-10">
                         {/* Chips Section */}
-                         <section className=" flex sm:pt-5  pb-10 items-center justify-end ">
+                         <section className=" flex sm:pt-5  pb-10 items-center justify-end">
                           <input id="demo-2" style={{width:'35%'}} type="search" placeholder="Search"/>
                         </section>
                         <section className="pb-10 ">
@@ -220,7 +220,7 @@ export default function Resources ({resources_data}) {
                             <Link href="/resources#best-practice-guides"><a className=" hyperlink click-chip outline-green mr-3">Best Practice guides</a></Link>
                             <Link href="/resources#presentations"><a className=" hyperlink click-chip outline-green mr-3">Presentations</a></Link>
                         </section>
-                        <div className="container mx-auto space-y-10 p-6">
+                        <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
 {/* {resources_data.map(resource=>(
     {`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}
     <Link href="/webinars/webinar-1" passHref key="resource">
@@ -239,430 +239,182 @@ export default function Resources ({resources_data}) {
                                     </a>
                                 </Link>
 ))} */}
-                            <div id="white-papers" className=" grid grid-cols-12 col-span-12 gap-7">
-                                    <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                              <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                            <a className="relative block w-full h-44 overflow-hidden rounded">
+                                                 <div className="z-20  bg-maps-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
                                         <span>Digital Maps</span>
                                     </div>
-                                    <div className="block  w-full h-60 relative transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_3.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White Paper</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                               
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_3.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White paper</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                        <div className="z-20 bg-project-secondary text-black  hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                            <span>Digital Projects</span>
-                                        </div>
-                                        <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                            <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/projects/project_scrum.svg"/>
-                                        </div>
-                                        <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                            <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White paper</p>
-                                            <h2 className="card-heading">Landscape Assessment</h2>
-                                            <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-mines-secondary text-black  hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Mines</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/mines/mines_1.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White paper</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-labs-secondary text-black  hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Labs</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/labs/labs_1.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White paper</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-process-secondary text-black  hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Process</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/process/process_1.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">White paper</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                            </div>
-                           
-                            <div id="ebooks" className=" grid grid-cols-12 col-span-12 gap-7">
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_1.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/product/maps/maps_3.svg"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a  className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/ebook" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">E-book</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                        
-                            </div>
-                           
-                            <div id="datasheets" className=" grid grid-cols-12 col-span-12 gap-7">
-                                <Link href="/resources/landing" passHref>
-                                    <a  className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref >
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                            
-                            </div>
-                           
-                            <div id="customer-success-stories" className=" grid grid-cols-12 col-span-12 gap-7">
-                               <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                                <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                               <Link href="/resources/landing" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden border shadow-sm  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20 bg-maps-secondary text-black  uppercase hyperlink absolute top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
-                                    </div>
-                                    <div  className="block w-80 h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="/assets/icons/articles.png"/>
-                                    </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className=" ont-bold text-gray-400 uppercase">Datasheets</p>
-                                        <h2 className="card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                    </div>
-                                    </a>
-                                </Link>
-                            </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">White Paper</p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Projects</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        White Paper
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-process-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Processs</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        White Paper
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-labs-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital labs</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        White Paper
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-mines-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital mines</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        White Paper
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Projects</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        White Paper
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                    </div>
                             
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+                   {/* <!-- Footer--> */}
+           <section className="bg-white">
+                <div className="md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl">
+                <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+                <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
+                <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
+                <div className="relative p-6  md:p-0 md:pb-4">
+                <h2 className="card-heading  leading-9 tracking-tight text-white  sm:leading-10">Get started with your DXaaS Journey</h2>
+                <p className="w-full mt-5 card-subheading text-white ">Start your 15-day free trial. No credit card required. No strings attached.</p>
+                </div>
+                <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
+                <Link  href="/pricing" passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">See Pricing</a></Link>
+                <Link  rel="noopener noreferrer" href="https://app.ktern.com" passHref><a target="_blank" className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">Try it free</a></Link>
+                </div>
+                </div>
+                </div>
+            </section> 
             </Layout>
             </>
     )

@@ -60,10 +60,13 @@ export default function Footer ({footer_data}) {
                             </ul>
                         </div>
                         </div>
-                       <div className="flex"> 
+                            <div className="flex">
+                                <Link href="https://store.sap.com/dcp/en/product/display-0000059068_live_v1/KTern.AI%20for%20SAP%20Digital%20Transformation%20Workplace">
+                                    <a className="">
                     <div className=" ">
                         <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white " alt="Available on SAP Store"  height="50%"/>
-                        </div>
+                        </div></a>
+                        </Link>
                     
                                 <Link href="https://www.g2.com/products/ktern/reviews"><a target="_blank" className="mb-4 x-g2-link-home" title="G2"> <Image width="150px" height="50%" src="/g2.svg" alt="G2" /></a></Link>
                     
@@ -81,7 +84,7 @@ export default function Footer ({footer_data}) {
                             
                         <span className="hidden md:inline-block mx-8 w-px h-8 bg-gray-500"></span>
                         
-                        <p className="navbar-h space-x-5 lg:block  text-white ">
+                        <p className="navbar-h space-x-3 lg:block  text-white ">
                             <span className="text-xs"><Link href="/trust-center"><a >Privacy Policy</a></Link></span>
                             <span className="text-xs"><Link href="/trust-center"><a >Cookies Policy</a></Link></span>
                                     <span className="text-xs"><Link href="/trust-center"><a >Terms of Service</a></Link></span>

@@ -134,7 +134,7 @@ export default function Consultingpartner({data}){
     />
         <Layout>                
             {/* <!-- Header Section --> */}
-                <section className="w-full py-32 bg-secondary">
+                <section className="w-full py-28 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
                     <p className="max-w-max uppercase px-2 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">

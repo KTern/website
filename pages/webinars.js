@@ -119,7 +119,7 @@ export default function Webinar ({webinar_data}) {
     />
     <Layout > 
         {/* <!--Upcoming Webinar Section--> */}
-        <div className="container mx-auto md:py-10">
+        <div className="container mx-auto md:py-4">
             <section className="w-full  bg-white py-12 pt-20  bg-secondary" >
             <div className="flex flex-col items-center justify-center md:mx-auto xl:flex-row md:max-w-7xl">
                 <div className="relative flex flex-col items-start justify-center w-full h-full max-w-2xl px-6 mx-auto xl:max-w-none xl:w-2/5">
@@ -197,19 +197,14 @@ export default function Webinar ({webinar_data}) {
             </div>
         </section>
         </div>
-        {/* <!-- Search Box--> */}
-        <section className=" flex pb-10 items-center justify-end mr-10">
-                          <input id="demo-2" type="search" placeholder="Search"/>
-                        </section>
-        {/* <!-- On Demand Webinar Display--> */}
-        <section className="container md:p-5 ">
-                {/* <!-- On Demand Webinar Display--> */}
-                <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 md:px-10">
+         <section className="w-full lg:p-10 ">
+               
+                <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
                     {/* <!-- On demand Filter Options--> */}
-                <div className="hidden md:block w-full md:w-1/5 px-4 mb-4  md:mb-0">
-                        <form action="#" method="post" className="">
+                <div className="hidden md:block w-full md:w-1/5 md:px-4 mb-4 mt-10  md:mb-0">
+                    <form action="#" method="post" className="">
                             <div className="mb-6">
-                                <h1 className="text-2xl mt-2 mb-2  card-heading">Streams</h1>
+                                <h1 className="text-2xl mt-2 mb-2 card-heading">Streams</h1>
                                 <hr className="mb-2"/>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
                                 <label className="card-subheading" htmlFor="vehicle1"> Digital Maps</label><br/>
@@ -234,191 +229,223 @@ export default function Webinar ({webinar_data}) {
                         </form>          
                     <form action="#" method="post" className="">
                             <div className="mb-6">
-                                <h1 className="text-2xl mt-2 mb-2  card-heading">Role</h1>
+                                <h1 className="text-2xl mt-2 mb-2 card-heading">Role</h1>
                                 <hr className="mb-2"/>
                                 <label>
                                 <input type="checkbox" name="field-name" value="example value" />
-                                <span className="card-subheading ml-1">Project Manager</span>
+                                <span className="ml-1 card-subheading">Project Manager</span>
                                 </label>
                             </div>
                             <div className="mb-6">
                                 <label>
                                 <input type="checkbox" name="field-name" value="example value" />
-                                <span className="card-subheading ml-1">Test Manager</span>
+                                <span className="ml-1 card-subheading">Test Manager</span>
                                 </label>
                             </div>
                             <div className="mb-6">
                                 <label>
                                 <input type="checkbox" name="field-name" value="example value" />
-                                <span className="card-subheading ml-1">Tester</span>
+                                <span className="ml-1 card-subheading">Tester</span>
                                 </label>
                             </div>
                             <div className="mb-6">
                                 <label>
                                 <input type="checkbox" name="field-name" value="example value" />
-                                <span className="card-subheading ml-1">CEO/CIO/CXO/CTO</span>
+                                <span className="ml-1 card-subheading">CEO/CIO/CXO/CTO</span>
                                 </label>
                             </div>
                             <div className="mb-6">
                                 <label>
                                 <input type="checkbox" name="field-name" value="example value" />
-                                <span className="card-subheading ml-1">Consultant</span>
+                                <span className="ml-1 card-subheading">Consultant</span>
                                 </label>
                             </div>
                         </form>  
-                     <form action="#" method="post" className="">
-                                <div className="mb-6">
-                                    <h1 className="text-2xl mt-2 mb-2  card-heading">Month</h1>
-                                <hr className="mb-2"/>
-                                    <label>
-                        <input type="checkbox" name="field-name" value="example value" checked=""/>
-                        <span className="card-subheading ml-1">August</span>
-                        </label>
-                                </div>
-                                <div className="mb-6">
-                                    <label>
-                        <input type="checkbox" name="field-name" value="example value" checked=""/>
-                        <span className="card-subheading ml-1">July</span>
-                        </label>
-                                </div>
-                                <div className="mb-6">
-                                    <label>
-                        <input type="checkbox" name="field-name" value="example value" checked=""/>
-                        <span className="card-subheading ml-1">June</span>
-                        </label>
-                                </div>
-                                <div className="mb-6">
-                                    <label>
-                        <input type="checkbox" name="field-name" value="example value" checked=""/>
-                        <span className="card-subheading ml-1">May</span>
-                        </label>
-                                </div>
-                                <div className="mb-6">
-                                    <label>
-                        <input type="checkbox" name="field-name" value="example value" checked=""/>
-                        <span className="card-subheading ml-1">April</span>
-                        </label>
-                        </div>
-                    </form>
                     </div>
                 {/* <!-- On demand Webinar Card Display--> */}
-                <div className="w-full md:w-4/5 md:pl-20 px-4 mb-4 md:mb-0">
+           
+                    <div className="w-full md:w-4/5 md:pl-20 mb-4 md:mb-0  mt-10">
                         {/* Chips Section */}
-                        
-                        <div className="container mx-auto space-y-10">
-                                <div className="grid grid-cols-12 col-span-12 gap-7">
-                                    {/* {webinar_data.map(data => (
-                                        <Link href="/webinars/webinar-1" passHref key="data">
+                         <section className=" flex sm:pt-5  pb-10 items-center justify-end">
+                          <input id="demo-2" style={{width:'35%'}} type="search" placeholder="Search"/>
+                        </section>
+                       
+                        <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
+{/* {resources_data.map(resource=>(
+    {`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}
+    <Link href="/webinars/webinar-1" passHref key="resource">
                                     <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
+                                    <div className={`z-20  ${data.secondary}   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}>
+                                        <span>{data.stream}</span>
                                     </div>
                                     <div className="block  w-full h-60 relative transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src={data.image_src}/>
                                     </div>
                                     <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">{data.resource_type}</p>
+                                        <h2 className=" card-heading">{data.heading}</h2>
+                                        <p className="mb-2 card-subheading text-gray-500">{data.subheading}</p>
                                     </div>
                                     </a>
                                 </Link>
-                                    ))} */}
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+))} */}
+                              <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                            <a className="relative block w-full h-44 overflow-hidden rounded">
+                                                 <div className="z-20  bg-maps-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
                                         <span>Digital Maps</span>
                                     </div>
-                                    <div className="block  w-full h-60 relative transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
                                     </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">Webinar</p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
                                     </div>
-                                    </a>
-                                </Link>
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-maps-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                        <span>Digital Maps</span>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Projects</span>
                                     </div>
-                                    <div  className="block w-full h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
                                     </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        Webinar
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
                                     </div>
-                                    </a>
-                                </Link>
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                        <div className="z-20  bg-project-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                            <span>Digital Projects</span>
-                                        </div>
-                                        <div  className="block w-full h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                            <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
-                                        </div>
-                                        <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                            <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                            <h2 className=" card-heading">Landscape Assessment</h2>
-                                            <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-mines-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                        <span>Digital Mines</span>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-process-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Processs</span>
                                     </div>
-                                    <div  className="block w-full h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
                                     </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        Webinar
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
                                     </div>
-                                    </a>
-                                </Link>
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-labs-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                        <span>Digital Labs</span>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-labs-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital labs</span>
                                     </div>
-                                    <div  className="block w-full h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
                                     </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        Webinar
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
                                     </div>
-                                    </a>
-                                </Link>
-                                <Link href="/webinars/webinar-1" passHref>
-                                    <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
-                                    <div className="z-20  bg-process-secondary   absolute hyperlink top:0 mx-4 mt-5 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
-                                        <span>Digital Process</span>
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-mines-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital mines</span>
                                     </div>
-                                    <div  className="block w-full h-60 relative  transition duration-200 ease-out transform hover:scale-110">
-                                        <Image layout="fill" alt="Articles" className="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/blog-image-01.jpg"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
                                     </div>
-                                    <div className="relative flex flex-col items-start px-6 bg-white border-t rounded-b-2xl">
-                                        <p className="hyperlink mb-2 mt-2  text-gray-400 uppercase">Webinar</p>
-                                        <h2 className=" card-heading">Landscape Assessment</h2>
-                                        <p className="mb-2 card-subheading text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        Webinar
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
                                     </div>
-                                    </a>
-                                </Link>
-                            </div>
-                           
+                                </div>
+                                  <div className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4" >
+                                    <div className="">
+                                    <Link href="#_" passHref>
+                                    <a className="relative block w-full h-44 overflow-hidden rounded"> 
+                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                        <span>Digital Projects</span>
+                                    </div>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+                                    <div className="">
+                                    <p className="hyperlink text-gray-400  uppercase mb-4">
+                                        Webinar
+                                    </p>
+                                    <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">SAP Activate – The Heart of KTern and S/4HANA Migration </span>
+                                <Link href="#_"  passHref>
+                                                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                    </div>
+                                    </div>
+                            
                         </div>
                     </div>
-                    
                 </div>
             </section>
         {/* <!-- Footer--> */}
