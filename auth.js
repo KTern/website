@@ -9,9 +9,9 @@ export async function Authorization () {
   .then(response => {
         // console.log('User profile', response.data.user);
         token = response.data.jwt;
-        if (typeof window !== 'undefined'){
-            localStorage.setItem('accessToken', token);
-        console.log('User token', localStorage.getItem('accessToken'));}
+        // if (typeof window !== 'undefined'){
+        //     localStorage.setItem('accessToken', token);
+        // console.log('User token', localStorage.getItem('accessToken'));}
         return token;
   })
   .catch(error => {
@@ -21,8 +21,4 @@ export async function Authorization () {
     else {
         return token;
     }
-}
-export function getToken () {
-    console.log("Get token",token)
-    return token;
 }

@@ -167,12 +167,12 @@ export default  function Home ({ data,token }) {
                     <div className=" bg-white  h-full" >
                       
                         <div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% " >
-                            <h2 className="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading">Your SAP Digital Transformations starts here</h2>
-                            <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10 sm:sm-subheading subheading ">Powered by SAP Tribal Knowledge you can accelerate, optimize, manage and govern all your SAP Projects</p>
+                            <h2 className="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading">{data.pageHeaderDetails.header}</h2>
+                            <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10 sm:sm-subheading subheading ">{data.pageHeaderDetails.subHeading}</p>
 
-                            <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className="sm:mb-5 sm:sm-button inline-block py-3 px-14 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">Free Trial</a></Link>
-                            <Link  href="/contact"><a className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">Contact Sales</a></Link>
-                          <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">No Credit Card required</p>
+                            <Link   rel="noopener noreferrer" href={data.pageHeaderDetails.primaryCTA.linkURL}><a target="_blank" className="sm:mb-5 sm:sm-button inline-block py-3 px-14 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button">{data.pageHeaderDetails.primaryCTA.buttonTitle}</a></Link>
+                            <Link  href={data.pageHeaderDetails.secondaryCTA.linkURL}><a className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">{data.pageHeaderDetails.secondaryCTA.buttonTitle}</a></Link>
+                          <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">{data.heroNote}</p>
                         </div>
                         
                     </div>
@@ -243,7 +243,7 @@ export default  function Home ({ data,token }) {
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
                                             <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
                             </span>
-                            <h3 className="card-heading font-bold sm:sm-card-heading">Digital Maps</h3>
+                            <h3 className="card-heading font-bold sm:sm-card-heading">{data.DigitalStreamsCards[0].StreamTitle}</h3>
                                 <p className="mt-4 card-subheading text-gray-700 sm:sm-card-subheading">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 <ul className="space-y-2 h-100">
@@ -652,7 +652,7 @@ export default  function Home ({ data,token }) {
                         <div className="max-w-3xl mx-auto text-center">
                             <h2 className="my-5  card-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
                             <div className="max-w-md mx-auto pb-10">
-                                <p className="mb-5  card-subheading text-gray-800">Manage your entire SAP Digital Transformation from a single place</p>
+                                <p className="mb-5  card-subheading text-gray-800">{}</p>
                                 <Link  href="/contact"><a className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
                             </div>
                         </div>
@@ -668,10 +668,10 @@ export const getStaticProps = async () => {
    
     let token = await Authorization()
     console.log("in index",token);
-    // data url from strapi
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    // data url from strapi)
+    const res = await fetch('https://api.ktern.com/index',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
     const data = await res.json();
-    
+    console.log("data",data)
     return {
         props: {
             data:data
