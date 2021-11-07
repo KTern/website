@@ -39,11 +39,11 @@ export default  function Home ({ data,token }) {
     return (
         <>
             <NextSeo
-                title={data.PageSEO.PageTitle}
-                description={data.PageSEO.PageDescription}
-                canonical={data.PageSEO.CanonicalTag}
+                title={data.pageSEO.PageTitle}
+                description={data.pageSEO.PageDescription}
+                canonical={data.pageSEO.CanonicalTag}
                 openGraph={{
-                    url: `${data.PageSEO.ThumbnailImageURL}`,
+                    url: `${data.pageSEO.ThumbnailImageURL}`,
                     title: 'Open Graph Title',
                                 description: 'Open Graph Description',
                     images: [
@@ -541,7 +541,7 @@ export const getStaticProps = async () => {
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
     const data = await res.json();
-    console.log("data",data.ProductUVP)
+    console.log("data",data)
     return {
         props: {
             data:data
