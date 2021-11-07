@@ -39,11 +39,11 @@ export default  function Home ({ data,token }) {
     return (
         <>
             <NextSeo
-                title="Simple Usage Example"
-                description="A short description goes here."
-                canonical="https://www.canonical.ie/"
+                title={data.PageSEO.PageTitle}
+                description={data.PageSEO.PageDescription}
+                canonical={data.PageSEO.CanonicalTag}
                 openGraph={{
-                    url: 'https://www.url.ie/a',
+                    url: `${data.PageSEO.ThumbnailImageURL}`,
                     title: 'Open Graph Title',
                                 description: 'Open Graph Description',
                     images: [
