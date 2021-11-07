@@ -1,7 +1,8 @@
 import axios from 'axios';
 var token = "";
 export async function Authorization () {
-    if(!token){
+  console.log("token",token)
+    if(token===""){
    axios.post('https://api.ktern.com/auth/local', {
     identifier: 'iedsonfrainlar@ktern.com',
     password: 'Edson@2021',
@@ -12,6 +13,7 @@ export async function Authorization () {
         // if (typeof window !== 'undefined'){
         //     localStorage.setItem('accessToken', token);
         // console.log('User token', localStorage.getItem('accessToken'));}
+    console.log("return no",token)
         return token;
   })
   .catch(error => {
@@ -19,6 +21,7 @@ export async function Authorization () {
   });
     }
     else {
+      console.log("return")
         return token;
     }
 }

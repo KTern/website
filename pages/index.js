@@ -182,46 +182,20 @@ export default  function Home ({ data,token }) {
 
                     <div className="px-4 py-10">
                 <div className="container px-4 mx-auto">
-                <h2 className=" text-center  text-gray-500 section-heading sm:sm-section-heading">Trusted by brands all over the world</h2>
+                            <h2 className=" text-center  text-gray-500 section-heading sm:sm-section-heading">{data.TrustedByStatement}</h2>
                 {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
                 </div>
                 <Carousel className="bots flex p-10  z-10" responsive={responsive}>
-                    <div className="p-3 bots-card flex-row">
+                            {data.TrustedByLogos.map((data) => (
+                                <div key="data" className="p-3 bots-card flex-row">
 
-                                <Image className=" w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt="" width={250} height={250} layout="responsive"/>
+                                <Image className=" w-auto lg:w-100" src={data.imageURL}
+                                    alt={data.imageDescription} width={250} height={250} layout="responsive"/>
 
-                            </div>
-                            <div className="p-3 bots-card flex-row">
-
-                                <Image className="w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt=""width={250} height={250} />
-
-                            </div>
-                            <div className="p-3 bots-card flex-row">
-
-                                <Image className="w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt="" width={250} height={250}/>
-
-                            </div>
-                            <div className="p-3 bots-card flex-row">
-
-                                <Image className="w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt="" width={250} height={250}/>
-
-                            </div>
-                            <div className="p-3 bots-card flex-row">
-
-                                <Image className="w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt="" width={250} height={250}/>
-
-                            </div>
-                            <div className="p-3 bots-card flex-row">
-
-                                <Image className="w-auto lg:w-100" src="data:image/png;base64,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"
-                                    alt="" width={250} height={250}/>
-
-                            </div>    
+                                </div>
+                            ))}
+                           
+                           
                 </Carousel>
             </div>
                 {/* <!-- /Customer logos Section --> */}
@@ -241,32 +215,22 @@ export default  function Home ({ data,token }) {
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/maps.png"alt="Digital maps" height={30} width={30}/>
+                                            <Image src={data.DigitalStreamsCards[0].StreamLogo.imageURL} alt="Digital maps" height={30} width={30}/>
                             </span>
                             <h3 className="card-heading font-bold sm:sm-card-heading">{data.DigitalStreamsCards[0].StreamTitle}</h3>
-                                <p className="mt-4 card-subheading text-gray-700 sm:sm-card-subheading">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
+                                <p className="mt-4 card-subheading text-gray-700 sm:sm-card-subheading">{data.DigitalStreamsCards[0].StreamDescription}</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2 h-100">
-                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
+                                <ul  className="space-y-2 h-100">
+                                    {data.DigitalStreamsCards[0].FeaturePoints.map((feature) => (
+                                    <li key="feature" className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Landscape Assessment</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Business Assessment</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Custom Object  Assessment</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Timeline Assessment</span>
-                                    </li>
+                                        <span>{ feature.listItem}</span>
+                                    </li> 
+                                ))}
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <p className="mb-5 text-gray-600">Assess and evaluate the business impact </p>
-                                <Link href="/product/digital-maps"  passHref>
+                                <p className="mb-5 text-gray-600">{data.DigitalStreamsCards[0].StreamValuePoint}</p>
+                                <Link href={data.DigitalStreamsCards[0].LandingPageURL}  passHref>
                                 <a className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
                                 <span className="hyperlink sm:sm-hyperlink group-hover:text-maps-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -283,33 +247,23 @@ export default  function Home ({ data,token }) {
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/projects.png"alt="Digital Projects" height={30} width={30}/>
+                                            <Image src={data.DigitalStreamsCards[1].StreamLogo.imageURL}alt="Digital Projects" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital Projects</h3>
-                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital projects</p>
+                            <h3 className="card-heading font-bold">{data.DigitalStreamsCards[1].StreamTitle}</h3>
+                                <p className="mt-4 card-subheading text-gray-700">{data.DigitalStreamsCards[1].StreamDescription}</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2">
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                <ul  className="space-y-2 h-100">
+                                    {data.DigitalStreamsCards[1].FeaturePoints.map((feature) => (
+                                    <li key="feature" className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Plan Transformation</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Team Collaboration</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Sign Off Management</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Project Dashboards</span>
-                                    </li>
+                                        <span>{ feature.listItem}</span>
+                                    </li> 
+                                ))}
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
-                                <p className="mb-5 text-gray-600">Gain ultimate control of your SAP projects </p>
-                                <Link href="/product/digital-projects"  passHref>
+                                <p className="mb-5 text-gray-600">{data.DigitalStreamsCards[1].StreamValuePoint}</p>
+                                <Link href={data.DigitalStreamsCards[1].LandingPageURL}  passHref>
                                 <a className="inline-flex items-center pb-1  text-project-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-project-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -326,32 +280,22 @@ export default  function Home ({ data,token }) {
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/Process.svg"alt="Digital Process" height={30} width={30}/>
+                                            <Image src={data.DigitalStreamsCards[2].StreamLogo.imageURL}alt="Digital Process" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital Process</h3>
-                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Process</p>
+                            <h3 className="card-heading font-bold">{data.DigitalStreamsCards[2].StreamTitle}</h3>
+                                <p className="mt-4 card-subheading text-gray-700">{data.DigitalStreamsCards[2].StreamDescription}</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2">
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                <ul  className="space-y-2 h-100">
+                                    {data.DigitalStreamsCards[2].FeaturePoints.map((feature) => (
+                                    <li key="feature" className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process Orchestration</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Custom Code Remediation</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Change Management</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Materiality Analysis </span>
-                                    </li>
+                                        <span>{ feature.listItem}</span>
+                                    </li> 
+                                ))}
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <p className="mb-5 text-gray-600"> Process control and Governance  </p>
-                                <Link href="/product/digital-process"  passHref>
+                                <p className="mb-5 text-gray-600">{data.DigitalStreamsCards[2].StreamValuePoint}</p>
+                                <Link href={data.DigitalStreamsCards[2].LandingPageURL}   passHref>
                                 <a className="inline-flex items-center pb-1  text-process-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-process-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -366,33 +310,23 @@ export default  function Home ({ data,token }) {
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/labs.png"alt="Digital Lab" height={30} width={30}/>
+                                            <Image src={data.DigitalStreamsCards[3].StreamLogo.imageURL}alt="Digital Lab" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital Labs</h3>
-                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Maps</p>
+                            <h3 className="card-heading font-bold">{data.DigitalStreamsCards[3].StreamTitle}</h3>
+                                <p className="mt-4 card-subheading text-gray-700">{data.DigitalStreamsCards[3].StreamDescription}</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2">
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                                 <ul  className="space-y-2 h-100">
+                                    {data.DigitalStreamsCards[3].FeaturePoints.map((feature) => (
+                                    <li key="feature" className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Auto Recommendation</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Sign off Management</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Auto Execution</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Test Case Management</span>
-                                    </li>
+                                        <span>{ feature.listItem}</span>
+                                    </li> 
+                                ))}
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                             
-                                <p className="mb-5 text-gray-600">Automate your End to End Testing Today</p>
-                                <Link href="/product/digital-labs"  passHref>
+                                <p className="mb-5 text-gray-600">{data.DigitalStreamsCards[3].StreamValuePoint}</p>
+                                <Link href={data.DigitalStreamsCards[3].LandingPageURL}   passHref>
                                 <a className="inline-flex items-center pb-1  text-labs-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-labs-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -409,33 +343,23 @@ export default  function Home ({ data,token }) {
                         <div className="relative">
                             <div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
                             <span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-                                            <Image src="/assets/icons/mines.png"alt="Digital Mines" height={30} width={30}/>
+                                            <Image src={data.DigitalStreamsCards[0].StreamLogo.imageURL}alt="Digital Mines" height={30} width={30}/>
                                             </span>
-                            <h3 className="card-heading font-bold">Digital Mines</h3>
-                                <p className="mt-4 card-subheading text-gray-700">Run all your Processes better to run your Business better with KTern&apos;s Digital Mines</p>
+                            <h3 className="card-heading font-bold">{data.DigitalStreamsCards[4].StreamTitle}</h3>
+                                <p className="mt-4 card-subheading text-gray-700">{data.DigitalStreamsCards[4].StreamDescription}</p>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
-                                <ul className="space-y-2">
-                                    <li className="flex items-center text-gray-700 card-subheading">
+                               <ul  className="space-y-2 h-100">
+                                    {data.DigitalStreamsCards[4].FeaturePoints.map((feature) => (
+                                    <li key="feature" className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading">
                                         <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process Mining</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Optimize Processes</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>Process Monitoring</span>
-                                    </li>
-                                    <li className="flex items-center text-gray-700 card-subheading">
-                                        <svg className="w-5 h-5 mr-1 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                        <span>ROI Estimation</span>
-                                    </li>
+                                        <span>{ feature.listItem}</span>
+                                    </li> 
+                                ))}
                                 </ul>
                                 <div className="h-0.5 w-full border-b border-gray-200 my-8"></div>
                                 
-                                <p className="mb-5 text-gray-600">BusinessOps for the modern enterprises</p>
-                                <Link href="/product/digital-mines"  passHref>
+                                <p className="mb-5 text-gray-600">{data.DigitalStreamsCards[4].StreamValuePoint}</p>
+                                <Link href={data.DigitalStreamsCards[4].LandingPageURL}   passHref>
                                 <a className="inline-flex items-center pb-1  text-mines-primary hover:border-blue-500 group ">
                                 <span className="hyperlink group-hover:text-mines-300">Learn More</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -453,36 +377,17 @@ export default  function Home ({ data,token }) {
                   {/* <!-- /Streams Section --> */}
                 {/* <!-- Why Ktern --> */}
                 <section className="md:px-20">
-                    <div className="flex justify-center items-center   mx-auto space-x-10 ">
-                        <div className="flex flex-wrap justify-center items-center">
-                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 mt-8 justify-center items-center ">
-                                <span className="flex items-center justify-center w-14 h-14 mb-8  rounded-full">
-                                    <Image src="https://static.thenounproject.com/png/925249-200.png" alt="" width={150} height={150}/>
-                                </span>
-                                <h3 className="mb-4  card-heading">One Workspace for All SAP Initiatives </h3>
-                                <p className="card-subheading text-gray-500">Simplify your IT Landscape by eliminating disparate applications which you might use for project management, collaboration, testing and process optimization  </p>
-                            </div>
-                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
-                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
-                                    <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlFtvMeuE65QVk7aARCnGZ6IrKur4L5D8cVk4gJCwkCGw6NbYt59RknTDlUe40zsIISA&usqp=CAU" alt="" width={150} height={150} />
-                                </span>
-                                <h3 className="mb-4 card-heading  ">Reduce Testing Efforts by 85% </h3>
-                                <p className="card-subheading text-gray-500">Leverage new-gen screen-based testing and RPA-based testing bots built on SAP Business APIs to reduce manual effort and accelerate SAP releases </p>
-                            </div>
-                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center ">
-                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
-                                    <Image src="https://cdn0.iconfinder.com/data/icons/business-and-finance-9-3/68/438-512.png" width={150} height={150} alt="" />
-                                </span>
-                                <h3 className="mb-4 card-heading  ">Run efficient SAP investments  </h3>
-                                <p className="card-subheading text-gray-500">Plan, execute, collaborate and govern each SAP investment from strategy building to task execution for streamlined and successful business operations  </p>
-                            </div>
-                            <div className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center">
-                                <span className="flex items-center justify-center w-14 h-14 mb-8 rounded-full">
-                                    <Image src="/assets/cloud.png" alt=""  width={150} height={150}/>
-                                </span>
-                                <h3 className="mb-4 card-heading  ">Optimize your SAP Business Processes </h3>
-                                <p className="card-subheading text-gray-500">Mine and optimize your existing business processes with the inbuilt SAP Tribal Knowledge Base engine which encompasses decades worth of SAP business expertise </p>
-                            </div>
+                        <div className="flex justify-center items-center   mx-auto space-x-10 ">
+                            <div className="flex flex-wrap ">
+                                {data.ProductUVP.map((product) => (
+                                    <div key="product" className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 mt-8">
+                                        <span className="flex items-center justify-center w-14 h-14 mb-8  rounded-full">
+                                            <Image src={product.Icon.imageURL} alt={product.Icon.imageDescription} width={150} height={150} />
+                                        </span>
+                                        <h3 className="mb-4  card-heading">{product.CardTitle}</h3>
+                                        <p className="card-subheading text-gray-500">{product.CardDescription}</p>
+                                    </div>
+                                ))}
                         </div>
                     </div>
                 </section>
@@ -491,59 +396,25 @@ export default  function Home ({ data,token }) {
                 <section className="py-10 sm:mx-4 bg-black text-white ">
                     <div className=" mx-auto ">
                         <div className=" md:divide-x flex flex-wrap justify-center space-x-10  rounded-lg  ">
-                            <div className=" py-4 w-full md:w-1/4 lg:w-1/4 p-10 md:py-10  ">
+                                {data.CustomerSuccessStories.map((data) => (
+                                    <div key="data" className=" py-4 w-full md:w-1/4 lg:w-1/4 p-10 md:py-10  ">
                                 <span className="flex  justify-center w-14 h-14  rounded-full">
-                                    <Image src="https://ktern.com/img/customers/iqor.png" alt="" width={250} height={250} />
+                                    <Image src={data.Icon.imageURL} alt={data.Icon.imageDescription} width={250} height={250} />
                                 </span>
-                                <span className="card-heading">$33,261</span>
-                                <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
-                                    <Link href="/resources/customer-success-story"  passHref>
+                                <span className="card-heading">{data.CardTitle}</span>
+                                <h3 className="mb-4 card-subheading">{data.CardDescription}</h3>
+                               
+                                    <Link href={data.CTAUrl}  passHref>
                                 <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">{data.CTAText}</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
                             </Link>
                                 
-                                </Link>
-                            </div>
-                            <div className=" py-4 w-full md:w-1/4 lg:w-1/4 md:p-10   ">
-                                <span className="flex  justify-center w-14 h-14  rounded-full">
-                                    <Image src="https://ktern.com/img/customers/iqor.png" alt="" width={250} height={250}/>
-                                </span>
-                                <span className="card-heading">$33,261</span>
-                                <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
-                                    <Link href="/resources/customer-success-story"  passHref>
-                                <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>
-                                </Link>
-                            </div>
-                            <div className="py-4 w-full md:w-1/4 lg:w-1/4 md:p-10   ">
-                                <span className="flex  justify-center w-14 h-14  rounded-full">
-                                    <Image src="https://ktern.com/img/customers/iqor.png" alt="" width={250} height={250}/>
-                                </span>
-                                <span className="card-heading">$33,261</span>
-                                <h3 className="mb-4 card-subheading">saved in SAP migration costs</h3>
-                                <Link href="/resources/customer-success-story" className="icon-link__link" passHref>
-                                   <Link href="/resources/customer-success-story"  passHref>
-                                <a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                                </a>
-                            </Link>
-                                
-                                </Link>
-                            </div>
+                            </div>))}
+                            
                         </div>
                     </div>
                 </section>
@@ -553,91 +424,89 @@ export default  function Home ({ data,token }) {
                 <section className="xl:px-20">
                     <div className="p-4 md:p-24 flex flex-wrap mx-auto">
                         <div className="flex flex-col w-full  mb-5 md:w-1/2 md:mb-0">
-                            <Link  href="/pricing">
+                            <Link  href={data.QuickLinks[0].CTAUrl}>
                                  <a className="relative shadow flex flex-col flex-auto px-5 py-8  overflow-hidden  md:px-8 group border-2 hover:border-black  bg-gray-50" >
                                     <div className="-ml-5 md:-ml-8">
                                         <div style={{width: "240px"}}>
                                     <div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk max-w-[200px] mx-0 mr-auto md:max-w-none transform transition-transform group-hover:scale-105 duration-700  mx-auto w-full">
-                                    <Image className="mr-auto" src="https://a.storyblok.com/f/111801/x/a0151334d0/pricing.svg" alt="Pricing" draggable="false" width={200} height={200} />
+                                    <Image className="mr-auto" src={data.QuickLinks[0].Icon.imageURL} alt={data.QuickLinks[0].Icon.imageDescription} draggable="false" width={200} height={200} />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-end flex-auto ">
-                                        <h3 className="card-heading">Pricing Plans</h3>
-                                        <p className="mt-2 mb-4 card-subheading">Find a plan that works for you.</p>
+                                            <h3 className="card-heading">{data.QuickLinks[0].CardTitle}</h3>
+                                        <p className="mt-2 mb-4 card-subheading">{data.QuickLinks[0].CardDescription}</p>
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <button to="#" className="icon-link__link">
-                                            <Link href="#_"  passHref>
+                                            
+                                            <Link href={data.QuickLinks[0].CTAUrl}  passHref>
                                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">{data.QuickLinks[0].CTAText}</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
                             </Link>
-                                            </button>
                                         </div>
                                     </div>
                                 </a>
                             </Link>
                         </div>
                         <div className="p-1 md:px-8 space-y-5 flex flex-col w-full  md:w-1/2">
-                            <Link  href="/features">
+                            <Link  href={data.QuickLinks[1].CTAUrl}>
                                 <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black">
                                 <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                                     <div>
-                                        <h3 className="mt-3 card-heading">Features</h3>
-                                        <p className="mt-3 card-subheading">Get to know more up close.</p>
+                                        <h3 className="mt-3 card-heading">{data.QuickLinks[1].CardTitle}</h3>
+                                        <p className="mt-3 card-subheading">{data.QuickLinks[1].CardDescription}</p>
                                     </div>
                                     <div className="mt-20">
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            <button to="#" className="icon-link__link">
-                                                <Link href="#_"  passHref>
+                                          
+                                                <Link href={data.QuickLinks[1].CTAUrl}  passHref>
                                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">{data.QuickLinks[1].CTAText}</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
                             </Link>
                                     
-                                            </button>
+                                          
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col items-end -mr-4 justify-end md:hidden lg:flex w-6/12 mt-auto false ">
                                     <div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk transition-transform duration-700 transform group-hover:scale-105  mx-auto w-full">
-                                        <Image className="object-contain w-full ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4" src="https://a.storyblok.com/f/111801/x/ea0d65cc0b/features.svg" alt="Features" draggable="false" width={200} height={200} />
+                                        <Image className="object-contain w-full ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4" src={data.QuickLinks[1].Icon.imageURL} alt={data.QuickLinks[1].Icon.imageDescription} draggable="false" width={200} height={200} />
                                     </div>
                                 </div>
                             </a>
                             </Link>
-                            <Link  href="/resources">
+                            <Link  href={data.QuickLinks[2].CTAUrl}>
                                  <a className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black">
                                     <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                                         <div>
-                                            <h3 className="mt-3 card-heading">Resources</h3>
-                                            <p className="mt-3 card-subheading">Get to know more up close.</p>
+                                            <h3 className="mt-3 card-heading">{data.QuickLinks[2].CardTitle}</h3>
+                                            <p className="mt-3 card-subheading">{data.QuickLinks[2].CardDescription}</p>
                                         </div>
                                         <div className="mt-20">
                                             <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                                <button to="#" className="icon-link__link">
-                                                   <Link href="#_"  passHref>
+                                              
+                                                   <Link href={data.QuickLinks[2].CTAUrl}  passHref>
                                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
-                                <span className="hyperlink group-hover:text-gray-400">Learn More</span>
+                                <span className="hyperlink group-hover:text-gray-400">{data.QuickLinks[2].CTAText}</span>
                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
                             </Link>
                                         
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-end -mr-4 justify-end md:hidden lg:flex w-6/12 mt-auto false ">
                                     <div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk transition-transform duration-700 transform group-hover:scale-105  mx-auto w-full">
-                                            <Image className="object-contain w-full h-auto ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4" src="https://a.storyblok.com/f/111801/x/c0b79e9d11/integrations.svg" draggable="false" width={200} height={200} />
+                                            <Image className="object-contain w-full h-auto ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4" src={data.QuickLinks[2].Icon.imageURL} draggable="false" width={200} height={200} alt={data.QuickLinks[2].Icon.imageDescription}/>
                                         </div>
                                     </div>
                                 </a>
@@ -650,10 +519,11 @@ export default  function Home ({ data,token }) {
                 <section className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat md:bg-cta" style={{ backgroundColor: '#EAEDF2',backgroundPosition: 'bottom right' }}>
                     <div className="py-5 container px-3 mx-auto">
                         <div className="max-w-3xl mx-auto text-center">
-                            <h2 className="my-5  card-heading ">Experience the Digital Workplace built for SAP Projects and Releases </h2>
+                                <h2 className="my-5  card-heading ">{data.CTASection.CTATitle}</h2>
+                                <p className="card-subheading">{data.CTASection.CTADescription}</p>
                             <div className="max-w-md mx-auto pb-10">
                                 <p className="mb-5  card-subheading text-gray-800">{}</p>
-                                <Link  href="/contact"><a className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Start 14-day Free Trial</a></Link>
+                                <Link  href={data.CTASection.CTAButtonLink}><a className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.CTASection.CTAButtonText}</a></Link>
                             </div>
                         </div>
                     </div>
@@ -671,7 +541,7 @@ export const getStaticProps = async () => {
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
     const data = await res.json();
-    console.log("data",data)
+    console.log("data",data.ProductUVP)
     return {
         props: {
             data:data
