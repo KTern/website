@@ -33,7 +33,7 @@ const responsive = {
 export default function Home ({ data }) {
   
    
-   if(typeof window!==undefined && typeof window.navigator!==undefined){ var userId = "iedsonfrainlar@ktern.com";
+    var userId = "iedsonfrainlar@ktern.com";
     amplitude.getInstance().init("fc34969fbb47436070b100efc94f9efa", userId);
    
     var event = "Button Clicked";
@@ -50,7 +50,7 @@ amplitude.getInstance().logEvent(event);
     keyInt: 11,
     keyBool: true
   }
-});}
+});
     return (
         <>
              
