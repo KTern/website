@@ -15,7 +15,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: "https://api.ktern.com",
+        source: "https://api.ktern.com/",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
