@@ -552,8 +552,7 @@ const Feature_index = ({data}) => {
     )
 }
 export const getStaticProps = async () => {
-    let token = await Authorization()
-    console.log("in features",token);
+    
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/all-features',{method:'get'});
     const data = await res.json();
