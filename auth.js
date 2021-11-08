@@ -1,8 +1,8 @@
 import axios from 'axios';
-var token = "";
+var token = null|"";
 export async function Authorization () {
-  console.log("token",token)
-    if(token===""){
+  console.log("token in auth",token)
+    if(token===null){
    axios.post('https://api.ktern.com/auth/local', {
     identifier: 'iedsonfrainlar@ktern.com',
     password: 'Edson@2021',
