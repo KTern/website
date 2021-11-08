@@ -10,7 +10,7 @@ import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 
 import { SoftwareAppJsonLd } from 'next-seo';
-import { Amplitude, LogOnMount } from "@amplitude/react-amplitude";
+import Amplitude from 'react-amplitude';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -31,24 +31,10 @@ const responsive = {
   }
 };
 export default  function Home ({ data}) {
-   
+   Amplitude.logEvent("In Amplitude")
     return (
         <>
-             <Amplitude
-      // All events logged in this subtree will include these event properties
-      eventProperties={inheritedProps => ({
-        ...inheritedProps,
-        "song id": data.pageHeaderDetails.header,
-        "genre id": data.pageHeaderDetails.header,
-        "playlist id": data.pageHeaderDetails.header,
-        "is song favorited": data.pageHeaderDetails.header,
-        "time elapsed": props.getTimeElapsed()
-      })}
-    >
-      {/* Log an event when this view mounts */}
-      <LogOnMount eventType="view now playing screen" />
-      {/* Log an event when the song changes */}
-    </Amplitude>
+             
             <NextSeo
                 title={data.pageSEO.PageTitle}
                 description={data.pageSEO.PageDescription}
