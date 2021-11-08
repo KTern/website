@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../component/Layout";
-
+import amplitude from 'amplitude-js';
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
@@ -30,7 +30,17 @@ const responsive = {
     items: 1
   }
 };
-export default  function Home ({ data}) {
+export default function Home ({ data }) {
+    var options = {};
+    var instance = amplitude.getInstance("instance").init("fc34969fbb47436070b100efc94f9efa", null, options);
+    var userId = "12345";
+    amplitude.getInstance().init("fc34969fbb47436070b100efc94f9efa", userId);
+    amplitude.getInstance().init('fc34969fbb47436070b100efc94f9efa', null, {
+  serverZone: 'EU',
+  serverZoneBasedApi: true,
+    });
+    var event = "Button Clicked";
+amplitude.getInstance().logEvent(event);
     const client = Amplitude.init('fc34969fbb47436070b100efc94f9efa');
     client.logEvent({
   event_type: 'Node.js Event',
