@@ -8,9 +8,9 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
-
+const Amplitude=dynamic(()=>import('@amplitude/node'),{ssr:false})
 import { SoftwareAppJsonLd } from 'next-seo';
-import * as Amplitude from '@amplitude/node';
+import dynamic from "next/dynamic";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -31,7 +31,7 @@ const responsive = {
   }
 };
 export default function Home ({ data }) {
-   
+  
    
    if(typeof window!==undefined && typeof window.navigator!==undefined){ var userId = "iedsonfrainlar@ktern.com";
     amplitude.getInstance().init("fc34969fbb47436070b100efc94f9efa", userId);
