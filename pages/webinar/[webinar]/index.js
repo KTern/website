@@ -294,22 +294,22 @@ export default function WebinarLanding ({ webinar_Data }) {
 
 
 // Return a list of possible value for webinar
-// export const getStaticPaths = async () => {
-//   // dynamic route array values must be acquired here from strapi
-//     const data=[{webinar:'transforming-s4hana-upgrade-journey'},{webinar:'reimagining-sap-s4hana-conversion'},{webinar:'democratizing-sap-digital-transformation-as-a-service-dxaas'},{webinar:'manage-digital-transformation-effectively'},{webinar:'reimagining-sap-testing'}]
+export const getStaticPaths = async () => {
+  // dynamic route array values must be acquired here from strapi
+    const data=[{webinar:'transforming-s4hana-upgrade-journey'},{webinar:'reimagining-sap-s4hana-conversion'},{webinar:'democratizing-sap-digital-transformation-as-a-service-dxaas'},{webinar:'manage-digital-transformation-effectively'},{webinar:'reimagining-sap-testing'}]
     
-//     const paths = data.map(index => {
-//         return ({
-//             params:{webinar:index.webinar}
-//         })
-//     })
-//     return {
-//         paths,
-//         fallback:false
-//     }
-// }
+    const paths = data.map(index => {
+        return ({
+            params:{webinar:index.webinar}
+        })
+    })
+    return {
+        paths,
+        fallback:true
+    }
+}
 // Fetch necessary data for the blog post using params.webinar
-export const getServerSideProps = async ({params}) => {
+export const getStaticProps = async ({params}) => {
     let token = await Authorization()
    
     console.log("in features",token,params.webinar);

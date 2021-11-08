@@ -192,22 +192,22 @@ KTern uses a multi-tenant data model to host all its applications. Each applicat
     )
 }
 // Return a list of possible value for trust_center
-// export const getStaticPaths = async () => {
-//   // dynamic route array values must be acquired here from strapi
-//     const data=[{trust_center:'eula'},{trust_center:'consulting-partner-agreement'},{trust_center:'security'},{trust_center:'privacy'},{trust_center:'gdpr'}]
+export const getStaticPaths = async () => {
+  // dynamic route array values must be acquired here from strapi
+    const data=[{trust_center:'eula'},{trust_center:'consulting-partner-agreement'},{trust_center:'security'},{trust_center:'privacy'},{trust_center:'gdpr'}]
     
-//     const paths = data.map(index => {
-//         return ({
-//             params:{trust_center:index.trust_center}
-//         })
-//     })
-//     return {
-//         paths,
-//         fallback:false
-//     }
-// }
+    const paths = data.map(index => {
+        return ({
+            params:{trust_center:index.trust_center}
+        })
+    })
+    return {
+        paths,
+        fallback:true
+    }
+}
 // Fetch necessary data for the blog post using params.trust_center
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
     const id = context.params.trust_center;
 //    fetch strapi data
     const res = await fetch('https://jsonplaceholder.typicode.com/users/');

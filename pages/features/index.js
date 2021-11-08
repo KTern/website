@@ -552,7 +552,7 @@ const Feature_index = ({data}) => {
             </>
     )
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     let token = await Authorization()
     console.log("in features",token);
     // data url from strapi)

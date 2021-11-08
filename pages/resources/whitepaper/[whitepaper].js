@@ -221,22 +221,22 @@ This blueprint will help you define the right plan, the right effort estimate, t
 }
 
 // Return a list of possible value for whitepaper
-// export const getStaticPaths = async () => {
-//   // dynamic route array values must be acquired here from strapi
-//     const data=[{whitepaper:'get-started-with-move-ecc-to-s4hana'},{whitepaper:'organizational-change-management-sap-s4hana'},{whitepaper:'definitive-guide-to-sap-s4hana'},{whitepaper:'manage-digital-transformation-effectively'},{whitepaper:'unlocking-digital-transformation-guide'}]
+export const getStaticPaths = async () => {
+  // dynamic route array values must be acquired here from strapi
+    const data=[{whitepaper:'get-started-with-move-ecc-to-s4hana'},{whitepaper:'organizational-change-management-sap-s4hana'},{whitepaper:'definitive-guide-to-sap-s4hana'},{whitepaper:'manage-digital-transformation-effectively'},{whitepaper:'unlocking-digital-transformation-guide'}]
     
-//     const paths = data.map(index => {
-//         return ({
-//             params:{whitepaper:index.whitepaper}
-//         })
-//     })
-//     return {
-//         paths,
-//         fallback:false
-//     }
-// }
+    const paths = data.map(index => {
+        return ({
+            params:{whitepaper:index.whitepaper}
+        })
+    })
+    return {
+        paths,
+        fallback:true
+    }
+}
 // Fetch necessary data for the blog post using params.whitepaper
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
     const id = context.params.whitepaper;
     // strapi data url to be acquired
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' );

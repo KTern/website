@@ -421,7 +421,7 @@ export default function Resources ({resources_data}) {
 }
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     // strapi data to be acquired
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();

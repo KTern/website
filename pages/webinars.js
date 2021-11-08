@@ -286,7 +286,7 @@ export default function Webinar ({data}) {
             </>
     )
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     // data url from strapi
       let token = await Authorization()
     
