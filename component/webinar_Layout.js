@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 export default function WebinarLayout ({ data }) {
     const router = useRouter();
+    console.log("Hello",data.learnlist[2])
     const handleSearch = (event) => {
         console.log("clicked" +data.type+event)
        
@@ -80,13 +81,13 @@ export default function WebinarLayout ({ data }) {
                                 You&apos;ll Learn
                                 </h2>
                                 <ul className="w-full rounded-lg mt-2 mb-3 text-black">
-                                {data.learnlist.map(content => (
-                                    <li className="mb-2" key={content}>
+                                {data.learnlist.map((content) => (
+                                    <li className="mb-2" key="content">
                                         <div className="w-fill flex  text-gray-600 md:pr-16">
                                             <div className=" block w-4 h-4 relative flex-none">
-                               <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                                                <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                             </div>
-                                            <span className="ml-2 card-subheading" title="Point 1" >{content}</span>
+                                            <span className="ml-2 card-subheading" title="Point 1" >{content.listItem}</span>
                                         </div>
                                     </li>
                                 ))}

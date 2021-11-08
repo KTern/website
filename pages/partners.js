@@ -357,14 +357,14 @@ export default function Partners({ data }) {
     </>
   );
 }
-export const getStaticProps = async () => {
-  // data url from strapi
-  const res = await fetch("https://api.ktern.com/partner-home");
-  const data = await res.json();
-
-  return {
-    props: {
-      data: data,
-    },
-  };
-};
+export const getServerSideProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            data:data
+        }
+    }
+}

@@ -326,7 +326,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/article/"   ><a target="_blank"  onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href=""   ><a target="_blank"  onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
                                         </li>
                                         <li>
@@ -346,7 +346,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Li
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Pricing</a></Link>
                                                 </li>
                                                  <li>
-                                                    <Link href="/docs"   ><a target="_blank" onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href=""   ><a target="_blank" onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">Documentation</a></Link>
                                                 </li>
                                                 <li>
@@ -627,7 +627,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
 }
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();

@@ -37,12 +37,12 @@ export default function Footer ({footer_data}) {
                                 <ul className="">
                                     <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
                                 <li className="mb-2"><Link  href="/webinars" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="/article" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
+                                <li className="mb-2"><Link  href="" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
                                 <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
                                     <li className="mb-2"><Link href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
                                     <li className="mb-2"><Link href="/trust-center" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
                                     <li className="mb-2"><Link href="/pricing" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
-                                    <li className="mb-2"><Link href="/docs" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
+                                    <li className="mb-2"><Link href="" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
                                     
                                 <li className="mb-2"><Link  href="https://live.ktern.com" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
                                
@@ -171,7 +171,7 @@ export default function Footer ({footer_data}) {
     )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();

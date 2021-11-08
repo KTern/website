@@ -458,14 +458,15 @@ export default function About({ data }) {
     </>
   );
 }
-export const getStaticProps = async () => {
-  // data url from strapi
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
 
-  return {
-    props: {
-      data: data,
-    },
-  };
-};
+export const getServerSideProps = async () => {
+    // data url from strapi
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    
+    return {
+        props: {
+            data:data
+        }
+    }
+}

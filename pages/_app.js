@@ -4,8 +4,12 @@ import { Authorization } from "../auth"
 var token=""
 function MyApp ({ Component, pageProps }) {
   
+  
   return <Component {...pageProps} />
 }
-Authorization();
 // export default appWithTranslation(MyApp);
+MyApp.getInitialProps = async () => {
+  let token = await Authorization();
+  return { token: token }
+}
 export default MyApp;
