@@ -12,7 +12,6 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
-import { Authorization ,getToken} from '../../auth';
 import { features } from "process";
 const Feature_index = ({data}) => {
     return (
