@@ -18,6 +18,7 @@
         "nextjs-breadcrumbs": "^1.1.9",
         "nextjs-cors": "2.1.0",
         "react": "17.0.2",
+        "react-amplitude": "0.1.7",
         "react-awesome-stars-rating": "0.6.0",
         "react-bootstrap": "2.0.0",
         "react-dom": "17.0.2",
