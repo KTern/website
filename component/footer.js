@@ -142,7 +142,7 @@ export default function Footer ({footer_data}) {
                     </div>
                     <div className=" flex lg:justify-end items-center pb-10">
 
-                        <div className="relative pt-2">
+                        {/* <div className="relative pt-2">
                             <select className=" appearance-none w-auto h-auto p-3 px-20   bg-white border-2 border-white rounded outline-none" name="field-name">
                                         <option>English</option>
                                         <option>German</option>
@@ -154,7 +154,7 @@ export default function Footer ({footer_data}) {
                                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
                                 </svg>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

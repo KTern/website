@@ -120,7 +120,7 @@ export default function Webinar ({data}) {
     />
     <Layout > 
         {/* <!--Upcoming Webinar Section--> */}
-        <div className="container mx-auto md:py-4">
+        <div className=" mx-auto md:py-4">
             <section className="w-full  bg-white py-12 pt-20  bg-secondary" >
             <div className="flex flex-col items-center justify-center md:mx-auto xl:flex-row md:max-w-7xl">
                 <div className="relative flex flex-col items-start justify-center w-full h-full max-w-2xl px-6 mx-auto xl:max-w-none xl:w-2/5">
