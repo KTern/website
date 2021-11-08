@@ -1,6 +1,6 @@
 
 module.exports = {
-
+  target: 'serverless',
   reactStrictMode: true,
   throwIfNamespace: false,
   i18n: {
