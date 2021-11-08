@@ -179,7 +179,7 @@ export default function PartnerContact ({data}) {
 }
 export const getStaticProps = async () => {
     // data url from strapi
-    data={a:'ab'}
+    let data={a:'ab'}
     
     return {
         props: {

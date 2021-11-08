@@ -423,7 +423,7 @@ export default function Resources ({resources_data}) {
 
 export const getStaticProps = async () => {
     // strapi data to be acquired
-    data={a:'ab'}
+    let data={a:'ab'}
     return {
         props:{resources_data:data}
     }

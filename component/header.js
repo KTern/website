@@ -629,7 +629,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
 
 export const getStaticProps = async () => {
     // data url from strapi
-    data={a:'ab'}
+    let data={a:'ab'}
     
     return {
         props: {

@@ -836,7 +836,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ( context ) => {
   const id = context.params.product;
     // data url from strapi
-    data={a:'ab'}
+    let data={a:'ab'}
     
     return {
       props: {

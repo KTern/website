@@ -1262,7 +1262,7 @@ export default function Pricing ({data}) {
 }
 export const getStaticProps = async () => {
     // data url from strapi
-    data={a:'ab'}
+    let data={a:'ab'}
     
     return {
         props: {
