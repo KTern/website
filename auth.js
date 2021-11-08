@@ -7,7 +7,7 @@ export async function Authorization () {
     identifier: 'iedsonfrainlar@ktern.com',
     password: 'Edson@2021',
   })
-  .then(response => {
+  .then(async response => {
         // console.log('User profile', response.data.user);
         token = response.data.jwt;
         // if (typeof window !== 'undefined'){
