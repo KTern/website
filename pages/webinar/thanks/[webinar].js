@@ -6,6 +6,8 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
+
+import { Authorization ,getToken} from '../../../auth';
 export default function Thanks ({webinar_data})
 {
     
@@ -125,7 +127,7 @@ export default function Thanks ({webinar_data})
     />
         <Layout>
             
-    <section className="relative py-32  bg-gray-800 overflow-hidden flex justify-center ">
+    {!webinar_data.IsOnDemandWebinar && <section className="relative py-32  bg-gray-800 overflow-hidden flex justify-center ">
      
   <div className="hidden xl:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-34 lg:mt-24"><Image  src="/404/five-stars.svg" alt="" width={400} height={300}/></div>
      
@@ -145,9 +147,9 @@ export default function Thanks ({webinar_data})
           
         </div>
                 </div>
-            </section>
+            </section>}
             {/* On demand Webinar */}
-            <section className="relative py-32 text-center  overflow-hidden justify-center text-white bg-gray-800">
+           {webinar_data.IsOnDemandWebinar && <section className="relative py-32 text-center  overflow-hidden justify-center text-white bg-gray-800">
                 <h1 className="heading mb-5">On-demand Webinar</h1>
                 <p className="subheading mb-10">Democratizing SAP Digital Transformation as a Service(#DXaaS)</p>
      <div className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col mb-20">
@@ -207,7 +209,7 @@ export default function Thanks ({webinar_data})
                  <Link  href="/" passHref>
                                 <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">Return Home</a>
                                 </Link>
-            </section>
+            </section>}
             {/* /On demand Webinar */}
                    <section className="w-full mb-10 pt-8 bg-white sm:pt-12 md:pt-16">
                     <div className="px-2 mx-auto max-w-7xl">
@@ -327,28 +329,33 @@ export default function Thanks ({webinar_data})
     )
 }
 // Return a list of possible value for webinar
-export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-    const data=[{webinar:'transforming-s4hana-upgrade-journey'},{webinar:'reimagining-sap-s4hana-conversion'},{webinar:'democratizing-sap-digital-transformation-as-a-service-dxaas'},{webinar:'manage-digital-transformation-effectively'},{webinar:'reimagining-sap-testing'}]
+// export const getStaticPaths = async () => {
+//   // dynamic route array values must be acquired here from strapi
+//     const data=[{webinar:'transforming-s4hana-upgrade-journey'},{webinar:'reimagining-sap-s4hana-conversion'},{webinar:'democratizing-sap-digital-transformation-as-a-service-dxaas'},{webinar:'manage-digital-transformation-effectively'},{webinar:'reimagining-sap-testing'}]
     
-    const paths = data.map(index => {
-        return ({
-            params:{webinar:index.webinar}
-        })
-    })
-    return {
-        paths,
-        fallback:false
-    }
-}
+//     const paths = data.map(index => {
+//         return ({
+//             params:{webinar:index.webinar}
+//         })
+//     })
+//     return {
+//         paths,
+//         fallback:false
+//     }
+// }
 // Fetch necessary data for the blog post using params.webinar
-export const getStaticProps = async (context) => {
-    const id = context.params.webinar;
-//    acquire data from  strapi
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+export const getServerSideProps = async ({params}) => {
+     let token = await Authorization()
+   
+    console.log("in features",token,params.webinar);
+    // data url from strapi)
+    const res = await fetch(`https://api.ktern.com/webinars?WebinarURL=${params.webinar}`,{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
     const data = await res.json();
+    console.log("data",data)
     return {
-        props:{webinar_data:data}
+        props: {
+            webinar_data:data[0]
+        }
     }
 }
 

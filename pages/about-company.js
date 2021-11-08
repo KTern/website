@@ -444,7 +444,7 @@ export default function About ({data}) {
     )
     
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();

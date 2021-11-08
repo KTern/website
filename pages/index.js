@@ -31,11 +31,7 @@ const responsive = {
   }
 };
 export default  function Home ({ data,token }) {
-    // const token = await Authorization();
-    // console.log(token+"HELLLLLLLOOOOOOOO")
-  
-    // console.log(token);
-// export default function Home ({locale,data}) {
+   
     return (
         <>
             <NextSeo
@@ -534,7 +530,7 @@ export default  function Home ({ data,token }) {
     )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
    
     let token = await Authorization()
     console.log("in index",token);

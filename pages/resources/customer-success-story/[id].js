@@ -351,22 +351,22 @@ Our customer used KTern to assess their current SAP ECC system to determine the 
 }
 
 // Return a list of possible value for id
-export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-    const data=[{id:'comprehensive-sap-s4-hana-readiness-assessment-tech-advance-solution'},{id:'sap-s4-hana-assessment-ktern-asm'},{id:'digital-projects'},{id:'digital-maps'},{id:'digital-labs'}]
+// export const getStaticPaths = async () => {
+//   // dynamic route array values must be acquired here from strapi
+//     const data=[{id:'comprehensive-sap-s4-hana-readiness-assessment-tech-advance-solution'},{id:'sap-s4-hana-assessment-ktern-asm'},{id:'digital-projects'},{id:'digital-maps'},{id:'digital-labs'}]
     
-    const paths = data.map(index => {
-        return ({
-            params:{id:index.id}
-        })
-    })
-    return {
-        paths,
-        fallback:false
-    }
-}
+//     const paths = data.map(index => {
+//         return ({
+//             params:{id:index.id}
+//         })
+//     })
+//     return {
+//         paths,
+//         fallback:false
+//     }
+// }
 // Fetch necessary data for the blog post using params.id
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     const id = context.params.id;
     // strapi data to be fetched
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);

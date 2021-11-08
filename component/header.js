@@ -627,7 +627,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
 }
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();

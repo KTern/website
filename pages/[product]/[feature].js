@@ -741,22 +741,22 @@ export default function Feature_Landing ({feature_data}) {
             </>
     )
 }
-export const getStaticPaths = async () => {
-    // dynamic route array values must be acquired here from strapi
-    const data=[{product:'digital-maps',feature:'business-process-assessment'},{product:'digital-maps',feature:'landscape-assessment'},{product:'digital-maps',feature:'custom-objects-assessment'},{product:'digital-maps',feature:'business-transformation-assessment'},{product:'digital-maps',feature:'timeline-effort-estimation'}]
+// export const getStaticPaths = async () => {
+//     // dynamic route array values must be acquired here from strapi
+//     const data=[{product:'digital-maps',feature:'business-process-assessment'},{product:'digital-maps',feature:'landscape-assessment'},{product:'digital-maps',feature:'custom-objects-assessment'},{product:'digital-maps',feature:'business-transformation-assessment'},{product:'digital-maps',feature:'timeline-effort-estimation'}]
     
-    const paths = data.map(index => {
-        return ({
-            params:{product:index.product,feature:index.feature}
-        })
-    })
-    return {
-        paths,
-        fallback:false
-    }
-}
+//     const paths = data.map(index => {
+//         return ({
+//             params:{product:index.product,feature:index.feature}
+//         })
+//     })
+//     return {
+//         paths,
+//         fallback:false
+//     }
+// }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     const id = context.params.feature;
     // data url from strapi
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
