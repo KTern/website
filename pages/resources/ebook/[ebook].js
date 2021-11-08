@@ -221,20 +221,20 @@ This blueprint will help you define the right plan, the right effort estimate, t
 }
 
 // Return a list of possible value for ebook
-export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-    const data=[{ebook:'definitive-guide-sap-s4hana-assessment'},{ebook:'sap-custom-code-migration-guide'},{ebook:'sap-s4hana-testing-guide'},{ebook:'manage-digital-transformation-effectively'},{ebook:'unlocking-digital-transformation-guide'}]
+// export const getStaticPaths = async () => {
+//   // dynamic route array values must be acquired here from strapi
+//     const data=[{ebook:'definitive-guide-sap-s4hana-assessment'},{ebook:'sap-custom-code-migration-guide'},{ebook:'sap-s4hana-testing-guide'},{ebook:'manage-digital-transformation-effectively'},{ebook:'unlocking-digital-transformation-guide'}]
     
-    const paths = data.map(index => {
-        return ({
-            params:{ebook:index.ebook}
-        })
-    })
-    return {
-        paths,
-        fallback:true
-    }
-}
+//     const paths = data.map(index => {
+//         return ({
+//             params:{ebook:index.ebook}
+//         })
+//     })
+//     return {
+//         paths,
+//         fallback:true
+//     }
+// }
 // Fetch necessary data for the blog post using params.ebook
 export const getServerSideProps = async (context) => {
     
