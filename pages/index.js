@@ -30,7 +30,7 @@ const responsive = {
     items: 1
   }
 };
-export default  function Home ({ data,token }) {
+export default  function Home ({ data}) {
    
     return (
         <>
@@ -533,7 +533,7 @@ export default  function Home ({ data,token }) {
 export const getStaticProps = async () => {
    
   
-    console.log("in index",token);
+  
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get'});
     const data = await res.json();
