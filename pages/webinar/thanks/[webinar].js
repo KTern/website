@@ -340,7 +340,7 @@ export const getStaticPaths = async () => {
     })
     return {
         paths,
-        fallback:false
+        fallback:true
     }
 }
 // Fetch necessary data for the blog post using params.webinar
