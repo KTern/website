@@ -10,7 +10,7 @@ import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 
 import { SoftwareAppJsonLd } from 'next-seo';
-import Amplitude from 'react-amplitude';
+import * as Amplitude from '@amplitude/node';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -31,7 +31,19 @@ const responsive = {
   }
 };
 export default  function Home ({ data}) {
-   Amplitude.logEvent("In Amplitude")
+    const client = Amplitude.init('fc34969fbb47436070b100efc94f9efa');
+    client.logEvent({
+  event_type: 'Node.js Event',
+  user_id: 'iedsonfrainlar@ktern.com',
+  location_lat: 37.77,
+  location_lng: -122.39,
+  ip: '127.0.0.1',
+  event_properties: {
+    keyString: 'valueString',
+    keyInt: 11,
+    keyBool: true
+  }
+});
     return (
         <>
              

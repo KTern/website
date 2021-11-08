@@ -1,8 +1,6 @@
 import '../styles/globals.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Amplitude from 'react-amplitude';
-Amplitude.init('fc34969fbb47436070b100efc94f9efa');
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
