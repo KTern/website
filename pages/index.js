@@ -33,11 +33,9 @@ const responsive = {
 export default function Home ({ data }) {
   
    
-    var userId = "iedsonfrainlar@ktern.com";
-    amplitude.getInstance().init("fc34969fbb47436070b100efc94f9efa", userId);
+
    
     var event = "Button Clicked";
-amplitude.getInstance().logEvent(event);
     const client = Amplitude.init('fc34969fbb47436070b100efc94f9efa');
     client.logEvent({
   event_type: 'Node.js Event',
