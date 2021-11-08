@@ -236,7 +236,7 @@ export const getStaticPaths = async () => {
     }
 }
 // Fetch necessary data for the blog post using params.ebook
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     
     const ebook = context.params.ebook;
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' + ebook);

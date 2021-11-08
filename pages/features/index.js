@@ -551,7 +551,7 @@ const Feature_index = ({data}) => {
             </>
     )
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/all-features',{method:'get'});

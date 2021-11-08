@@ -228,7 +228,7 @@ export default function Contact ({data}) {
             </>
     )
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // data url from strapi
     let data={a:'ab'}
     

@@ -421,7 +421,7 @@ export default function Resources ({resources_data}) {
 }
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     // strapi data to be acquired
     let data={a:'ab'}
     return {

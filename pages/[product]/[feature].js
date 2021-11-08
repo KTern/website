@@ -756,7 +756,7 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     const id = context.params.feature;
     // data url from strapi
     let data={a:'ab'}

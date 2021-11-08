@@ -207,7 +207,7 @@ export const getStaticPaths = async () => {
     }
 }
 // Fetch necessary data for the blog post using params.trust_center
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     const id = context.params.trust_center;
 //    fetch strapi data
     const res = await fetch('https://jsonplaceholder.typicode.com/users/');
