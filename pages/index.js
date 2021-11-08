@@ -31,14 +31,11 @@ const responsive = {
   }
 };
 export default function Home ({ data }) {
-    var options = {};
-    var instance = amplitude.getInstance("instance").init("fc34969fbb47436070b100efc94f9efa", null, options);
-    var userId = "12345";
+   
+   
+    var userId = "iedsonfrainlar@ktern.com";
     amplitude.getInstance().init("fc34969fbb47436070b100efc94f9efa", userId);
-    amplitude.getInstance().init('fc34969fbb47436070b100efc94f9efa', null, {
-  serverZone: 'EU',
-  serverZoneBasedApi: true,
-    });
+   
     var event = "Button Clicked";
 amplitude.getInstance().logEvent(event);
     const client = Amplitude.init('fc34969fbb47436070b100efc94f9efa');
