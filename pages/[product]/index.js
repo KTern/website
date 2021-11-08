@@ -48,7 +48,7 @@ const responsive_2 = {
     items: 1
   }
 };
-function next(id, token, last) {
+function next(id,  last) {
   let elem = document.getElementById(id);
   const styles = window.getComputedStyle(elem);
   const amount = styles.getPropertyValue("--amount");
@@ -60,7 +60,7 @@ function next(id, token, last) {
   document.getElementById(id).scrollBy({left: (iWidth * amount) + gapM, behavior: "smooth"});
 }
 
-function prev(id, token, last) {
+function prev(id,  last) {
   let elem = document.getElementById(id);
   const styles = window.getComputedStyle(elem);
   const amount = styles.getPropertyValue("--amount");
