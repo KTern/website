@@ -362,7 +362,7 @@ export const getStaticPaths = async () => {
     })
     return {
         paths,
-        fallback:true
+        fallback:false
     }
 }
 // Fetch necessary data for the blog post using params.id
