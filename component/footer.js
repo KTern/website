@@ -173,8 +173,7 @@ export default function Footer ({footer_data}) {
 
 export const getStaticProps = async () => {
     // data url from strapi
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
+    data={a:'ab'}
     
     return {
         props: {

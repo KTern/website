@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-import { Authorization ,getToken} from '../auth';
+
 export default function Webinar ({data}) {
     return (
         <>
@@ -288,10 +288,10 @@ export default function Webinar ({data}) {
 }
 export const getStaticProps = async () => {
     // data url from strapi
-      let token = await Authorization()
+    
     
     // data url from strapi)
-    const res = await fetch("https://api.ktern.com/all-webinars",{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch("https://api.ktern.com/all-webinars",{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {

@@ -10,7 +10,7 @@ import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 
 import { SoftwareAppJsonLd } from 'next-seo';
-import { Authorization ,getToken} from '../auth';
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -532,10 +532,10 @@ export default  function Home ({ data,token }) {
 
 export const getStaticProps = async () => {
    
-    let token = await Authorization()
+  
     console.log("in index",token);
     // data url from strapi)
-    const res = await fetch('https://api.ktern.com/index',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch('https://api.ktern.com/index',{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {

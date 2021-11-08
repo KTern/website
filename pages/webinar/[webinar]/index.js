@@ -9,7 +9,6 @@ import { SocialProfileJsonLd } from 'next-seo';
 import { EventJsonLd } from 'next-seo';
 
 import { useRouter } from 'next/router';
-import { Authorization ,getToken} from '../../../auth';
 export default function WebinarLanding ({ webinar_Data }) {
 
     const router = useRouter();
@@ -310,11 +309,11 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.webinar
 export const getStaticProps = async ({params}) => {
-    let token = await Authorization()
+  
    
     console.log("in features",token,params.webinar);
     // data url from strapi)
-    const res = await fetch(`https://api.ktern.com/webinars?slug=${params.webinar}`,{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch(`https://api.ktern.com/webinars?slug=${params.webinar}`,{method:'get'});
     const data = await res.json();
     console.log("data",data[0].LearningPoints)
     return {

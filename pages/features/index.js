@@ -556,7 +556,7 @@ export const getStaticProps = async () => {
     let token = await Authorization()
     console.log("in features",token);
     // data url from strapi)
-    const res = await fetch('https://api.ktern.com/all-features',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch('https://api.ktern.com/all-features',{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {
