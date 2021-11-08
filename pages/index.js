@@ -666,7 +666,8 @@ export default  function Home ({ data,token }) {
 
 export const getStaticProps = async () => {
    
-    let token = await Authorization()
+    // let token = await Authorization()
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzExZDE3YzJhNTkzZWYwYzk1NmE3NCIsImlhdCI6MTYzNTkyNjExMSwiZXhwIjoxNjM4NTE4MTExfQ.C6iYVab6fMevTxWvkv4AEJdtC4yLXBcJ9fYWK3Xd7LQ"
     console.log("in index",token);
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});

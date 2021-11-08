@@ -126,18 +126,18 @@ const WhitePaper_Landing = ({w_data}) => {
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <div className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    White Paper
+                    {data.PageHeader.Tag}
                 </div>
-                    <h1 className="heading text-white "  >S/4 HANA Journey Made Simple</h1>
-                    <p className="subheading text-gray-100 pb-7 pt-2">Digitally Transform to SAP S/4HANA From SAP ECC</p>
+                    <h1 className="heading text-white "  >{data.PageHeader.header}</h1>
+                    <p className="subheading text-gray-100 pb-7 pt-2">{data.PageHeader.subHeading}</p>
                     <div className="flex flex-row">
                     
                    
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Download White Paper</a></Link>
+                    <Link  href="{data.PageHeader.primaryCTA.linkURL}"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
 <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-            <Image width={500} height={500} alt="hero" src="/resources/s4ebook.png" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
+            <Image width={500} height={500} alt="hero" src="{data.PageHeader.ImageURL}" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
                
             </div>
@@ -150,28 +150,28 @@ const WhitePaper_Landing = ({w_data}) => {
                             <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                                 <div className="relative max-w-md">
                                       <div className="pb-16 mb-8 border-b border-gray-400">
-                                      <Link href="/resources"  passHref>
+                                      <Link href="{data.GoBackToResources.LinkURL}"  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
-                             <span className="hyperlink group-hover:text-gray-400">Go Back to all White Papers</span>
+                             <span className="hyperlink group-hover:text-gray-400">{data.GoBackToResources.LinkText}</span>
                                 
                                 </a>
                             </Link> 
-                <p className="mt-5 card-subheading text-gray-700 text md:text-left">KTern is a disruptive all-in-one product built on the SAP Activate framework, the “S/4HANAPEDIA” automation rule engine, a next-gen collaboration platform, and future-ready machine learning algorithms. All these features work in coalition to help ECC customers before their transition, during their transition, and after the transition.
+                <p className="mt-5 card-subheading text-gray-700 text md:text-left">{data.Description}
 
  
 
 
 
 </p>
-<p className="mt-5 card-subheading text-gray-700 text md:text-left">
+{/* <p className="mt-5 card-subheading text-gray-700 text md:text-left">
 Before the transition, KTern provides an auto-generated blueprint for your ECC to S/4HANA system conversion by completing a comprehensive automated assessment.
 </p>
 
 <p className="mt-5 card-subheading  text-gray-700 text md:text-left">
 
 This blueprint will help you define the right plan, the right effort estimate, the right system sizing, the right execution, the right project management, and the right quality for your ECC to S/4HANA transition - Ensuring up to 53% faster, 37% cheaper, and 99.9% safer S/4HANA migrations.
-</p>
+</p> */}
 
                                     </div>
                                     
@@ -181,7 +181,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
             
                         <div className=" z-10 w-full md:max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
                             <div id="downloadbook" className="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
-                                <h4 className="w-full  card-heading  ">Download White paper</h4>
+                                <h4 className="w-full  card-heading  ">{data.DownloadWhitepaper}</h4>
                                 <div className="relative w-full mt-6 space-y-8">
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">First Name</label>
@@ -202,7 +202,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                                     <div className="relative">
                                         <Link href="" passHref>
                                             <a className="inline-block w-full px-5 py-4   text-center text-white transition duration-200 bg-black 
-                                            rounded-r-xl rounded-b-xl transition button uppercase duration-200 hover:bg-gray-500 ease">Download</a>
+                                            rounded-r-xl rounded-b-xl transition button uppercase duration-200 hover:bg-gray-500 ease">{data.Download}</a>
                                         </Link>
                                     </div>            
                                 </div>
@@ -237,9 +237,9 @@ export const getStaticPaths = async () => {
 }
 // Fetch necessary data for the blog post using params.whitepaper
 export const getStaticProps = async (context) => {
-    const id = context.params.whitepaper;
+    const whitepaper = context.params.whitepaper;
     // strapi data url to be acquired
-    const res = await fetch('https://jsonplaceholder.typicode.com/users/' );
+    const res = await fetch('https://api.ktern.com/whitepaper/' + whitepaper );
     const data = await res.json();
     return {
         

@@ -130,15 +130,15 @@ const Feature_index = ({features_data}) => {
             <div className=" flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <p className="max-w-max  inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    All Features
+                    {data.PageHeader.Tag}
                 </p>
-                    <h1 className="heading text-white "  >Transform your DX Experience</h1>
-                    <p className="subheading text-gray-100 pb-7 pt-2">KTern&apos;s Digital Workplace takes care of your entire DX Transformation from Initial Assessment until your SAP System Goes Live and Beyond Offering Continuous, Constant, Automated Transformation</p>
+                    <h1 className="heading text-white "  >{data.PageHeader.header}</h1>
+                    <p className="subheading text-gray-100 pb-7 pt-2">{data.PageHeader.subHeading}</p>
                     
                     <div className="md:flex md:flex-row">
                     
-                    <Link   rel="noopener noreferrer" href="https://app.ktern.com"><a target="_blank" className=" inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-14 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">Free Trial</a></Link>
-                    <Link  href="/contact"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button">Contact Sales</a></Link>
+                    <Link   rel="noopener noreferrer" href="{data.PageHeader.primaryCTA.linkURL}"><a target="_blank" className=" inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-14 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
+                    <Link  href="{data.PageHeader.secondaryCTA.linkURL}"><a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button">{data.PageHeader.secondaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
             </div>
