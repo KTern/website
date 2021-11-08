@@ -2,12 +2,12 @@ import Head from 'next/head'
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../component/Layout";
-import amplitude from 'amplitude-js';
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
+const amplitude=dynamic(()=>import('amplitude-js'),{ssr:false})
 const Amplitude=dynamic(()=>import('@amplitude/node'),{ssr:false})
 import { SoftwareAppJsonLd } from 'next-seo';
 import dynamic from "next/dynamic";
