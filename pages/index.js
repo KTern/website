@@ -2,23 +2,15 @@ import Head from 'next/head'
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../component/Layout";
+
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
-const amplitude=dynamic(()=>import('amplitude-js'),{ssr:false})
-const _Amplitude = dynamic(() => import('@amplitude/node'), { ssr: false })
-
-import {
-  AmplitudeProvider,
-  Amplitude,
-  LogOnMount,
-  useAmplitude
-} from "react-amplitude-hooks";
+import Amplitude from "amplitude-js"
 import { SoftwareAppJsonLd } from 'next-seo';
-import dynamic from "next/dynamic";
-const AMPLITUDE_KEY ='fc34969fbb47436070b100efc94f9efa'
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -38,28 +30,12 @@ const responsive = {
     items: 1
   }
 };
-export default function Home ({ data }) {
-  
-   
-
-   
-//     var event = "Button Clicked";
-//     const client = _Amplitude.init('fc34969fbb47436070b100efc94f9efa');
-//     client.logEvent({
-//   event_type: 'Node.js Event',
-//   user_id: 'iedsonfrainlar@ktern.com',
-//   location_lat: 37.77,
-//   location_lng: -122.39,
-//   ip: '127.0.0.1',
-//   event_properties: {
-//     keyString: 'valueString',
-//     keyInt: 11,
-//     keyBool: true
-//   }
-// });
+export default  function Home ({ data}) {
+   const amplitude = new Amplitude();
+    var amplitudeVersion = amplitude.__VERSION__;
+    console.log(amplitudeVersion)
     return (
         <>
-            
             <NextSeo
                 title={data.pageSEO.PageTitle}
                 description={data.pageSEO.PageDescription}
@@ -182,37 +158,7 @@ export default function Home ({ data }) {
             {/* {data.map(item => (
                 <h2 key="item">{item.phone}</h2>
             ))} */}
-                <Layout>
-                     <Amplitude
-          eventProperties={inheritedProps => ({
-            ...inheritedProps,
-            scope: [...inheritedProps.scope, "move button"]
-          })}
-        >
-          {({ logEvent }) => (
-            <button
-              onClick={() => {
-                logEvent("amplitude init");
-              }}
-            >
-              {desc}
-            </button>
-          )}
-                    </Amplitude>
-                    <AmplitudeProvider
-      amplitudeInstance={amplitude.getInstance()}
-      apiKey={AMPLITUDE_KEY}
-    >
-      <Amplitude
-        eventProperties={{
-          scope: ["game"],
-          "moves made": 4,
-        }}
-      >
-        <LogOnMount eventType="start game" />
-       
-      </Amplitude>
-    </AmplitudeProvider>
+            <Layout>
                 {/* <!-- Hero Section --> */}
                 <section className=" pt-32  relative overflow-hidden bg-white">
 
