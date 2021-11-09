@@ -32,11 +32,7 @@ const responsive = {
   }
 };
 export default  function Home ({ data}) {
-    var data = {
-        event_type: 'server-text-event',
-        user_id:'1234'
-    }
-    amplitude.track(data)
+    
     return (
         <>
             <NextSeo
@@ -537,7 +533,11 @@ export default  function Home ({ data}) {
 
 export const getServerSideProps = async () => {
    
-  
+  var data = {
+        event_type: 'server-text-event',
+        user_id:'1234'
+    }
+    await amplitude.track(data)
   
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get'});
