@@ -4,6 +4,26 @@ import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareApp
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
 var responsive = import('../pages/api/responsive.json');
+import * as Amplitude from '@amplitude/node';
+const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
+var client = Amplitude.init(AMPLITUDE_KEY);
+client.logEvent({
+	event_type: 'Node.js Event',
+	user_id: 'datater@gmail.com',
+	location_lat: 37.77,
+	location_lng: -122.39,
+	ip: '127.0.0.1',
+	event_properties: {
+		keyString: 'valueString',
+		keyInt: 11,
+		keyBool: true,
+	},
+});
+
+// Send any events that are currently queued for sending.
+// Will automatically happen on the next event loop.
+client.flush();
+
 export default function Home({ data }) {
 	return (
 		<>
