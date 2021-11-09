@@ -533,11 +533,11 @@ export default  function Home ({ data}) {
 
 export const getServerSideProps = async () => {
    
-  var data = {
+  var data1 = {
         event_type: 'server-text-event',
         user_id:'1234'
     }
-    await amplitude.track(data)
+    await amplitude.track(data1)
   
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/index',{method:'get'});
