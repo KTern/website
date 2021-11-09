@@ -248,11 +248,17 @@ export default function Home({ data }) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										{/* <Image
 											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
 											alt="Digital maps"
 											height={30}
 											width={30}
+										/> */}
+										<Image
+											alt="The guitarist in the concert."
+											src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80"
+											width={30}
+											height={30}
 										/>
 									</span>
 									<h3 className="card-heading font-bold sm:sm-card-heading">
