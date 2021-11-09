@@ -8,9 +8,10 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
-import Amplitude from "amplitude-js"
-import { SoftwareAppJsonLd } from 'next-seo';
 
+import { SoftwareAppJsonLd } from 'next-seo';
+var Amplitude = require('amplitude')
+const amplitude=new Amplitude('fc34969fbb47436070b100efc94f9efa')
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -31,9 +32,11 @@ const responsive = {
   }
 };
 export default  function Home ({ data}) {
-   const amplitude = new Amplitude();
-    var amplitudeVersion = amplitude.__VERSION__;
-    console.log(amplitudeVersion)
+    var data = {
+        event_type: 'server-text-event',
+        user_id:'1234'
+    }
+    amplitude.track(data)
     return (
         <>
             <NextSeo
