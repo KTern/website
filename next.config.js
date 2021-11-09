@@ -9,7 +9,9 @@ module.exports = {
 	images: {
 		domains: ['storage.googleapis.com'],
 	},
-
+	generateBuildId: async () => {
+		return 'my-build-id';
+	},
 	headers() {
 		return [
 			{

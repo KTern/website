@@ -19,9 +19,6 @@ client.logEvent({
 		keyBool: true,
 	},
 });
-
-// Send any events that are currently queued for sending.
-// Will automatically happen on the next event loop.
 client.flush();
 
 export default function Home({ data }) {
