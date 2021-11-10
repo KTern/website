@@ -276,7 +276,7 @@ export default function About({ data }) {
             </div>
             <div className='grid grid-cols-1 mt-10 gap-14 lg:grid-cols-3'>
               {data.WhatWeDo.Steps.map((dt) => (
-                <div className='flex text-white'>
+                <div key="dt" className='flex text-white'>
                   <svg
                     xmlns={dt.stepicon}
                     className='hidden md:block flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current'
@@ -338,7 +338,7 @@ export default function About({ data }) {
 
             <div className='grid grid-cols-12 gap-6 mb-6'>
               {data.RelatedResources.map((dt) => (
-                <div className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4'>
+                <div key="dt" className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4'>
                   <div className=''>
                     <Link href={dt.CTAUrl} passHref>
                       <a className='relative block w-full h-44 overflow-hidden rounded'>

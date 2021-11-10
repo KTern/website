@@ -159,7 +159,7 @@ export default function Resources({ resources_data }) {
                   
                   <input type='checkbox' id='vehicle1' name='vehicle1' value='Bike' />
                   {resources_data.StreamsFilter.map((dt) => (
-                    <label className='card-subheading' htmlFor='vehicle1'>
+                    <label key="dt" className='card-subheading' htmlFor='vehicle1'>
                       Digital Maps
                     </label>
                   ))}
@@ -440,7 +440,7 @@ export default function Resources({ resources_data }) {
 
                 
                 {resources_data.ResourcesList.map(dt=>(
-                    <div className='relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4'>
+                    <div key="dt" className='relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4'>
                     <div className=''>
                       <Link href='#_' passHref>
                         <a className='relative block w-full h-44 overflow-hidden rounded'>

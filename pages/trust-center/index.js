@@ -247,7 +247,7 @@ export default function TrustCenter({ data }) {
                 <div className='md:px-20 p-4 mx-auto max-w-7xl'>
                   <div className='grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20'>
                     {data.findinfotab1.cards.map((dt) => (
-                      <div>
+                      <div key="dt">
                         <div className=' block w-60 h-60 relative '>
                           <Image
                             layout='fill'
@@ -290,7 +290,7 @@ export default function TrustCenter({ data }) {
                 <div className='md:px-20 p-4 mx-auto max-w-7xl'>
                   <div className='grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20'>
                     {data.findinfotab2.cards.map((dt) => (
-                      <div>
+                      <div key="dt">
                         <div className=' block w-60 h-60 relative '>
                           <Image
                             layout='fill'
