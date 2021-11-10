@@ -129,7 +129,7 @@ export default function Resources({ resources_data }) {
               <h1 className='heading text-white '>{resources_data.PageHeader.header}</h1>
               <p className='subheading text-gray-100 pb-7'>{resources_data.PageHeader.subHeading} </p>
               <div className='md:flex md:flex-row'>
-                <Link rel='noopener noreferrer' href='{resources_data.PageHeader.primaryCTA.linkURL}'>
+                <Link rel='noopener noreferrer' href={resources_data.PageHeader.primaryCTA.linkURL}>
                   <a
                     target='_blank'
                     className='sm:mb-4 inline-block  mr-4  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button'
@@ -137,7 +137,7 @@ export default function Resources({ resources_data }) {
                     {resources_data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href='{resources_data.PageHeader.secondaryCTA.linkURL}'>
+                <Link href={resources_data.PageHeader.secondaryCTA.linkURL}>
                   <a className=' inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button'>
                     {resources_data.PageHeader.secondaryCTA.buttonTitle}
                   </a>
@@ -432,57 +432,14 @@ export default function Resources({ resources_data }) {
                 </div>
                 </div>
                 </div>
-            </section> 
+        </section>
+        
             </Layout>
             </>
     )
 }
 
                 
-                {resources_data.ResourcesList.map(dt=>(
-                    <div key="dt" className='relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4'>
-                    <div className=''>
-                      <Link href='#_' passHref>
-                        <a className='relative block w-full h-44 overflow-hidden rounded'>
-                          <div className='z-20  bg-maps-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block'>
-                            <span>Digital Maps</span>
-                          </div>
-                          <Image
-                            className='bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105'
-                            src='/product/maps/maps_1.svg'
-                            alt='resource'
-                            layout='fill'
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <div className=''>
-                      <p className='hyperlink text-gray-400  uppercase mb-4'>{dt.ResourceType}</p>
-                      <span className='block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 '>
-                        {dt.ResourceTitle}
-                      </span>
-                      <Link href='{dt.ResourceURL}' passHref>
-                        <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
-                          <span className='hyperlink group-hover:text-gray-300'>Read more</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
-                    </div>
-                ))}
 
 export const getServerSideProps = async () => {
     // strapi data to be acquired
