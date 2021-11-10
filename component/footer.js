@@ -1,73 +1,119 @@
-import Head from "next/head"
-import Image from "next/image";
-import Link from "next/link";
-export default function Footer ({footer_data}) {
-    return (
-        <>
-           
-    <section className="px-4 py-4 md:py-10 md:px-10 bg-black">
-        <div className="md:px-10 mx-auto ">
-            <div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
-                <div className="w-full  px-4">
-                    <div className="flex flex-wrap -mx-4">
-                        <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
-                            <ul className="">
-                                <li className="mb-2"><Link  href="/about-company"><a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a></Link></li>
-                                <li className="mb-2"><Link  href="/pricing"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
-                                <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a></Link></li>
-                                <li className="mb-2"><Link  href="/trust-center"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
-                                
-                            </ul>
-                        </div>
-                        <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
-                            <ul className="">
-                                <li className="mb-2"><Link  href="/digital-maps"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a></Link></li>
-                                    <li className="mb-2"><Link href="/digital-projects"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a></Link></li>
-                                     <li className="mb-2"><Link  href="/digital-process"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a></Link></li>
-                                <li className="mb-2"><Link  href="/digital-labs"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a></Link></li>
-                                <li className="mb-2"><Link  href="/digital-mines"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a></Link></li>
-                            </ul>
-                        </div>
-                             <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-2 navbar-h text-white">Resources</h3>
-                                <ul className="">
-                                    <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a></Link></li>
-                                <li className="mb-2"><Link  href="/webinars" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a></Link></li>
-                                <li className="mb-2"><Link  href="/article" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Articles</a></Link></li>
-                                <li className="mb-2"><Link  href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a></Link></li>
-                                    <li className="mb-2"><Link href="/resources" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Customer Success Stories </a></Link></li>
-                                    <li className="mb-2"><Link href="/trust-center" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a></Link></li>
-                                    <li className="mb-2"><Link href="/pricing" passHref><a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a></Link></li>
-                                    <li className="mb-2"><Link href="/docs" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Documentation</a></Link></li>
-                                    
-                                <li className="mb-2"><Link  href="https://live.ktern.com" passHref><a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">Cloud Live Status</a></Link></li>
-                               
-                            </ul>
-                        </div>
-                        <div className="w-1/2 lg:w-1/4 px-4 mb-12">
-                            <h3 className="mb-8 lg:mb-2 navbar-h text-white">Partner</h3>
-                            <ul className="">
-                                <li className="mb-2"><Link  href="/partners"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partners</a></Link></li>
-                                <li className="mb-2"><Link  href="/consulting-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Consulting Partner</a></Link></li>
-                                <li className="mb-2"><Link  href="/technology-partner"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Technology Partner</a></Link></li>
-                                    <li className="mb-2"><Link href="/partner-register"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Become a Partner</a></Link></li>
-                                    <li className="mb-2"><Link  href="/"><a className="navbar-s text-gray-200 hover:text-gray-100 ">Partner Portal</a></Link></li>
-                                
-                            </ul>
-                        </div>
-                        </div>
-                            <div className="flex">
-                                <Link href="https://store.sap.com/dcp/en/product/display-0000059068_live_v1/KTern.AI%20for%20SAP%20Digital%20Transformation%20Workplace">
-                                    <a className="">
-                    <div className=" ">
-                        <Image width={150} src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png" className="sm:w-20 mb-6 h-auto text-white " alt="Available on SAP Store"  height="50%"/>
-                        </div></a>
-                        </Link>
-                    
-                                <Link href="https://www.g2.com/products/ktern/reviews"><a target="_blank" className="mb-4 x-g2-link-home" title="G2"> <Image width="150px" height="50%" src="/g2.svg" alt="G2" /></a></Link>
-                    
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function Footer({ footer_data }) {
+	return (
+		<>
+			<section className="px-4 py-4 md:py-10 md:px-10 bg-black">
+				<div className="md:px-10 mx-auto ">
+					<div className="flex flex-wrap -mx-4  border-b border-gray-500 p">
+						<div className="w-full  px-4">
+							<div className="flex flex-wrap -mx-4">
+								<div className="w-1/2 lg:w-1/4 px-4 mb-12">
+									<h3 className="mb-8 lg:mb-2  text-white  navbar-h">Company</h3>
+									<ul className="">
+										<li className="mb-2">
+											<Link href="/about-company">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">About us</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/pricing">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Newsroom</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/trust-center">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a>
+											</Link>
+										</li>
+									</ul>
+								</div>
+								<div className="w-1/2 lg:w-1/4 px-4 mb-12">
+									<h3 className="mb-8 lg:mb-2 navbar-h text-white">Products</h3>
+									<ul className="">
+										<li className="mb-2">
+											<Link href="/digital-maps">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Maps</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/digital-projects">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Projects</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/digital-process">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Process</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/digital-labs">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Labs</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/digital-mines">
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Digital Mines</a>
+											</Link>
+										</li>
+									</ul>
+								</div>
+								<div className="w-1/2 lg:w-1/4 px-4 mb-12">
+									<h3 className="mb-8 lg:mb-2 navbar-h text-white">Resources</h3>
+									<ul className="">
+										<li className="mb-2">
+											<Link href="/resources" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Resource Library</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/webinars" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Webinars</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/article" passHref>
+												<a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">
+													Articles
+												</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/resources" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">E-Books</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/resources" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">
+													Customer Success Stories{' '}
+												</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/trust-center" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Trust Center</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/pricing" passHref>
+												<a className="navbar-s text-gray-200 hover:text-gray-100 ">Pricing</a>
+											</Link>
+										</li>
+										<li className="mb-2">
+											<Link href="/docs" passHref>
+												<a target="_blank" className="navbar-s text-gray-200 hover:text-gray-100 ">
+													Documentation
+												</a>
+											</Link>
+										</li>
 
 										<li className="mb-2">
 											<Link href="https://live.ktern.com" passHref>
