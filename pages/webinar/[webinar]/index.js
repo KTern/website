@@ -156,7 +156,7 @@ export default function WebinarLanding ({ webinar_Data }) {
     />      
         <Layout>
                  <section className="relative sm:mb-20" >
-            <div className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.cssStreamTag}-primary opacity-30`}></div>
+            <div className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.CssStreamTag}-primary opacity-30`}></div>
         
             <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
                 <div className="flex flex-wrap text-white">
@@ -203,12 +203,12 @@ export default function WebinarLanding ({ webinar_Data }) {
                         </div>
             </div>
             </section>
-            <section className="w-full px-8 pt-20 py-10 bg-white xl:px-8">
-                    <div className="max-w-5xl mx-auto">
+            <section className="w-full px-3 pt-20 py-10 bg-white xl:px-3">
+                    <div className=" mx-auto">
                         <div className="flex flex-col items-start md:flex-row">
 
                             <div className="w-full space-y-5 md:w-3/5 md:pr-16">
-                                <p className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.cssStreamTag}-primary`} >
+                                <p className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.CssStreamTag}-primary`} >
                                 <Link href="#_"  rel="category">
                                    <a className="text-black hyperlink uppercase" > {webinar_Data.DigitalStream}</a>
                                 </Link>
