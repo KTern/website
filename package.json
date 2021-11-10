@@ -16,7 +16,7 @@
         "ical-generator": "3.0.1",
         "isomorphic-fetch": "2.2.1",
         "js-cookie": "2.2.1",
-        "next": "^12.0.3",
+        "next": "11.1.0",
         "next-seo": "4.28.1",
         "nextjs-breadcrumbs": "^1.1.9",
         "nextjs-cors": "2.1.0",
