@@ -218,9 +218,9 @@ export default function WebinarLanding ({ webinar_Data }) {
                                 <h2 className=" card-heading  text-black sm: md:">
                                 You&apos;ll Learn
                                 </h2>
-                                <ol type="1" className="w-full rounded-lg mt-2 mb-3 text-black">
-                                {webinar_Data.LearningPoints.map((content) => (
-                                    <li className="mb-2" key="content">
+                                <ul type="circle" className="w-full rounded-lg mt-2 mb-3 text-black">
+                                {webinar_Data.LearningPoints.map((content,index) => (
+                                    <li className="mb-2" key="index">
                                         <div className="w-fill flex  text-gray-600 md:pr-16">
                                             {/* <div className=" block w-4 h-4 relative flex-none">
                                                 <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
@@ -229,7 +229,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                                         </div>
                                     </li>
                                 ))}
-                                 </ol>
+                                 </ul>
                                    
                             </div>
 
