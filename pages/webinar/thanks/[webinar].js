@@ -11,7 +11,7 @@ import ICalendarLink from "react-icalendar-link";
 
 export default function Thanks ({webinar_data})
 {
-    var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
+    // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
     const start = new Date(webinar_data.start)
     const end=new Date(webinar_data.start).setHours(start.getHours()+1)
     

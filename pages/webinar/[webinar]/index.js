@@ -10,7 +10,9 @@ import { EventJsonLd } from 'next-seo';
 
 import { useRouter } from 'next/router';
 export default function WebinarLanding ({ webinar_Data }) {
-
+    const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time)
+    const time =date.toLocaleString('en-US', { hour: 'numeric', hour12: true ,minute:'numeric'})
+   
     const router = useRouter();
     const handleSearch = (event) => {
         console.log("clicked" +webinar_Data.Type+event, router.query)
@@ -184,7 +186,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                             <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
                             </div>
                             <div>
-                            <h3 className="sm:text-center hyperlink">{webinar_Data.Time}</h3>
+                            <h3 className="sm:text-center hyperlink">{time}</h3>
                             <p className="sm:text-center hyperlink">{webinar_Data.TimeZone}</p>
                             
                             </div>
@@ -214,7 +216,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                             <h2 className=" card-heading  text-black sm: md:">
                                 About
                             </h2>
-                            <p className=" text-gray-600 card-subheading md:pr-16">{ webinar_Data.About}</p>
+                            <p className=" text-gray-600 card-subheading md:pr-16 text-justify">{ webinar_Data.About}</p>
                                 <h2 className=" card-heading  text-black sm: md:">
                                 You&apos;ll Learn
                                 </h2>
@@ -225,7 +227,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                                             {/* <div className=" block w-4 h-4 relative flex-none">
                                                 <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                             </div> */}
-                                            <span className="ml-2 card-subheading" title="Point 1" >{content.listItem}</span>
+                                            <span className="ml-2 card-subheading" title="Point 1" > <span className="bg-secondary rounded-full px-2 py-1 mr-3"><b>{index +1}</b></span>&nbsp;&nbsp;{content.listItem}</span>
                                         </div>
                                     </li>
                                 ))}

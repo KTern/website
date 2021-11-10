@@ -29,9 +29,7 @@ client.flush();
 
 function Home ({ data }) {
 	
-	// frebase
-	const AuthUser = useAuthUser()
-	console.log("Auth",AuthUser)
+	
 	return (
 		<>
 			<NextSeo
@@ -809,7 +807,6 @@ function Home ({ data }) {
 }
 
 export const getServerSideProps = async () => {
-	withAuthUserTokenSSR()()
 	const res = await fetch('https://api.ktern.com/index', {
 		method: 'get',
 	});
@@ -821,4 +818,4 @@ export const getServerSideProps = async () => {
 		},
 	};
 };
-export default withAuthUser()(Home)
+export default Home

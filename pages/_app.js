@@ -2,8 +2,7 @@
 import '../styles/globals.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import initAuth from '../auth'
-initAuth();
+
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
