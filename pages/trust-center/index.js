@@ -335,7 +335,7 @@ export default function TrustCenter({ data }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://api.ktern.com/trust-center", {
     method: "get",
   });

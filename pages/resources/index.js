@@ -486,17 +486,11 @@ export default function Resources({ resources_data }) {
 
 export const getServerSideProps = async () => {
     // strapi data to be acquired
-    let data={a:'ab'}
-    return {
-        props:{resources_data:data}
-    }
-}
-
-export const getStaticProps = async () => {
-  // strapi data to be acquired
-  const res = await fetch("https://api.ktern.com/resources");
+   const res = await fetch("https://api.ktern.com/resources");
   const data = await res.json();
   return {
     props: { resources_data: data },
   };
-};
+}
+
+
