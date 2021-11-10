@@ -218,7 +218,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                                 <h2 className=" card-heading  text-black sm: md:">
                                 You&apos;ll Learn
                                 </h2>
-                                <ol type="1" className="w-foll rounded-lg mt-2 mb-3 text-black">
+                                <ol type="1" className="w-full rounded-lg mt-2 mb-3 text-black">
                                 {webinar_Data.LearningPoints.map((content) => (
                                     <li className="mb-2" key="content">
                                         <div className="w-fill flex  text-gray-600 md:pr-16">
