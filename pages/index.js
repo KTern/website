@@ -22,24 +22,11 @@ client.logEvent({
 	},
 });
 import React from 'react'
-// firebase
-import {
-  useAuthUser,
-  withAuthUser,
-  withAuthUserTokenSSR,
-} from 'next-firebase-auth'
+
 // Send any events that are currently queued for sending.
 // Will automatically happen on the next event loop.
 client.flush();
-// remote config
-// import { getRemoteConfig,getValue  } from "firebase/remote-config";
 
-// const remoteConfig = getRemoteConfig();
-// remoteConfig.settings.minimumFetchIntervalMillis = 3600000;
-// remoteConfig.defaultConfig = {
-//   "welcome_message": "Welcome"
-// };
-// const val = getValue(remoteConfig, "welcome_messsage");
 function Home ({ data }) {
 	
 	// frebase
