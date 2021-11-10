@@ -811,7 +811,7 @@ export const getServerSideProps = async () => {
 		method: 'get',
 	});
 	const data = await res.json();
-	console.log('data', data);
+	// console.log('data', data);
 	return {
 		props: {
 			data: data,

@@ -126,14 +126,12 @@ const Customer_Success_Story_Landing = ({data}) => {
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <p className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    Customer Success Story
+                    {data.PageHeader.Tag}
                 </p>
-                    <h1 className="heading text-white "  >A comprehensive SAP S/4HANA Readiness Assessment using KTern</h1>
-                    <p className="subheading text-gray-100 pb-7 pt-2">Digitally Transform to SAP S/4HANA From SAP ECC</p>
+                    <h1 className="heading text-white "  >{data.PageHeader.header}</h1>
+                    <p className="subheading text-gray-100 pb-7 pt-2">{data.PageHeader.subHeading}</p>
                     <div className="flex flex-row">
-                    
-                   
-                    <Link  href=""><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">Download Case Study</a></Link>
+                    <Link  href="{data.PageHeader.primaryCTA.linkURL}"><a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
                
@@ -150,7 +148,7 @@ const Customer_Success_Story_Landing = ({data}) => {
                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1  rounded-lg"></span>
                             <div className="relative w-full h-full p-5 bg-white  rounded-lg">
                             <div className=" lg:block justify-end w-full pl-0 overflow-hidden ">
-            <Image width={500} height={400} alt="hero" src="/resources/metus.jpeg" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
+            <Image width={500} height={400} alt="hero" src="{data.CustomerLogoURL}" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
                             </div>
 

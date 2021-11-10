@@ -1,19 +1,36 @@
-
 module.exports = {
-  target: 'serverless',
+  target: "serverless",
   reactStrictMode: true,
   throwIfNamespace: false,
   optimizeImages:false,
   i18n: {
-    locales: [ 'en', 'de' ],
-    defaultLocale:'en'
+    locales: ["en", "de"],
+    defaultLocale: "en",
   },
   images: {
-      path: '/_next/image/', 
-      domains: ['storage.googleapis.com','logodix.com','ktern.com','tracking.g2crowd.com','a.storyblok.com','static.thenounproject.com','encrypted-tbn0.gstatic.com','cdn0.iconfinder.com','images.squarespace-cdn.com','cdn.devdojo.com','dummyimage.com','images.unsplash.com','cdn1.iconfinder.com','unsplash.com','s.clipartkey.com'],
+    domains: [
+      "storage.googleapis.com",
+      "logodix.com",
+      "ktern.com",
+      "tracking.g2crowd.com",
+      "a.storyblok.com",
+      "static.thenounproject.com",
+      "encrypted-tbn0.gstatic.com",
+      "cdn0.iconfinder.com",
+      "images.squarespace-cdn.com",
+      "cdn.devdojo.com",
+      "dummyimage.com",
+      "images.unsplash.com",
+      "cdn1.iconfinder.com",
+      "unsplash.com",
+      "s.clipartkey.com",
+      "web.ktern.com",
+      "w3.org",
+      "www.w3.org",
+    ],
   },
- 
-    headers () {
+
+  headers() {
     return [
       {
         // matching all API routes
@@ -27,5 +44,4 @@ module.exports = {
       }
     ]
   },
-   
-}
+};

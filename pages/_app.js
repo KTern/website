@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import '../styles/globals.css'
+require('../styles/globals.css') 
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
