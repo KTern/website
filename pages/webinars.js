@@ -5,7 +5,11 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-
+import {
+  useAuthUser,
+  withAuthUser,
+  withAuthUserTokenSSR,
+} from 'next-firebase-auth'
 export default function Webinar ({data}) {
     return (
         <>
@@ -140,7 +144,7 @@ export default function Webinar ({data}) {
                                         <span>Digital {data.FeaturedWebinar.tag}</span>
                                     </div>
                             <div className="block  w-full w-80 h-60 relative transition duration-200 ease-out transform hover:scale-110">
-                                    <Image layout="fill" alt="webinar" className="object-cover  h-32 sm:h-48" src={data.FeaturedWebinar.imageURL} />
+                                    {/* <Image layout="fill" alt="webinar" className="object-cover  h-32 sm:h-48" src={data.FeaturedWebinar.imageURL} /> */}
                                 </div>
                             </div>
                             <div className="flex flex-col justify-between flex-1 px-6 py-2 bg-white ">
@@ -241,11 +245,12 @@ export default function Webinar ({data}) {
                                                  <div className={`z-20  ${data.tagClass}  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}>
                                         <span>Digital {data.RelatedStream}</span>
                                     </div>
-                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.ImageURL} alt="resource" layout="fill"/>
+                                    <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.ImageURL} alt="resource" width="550" height="300"/>
                                     </a> 
                                     </Link>
                                     </div>
-                                    <div className="">
+        <Link href={data.PageURL} passHref>
+            <a>
                                     <p className="hyperlink text-gray-400  uppercase mb-4">Webinar</p>
                                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.WebinarTitle}</span>
                                 <Link href={data.PageURL}  passHref>
@@ -256,7 +261,8 @@ export default function Webinar ({data}) {
                                                 </svg>
                                                 </a>
                                             </Link>
-                                    </div>
+                                            </a>
+                                    </Link>
                                 </div>
 ))}
                             

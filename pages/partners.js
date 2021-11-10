@@ -220,7 +220,7 @@ export default function Partners ({data}) {
                 </section>
              
             {/* <!--Faq Section--> */}
-       <section className="py-10 bg-project-white">
+       <section className="py-10 bg-projects-white">
                     <h2 className="mb-2 section-heading  text-center">Frequently Asked Questions</h2>
                     <div className="flex space-x-10 p-10">
                         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">

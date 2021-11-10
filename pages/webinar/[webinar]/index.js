@@ -154,7 +154,7 @@ export default function WebinarLanding ({ webinar_Data }) {
     />      
         <Layout>
                  <section className="relative sm:mb-20" >
-            <div className={`absolute inset-0 bg-gradient-to-b ${webinar_Data.class} opacity-30`}></div>
+            <div className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.cssStreamTag}-primary opacity-30`}></div>
         
             <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
                 <div className="flex flex-wrap text-white">
@@ -206,7 +206,7 @@ export default function WebinarLanding ({ webinar_Data }) {
                         <div className="flex flex-col items-start md:flex-row">
 
                             <div className="w-full space-y-5 md:w-3/5 md:pr-16">
-                                <p className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded ${webinar_Data.categoryStyle}`} >
+                                <p className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.cssStreamTag}-primary`} >
                                 <Link href="#_"  rel="category">
                                    <a className="text-black hyperlink uppercase" > {webinar_Data.DigitalStream}</a>
                                 </Link>
@@ -218,38 +218,39 @@ export default function WebinarLanding ({ webinar_Data }) {
                                 <h2 className=" card-heading  text-black sm: md:">
                                 You&apos;ll Learn
                                 </h2>
-                                <ul className="w-full rounded-lg mt-2 mb-3 text-black">
+                                <ol type="1" className="w-foll rounded-lg mt-2 mb-3 text-black">
                                 {webinar_Data.LearningPoints.map((content) => (
                                     <li className="mb-2" key="content">
                                         <div className="w-fill flex  text-gray-600 md:pr-16">
-                                            <div className=" block w-4 h-4 relative flex-none">
+                                            {/* <div className=" block w-4 h-4 relative flex-none">
                                                 <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                            </div>
+                                            </div> */}
                                             <span className="ml-2 card-subheading" title="Point 1" >{content.listItem}</span>
                                         </div>
                                     </li>
                                 ))}
-                                 </ul>
-                                    <h2 className="card-heading   text-black sm: md:">
+                                 </ol>
+                                   
+                            </div>
+
+                            <div className="w-full mt-16 md:mt-0 md:w-2/5">
+                                <div className="mb-14"> <h2 className="card-heading   text-black sm: md:">
                                     Your Panelists
                                 </h2>
                                     <div className="flex items-center  p-5 rounded-xl">
                                 {webinar_Data.Panelists.map(member => (
-                                    <div className="text-center pr-6 " key={member} >
-                                            <div className=" block w-40 h-40 relative ">
-                                                <Image layout="fill" className="mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.AvatarURL} alt=""/>
-                                            </div>
-                                            <h3 className="mb-1   card-heading">{member.Name}</h3>
+                                    <div className="text-center " key={member} >
+                                           
+                                                <Image width="150" height="150" className="mx-auto rounded-full mb-2  border-3 border-black border-solid" src={member.AvatarURL} alt=""/>
+                                           
+                                            <h3 className="   card-heading">{member.Name}</h3>
                                             <p className="text-gray-500 card-subheading">{member.Description}</p>
                                     </div>
                                 ))}
 
                     
 
-                                    </div>
-                            </div>
-
-                            <div className="w-full mt-16 md:mt-0 md:w-2/5">
+                                    </div></div>
                                 <div className="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
                                     <h3 className="mb-6 card-heading  text-center">Register for the Webinar</h3>
                                     <div className="relative w-full mt-6 space-y-8">
@@ -314,7 +315,7 @@ export const getServerSideProps = async ({params}) => {
     // data url from strapi)
     const res = await fetch(`https://api.ktern.com/webinars?slug=${params.webinar}`,{method:'get'});
     const data = await res.json();
-    console.log("data",data[0].LearningPoints)
+    console.log("data",data[0])
     return {
         props: {
             webinar_Data:data[0]

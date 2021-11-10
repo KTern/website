@@ -138,7 +138,7 @@ export default function Feature_Landing ({feature_data}) {
         </Head>
             <Layout>
                
-                <section className="w-full py-20 bg-project-secondary" >
+                <section className="w-full py-20 bg-projects-secondary" >
                    
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                         <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
@@ -214,7 +214,7 @@ export default function Feature_Landing ({feature_data}) {
             <div className="flex flex-col md:p-20  md:mx-auto md:space-y-12  ">
                <div className="flex mb-8 animated mx-auto fadeIn md:space-x-20">
                     <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
-                        <p className=" hyperlink  text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink  text-left text-projects-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Center</h3>
                         <p className="mt-2 card-subheading text-gray-700  md:text-left">Gain Information on each custom program in the Custom code center. KTern assigns a Impact, Optimization and a Security Score based on the Custom program. </p>
                     </div>
@@ -241,14 +241,14 @@ export default function Feature_Landing ({feature_data}) {
                     </div>
                     </div>
                  <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
-                        <p className=" hyperlink  text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink  text-left text-projects-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">Custom Code Lab</h3>
                         <p className="mt-2 card-subheading text-gray-700">Gain AI-based custom code insights from Custom Code Lab, with access to a development environment to edit the code manually.</p>
                     </div>
                 </div>
                  <div className="flex mb-8 animated mx-auto fadeIn md:space-x-20">
                    <div className="flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 ">
-                        <p className=" hyperlink   text-left text-project-primary uppercase">Custom Code Remediation</p>
+                        <p className=" hyperlink   text-left text-projects-primary uppercase">Custom Code Remediation</p>
                         <h3 className=" card-heading sm:text-left">AI Powered Remediation Engine</h3>
                         <p className="mt-2 card-subheading text-gray-700 md:text-left">Auto Recommended Remediation Suggestions that can be applied at the click of a button recording as an transport request in your SAP System.</p>
                     </div>
@@ -452,7 +452,7 @@ export default function Feature_Landing ({feature_data}) {
 
  {/* <!--Faq Section--> */}
                 
- <section className="py-10 bg-project-white">
+ <section className="py-10 bg-projects-white">
                     <h2 className="mb-2 section-heading  text-center">Frequently Asked Questions</h2>
                     <div className="flex space-x-10 p-10">
                         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">

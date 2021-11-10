@@ -267,7 +267,7 @@ export default function Resources ({resources_data}) {
                                     <div className="">
                                     <Link href="#_" passHref>
                                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
-                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                     <div className="z-20  bg-projects-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
                                         <span>Digital Projects</span>
                                     </div>
                                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>
@@ -371,7 +371,7 @@ export default function Resources ({resources_data}) {
                                     <div className="">
                                     <Link href="#_" passHref>
                                     <a className="relative block w-full h-44 overflow-hidden rounded"> 
-                                     <div className="z-20  bg-project-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
+                                     <div className="z-20  bg-projects-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block">
                                         <span>Digital Projects</span>
                                     </div>
                                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="/product/maps/maps_1.svg" alt="resource" layout="fill"/>

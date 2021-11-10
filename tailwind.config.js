@@ -19,7 +19,7 @@ module.exports = {
       primary: '#0B1320',
       secondary: '#EAEDF2',
       white:'#ffffff',
-      project: {
+      projects: {
 
           primary: '#2666BA',
 
