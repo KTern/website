@@ -153,7 +153,7 @@ export default function Feature_Landing({ feature_data }) {
               <h1 className='heading'>{feature_data.PageHeader.header}</h1>
               <p className=' text-gray-500 pb-7 subheading'>{feature_data.PageHeader.subHeading}</p>
               <div className='md:flex md:flex-row  w-full sm:w-auto sm:flex-row md:space-x-10'>
-                <Link href='{feature_data.PageHeader.primaryCTA.linkURL}' passHref>
+                <Link href={feature_data.PageHeader.primaryCTA.linkURL} passHref>
                   <a className='sm:mb-4 button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200'>
                     {feature_data.PageHeader.primaryCTA.buttonTitle}
                   </a>
@@ -170,7 +170,7 @@ export default function Feature_Landing({ feature_data }) {
             <div className='hfeatureden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
-                src='{feature_data.PageHeader.ImageURL}'
+                src={feature_data.PageHeader.ImageURL}
                 alt='hero image'
                 width={600}
                 height={420}
@@ -185,9 +185,9 @@ export default function Feature_Landing({ feature_data }) {
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
             <div className='flex flex-wrap justify-center items-center'>
               {feature_data.WhyFeaturePoints.map((dt) => (
-                <div className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
                   <span className='flex items-center justify-center w-14 h-14 mb-8  rounded-full'>
-                    <Image src='{dt.Icon.imageURL}' alt='' width={150} height={150} />
+                    <Image src={dt.Icon.imageURL} alt='' width={150} height={150} />
                   </span>
                   <h3 className='mb-4  card-heading'>{dt.CardTitle}</h3>
                   <p className='card-subheading text-gray-500'>{dt.CardDescription}</p>
@@ -207,9 +207,9 @@ export default function Feature_Landing({ feature_data }) {
           </div>
 
           <div className='flex flex-col md:p-20  md:mx-auto md:space-y-12  '>
-            {feature_data.SubFeatures.map(dt, (index) => {
-              if (index % 2 === 0) {
-                <div className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
+            {feature_data.SubFeatures.map((dt, index) => {
+              return index % 2 == 0 ? (
+                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
                   <div className='flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 '>
                     <p className=' hyperlink  text-left text-project-primary uppercase'>{dt.Tag}</p>
                     <h3 className=' card-heading sm:text-left'>{dt.CardTitle}</h3>
@@ -246,9 +246,9 @@ export default function Feature_Landing({ feature_data }) {
                       </div>
                     </div>
                   </div>
-                </div>;
-              } else {
-                <div className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
+                </div>
+              ) : (
+                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
                   <div className='hfeatureden md:block relative flex items-center mb-8 w-1/2'>
                     <div className='relative' style={{ zIndex: 0 }}>
                       <div className=' relative '>
@@ -285,8 +285,8 @@ export default function Feature_Landing({ feature_data }) {
                     <h3 className=' card-heading sm:text-left'>{dt.CardTitle}</h3>
                     <p className='mt-2 card-subheading text-gray-700'>{dt.CardDescription}</p>
                   </div>
-                </div>;
-              }
+                </div>
+              );
             })}
           </div>
         </section>
@@ -304,11 +304,11 @@ export default function Feature_Landing({ feature_data }) {
 
             <div className='z-10 grid gap-5 md:grid-cols-6 lg:grid-cols-9'>
               {feature_data.OtherFeaturesCard.map((dt) => (
-                <div className='col-span-3 font-sans text-gray-700 bg-white '>
+                <div key = "dt" className='col-span-3 font-sans text-gray-700 bg-white '>
                   <div className='box-border flex flex-col items-start h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:flex-row sm:items-start sm:text-left'>
                     <div className='flex-shrink-0 p-3 font-sans text-gray-700 border border-gray-200 rounded-full'>
                       <svg
-                        xmlns='{dt.Icon.imageURL}'
+                        xmlns={dt.Icon.imageURL}
                         className='leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7'
                         viewBox='0 0 24 24'
                         strokeWidth='1.5'
@@ -367,13 +367,13 @@ export default function Feature_Landing({ feature_data }) {
             <div className='p-16 bg-black'>
               <div className='flex flex-wrap items-center -mx-10 -mb-10'>
                 {feature_data.Statistics.map((dt) => (
-                  <div className='w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center'>
+                  <div key = "dt" className='w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center'>
                     <span>
                       <svg
                         className='mx-auto mb-6 text-blue-800 h-8 w-8'
                         viewBox='0 0 32 32'
                         fill='currentColor'
-                        xmlns='{dt.Icon.imageURL}'
+                        xmlns={dt.Icon.imageURL}
                       >
                         <path d='M16 -0.0533447L0 15.7333L16 31.52L32 15.7333L16 -0.0533447ZM3.7708 15.7333L16 3.66718L21.172 8.77022L19.2864 10.6307L16 7.38888L7.5428 15.7333L10.828 18.9759L8.9424 20.8364L3.7708 15.7333ZM20.6876 15.7333L16 20.3596L11.3136 15.7333L16 11.1094L20.6876 15.7333ZM10.828 22.6968L12.7136 20.8364L16 24.0778L24.4584 15.7333L21.172 12.4907L23.0576 10.6303L28.2292 15.7333L16 27.7995L10.828 22.6968Z'></path>
                       </svg>
@@ -392,7 +392,7 @@ export default function Feature_Landing({ feature_data }) {
           <div className='flex space-x-10 p-10'>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto'>
               {feature_data.FAQ.map((dt) => (
-                <details className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
+                <details key = "dt" className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
                   <summary
                     className=' flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800'
                     style={{ listStyle: "none" }}
@@ -428,14 +428,14 @@ export default function Feature_Landing({ feature_data }) {
             </div>
 
             <div className='grid grid-cols-12 gap-6 mb-6'>
-              {stream_data.RelatedResourcesList.map((dt) => (
-                <div className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4'>
+              {feature_data.RelatedResourcesList.map((dt) => (
+                <div key = "dt" className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4'>
                   <div className=''>
                     <Link href='#_' passHref>
                       <a className='relative block w-full h-44 overflow-hidden rounded'>
                         <Image
                           className='bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105'
-                          src='{dt.Icon.imageURL}'
+                          src={dt.Icon.imageURL}
                           alt='resource'
                           layout='fill'
                         />
@@ -447,7 +447,7 @@ export default function Feature_Landing({ feature_data }) {
                     <span className='block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 '>
                       {dt.CardDescription}
                     </span>
-                    <Link href='{dt.CTAUrl}' passHref>
+                    <Link href={dt.CTAUrl} passHref>
                       <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
                         <span className='hyperlink group-hover:text-gray-300'>{dt.CTAText}</span>
                         <svg
@@ -455,7 +455,7 @@ export default function Feature_Landing({ feature_data }) {
                           fill='none'
                           stroke='currentColor'
                           viewBox='0 0 24 24'
-                          xmlns='http://www.w3.org/2000/svg'
+                          xmlns={dt.Icon.imageURL}
                         >
                           <path
                             strokeLinecap='round'
@@ -471,7 +471,7 @@ export default function Feature_Landing({ feature_data }) {
               ))}
             </div>
             <div className='text-center'>
-              <Link href='{feature_data.ViewAllResourcesURL}' passHref>
+              <Link href={feature_data.ViewAllResourcesURL} passHref>
                 <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
                   <span className='hyperlink group-hover:text-gray-300'>{feature_data.ViewAllResourcesText}</span>
                   <svg
@@ -549,26 +549,20 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
-  // const product = context.params.product;
-  // const feature = context.params.feature;
+export const getStaticProps = async ({ params }) => {
+  const streamslug = params.product;
+  const featureslug = params.feature;
 
-  const product = "6172db3746b141ff9e7f735e";
-  const feature = "6172dc6246b141ff9e7f736d"
-  // data url from strapi
-
-  // let token = await Authorization()
-  let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzExZDE3YzJhNTkzZWYwYzk1NmE3NCIsImlhdCI6MTYzNTkyNjExMSwiZXhwIjoxNjM4NTE4MTExfQ.C6iYVab6fMevTxWvkv4AEJdtC4yLXBcJ9fYWK3Xd7LQ"
-
-  const res = await fetch(`https://api.ktern.com/${product}/${feature}`,{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
-
-  console.log(res);
+  const res = await fetch(`https://api.ktern.com/features?streamslug=${streamslug}&featureslug=${featureslug}`, {
+    method: "get",
+  });
 
   const data = await res.json();
+  // console.log(data[0]);
 
   return {
     props: {
-      feature_data: data,
+      feature_data: data[0],
     },
   };
 };

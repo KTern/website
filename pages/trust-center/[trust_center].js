@@ -203,7 +203,7 @@ KTern uses a multi-tenant data model to host all its applications. Each applicat
 //     })
 //     return {
 //         paths,
-//         fallback:false
+//         fallback:true
 //     }
 // }
 // Fetch necessary data for the blog post using params.trust_center

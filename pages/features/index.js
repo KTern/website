@@ -12,7 +12,6 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
-import { Authorization ,getToken} from '../../auth';
 import { features } from "process";
 const Feature_index = ({data}) => {
     return (
@@ -553,10 +552,9 @@ const Feature_index = ({data}) => {
     )
 }
 export const getServerSideProps = async () => {
-    let token = await Authorization()
-    console.log("in features",token);
+    
     // data url from strapi)
-    const res = await fetch('https://api.ktern.com/all-features',{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch('https://api.ktern.com/all-features',{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {

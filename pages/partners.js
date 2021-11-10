@@ -145,12 +145,12 @@ export default function Partners({ data }) {
                 <span className=' subheading'>{data.PageHeader.subHeading}</span>{" "}
               </p>
               <div className='md:flex md:items-center md:space-x-4 sm:space-y-6'>
-                <Link href='{data.PageHeader.primaryCTA.linkURL}' passHref>
+                <Link href={data.PageHeader.primaryCTA.linkURL} passHref>
                   <a className='lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button '>
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href='{data.PageHeader.secondaryCTA.linkURL}' passHref>
+                <Link href={data.PageHeader.secondaryCTA.linkURL} passHref>
                   <a className=' inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button'>
                     {data.PageHeader.secondaryCTA.buttonTitle}
                     <svg className='inline-block w-2 ml-2' fill='currentColor' viewBox='0 0 12 12'>
@@ -163,7 +163,7 @@ export default function Partners({ data }) {
             <div className='hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
-                src='{data.PageHeader.ImageURL}'
+                src={data.PageHeader.ImageURL}
                 alt='hero image'
                 width={600}
                 height={420}
@@ -234,7 +234,7 @@ export default function Partners({ data }) {
               {data.FAQList.map((dt) => (
                 <details className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
                   <summary
-                    className=' flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800'
+                    className='flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800'
                     style={{ listStyle: "none" }}
                   >
                     <span className='card-subheading'>{dt.Question}</span>
@@ -269,57 +269,33 @@ export default function Partners({ data }) {
               <h2 className='mt-4 section-subheading text-white'>{data.PartnershipSteps.Description} </h2>
             </div>
             <div className='relative flex flex-wrap justify-center -mx-10 mb-5'>
-              {data.FAQList.map((dt, index) => {
-                if (index < data.PartnershipSteps.Steps.length) {
+              {data.PartnershipSteps.Steps.map((dt, index) => {
+                return index < data.PartnershipSteps.Steps.length - 1 && index % 2 == 0 ? (
+                  <div className='hidden lg:block absolute top-0 left-0 ml-72 -mt-18'>
+                    <Image width={200} height={100} src='/partner/dots-gray.svg' alt='' />
+                  </div>
+                ) : (
                   <div className='hidden lg:block absolute inset-y-0 -mr-80 -mt-18'>
                     <Image width={200} height={100} src='/partner/dots-gray.svg' alt='' />
-                  </div>;
-                }
+                  </div>
+                );
               })}
 
-              <div className='w-full lg:w-1/3 px-10 md:mt-20 md:mb-20 lg:mb-0'>
-                <div className='relative flex'>
-                  <div className='mr-8'>
-                    <span className='flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full'>
-                      1
-                    </span>
-                  </div>
-                  <div className='max-w-xs'>
-                    <h3 className='mb-6 card-heading text-white'>Reach Out</h3>
-                    <p className='card-subheading text-gray-200'>
-                      You can Fill this Form to Let us Know you are Interested .{" "}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className='w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0'>
-                <div className='flex'>
-                  <div className='mr-8'>
-                    <span className='flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full'>
-                      2
-                    </span>
-                  </div>
-                  <div className='max-w-xs'>
-                    <h3 className='mb-6 card-heading text-white'>Onboarding</h3>
-                    <p className='card-subheading text-gray-200'>Upon approval, a Partnership agreement is signed.</p>
+              {data.PartnershipSteps.Steps.map((dt, index) => (
+                <div className='w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0'>
+                  <div className='flex'>
+                    <div className='mr-8'>
+                      <span className='flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full'>
+                        2
+                      </span>
+                    </div>
+                    <div className='max-w-xs'>
+                      <h3 className='mb-6 card-heading text-white'>Onboarding</h3>
+                      <p className='card-subheading text-gray-200'>Upon approval, a Partnership agreement is signed.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='w-full lg:w-1/3 mt-20 px-10'>
-                <div className='flex'>
-                  <div className='mr-8'>
-                    <span className='flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full'>
-                      3
-                    </span>
-                  </div>
-                  <div className='max-w-xs'>
-                    <h3 className='mb-6 card-heading text-white'>Leverage KTern</h3>
-                    <p className='card-subheading text-gray-200'>
-                      A dedicated Partnership Manager will be handling your account
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -332,21 +308,19 @@ export default function Partners({ data }) {
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>
                 <h2 className='card-heading   tracking-tight text-white sm:text-4xl sm:leading-10'>
-                  {data.CTASection.CTATitle}
+                  {data.ctacard.CTATitle}
                 </h2>
-                <p className='w-full mt-5 card-subheading text-white '>
-                {data.CTASection.CTADescription}
-                </p>
+                <p className='w-full mt-5 card-subheading text-white '>{data.ctacard.CTADescription}</p>
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
-                <Link href='/pricing' passHref>
+                <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
-                    See Pricing
+                    {data.ctacard.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href='#' passHref>
+                <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
-                    Try it free
+                    {data.ctacard.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>
               </div>
@@ -358,13 +332,16 @@ export default function Partners({ data }) {
   );
 }
 export const getServerSideProps = async () => {
-    // data url from strapi
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
-    
-    return {
-        props: {
-            data:data
-        }
-    }
-}
+  // data url from strapi
+
+  const res = await fetch("https://api.ktern.com/partner-home", {
+    method: "get",
+  });
+  const data = await res.json();
+  // console.log(data);
+  return {
+    props: {
+      data: data,
+    },
+  };
+};

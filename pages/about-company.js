@@ -127,7 +127,7 @@ export default function About({ data }) {
               <h1 className='relative z-20   leading-none text-black heading  sm:text-center lg:text-left'>
                 {data.PageHeader.header}
                 <br />
-                <span className='mt-1 text-gray-400 heading lg:mt-0'>Transformation Success</span>
+                <span className='mt-1 text-gray-400 heading lg:mt-0'>{data.PageHeader.header2}</span>
               </h1>
               <p className='relative z-20 block mt-6 subheading text-black  sm:text-center lg:text-left'>
                 {data.PageHeader.subHeading}
@@ -135,11 +135,7 @@ export default function About({ data }) {
             </div>
             <div className='relative w-full px-5 rounded-lg cursor-pointer text-white lg:w-1/2 group xl:px-0'>
               <div className='absolute top-0 left-0 w-11/12 -mt-20 opacity-50'>
-                <svg
-                  className='w-full h-full ml-4 text-gray-400'
-                  viewBox='0 0 200 200'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
+                <svg className='w-full h-full ml-4 text-gray-400' viewBox='0 0 200 200' xmlns=''>
                   <path
                     fill='currentColor'
                     d='M45,-78C58.3,-70.3,69,-58.2,75.2,-44.4C81.3,-30.7,82.9,-15.3,83.5,0.4C84.2,16,83.8,32.1,76.5,43.9C69.2,55.7,55.1,63.3,41.2,69.4C27.3,75.4,13.6,80,-0.7,81.2C-15.1,82.5,-30.1,80.3,-41.2,72.6C-52.2,64.9,-59.2,51.6,-67.1,38.5C-75.1,25.5,-83.9,12.8,-83.8,0C-83.8,-12.7,-74.9,-25.4,-65.8,-36.4C-56.7,-47.4,-47.4,-56.7,-36.4,-65.7C-25.4,-74.7,-12.7,-83.5,1.6,-86.2C15.9,-89,31.8,-85.7,45,-78Z'
@@ -148,22 +144,13 @@ export default function About({ data }) {
                 </svg>
               </div>
               <div className='z-10 object-cover w-100 h-80 '>
-                <Image
-                  width={600}
-                  height={360}
-                  src='https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;h=1603&amp;q=80'
-                  alt=''
-                />
+                <Image width={600} height={360} src={data.PageHeader.ImageURL} alt='' />
               </div>
               <div className='absolute inset-0 flex items-center justify-center sm:mb-40'>
                 <Link href='/video' passHref>
                   <a className='flex items-center justify-center hover:bg-white bg-black rounded-full  '>
                     <span className='flex items-center justify-center w-20 h-20 bg-black rounded-full group-hover:text-black shadow-2xl group-hover:bg-white '>
-                      <svg
-                        className='w-auto h-8 ml-1   fill-current'
-                        viewBox='0 0 52 66'
-                        xmlns='http://www.w3.org/2000/svg'
-                      >
+                      <svg className='w-auto h-8 ml-1   fill-current' viewBox='0 0 52 66' xmlns=''>
                         <path
                           d='M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z'
                           fillRule='nonzero'
@@ -179,22 +166,17 @@ export default function About({ data }) {
         {/* <!-- Our Vision--> */}
         <section className='w-full px-8 py-20 xl:px-0 bg-white'>
           <div className='max-w-6xl mx-auto'>
-            <p className='mb-5 section-heading text-black '>Our Vision</p>
+            <p className='mb-5 section-heading text-black '>{data.vision.title}</p>
             <div className='flex flex-col md:flex-row'>
               <div className='w-full pr-5 md:w-6/12 xl:pr-12'>
-                <p className='section-subheading leading-normal text-gray-700 '>
-                  With technology at our core, we automate and manage your SAP investments and drive business
-                  productivity for the complete SAP ecosystem.
-                </p>
+                <p className='section-subheading leading-normal text-gray-700 '>{data.vision.statement1}</p>
               </div>
 
               <div className='w-full mt-5 md:mt-0 md:w-8/12 md:pl-2'>
-                <h3 className='mb-5 -mt-1 card-heading  '>
-                  To inspire and Democratize SAP Digital Transformation through our product offerings{" "}
-                </h3>
-                <Link href='#_' passHref>
+                <h3 className='mb-5 -mt-1 card-heading  '>{data.vision.statement2}</h3>
+                <Link href={data.vision.ctaurl} passHref>
                   <a className='inline-flex items-center pb-1  text-black hover:border-blue-500 group '>
-                    <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
+                    <span className='hyperlink group-hover:text-gray-400'>{data.vision.ctatext}</span>
                     <svg
                       className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
                       fill='none'
@@ -224,7 +206,7 @@ export default function About({ data }) {
                 <p className='mt-5 section-subheading text-left border-0 border-gray-200 '>{data.Values.Description}</p>
                 <div className='grid gap-4 mt-8 leading-7 border-0 border-gray-200 sm:mt-10 sm:gap-6 lg:mt-12 lg:gap-8'>
                   {data.Values.Steps.map((dt) => (
-                    <div className='box-border flex items-start text-gray-900 border-solid'>
+                    <div key='dt' className='box-border flex items-start text-gray-900 border-solid'>
                       <div className='flex items-center justify-center w-12 h-12 leading-7 bg-black border-0 border-gray-200 rounded-full'>
                         <p className='box-border m-0 text-xl text-white border-solid'>
                           <svg
@@ -232,7 +214,7 @@ export default function About({ data }) {
                             fill='none'
                             stroke='currentColor'
                             viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
+                            xmlns={dt.stepicon}
                           >
                             <path
                               strokeLinecap='round'
@@ -257,12 +239,7 @@ export default function About({ data }) {
               </div>
               <div className='hidden md:block w-full h-full overflow-hidden leading-7 text-gray-900 border-0 border-gray-200 lg:w-1/2'>
                 <div className='object-cover relative'>
-                  <Image
-                    width={600}
-                    height={700}
-                    src='https://images.unsplash.com/photo-1553484771-047a44eee27a?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1234&amp;h=1600&amp;q=80'
-                    alt=''
-                  />
+                  <Image width={600} height={700} src={data.valueimageurl} alt='' />
                 </div>
               </div>
             </div>
@@ -273,7 +250,7 @@ export default function About({ data }) {
           <div className='relative px-16 pt-10 pb-12 mx-auto max-w-7xl xl:px-16'>
             <svg
               className='relative z-10 w-16 mb-8 text-yellow-300 transform opacity-100 fill-current sm:w-20 -rotate-0 rotate rotate-3'
-              xmlns='http://www.w3.org/2000/svg'
+              xmlns={data.WhatWeDo.icon}
               viewBox='0 0 50 46'
             >
               <defs></defs>
@@ -301,7 +278,7 @@ export default function About({ data }) {
               {data.WhatWeDo.Steps.map((dt) => (
                 <div className='flex text-white'>
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
+                    xmlns={dt.stepicon}
                     className='hidden md:block flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current'
                     viewBox='0 0 24 24'
                     strokeWidth='1.5'
@@ -332,13 +309,14 @@ export default function About({ data }) {
         {/* <!-- Our Customers--> */}
         <section className='w-full py-10 pb-16 bg-secondary'>
           <div className='flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0'>
-            <p className='card-heading text-gray-400 uppercase'>Our customers</p>
+            <p className='card-heading text-gray-400 uppercase'>{data.ourcustomerstitle}</p>
             <div className='flex flex flex-wrap justify-center sm:flex-row space-x-16'>
               {data.TrustedByLogos.map((dt) => (
                 <svg
+                  key='dt'
                   className='w-auto h-12 mt-8 text-black fill-current'
                   viewBox='0 0 2418 2428'
-                  xmlns='http://www.w3.org/2000/svg'
+                  xmlns={dt.imageURL}
                 >
                   <g stroke='none' strokeWidth='1' fillRule='evenodd'>
                     <g fillRule='nonzero'>
@@ -355,18 +333,18 @@ export default function About({ data }) {
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
             <div className='flex justify-center w-full pb-5 mb-4 border-gray-200'>
-              <h2 className='section-heading  text-gray-800 '>Related Resources</h2>
+              <h2 className='section-heading  text-gray-800 '>{data.relatedresourcestitle}</h2>
             </div>
 
             <div className='grid grid-cols-12 gap-6 mb-6'>
               {data.RelatedResources.map((dt) => (
                 <div className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl rounded p-4'>
                   <div className=''>
-                    <Link href='#_' passHref>
+                    <Link href={dt.CTAUrl} passHref>
                       <a className='relative block w-full h-44 overflow-hidden rounded'>
                         <Image
                           className='bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105'
-                          src='{dt.Icon.imageURL}'
+                          src={dt.Icon.imageURL}
                           alt='resource'
                           layout='fill'
                         />
@@ -378,7 +356,7 @@ export default function About({ data }) {
                     <span className='block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 '>
                       {dt.CardTitle}
                     </span>
-                    <Link href='{dt.CTAUrl}' passHref>
+                    <Link href={dt.CTAUrl} passHref>
                       <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
                         <span className='hyperlink group-hover:text-gray-300'>{dt.CTAText}</span>
                         <svg
@@ -402,9 +380,9 @@ export default function About({ data }) {
               ))}
             </div>
             <div className='text-center'>
-              <Link href='#_' passHref>
+              <Link href={data.viewallresources.ctaurl} passHref>
                 <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
-                  <span className='hyperlink group-hover:text-gray-300'>View All Resources</span>
+                  <span className='hyperlink group-hover:text-gray-300'>{data.viewallresources.title}</span>
                   <svg
                     className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
                     fill='none'
@@ -433,21 +411,19 @@ export default function About({ data }) {
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>
                 <h2 className='card-heading   tracking-tight text-white sm:text-4xl sm:leading-10'>
-                  {data.CTASection.CTATitle}
+                  {data.ctacard.CTATitle}
                 </h2>
-                <p className='w-full mt-5 card-subheading text-white '>
-                {data.CTASection.CTADescription}
-                </p>
+                <p className='w-full mt-5 card-subheading text-white '>{data.ctacard.CTADescription}</p>
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
-                <Link href='/pricing' passHref>
+                <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
-                    See Pricing
+                    {data.ctacard.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href='#' passHref>
+                <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
-                    Try it free
+                    {data.ctacard.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>
               </div>
@@ -460,13 +436,17 @@ export default function About({ data }) {
 }
 
 export const getServerSideProps = async () => {
-    // data url from strapi
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
-    
-    return {
-        props: {
-            data:data
-        }
-    }
-}
+  const res = await fetch(`https://api.ktern.com/about-company`, {
+    method: "get",
+  });
+
+  const data = await res.json();
+
+  // console.log(data);
+
+  return {
+    props: {
+      data: data,
+    },
+  };
+};

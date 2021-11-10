@@ -147,7 +147,7 @@ export default function TrustCenter({ data }) {
             {/* <hr className="bg-black "/> */}
             <div className='grid grid-cols-1 mt-16 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20'>
               {data.TrustCenterCard.map((dt) => (
-                <div>
+                <div key='dt'>
                   <svg
                     className='w-10 h-10 text-blue-600'
                     fill='none'
@@ -161,10 +161,12 @@ export default function TrustCenter({ data }) {
 
                   <ul className='list-disc  text-gray-500 lg:'>
                     {dt.Points.map((en) => (
-                      <li className='pb-2 card-subheading'>{en.listItem}</li>
+                      <li key='en' className='pb-2 card-subheading'>
+                        {en.listItem}
+                      </li>
                     ))}
 
-                    <Link href='{dt.LearnMore.linkURL}' passHref>
+                    <Link href={dt.LearnMore.linkURL} passHref>
                       <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
                         <span className='hyperlink group-hover:text-gray-400'>{dt.LearnMore.buttonTitle}</span>
                         <svg
@@ -218,7 +220,7 @@ export default function TrustCenter({ data }) {
         {/* <!--Different Roles--> */}
         <section className='text-black body-font bg-white'>
           <div className='px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col'>
-            <h2 className='mb-5 section-heading  text-center md:'>Find Information Specific to your Role</h2>
+            <h2 className='mb-5 section-heading  text-center md:'>{data.findinfotitle}</h2>
             <div className='flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center'>
               <button
                 onClick={() => {
@@ -227,7 +229,7 @@ export default function TrustCenter({ data }) {
                 }}
                 className='sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 focus:border-indigo-500 text-gray-900  focus:text-indigo-500 tracking-wider rounded-t'
               >
-                <span className='hyperlink'>Customer</span>
+                <span className='hyperlink'>{data.findinfotab1.title}</span>
               </button>
 
               <button
@@ -237,114 +239,48 @@ export default function TrustCenter({ data }) {
                 }}
                 className='sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start focus:bg-gray-100 border-b-2 title-font  inline-flex items-center leading-none border-gray-200 text-gray-900 tracking-wider focus:border-indigo-500 focus:text-indigo-500'
               >
-                <span className='hyperlink'>Partner</span>
+                <span className='hyperlink'>{data.findinfotab2.title}</span>
               </button>
             </div>
             {isCustomerVisible && (
               <section className='pt-20 pb-32 bg-white'>
                 <div className='md:px-20 p-4 mx-auto max-w-7xl'>
                   <div className='grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20'>
-                    <div>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/cloud.png'
-                          alt=''
-                        />
+                    {data.findinfotab1.cards.map((dt) => (
+                      <div>
+                        <div className=' block w-60 h-60 relative '>
+                          <Image
+                            layout='fill'
+                            className='mx-auto  mb-6 object-cover border-2 border-black'
+                            src={dt.ImageURL}
+                            alt=''
+                          />
+                        </div>
+                        <h3 className='mb-2 card-heading  text-gray-900 lg:'>{dt.CardTitle}</h3>
+                        <p className=' text-gray-500 card-subheading'>
+                          {dt.CardDescription}
+                        </p>
+                        <Link href={dt.PageURL} passHref>
+                          <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
+                            <span className='hyperlink group-hover:text-gray-400'>{dt.PartnerTitle}</span>
+                            <svg
+                              className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
+                              fill='none'
+                              stroke='currentColor'
+                              viewBox='0 0 24 24'
+                              xmlns='http://www.w3.org/2000/svg'
+                            >
+                              <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth='2'
+                                d='M17 8l4 4m0 0l-4 4m4-4H3'
+                              ></path>
+                            </svg>
+                          </a>
+                        </Link>
                       </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Cloud Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
-
-                    <div className='overflow-hidden'>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/customer.png'
-                          alt=''
-                        />
-                      </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Customer Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
-
-                    <div>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/eula.png'
-                          alt=''
-                        />
-                      </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Ea Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -353,107 +289,41 @@ export default function TrustCenter({ data }) {
               <section className='pt-20 pb-32 bg-white'>
                 <div className='md:px-20 p-4 mx-auto max-w-7xl'>
                   <div className='grid grid-cols-1  md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20'>
-                    <div>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/cloud.png'
-                          alt=''
-                        />
+                    {data.findinfotab2.cards.map((dt) => (
+                      <div>
+                        <div className=' block w-60 h-60 relative '>
+                          <Image
+                            layout='fill'
+                            className='mx-auto  mb-6 object-cover border-2 border-black'
+                            src={dt.ImageURL}
+                            alt=''
+                          />
+                        </div>
+                        <h3 className='mb-2 card-heading  text-gray-900 lg:'>{dt.CardTitle}</h3>
+                        <p className=' text-gray-500 card-subheading'>
+                        {dt.CardDescription}
+                        </p>
+                        <Link href={dt.PageURL} passHref>
+                          <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
+                            <span className='hyperlink group-hover:text-gray-400'>{dt.PartnerTitle}</span>
+                            <svg
+                              className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
+                              fill='none'
+                              stroke='currentColor'
+                              viewBox='0 0 24 24'
+                              xmlns='http://www.w3.org/2000/svg'
+                            >
+                              <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth='2'
+                                d='M17 8l4 4m0 0l-4 4m4-4H3'
+                              ></path>
+                            </svg>
+                          </a>
+                        </Link>
                       </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Cloud Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
-
-                    <div className='overflow-hidden'>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/customer.png'
-                          alt=''
-                        />
-                      </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Customer Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
-
-                    <div>
-                      <div className=' block w-60 h-60 relative '>
-                        <Image
-                          layout='fill'
-                          className='mx-auto  mb-6 object-cover border-2 border-black'
-                          src='/trust-center/eula.png'
-                          alt=''
-                        />
-                      </div>
-                      <h3 className='mb-2 card-heading  text-gray-900 lg:'>Eula Agreement</h3>
-                      <p className=' text-gray-500 card-subheading'>
-                        Faster processing to help you build your applications quicker and with more efficiency.
-                      </p>
-                      <Link href='#_' passHref>
-                        <a className='inline-flex items-center pt-5  text-black hover:border-blue-500 group '>
-                          <span className='hyperlink group-hover:text-gray-400'>Learn More</span>
-                          <svg
-                            className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M17 8l4 4m0 0l-4 4m4-4H3'
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -466,10 +336,14 @@ export default function TrustCenter({ data }) {
 }
 
 export const getStaticProps = async () => {
-    // strapi data to be acquired
-    const res = await fetch("https://api.ktern.com/trust-center");
-    const data = await res.json();
-    return {
-      props: { resources_data: data },
-    };
+  const res = await fetch("https://api.ktern.com/trust-center", {
+    method: "get",
+  });
+  const data = await res.json();
+  // console.log("data", data);
+  return {
+    props: {
+      data: data,
+    },
   };
+};

@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
-import { Authorization ,getToken} from '../../../auth';
+
 export default function Thanks ({webinar_data})
 {
     
@@ -340,16 +340,16 @@ export default function Thanks ({webinar_data})
 //     })
 //     return {
 //         paths,
-//         fallback:false
+//         fallback:true
 //     }
 // }
 // Fetch necessary data for the blog post using params.webinar
 export const getServerSideProps = async ({params}) => {
-     let token = await Authorization()
+     
    
-    console.log("in features",token,params.webinar);
+    console.log("in features",params.webinar);
     // data url from strapi)
-    const res = await fetch(`https://api.ktern.com/webinars?WebinarURL=${params.webinar}`,{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch(`https://api.ktern.com/webinars?WebinarURL=${params.webinar}`,{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {

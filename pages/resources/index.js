@@ -304,6 +304,7 @@ export default function Resources({ resources_data }) {
                     </div>
                 ))}
 
+<<<<<<< HEAD
               </div>
             </div>
           </div>
@@ -343,6 +344,14 @@ export default function Resources({ resources_data }) {
       </Layout>
     </>
   );
+=======
+export const getServerSideProps = async () => {
+    // strapi data to be acquired
+    let data={a:'ab'}
+    return {
+        props:{resources_data:data}
+    }
+>>>>>>> 79ab919121821eff697d4e068338e533ad60c3ea
 }
 
 export const getStaticProps = async () => {

@@ -232,7 +232,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
 //     })
 //     return {
 //         paths,
-//         fallback:false
+//         fallback:true
 //     }
 // }
 // Fetch necessary data for the blog post using params.whitepaper

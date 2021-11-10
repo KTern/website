@@ -1,12 +1,9 @@
-[build]
-  command   = "npm run build"
-  functions = "out_functions"
-  publish   = "out_publish"
-
-[dev]
-  functions = "out_functions"
-  publish   = "out_publish"
-  # We manually set the framework to static, otherwise Netlify automatically
-  # detects Next.js and redirects do not work.
-  # Read more: https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
-  framework = "#static"
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.ktern.com/"
+  status = 200
+  force = true
+  conditions = {Role = ["admin", "cms"]}
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"

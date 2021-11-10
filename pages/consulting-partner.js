@@ -801,8 +801,7 @@ export default function Consultingpartner({data}){
 }
 export const getServerSideProps = async () => {
     // data url from strapi
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
+    let data={a:'ab'}
     
     return {
         props: {

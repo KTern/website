@@ -360,7 +360,7 @@ Our customer used KTern to assess their current SAP ECC system to determine the 
 //     })
 //     return {
 //         paths,
-//         fallback:false
+//         fallback:true
 //     }
 // }
 // Fetch necessary data for the blog post using params.id

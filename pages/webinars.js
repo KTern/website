@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-import { Authorization ,getToken} from '../auth';
+
 export default function Webinar ({data}) {
     return (
         <>
@@ -120,7 +120,7 @@ export default function Webinar ({data}) {
     />
     <Layout > 
         {/* <!--Upcoming Webinar Section--> */}
-        <div className="container mx-auto md:py-4">
+        <div className=" mx-auto md:py-4">
             <section className="w-full  bg-white py-12 pt-20  bg-secondary" >
             <div className="flex flex-col items-center justify-center md:mx-auto xl:flex-row md:max-w-7xl">
                 <div className="relative flex flex-col items-start justify-center w-full h-full max-w-2xl px-6 mx-auto xl:max-w-none xl:w-2/5">
@@ -288,10 +288,10 @@ export default function Webinar ({data}) {
 }
 export const getServerSideProps = async () => {
     // data url from strapi
-      let token = await Authorization()
+    
     
     // data url from strapi)
-    const res = await fetch("https://api.ktern.com/all-webinars",{method:'get',headers:new Headers({'Authorization':'Bearer '+token})});
+    const res = await fetch("https://api.ktern.com/all-webinars",{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {
