@@ -658,7 +658,7 @@ export default function DigitalStream({stream_data}) {
           </div>
           <Carousel className='bots flex p-10  ' responsive={responsive}>
             {stream_data.BotCards.map((dt) => (
-              <div
+              <div key="dt"
                 className={`p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-${stream_data.cssstreamtag}-400 text-center `}
               >
                 <p className='text-lg font-bold mt-7 mb-4'>{dt.CardTitle}</p>
