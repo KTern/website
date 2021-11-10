@@ -532,10 +532,10 @@ export const getStaticPaths = async () => {
   // dynamic route array values must be acquired here from strapi
   const data = [
     { product: "digital-maps", feature: "business-process-assessment" },
-    { product: "digital-maps", feature: "landscape-assessment" },
-    { product: "digital-maps", feature: "custom-objects-assessment" },
-    { product: "digital-maps", feature: "business-transformation-assessment" },
-    { product: "digital-maps", feature: "timeline-effort-estimation" },
+    // { product: "digital-maps", feature: "landscape-assessment" },
+    // { product: "digital-maps", feature: "custom-objects-assessment" },
+    // { product: "digital-maps", feature: "business-transformation-assessment" },
+    // { product: "digital-maps", feature: "timeline-effort-estimation" },
   ];
 
   const paths = data.map((index) => {
