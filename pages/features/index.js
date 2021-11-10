@@ -149,7 +149,7 @@ const Feature_index = ({data}) => {
             {/* sticky nav */}
             <section className="flex sm:space-x-2 md:space-x-10 justify-center items-center  sm:py-5 md:p-5 bg-white shadow-2xl  sticky z-10 md:top-16 sm:top-10 border-2">    
                 <Link  href="/features#digital-maps"><a className="hyperlink  uppercase hover:text-maps-primary">Digital Maps</a></Link>
-                <Link href="/features#digital-projects"><a  className="hyperlink  uppercase hover:text-project-primary">Digital Projects</a></Link>
+                <Link href="/features#digital-projects"><a  className="hyperlink  uppercase hover:text-projects-primary">Digital Projects</a></Link>
                 <Link  href="/features#digital-process"><a className="hyperlink  uppercase hover:text-process-primary">Digital Process</a></Link>
                 <Link  href="/features#digital-labs"><a className="hyperlink  uppercase hover:text-labs-primary">Digital Labs</a></Link>
                 <Link  href="/features#digital-mines"><a className="hyperlink  uppercase hover:text-mines-primary">Digital Mines</a></Link>
@@ -242,7 +242,7 @@ const Feature_index = ({data}) => {
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-project-secondary "></span>
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
                                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
@@ -258,8 +258,8 @@ const Feature_index = ({data}) => {
                                           
                                                 <Link href={feature.CTAUrl}   passHref>
                                 <a className="inline-flex items-center pb-1  text-black group ">
-                                <span className="hyperlink group-hover:text-project-primary">{feature.CTAText} </span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-project-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <span className="hyperlink group-hover:text-projects-primary">{feature.CTAText} </span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>

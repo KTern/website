@@ -6,11 +6,25 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-
+import React from "react";
+import ICalendarLink from "react-icalendar-link";
 
 export default function Thanks ({webinar_data})
 {
+    // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
+    const start = new Date(webinar_data.start)
+    const end=new Date(webinar_data.start).setHours(start.getHours()+1)
     
+    const event = {
+        title: webinar_data.WebinarTitle,
+        description:"",
+        startTime: start,
+        endTime:end,
+        location: "",
+        attendees: [
+           
+        ]
+    }
     const [ isVideoVisible, setIsVideoVisible ] = useState(true);
     const [ isSlideVisible, setIsSlideVisible ] = useState(false);
     return (
@@ -142,9 +156,12 @@ export default function Thanks ({webinar_data})
                             <Link  href="/" passHref>
                                 <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">Return Home</a>
                                 </Link>
-            
+           
           </div>
-          
+                            <ICalendarLink event={event} className="text-white">
+                                <div className="p-4">
+        Add to Calendar</div>
+      </ICalendarLink>;
         </div>
                 </div>
             </section>}
@@ -349,7 +366,7 @@ export const getServerSideProps = async ({params}) => {
    
     console.log("in features",params.webinar);
     // data url from strapi)
-    const res = await fetch(`https://api.ktern.com/webinars?WebinarURL=${params.webinar}`,{method:'get'});
+    const res = await fetch(`https://api.ktern.com/webinars?slug=${params.webinar}`,{method:'get'});
     const data = await res.json();
     console.log("data",data)
     return {

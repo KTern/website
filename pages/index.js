@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareAppJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
+
 var responsive = import('../pages/api/responsive.json');
+
 import * as Amplitude from '@amplitude/node';
 const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
 var client = Amplitude.init(AMPLITUDE_KEY);
@@ -19,12 +21,15 @@ client.logEvent({
 		keyBool: true,
 	},
 });
+import React from 'react'
 
 // Send any events that are currently queued for sending.
 // Will automatically happen on the next event loop.
 client.flush();
 
-export default function Home({ data }) {
+function Home ({ data }) {
+	
+	
 	return (
 		<>
 			<NextSeo
@@ -248,17 +253,11 @@ export default function Home({ data }) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										{/* <Image
+										<Image
 											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
 											alt="Digital maps"
 											height={30}
 											width={30}
-										/> */}
-										<Image
-											alt="The guitarist in the concert."
-											src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80"
-											width={30}
-											height={30}
 										/>
 									</span>
 									<h3 className="card-heading font-bold sm:sm-card-heading">
@@ -355,10 +354,10 @@ export default function Home({ data }) {
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[1].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[1].LandingPageURL} passHref>
-										<a className="inline-flex items-center pb-1  text-project-primary hover:border-blue-500 group ">
-											<span className="hyperlink group-hover:text-project-300"> Learn More </span>
+										<a className="inline-flex items-center pb-1  text-projects-primary hover:border-blue-500 group ">
+											<span className="hyperlink group-hover:text-projects-300"> Learn More </span>
 											<svg
-												className="w-5 h-6 mt-1 ml-2 group-hover:text-project-300"
+												className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-300"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -374,7 +373,7 @@ export default function Home({ data }) {
 										</a>
 									</Link>
 								</div>
-								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-project-secondary border-2 border-gray-800"></div>
+								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-projects-secondary border-2 border-gray-800"></div>
 							</div>
 							{/* <!-- Digital Process  --> */}
 							<div className="relative">
@@ -505,7 +504,7 @@ export default function Home({ data }) {
 								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
-											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
+											src={data.DigitalStreamsCards[4].StreamLogo.imageURL}
 											alt="Digital Mines"
 											height={30}
 											width={30}
@@ -819,3 +818,4 @@ export const getServerSideProps = async () => {
 		},
 	};
 };
+export default Home

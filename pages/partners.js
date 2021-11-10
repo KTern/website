@@ -181,7 +181,7 @@ export default function Partners({ data }) {
             </p>
             <div className='grid  w-full h-auto md:grid-cols-10 md:gap-24 gap-4 sm:mt-16 '>
               {data.PartnershipOpportunities.PartnerCard.map((dt) => (
-                <Link href='{dt.PageURL}' passHref>
+                <Link href={dt.PageURL} passHref>
                   <a className='bg-black relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-4'>
                     <div
                       className='block bg-white w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110'
@@ -206,13 +206,13 @@ export default function Partners({ data }) {
         {/* <!--KTern's Partners --> */}
         <section className='w-full py-10 pb-16 bg-secondary'>
           <div className='flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0'>
-            <p className='card-heading text-gray-400 uppercase'>Featured and Previously Seen On</p>
+            <p className='card-heading text-gray-400 uppercase'>{data.previouslyseenontitle}</p>
             <div className='flex flex flex-wrap justify-center sm:flex-row space-x-16'>
               {data.TrustedByLogos.map((dt) => (
-                <svg
+                <svg key = "dt"
                   className='w-auto h-12 mt-8 text-black fill-current'
                   viewBox='0 0 2418 2428'
-                  xmlns='http://www.w3.org/2000/svg'
+                  xmlns={dt.imageURL}
                 >
                   <g stroke='none' strokeWidth='1' fillRule='evenodd'>
                     <g fillRule='nonzero'>
@@ -228,11 +228,11 @@ export default function Partners({ data }) {
 
         {/* <!--Faq Section--> */}
         <section className='py-10 bg-project-white'>
-          <h2 className='mb-2 section-heading  text-center'>Frequently Asked Questions</h2>
+          <h2 className='mb-2 section-heading  text-center'>{data.faqtitle}</h2>
           <div className='flex space-x-10 p-10'>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto'>
               {data.FAQList.map((dt) => (
-                <details className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
+                <details key = "dt" className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
                   <summary
                     className='flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800'
                     style={{ listStyle: "none" }}
@@ -282,16 +282,16 @@ export default function Partners({ data }) {
               })}
 
               {data.PartnershipSteps.Steps.map((dt, index) => (
-                <div className='w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0'>
+                <div key = "dt" className='w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0'>
                   <div className='flex'>
                     <div className='mr-8'>
                       <span className='flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full'>
-                        2
+                        {index + 1}
                       </span>
                     </div>
                     <div className='max-w-xs'>
-                      <h3 className='mb-6 card-heading text-white'>Onboarding</h3>
-                      <p className='card-subheading text-gray-200'>Upon approval, a Partnership agreement is signed.</p>
+                      <h3 className='mb-6 card-heading text-white'>{dt.StepTitle}</h3>
+                      <p className='card-subheading text-gray-200'>{dt.StepDescription}</p>
                     </div>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function Partners({ data }) {
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
-                    {data.ctacard.SecondaryCTA.buttonTitle}
+                    {data.ctacard.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
@@ -338,7 +338,7 @@ export const getServerSideProps = async () => {
     method: "get",
   });
   const data = await res.json();
-  // console.log(data);
+  // console.log(data.PartnershipSteps.Steps);
   return {
     props: {
       data: data,

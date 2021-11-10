@@ -418,7 +418,7 @@ export default function About({ data }) {
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
-                    {data.ctacard.SecondaryCTA.buttonTitle}
+                    {data.ctacard.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
