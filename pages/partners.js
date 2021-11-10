@@ -181,7 +181,7 @@ export default function Partners({ data }) {
             </p>
             <div className='grid  w-full h-auto md:grid-cols-10 md:gap-24 gap-4 sm:mt-16 '>
               {data.PartnershipOpportunities.PartnerCard.map((dt) => (
-                <Link href={dt.PageURL} passHref>
+                <Link key = "dt" href={dt.PageURL} passHref>
                   <a className='bg-black relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group sm:col-span-12 md:col-span-4'>
                     <div
                       className='block bg-white w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110'
