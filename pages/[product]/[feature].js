@@ -507,7 +507,7 @@ export default function Feature_Landing({ feature_data }) {
         {/* <!-- Footer CTA Features Page --> */}
         <section className='bg-white'>
           <div className='md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl'>
-            <div className={`relative py-6 overflow-hidden  bg-gradient-to-r from-black to-${stream_data.cssstreamtag}-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}>
+            <div className={`relative py-6 overflow-hidden  bg-gradient-to-r from-black to-${feature_data.cssstreamtag}-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}>
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>
