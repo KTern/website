@@ -10,75 +10,84 @@ const Ebook_Landing = ({data}) => {
     return (
         <>
             <NextSeo
-                title="Simple Usage Example"
-                description="A short description goes here."
-                canonical="https://www.canonical.ie/"
-                
-                openGraph={{
-                    url: 'https://www.url.ie/a',
-                    title: 'Open Graph Title',
-                    description: 'Open Graph Description',
-                    type: 'book',
-                    book: {
-          releaseDate: '2018-09-17T11:08:13Z',
-          authors: [
-            'https://www.example.com/authors/@firstnameA-lastnameA',
-            'https://www.example.com/authors/@firstnameB-lastnameB',
-          ],
-          tags: ['Tag A', 'Tag B', 'Tag C'],
-        },
-                    images: [
-          {
-            url: 'https://www.test.ie/images/book.jpg',
-            width: 850,
-            height: 650,
-            alt: 'Cover of the book',
-          },
-        ],
-                    site_name: 'SiteName',
-                }}
-                twitter={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                }}
-                facebook={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                    appId: '1234567890',
-                }}
-                languageAlternates={[{
-                    hrefLang: 'de',
-                    href: 'https://www.canonical.ie/de',
-                } ]}
-                additionalMetaTags={[{
-                    property: 'dc:creator',
-                    content: 'Jane Doe'
-                    }, {
-                    name: 'application-name',
-                    content: 'NextSeo'
-                    }, {
-                    httpEquiv: 'x-ua-compatible',
-                    content: 'IE=edge; chrome=1'
-                    } ]}
-                additionalLinkTags={[
-                    {
-                        rel: 'icon',
-                        href: 'https://www.test.ie/favicon.ico',
-                    },
-                    {
-                        rel: 'apple-touch-icon',
-                        href: 'https://www.test.ie/touch-icon-ipad.jpg',
-                        sizes: '76x76'
-                    },
-                    {
-                        rel: 'manifest',
-                        href: '/manifest.json'
-                    }
-                ]}
-                 
-    />
+				title={data.PageSEO.PageTitle}
+				description={data.PageSEO.PageDescription}
+				canonical={data.PageSEO.CanonicalTag}
+				openGraph={{
+					url: `${data.PageSEO.ThumbnailImageURL}`,
+					title: `${data.PageSEO.PageTitle}`,
+					description: `${data.PageSEO.PageDescription}`,
+					images: [
+						{
+							url: 'https://www.example.ie/og-image-01.jpg',
+							width: 800,
+							height: 600,
+							alt: 'Og Image Alt',
+							type: 'image/jpeg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-02.jpg',
+							width: 900,
+							height: 800,
+							alt: 'Og Image Alt Second',
+							type: 'image/jpeg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-03.jpg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-04.jpg',
+						},
+					],
+					site_name: 'SiteName',
+				}}
+				twitter={{
+					handle: '@handle',
+					site: '@site',
+					cardType: 'summary_large_image',
+				}}
+				facebook={{
+					handle: '@handle',
+					site: '@site',
+					cardType: 'summary_large_image',
+					appId: '1234567890',
+				}}
+				languageAlternates={[
+					{
+						hrefLang: 'de',
+						href: 'https://www.canonical.ie/de',
+					},
+				]}
+				additionalMetaTags={[
+					{
+						property: 'dc:creator',
+						content: 'Jane Doe',
+					},
+					{
+						name: 'application-name',
+						content: 'NextSeo',
+					},
+					{
+						httpEquiv: 'x-ua-compatible',
+						content: 'IE=edge; chrome=1',
+					},
+				]}
+				additionalLinkTags={[
+					{
+						rel: 'icon',
+						href: 'https://www.test.ie/favicon.ico',
+					},
+					{
+						rel: 'apple-touch-icon',
+						href: 'https://www.test.ie/touch-icon-ipad.jpg',
+						sizes: '76x76',
+					},
+					{
+						rel: 'manifest',
+						href: '/manifest.json',
+					},
+				]}
+			/>
 <BreadcrumbJsonLd
       itemListElements={[
         {
@@ -126,18 +135,18 @@ const Ebook_Landing = ({data}) => {
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
                 <div className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
-                    {data.Tag}
+                    {data.PageHeader.Tag}
                 </div>
                     <h1 className="heading text-white "  >{data.PageHeader.header}</h1>
                     <p className="subheading text-gray-100 pb-7 pt-2">{data.PageHeader.subHeading}</p>
                     <div className="flex flex-row">
                     
                    
-                    <Link  href="{data.PageHeader.primaryCTA.linkURL}"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.primaryCTA.buttonTitle}</a></Link>
+                    <Link  href={data.PageHeader.primaryCTA.linkURL}><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
 <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-            <Image width={500} height={500} alt="hero" src="{data.PageHeader.primaryCTA.imageURL}" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
+            <Image width={500} height={500} alt="hero" src={data.PageHeader.ImageURL} className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
                
             </div>
@@ -150,7 +159,7 @@ const Ebook_Landing = ({data}) => {
                             <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                                 <div className="relative max-w-md">
                                       <div className="pb-16 mb-8 border-b border-gray-400">
-                                      <Link href="{data.GoBackToResources.LinkText}"  passHref>
+                                      <Link href={data.GoBackToResources.LinkURL}  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
                              <span className="hyperlink group-hover:text-gray-400">{data.GoBackToResources.LinkText}</span>
@@ -239,12 +248,13 @@ This blueprint will help you define the right plan, the right effort estimate, t
 export const getServerSideProps = async (context) => {
     
     const ebook = context.params.ebook;
-    const res = await fetch('https://api.ktern.com/ebooks/' + ebook);
+    const res = await fetch(`https://api.ktern.com/e-books?slug=${ebook}`);
     const data = await res.json();
+    console.log(data)
     return {
         props: {
-            url: ebook,
-            data: data
+            
+            data: data[0]
         }
     }
 }

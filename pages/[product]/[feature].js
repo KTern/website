@@ -141,24 +141,24 @@ export default function Feature_Landing({ feature_data }) {
         <script async src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
       </Head>
       <Layout>
-        <section className='w-full py-20 bg-project-secondary'>
+        <section className={`w-full py-20 bg-gradient-to-r from-${feature_data.cssStreamTag}-primary to-${feature_data.cssStreamTag}-secondary`}>
           <div className='flex flex-col items-center px-12 mx-auto lg:flex-row'>
             <div className='relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2'>
               {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
                     </div> */}
-              <p className='max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full '>
+              <p className={`max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-white rounded-full `}>
                 {feature_data.PageHeader.Tag}
               </p>
               <h1 className='heading'>{feature_data.PageHeader.header}</h1>
-              <p className=' text-gray-500 pb-7 subheading'>{feature_data.PageHeader.subHeading}</p>
+              <p className=' text-gray-600 pb-7 subheading'>{feature_data.PageHeader.subHeading}</p>
               <div className='md:flex md:flex-row  w-full sm:w-auto sm:flex-row md:space-x-10'>
                 <Link href={feature_data.PageHeader.primaryCTA.linkURL} passHref>
                   <a className='sm:mb-4 button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200'>
                     {feature_data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href='{feature_data.PageHeader.secondaryCTA.linkURL}' passHref>
+                <Link href={feature_data.PageHeader.secondaryCTA.linkURL} passHref>
                   <a className='flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block'>
                     <Image className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} />
                     <span className='button'>&nbsp;&nbsp;{feature_data.PageHeader.secondaryCTA.buttonTitle}</span>
@@ -167,7 +167,7 @@ export default function Feature_Landing({ feature_data }) {
               </div>
             </div>
 
-            <div className='hfeatureden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
+            <div className='hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
                 src={feature_data.PageHeader.ImageURL}
@@ -209,37 +209,43 @@ export default function Feature_Landing({ feature_data }) {
           <div className='flex flex-col md:p-20  md:mx-auto md:space-y-12  '>
             {feature_data.SubFeatures.map((dt, index) => {
               return index % 2 == 0 ? (
-                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
+                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-32'>
                   <div className='flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 '>
                     <p className=' hyperlink  text-left text-project-primary uppercase'>{dt.Tag}</p>
                     <h3 className=' card-heading sm:text-left'>{dt.CardTitle}</h3>
                     <p className='mt-2 card-subheading text-gray-700  md:text-left'>{dt.CardDescription}</p>
                   </div>
-                  <div className='hfeatureden md:block flex items-center mb-8 w-1/2 sm:order-last'>
+                  <div className='hidden md:block flex items-center mb-8 w-1/2 sm:order-last'>
                     <div className='relative' style={{ zIndex: 0 }}>
                       <div className=' '>
-                        <Image src='/features/custom-code-center.png' alt='' width={500} height={400} />
+                        <Image src={dt.Icon.imageURL} alt='' width={dt.Icon.width} height={dt.Icon.height} />
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "-2rem", right: "3rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/purple-up.svg' alt='' />
+                      <svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill={feature_data.topWing}/>
+</svg>
+
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "-2rem", right: "-2rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/wing-yellow-down.svg' alt='' />
+                      <svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill={feature_data.bottomWing}/>
+</svg>
+
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
                         <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
                         <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
@@ -248,32 +254,36 @@ export default function Feature_Landing({ feature_data }) {
                   </div>
                 </div>
               ) : (
-                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-20'>
-                  <div className='hfeatureden md:block relative flex items-center mb-8 w-1/2'>
+                <div key = "dt" className='flex mb-8 animated mx-auto fadeIn md:space-x-32'>
+                  <div className='hidden md:block relative flex items-center mb-8 w-1/2'>
                     <div className='relative' style={{ zIndex: 0 }}>
                       <div className=' relative '>
-                        <Image src='/features/custom-code-lab.png' alt='' width={500} height={400} />
+                        <Image src={dt.Icon.imageURL} alt=''  width={dt.Icon.width} height={dt.Icon.height}/>
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "-2rem", right: "3rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/purple-up.svg' alt='' />
+                        <svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z" fill={feature_data.topWing}/>
+</svg>
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "-2rem", right: "-2rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/wing-yellow-down.svg' alt='' />
+                         <svg width="166" height="165" viewBox="0 0 166 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z" fill={feature_data.bottomWing}/>
+</svg>
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
                         <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
-                        className='animate-pulse hfeatureden md:block absolute w-60 h-40'
+                        className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
                         <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
@@ -281,7 +291,7 @@ export default function Feature_Landing({ feature_data }) {
                     </div>
                   </div>
                   <div className='flex flex-col justify-center mt-5 md:mb-8 md:mt-0 sm:w-full md:w-1/2 '>
-                    <p className=' hyperlink  text-left text-project-primary uppercase'>{dt.Tag}</p>
+                    <p className={` hyperlink  text-left text-${dt.cssStreamTag}-primary uppercase`}>{dt.Tag}</p>
                     <h3 className=' card-heading sm:text-left'>{dt.CardTitle}</h3>
                     <p className='mt-2 card-subheading text-gray-700'>{dt.CardDescription}</p>
                   </div>
@@ -291,7 +301,7 @@ export default function Feature_Landing({ feature_data }) {
           </div>
         </section>
         {/* <!-- Criss Cross Features End --> */}
-        <section className='box-border overflow-hidden relative w-full font-sans leading-6 text-gray-700 bg-white border-0 border-gray-200 border-solid bg-blue-50'>
+        <section className={`box-border overflow-hidden relative w-full font-sans leading-6 text-gray-700 bg-white border-0 border-gray-200 border-solid bg-${feature_data.cssStreamTag}-secondary`}>
           <div className='box-border flex flex-col items-center px-8 py-20 mx-auto leading-6 border-solid max-w-7xl xl:px-16 md:items-stretch md:justify-center md:py-24'>
             <div className='relative pb-10'>
               <h2 className='w-full m-0 section-heading font-black leading-loose tracking-wide text-center text-gray-700 border-0 border-gray-200 '>
@@ -337,7 +347,7 @@ export default function Feature_Landing({ feature_data }) {
 
           <div className='absolute top-0 left-0 -ml-56 opacity-25 w-96 h-96'>
             <svg
-              className='text-blue-500 opacity-50 fill-current w-88 h-88'
+              className={`text-${feature_data.cssStreamTag}-primary opacity-100 fill-current w-88 h-88`}
               viewBox='0 0 200 200'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -350,7 +360,7 @@ export default function Feature_Landing({ feature_data }) {
 
           <div className='absolute top-0 right-0 -mb-56 opacity-25 w-96 h-96 -mr-72'>
             <svg
-              className='w-full h-full text-blue-800 opacity-50 fill-current'
+              className={`w-full h-full text-${feature_data.cssStreamTag}-primary opacity-100 fill-current`}
               viewBox='0 0 200 200'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -497,7 +507,7 @@ export default function Feature_Landing({ feature_data }) {
         {/* <!-- Footer CTA Features Page --> */}
         <section className='bg-white'>
           <div className='md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl'>
-            <div className='relative py-6 overflow-hidden  bg-gradient-to-r from-black to-project-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000'>
+            <div className={`relative py-6 overflow-hidden  bg-gradient-to-r from-black to-${stream_data.cssstreamtag}-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}>
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>
@@ -507,7 +517,7 @@ export default function Feature_Landing({ feature_data }) {
                 <p className='w-full mt-5 card-subheading text-white '>{feature_data.FinalCTASection.CTADescription}</p>
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
-                <Link href='{feature_data.FinalCTASection.PrimaryCTA.linkURL}' passHref>
+                <Link href={feature_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
                   <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>

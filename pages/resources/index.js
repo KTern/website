@@ -5,12 +5,12 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
-export default function Resources({ resources_data }) {
+export default function Resources({ data }) {
   return (
     <>
       <NextSeo
-        title={resources_data.PageSEO.PageTitle}
-        description={resources_data.PageSEO.PageDescription}
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
         canonical='https://www.canonical.ie/'
         openGraph={{
           url: "https://www.url.ie/a",
@@ -124,22 +124,22 @@ export default function Resources({ resources_data }) {
           <div className='flex flex-col items-center px-12 mx-auto lg:flex-row'>
             <div className='relative z-20 flex flex-col  w-full h-full '>
               <p className='max-w-max px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full '>
-                {resources_data.PageHeader.Tag}
+                {data.PageHeader.Tag}
               </p>
-              <h1 className='heading text-white '>{resources_data.PageHeader.header}</h1>
-              <p className='subheading text-gray-100 pb-7'>{resources_data.PageHeader.subHeading} </p>
+              <h1 className='heading text-white '>{data.PageHeader.header}</h1>
+              <p className='subheading text-gray-100 pb-7'>{data.PageHeader.subHeading} </p>
               <div className='md:flex md:flex-row'>
-                <Link rel='noopener noreferrer' href={resources_data.PageHeader.primaryCTA.linkURL}>
+                <Link rel='noopener noreferrer' href={data.PageHeader.primaryCTA.linkURL}>
                   <a
                     target='_blank'
                     className='sm:mb-4 inline-block  mr-4  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button'
                   >
-                    {resources_data.PageHeader.primaryCTA.buttonTitle}
+                    {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link href={resources_data.PageHeader.secondaryCTA.linkURL}>
+                <Link href={data.PageHeader.secondaryCTA.linkURL}>
                   <a className=' inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button'>
-                    {resources_data.PageHeader.secondaryCTA.buttonTitle}
+                    {data.PageHeader.secondaryCTA.buttonTitle}
                   </a>
                 </Link>
               </div>
@@ -158,7 +158,7 @@ export default function Resources({ resources_data }) {
 
                   
                   <input type='checkbox' id='vehicle1' name='vehicle1' value='Bike' />
-                  {resources_data.StreamsFilter.map((dt) => (
+                  {data.StreamsFilter.map((dt) => (
                     <label key="dt" className='card-subheading' htmlFor='vehicle1'>
                       Digital Maps
                     </label>
@@ -239,7 +239,7 @@ export default function Resources({ resources_data }) {
                 </Link>
               </section>
               <div className='xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6'>
-                {/* {resources_data.map(resource=>(
+                {/* {data.map(resource=>(
                     {`absolute inset-0 bg-gradient-to-b ${data.class} opacity-30`}
                     <Link href="/webinars/webinar-1" passHref key="resource">
                                     <a className="flex flex-col items-start col-span-12 overflow-hidden shadow border  md:col-span-6 lg:col-span-4">
@@ -446,7 +446,7 @@ export const getServerSideProps = async () => {
    const res = await fetch("https://api.ktern.com/resources");
   const data = await res.json();
   return {
-    props: { resources_data: data },
+    props: { data: data },
   };
 }
 

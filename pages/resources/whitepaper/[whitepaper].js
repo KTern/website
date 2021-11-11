@@ -6,79 +6,88 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const WhitePaper_Landing = ({w_data}) => {
+const WhitePaper_Landing = ({data}) => {
     return (
         <>
-            <NextSeo
-                title="Simple Usage Example"
-                description="A short description goes here."
-                canonical="https://www.canonical.ie/"
-                openGraph={{
-                    url: 'https://www.url.ie/a',
-                    title: 'Open Graph Title',
-                                description: 'Open Graph Description',
-                    images: [
-                    {
-                        url: 'https://www.example.ie/og-image-01.jpg',
-                        width: 800,
-                        height: 600,
-                        alt: 'Og Image Alt',
-                        type: 'image/jpeg',
-                    },
-                    {
-                        url: 'https://www.example.ie/og-image-02.jpg',
-                        width: 900,
-                        height: 800,
-                        alt: 'Og Image Alt Second',
-                        type: 'image/jpeg',
-                    },
-                    { url: 'https://www.example.ie/og-image-03.jpg' },
-                    { url: 'https://www.example.ie/og-image-04.jpg' },
-                    ],
-                    site_name: 'SiteName',
-                }}
-                twitter={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                }}
-                facebook={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                    appId: '1234567890',
-                }}
-                languageAlternates={[{
-                    hrefLang: 'de',
-                    href: 'https://www.canonical.ie/de',
-                } ]}
-                additionalMetaTags={[{
-                    property: 'dc:creator',
-                    content: 'Jane Doe'
-                    }, {
-                    name: 'application-name',
-                    content: 'NextSeo'
-                    }, {
-                    httpEquiv: 'x-ua-compatible',
-                    content: 'IE=edge; chrome=1'
-                    } ]}
-                additionalLinkTags={[
-                    {
-                        rel: 'icon',
-                        href: 'https://www.test.ie/favicon.ico',
-                    },
-                    {
-                        rel: 'apple-touch-icon',
-                        href: 'https://www.test.ie/touch-icon-ipad.jpg',
-                        sizes: '76x76'
-                    },
-                    {
-                        rel: 'manifest',
-                        href: '/manifest.json'
-                    }
-                ]}
-                 
-    />
+           <NextSeo
+				title={data.PageSEO.PageTitle}
+				description={data.PageSEO.PageDescription}
+				canonical={data.PageSEO.CanonicalTag}
+				openGraph={{
+					url: `${data.PageSEO.ThumbnailImageURL}`,
+					title: `${data.PageSEO.PageTitle}`,
+					description: `${data.PageSEO.PageDescription}`,
+					images: [
+						{
+							url: 'https://www.example.ie/og-image-01.jpg',
+							width: 800,
+							height: 600,
+							alt: 'Og Image Alt',
+							type: 'image/jpeg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-02.jpg',
+							width: 900,
+							height: 800,
+							alt: 'Og Image Alt Second',
+							type: 'image/jpeg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-03.jpg',
+						},
+						{
+							url: 'https://www.example.ie/og-image-04.jpg',
+						},
+					],
+					site_name: 'SiteName',
+				}}
+				twitter={{
+					handle: '@handle',
+					site: '@site',
+					cardType: 'summary_large_image',
+				}}
+				facebook={{
+					handle: '@handle',
+					site: '@site',
+					cardType: 'summary_large_image',
+					appId: '1234567890',
+				}}
+				languageAlternates={[
+					{
+						hrefLang: 'de',
+						href: 'https://www.canonical.ie/de',
+					},
+				]}
+				additionalMetaTags={[
+					{
+						property: 'dc:creator',
+						content: 'Jane Doe',
+					},
+					{
+						name: 'application-name',
+						content: 'NextSeo',
+					},
+					{
+						httpEquiv: 'x-ua-compatible',
+						content: 'IE=edge; chrome=1',
+					},
+				]}
+				additionalLinkTags={[
+					{
+						rel: 'icon',
+						href: 'https://www.test.ie/favicon.ico',
+					},
+					{
+						rel: 'apple-touch-icon',
+						href: 'https://www.test.ie/touch-icon-ipad.jpg',
+						sizes: '76x76',
+					},
+					{
+						rel: 'manifest',
+						href: '/manifest.json',
+					},
+				]}
+			/>
 <BreadcrumbJsonLd
       itemListElements={[
         {
@@ -133,11 +142,11 @@ const WhitePaper_Landing = ({w_data}) => {
                     <div className="flex flex-row">
                     
                    
-                    <Link  href="{data.PageHeader.primaryCTA.linkURL}"><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
+                    <Link  href={data.PageHeader.primaryCTA.linkURL}><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
 <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-            <Image width={500} height={500} alt="hero" src="{data.PageHeader.ImageURL}" className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
+            <Image width={500} height={500} alt="hero" src={data.PageHeader.ImageURL} className="object-cover w-full h-full transform translate-x-0 md:translate-x-0" />
         </div>
                
             </div>
@@ -150,7 +159,7 @@ const WhitePaper_Landing = ({w_data}) => {
                             <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                                 <div className="relative max-w-md">
                                       <div className="pb-16 mb-8 border-b border-gray-400">
-                                      <Link href="{data.GoBackToResources.LinkURL}"  passHref>
+                                      <Link href={data.GoBackToResources.LinkURL}  passHref>
                                 <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
                             <Image width={40} alt="left-arrow" height={20} src="/resources/left-arrow.svg" className="w-10 h-10 pr-2"/>      
                              <span className="hyperlink group-hover:text-gray-400">{data.GoBackToResources.LinkText}</span>
@@ -239,11 +248,11 @@ This blueprint will help you define the right plan, the right effort estimate, t
 export const getServerSideProps = async (context) => {
     const id = context.params.whitepaper;
     // strapi data url to be acquired
-    const res = await fetch('https://api.ktern.com/whitepaper/' + whitepaper );
+    const res = await fetch(`https://api.ktern.com/whitepapers?slug=${id}`);
     const data = await res.json();
     return {
         
-        props:{w_data:data}
+        props:{data:data[0]}
     }
 }
 export default WhitePaper_Landing;

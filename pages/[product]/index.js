@@ -837,7 +837,7 @@ export default function DigitalStream({stream_data}) {
                 <p className='w-full mt-5 card-subheading text-white '>{stream_data.FinalCTASection.CTADescription}</p>
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
-                <Link href='{stream_data.FinalCTASection.PrimaryCTA.linkURL}' passHref>
+                <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
                   <a className=' border-2 border-black inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 '>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
