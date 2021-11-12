@@ -1,6 +1,19 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
+  trackVisitor()
+            { try
+            { 
+              if ($zoho)
+            { var LDTuvidObj = document.forms['WebToContacts240235000000441159']['LDTuvid'];
+            if (LDTuvidObj)
+            {LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid(); }
+            var firstnameObj = document.forms['WebToContacts240235000000441159']['First Name'];
+            if (firstnameObj)
+            {name = firstnameObj.value + ' ' + name; } $zoho.salesiq.visitor.name(name);
+            var emailObj = document.forms['WebToContacts240235000000441159']['Email'];
+            if (emailObj) {email = emailObj.value; $zoho.salesiq.visitor.email(email); } } }
+            catch (e) { } }
   render() {
     return (
       <Html>
@@ -21,7 +34,20 @@ export default class MyDocument extends Document {
           `,
             }}
           />
-          {/* <script async type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"f440e91b3668705fa583df5dbc6e74336a479d5c9175a86e330df6b09d955c51c217306de45b754907f8ee064f96a38d", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write(" id='zsiqwidget'></div>");</script> */}
+          <script type='text/javascript'
+            id='VisitorTracking'>
+            var $zoho = $zoho || { };
+            $zoho.salesiq = $zoho.salesiq ||
+            widgetcode: be16bb919ea6295023cd4a69cca11e6cce115f6ed8a4f421f0b5bd9c6a7baf8d, values: { }, ready: function () { } ;
+            var d = document;
+            s = d.createElement(script);
+            s.type = text/javascript;
+            s.id = zsiqscript;
+            s.defer = true;
+            s.src = https://salesiq.zoho.in/widget;
+            t = d.getElementsByTagName(script)[0];
+            t.parentNode.insertBefore(s, t);
+            </script>
         </Head>
         <body>
           <Main />

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareAppJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 var responsive = import('../pages/api/responsive.json');
 
 import * as Amplitude from '@amplitude/node';

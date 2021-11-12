@@ -434,10 +434,15 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         </div>
                                                </div>
                             </div>
-                        </li>
+                            </li>
+                             <li className="toggleable hover:bg-secondary ">
+                            <Link href="https://support.ktern.com/" passhref><a target="_blank" className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Support</a></Link>
+                            </li>
                         <li className="toggleable hover:bg-secondary ">
-                        <Link href="/about-company" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
-                        </li>
+                                <Link href="/about-company" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
+                                
+                            </li>
+                           
                     </ul>
                </div>
                     <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
@@ -605,8 +610,12 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                             </div>
                             </li>
                             <li className="toggleable hover:bg-secondary bg-white px-4">
+                               <Link href="https://support.ktern.com/" passhref><a target="_blank" htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">Support</a></Link>        
+                            </li>
+                            <li className="toggleable hover:bg-secondary bg-white px-4">
                                <Link href="/about-company"><a htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">Company</a></Link>        
                             </li>
+                             
                      </ul>
                 </div>
                 <div className="pt-6 flex-col space-y-6">

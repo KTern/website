@@ -197,40 +197,11 @@ export default function Webinar ({data}) {
                
                 <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
                     {/* <!-- On demand Filter Options--> */}
-                <div className="hidden md:block w-full md:w-1/5 md:px-4 mb-4 mt-10  md:mb-0">
-                    <form action="#" method="post" className="">
-                            <div className="mb-6">
-                                <h1 className="text-2xl mt-2 mb-2 card-heading">Streams</h1>
-                                    <hr className="mb-2" /></div>
-                           {data.DigitalStreamsFilter.map((data)=>( <div key="data" className="mb-6">
-                                <input type="checkbox" id={data.Id} name={data.Name} value={data.Value}/>
-                                <label className="card-subheading" htmlFor="vehicle1">{data.FilterName}</label><br/>
-                            </div>))}
-                           
-                        </form>          
-                    <form action="#" method="post" className="">
-                            <div className="mb-6">
-                                <h1 className="text-2xl mt-2 mb-2 card-heading">Role</h1>
-                                <hr className="mb-2"/></div>
-                                {data.RolesFilter.map((data) => (
-                                    <div key="data" className="mb-6">
-                                <input type="checkbox" name="field-name" value="example value" />
-                                <label>
-                                <span className="ml-1 card-subheading">Project Manager</span>
-                                </label>
-                                    </div>
-                                ))}
-                               
-                           
-                        </form>  
-                    </div>
+              
                 {/* <!-- On demand Webinar Card Display--> */}
            
-                    <div className="w-full md:w-4/5 md:pl-20 mb-4 md:mb-0  mt-10">
+                    <div className="w-full md:w-full md:pl-20 mb-4 md:mb-0  mt-10">
                         {/* Chips Section */}
-                         <section className=" flex sm:pt-5  pb-10 items-center justify-end">
-                          <input id="demo-2" style={{width:'35%'}} type="search" placeholder="Search"/>
-                        </section>
                        
                         <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
 {data.WebinarList.map(data=>(

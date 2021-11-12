@@ -27,6 +27,10 @@ export default function WebinarLanding({ webinar_Data }) {
       state: `${webinar_Data.IsOnDemandWebinar}`,
     });
   };
+  const dateFormat = new Date(webinar_Data.WebinarDate);
+  const formattedDate = dateFormat.toLocaleDateString();
+
+
   return (
     <>
       <NextSeo
@@ -194,7 +198,7 @@ export default function WebinarLanding({ webinar_Data }) {
                 </div>
                 <div>
                   <h3 className="sm:text-center hyperlink  lg:">
-                    {webinar_Data.WebinarDate}
+                    {formattedDate}
                   </h3>
                 </div>
               </div>
@@ -240,8 +244,7 @@ export default function WebinarLanding({ webinar_Data }) {
                   className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.CssStreamTag}-primary`}
                 >
                   <Link href="#_" rel="category">
-                    <a className="text-black hyperlink uppercase">
-                      {" "}
+                    <a className="text-white hyperlink uppercase">
                       {webinar_Data.DigitalStream}
                     </a>
                   </Link>
@@ -282,9 +285,9 @@ export default function WebinarLanding({ webinar_Data }) {
                   <h2 className="card-heading   text-black sm: md:">
                     Your Panelists
                   </h2>
-                  <div className="flex items-center  p-5 rounded-xl">
+                  <div className="flex items-center  py-7 rounded-xl">
                     {webinar_Data.Panelists.map((member) => (
-                      <div className="text-center " key={member}>
+                      <div className="text-center mr-10" key={member}>
                         <Image
                           width="150"
                           height="150"
@@ -293,8 +296,8 @@ export default function WebinarLanding({ webinar_Data }) {
                           alt=""
                         />
 
-                        <h3 className="   card-heading">{member.Name}</h3>
-                        <p className="text-gray-500 card-subheading">
+                        <h3 className="font-bold   text-lg">{member.Name}</h3>
+                        <p className="text-gray-500 hyperlink">
                           {member.Description}
                         </p>
                       </div>

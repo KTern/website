@@ -141,9 +141,7 @@ export default function TrustCenter({ data }) {
         {/* KTern Trust Center */}
         <section className='md:p-20 p-10 '>
           <div className='max-w-screen md:pl-20  mx-auto'>
-            <section className=' flex pb-10 items-center justify-end'>
-              <input id='demo-2' type='search' placeholder='Search' />
-            </section>
+            
             {/* <hr className="bg-black "/> */}
             <div className='grid grid-cols-1 mt-16 md:grid-cols-3 gap-x-20 lg:gap-x-20 gap-y-20'>
               {data.TrustCenterCard.map((dt) => (

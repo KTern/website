@@ -819,7 +819,7 @@ export default function DigitalStream({stream_data}) {
               </Link>
             </div>
           </div>
-        </section>{" "}
+        </section>
         {/* / Resources Setion */}
         {/* / Resources Setion */}
         {/* Cta Section */}
