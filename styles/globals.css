@@ -447,13 +447,18 @@
 	    height: 200px;
 	    width: 300px;
 	}
-	/* Form Style */
-	/* #crmWebToEntityForm.zcwf_lblLeft {
+	
+	html,
+	body {
+	    margin: 0px;
+	}
+	
+	#crmWebToEntityForm.zcwf_lblLeft {
 	    width: 100%;
 	    padding: 25px;
 	    margin: 0 auto;
 	    box-sizing: border-box;
-	} */
+	}
 	
 	#crmWebToEntityForm.zcwf_lblLeft * {
 	    box-sizing: border-box;
@@ -491,29 +496,28 @@
 	    float: left;
 	    min-height: 1px;
 	}
-	 */
-	/* .zcwf_lblLeft .zcwf_col_fld {
+	
+	.zcwf_lblLeft .zcwf_col_fld {
 	    float: left;
 	    width: 68%;
 	    padding: 0px 6px 0px;
 	    position: relative;
 	    margin-top: 5px;
 	}
-	 */
-	/* .zcwf_lblLeft .zcwf_privacy {
+	
+	.zcwf_lblLeft .zcwf_privacy {
 	    padding: 6px;
 	} */
-	/* hidden */
 	
 	.zcwf_lblLeft .wfrm_fld_dpNn {
 	    display: none;
 	}
 	/* .dIB {
 	    display: inline-block;
-	} */
+	}
 	
 	.zcwf_lblLeft .zcwf_col_fld_slt {
-	    width: 100%;
+	    width: 60%;
 	    border: 1px solid #ccc;
 	    background: #fff;
 	    border-radius: 4px;
@@ -557,7 +561,10 @@
 	}
 	
 	.zcwf_lblLeft .formsubmit {
+	    margin-right: 5px;
 	    cursor: pointer;
+	    color: #333;
+	    font-size: 12px;
 	}
 	
 	.zcwf_lblLeft .zcwf_privacy_txt {
@@ -617,13 +624,12 @@
 	}
 	
 	@media all and (max-width: 600px) {
-	    .zcwf_col_lab,
+	    .zcwf_lblLeft .zcwf_col_lab,
 	    .zcwf_lblLeft .zcwf_col_fld {
 	        width: auto;
 	        float: none !important;
 	    }
-	    .zcwf_col_help {
+	    .zcwf_lblLeft .zcwf_col_help {
 	        width: 40%;
 	    }
-	}
-	/* form modify */
+	} */

@@ -6,67 +6,79 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
-function checkMandatory240235000000414210() {
-  var mndFileds = new Array("Last Name");
-  var fldLangVal = new Array("Last\x20Name");
-  for (i = 0; i < mndFileds.length; i++) {
-    var fieldObj =
-      document.forms["WebToContacts240235000000414210"][mndFileds[i]];
-    if (fieldObj) {
-      if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
-        if (fieldObj.type == "file") {
-          alert("Please select a file to upload.");
-          fieldObj.focus();
-          return false;
-        }
-        alert(fldLangVal[i] + " cannot be empty.");
-        fieldObj.focus();
-        return false;
-      } else if (fieldObj.nodeName == "SELECT") {
-        if (fieldObj.options[fieldObj.selectedIndex].value == "-None-") {
-          alert(fldLangVal[i] + " cannot be none.");
-          fieldObj.focus();
-          return false;
-        }
-      } else if (fieldObj.type == "checkbox") {
-        if (fieldObj.checked == false) {
-          alert("Please accept  " + fldLangVal[i]);
-          fieldObj.focus();
-          return false;
-        }
-      }
-      try {
-        if (fieldObj.name == "Last Name") {
-          name = fieldObj.value;
-        }
-      } catch (e) {}
-    }
-  }
-  document
-    .querySelector(".crmWebToEntityForm .formsubmit")
-    .setAttribute("disabled", true);
+async function validateEmail240235000000441159(event) {
+  return true;
 }
 
-function tooltipShow240235000000414210(el) {
-  var tooltip = el.nextElementSibling;
-  var tooltipDisplay = tooltip.style.display;
-  if (tooltipDisplay == "none") {
-    var allTooltip = document.getElementsByClassName("zcwf_tooltip_over");
-    for (i = 0; i < allTooltip.length; i++) {
-      allTooltip[i].style.display = "none";
-    }
-    tooltip.style.display = "block";
-  } else {
-    tooltip.style.display = "none";
-  }
-}
 export default function Contact({ data }) {
+  async function checkMandatory240235000000441159(event) {
+    var mndFileds = new Array(
+      "Last Name",
+      "Account Name",
+      "Email",
+      "Mailing Country"
+    );
+    var fldLangVal = new Array(
+      "Last_Name",
+      "Account_Name",
+      "Email",
+      "Mailing_Country"
+    );
+    for (let i = 0; i < mndFileds.length; i++) {
+      console.log(fldLangVal[i]);
+      if (process.browser)
+        var fieldObj = document.getElementById(fldLangVal[i]);
+      if (fieldObj) {
+        if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
+          if (fieldObj.type == "file") {
+            alert("Please select a file to upload.");
+            fieldObj.focus();
+            return false;
+          }
+          alert(fldLangVal[i] + " cannot be empty.");
+          fieldObj.focus();
+          event.preventDefault();
+          return false;
+        } else if (fieldObj.nodeName == "SELECT") {
+          if (fieldObj.options[fieldObj.selectedIndex].value == "-None-") {
+            alert(fldLangVal[i] + " cannot be none.");
+            fieldObj.focus();
+            event.preventDefault();
+            return false;
+          }
+        } else if (fieldObj.type == "checkbox") {
+          if (fieldObj.checked == false) {
+            alert("Please accept  " + fldLangVal[i]);
+            fieldObj.focus();
+            event.preventDefault();
+            return false;
+          }
+        }
+        try {
+          if (fieldObj.name == "Last Name") {
+            name = fieldObj.value;
+          }
+        } catch (e) {
+          event.preventDefault();
+        }
+      }
+    }
+
+    if (process.browser)
+      document
+        .querySelector(".crmWebToEntityForm .formsubmit")
+        .setAttribute("disabled", true);
+  }
   return (
     <>
-      <Head>  
-    <script async id='wf_anal'
-      src='https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a11523c8de5d79b3320227983d11042419giddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307'></script>
-    </Head>
+      <Head>
+        {/* <!-- Do not remove this --- Analytics Tracking code starts --> */}
+        <script
+          id="wf_anal"
+          async
+          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a1db3bd8391d433e87db690d8ba4a4976bgiddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307"
+        ></script>
+      </Head>
       <NextSeo
         title="Simple Usage Example"
         description="A short description goes here."
@@ -205,7 +217,7 @@ export default function Contact({ data }) {
             availableLanguage: ["English", "French"],
           },
         ]}
-          />
+      />
       <Layout>
         <section className="relative py-0 bg-white md:m-10 lg:py-10">
           <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto max-w-7xl xl:px-5 lg:flex-row">
@@ -287,161 +299,225 @@ export default function Contact({ data }) {
                   </div>
                 </div>
               </div>
-
               <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
-                            <div  id="crmWebToEntityForm" className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-4 md:p-10 bg-white md:shadow-2xl rounded-xl">
-                                <h4 className="w-full card-heading  text-4xl text-center leading-snug">Contact us</h4>
-                                  <form
-                                      className="relative w-full mt-6 space-y-8"
-                  action="https://crm.zoho.in/crm/WebToContactForm"
-                  name="WebToContacts240235000000414210"
-                  method="POST"
-                  onSubmit='javascript:document.charset="UTF-8"; return checkMandatory240235000000414210()'
-                                  acceptCharset="UTF-8"
-                                  
+                <div
+                  id="crmWebToEntityForm"
+                  className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-4 md:p-10 bg-white md:shadow-2xl rounded-xl"
                 >
-                  <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="xnQsjsdp"
-                    value="db887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04c"
-                  />
-                  <input
-                    type="hidden"
-                    name="zc_gad"
-                    id="zc_gad"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="xmIwtLD"
-                    value="d282bac1d91514c46c75683473f967a11523c8de5d79b3320227983d11042419"
-                  />
-                  <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="actionType"
-                    value="Q29udGFjdHM="
-                  />
-                  <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="returnURL"
-                    value="https&#x3a;&#x2f;&#x2f;web.ktern.com"
-                  />
-                 
-                  <div className="zcwf_row">
-                    <div
-                      className="zcwf_col_lab"
-                      style={{ fontSize: "12px", fontFamily: "Arial" }}
-                    >
-                      <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading text-black bg-white">
-                        Last Name
-                      </label>
-                    </div>
-                    <div className="zcwf_col_fld">
-                      <input
-                        type="text"
-                        id="Last_Name"
-                        name="Last Name"
-                                                  maxLength="80"
-                                                  className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                      />
-                      <div className="zcwf_col_help"></div>
-                    </div>
-                  </div>
-                  <div className="zcwf_row wfrm_fld_dpNn">
-                    <div
-                      className="zcwf_col_lab"
-                      style={{ fontSize: "12px", fontFamily: "Arial" }}
-                    >
-                      <label htmlFor="Lead_Source">Lead Source</label>
-                    </div>
-                    <div className="zcwf_col_fld">
-                      <select
-                        className="zcwf_col_fld_slt"
-                        id="Lead_Source"
-                        name="Lead Source"
+                  <h4 className="w-full card-heading  text-4xl text-center leading-snug">
+                    Contact us
+                  </h4>
+                  <form
+                    className="relative w-full mt-6 space-y-8"
+                    action="https://crm.zoho.in/crm/WebToContactForm"
+                    name="WebToContacts240235000000441159"
+                    method="POST"
+                    onSubmit={checkMandatory240235000000441159}
+                    acceptCharset="UTF-8"
+                  >
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="xnQsjsdp"
+                      value="db887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04c"
+                    />
+                    <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="xmIwtLD"
+                      value="d282bac1d91514c46c75683473f967a1db3bd8391d433e87db690d8ba4a4976b"
+                    />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="actionType"
+                      value="Q29udGFjdHM="
+                    />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="returnURL"
+                      value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;resources"
+                    />
+                    {/* <!-- Do not remove this code. --> */}
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      id="ldeskuid"
+                      name="ldeskuid"
+                    />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      id="LDTuvid"
+                      name="LDTuvid"
+                    />
+                    {/* <!-- Do not remove this code. --> */}
+                   
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <option value="-None-">-None-</option>
-                        <option value="Advertisement">Advertisement</option>
-                        <option value="Cold&#x20;Call">Cold Call</option>
-                        <option value="Employee&#x20;Referral">
-                          Employee Referral
-                        </option>
-                        <option value="External&#x20;Referral">
-                          External Referral
-                        </option>
-                        <option selected value="OnlineStore">
-                          OnlineStore
-                        </option>
-                        <option value="Partner">Partner</option>
-                        <option value="Public&#x20;Relations">
-                          Public Relations
-                        </option>
-                        <option value="Sales&#x20;Mail&#x20;Alias">
-                          Sales Mail Alias
-                        </option>
-                        <option value="Seminar&#x20;Partner">
-                          Seminar Partner
-                        </option>
-                        <option value="Seminar-Internal">
-                          Seminar-Internal
-                        </option>
-                        <option value="Trade&#x20;Show">Trade Show</option>
-                        <option value="Web&#x20;Download">Web Download</option>
-                        <option value="Web&#x20;Research">Web Research</option>
-                        <option value="Web&#x20;Cases">Web Cases</option>
-                        <option value="Web&#x20;Mail">Web Mail</option>
-                        <option value="Chat">Chat</option>
-                        <option value="Twitter">Twitter</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Google&#x2b;">Google&#x2b;</option>
-                      </select>
-                      <div className="zcwf_col_help"></div>
+                        <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Last Name</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="Last_Name"
+                          name="Last Name"
+                                                  maxLength="80"
+                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="zcwf_row">
-                    <div className=""></div>
-                    <div className="">
-                      <input
-                        type="submit"
-                        id="formsubmit"
-                        className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label htmlFor="Email" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Email</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          ftype="email"
+                          id="Email"
+                          name="Email"
+                                                  maxLength="100"
+                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label htmlFor="Account_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Account Name</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="Account_Name"
+                          name="Account Name"
+                                                  maxLength="100"
+                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label htmlFor="Mailing_Country" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Mailing Country</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="Mailing_Country"
+                          name="Mailing Country"
+                                                  maxLength="100"
+                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row wfrm_fld_dpNn">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label htmlFor="Lead_Source">Lead Source</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <select
+                          className="zcwf_col_fld_slt"
+                          id="Lead_Source"
+                          name="Lead Source"
+                        >
+                          <option value="-None-">-None-</option>
+                          <option value="Advertisement">Advertisement</option>
+                          <option value="Cold&#x20;Call">Cold Call</option>
+                          <option value="Employee&#x20;Referral">
+                            Employee Referral
+                          </option>
+                          <option value="External&#x20;Referral">
+                            External Referral
+                          </option>
+                          <option value="OnlineStore">OnlineStore</option>
+                          <option value="Partner">Partner</option>
+                          <option value="Public&#x20;Relations">
+                            Public Relations
+                          </option>
+                          <option value="Sales&#x20;Mail&#x20;Alias">
+                            Sales Mail Alias
+                          </option>
+                          <option value="Seminar&#x20;Partner">
+                            Seminar Partner
+                          </option>
+                          <option value="Seminar-Internal">
+                            Seminar-Internal
+                          </option>
+                          <option value="Trade&#x20;Show">Trade Show</option>
+                          <option selected value="Web&#x20;Download">
+                            Web Download
+                          </option>
+                          <option value="Web&#x20;Research">
+                            Web Research
+                          </option>
+                          <option value="Web&#x20;Cases">Web Cases</option>
+                          <option value="Web&#x20;Mail">Web Mail</option>
+                          <option value="Chat">Chat</option>
+                          <option value="Twitter">Twitter</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="Google&#x2b;">Google&#x2b;</option>
+                        </select>
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row wfrm_fld_dpNn">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label htmlFor="CONTACTCF6">Lead Source Form</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="CONTACTCF6"
+                          name="CONTACTCF6"
+                          maxLength="255"
+                          value="none"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div className="zcwf_col_lab"></div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="submit"
+                          id="formsubmit"
+                          value="Submit"
+                                                  title="Submit"
+                                                  className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
-                        value="Submit"
-                        title="Submit"
-                      />
-                     
+                        />
+                      </div>
                     </div>
-                  </div>
-                              </form>
-            
-                            </div>
-                            <svg className="hidden md:block absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
-                            <svg className="absolute hidden md:block bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
-                            </div>
+                    <script></script>
 
-              {/* <!-- Note :
-   - You can modify the font style and form style to suit your website. 
-   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
-   - The Mandatory check script can modified as to suit your business needs. 
-   - It is important that you test the modified form before going live.--> */}
-              {/* <div
-                id="crmWebToEntityForm"
-                className="zcwf_lblLeft crmWebToEntityForm relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12"
-                style={{
-                  backgroundColor: "white",
-                  color: "black",
-                 
-                }}
-              >
-                {/* <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'/> */}
-               
-                               {/* <svg className="hidden md:block absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
-                            <svg className="absolute hidden md:block bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
-              </div> } */}
+                    {/* <!-- Do not remove this --- Analytics Tracking code ends. --> */}
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </section>
