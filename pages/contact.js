@@ -6,77 +6,16 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
-async function validateEmail240235000000441159(event) {
-  return true;
-}
 
 export default function Contact({ data }) {
-  async function checkMandatory240235000000441159(event) {
-    var mndFileds = new Array(
-      "Last Name",
-      "Account Name",
-      "Email",
-      "Mailing Country"
-    );
-    var fldLangVal = new Array(
-      "Last_Name",
-      "Account_Name",
-      "Email",
-      "Mailing_Country"
-    );
-    for (let i = 0; i < mndFileds.length; i++) {
-      console.log(fldLangVal[i]);
-      if (process.browser)
-        var fieldObj = document.getElementById(fldLangVal[i]);
-      if (fieldObj) {
-        if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
-          if (fieldObj.type == "file") {
-            alert("Please select a file to upload.");
-            fieldObj.focus();
-            return false;
-          }
-          alert(fldLangVal[i] + " cannot be empty.");
-          fieldObj.focus();
-          event.preventDefault();
-          return false;
-        } else if (fieldObj.nodeName == "SELECT") {
-          if (fieldObj.options[fieldObj.selectedIndex].value == "-None-") {
-            alert(fldLangVal[i] + " cannot be none.");
-            fieldObj.focus();
-            event.preventDefault();
-            return false;
-          }
-        } else if (fieldObj.type == "checkbox") {
-          if (fieldObj.checked == false) {
-            alert("Please accept  " + fldLangVal[i]);
-            fieldObj.focus();
-            event.preventDefault();
-            return false;
-          }
-        }
-        try {
-          if (fieldObj.name == "Last Name") {
-            name = fieldObj.value;
-          }
-        } catch (e) {
-          event.preventDefault();
-        }
-      }
-    }
-
-    if (process.browser)
-      document
-        .querySelector(".crmWebToEntityForm .formsubmit")
-        .setAttribute("disabled", true);
-  }
   return (
     <>
       <Head>
         {/* <!-- Do not remove this --- Analytics Tracking code starts --> */}
         <script
-          id="wf_anal"
           async
-          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a1db3bd8391d433e87db690d8ba4a4976bgiddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307"
+          id="wf_anal"
+          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a175e22919270e151702cc8d3eb82a033bgiddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307"
         ></script>
       </Head>
       <NextSeo
@@ -308,12 +247,11 @@ export default function Contact({ data }) {
                     Contact us
                   </h4>
                   <form
-                    className="relative w-full mt-6 space-y-8"
                     action="https://crm.zoho.in/crm/WebToContactForm"
-                    name="WebToContacts240235000000441159"
+                    name="WebToContacts240235000000441179"
                     method="POST"
-                    onSubmit={checkMandatory240235000000441159}
                     acceptCharset="UTF-8"
+                     className="relative w-full mt-6 space-y-8"
                   >
                     <input
                       type="text"
@@ -326,7 +264,7 @@ export default function Contact({ data }) {
                       type="text"
                       style={{ display: "none" }}
                       name="xmIwtLD"
-                      value="d282bac1d91514c46c75683473f967a1db3bd8391d433e87db690d8ba4a4976b"
+                      value="d282bac1d91514c46c75683473f967a175e22919270e151702cc8d3eb82a033b"
                     />
                     <input
                       type="text"
@@ -338,7 +276,7 @@ export default function Contact({ data }) {
                       type="text"
                       style={{ display: "none" }}
                       name="returnURL"
-                      value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;resources"
+                      value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;contact"
                     />
                     {/* <!-- Do not remove this code. --> */}
                     <input
@@ -354,21 +292,21 @@ export default function Contact({ data }) {
                       name="LDTuvid"
                     />
                     {/* <!-- Do not remove this code. --> */}
-                   
                     <div className="zcwf_row">
                       <div
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Last Name</label>
+                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Last_Name">Last Name</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
+                        required
                           type="text"
                           id="Last_Name"
                           name="Last Name"
-                                                  maxLength="80"
-                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          maxLength="80"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -378,34 +316,16 @@ export default function Contact({ data }) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Email" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Email</label>
+                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Account_Name">Account Name</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                          type="text"
-                          ftype="email"
-                          id="Email"
-                          name="Email"
-                                                  maxLength="100"
-                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                        />
-                        <div className="zcwf_col_help"></div>
-                      </div>
-                    </div>
-                    <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
-                      >
-                        <label htmlFor="Account_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Account Name</label>
-                      </div>
-                      <div className="zcwf_col_fld">
-                        <input
+                        required
                           type="text"
                           id="Account_Name"
                           name="Account Name"
-                                                  maxLength="100"
-                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          maxLength="100"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -415,15 +335,55 @@ export default function Contact({ data }) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Mailing_Country" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Mailing Country</label>
+                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Email">Email</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
+                        required
+                          type="email"
+                          ftype="email"
+                          id="Email"
+                          name="Email"
+                          maxLength="100"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Phone">Phone</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                        required
+                          type="text"
+                          id="Phone"
+                          name="Phone"
+                          maxLength="50"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Mailing_Country">Mailing Country</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                        required
                           type="text"
                           id="Mailing_Country"
                           name="Mailing Country"
-                                                  maxLength="100"
-                                                   className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          maxLength="100"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -443,6 +403,16 @@ export default function Contact({ data }) {
                         >
                           <option value="-None-">-None-</option>
                           <option value="Advertisement">Advertisement</option>
+                          <option value="Partner&#x20;Registration">
+                            Partner Registration
+                          </option>
+                          <option value="Webinars">Webinars</option>
+                          <option selected value="Website&#x20;Contact">
+                            Website Contact
+                          </option>
+                          <option value="Website&#x20;Resources&#x20;Download">
+                            Website Resources Download
+                          </option>
                           <option value="Cold&#x20;Call">Cold Call</option>
                           <option value="Employee&#x20;Referral">
                             Employee Referral
@@ -465,7 +435,7 @@ export default function Contact({ data }) {
                             Seminar-Internal
                           </option>
                           <option value="Trade&#x20;Show">Trade Show</option>
-                          <option selected value="Web&#x20;Download">
+                          <option value="Web&#x20;Download">
                             Web Download
                           </option>
                           <option value="Web&#x20;Research">
@@ -494,7 +464,7 @@ export default function Contact({ data }) {
                           id="CONTACTCF6"
                           name="CONTACTCF6"
                           maxLength="255"
-                          value="none"
+                          value="contact-form"
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -505,14 +475,13 @@ export default function Contact({ data }) {
                         <input
                           type="submit"
                           id="formsubmit"
-                          value="Submit"
-                                                  title="Submit"
-                                                  className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                           className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
+                          value="Submit"
+                          title="Submit"
                         />
                       </div>
                     </div>
-                    <script></script>
 
                     {/* <!-- Do not remove this --- Analytics Tracking code ends. --> */}
                   </form>

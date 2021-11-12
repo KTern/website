@@ -2,7 +2,7 @@
 require('../styles/globals.css') 
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
+import Head from "next/head"
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
@@ -18,9 +18,9 @@ function MyApp ({ Component, pageProps }) {
     }
   }, [router.events])
   return (
-    
-    
+<>    
       <Component {...pageProps} />
+      </>
     )
 }
 
