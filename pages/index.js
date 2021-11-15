@@ -190,7 +190,7 @@ function Home ({ data ,h_data}) {
 			<div>
 				<Layout h_data={h_data}>
 					{/* <!-- Hero Section --> */}
-					<section className=" pt-32  relative overflow-hidden bg-white">
+					<section className=" pt-24  relative overflow-hidden bg-white">
 						<div className=" bg-white  h-full">
 							<div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% ">
 								<h2 className="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading">
@@ -617,7 +617,7 @@ function Home ({ data ,h_data}) {
 							<div className=" md:divide-x grid-cols-3 sm:grid-cols-1 sm:divide-y  grid w-full  rounded-lg  ">
 								{data.CustomerSuccessStories.map((data) => (
 									<div key="data" className=" grid grid-rows-3  w-full  px-12  ">
-										<div className="flex items-center     rounded-full">
+										<div className="     rounded-full">
 										
 											<Image
 												src={data.Icon.imageURL}
