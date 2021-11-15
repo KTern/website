@@ -9,7 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Markdown from "markdown-to-jsx";
-const Customer_Success_Story_Landing = ({ data,h_data }) => {
+const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
   return (
     <>
       <NextSeo
@@ -137,7 +137,7 @@ const Customer_Success_Story_Landing = ({ data,h_data }) => {
           async="async"
         ></script>
       </Head>
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         <section id="features" className="w-full py-20  pt-32 bg-herogradient">
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
@@ -337,9 +337,13 @@ export const getServerSideProps = async (context) => {
   	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
-    props: { data: data[0],h_data:h_data },
+    props: { data: data[0],h_data:h_data,f_data:f_data },
   };
 };
 export default Customer_Success_Story_Landing;

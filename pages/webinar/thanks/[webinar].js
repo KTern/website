@@ -9,7 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import React from "react";
 import ICalendarLink from "react-icalendar-link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-export default function Thanks({ webinar_data, h_data }) {
+export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.start);
   const end = new Date(webinar_data.start).setHours(start.getHours() + 1);
@@ -141,7 +141,7 @@ export default function Thanks({ webinar_data, h_data }) {
           "http://plus.google.com/your_profile",
         ]}
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         {!webinar_data.IsOnDemandWebinar && (
           <section className="relative py-32   overflow-hidden flex  bg-herogradient justify-center ">
             <div className="hidden xl:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-34 lg:mt-24">
@@ -477,10 +477,15 @@ export const getServerSideProps = async ({ params }) => {
     method: "get",
   });
   const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       webinar_data: data[0],
       h_data: h_data,
+      f_data:f_data
     },
   };
 };

@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const WhitePaper_Landing = ({data,h_data}) => {
+const WhitePaper_Landing = ({data,h_data,f_data}) => {
     return (
         <>
            <NextSeo
@@ -130,7 +130,7 @@ const WhitePaper_Landing = ({data,h_data}) => {
             <Head>
                 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons' async='async'></script>
             </Head>
-        <Layout h_data={h_data}>
+        <Layout h_data={h_data} f_data={f_data}>
       <section  className="w-full pt-32 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
@@ -441,12 +441,17 @@ export const getServerSideProps = async (context) => {
   	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
     return {
         
       props: {
         data: data[ 0 ],
-      h_data:h_data}
+        h_data: h_data,
+      f_data:f_data}
     }
 }
 export default WhitePaper_Landing;

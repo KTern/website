@@ -1,6 +1,6 @@
 import Header from "./header";
 import Footer from "./footer";
-export default function Layout ({ children ,h_data}) {
+export default function Layout ({ children ,h_data,f_data}) {
     // console.log("Layout",h_data)
     return (
         <div className="relative ">
@@ -11,7 +11,7 @@ export default function Layout ({ children ,h_data}) {
                  {children}
             </div>
            
-            <Footer/>
+            <Footer f_data={f_data}/>
         </div>
     )
 }

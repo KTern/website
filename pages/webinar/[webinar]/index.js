@@ -9,7 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import { EventJsonLd } from "next-seo";
 import Head from "next/head";
 import { useRouter } from "next/router";
-export default function WebinarLanding({ webinar_Data ,h_data}) {
+export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
     hour: "numeric",
@@ -166,7 +166,7 @@ export default function WebinarLanding({ webinar_Data ,h_data}) {
         images={["https://example.com/photos/photo.jpg"]}
         description="My event @ my place"
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         <section className="relative sm:mb-20 ">
           <div
             className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.CssStreamTag}-primary opacity-30`}
@@ -585,11 +585,16 @@ export const getServerSideProps = async ({ params }) => {
   	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       webinar_Data: data[ 0 ],
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     },
   };
 };

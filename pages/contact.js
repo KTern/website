@@ -7,7 +7,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 
-export default function Contact({ data,h_data }) {
+export default function Contact({ data,h_data ,f_data}) {
   return (
     <>
       <Head>
@@ -157,7 +157,7 @@ export default function Contact({ data,h_data }) {
           },
         ]}
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         <section className="relative py-0 bg-white md:m-10 lg:py-10">
           <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto max-w-7xl xl:px-5 lg:flex-row">
             <div className="flex flex-col items-center w-full md:px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
@@ -500,11 +500,16 @@ export const getServerSideProps = async () => {
 	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       data: data,
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     },
   };
 };

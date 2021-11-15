@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
-export default function Webinar ({data,h_data}) {
+export default function Webinar ({data,h_data,f_data}) {
     return (
         <>
               <NextSeo
@@ -118,7 +118,7 @@ export default function Webinar ({data,h_data}) {
         'http://plus.google.com/your_profile',
       ]}
     />
-    <Layout h_data={h_data}> 
+    <Layout h_data={h_data} f_data={f_data}> 
         {/* <!--Upcoming Webinar Section--> */}
         <div className=" mx-auto md:py-4">
             <section className="w-full  bg-white py-12 pt-20  bg-secondary" >
@@ -270,11 +270,17 @@ export const getServerSideProps = async () => {
     	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+    const h_data = await res1.json();
+    const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
+	
     return {
         props: {
             data: data,
-            h_data:h_data
+            h_data: h_data,
+            f_data:f_data
         }
     }
 }

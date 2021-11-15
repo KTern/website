@@ -5,36 +5,47 @@ import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 const responsive = {
-	"superLargeDesktop": {
-		"breakpoint": {
-			"max": 4000,
-			"min": 3000
-		},
-		"items": 5
-	},
-	"desktop": {
-		"breakpoint": {
-			"max": 3000,
-			"min": 1024
-		},
-		"items": 5
-	},
-	"tablet": {
-		"breakpoint": {
-			"max": 1024,
-			"min": 464
-		},
-		"items": 2
-	},
-	"mobile": {
-		"breakpoint": {
-			"max": 464,
-			"min": 0
-		},
-		"items": 1
-	}
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+function next(id, last) {
+  let elem = document.getElementById(id);
+  const styles = window.getComputedStyle(elem);
+  const amount = styles.getPropertyValue("--amount");
+  const gapV = styles.getPropertyValue("--gap-v");
+  const gapM = amount * gapV;
+  const tokElem = document.getElementById(token);
+  const tokStyles = window.getComputedStyle(tokElem);
+  const iWidth = parseFloat(tokStyles.width);
+  document.getElementById(id).scrollBy({ left: iWidth * amount + gapM, behavior: "smooth" });
 }
 
+function prev(id, last) {
+  let elem = document.getElementById(id);
+  const styles = window.getComputedStyle(elem);
+  const amount = styles.getPropertyValue("--amount");
+  const gapV = styles.getPropertyValue("--gap-v");
+  const gapM = amount * gapV;
+  const tokElem = document.getElementById(token);
+  const tokStyles = window.getComputedStyle(tokElem);
+  const iWidth = parseFloat(tokStyles.width);
+  document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
+}
 import * as Amplitude from '@amplitude/node';
 const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
 var client = Amplitude.init(AMPLITUDE_KEY);
@@ -56,7 +67,7 @@ import React from 'react'
 // Will automatically happen on the next event loop.
 client.flush();
 
-function Home ({ data ,h_data}) {
+function Home ({ data ,h_data,f_data}) {
 	
 	
 	return (
@@ -188,7 +199,7 @@ function Home ({ data ,h_data}) {
 				applicationCategory="GameApplication"
 			/>
 			<div>
-				<Layout h_data={h_data}>
+				<Layout h_data={h_data} f_data={f_data}>
 					{/* <!-- Hero Section --> */}
 					<section className=" pt-24  relative overflow-hidden bg-white">
 						<div className=" bg-white  h-full">
@@ -217,30 +228,30 @@ function Home ({ data ,h_data}) {
 						</div>
 					</section>
 					{/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
-					<div className="px-4 py-10">
-						<div className="container px-4 mx-auto">
+					<div className="px-4 py-0">
+						<div className=" px-4 mx-auto">
 							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
 								{data.TrustedByStatement}
 							</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
-						<Carousel className="bots flex p-10  z-10" responsive={responsive}>
-							{data.TrustedByLogos.map((dt) => (
-								<div key="dt" className="p-3 bots-card flex-row">
-									<Image
-										className=" w-auto lg:w-100"
-										src={dt.imageURL}
-										alt={dt.imageDescription}
-										width={dt.width}
-										height={dt.height}
-										layout="responsive"
-									/>
-								</div>
-							))}
-						</Carousel>
+						   <Carousel className='bots flex p-6  z-10' responsive={responsive}>
+            {data.TrustedByLogos.map((dt) => (
+              <div key='dt' className='p-3 bots-card flex-row'>
+                <Image
+                  className=' w-auto lg:w-100'
+                  src={dt.imageURL}
+                  alt={dt.imageDescription}
+                  width={dt.width}
+                  height={dt.height}
+                  layout=''
+                />
+              </div>
+            ))}
+          </Carousel>
 					</div>
 					{/* <!-- /Customer logos Section --> */} {/* <!-- Streams Section --> */}
-					<section className="relative items-center overflow-hidden w-full py-12 bg-white sm:py-16 md:py-20">
+					<section className="relative items-center overflow-hidden w-full py-6 bg-white sm:py-8 md:py-4">
 						<svg
 							className="absolute -mt-32 text-gray-300 transform scale-150 fill-current top-1/2"
 							viewBox="0 0 197 31"
@@ -845,11 +856,17 @@ export const getServerSideProps = async () => {
 		method: 'get',
 	});
 	const h_data = await res1.json();
+	const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
+	
 	// console.log('data', data);
 	return {
 		props: {
 			data: data,
-			h_data:h_data
+			h_data: h_data,
+			f_data:f_data
 		},
 	};
 };

@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { FAQPageJsonLd } from "next-seo";
-export default function Partners({ data,h_data }) {
+export default function Partners({ data,h_data,f_data }) {
   return (
     <>
       <NextSeo
@@ -132,7 +132,7 @@ export default function Partners({ data,h_data }) {
           },
         ]}
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data,f_data}>
         {/* <!-- Header Section --> */}
         <section className='w-full py-28 bg-secondary'>
           <div className='flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row'>
@@ -342,11 +342,16 @@ export const getServerSideProps = async () => {
   	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       data: data,
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     },
   };
 };

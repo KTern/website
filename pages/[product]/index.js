@@ -71,7 +71,7 @@ function prev(id, last) {
   const iWidth = parseFloat(tokStyles.width);
   document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
 }
-export default function DigitalStream({stream_data,h_data}) {
+export default function DigitalStream({stream_data,h_data,f_data}) {
   return (
     <>
       <NextSeo
@@ -288,7 +288,7 @@ export default function DigitalStream({stream_data,h_data}) {
         operatingSystem='ANDROID'
         applicationCategory='GameApplication'
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         {/* Hero Section */}
         <section className='relative md:py-10 pb-auto pb-72'>
           <div className='hidden lg:block absolute inset-0 w-full relative'>
@@ -893,11 +893,16 @@ export const getStaticProps = async ({ params }) => {
   	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       stream_data: data[ 0 ],
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     }
   };
 };

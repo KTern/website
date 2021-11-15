@@ -11,7 +11,7 @@ import { SocialProfileJsonLd } from "next-seo";
 {
   /* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */
 }
-export default function Feature_Landing({ feature_data ,h_data}) {
+export default function Feature_Landing({ feature_data ,h_data,f_data}) {
   return (
     <>
       <NextSeo
@@ -140,7 +140,7 @@ export default function Feature_Landing({ feature_data ,h_data}) {
       <Head>
         <script async src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
       </Head>
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         <section className={`w-full py-20 bg-gradient-to-r from-${feature_data.cssStreamTag}-primary to-${feature_data.cssStreamTag}-secondary`}>
           <div className='flex flex-col items-center px-12 mx-auto lg:flex-row'>
             <div className='relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2'>
@@ -572,11 +572,16 @@ export const getStaticProps = async ({ params }) => {
 	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       feature_data: data[ 0 ],
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     },
   };
 };

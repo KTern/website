@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 
-export default function About({ data,h_data }) {
+export default function About({ data,h_data,f_data }) {
   return (
     <>
       <NextSeo
@@ -120,7 +120,7 @@ export default function About({ data,h_data }) {
           "http://plus.google.com/your_profile",
         ]}
       />
-      <Layout h_data={h_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         <section className='relative flex flex-col items-center justify-center w-full px-6 py-32 bg-secondary bg-cover  min-w-screen'>
           <div className='flex flex-col items-center justify-center md:mx-auto  xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0'>
             <div className='container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0'>
@@ -446,11 +446,16 @@ export const getServerSideProps = async () => {
 	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});
-	const h_data = await res1.json();
+  const h_data = await res1.json();
+  const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
   return {
     props: {
       data: data,
-      h_data:h_data
+      h_data: h_data,
+      f_data:f_data
     },
   };
 };
