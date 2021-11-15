@@ -12,7 +12,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -311,18 +311,7 @@ function Home ({ data ,h_data,f_data}) {
 												key="feature"
 												className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading"
 											>
-												<svg
-													className="w-5 h-5 mr-1 text-black"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-														clipRule="evenodd"
-													></path>
-												</svg>
+											
 												<span> {feature.listItem} </span>
 											</li>
 										))}
@@ -373,18 +362,7 @@ function Home ({ data ,h_data,f_data}) {
 												key="feature"
 												className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading"
 											>
-												<svg
-													className="w-5 h-5 mr-1 text-black"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-														clipRule="evenodd"
-													></path>
-												</svg>
+											
 												<span> {feature.listItem} </span>
 											</li>
 										))}
@@ -435,18 +413,7 @@ function Home ({ data ,h_data,f_data}) {
 												key="feature"
 												className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading"
 											>
-												<svg
-													className="w-5 h-5 mr-1 text-black"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-														clipRule="evenodd"
-													></path>
-												</svg>
+											
 												<span> {feature.listItem} </span>
 											</li>
 										))}
@@ -497,18 +464,7 @@ function Home ({ data ,h_data,f_data}) {
 												key="feature"
 												className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading"
 											>
-												<svg
-													className="w-5 h-5 mr-1 text-black"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-														clipRule="evenodd"
-													></path>
-												</svg>
+											
 												<span> {feature.listItem} </span>
 											</li>
 										))}
@@ -559,18 +515,7 @@ function Home ({ data ,h_data,f_data}) {
 												key="feature"
 												className="flex items-center text-gray-700 card-subheading sm:sm-card-subheading"
 											>
-												<svg
-													className="w-5 h-5 mr-1 text-black"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-														clipRule="evenodd"
-													></path>
-												</svg>
+											
 												<span> {feature.listItem} </span>
 											</li>
 										))}

@@ -18,7 +18,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -326,7 +326,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 />
               </div>
               <div className='absolute inset-0 flex items-center justify-center '>
-                <Link href='/video' passHref>
+                {/* <Link href='/video' passHref>
                   <a className='flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse'>
                     <svg
                       className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-primary  transition duration-200`}
@@ -341,7 +341,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                       ></path>
                     </svg>
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

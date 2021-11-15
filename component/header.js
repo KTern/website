@@ -206,7 +206,7 @@ export default function Header ({h_data}) {
             {/* <!-- Desktop --> */}
           
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
-                {isVisible && isOpen && (router.pathname==='/') &&
+                {isVisible && isOpen && (router.pathname==='/') && (h_data.TopBar.buttonTitle!="") &&
                     <div className="flex sm:hidden">
                     <div id="banner" className="  w-full h-10 bg-black text-white flex space-x-12 items-center text-center justify-center "><div>{h_data.TopBar.buttonTitle}</div>
                         <Link href={h_data.TopBar.linkURL} passHref>
