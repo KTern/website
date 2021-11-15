@@ -8,8 +8,8 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import React from "react";
 import ICalendarLink from "react-icalendar-link";
-
-export default function Thanks({ webinar_data,h_data }) {
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+export default function Thanks({ webinar_data, h_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.start);
   const end = new Date(webinar_data.start).setHours(start.getHours() + 1);
@@ -23,13 +23,8 @@ export default function Thanks({ webinar_data,h_data }) {
     attendees: [],
   };
   const [isVideoVisible, setIsVideoVisible] = useState(true);
-    const [ isSlideVisible, setIsSlideVisible ] = useState(false);
-    
-    if (process.browser) {
-        if (isVideoVisible)
-        document.getElementById('video').focus({preventScroll:false});
-    else
-        document.getElementById('slide').focus();}
+  const [isSlideVisible, setIsSlideVisible] = useState(false);
+
   return (
     <>
       <NextSeo
@@ -148,7 +143,7 @@ export default function Thanks({ webinar_data,h_data }) {
       />
       <Layout h_data={h_data}>
         {!webinar_data.IsOnDemandWebinar && (
-          <section className="relative py-32  bg-gray-800 overflow-hidden flex justify-center ">
+          <section className="relative py-32   overflow-hidden flex  bg-herogradient justify-center ">
             <div className="hidden xl:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-34 lg:mt-24">
               <Image
                 src="/404/five-stars.svg"
@@ -160,7 +155,7 @@ export default function Thanks({ webinar_data,h_data }) {
 
             <div className="container px-3 mx-auto">
               <div className="max-w-3xl mx-auto pb-10 flex-col  text-center">
-                <h2 className="my-10 heading font-bold font-heading text-white">
+                <h2 className="my-10 heading font-bold font-heading text-white ">
                   Thank You for Registering for the webinar
                 </h2>
                 <div className="max-w-md mx-auto">
@@ -169,12 +164,14 @@ export default function Thanks({ webinar_data,h_data }) {
                   </p>
                   <div className="flex space-x-6 items-center justify-center">
                     <Link href="/" passHref>
-                      <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+                      <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-white shadow text-lg text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
                         Return Home
                       </a>
                     </Link>
-                    <ICalendarLink event={event} className="text-white">
-                      <div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">Add to Calendar</div>
+                    <ICalendarLink event={event} className="text-white ">
+                      <div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-white shadow text-lg text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+                        Add to Calendar
+                      </div>
                     </ICalendarLink>
                     ;
                   </div>
@@ -185,122 +182,51 @@ export default function Thanks({ webinar_data,h_data }) {
         )}
         {/* On demand Webinar */}
         {webinar_data.IsOnDemandWebinar && (
-          <section className="relative py-32 text-center  overflow-hidden justify-center text-white bg-gray-800">
+          <section className="relative py-32 text-center  bg-herogradient overflow-hidden justify-center text-white  ">
             <h1 className="heading mb-5">On-demand Webinar</h1>
             <p className="subheading mb-10">
               Democratizing SAP Digital Transformation as a Service(#DXaaS)
             </p>
-            <div className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col mb-20">
-              <div className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center mb-10">
-                              <button 
-                                  id="video"
-                  onClick={() => {
-                    setIsVideoVisible(true);
-                    setIsSlideVisible(false);
-                  }}
-                                  className="text-white sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 focus:border-indigo-500   focus:text-indigo-500 tracking-wider rounded-t "
-                                  autoFocus
-                >
-                  <span className="hyperlink ">Video</span>
-                </button>
 
-                <button id="slide"
-                  onClick={() => {
-                    setIsSlideVisible(true);
-                    setIsVideoVisible(false);
-                  }}
-                  className="text-white sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start focus:bg-gray-100 border-b-2 title-font  inline-flex items-center leading-none border-gray-200 tracking-wider focus:border-indigo-500 focus:text-indigo-500 "
-                >
-                  <span className=" hyperlink">Slide</span>
-                </button>
-              </div>
-              {isVideoVisible && (
-                <section className="pt-20 pb-5 bg-white mx-auto flex justify-center iterms-center">
-                  <div className="md:px-20 p-4 mx-auto max-w-7xl">
-                    <div className=" block w-60 h-60 relative mx-auto ">
-                      <Image
-                        layout="fill"
-                        className="mx-auto  mb-6 object-cover border-2 border-black"
-                        src="/trust-center/cloud.png"
-                        alt=""
-                      />
-                    </div>
-                    <h3 className="mb-2 card-heading  text-gray-900 lg:">
-                      Video
-                    </h3>
-                    <p className=" text-gray-500 card-subheading">
-                      Faster processing to help you build your applications
-                      quicker and with more efficiency.
-                    </p>
-                    <Link href="#_" passHref>
-                      <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                        <span className="hyperlink group-hover:text-gray-400">
-                          Learn More
-                        </span>
-                        <svg
-                          className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          ></path>
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </section>
-              )}
-              {isSlideVisible && (
-                <section className="pt-20 pb-5 bg-white mx-auto flex justify-center iterms-center">
-                  <div className="md:px-20 p-4 mx-auto max-w-7xl">
-                    <div className=" block w-60 h-60 relative mx-auto ">
-                      <Image
-                        layout="fill"
-                        className="mx-auto  mb-6 object-cover border-2 border-black"
-                        src="/trust-center/cloud.png"
-                        alt=""
-                      />
-                    </div>
-                    <h3 className="mb-2 card-heading  text-gray-900 lg:">
-                      Slide
-                    </h3>
-                    <p className=" text-gray-500 card-subheading">
-                      Faster processing to help you build your applications
-                      quicker and with more efficiency.
-                    </p>
-                    <Link href="#_" passHref>
-                      <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                        <span className="hyperlink group-hover:text-gray-400">
-                          Learn More
-                        </span>
-                        <svg
-                          className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          ></path>
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </section>
-              )}
-            </div>
+            <Tabs className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col mb-20">
+              <TabList className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center mb-10">
+                <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
+                  Slide
+                </Tab>
+                <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
+                 Video
+                </Tab>
+              </TabList>
+
+              <TabPanel className="  mx-auto flex justify-center iterms-center">
+                <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
+                  <iframe
+                    src="https://www.slideshare.net/slideshow/embed_code/key/d5rGkEgXFDRN17"
+                  width="560" height="315"
+                    frameBorder="0"
+                    marginWidth="0"
+                    marginHeight="0"
+                    scrolling="no"
+                    style={{
+                      border: "1px solid #CCC",
+                      borderWidth: "1px",
+                      marginBottom: "5px",
+                      maxWidth: "100%",
+                    }}
+                    allowFullScreen
+                  >
+                  </iframe>
+                </h2>
+              </TabPanel>
+              <TabPanel className="  mx-auto flex justify-center iterms-center">
+                <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/1GLQROeWoC4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </h2>
+              </TabPanel>
+            </Tabs>
+
             <Link href="/" passHref>
-              <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+              <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:textblack shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
                 Return Home
               </a>
             </Link>
@@ -337,7 +263,7 @@ export default function Thanks({ webinar_data,h_data }) {
                     SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
                   </span>
                   <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                       <span className="hyperlink group-hover:text-gray-300">
                         Read more
                       </span>
@@ -381,7 +307,7 @@ export default function Thanks({ webinar_data,h_data }) {
                     SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
                   </span>
                   <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                       <span className="hyperlink group-hover:text-gray-300">
                         Read more
                       </span>
@@ -425,7 +351,7 @@ export default function Thanks({ webinar_data,h_data }) {
                     SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
                   </span>
                   <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                       <span className="hyperlink group-hover:text-gray-300">
                         Read more
                       </span>
@@ -469,7 +395,7 @@ export default function Thanks({ webinar_data,h_data }) {
                     SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
                   </span>
                   <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                       <span className="hyperlink group-hover:text-gray-300">
                         Read more
                       </span>
@@ -494,7 +420,7 @@ export default function Thanks({ webinar_data,h_data }) {
             </div>
             <div className="text-center">
               <Link href="#_" passHref>
-                <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                   <span className="hyperlink group-hover:text-gray-300">
                     View All Resources
                   </span>
@@ -547,14 +473,14 @@ export const getServerSideProps = async ({ params }) => {
   );
   const data = await res.json();
   console.log("data", data);
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
-		method: 'get',
-	});
-	const h_data = await res1.json();
+  const res1 = await fetch("https://api.ktern.com/navbar", {
+    method: "get",
+  });
+  const h_data = await res1.json();
   return {
     props: {
-      webinar_data: data[ 0 ],
-      h_data:h_data
+      webinar_data: data[0],
+      h_data: h_data,
     },
   };
 };

@@ -8,8 +8,8 @@ export default function Footer({ footer_data }) {
 		  <section className="px-4 py-1 md:py-2 md:px-10 bg-black">
 			  
 			  <div className="md:px-10 mx-auto ">
-				   <div className="flex flex-wrap   lg:mb-2 lg:mb-0 ">
-            <div className="w-full  lg:w-1/2 lg:mb-2 md:mb-0">
+				   <div className="flex   lg:mb-2 lg:mb-0 ">
+            <div className="w-full  lg:w-1/3 lg:mb-2 md:mb-0">
               <div className="md:flex  items-center ">
                 <Link className="  text-white   " href="#" passHref>
                   <Image
@@ -19,13 +19,10 @@ export default function Footer({ footer_data }) {
                     height={150}
                   />
                 </Link>
-
-               
               </div>
-              
             </div>
-            <div className="w-full md:w-1/2 ">
-              <div className="md:flex items-center justify-end pt-4 sm:pt-10 xl:pt-14">
+            <div className="w-full md:w-2/3 pt-0 ">
+              <div className="md:flex items-center justify-end pt-4 sm:pt-10  xl:pt-14">
                 <div className="w-full lg:w-1/2">
                   <div className="flex lg:justify-end mb-6 lg:mb-10">
                     {/* <Link className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full" href="#">
@@ -112,7 +109,7 @@ export default function Footer({ footer_data }) {
                   </div>
                 </div>
               </div>
-              <div className=" flex lg:justify-end items-center pb-10">
+              <div className=" flex lg:justify-end items-center ">
                 {/* <div className="relative pt-2">
                             <select className=" appearance-none w-auto h-auto p-3 px-20   bg-white border-2 border-white rounded outline-none" name="field-name">
                                         <option>English</option>
@@ -129,10 +126,10 @@ export default function Footer({ footer_data }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4 border-t  border-b border-gray-500 p">
+          <div className="flex flex-wrap -mx-4 border-t pt-10 border-b border-gray-500 ">
             <div className="w-full grid grid-cols-2 sm:grid-cols-1 sm:px-8 gap-y-4 gap-6">
               <div className="  text-white">
-                <div className="grid grid-cols-2 sm:grid-cols-1 mb-10 gap-5 ">
+                <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mb-10 gap-5 ">
                   <div className="px-2 space-y-2 ">
                     <div className="text-gray-400 hyperlink uppercase  text-center">
                       DX Assess & Plan
@@ -436,7 +433,7 @@ export default function Footer({ footer_data }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap   lg:mb-2 lg:mb-0 ">
+          <div className="flex flex-wrap w-full  lg:mb-2 lg:mb-0 ">
             <div className="md:flex  items-center w-full items-center lg:w-1/2 lg:mb-2 md:mb-0">
              
               <p className="py-0 hidden lg:block  text-white ">
@@ -450,12 +447,12 @@ export default function Footer({ footer_data }) {
               </p>
             </div>
            
-			<div className="md:flex  items-center w-full md:w-1/2 justify-end">
+			<div className="md:flex  items-center w-full lg:w-1/2 justify-end">
                
 
                
 
-                <p className="py-16 navbar-h space-x-3 lg:block  text-white ">
+                <p className="py-16 navbar-h  space-x-3 lg:block  text-white ">
                   <span className="text-xs">
                     <Link href="/trust-center">
                       <a>Privacy Policy</a>
@@ -465,7 +462,8 @@ export default function Footer({ footer_data }) {
                     <Link href="/trust-center">
                       <a>Cookies Policy</a>
                     </Link>
-                  </span>
+							  </span>
+							  <br className="hidden sm:block"/>
                   <span className="text-xs">
                     <Link href="/trust-center">
                       <a>Terms of Service</a>

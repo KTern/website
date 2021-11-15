@@ -226,11 +226,11 @@ export default function Header ({h_data}) {
                     </div>
                 }
 
-            <div className="flex flex-wrap justify-between items-center">
+            <div className="flex flex-wrap justify-between  items-center">
                     <div className="hidden lg:block">
                     <Link href="/" passHref>
-                        <a>
-                                <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src={h_data.KTernLogoURL} alt="Ktern Logo" />
+                        <a className="mx-8">
+                                <Image className="text-lg font-medium xl:mx-20 " width="130" height="30" src={h_data.KTernLogoURL} alt="Ktern Logo" />
                             </a>
                     </Link>
                     </div>

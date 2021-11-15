@@ -585,20 +585,22 @@ function Home ({ data ,h_data}) {
 					{/* <!-- /Why Ktern --> */} {/* <!-- Customer Success Story --> */}
 					<section className="py-10 sm:mx-4 bg-black text-white ">
 						<div className=" mx-auto ">
-							<div className=" md:divide-x flex flex-wrap justify-center  rounded-lg  ">
+							<div className=" md:divide-x grid-cols-3 sm:grid-cols-1 sm:divide-y  grid w-full  rounded-lg  ">
 								{data.CustomerSuccessStories.map((data) => (
-									<div key="data" className=" py-4 w-full md:w-1/4 lg:w-1/4 p-10 md:py-10  ">
-										<span className="flex  justify-center w-14 h-14  rounded-full">
+									<div key="data" className=" grid grid-rows-3  w-full  px-12  ">
+										<div className="flex items-center     rounded-full">
+										
 											<Image
 												src={data.Icon.imageURL}
 												alt={data.Icon.imageDescription}
 												width={data.Icon.width}
 												height={data.Icon.height}
 											/>
-										</span>
-										<span className="card-heading"> {data.CardTitle} </span>
-										<h3 className="mb-4 card-subheading"> {data.CardDescription} </h3>
-										<Link href={data.CTAUrl} passHref>
+										</div>
+										<div className="mb-4"><span className="card-heading"> {data.CardTitle} </span>
+										<h3 className=" card-subheading"> {data.CardDescription} </h3></div>
+										<div>
+											<Link href={data.CTAUrl} passHref>
 											<a className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
 												<span className="hyperlink group-hover:text-gray-400"> {data.CTAText} </span>
 												<svg
@@ -616,7 +618,8 @@ function Home ({ data ,h_data}) {
 													></path>
 												</svg>
 											</a>
-										</Link>
+											</Link>
+										</div>
 									</div>
 								))}
 							</div>
@@ -777,7 +780,7 @@ function Home ({ data ,h_data}) {
 					</section>
 					{/* <!-- /Redirect content Section --> */} {/* <!-- CTA Section --> */}
 					<section
-						className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat md:bg-cta"
+						className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat lg:bg-cta"
 						style={{
 							backgroundColor: '#EAEDF2',
 							backgroundPosition: 'bottom right',
