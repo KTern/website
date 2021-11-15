@@ -9,7 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import { EventJsonLd } from "next-seo";
 import Head from "next/head";
 import { useRouter } from "next/router";
-export default function WebinarLanding({ webinar_Data }) {
+export default function WebinarLanding({ webinar_Data ,h_data}) {
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
     hour: "numeric",
@@ -166,7 +166,7 @@ export default function WebinarLanding({ webinar_Data }) {
         images={["https://example.com/photos/photo.jpg"]}
         description="My event @ my place"
       />
-      <Layout>
+      <Layout h_data={h_data}>
         <section className="relative sm:mb-20 ">
           <div
             className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.CssStreamTag}-primary opacity-30`}
@@ -262,7 +262,7 @@ export default function WebinarLanding({ webinar_Data }) {
                 >
                   {webinar_Data.LearningPoints.map((content, index) => (
                     <li className="mb-2" key="index">
-                      <div className="w-fill flex  text-gray-600 md:pr-16">
+                      <div className="w-full flex  text-gray-600 md:pr-16">
                         {/* <div className=" block w-4 h-4 relative flex-none">
                                                 <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                             </div> */}
@@ -581,10 +581,15 @@ export const getServerSideProps = async ({ params }) => {
     { method: "get" }
   );
   const data = await res.json();
-  console.log("data", data[0]);
+  // console.log("data", data[0]);
+  	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
   return {
     props: {
-      webinar_Data: data[0],
+      webinar_Data: data[ 0 ],
+      h_data:h_data
     },
   };
 };

@@ -15,7 +15,7 @@ export default function FeatureCard ({ data }) {
              </Link> 
              </div>
              <div className="w-1/2">
-                 <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.image} alt="Blog Image 1"  width='400' height='270'/>
+                 <Image className="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.image.imageURL} alt={data.image.imageDescription}  width={data.image.width} height={data.image.height}/>
              </div>
          </div>
                                            

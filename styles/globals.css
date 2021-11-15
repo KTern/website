@@ -634,3 +634,14 @@
 	        width: 40%;
 	    }
 	} */
+	
+	.background {
+	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(100.8deg, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	    overflow: hidden;
+	    padding-bottom: 176px;
+	    padding-top: 100px;
+	    position: relative
+	}

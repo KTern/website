@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { FAQPageJsonLd } from "next-seo";
-export default function Partners({ data }) {
+export default function Partners({ data,h_data }) {
   return (
     <>
       <NextSeo
@@ -132,7 +132,7 @@ export default function Partners({ data }) {
           },
         ]}
       />
-      <Layout>
+      <Layout h_data={h_data}>
         {/* <!-- Header Section --> */}
         <section className='w-full py-28 bg-secondary'>
           <div className='flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row'>
@@ -303,7 +303,7 @@ export default function Partners({ data }) {
         {/* <!-- Footer CTA --> */}
         <section className='bg-white'>
           <div className='md:px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl'>
-            <div className='relative py-6 overflow-hidden  bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000'>
+            <div className='relative py-6 overflow-hidden  background lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000'>
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>
@@ -339,9 +339,14 @@ export const getServerSideProps = async () => {
   });
   const data = await res.json();
   // console.log(data.PartnershipSteps.Steps);
+  	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
   return {
     props: {
       data: data,
+      h_data:h_data
     },
   };
 };

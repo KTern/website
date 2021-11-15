@@ -21,7 +21,7 @@ function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon"  href="https://ktern.com/img/favicon.ico" />
+        <link rel="shortcut icon"  href="https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico" />
       </Head>
       <Component {...pageProps} />
       </>

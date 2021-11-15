@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const WhitePaper_Landing = ({data}) => {
+const WhitePaper_Landing = ({data,h_data}) => {
     return (
         <>
            <NextSeo
@@ -130,7 +130,7 @@ const WhitePaper_Landing = ({data}) => {
             <Head>
                 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons' async='async'></script>
             </Head>
-        <Layout>
+        <Layout h_data={h_data}>
       <section  className="w-full pt-32 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
@@ -437,10 +437,16 @@ export const getServerSideProps = async (context) => {
     const id = context.params.whitepaper;
     // strapi data url to be acquired
     const res = await fetch(`https://api.ktern.com/whitepapers?slug=${id}`);
-    const data = await res.json();
+  const data = await res.json();
+  	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
     return {
         
-        props:{data:data[0]}
+      props: {
+        data: data[ 0 ],
+      h_data:h_data}
     }
 }
 export default WhitePaper_Landing;

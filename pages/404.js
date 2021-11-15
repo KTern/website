@@ -122,7 +122,7 @@ export default function Error() {
           "http://plus.google.com/your_profile",
         ]}
       />
-      <section className="relative py-10 2xl:py-20  overflow-hidden h-screen background" >
+      <section className="relative py-10 2xl:py-20  overflow-hidden h-screen background " >
         <div className="absolute top-0 right-0 -mr-60 md:-mt-112 ">
           <Image src="/404/circle.svg" alt="" width={500} height={400} />
         </div>

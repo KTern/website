@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-export default function TrustCenter ({data}) {
+export default function TrustCenter ({data,h_data}) {
     return (
         <>
           	<NextSeo
@@ -125,7 +125,7 @@ export default function TrustCenter ({data}) {
         'http://plus.google.com/your_profile',
       ]}
     />
-        <Layout>
+        <Layout h_data={h_data}>
             {/* Header Section */}
           <section className="w-full py-28 bg-herogradient" >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
@@ -219,10 +219,15 @@ export const getServerSideProps = async ({params}) => {
 		method: 'get',
 	});
 	const data = await res.json();
-	console.log('data', data);
+	// console.log('data', data);
+		const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
 	return {
 		props: {
-			data: data[0],
+			data: data[ 0 ],
+			h_data:h_data
 		},
 	};
 }

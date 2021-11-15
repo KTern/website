@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
-export default function Webinar ({data}) {
+export default function Webinar ({data,h_data}) {
     return (
         <>
               <NextSeo
@@ -118,7 +118,7 @@ export default function Webinar ({data}) {
         'http://plus.google.com/your_profile',
       ]}
     />
-    <Layout > 
+    <Layout h_data={h_data}> 
         {/* <!--Upcoming Webinar Section--> */}
         <div className=" mx-auto md:py-4">
             <section className="w-full  bg-white py-12 pt-20  bg-secondary" >
@@ -266,10 +266,15 @@ export const getServerSideProps = async () => {
     // data url from strapi)
     const res = await fetch("https://api.ktern.com/all-webinars",{method:'get'});
     const data = await res.json();
-    console.log("data",data)
+    // console.log("data", data)
+    	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
     return {
         props: {
-            data:data
+            data: data,
+            h_data:h_data
         }
     }
 }

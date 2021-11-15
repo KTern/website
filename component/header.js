@@ -146,7 +146,9 @@ function usePartners () {
 
   return [ref, ready];
 }
-export default function Header ({header_data}) {
+export default function Header ({h_data}) {
+ 
+// console.log("HEader",h_data)
     const router = useRouter();
    
     const overall = useRef(null);
@@ -206,9 +208,9 @@ export default function Header ({header_data}) {
             <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
                 {isVisible && isOpen && (router.pathname==='/') &&
                     <div className="flex sm:hidden">
-                    <div id="banner" className="  w-full h-10 bg-black text-white flex items-center text-center justify-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.&nbsp;
-                        <Link href="/" passHref>
-                    <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">Learn More
+                    <div id="banner" className="  w-full h-10 bg-black text-white flex space-x-12 items-center text-center justify-center "><div>{h_data.TopBar.buttonTitle}</div>
+                        <Link href={h_data.TopBar.linkURL} passHref>
+                    <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">&nbsp;Learn More
                     <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
@@ -228,13 +230,14 @@ export default function Header ({header_data}) {
                     <div className="hidden lg:block">
                     <Link href="/" passHref>
                         <a>
-                    <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src="/assets/KternLogo.png" alt="Ktern Logo"/></a>
+                                <Image className="text-lg font-medium xl:mx-20 " width="148" height="40" src={h_data.KTernLogoURL} alt="Ktern Logo" />
+                            </a>
                     </Link>
                     </div>
                     <div className="hidden sm:block">
                      <Link  href="/" passHref>
                             <a className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer">
-                        <Image  src="/assets/kternLogo.png" alt="Ktern Logo" width="100%" height="30%"/>
+                        <Image  src={h_data.KTernLogoURL} alt="Ktern Logo" width="100%" height="30%"/>
                         </a>
                     </Link>
                     </div>
@@ -294,16 +297,16 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         </ul>
                                         
                                             {isProjectShown && (
-                                            <Card id="toggle-1" data={{title:'Digital Projects',feature1:'Cutover Orchestrator',feature2:'Workflow Wizard',feature3:'Timeline Simulator',feature4:'Collaboration Forum',feature5:'Smart Dashboards',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Projects.png',class:'bg-projects-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/projects/project_team_3.svg'} }/>
+                                            <Card id="toggle-1" data={{ title: 'Digital Projects', feature1: h_data.DigitalProjects[ 0 ].Title, feature2: h_data.DigitalProjects[ 1 ].Title, feature3: h_data.DigitalProjects[ 2 ].Title, feature4: h_data.DigitalProjects[ 3 ].Title, feature5: h_data.DigitalProjects[ 4 ].Title, url1: h_data.DigitalProjects[ 0 ].CTA.linkURL, url2: h_data.DigitalProjects[ 1 ].CTA.linkURL, url3: h_data.DigitalProjects[ 2 ].CTA.linkURL, url4: h_data.DigitalProjects[ 3 ].CTA.linkURL, url5: h_data.DigitalProjects[ 4 ].CTA.linkURL, features_url: h_data.SeeAllFeatures, icon: h_data.DigitalProjects[ 0 ].StreamsLogoUrl, class: `bg-${h_data.cssStreamTag}-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3`, feature1_desc: h_data.DigitalProjects[ 0 ].Description, feature2_desc: h_data.DigitalProjects[ 1 ].Description, feature3_desc: h_data.DigitalProjects[ 2 ].Description, feature4_desc: h_data.DigitalProjects[ 3 ].Description, feature5_desc: h_data.DigitalProjects[ 4 ].Description, feature1_image: h_data.DigitalProjects[0].Image, feature2_image: h_data.DigitalProjects[1].Image, feature3_image: h_data.DigitalProjects[2].Image, feature4_image: h_data.DigitalProjects[3].Image, feature5_image: h_data.DigitalProjects[4].Image }}/>
                                             )}
                                             {isProcessShown && (
-                                            <Card id="toggle-1" data={{title:'Digital Process',feature1:'Process Orchestrator',feature2:'Custom Code Remediation',feature3:'Materiality Engine',feature4:'Customization Console',feature5:'Training Academy',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Process.svg',class:'bg-process-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/process/process_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{ title: 'Digital Process', feature1: h_data.DigitalProcess[ 0 ].Title, feature2: h_data.DigitalProcess[ 1 ].Title, feature3: h_data.DigitalProcess[ 2 ].Title, feature4: h_data.DigitalProcess[ 3 ].Title, feature5: h_data.DigitalProcess[ 4 ].Title, url1: h_data.DigitalProcess[ 0 ].CTA.linkURL, url2: h_data.DigitalProcess[ 1 ].CTA.linkURL, url3: h_data.DigitalProcess[ 2 ].CTA.linkURL, url4: h_data.DigitalProcess[ 3 ].CTA.linkURL, url5: h_data.DigitalProcess[ 4 ].CTA.linkURL, features_url: h_data.SeeAllFeatures, icon: h_data.DigitalProcess[ 0 ].StreamsLogoUrl, class: `bg-${h_data.cssStreamTag}-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3`, feature1_desc: h_data.DigitalProcess[ 0 ].Description, feature2_desc: h_data.DigitalProcess[ 1 ].Description, feature3_desc: h_data.DigitalProcess[ 2 ].Description, feature4_desc: h_data.DigitalProcess[ 3 ].Description, feature5_desc: h_data.DigitalProcess[ 4 ].Description, feature1_image: h_data.DigitalProcess[0].Image, feature2_image: h_data.DigitalProcess[1].Image, feature3_image: h_data.DigitalProcess[2].Image, feature4_image: h_data.DigitalProcess[3].Image, feature5_image: h_data.DigitalProcess[4].Image }}/>  )}
                                              {isMapsShown && (
-                                            <Card id="toggle-1" data={{title:'Digital Maps',feature1:'Fit-Gap Wizards',feature2:'TCO Estimator',feature3:'Roadmap Simulator',feature4:'Risk Predictor',feature5:'Business Case Generator',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Maps.png',class:'bg-maps-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/maps/maps_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{ title: 'Digital Maps', feature1: h_data.DigitalMaps[ 0 ].Title, feature2: h_data.DigitalMaps[ 1 ].Title, feature3: h_data.DigitalMaps[ 2 ].Title, feature4: h_data.DigitalMaps[ 3 ].Title, feature5: h_data.DigitalMaps[ 4 ].Title, url1: h_data.DigitalMaps[ 0 ].CTA.linkURL, url2: h_data.DigitalMaps[ 1 ].CTA.linkURL, url3: h_data.DigitalMaps[ 2 ].CTA.linkURL, url4: h_data.DigitalMaps[ 3 ].CTA.linkURL, url5: h_data.DigitalMaps[ 4 ].CTA.linkURL, features_url: h_data.SeeAllFeatures, icon: h_data.DigitalMaps[ 0 ].StreamsLogoUrl, class: `bg-${h_data.cssStreamTag}-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3`, feature1_desc: h_data.DigitalMaps[ 0 ].Description, feature2_desc: h_data.DigitalMaps[ 1 ].Description, feature3_desc: h_data.DigitalMaps[ 2 ].Description, feature4_desc: h_data.DigitalMaps[ 3 ].Description, feature5_desc: h_data.DigitalMaps[ 4 ].Description, feature1_image: h_data.DigitalMaps[0].Image, feature2_image: h_data.DigitalMaps[1].Image, feature3_image: h_data.DigitalMaps[2].Image, feature4_image: h_data.DigitalMaps[3].Image, feature5_image: h_data.DigitalMaps[4].Image }}/>  )}
                                              {isMinesShown && (
-                                            <Card id="toggle-1" data={{title:'Digital Mines',feature1:'Process Mining Wizard',feature2:'Process Optimizer',feature3:'ROI Estimator',feature4:'Digital Twin Builder',feature5:'SAP Business-Ops Cockpit',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Mines.png',class:'bg-mines-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/mines/mines_1.svg'} }/>  )}
+                                            <Card id="toggle-1" data={{ title: 'Digital Mines', feature1: h_data.DigitalMines[ 0 ].Title, feature2: h_data.DigitalMines[ 1 ].Title, feature3: h_data.DigitalMines[ 2 ].Title, feature4: h_data.DigitalMines[ 3 ].Title, feature5: h_data.DigitalMines[ 4 ].Title, url1: h_data.DigitalMines[ 0 ].CTA.linkURL, url2: h_data.DigitalMines[ 1 ].CTA.linkURL, url3: h_data.DigitalMines[ 2 ].CTA.linkURL, url4: h_data.DigitalMines[ 3 ].CTA.linkURL, url5: h_data.DigitalMines[ 4 ].CTA.linkURL, features_url: h_data.SeeAllFeatures, icon: h_data.DigitalMines[ 0 ].StreamsLogoUrl, class: `bg-${h_data.cssStreamTag}-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3`, feature1_desc: h_data.DigitalMines[ 0 ].Description, feature2_desc: h_data.DigitalMines[ 1 ].Description, feature3_desc: h_data.DigitalMines[ 2 ].Description, feature4_desc: h_data.DigitalMines[ 3 ].Description, feature5_desc: h_data.DigitalMines[ 4 ].Description, feature1_image: h_data.DigitalMines[0].Image, feature2_image: h_data.DigitalMines[1].Image, feature3_image: h_data.DigitalMines[2].Image, feature4_image: h_data.DigitalMines[3].Image, feature5_image: h_data.DigitalMines[4].Image }}/>  )}
                                              {isLabsShown && (
-                                            <Card id="toggle-1" data={{title:'Digital Labs',feature1:'SAP Test Case Finder',feature2:'Test Run Bots',feature3:'Defect Wizards',feature4:'Intelligent Reports',feature5:'Autonomous Test Console',url:'/features/custom-code-remediation',feature_url:'/features/custom-code-remediation',icon:'/assets/icons/Labs.png',class:'bg-labs-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3',feature1_desc:'Cutover orchestration description',feature2_desc:'Feature2 desc',feature3_desc:'Feature3 desc',feature4_desc:'Feature4 desc',feature5_desc:'Feature5 desc',image:'/product/labs/labs_1.svg'} }/> )}
+                                            <Card id="toggle-1" data={{ title: 'Digital Labs', feature1: h_data.DigitalLabs[ 0 ].Title, feature2: h_data.DigitalLabs[ 1 ].Title, feature3: h_data.DigitalLabs[ 2 ].Title, feature4: h_data.DigitalLabs[ 3 ].Title, feature5: h_data.DigitalLabs[ 4 ].Title, url1: h_data.DigitalLabs[ 0 ].CTA.linkURL, url2: h_data.DigitalLabs[ 1 ].CTA.linkURL, url3: h_data.DigitalLabs[ 2 ].CTA.linkURL, url4: h_data.DigitalLabs[ 3 ].CTA.linkURL, url5: h_data.DigitalLabs[ 4 ].CTA.linkURL, features_url: h_data.SeeAllFeatures, icon: h_data.DigitalLabs[ 0 ].StreamsLogoUrl, class: `bg-${h_data.cssStreamTag}-secondary px-4 w-full sm:w-1/2 lg:w-2/4  pb-6 pt-6 lg:pt-3`, feature1_desc: h_data.DigitalLabs[ 0 ].Description, feature2_desc: h_data.DigitalLabs[ 1 ].Description, feature3_desc: h_data.DigitalLabs[ 2 ].Description, feature4_desc: h_data.DigitalLabs[ 3 ].Description, feature5_desc: h_data.DigitalLabs[ 4 ].Description, feature1_image: h_data.DigitalLabs[0].Image, feature2_image: h_data.DigitalLabs[1].Image, feature3_image: h_data.DigitalLabs[2].Image, feature4_image: h_data.DigitalLabs[3].Image, feature5_image: h_data.DigitalLabs[4].Image }}/> )}
                                    
                                 </div>
                             </div>
@@ -389,31 +392,31 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a
                         </li>  
                         <li className="toggleable  hover:bg-secondary" ref={partners}>
                                  <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
-                            <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>Partners</label>
+                            <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>{h_data.Partner}</label>
                             <div id="toggle-3" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h  uppercase text-black text-bold mb-2">Partners</h3>
+                                        <h3 className="navbar-h  uppercase text-black text-bold mb-2">{h_data.Partner}</h3>
                                         <div >
                                         <li>
                                                     <Link href="/partners"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partners</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[0].Title}</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/consulting-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Consulting Partners</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[1].Title}</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/technology-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(true);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Technology Partners</a></Link>
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[2].Title}</a></Link>
                                         </li>
                                         <li>
                                                     <Link href="/partner-register"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
-                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Become A Partner</a></Link>
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[3].Title}</a></Link>
                                         </li>
                                         <li>
                                         <Link href="/"   ><a target="_blank" onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(true);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}} 
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></Link>
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].Title}</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
                          </li> 
@@ -421,25 +424,25 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
                                         </ul>
                                         <div className="w-2/3">
                                             {isPartnersShown && (
-                                            <FeatureCard data={{title:'Partner',description:'Partner 1 desc',url:'/partners',image:'/partner/partner-hand.jpg'} }/>
+                                            <FeatureCard data={{title:h_data.Partners[0].Title,description:h_data.Partners[0].NavBarCard[0].Title,url:h_data.Partners[0].NavBarCard[0].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>
                                             )}
                                             {isConsultingShown && (
-                                            <FeatureCard data={{title:'Consulting Partner',description:'Consulting Partner desc',url:'/consulting-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[1].Title,description:h_data.Partners[1].NavBarCard[1].Title,url:h_data.Partners[1].NavBarCard[1].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
                                              {isTechnologyShown && (
-                                            <FeatureCard data={{title:'Technology Parter',description:'Technology Parter desc',url:'/technology-partner',image:'/partner/partner-hand.jpg'} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[2].Title,description:h_data.Partners[2].NavBarCard[2].Title,url:h_data.Partners[2].NavBarCard[2].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
                                              {isBecomeAPartnerShown && (
-                                            <FeatureCard data={{title:'Become a Partner',description:'Become a Partner desc',url:'/partner-register',image:'/partner/partner-hand.jpg'} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[3].Title,description:h_data.Partners[3].NavBarCard[3].Title,url:h_data.Partners[3].NavBarCard[3].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
                                              {isPortalShown && (
-                                            <FeatureCard data={{title:'Partner Portal',description:'Partner Portal desc',url:'/',image:'/partner/partner-hand.jpg'} }/> )}
+                                            <FeatureCard data={{title:h_data.Partners[4].Title,description:h_data.Partners[4].NavBarCard[4].Title,url:h_data.Partners[4].NavBarCard[4].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/> )}
                                         </div>
                                                </div>
                             </div>
                             </li>
                              <li className="toggleable hover:bg-secondary ">
-                            <Link href="https://support.ktern.com/" passhref><a target="_blank" className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Support</a></Link>
+                            <Link href={h_data.Support.linkURL} passhref><a target="_blank" className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Support.buttonTitle}</a></Link>
                             </li>
                         <li className="toggleable hover:bg-secondary ">
-                                <Link href="/about-company" ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">Company</a></Link>
+                                <Link href={h_data.Company.linkURL} ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Company.buttonTitle}</a></Link>
                                 
                             </li>
                            
@@ -635,14 +638,3 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Partner Portal</a></
  
 }
 
-
-export const getServerSideProps = async () => {
-    // data url from strapi
-    let data={a:'ab'}
-    
-    return {
-        props: {
-            header_data:data
-        }
-    }
-}

@@ -27,7 +27,7 @@ import React from 'react'
 // Will automatically happen on the next event loop.
 client.flush();
 
-function Home ({ data }) {
+function Home ({ data ,h_data}) {
 	
 	
 	return (
@@ -65,20 +65,20 @@ function Home ({ data }) {
 					site_name: 'SiteName',
 				}}
 				twitter={{
-					handle: '@handle',
+					handle: `${data.OtherSEO.TwitterHandle}`,
 					site: '@site',
 					cardType: 'summary_large_image',
 				}}
 				facebook={{
-					handle: '@handle',
-					site: '@site',
+					handle: `${data.OtherSEO.FacebookHandle}`,
+					site: `${data.OtherSEO.FacebookSite}`,
 					cardType: 'summary_large_image',
 					appId: '1234567890',
 				}}
 				languageAlternates={[
 					{
-						hrefLang: 'de',
-						href: 'https://www.canonical.ie/de',
+						hrefLang: `${data.OtherSEO.languageAlternates.hrefLang}`,
+						href: `${data.OtherSEO.languageAlternates.href}`,
 					},
 				]}
 				additionalMetaTags={[
@@ -159,7 +159,7 @@ function Home ({ data }) {
 				applicationCategory="GameApplication"
 			/>
 			<div>
-				<Layout>
+				<Layout h_data={h_data}>
 					{/* <!-- Hero Section --> */}
 					<section className=" pt-32  relative overflow-hidden bg-white">
 						<div className=" bg-white  h-full">
@@ -202,8 +202,8 @@ function Home ({ data }) {
 										className=" w-auto lg:w-100"
 										src={data.imageURL}
 										alt={data.imageDescription}
-										width={250}
-										height={250}
+										width={data.width}
+										height={data.height}
 										layout="responsive"
 									/>
 								</div>
@@ -223,12 +223,12 @@ function Home ({ data }) {
 							></path>
 						</svg>
 						<div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
-							<h2 className="mx-auto section-heading sm:sm-section-heading "> KTern Digital Streams </h2>
-							<p className="max-w-lg mt-5 section-subheading text-gray-600 md:mx-auto sm:sm-section-subheading">
-								Our Digital Workplace Comes with 5 Streams to make your Digital Transformation Clean and Simple
+							<h2 className="mx-auto section-heading sm:sm-section-heading "> {data.DigitalStreamsCardHeader} </h2>
+							<p className="max-w-full px-24 mt-5 section-subheading text-gray-600 md:mx-auto sm:sm-section-subheading">
+								{data.DigitalStreamsCardSubHeader}
 							</p>
 						</div>
-						<div className="relative grid gap-8 px-10 mx-auto md:grid-cols-2 xl:grid-cols-5 max-w-full">
+						<div className="relative grid gap-8 px-8 mx-auto md:grid-cols-2 xl:grid-cols-5 max-w-full">
 							<svg
 								className="absolute hidden w-12 h-auto -mt-8 -ml-0 text-black fill-current xl:block"
 								viewBox="0 0 39 50"
@@ -251,23 +251,21 @@ function Home ({ data }) {
 							</svg>
 							{/* <!-- Digital Maps --> */}
 							<div className="relative">
-								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+							<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
-											alt="Digital maps"
-											height={30}
-											width={30}
+											alt={data.DigitalStreamsCards[0].StreamLogo.imageDescription}
+											height={data.DigitalStreamsCards[0].StreamLogo.height}
+											width={data.DigitalStreamsCards[0].StreamLogo.width}
 										/>
 									</span>
-									<h3 className="card-heading font-bold sm:sm-card-heading">
-										{data.DigitalStreamsCards[0].StreamTitle}
-									</h3>
-									<p className="mt-4 card-subheading text-gray-700 sm:sm-card-subheading">
+									<h3 className="card-heading font-bold"> {data.DigitalStreamsCards[0].StreamTitle} </h3>
+									<p className="mt-4 card-subheading text-gray-700">
 										{data.DigitalStreamsCards[0].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-100">
+									<ul className="space-y-2 h-full lg:h-200">
 										{data.DigitalStreamsCards[0].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -292,8 +290,8 @@ function Home ({ data }) {
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[0].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[0].LandingPageURL} passHref>
-										<a className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
-											<span className="hyperlink sm:sm-hyperlink group-hover:text-maps-300">Learn More</span>
+										<a className="inline-flex items-center pb-1 lg:mt-6 text-maps-primary hover:border-blue-500 group ">
+											<span className="hyperlink group-hover:text-maps-300"> Learn More </span>
 											<svg
 												className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300"
 												fill="none"
@@ -315,13 +313,13 @@ function Home ({ data }) {
 							</div>
 							{/* <!-- Digital Projects --> */}
 							<div className="relative">
-								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+								<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[1].StreamLogo.imageURL}
-											alt="Digital Projects"
-											height={30}
-											width={30}
+											alt={data.DigitalStreamsCards[1].StreamLogo.imageDescription}
+											height={data.DigitalStreamsCards[1].StreamLogo.height}
+											width={data.DigitalStreamsCards[1].StreamLogo.width}
 										/>
 									</span>
 									<h3 className="card-heading font-bold"> {data.DigitalStreamsCards[1].StreamTitle} </h3>
@@ -329,7 +327,7 @@ function Home ({ data }) {
 										{data.DigitalStreamsCards[1].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-100">
+									<ul className="space-y-2 h-full">
 										{data.DigitalStreamsCards[1].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -377,13 +375,13 @@ function Home ({ data }) {
 							</div>
 							{/* <!-- Digital Process  --> */}
 							<div className="relative">
-								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+								<div className="relative z-20 flex flex-col h-full p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[2].StreamLogo.imageURL}
-											alt="Digital Process"
-											height={30}
-											width={30}
+											alt={data.DigitalStreamsCards[2].StreamLogo.imageDescription}
+											height={data.DigitalStreamsCards[2].StreamLogo.height}
+											width={data.DigitalStreamsCards[2].StreamLogo.width}
 										/>
 									</span>
 									<h3 className="card-heading font-bold"> {data.DigitalStreamsCards[2].StreamTitle} </h3>
@@ -391,7 +389,7 @@ function Home ({ data }) {
 										{data.DigitalStreamsCards[2].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-100">
+									<ul className="space-y-2 h-full">
 										{data.DigitalStreamsCards[2].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -439,13 +437,13 @@ function Home ({ data }) {
 							</div>
 							{/*<!-- Digital Labs --> */}
 							<div className="relative">
-								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+								<div className="relative z-20 flex flex-col h-full p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[3].StreamLogo.imageURL}
-											alt="Digital Lab"
-											height={30}
-											width={30}
+											alt={data.DigitalStreamsCards[3].StreamLogo.imageDescription}
+											height={data.DigitalStreamsCards[3].StreamLogo.height}
+											width={data.DigitalStreamsCards[3].StreamLogo.width}
 										/>
 									</span>
 									<h3 className="card-heading font-bold"> {data.DigitalStreamsCards[3].StreamTitle} </h3>
@@ -453,7 +451,7 @@ function Home ({ data }) {
 										{data.DigitalStreamsCards[3].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-100">
+									<ul className="space-y-2 h-full">
 										{data.DigitalStreamsCards[3].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -501,13 +499,13 @@ function Home ({ data }) {
 							</div>
 							{/*<!-- Digital Mines --> */}
 							<div className="relative">
-								<div className="relative z-20 flex flex-col p-5 bg-white border-2 border-gray-800">
+								<div className="relative z-20 flex flex-col p-5 h-full bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[4].StreamLogo.imageURL}
-											alt="Digital Mines"
-											height={30}
-											width={30}
+											alt={data.DigitalStreamsCards[4].StreamLogo.imageDescription}
+											height={data.DigitalStreamsCards[4].StreamLogo.height}
+											width={data.DigitalStreamsCards[4].StreamLogo.width}
 										/>
 									</span>
 									<h3 className="card-heading font-bold"> {data.DigitalStreamsCards[4].StreamTitle} </h3>
@@ -515,7 +513,7 @@ function Home ({ data }) {
 										{data.DigitalStreamsCards[4].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-100">
+									<ul className="space-y-2 h-full">
 										{data.DigitalStreamsCards[4].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -565,7 +563,7 @@ function Home ({ data }) {
 					</section>
 					{/* <!-- /Streams Section --> */} {/* <!-- Why Ktern --> */}
 					<section className="md:px-20">
-						<div className="flex justify-center items-center   mx-auto space-x-10 ">
+						<div className="flex justify-center items-center    mx-auto space-x-10 ">
 							<div className="flex flex-wrap ">
 								{data.ProductUVP.map((product) => (
 									<div key="product" className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 mt-8">
@@ -573,8 +571,8 @@ function Home ({ data }) {
 											<Image
 												src={product.Icon.imageURL}
 												alt={product.Icon.imageDescription}
-												width={150}
-												height={150}
+												width={product.Icon.width}
+												height={product.Icon.height}
 											/>
 										</span>
 										<h3 className="mb-4  card-heading"> {product.CardTitle} </h3>
@@ -587,15 +585,15 @@ function Home ({ data }) {
 					{/* <!-- /Why Ktern --> */} {/* <!-- Customer Success Story --> */}
 					<section className="py-10 sm:mx-4 bg-black text-white ">
 						<div className=" mx-auto ">
-							<div className=" md:divide-x flex flex-wrap justify-center space-x-10  rounded-lg  ">
+							<div className=" md:divide-x flex flex-wrap justify-center  rounded-lg  ">
 								{data.CustomerSuccessStories.map((data) => (
 									<div key="data" className=" py-4 w-full md:w-1/4 lg:w-1/4 p-10 md:py-10  ">
 										<span className="flex  justify-center w-14 h-14  rounded-full">
 											<Image
 												src={data.Icon.imageURL}
 												alt={data.Icon.imageDescription}
-												width={250}
-												height={250}
+												width={data.Icon.width}
+												height={data.Icon.height}
 											/>
 										</span>
 										<span className="card-heading"> {data.CardTitle} </span>
@@ -643,8 +641,8 @@ function Home ({ data }) {
 														src={data.QuickLinks[0].Icon.imageURL}
 														alt={data.QuickLinks[0].Icon.imageDescription}
 														draggable="false"
-														width={200}
-														height={200}
+														width={data.QuickLinks[0].Icon.width}
+														height={data.QuickLinks[0].Icon.height}
 													/>
 												</div>
 											</div>
@@ -720,8 +718,8 @@ function Home ({ data }) {
 													src={data.QuickLinks[1].Icon.imageURL}
 													alt={data.QuickLinks[1].Icon.imageDescription}
 													draggable="false"
-													width={200}
-													height={200}
+													width={data.QuickLinks[1].Icon.width}
+													height={data.QuickLinks[1].Icon.height}
 												/>
 											</div>
 										</div>
@@ -766,8 +764,8 @@ function Home ({ data }) {
 													className="object-contain w-full h-auto ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4"
 													src={data.QuickLinks[2].Icon.imageURL}
 													draggable="false"
-													width={200}
-													height={200}
+													width={data.QuickLinks[2].Icon.width}
+													height={data.QuickLinks[2].Icon.height}
 													alt={data.QuickLinks[2].Icon.imageDescription}
 												/>
 											</div>
@@ -811,10 +809,15 @@ export const getServerSideProps = async () => {
 		method: 'get',
 	});
 	const data = await res.json();
+	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
 	// console.log('data', data);
 	return {
 		props: {
 			data: data,
+			h_data:h_data
 		},
 	};
 };

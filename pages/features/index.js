@@ -13,7 +13,7 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
 import { features } from "process";
-const Feature_index = ({data}) => {
+const Feature_index = ({data,h_data}) => {
     return (
         <>
           <NextSeo
@@ -125,7 +125,7 @@ const Feature_index = ({data}) => {
         'http://plus.google.com/your_profile',
       ]}
     />
-        <Layout>
+        <Layout h_data={h_data}>
             
             {/* HEader */}
             <section id="features" className="w-full py-32 bg-herogradient" >
@@ -556,10 +556,15 @@ export const getServerSideProps = async () => {
     // data url from strapi)
     const res = await fetch('https://api.ktern.com/all-features',{method:'get'});
     const data = await res.json();
-    console.log("data",data)
+    // console.log("data",data)
+    	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
     return {
         props: {
-            data:data
+            data: data,
+            h_data:h_data
         }
     }
    

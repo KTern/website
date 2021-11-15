@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { useState } from "react";
-export default function Resources({ data }) {
+export default function Resources({ data,h_data }) {
   const [ isFilters, setFilters ] = useState(false);
   let filter=[]
   function handleFilter (element) {
@@ -133,7 +133,7 @@ export default function Resources({ data }) {
           "http://plus.google.com/your_profile",
         ]}
       />
-      <Layout>
+      <Layout h_data={h_data}>
         <section className="w-full py-32 bg-herogradient">
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
@@ -308,7 +308,7 @@ export default function Resources({ data }) {
         {/* <!-- Footer--> */}
         <section className="bg-white">
           <div className="md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl">
-            <div className="relative py-6 overflow-hidden  bg-gradient-to-r from-black to-secondary lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
+            <div className="relative py-6 overflow-hidden  background lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
               <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
               <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
               <div className="relative p-6  md:p-0 md:pb-4">
@@ -351,7 +351,13 @@ export const getServerSideProps = async () => {
   // strapi data to be acquired
   const res = await fetch("https://api.ktern.com/resources");
   const data = await res.json();
+  	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
   return {
-    props: { data: data },
+    props: {
+      data: data,
+    h_data:h_data},
   };
 };

@@ -44,7 +44,7 @@ function handleTotal () {
   selectedOptions = ['maps','projects','process','labs','mines']
   total = 10;
 }
-export default function Pricing ({data}) {
+export default function Pricing ({data,h_data}) {
   const [ isMapsSelected, setIsMapsSelected ] = useState(true);
   const [ isProjectsSelected, setIsProjectsSelected ] = useState(true);
   const [ isProcessSelected, setIsProcessSelected ] = useState(true);
@@ -162,7 +162,7 @@ export default function Pricing ({data}) {
         'http://plus.google.com/your_profile',
       ]}
     />
-        <Layout>
+        <Layout h_data={h_data}>
              {/* <!-- Main Pricing Section-->         */}
             <section className="overflow-hidden text-gray-700 " >
                 <div className="container px-5 pt-32 pb-4 mx-auto">
@@ -1263,10 +1263,14 @@ export default function Pricing ({data}) {
 export const getServerSideProps = async () => {
     // data url from strapi
     let data={a:'ab'}
-    
+    	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
     return {
         props: {
-            data:data
+        data: data,
+          h_data:h_data,
         }
     }
 }

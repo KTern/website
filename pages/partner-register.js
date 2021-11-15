@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Link from "next/link";
-export default function PartnerContact({ data }) {
+export default function PartnerContact({ data,h_data }) {
   return (
     <>
       <Head>
@@ -130,7 +130,7 @@ export default function PartnerContact({ data }) {
           "http://plus.google.com/your_profile",
         ]}
       />
-      <Layout>
+      <Layout h_data={h_data}>
         <div className="py-20 w-full min-h-screen bg-white flex justify-center ">
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-1/3 py-12 md:px-12 bg-white rounded-2xl md:shadow-xl z-20">
             <div>
@@ -434,10 +434,14 @@ export default function PartnerContact({ data }) {
 export const getServerSideProps = async () => {
   // data url from strapi
   let data = { a: "ab" };
-
+	const res1 = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
   return {
     props: {
       data: data,
+      h_data:h_data
     },
   };
 };
