@@ -21,7 +21,7 @@ export default function Footer({ footer_data }) {
                 </Link>
               </div>
             </div>
-            <div className="w-full md:w-2/3 pt-0 ">
+            <div className="hidden md:block w-full md:w-2/3 pt-0 ">
               <div className="md:flex items-center justify-end pt-4 sm:pt-10  xl:pt-14">
                 <div className="w-full lg:w-1/2">
                   <div className="flex lg:justify-end mb-6 lg:mb-10">
@@ -131,13 +131,13 @@ export default function Footer({ footer_data }) {
               <div className="  text-white">
                 <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mb-10 gap-5 ">
                   <div className="px-2 space-y-2 ">
-                    <div className="text-gray-400 hyperlink uppercase  text-center">
+                    <div className="text-gray-400 hyperlink uppercase">
                       DX Assess & Plan
                     </div>
-                    <div className="card-subheading text-center">
+                    <div className="card-subheading ">
                       Sample Description Digital Maps
                     </div>
-                    <div className="text-center">
+                    <div >
                       <Image
                         src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png"
                         alt="Sample"
@@ -147,13 +147,13 @@ export default function Footer({ footer_data }) {
                     </div>
                   </div>
                   <div className="px-2 space-y-2 ">
-                    <div className="text-gray-400 hyperlink uppercase  text-center">
+                    <div className="text-gray-400 hyperlink uppercase">
                       DX Assess & Plan
                     </div>
-                    <div className="card-subheading text-center">
+                    <div className="card-subheading ">
                       Sample Description Digital Maps
                     </div>
-                    <div className="text-center">
+                    <div >
                       <Image
                         src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png"
                         alt="Sample"
@@ -163,13 +163,13 @@ export default function Footer({ footer_data }) {
                     </div>
                   </div>
                   <div className="px-2 space-y-2 ">
-                    <div className="text-gray-400 hyperlink uppercase  text-center">
+                    <div className="text-gray-400 hyperlink uppercase">
                       DX Assess & Plan
                     </div>
-                    <div className="card-subheading text-center">
+                    <div className="card-subheading ">
                       Sample Description Digital Maps
                     </div>
-                    <div className="text-center">
+                    <div >
                       <Image
                         src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png"
                         alt="Sample"
@@ -179,13 +179,13 @@ export default function Footer({ footer_data }) {
                     </div>
                   </div>
                   <div className="px-2 space-y-2 ">
-                    <div className="text-gray-400 hyperlink uppercase  text-center">
+                    <div className="text-gray-400 hyperlink uppercase">
                       DX Assess & Plan
                     </div>
-                    <div className="card-subheading text-center">
+                    <div className="card-subheading ">
                       Sample Description Digital Maps
                     </div>
-                    <div className="text-center">
+                    <div >
                       <Image
                         src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png"
                         alt="Sample"
@@ -195,13 +195,13 @@ export default function Footer({ footer_data }) {
                     </div>
                   </div>
                   <div className="px-2 space-y-2 ">
-                    <div className="text-gray-400 hyperlink uppercase  text-center">
+                    <div className="text-gray-400 hyperlink uppercase">
                       DX Assess & Plan
                     </div>
-                    <div className="card-subheading text-center">
+                    <div className="card-subheading ">
                       Sample Description Digital Maps
                     </div>
-                    <div className="text-center">
+                    <div >
                       <Image
                         src="https://images.squarespace-cdn.com/content/v1/5b55cf033917eed698779277/1613654676284-6L5Q8M2C5X2ITXB7VRB3/Available-on-SAP-Store-White-BG-Wallet.png"
                         alt="Sample"

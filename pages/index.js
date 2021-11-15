@@ -4,7 +4,36 @@ import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareApp
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-var responsive = import('../pages/api/responsive.json');
+const responsive = {
+	"superLargeDesktop": {
+		"breakpoint": {
+			"max": 4000,
+			"min": 3000
+		},
+		"items": 5
+	},
+	"desktop": {
+		"breakpoint": {
+			"max": 3000,
+			"min": 1024
+		},
+		"items": 5
+	},
+	"tablet": {
+		"breakpoint": {
+			"max": 1024,
+			"min": 464
+		},
+		"items": 2
+	},
+	"mobile": {
+		"breakpoint": {
+			"max": 464,
+			"min": 0
+		},
+		"items": 1
+	}
+}
 
 import * as Amplitude from '@amplitude/node';
 const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
@@ -190,20 +219,20 @@ function Home ({ data ,h_data}) {
 					{/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
 					<div className="px-4 py-10">
 						<div className="container px-4 mx-auto">
-							<h2 className=" text-center  text-gray-500 section-heading sm:sm-section-heading">
+							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
 								{data.TrustedByStatement}
 							</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
 						<Carousel className="bots flex p-10  z-10" responsive={responsive}>
-							{data.TrustedByLogos.map((data) => (
-								<div key="data" className="p-3 bots-card flex-row">
+							{data.TrustedByLogos.map((dt) => (
+								<div key="dt" className="p-3 bots-card flex-row">
 									<Image
 										className=" w-auto lg:w-100"
-										src={data.imageURL}
-										alt={data.imageDescription}
-										width={data.width}
-										height={data.height}
+										src={dt.imageURL}
+										alt={dt.imageDescription}
+										width={dt.width}
+										height={dt.height}
 										layout="responsive"
 									/>
 								</div>
@@ -223,8 +252,8 @@ function Home ({ data ,h_data}) {
 							></path>
 						</svg>
 						<div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
-							<h2 className="mx-auto section-heading sm:sm-section-heading "> {data.DigitalStreamsCardHeader} </h2>
-							<p className="max-w-full px-24 mt-5 section-subheading text-gray-600 md:mx-auto sm:sm-section-subheading">
+							<h2 className="mx-auto section-heading sm:text-xl sm:text-center "> {data.DigitalStreamsCardHeader} </h2>
+							<p className="max-w-full md:px-24 mt-5 section-subheading sm:text-center text-gray-600 md:mx-auto sm:sm-section-subheading">
 								{data.DigitalStreamsCardSubHeader}
 							</p>
 						</div>
