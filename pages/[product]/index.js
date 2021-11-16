@@ -306,7 +306,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a
-                      className={`hidden  lg:inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
+                      className={`hidden  lg:inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2  hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
@@ -348,7 +348,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         </section>
         {/* /Hero Section */}
         {/* <!-- Customer logos Section --> */}
-        <div className='px-4 py-40'>
+        <div className='px-4 pt-40 pb-10'>
           <div className='container px-4 mx-auto'>
             <h2 className=' text-center  text-gray-400 section-heading sm:sm-section-heading'>
               {stream_data.LogoHeading}
@@ -838,14 +838,14 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a className=' border-2 border-black inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 '>
+                  <a className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
-                <Link rel='noopener noreferrer' href='{stream_data.FinalCTASection.SecondaryCTA.linkURL}' passHref>
+                <Link rel='noopener noreferrer' href={stream_data.FinalCTASection.SecondaryCTA.linkURL} passHref>
                   <a
                     target='_blank'
-                    className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'
+                    className={` inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black`}
                   >
                     {stream_data.FinalCTASection.SecondaryCTA.buttonTitle}
                   </a>
