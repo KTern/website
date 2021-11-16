@@ -296,12 +296,12 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
 
           <div
-            className={`relative pt-12 md:pt-10 pb-40  bg-${stream_data.cssstreamtag}-secondary border-b-4 border-${stream_data.cssstreamtag}-primary`}
+            className={`relative pt-12 md:pt-10 pb-40 text-white maps border-b-4 border-${stream_data.cssstreamtag}-primary`}
           >
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
-                <h2 className='mb-3   heading'>{stream_data.pageHeader.header}</h2>
-                <span className='mb-3  text-black subheading'>{stream_data.pageHeader.subHeading}</span>
+                <h2 className='mb-3 text-white  heading'>{stream_data.pageHeader.header}</h2>
+                <span className='mb-3  text-white subheading'>{stream_data.pageHeader.subHeading}</span>
                 <div>
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
@@ -826,7 +826,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         <section className='bg-white'>
           <div className='md:px-8 md:py-8 mx-auto sm:py-10  lg:py-20 max-w-7xl'>
             <div
-              className={`relative py-6 overflow-hidden  bg-gradient-to-r from-black to-${stream_data.cssstreamtag}-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}
+              className={`relative py-6 overflow-hidden  ${stream_data.cssstreamtag} lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}
             >
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>

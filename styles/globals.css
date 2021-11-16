@@ -646,6 +646,13 @@
 	    position: relative
 	}
 	
+	.maps {
+	    background: -webkit-linear-gradient(.7turn, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.7turn, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
 	.react-tabs__tab--selected {
 	    background-color: #000;
 	    color: white
