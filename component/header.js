@@ -176,6 +176,7 @@ export default function Header ({h_data}) {
     const [ isPricingShown, setIsPricingShown ] = useState(false);
     const [ isDocumentationShown, setIsDocumentationShown ] = useState(false);
     const [ isCloudLiveShown, setIsCloudLiveShown ] = useState(false);
+        const [ isProductTourShown, setIsProductTourShown ] = useState(false);
     const [ isVisible, setIsVisible ] = useState(true);
     const [ isOpen, setIsOpen ] = useState(true);
     // console.log(router.pathname==='/')
@@ -247,7 +248,7 @@ export default function Header ({h_data}) {
                             <title>Mobile menu</title>
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                           </svg>
-                        </button>
+                    </button>
                 </div>
                 <div className="hidden lg:flex p-0">
                         <ul className=" flex space-x-2 xl:space-x-10">
@@ -258,7 +259,7 @@ export default function Header ({h_data}) {
                             <div id="toggle-1" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h text-black text-bold mb-2 uppercase">Streams</h3>
+                                        <h3 className="navbar-h text-black text-bold mb-2 uppercase">{h_data.Streams}</h3>
                                             <div >
                                                 <li>
                                                     <Link href="/digital-maps"    ><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
@@ -284,7 +285,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                         
                                     <li className="mt-4 mx-2">
                         <Link href='/pricing' passHref>
-                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">See Pricing
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">{h_data.SeePricing}
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
@@ -316,45 +317,49 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                             <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}>Resources</label>
                             <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
-                                   <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
-                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
+                                   <ul className="bg-white px-4 w-1/4 sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">{h_data.Resources}</h3>
                                       
                                             <div >
                                                   <li>
-                                                    <Link href="/resources"    ><a onMouseEnter={() => {setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Resource Library</a></Link>
+                                                    <Link href={h_data.Resource[0].PageUrl.linkURL}    ><a onMouseEnter={() => {setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[0].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/webinars"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false); setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Webinars</a></Link>
+                                                    <Link href={h_data.Resource[1].PageUrl.linkURL}    ><a onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false); setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(true)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[1].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/article/"   ><a target="_blank"  onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">Articles</a></Link>
+                                                    <Link href={h_data.Resource[2].PageUrl.linkURL}   ><a target="_blank"  onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[2].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/resources"    ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(true);setIsCaseShown(false);setIsWebinarsShown(false)}}
-                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">E-Books</a></Link>
+                                                    <Link href={h_data.Resource[3].PageUrl.linkURL}    ><a onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(true);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[3].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/resources"   ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(true);setIsWebinarsShown(false)}}
-                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">Customer Success Stories</a></Link>
+                                                    <Link href={h_data.Resource[4].PageUrl.linkURL}   ><a onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(true);setIsWebinarsShown(false)}}
+                                                        className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[4].Title}</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="/trust-center"   ><a onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(true);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}} 
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Trust Center</a></Link>
+                                        <Link href={h_data.Resource[5].PageUrl.linkURL}   ><a onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(true);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}} 
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[5].Title}</a></Link>
                                                 </li>
                                                  <li>
-                                                    <Link href="/pricing"   ><a onMouseEnter={() => {setIsDocumentationShown(false);setIsCloudLiveShown(false); setIsPricingShown(true);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Pricing</a></Link>
+                                                    <Link href={h_data.Resource[6].PageUrl.linkURL}   ><a onMouseEnter={() => {setIsProductTourShown(false),setIsDocumentationShown(false);setIsCloudLiveShown(false); setIsPricingShown(true);setIsResourceLibraryShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[6].Title}</a></Link>
                                                 </li>
                                                  <li>
-                                                    <Link href="/docs"   ><a target="_blank" onMouseEnter={() => {setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Documentation</a></Link>
+                                                    <Link href={h_data.Resource[7].PageUrl.linkURL}   ><a target="_blank" onMouseEnter={() => {setIsProductTourShown(false),setIsCloudLiveShown(false); setIsDocumentationShown(true);setIsResourceLibraryShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[7].Title}</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="https://live.ktern.com" passhref   ><a target="_blank" onMouseEnter={() => { setIsCloudLiveShown(true);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
-className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a></Link>
+                                                    <Link href={h_data.Resource[8].PageUrl.linkURL} passhref   ><a target="_blank" onMouseEnter={() => {setIsProductTourShown(false), setIsCloudLiveShown(true);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[8].Title}</a></Link>
+                                                </li>
+                                                 <li>
+                                                    <Link href={h_data.Resource[9].PageUrl.linkURL} passhref   ><a target="_blank" onMouseEnter={() => { setIsProductTourShown(true),setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[9].Title}</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
                         <Link href='/resources' passHref>
@@ -366,26 +371,28 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a
              </Link> </li> 
                                         </div>
                                         </ul>
-                                        <div className="w-2/3">
+                                        <div className="w-3/4 flex items-center justify-center ">
                                             {isWebinarsShown && (
-                                            <DoubleBanner data={{title1:'Webinar',title2:'Webinar',title3:'Webinar',description:'Webinar 1 desc',url1:'/webinars/webinar-1',url2:'/webinars/webinar-1',url3:'/webinars/webinar-1',image1:'/product/projects/project_team_3.svg',image2:'/product/projects/project_team_3.svg',image3:'/product/projects/project_team_3.svg'} }/>
+                                            <DoubleBanner data={h_data.Resource[1].NavBarCard}/>
                                             )}
                                             {isArticlesShown && (
-                                            <DoubleBanner data={{title1:'Article',title2:'Article',title3:'Article',description:'Article 1 desc',url1:'',url2:'',url3:'',image1:'/product/process/process_1.svg',image2:'/product/process/process_1.svg',image3:'/product/process/process_1.svg'} }/>  )}
+                                            <DoubleBanner data={h_data.Resource[2].NavBarCard}/>  )}
                                              {isEbooksShown && (
-                                            <DoubleBanner data={{title1:'Ebook',title2:'Ebook',title3:'Ebook',description:'Ebook 1 desc',url1:'/resources/ebook',url2:'/resources/ebook',url3:'/resources/ebook',image1:'/product/maps/maps_1.svg',image2:'/product/maps/maps_1.svg',image3:'/product/maps/maps_1.svg'} }/>  )}
+                                            <DoubleBanner data={h_data.Resource[3].NavBarCard}/>  )}
                                              {isCaseShown && (
-                                            <DoubleBanner data={{title1:'Case Study',title2:'Case Study',title3:'Case Study',description:'Case Study 1 desc',url1:'/resources/customer-success-story',url2:'/resources/customer-success-story',url3:'/resources/customer-success-story',image1:'/product/mines/mines_1.svg',image2:'/product/mines/mines_1.svg',image3:'/product/mines/mines_1.svg'} }/>  )}
+                                            <DoubleBanner data={h_data.Resource[4].NavBarCard}/>  )}
                                              {isTrustShown && (
-                                                <DoubleBanner data={{ title1: 'Trust Center', title2: 'Trust Center', title3: 'Trust Center', description: 'Trust Center 1 desc', url1: '/trust-center', url2: '/trust-center', url3: '/trust-center', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={h_data.Resource[5].NavBarCard}/>)}
                                             {isPricingShown && (
-                                                <DoubleBanner data={{ title1: 'Pricing',title2: 'Pricing',title3: 'Pricing', description: 'Pricing 1 desc', url1: '/pricing',url2: '/pricing',url3: '/pricing', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={h_data.Resource[6].NavBarCard}/>)}
                                             {isDocumentationShown && (
-                                                <DoubleBanner data={{ title1: 'Documentation',title2: 'Documentation',title3: 'Documentation', description: 'Documentation 1 desc', url1: '/',url2: '/',url3: '/', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={h_data.Resource[7].NavBarCard} />)}
                                             {isCloudLiveShown && (
-                                                <DoubleBanner data={{ title1: 'Cloud Live Status',  title2: 'Cloud Live Status',  title3: 'Cloud Live Status', description: 'Live Status 1 desc', url1: '/',url2: '/',url3: '/', image1: '/product/labs/labs_1.svg', image2: '/product/labs/labs_1.svg', image3: '/product/labs/labs_1.svg' }} />)}
+                                                <DoubleBanner data={h_data.Resource[8].NavBarCard}/>)}
                                             {isResourceLibraryShown && (
-                                            <DoubleBanner data={{title1:'Resource Library',title2:'Resource Library',title3:'Resource Library',description:'Resource Library 1 desc',url1:'/resources',url2:'/resources',url3:'/resources',image1:'/product/labs/labs_1.svg',image2:'/product/labs/labs_1.svg',image3:'/product/labs/labs_1.svg'} }/> )}
+                                                <DoubleBanner data={h_data.Resource[ 0 ].NavBarCard} />)}
+                                            {isProductTourShown && (
+                                            <DoubleBanner data={h_data.Resource[9].NavBarCard}/> )}
                                         </div>
                                 </div>
                             </div>
@@ -399,23 +406,23 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Cloud Live Status</a
                                         <h3 className="navbar-h  uppercase text-black text-bold mb-2">{h_data.Partner}</h3>
                                         <div >
                                         <li>
-                                                    <Link href="/partners"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}
+                                                    <Link href={h_data.Partners[0].PageUrl.linkURL}    ><a title={h_data.Partners[0].PageUrl.buttonTitle} onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[0].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/consulting-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
+                                                    <Link href={h_data.Partners[1].PageUrl.linkURL}    ><a title={h_data.Partners[1].PageUrl.buttonTitle} onMouseEnter={()=>{setIsConsultingShown(true);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[1].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/technology-partner"    ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(true);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
+                                                    <Link href={h_data.Partners[2].PageUrl.linkURL}    ><a title={h_data.Partners[2].PageUrl.buttonTitle} onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(true);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[2].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href="/partner-register"   ><a onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
+                                                    <Link href={h_data.Partners[3].PageUrl.linkURL}   ><a title={h_data.Partners[3].PageUrl.buttonTitle} onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(true);setIsPartnersShown(false)}}
                                                         className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[3].Title}</a></Link>
                                         </li>
                                         <li>
-                                        <Link href="/"   ><a target="_blank" onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(true);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}} 
+                                        <Link href={h_data.Partners[4].PageUrl.linkURL}   ><a title={h_data.Partners[4].PageUrl.buttonTitle} target="_blank" onMouseEnter={()=>{setIsConsultingShown(false);setIsPortalShown(true);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(false)}} 
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].Title}</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
@@ -424,33 +431,33 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                                         </ul>
                                         <div className="w-2/3">
                                             {isPartnersShown && (
-                                            <FeatureCard data={{title:h_data.Partners[0].Title,description:h_data.Partners[0].NavBarCard[0].Title,url:h_data.Partners[0].NavBarCard[0].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>
+                                            <FeatureCard data={{title:h_data.Partners[0].Title,description:h_data.Partners[0].NavBarCard[0].Title,url:h_data.Partners[0].NavBarCard[0].CTALink,image:h_data.Partners[0].Image} }/>
                                             )}
                                             {isConsultingShown && (
-                                            <FeatureCard data={{title:h_data.Partners[1].Title,description:h_data.Partners[1].NavBarCard[1].Title,url:h_data.Partners[1].NavBarCard[1].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[1].Title,description:h_data.Partners[1].NavBarCard[0].Title,url:h_data.Partners[1].NavBarCard[0].CTALink,image:h_data.Partners[1].Image} }/>  )}
                                              {isTechnologyShown && (
-                                            <FeatureCard data={{title:h_data.Partners[2].Title,description:h_data.Partners[2].NavBarCard[2].Title,url:h_data.Partners[2].NavBarCard[2].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[2].Title,description:h_data.Partners[2].NavBarCard[0].Title,url:h_data.Partners[2].NavBarCard[0].CTALink,image:h_data.Partners[2].Image} }/>  )}
                                              {isBecomeAPartnerShown && (
-                                            <FeatureCard data={{title:h_data.Partners[3].Title,description:h_data.Partners[3].NavBarCard[3].Title,url:h_data.Partners[3].NavBarCard[3].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/>  )}
+                                            <FeatureCard data={{title:h_data.Partners[3].Title,description:h_data.Partners[3].NavBarCard[0].Title,url:h_data.Partners[3].NavBarCard[0].CTALink,image:h_data.Partners[3].Image} }/>  )}
                                              {isPortalShown && (
-                                            <FeatureCard data={{title:h_data.Partners[4].Title,description:h_data.Partners[4].NavBarCard[4].Title,url:h_data.Partners[4].NavBarCard[4].CTALink,image:{imageURL:'/',imageDescription:'/',width:10,height:10}} }/> )}
+                                            <FeatureCard data={{title:h_data.Partners[4].Title,description:h_data.Partners[4].NavBarCard[0].Title,url:h_data.Partners[4].NavBarCard[0].CTALink,image:h_data.Partners[4].Image} }/> )}
                                         </div>
                                                </div>
                             </div>
                             </li>
                              <li className="toggleable hover:bg-secondary ">
-                            <Link href={h_data.Support.linkURL} passhref><a target="_blank" className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Support.buttonTitle}</a></Link>
+                            <Link href={h_data.Support.linkURL} passhref><a target="_blank" title={h_data.Support.buttonTitle} className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Support.buttonTitle}</a></Link>
                             </li>
                         <li className="toggleable hover:bg-secondary ">
-                                <Link href={h_data.Company.linkURL} ><a className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Company.buttonTitle}</a></Link>
+                                <Link href={h_data.Company.linkURL} ><a title={h_data.Company.buttonTitle} className="block cursor-pointer py-3 px-4 lg:p-5 header  hover:bg-secondary ">{h_data.Company.buttonTitle}</a></Link>
                                 
                             </li>
                            
                     </ul>
                </div>
                     <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
-                        <Link href="https://app.ktern.com" passhref><a target="_blank" className="button">Login</a></Link>
-                    <Link  href="/contact"><a className="border-2 border-black hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">Contact Sales</a></Link>
+                        <Link href={h_data.CTA1.linkURL} passhref><a title={h_data.CTA1.buttonTitle}  target="_blank" className="button">{h_data.CTA1.buttonTitle}</a></Link>
+                        <Link href={h_data.CTA2.linkURL}><a title={h_data.CTA2.buttonTitle} className="border-2 border-black hidden mb-1 lg:inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl button rounded-b-xl transition duration-200 ">{h_data.CTA2.buttonTitle}</a></Link>
                 </div>
             </div>
         </nav>
@@ -462,7 +469,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                 <div className="flex items-center justify-between mb-8">
                         <Link  href="/" passHref>
                             <a className="mr-auto text-2xl font-medium leading-none cursor-pointer">
-                        <Image  src="/assets/kternLogo.png" alt="Ktern Logo" width="100%" height="30%"/>
+                        <Image  src={h_data.KTernLogoURL} alt="Ktern Logo" width="100%" height="30%"/>
                         </a>
                     </Link>
                     <button className="navbar-close" onClick={closeNav}>
@@ -479,7 +486,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                             <div id="toggle" role="toggle" className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Digital Streams</h3>
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">{h_data.Streams}</h3>
                                               <li className="hover:bg-secondary ">
                                                     <Link href="/digital-maps"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Digital Maps</a></Link>        
                                             </li>
@@ -505,7 +512,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                                                 </li>
                                               <li className="mt-4 hover:bg-secondary">
                         <Link href='/pricing' passHref>
-                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">See Pricing
+                 <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">{h_data.SeePricing}
                  <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                  </svg>
@@ -517,52 +524,57 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                         </li>
                           <li className="toggleable hover:bg-secondary bg-white ">
                         <input type="checkbox" value="selected" id="toggle-sm-two" className="toggle-input "/>
-                            <label htmlFor="toggle-sm-two" className="block cursor-pointer py-2 px-4 lg:p-6 header ">Resources</label>
+                            <label htmlFor="toggle-sm-two" className="block cursor-pointer py-2 px-4 lg:p-6 header ">{h_data.Resources}</label>
                             <div id="toggle" role="toggle" className="p-6  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">{h_data.Resources}</h3>
                                               <li className="hover:bg-secondary ">
-                                                    <Link href="/resources" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Resource Library</a></Link>        
+                                                    <Link href={h_data.Resource[0].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[0].Title}</a></Link>        
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/webinars" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Webinars</a></Link>
+                                                    <Link href={h_data.Resource[1].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[1].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/article" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Articles</a></Link>
+                                                    <Link href={h_data.Resource[2].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[2].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/resources" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">E-Books</a></Link>
+                                                    <Link href={h_data.Resource[3].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[3].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/resources" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Customer Success Stories</a></Link>
+                                                    <Link href={h_data.Resource[4].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[4].Title}</a></Link>
                                                     
                                                 </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/trust-center" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Trust Center</a></Link>
+                                                    <Link href={h_data.Resource[5].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[5].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/pricing" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Pricing</a></Link>
+                                                    <Link href={h_data.Resource[6].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[6].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/docs"  passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Documentation</a></Link>
+                                                    <Link href={h_data.Resource[7].PageUrl.linkURL}  passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[7].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="https://live.ktern.com" passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Cloud Live Status</a></Link>
+                                                    <Link href={h_data.Resource[8].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[8].Title}</a></Link>
+                                                    
+                                            </li>
+                                            <li className="hover:bg-secondary ">
+                                              
+                                                    <Link href={h_data.Resource[9].PageUrl.linkURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Resource[9].Title}</a></Link>
                                                     
                                             </li>
                                               <li className="mt-4 hover:bg-secondary">
@@ -579,32 +591,32 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                             </li>
                              <li className="toggleable hover:bg-secondary bg-white ">
                         <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input  "/>
-                            <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">Partners</label>
+                            <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">{h_data.Partner}</label>
                             <div id="toggle" role="toggle" className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                                 <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                                     <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">Partners</h3>
+                                        <h3 className="navbar-h uppercase text-black text-bold mb-2">{h_data.Partner}</h3>
                                               <li className="hover:bg-secondary ">
-                                                    <Link href="/partners"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Partners</a></Link>        
+                                                    <Link href={h_data.Partners[0].PageUrl.linkURL} ><a title={h_data.Partners[0].PageUrl.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Partners[0].Title}</a></Link>        
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/consulting-partner"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Consulting Partners</a></Link>
+                                                    <Link href={h_data.Partners[1].PageUrl.linkURL} ><a title={h_data.Partners[1].PageUrl.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Partners[1].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/technology-partner"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Technology Partners</a></Link>
+                                                    <Link href={h_data.Partners[2].PageUrl.linkURL} ><a title={h_data.Partners[2].PageUrl.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Partners[2].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/partner-register"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Become A Partner</a></Link>
+                                                    <Link href={h_data.Partners[3].PageUrl.linkURL} ><a title={h_data.Partners[3].PageUrl.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Partners[3].Title}</a></Link>
                                                     
                                             </li>
                                              <li className="hover:bg-secondary ">
                                               
-                                                    <Link href="/"><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">Partners Portal</a></Link>
+                                                    <Link href={h_data.Partners[4].PageUrl.linkURL} ><a title={h_data.Partners[4].PageUrl.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{h_data.Partners[4].Title}</a></Link>
                                                     
                                                 </li>
                                             
@@ -613,17 +625,17 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Partners[4].
                             </div>
                             </li>
                             <li className="toggleable hover:bg-secondary bg-white px-4">
-                               <Link href="https://support.ktern.com/" passhref><a target="_blank" htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">Support</a></Link>        
+                               <Link href={h_data.Support.linkURL} passhref><a title={h_data.Support.buttonTitle} target="_blank" htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">{h_data.Support.buttonTitle}</a></Link>        
                             </li>
                             <li className="toggleable hover:bg-secondary bg-white px-4">
-                               <Link href="/about-company"><a htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">Company</a></Link>        
+                               <Link href={h_data.Company.linkURL}><a title={h_data.Support.buttonTitle} htmlFor="toggle-sm-two" className="block cursor-pointer header py-2 lg:p-6  ">{h_data.Support.buttonTitle}</a></Link>        
                             </li>
                              
                      </ul>
                 </div>
                 <div className="pt-6 flex-col space-y-6">
                  
-                    <Link  href="/contact"><a className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase">Contact Sales</a></Link>
+                    <Link  href={h_data.CTA2.linkURL}><a title={h_data.CTA2.buttonTitle} className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase">{h_data.CTA2.buttonTitle}</a></Link>
                 </div>
                 <div className="mt-auto">
 

@@ -18,7 +18,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -37,7 +37,7 @@ const responsive_2 = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 5,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -296,10 +296,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
 
           <div
-            className={`relative pt-12 md:pt-16 pb-40  bg-${stream_data.cssstreamtag}-secondary border-b-4 border-${stream_data.cssstreamtag}-primary`}
+            className={`relative pt-12 md:pt-10 pb-40  bg-${stream_data.cssstreamtag}-secondary border-b-4 border-${stream_data.cssstreamtag}-primary`}
           >
             <div className='relative container mx-auto px-4'>
-              <div className='max-w-2xl mx-auto text-center mb-12 md:mb-20'>
+              <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
                 <h2 className='mb-3   heading'>{stream_data.pageHeader.header}</h2>
                 <span className='mb-3  text-black subheading'>{stream_data.pageHeader.subHeading}</span>
                 <div>
@@ -315,11 +315,11 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               </div>
             </div>
             <div
-              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-${stream_data.cssstreamtag}-secondary shadow-2xl rounded-2xl `}
+              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white border-4 border-${stream_data.cssstreamtag}-primary shadow-2xl rounded-2xl `}
             >
               <div className='rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative'>
                 <Image
-                  className={`rounded-3xl bg-${stream_data.cssstreamtag}-secondary md:rounded-6xl`}
+                  className={`rounded-3xl  md:rounded-6xl`}
                   layout='fill'
                   src={stream_data.VideoURL}
                   alt=''
@@ -355,7 +355,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             </h2>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
           </div>
-          <Carousel className='bots flex p-10  z-10' responsive={responsive}>
+          <Carousel className='bots flex p-10  z-10' responsive={responsive_2}>
             {stream_data.Logos.map((data) => (
               <div key='data' className='p-3 bots-card flex-row'>
                 <Image
@@ -863,7 +863,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 export const getStaticPaths = async () => {
   // dynamic route array values must be acquired here from strapi
   const data = [
-    { product: "digital-maps", id: "6172db3746b141ff9e7f735e" },
+    { product: "digital-maps" },
     // { product: "digital-projects" },
     // { product: "digital-process" },
     // { product: "digital-labs" },
