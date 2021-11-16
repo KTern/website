@@ -141,13 +141,13 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
         <script async src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
-        <section className={`w-full py-20 bg-gradient-to-r from-${feature_data.cssStreamTag}-primary to-${feature_data.cssStreamTag}-secondary`}>
+        <section className={`w-full py-20 `} >
           <div className='flex flex-col items-center px-12 mx-auto lg:flex-row'>
             <div className='relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2'>
               {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
                     </div> */}
-              <p className={`max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-white rounded-full `}>
+              <p className={`max-w-max px-2 py-1 mb-5 bg-${feature_data.cssStreamTag}-400  hyperlink text-gray-900 uppercase bg-white rounded-full `}>
                 {feature_data.PageHeader.Tag}
               </p>
               <h1 className='heading'>{feature_data.PageHeader.header}</h1>
@@ -507,7 +507,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
         {/* <!-- Footer CTA Features Page --> */}
         <section className='bg-white'>
           <div className='md:px-8 md:py-8 mx-auto  sm:py-10 lg:py-20 max-w-7xl'>
-            <div className={`relative py-6 overflow-hidden  bg-gradient-to-r from-black to-${feature_data.cssstreamtag}-400 lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}>
+            <div className={`relative py-6 overflow-hidden  ${feature_data.cssStreamTag} lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}>
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='relative p-6  md:p-0 md:pb-4'>

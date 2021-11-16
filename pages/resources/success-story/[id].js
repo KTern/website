@@ -138,10 +138,10 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
         ></script>
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
-        <section id="features" className="w-full py-20  pt-32 bg-herogradient">
+        <section id="features" className={`w-full py-20  pt-16 ${data.StreamName} `}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
-              <p className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+              <p className={`max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full bg-${data.StreamName}-secondary`}>
                 {data.PageHeader.Tag}
               </p>
               <h1 className="heading text-white ">{data.PageHeader.header}</h1>
@@ -150,7 +150,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
               </p>
               <div className="flex flex-row">
                 <Link href={data.PageHeader.primaryCTA.linkURL}>
-                  <a className=" inline-block py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+                  <a className=" inline-block border-2 border-white py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -163,7 +163,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
           <div className="flex flex-wrap md:px-10  overflow-hidden ">
             <div className="w-full md:w-1/3 md:px-10 mb-4 md:mb-0">
               <div className="flex flex-col mt-10 w-full mb-10 ">
-                <div className="w-full md:mb-20 lg:mb-10  ">
+               {data.CustomerLogoURL &&  <div className="w-full md:mb-20 lg:mb-10  ">
                   <div className="relative h-full ml-5 mr-0 sm:mr-10">
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1  rounded-lg"></span>
                     <div className="relative w-full h-full p-5 bg-white  rounded-lg">
@@ -178,7 +178,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>}
                 <div className="w-full mb-10  ">
                   <div className="relative h-full ml-5 mr-0 sm:mr-10">
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
@@ -202,7 +202,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                                     src={dt.ListImageURL}
                                     height={dt.height}
                                     width={dt.width}
-                                    alt="Digital Maps"
+                                    alt={dt.ListText}
                                   />
                                 </span>
                                 <p className="card-subheading text-black hover:underline hover:shadow-sm ">
@@ -222,12 +222,13 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                     <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
                       <div className="flex-col items-center -mt-1">
                         {data.CompanyInformation.map((dt) => (
-                          <h3
-                            key="dt"
+                          <div key="dt"><h3
+                          
                             className="my-2 ml-0 card-subheading  text-gray-800 uppercase"
                           >
                             {dt.EntityName}
                           </h3>
+                            <p>{dt.EntityCode }</p></div>
                         ))}
                       </div>
                     </div>
@@ -241,14 +242,14 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                 <div className="relative h-full ml-2 mr-0 sm:mr-10">
                   <span className="absolute top-0 md:left-0 w-full h-full mt-1 md:ml-1  rounded-lg"></span>
                   <div className="relative h-full md:p-1 bg-white rounded-lg">
-                    <div className="grid grid-cols-3 gap-5 sm:grid-cols-12 md:grid-cols-12">
+                    <div className="grid grid-cols-4  sm:grid-cols-12 md:grid-cols-4">
                       {data.ValuesDelivered.map((dt) => (
                         <div
                           key="dt"
-                          className="max-w-xs col-span-4 font-sans border-0 border-gray-200 text-gray-50"
+                          className="max-w-xs  font-sans border-0 border-gray-200 text-gray-50"
                         >
                           <div className="box-border flex flex-col sm:mx-auto items-center h-full px-2 py-8 md:mx-4 leading-6 text-center border-solid sm:items-start ">
-                            <h1 className="text-black text-2xl">
+                            <h1 className="text-black text-3xl font-bold">
                               {dt.ListImageURL}
                             </h1>
                             <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
@@ -264,7 +265,8 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                   </div>
                 </div>
               </div>
-              <div className="max-w-full ">
+              <div className="max-w-full " id="case-study" style={{ paddingTop: '60px',
+    marginTop: '-60px'}}>
                 <section className="mb-20">
                   <Markdown
                     options={{

@@ -134,30 +134,30 @@ export default function Resources({ data,h_data,f_data }) {
         ]}
       />
       <Layout h_data={h_data} f_data={f_data}>
-        <section className="w-full py-32 bg-herogradient">
+        <section className="w-full py-32 background">
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
-            <div className="relative z-20 flex flex-col  w-full h-full ">
+            <div className="relative z-20 flex flex-col  w-2/3 h-full ">
               <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
-                {data.PageHeader.Tag}
+                {data.ResourcesTranslations.Resources}
               </p>
               <h1 className="heading text-white ">{data.PageHeader.header}</h1>
               <p className="subheading text-gray-100 pb-7">
-                {data.PageHeader.subHeading}{" "}
+                {data.PageHeader.subHeading}
               </p>
-              <div className="md:flex md:flex-row">
+              <div className="md:flex md:flex-row space-x-4">
                 <Link
                   rel="noopener noreferrer"
                   href={data.PageHeader.primaryCTA.linkURL}
                 >
                   <a
                     target="_blank"
-                    className="sm:mb-4 inline-block  mr-4  shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button"
+                    className=" inline-block py-3 px-16 border-2 border-white bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button"
                   >
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.PageHeader.secondaryCTA.linkURL}>
-                  <a className=" inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button">
+                  <a className=" sm:mb-4 inline-block  mr-4 border-2 border-black shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button ">
                     {data.PageHeader.secondaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -216,7 +216,7 @@ export default function Resources({ data,h_data,f_data }) {
                     <Link href={dt.ResourceURL} passHref>
                       <a>
                         <p className="hyperlink text-gray-400  uppercase mb-4">
-                          {dt.ResourceType}
+                          {dt.ResourceTypeName} 
                         </p>
                         <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
                           {dt.ResourceTitle}
@@ -254,7 +254,7 @@ export default function Resources({ data,h_data,f_data }) {
                       <Link href={dt.ResourceURL} passHref>
                         <a className="relative block w-full h-44 overflow-hidden rounded">
                           <div
-                            className={`z-20  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}
+                            className={`z-20 bg-${dt.DigitalStream}-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}
                           >
                             <span>Digital {dt.DigitalStream}</span>
                           </div>
@@ -271,7 +271,7 @@ export default function Resources({ data,h_data,f_data }) {
                     <Link href={dt.ResourceURL} passHref>
                       <a>
                         <p className="hyperlink text-gray-400  uppercase mb-4">
-                          {dt.ResourceType}
+                          {dt.ResourceTypeName}
                         </p>
                         <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
                           {dt.ResourceTitle}
@@ -322,7 +322,7 @@ export default function Resources({ data,h_data,f_data }) {
               </div>
               <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link href="/pricing" passHref>
-                  <a className="  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">
+                  <a className="  inline-block py-3 px-10 bg-black border-2 border-white hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">
                     See Pricing
                   </a>
                 </Link>

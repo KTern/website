@@ -127,7 +127,7 @@
 	    text-transform: uppercase;
 	}
 	
-	.mapsbutton {
+	.maps-button {
 	    background-color: '#F28900';
 	}
 	
@@ -656,14 +656,10 @@
 	} */
 	
 	.background {
-	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(100.8deg, rgba(34, 100, 214, .35) 1.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
 	    color: var(--white);
-	    overflow: hidden;
-	    padding-bottom: 176px;
-	    padding-top: 100px;
-	    position: relative
 	}
 	
 	.maps {
@@ -673,7 +669,49 @@
 	    color: var(--white);
 	}
 	
+	.process {
+	    background: -webkit-linear-gradient(.7turn, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.7turn, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
+	.projects {
+	    background: -webkit-linear-gradient(.7turn, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.7turn, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
+	.mines {
+	    background: -webkit-linear-gradient(.7turn, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.7turn, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
+	.labs {
+	    background: -webkit-linear-gradient(.7turn, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.7turn, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
+	.dxaas {
+	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    color: var(--white);
+	}
+	
 	.react-tabs__tab--selected {
 	    background-color: #000;
 	    color: white
+	}
+	
+	.common-background {
+	    background: -webkit-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
+	    background: -moz-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
+	    background: linear-gradient(50.8deg, rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
+	    color: var(--white);
 	}

@@ -6,7 +6,18 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-const Ebook_Landing = ({data,h_data,f_data}) => {
+import Markdown from "markdown-to-jsx";
+import { useRouter } from "next/router";
+const Ebook_Landing = ({ data, h_data, f_data }) => {
+    const router = useRouter();
+    const handleSearch = (event) => {
+        
+    // console.log("clicked" + webinar_Data.Type + event, router.query);
+
+    router.push({
+      pathname: "/resources",params:{type:'Ebook'}
+    });
+  };
     return (
         <>
             <NextSeo
@@ -131,9 +142,9 @@ const Ebook_Landing = ({data,h_data,f_data}) => {
                 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons' async='async'></script>
             </Head>
         <Layout h_data={h_data} f_data={f_data}>
-      <section  className="w-full pt-32 bg-herogradient" >
+      <section  className={`w-full pt-8 ${data.StreamType}`} >
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
-                <div className="relative z-20 flex flex-col  w-full h-full ">
+                <div className="relative z-20 flex flex-col  w-2/3 h-full ">
                 <div className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     {data.PageHeader.Tag}
                 </div>
@@ -142,7 +153,7 @@ const Ebook_Landing = ({data,h_data,f_data}) => {
                     <div className="flex flex-row">
                     
                    
-                    <Link  href={data.PageHeader.primaryCTA.linkURL}><a className=" inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
+                    <Link  href={data.PageHeader.primaryCTA.linkURL}><a className=" inline-block border-2 border-white py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">{data.PageHeader.primaryCTA.buttonTitle}</a></Link>
                     </div>
                 </div>
 <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
@@ -166,8 +177,42 @@ const Ebook_Landing = ({data,h_data,f_data}) => {
                                 
                                 </a>
                             </Link> 
-                <p className="mt-5 card-subheading text-gray-700 text md:text-left">{data.Description}
-
+                        <p className="mt-5 card-subheading text-gray-700 text md:text-left">
+                          
+     <Markdown
+                    options={{
+                      overrides: {
+                        h3: {
+                          props: {
+                            className: "text-2xl mb-4",
+                          },
+                        },
+                         h1: {
+                          props: {
+                            className: "text-2xl mb-4",
+                          },
+                        },
+                        li: {
+                          props: {
+                            className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                          }
+                            },
+                            p: {
+                                props: {
+                                className:"mb-3"
+                            }
+                            },
+                            ol: {
+                                props: {
+                                    className:"mb-4"
+                                }
+                            }
+                      },
+                    }}
+                    className=""
+                  >
+                    {data.Description}
+                  </Markdown>
  
 
 
@@ -188,15 +233,17 @@ This blueprint will help you define the right plan, the right effort estimate, t
                             </div>
                         </div>
             
-                        <div className=" z-10 w-full md:max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
+                        <div className=" z-10 w-full md:max-w-2xl mt-20 lg:mt-0 lg:w-5/12 " style={{ paddingTop: '50px',
+    marginTop: '-50px'}} id="download">
                             <div  id="crmWebToEntityForm" className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
                                 <h4 className="w-full  card-heading  ">{data.DownloadEBook}</h4>
-                                 <form
+                    <form
+                      
                     className="relative w-full mt-6 space-y-8"
                     action="https://crm.zoho.in/crm/WebToContactForm"
                     name="WebToContacts240235000000441159"
                     method="POST"
-                   
+                   onSubmit={handleSearch}
                     acceptCharset="UTF-8"
                   >
                     <input
@@ -244,7 +291,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Last Name</label>
+                        <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Name</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
@@ -283,7 +330,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Account_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Account Name</label>
+                        <label htmlFor="Account_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Organization</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
@@ -302,7 +349,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Mailing_Country" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Mailing Country</label>
+                        <label htmlFor="Mailing_Country" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Country</label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
