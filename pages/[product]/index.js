@@ -296,7 +296,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
 
           <div
-            className={`relative pt-12 md:pt-16 pb-40  bg-${stream_data.cssstreamtag}-secondary border-b-4 border-${stream_data.cssstreamtag}-primary`}
+            className={`relative pt-12 md:pt-16 pb-40  bg-${stream_data.cssstreamtag}-secondary border-b-4 border-${stream_data.cssstreamtag}-400`}
           >
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-20'>
@@ -306,7 +306,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a
-                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-primary hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
+                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-400 hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
@@ -329,7 +329,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 {/* <Link href='/video' passHref>
                   <a className='flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse'>
                     <svg
-                      className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-primary  transition duration-200`}
+                      className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-400  transition duration-200`}
                       xmlns='http://www.w3.org/2000/svg'
                       viewBox='0 0 20 20'
                       fill='currentColor'
