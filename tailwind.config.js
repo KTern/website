@@ -78,7 +78,7 @@ module.exports = {
           300: '#FF9970',
 
           400: '#FF8A5C',
-
+500:'#F28900'
         },
 
         mines: {
