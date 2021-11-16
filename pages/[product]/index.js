@@ -306,7 +306,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a
-                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-400 hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
+                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-secondary hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
