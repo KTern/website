@@ -296,7 +296,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
 
           <div
-            className={`relative pt-12 md:pt-10 pb-40 text-white maps border-b-4 border-${stream_data.cssstreamtag}-500`}
+            className={`relative pt-12 md:pt-10 pb-40 text-white maps border-b-4 border-${stream_data.cssstreamtag}-400`}
           >
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
@@ -306,7 +306,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a
-                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-500 hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
+                      className={`hidden  lg:inline-block py-3 px-10 bg-${stream_data.cssstreamtag}-400 hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
@@ -315,7 +315,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               </div>
             </div>
             <div
-              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white border-4 border-${stream_data.cssstreamtag}-500 shadow-2xl rounded-2xl `}
+              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white border-4 border-${stream_data.cssstreamtag}-400 shadow-2xl rounded-2xl `}
             >
               <div className='rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative'>
                 <Image
@@ -329,7 +329,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 {/* <Link href='/video' passHref>
                   <a className='flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse'>
                     <svg
-                      className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-500  transition duration-200`}
+                      className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-400  transition duration-200`}
                       xmlns='http://www.w3.org/2000/svg'
                       viewBox='0 0 20 20'
                       fill='currentColor'
@@ -350,7 +350,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* <!-- Customer logos Section --> */}
         <div className='px-4 py-40'>
           <div className='container px-4 mx-auto'>
-            <h2 className=' text-center  text-gray-500 section-heading sm:sm-section-heading'>
+            <h2 className=' text-center  text-gray-400 section-heading sm:sm-section-heading'>
               {stream_data.LogoHeading}
             </h2>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
@@ -454,7 +454,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                         <div className='max-w-sm mx-auto lg:mx-0'>
                           <p className='mb-6 text-black  card-subheading'>{dt.Description}</p>
                           <Link href={dt.CTAUrl} passHref>
-                            <a className='inline-flex items-center pb-1  text-black hover:border-blue-500 group '>
+                            <a className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
                               <span className='hyperlink group-hover:text-gray-400'>{dt.CTAText}</span>
                               <svg
                                 className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
@@ -620,7 +620,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           <div className='max-w-sm mx-auto lg:mx-0'>
                             <p className='mb-6 text-black  card-subheading'>{dt.Description}</p>
                             <Link href={dt.CTAUrl} passHref>
-                              <a className='inline-flex items-center pb-1  text-black hover:border-blue-500 group '>
+                              <a className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
                                 <span className='hyperlink group-hover:text-gray-400'>{dt.CTAText}</span>
                                 <svg
                                   className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
@@ -761,7 +761,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                     <Link href='#' passHref>
                       <a className='relative block w-full h-44 overflow-hidden rounded'>
                         <Image
-                          className='bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105'
+                          className='bg-secondary object-cover object-center w-full h-full transition duration-400 ease-out transform scale-100 hover:scale-105'
                           src={dt.Icon.imageURL}
                           alt='resource'
                           layout='fill'
