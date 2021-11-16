@@ -296,7 +296,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
 
           <div
-            className={`relative pt-12 md:pt-10 pb-40 text-white maps border-b-4 border-${stream_data.cssstreamtag}-400`}
+            className={`relative pt-12 md:pt-10 pb-40 text-white ${stream_data.cssstreamtag} border-b-4 border-${stream_data.cssstreamtag}-400`}
           >
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
