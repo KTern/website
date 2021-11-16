@@ -127,6 +127,26 @@
 	    text-transform: uppercase;
 	}
 	
+	.maps-button {
+	    background-color: '#F28900';
+	}
+	
+	.projects-button {
+	    background-color: '#2666BA'
+	}
+	
+	.process-button {
+	    background-color: '#281C87';
+	}
+	
+	.labs-button {
+	    background-color: '#1C8720'
+	}
+	
+	.mines-button {
+	    background-color: '#BA2926'
+	}
+	
 	.sm-button {
 	    font-family: 'Rubik', sans-serif;
 	    text-decoration: none;
