@@ -22,6 +22,12 @@ function MyApp ({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon"  href="https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#fffff" />
+        {/* <!-- this sets logo in Apple smatphones. --> */}
+<link rel="apple-touch-icon" href="/assets/kternLogo.png" />
+{/* <!-- this sets the color of url bar in Apple smatphones --> */}
+<meta name="apple-mobile-web-app-status-bar" content="#fffff" />
       </Head>
       <Component {...pageProps} />
       </>

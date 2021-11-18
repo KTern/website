@@ -251,7 +251,7 @@ function Home ({ data ,h_data,f_data}) {
           </Carousel>
 					</div>
 					{/* <!-- /Customer logos Section --> */} {/* <!-- Streams Section --> */}
-					<section className="relative items-center overflow-hidden w-full py-6 bg-white sm:py-8 md:py-4">
+					<section className="relative items-center overflow-hidden w-full py-4 bg-white sm:py-8 md:py-4">
 						<svg
 							className="absolute -mt-32 text-gray-300 transform scale-150 fill-current top-1/2"
 							viewBox="0 0 197 31"
@@ -572,7 +572,7 @@ function Home ({ data ,h_data,f_data}) {
 						<div className=" mx-auto ">
 							<div className=" md:divide-x grid-cols-3 sm:grid-cols-1 sm:divide-y  grid w-full  rounded-lg  ">
 								{data.CustomerSuccessStories.map((data) => (
-									<div key="data" className=" grid grid-rows-3  w-full  px-12  ">
+									<div key="data" className=" grid-rows-3  w-full  px-12  ">
 										<div className="     rounded-full">
 										
 											<Image
@@ -773,8 +773,8 @@ function Home ({ data ,h_data,f_data}) {
 					>
 						<div className="py-5 container px-3 mx-auto">
 							<div className="max-w-3xl mx-auto text-center">
-								<h2 className="my-5  card-heading "> {data.CTASection.CTATitle} </h2>
-								<p className="card-subheading"> {data.CTASection.CTADescription} </p>
+								<h2 className="my-5  section-heading "> {data.CTASection.CTATitle} </h2>
+								<p className="section-subheading"> {data.CTASection.CTADescription} </p>
 								<div className="max-w-md mx-auto pb-10">
 									<p className="mb-5  card-subheading text-gray-800"> {} </p>
 									<Link href={data.CTASection.CTAButtonLink}>

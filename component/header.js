@@ -211,7 +211,7 @@ export default function Header ({h_data}) {
                     <div className="flex sm:hidden">
                     <div id="banner" className="  w-full h-10 bg-black text-white flex space-x-12 items-center text-center justify-center "><div>{h_data.TopBar.buttonTitle}</div>
                         <Link href={h_data.TopBar.linkURL} passHref>
-                    <a className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">&nbsp;Learn More
+                    <a target="_blank" className="inline-flex items-center  text-white hover:border-blue-500 group hyperlink group-hover:text-gray-100">&nbsp;Learn More
                     <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>

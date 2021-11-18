@@ -184,12 +184,12 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
                       overrides: {
                         h3: {
                           props: {
-                            className: "text-2xl mb-4",
+                            className: "text-2xl mb-4 text-justify",
                           },
                         },
                          h1: {
                           props: {
-                            className: "text-2xl mb-4",
+                            className: "text-2xl mb-4 text-justify",
                           },
                         },
                         li: {
@@ -199,12 +199,12 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
                             },
                             p: {
                                 props: {
-                                className:"mb-3"
+                                className:"mb-3 text-justify"
                             }
                             },
                             ol: {
                                 props: {
-                                    className:"mb-4"
+                                    className:"mb-4 text-justify"
                                 }
                             }
                       },

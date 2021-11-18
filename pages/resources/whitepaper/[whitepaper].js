@@ -174,12 +174,12 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
                       overrides: {
                         h3: {
                           props: {
-                            className: "text-2xl mb-4",
+                            className: "text-2xl mb-4 text-justify",
                           },
                         },
                          h1: {
                           props: {
-                            className: "text-2xl mb-4",
+                            className: "text-2xl mb-4 text-justify",
                           },
                         },
                         li: {
@@ -189,12 +189,12 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
                             },
                             p: {
                                 props: {
-                                className:"mb-3"
+                                className:"text-justify mb-3"
                             }
                             },
                             ol: {
                                 props: {
-                                    className:"mb-4"
+                                    className:"mb-4 text-justify"
                                 }
                             }
                       },

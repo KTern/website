@@ -195,7 +195,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                           className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-300 hover:shadow-md"
                         >
                           <Link href={dt.redirectURL} passHref>
-                            <a>
+                            <a className="no-underline">
                               <div className="flex items-center">
                                 <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                   <Image
@@ -205,7 +205,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                                     alt={dt.ListText}
                                   />
                                 </span>
-                                <p className="card-subheading text-black hover:underline hover:shadow-sm ">
+                                <p className="card-subheading text-black  ">
                                   {dt.ListText}
                                 </p>
                               </div>
@@ -222,13 +222,13 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                     <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
                       <div className="flex-col items-center -mt-1">
                         {data.CompanyInformation.map((dt) => (
-                          <div key="dt"><h3
+                          <div key="dt"><p
                           
-                            className="my-2 ml-0 card-subheading  text-gray-800 uppercase"
+                            className="my-2 ml-0 font-bold  text-gray-800 uppercase "
                           >
                             {dt.EntityName}
-                          </h3>
-                            <p>{dt.EntityCode }</p></div>
+                          </p>
+                            <p className="">{dt.EntityCode }</p></div>
                         ))}
                       </div>
                     </div>

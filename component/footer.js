@@ -75,7 +75,7 @@ export default function Footer({ f_data }) {
               </div>
               <div className="grid grid-cols-3 gap-2 ">
                 {f_data.FooterColumn.map((dt)=>(<div key="dt" className="w-1/2 lg:w-full  mb-12">
-                  {(dt.Title!="") &&<h3 className="mb-8 lg:mb-2  text-white  navbar-h">
+                  {(dt.Title!="") &&<h3 className="mb-8 lg:mb-2  text-white  text-md font-semibold">
                    {dt.Title}
                   </h3>}
                   <ul className="">
