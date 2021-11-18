@@ -22,7 +22,6 @@
         "nextjs-cors": "2.1.0",
         "nookies": "2.5.2",
         "react": "17.0.2",
-        "react-awesome-stars-rating": "0.6.0",
         "react-bootstrap": "2.0.0",
         "react-dom": "17.0.2",
         "react-icalendar-link": "3.0.2",
@@ -37,6 +36,7 @@
         "autoprefixer": "10.3.3",
         "eslint": "7.32.0",
         "eslint-config-next": "11.1.0",
+        "next-sitemap": "^1.6.203",
         "postcss": "8.3.6",
         "stylelint-config-recommended": "5.0.0",
         "tailwindcss": "2.2.9"

@@ -2,7 +2,9 @@ module.exports = {
   target: "serverless",
   reactStrictMode: true,
   throwIfNamespace: false,
-  optimizeImages:false,
+  optimizeImages: false,
+  siteUrl: process.env.SITE_URL ,
+  generateRobotsTxt: true, // (optional)
   i18n: {
     locales: ["en", "de"],
     defaultLocale: "en",
