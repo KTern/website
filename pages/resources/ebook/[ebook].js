@@ -13,10 +13,10 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
     const handleSearch = (event) => {
         
     // console.log("clicked" + webinar_Data.Type + event, router.query);
-
-    router.push({
-      pathname: "/resources",params:{type:'Ebook'}
-    });
+      if (typeof process.browser)
+    {    window.open('https://crm.zoho.in/crm/WebToContactForm', '_top');
+        window.open('/resources','_top')}
+      
   };
     return (
         <>

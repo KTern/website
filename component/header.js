@@ -257,7 +257,7 @@ export default function Header ({h_data}) {
                         <input type="checkbox" value="selected" id="toggle-one" className="toggle-input"/>
                             <label htmlFor="toggle-one" id="label"  className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(true); setIsProcessShown(false); setIsProjectShown(false) }}>Products</label>
                             <div id="toggle-1" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
-                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
+                                <div className=" px-6 mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h text-black text-bold mb-2 uppercase">{h_data.Streams}</h3>
                                             <div >
@@ -314,9 +314,9 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                         </li>
                         <li className="toggleable  hover:bg-secondary" ref={resources} >
                                  <input type="checkbox" value="selected" id="toggle-resources" className="toggle-input"/>
-                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={()=>{setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}>Resources</label>
-                            <div id="toggle-2" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
-                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
+                            <label htmlFor="toggle-resources" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false); setIsCloudLiveShown(false);setIsResourceLibraryShown(true);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}>Resources</label>
+                            <div id="toggle-2" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                <div className=" px-6 mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-1/4 sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h uppercase text-black text-bold mb-2">{h_data.Resources}</h3>
                                       
@@ -358,7 +358,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[7].
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[8].Title}</a></Link>
                                                 </li>
                                                  <li>
-                                                    <Link href={h_data.Resource[9].PageUrl.linkURL} passhref   ><a target="_blank" onMouseEnter={() => { setIsProductTourShown(true),setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsDocumentationShown(false);setIsPricingShown(false);setIsArticlesShown(false);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href={h_data.Resource[ 9 ].PageUrl.linkURL} passhref   ><a target="_blank" onMouseEnter={() => { setIsCloudLiveShown(false); setIsResourceLibraryShown(false); setIsDocumentationShown(false); setIsPricingShown(false); setIsArticlesShown(false); setIsTrustShown(false); setIsEbooksShown(false); setIsCaseShown(false); setIsWebinarsShown(false);setIsProductTourShown(true)}}
 className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[9].Title}</a></Link>
                                                 </li>
                                                  <li className="mt-4 mx-2">
@@ -400,8 +400,8 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[9].
                         <li className="toggleable  hover:bg-secondary" ref={partners}>
                                  <input type="checkbox" value="selected" id="toggle-partners" className="toggle-input"/>
                             <label htmlFor="toggle-partners" className="block cursor-pointer py-3 px-2 lg:p-5 header  " onMouseLeave={()=>{setIsConsultingShown(false);setIsPortalShown(false);setIsTechnologyShown(false);setIsBecomeAPartnerShown(false);setIsPartnersShown(true)}}>{h_data.Partner}</label>
-                            <div id="toggle-3" role="toggle" className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
-                                <div className=" container mx-auto w-full flex flex-wrap justify-between   mx-2">
+                            <div id="toggle-3" role="toggle" className="p-6  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                                <div className=" px-6 mx-auto w-full flex flex-wrap justify-between   mx-2">
                                    <ul className="bg-white px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-300  pb-6 pt-6 lg:pt-3" >
                                         <h3 className="navbar-h  uppercase text-black text-bold mb-2">{h_data.Partner}</h3>
                                         <div >

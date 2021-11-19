@@ -132,7 +132,7 @@ export default function Partners({ data,h_data,f_data }) {
           },
         ]}
       />
-      <Layout h_data={h_data,f_data}>
+      <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Header Section --> */}
         <section className='w-full py-28 bg-secondary'>
           <div className='flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row'>

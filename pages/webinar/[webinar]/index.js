@@ -19,13 +19,12 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
 
   const router = useRouter();
     const handleSearch = (event) => {
-        event.preventDefault();
-    console.log("clicked" + webinar_Data.Type + event, router.query);
 
-    router.push({
-      pathname: "/webinar" + `${webinar_Data.redirectURL}`,
-      state: `${webinar_Data.IsOnDemandWebinar}`,
-    });
+    console.log("clicked" + webinar_Data.Type + event, router.query);
+      if (typeof process.browser) {
+        window.open("/webinar" + `${webinar_Data.redirectURL}`)
+        return true
+}
   };
   const dateFormat = new Date(webinar_Data.WebinarDate);
   const formattedDate = dateFormat.toLocaleDateString();

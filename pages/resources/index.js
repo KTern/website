@@ -7,15 +7,19 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { useState } from "react";
 export default function Resources({ data,h_data,f_data }) {
-  const [ isFilters, setFilters ] = useState(false);
+  const [ isFilters, setFilters ] = useState("");
+  
+  const [ResourceList,setResourceList]=useState(data.ResourcesList)
   let filter=[]
   function handleFilter (element) {
-    console.log(element,isFilters)
-    if (!filter.includes(element))
-      filter.push(element)
-    else
-      filter.splice(filter.indexOf(element), 1)
+    filter=[]
+    data.ResourcesList.map(item => {
+      if (item.ResourceType == element)
+        filter.push(item)
+    }
+    )
     
+    setResourceList(filter);
   }
   return (
     <>
@@ -182,20 +186,20 @@ export default function Resources({ data,h_data,f_data }) {
                   <button
                     key="dt"
                     className="hyperlink click-chip outline-green mr-3 focus:bg-gray-200"
-                    onClick={() => { setFilters(true);handleFilter(dt.FilterSlug)}}
+                    onClick={() => { setFilters(dt.FilterSlug);handleFilter(dt.FilterSlug)}}
                   >
                     {dt.FilterName}
                   </button>
                 ))}
               </section>
               <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
-                {data.ResourcesList.map((dt) => {    
-                  return isFilters && filter.includes(dt.FilterSlug) ? (
-                  <div
+                {ResourceList.map((dt) =>        (
+                   <div
                     key="dt"
                     className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4"
-                  >
-                    <div className="">
+                    >
+                   
+                      <div className="">
                       <Link href={dt.ResourceURL} passHref>
                         <a className="relative block w-full h-44 overflow-hidden rounded">
                           <div
@@ -244,63 +248,8 @@ export default function Resources({ data,h_data,f_data }) {
                         </Link>
                       </a>
                     </Link>
-                    </div>) :
-                    (
-                  <div
-                    key="dt"
-                    className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4"
-                  >
-                    <div className="">
-                      <Link href={dt.ResourceURL} passHref>
-                        <a className="relative block w-full h-44 overflow-hidden rounded">
-                          <div
-                            className={`z-20 bg-${dt.DigitalStream}-secondary  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}
-                          >
-                            <span>Digital {dt.DigitalStream}</span>
-                          </div>
-                          <Image
-                            className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                            src={dt.ImageURL}
-                            alt="resource"
-                            width="550"
-                            height="300"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <Link href={dt.ResourceURL} passHref>
-                      <a>
-                        <p className="hyperlink text-gray-400  uppercase mb-4">
-                          {dt.ResourceTypeName}
-                        </p>
-                        <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                          {dt.ResourceTitle}
-                        </span>
-                        <Link href={dt.ResourceURL} passHref>
-                          <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
-                            <span className="hyperlink group-hover:text-gray-300">
-                              {dt.CTAText}
-                            </span>
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </a>
-                    </Link>
-                  </div>)
-                })}
+                 </div>  
+              ))}
               </div>
             </div>
           </div>
