@@ -6,6 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Link from "next/link";
+import Markdown from "markdown-to-jsx";
 export default function PartnerContact({ data,h_data,f_data }) {
   return (
     <>
@@ -125,10 +126,8 @@ export default function PartnerContact({ data,h_data,f_data }) {
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
               <p className=" text-center  mb-8  section-subheading text-gray-700 cursor-pointer">
-                For General queries{" "}
-                <Link href="/contact" passhref>
-                  <a className="font-bold hover:text-gray-200">Contact us</a>
-                </Link>{" "}
+               {data.PartnerRegistrationForm.FormSubTitle}
+              
               </p>
             </div>
             <form
@@ -187,7 +186,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="First_Name"
                   >
-                    First Name
+                    {data.PartnerRegistrationForm.FirstName}
                   </label>
                 </div>
                 <div className="zcwf_col_fld">
@@ -211,7 +210,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="Last_Name"
                   >
-                    Last Name
+                    {data.PartnerRegistrationForm.LastName}
                   </label>
                 </div>
                 <div className="zcwf_col_fld">
@@ -235,7 +234,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="Email"
                   >
-                    Email
+                   {data.PartnerRegistrationForm.Email}
                   </label>
                 </div>
                 <div className="zcwf_col_fld">
@@ -251,7 +250,27 @@ export default function PartnerContact({ data,h_data,f_data }) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
-             
+              <div className="zcwf_row">
+                      <div className="zcwf_col_lab"></div>
+                      <div className="zcwf_col_fld">
+                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
+                    options={{
+                      overrides: {
+                        p:{
+                          props:{
+                            className:"text-sm text-justify leading-5"
+                          }
+                        },
+                        strong:{
+                          props:{
+                            className:"leading-8"
+                          }
+                        }
+                      }}}
+                    className=""
+                  >{data.PartnerRegistrationForm.PrivacyStatement}</Markdown></label>
+                        </div> 
+                        </div>   
               <div className="zcwf_row">
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
@@ -260,7 +279,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                     type="submit"
                     id="formsubmit"
-                    value="Submit"
+                    value={data.PartnerRegistrationForm.SubmitButton}
                     title="Submit"
                   />
                 </div>
@@ -274,7 +293,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
 }
 export const getServerSideProps = async () => {
   // data url from strapi
-  const res = await fetch('https://api.ktern.com/navbar', {
+  const res = await fetch('https://api.ktern.com/partner-registration', {
 		method: 'get',
 	});
   const data = await res.json();

@@ -194,7 +194,7 @@ export default function Consultingpartner({data,h_data,f_data}){
            
         {/* <!--Detailed Look at Partnership Benefits--> */}
             <section className="relative py-0 2xl:py-10">
-            <div className="container md:px-20 mx-auto">
+            {/* <div className="container md:px-20 mx-auto">
                 <div className="mb-20 text-center">
                 
                 <h2 className="mt-8 section-heading">Detailed Look at Partnership Benefits</h2>
@@ -261,83 +261,10 @@ export default function Consultingpartner({data,h_data,f_data}){
                 </div>))}
                 
                 </div>
-            </div>
+            </div> */}
             </section>
             {/* <!--KTern Customer Testimonials--> */}
-             <section className='sm:px-4 relative py-10 md:py-15 bg-black overflow-x-hidden'>
-          {/* <Image width="10%" height="10%" className="absolute h-24 md:h-auto top-0 left-0 right-0" src="/atis-assets/elements/line-top.svg" alt=""/> */}
-
-          <h2 className='mb-10 lg:mb-10   section-heading text-center  text-white  '>
-            {data.TestimonialSectionHeading}
-          </h2>
-          <div className='flex flex-wrap lg:flex-nowrap justify-center'>
-            <div className='hidden lg:block  opacity-50 flex-shrink-0 w-full max-w-md px-3'></div>
-
-            {data.TestimonialSection.map((dt, index) => {
-              return index % 2 == 0 ? (
-                <div key='dt' className='flex-shrink-0  w-full lg:max-w-md px-3 lg:mt-20 mb-6 lg:mb-0'>
-                  <div className='px-6 py-12 bg-black   border border-white'>
-                    <div className='relative px-4 mx-auto'>
-                      <div className='absolute top-0 left-0'>
-                        <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
-                      </div>
-                      <div className='absolute top-0 right-0'>
-                        <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
-                      </div>
-                      <div className='px-4 md:px-10'>
-                        <h3 className='mb-8 card-subheading text-white'>{dt.TestimonialStatement}</h3>
-                        <div className='flex flex-wrap items-center'>
-                          <div className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'>
-                            <Image
-                              width='60%'
-                              height='60%'
-                              className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'
-                              src={dt.AuthorAvatarURL}
-                              alt=''
-                            />
-                          </div>
-                          <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorName}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                index % 2 != 0 && (
-                  <div className='flex-shrink-0 w-full lg:max-w-md px-3 mb-6 lg:mb-0'>
-                    <div className='px-6 py-12   bg-black border border-white'>
-                      <div className='relative px-4 mx-auto'>
-                        <div className='absolute top-0 left-0'>
-                          <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
-                        </div>
-                        <div className='absolute top-0 right-0'>
-                          <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
-                        </div>
-                        <div className='px-4 md:px-10'>
-                          <h3 className='mb-8 card-subheading text-white'>{dt.TestimonialStatement}</h3>
-                          <div className='flex flex-wrap items-center'>
-                            <div className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'>
-                              <Image
-                                width='60%'
-                                height='60%'
-                                className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'
-                                src={dt.AuthorAvatarURL}
-                                alt=''
-                              />
-                            </div>
-                            <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorName}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )
-              );
-            })}
-
-            <div className='hidden lg:block opacity-50 flex-shrink-0 w-full max-w-md px-3'></div>
-          </div>
-        </section>
+       
           
             {/* <!--KTern FAQ--> */}
 

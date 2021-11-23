@@ -9,6 +9,7 @@ module.exports = {
   },
   images: {
     domains: [
+      "cdn-icons-png.flaticon.com",
       "assets-global.website-files.com",
       "storage.googleapis.com",
       "logodix.com",
