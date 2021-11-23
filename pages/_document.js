@@ -51,7 +51,18 @@ validateEmail240235000000441168() {
           <script dangerouslySetInnerHTML={{
             __html: ` (function(c,l,a,r,i,t,y){c[ a ] = c[ a ] || function () { (c[ a ].q = c[ a ].q || []).push(arguments) }; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt"; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "9d9bn5pdf5");`
           }}/>
- 
+
+          <script dangerouslySetInnerHTML={{
+            __html: `window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '325727978906277',
+      xfbml      : true,
+      version    : 'v12.0'});
+    FB.AppEvents.logPageView();};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));`}}/>
+  
 
 
         </Head>
@@ -63,3 +74,4 @@ validateEmail240235000000441168() {
     )
   }
 }
+

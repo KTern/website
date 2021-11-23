@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
-
+import Markdown from "markdown-to-jsx";
 export default function About({ data,h_data,f_data }) {
   return (
     <>
@@ -42,11 +42,11 @@ export default function About({ data,h_data,f_data }) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -57,11 +57,11 @@ export default function About({ data,h_data,f_data }) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -121,17 +121,35 @@ export default function About({ data,h_data,f_data }) {
         ]}
       />
       <Layout h_data={h_data} f_data={f_data}>
-        <section className='relative flex flex-col items-center justify-center w-full px-6 py-32 bg-secondary bg-cover  min-w-screen'>
+        <section className='relative flex flex-col items-center justify-center w-full px-6 py-20 bg-secondary bg-cover  min-w-screen'>
           <div className='flex flex-col items-center justify-center md:mx-auto  xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0'>
-            <div className='container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0'>
+            <div className='container space-y-5 relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0'>
               <h1 className='relative z-20   leading-none text-black heading  sm:text-center lg:text-left'>
                 {data.PageHeader.header}
                 <br />
-                <span className='mt-1 text-gray-400 heading lg:mt-0'>{data.PageHeader.header2}</span>
+                <span className=' text-gray-400 heading '>{data.PageHeader.header2}</span>
               </h1>
               <p className='relative z-20 block mt-6 subheading text-black  sm:text-center lg:text-left'>
                 {data.PageHeader.subHeading}
               </p>
+               <div className="md:flex md:flex-row space-x-4 ">
+                <Link
+                  rel="noopener noreferrer"
+                  href={data.PageHeader.primaryCTA.linkURL}
+                >
+                  <a
+                    target="_blank"
+                    className=" inline-block py-3 px-16 border-2 border-white bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button"
+                  >
+                    {data.PageHeader.primaryCTA.buttonTitle}
+                  </a>
+                </Link>
+                {/* <Link href={data.PageHeader.secondaryCTA.linkURL}>
+                  <a className=" sm:mb-4 inline-block  mr-4 border-2 border-black shadow-md py-3 px-14 bg-white  hover:bg-gray-300   text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black button ">
+                    {data.PageHeader.secondaryCTA.buttonTitle}
+                  </a>
+                </Link> */}
+              </div>
             </div>
             <div className='relative w-full px-5 rounded-lg cursor-pointer text-white lg:w-1/2 group xl:px-0'>
               <div className='absolute top-0 left-0 w-11/12 -mt-20 opacity-50'>
@@ -144,36 +162,21 @@ export default function About({ data,h_data,f_data }) {
                 </svg>
               </div>
               <div className='z-10 object-cover w-100 h-80 '>
-                <Image width={600} height={360} src={data.PageHeader.ImageURL} alt='' />
+                <Image width={600} height={500} src={data.PageHeader.ImageURL} alt='' />
               </div>
-              <div className='absolute inset-0 flex items-center justify-center sm:mb-40'>
-                <Link href='/video' passHref>
-                  <a className='flex items-center justify-center hover:bg-white bg-black rounded-full  '>
-                    <span className='flex items-center justify-center w-20 h-20 bg-black rounded-full group-hover:text-black shadow-2xl group-hover:bg-white '>
-                      <svg className='w-auto h-8 ml-1   fill-current' viewBox='0 0 52 66' xmlns=''>
-                        <path
-                          d='M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z'
-                          fillRule='nonzero'
-                        ></path>
-                      </svg>
-                    </span>
-                  </a>
-                </Link>
-              </div>
+             
             </div>
           </div>
         </section>
         {/* <!-- Our Vision--> */}
-        <section className='w-full px-8 py-20 xl:px-0 bg-white'>
+        <section className='md:max-w-7xl md:mx-auto md:px-8 py-10 px-4  bg-white flex flex-col md:flex-row'>
           <div className='max-w-6xl mx-auto'>
             <p className='mb-5 section-heading text-black '>{data.vision.title}</p>
             <div className='flex flex-col md:flex-row'>
-              <div className='w-full pr-5 md:w-6/12 xl:pr-12'>
-                <p className='section-subheading leading-normal text-gray-700 '>{data.vision.statement1}</p>
-              </div>
+              
 
-              <div className='w-full mt-5 md:mt-0 md:w-8/12 md:pl-2'>
-                <h3 className='mb-5 -mt-1 card-heading  '>{data.vision.statement2}</h3>
+              <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
+                <h3 className='mb-5 -mt-1 section-subheading  '>{data.vision.statement2}</h3>
                 <Link href={data.vision.ctaurl} passHref>
                   <a className='inline-flex items-center pb-1  text-black hover:border-blue-500 group '>
                     <span className='hyperlink group-hover:text-gray-400'>{data.vision.ctatext}</span>
@@ -193,142 +196,115 @@ export default function About({ data,h_data,f_data }) {
                     </svg>
                   </a>
                 </Link>
+                
               </div>
+             
             </div>
           </div>
+           <div className="hidden md:block">
+                <Image src={data.vision.Image.imageURL} alt={data.vision.Image.imageDescription} height={data.vision.Image.height} width={data.vision.Image.width}/>
+              </div>
         </section>
         {/* <!--Our Values--> */}
-        <section className='relative leading-7  text-gray-900 py-10 bg-white border-solid'>
-          <div className='box-border mx-auto border-solid lg:pl-8 max-w-7xl'>
-            <div className='flex flex-col items-center leading-7 text-gray-900 border-0 border-gray-200 lg:flex-row'>
-              <div className='box-border flex flex-col justify-center w-full h-full p-8 text-gray-900 border-solid lg:w-1/2 md:p-16 lg:p-0 lg:pl-10 lg:pr-20'>
-                <h2 className='m-0 section-heading    text-left text-black '>{data.Values.Title}</h2>
-                <p className='mt-5 section-subheading text-left border-0 border-gray-200 '>{data.Values.Description}</p>
-                <div className='grid gap-4 mt-8 leading-7 border-0 border-gray-200 sm:mt-10 sm:gap-6 lg:mt-12 lg:gap-8'>
-                  {data.Values.Steps.map((dt) => (
-                    <div key='dt' className='box-border flex items-start text-gray-900 border-solid'>
-                      <div className='flex items-center justify-center w-12 h-12 leading-7 bg-black border-0 border-gray-200 rounded-full'>
-                        <p className='box-border m-0 text-xl text-white border-solid'>
-                          <svg
-                            className='w-6 h-6'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns={dt.stepicon}
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'
-                            ></path>
-                          </svg>
-                        </p>
-                      </div>
-                      <div className='flex-1 ml-6 leading-7 border-0 border-gray-200'>
-                        <h3 className='box-border m-0 card-heading text-black border-solid sm:text-xl '>
-                          {dt.StepTitle}
-                        </h3>
-                        <p className='box-border mt-2 card-subheading text-gray-900 border-solid'>
-                          {dt.StepDescription}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+        {/* About Company */}
+        <section className='w-full md:mx-auto md:px-8 md:py-20 px-4 bg-white flex flex-col md:flex-row'>
+           <div className="md:w-1/2 w-full hidden md:block ">
+                <Image src={data.AboutKTern.Image.imageURL} alt={data.AboutKTern.Image.imageDesscription} height={data.AboutKTern.Image.height} width={data.AboutKTern.Image.width}/>
               </div>
-              <div className='hidden md:block w-full h-full overflow-hidden leading-7 text-gray-900 border-0 border-gray-200 lg:w-1/2'>
-                <div className='object-cover relative'>
-                  <Image width={600} height={700} src={data.valueimageurl} alt='' />
-                </div>
+          <div className='md:w-1/2 w-full mx-auto'>
+            <p className='mb-5 section-heading text-black '>{data.AboutKTern.Title}</p>
+            <div className='flex flex-col md:flex-row'>
+              <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
+                <h3 className='mb-5 -mt-1 section-subheading  '>{data.AboutKTern.Description}</h3>   
               </div>
             </div>
           </div>
+          
         </section>
-        {/* <!--What We do--> */}
-        <section className='bg-black overflow-hidden'>
-          <div className='relative px-16 pt-10 pb-12 mx-auto max-w-7xl xl:px-16'>
-            <svg
-              className='relative z-10 w-16 mb-8 text-yellow-300 transform opacity-100 fill-current sm:w-20 -rotate-0 rotate rotate-3'
-              xmlns={data.WhatWeDo.icon}
-              viewBox='0 0 50 46'
-            >
-              <defs></defs>
-              <g fillRule='nonzero'>
-                <path d='M46.651 2.666c1.892-.812 1.06-1.401-1.337-1.81A4.827 4.827 0 0044.323 0a3.914 3.914 0 00-.614.64C34.376-.395 11.639.36 8.676 1.976 6.99 1.437 1.364 9.542.344 13.552c-.436.1-.436.632-.12 1.487a.84.84 0 00.1.28v-.05a2.8 2.8 0 00.247.668h.06c2.814 5.749 14.356 19.796 15 20.673l-.149-.158c2.418 2.587 3.963 5.547 6.291 8.17 2.626 2.213 3.478 1.437 3.399-.065 2.784-1.171 3.289-3.73 4.775-5.655 5.608-7.904 14.742-14.651 19.498-22.763a2.347 2.347 0 00-.09-.575c1.725-2.429-.296-9.018-2.704-12.898zM38.25 24.093c-4.38 5.863-12.355 11.432-13.693 18.15-.33-.903-.903-1.75-1.684-2.493C15.987 31.616 10.4 22.828 3.088 14.931c3.101-1.997 3.636-6.021 5.469-8.615l-.09.187.199-.41-.06.13.08-.151c.31-1.051.463-2.123.455-3.198.876.312 1.796.553 2.745.719 10.333-.633 20.805-.144 31.129-.417.198 1.71 1.387 3.514 1.982 5.094 0-.057 0-.122-.08-.18 1.11 2.243.803 4.937 2.616 6.92-2.953 1.337-8.342 8.048-9.283 9.083zM7.5 14.505v-.01.01z'></path>
-                <path d='M9.567 12.925c-.022.243.175.468.486.556 0 .065.05.13.08.094l.139-.05h.069c-1.015.233-1.858.754-2.341 1.445.908.243 1.84.436 2.787.578.208.5.484.985.824 1.445v.094-.036c.387.607.763 1.214 1.16 1.814v-.072c.516.816.992 1.64 1.548 2.457.555.817 1.13 1.9 1.736 2.782a.241.241 0 01-.05-.08c1.587 2.169 2.599 4.59 4.444 6.635 3.482 2.002-.536-3.874-1.2-4.777-1.101-1.662-2.232-3.324-3.294-5-.892-1.446-1.845-2.892-2.787-4.337-.149-.354-.298-.65-.446-.925 2.975-.152 5.951-.455 8.927-.513 3.849-.145 7.737 0 11.606 0-.466 1.604-.526 4.025-.992 4.85-.387 3.403-3.968 7.096-2.46 10.37.605-.477 1.029-1.06 1.23-1.692 1.21-4.43 3.918-8.99 3.75-13.535 2.579.03 5.159-.045 7.727-.224 3.65-.853 3.134-2.32-.546-2.349h.218c-2.55.05-5.098.058-7.648.05a27.367 27.367 0 00-3.095-5.181.511.511 0 01-.089-.13c-1.408 1.257.308 3.714 1.597 5.304-4.85 0-9.7 0-14.551.217h.218c-2.113.333-5.168.116-7.53.564.165-.11.255-.265.249-.427a.376.376 0 000-.151c2.48-2.212 7.241-8.166 3.115-6.367l-4.88 6.59zm3.68 3.526a.19.19 0 010 .065.285.285 0 010-.08v.015zM11.5 17.505v-.01z'></path>
-                <path d='M14.499 21.55v-.1a.54.54 0 010 .1zM41.874 10c.462-1.423-.366-2.884-2.197-3.876A.87.87 0 0139.522 6c-1.373.757.287 2.644 1.266 3.49.303.209.671.382 1.086.51zM40.5 9.505v-.01z'></path>
-              </g>
-            </svg>
-            <div className='relative z-20'>
-              <h3 className='section-heading text-left text-white '>{data.WhatWeDo.Title}</h3>
-              <div className='flex flex space-x-5 mt-4 sm:flex-row items-center'>
-                <p className='section-subheading text-left text-yellow-300'>{data.WhatWeDo.Description}</p>
-                <div className='flex mt-5 space-x-1 sm:mt-1 sm:ml-3 items-center my-auto'>
-                  <div className='w-10 h-2 bg-yellow-300 rounded-full opacity-100'></div>
-                  <div className='w-8 h-2 bg-yellow-300 rounded-full opacity-75'></div>
-                  <div className='w-4 h-2 bg-yellow-300 rounded-full opacity-50'></div>
-                  <div className='w-3 h-2 bg-yellow-300 rounded-full opacity-25'></div>
-                  <div className='w-2 h-2 bg-yellow-300 rounded-full opacity-10'></div>
-                  <div className='w-2 h-2 bg-yellow-300 rounded-full opacity-5'></div>
-                </div>
+        {/* /About Company */}
+        {/* Values */}
+        <div className="flex flex-wrap mx-auto bg-black text-white md:p-20  md:px-44 ">
+          <div className="w-full md:w-1/3  ">
+                        <div className="flex sm:space-x-2 sm:px-20 px-0 md:space-x-10 py-10  sm:py-5 text-center   sticky z-10 md:top-16 sm:top-10 section-heading">
+                         {data.Values.Title}
+   </div>
+  </div>
+  <div className="w-full md:w-2/3 pr-10 mb-4 md:mb-0 flex ">
+  <div className="w-full ">{data.Values.Steps.map((dt,index)=>(
+  <div className="w-full mb-10 flex  px-20" key="dt">
+            
+      {index % 2 == 0 && <div className=" md:text-left  md:w-full"><span className="  md:flex-col md:space-y-4"><div className="text-8xl  md:bg-values_gradient bg-no-repeat md:p-10 md:pl-16 " style={{backgroundSize:'26%',backgroundPosition:'0% 100%'}} >{index + 1}</div><div className="card-heading">{dt.StepTitle}</div><div className="card-subheading">{ dt.StepDescription}</div></span></div>}
+      {index%2!=0 && <div className=" md:text-right md:w-full"><span className=" md:flex-col md:space-y-4"><div className="text-8xl  md:bg-values_gradient bg-no-repeat md:p-10 md:pr-12 " style={{backgroundSize:'26%',backgroundPosition:'100% 0%'}} >{index + 1}</div><div className="card-heading">{dt.StepTitle}</div><div className="card-subheading">{ dt.StepDescription}</div></span></div>}
+                                
+                            </div>        ))}
+      </div>
+  </div>
+	
+        </div>
+        {/* /Values */}
+        {/* DX Innovation Hub */}
+        <section className='md:max-w-7xl mx-auto px-8 py-20  bg-white flex flex-col md:flex-row'>
+          <div className='max-w-6xl mx-auto'>
+            <p className='mb-5 section-heading text-black sm:text-center '>{data.AcademicAlliance.Title}</p>
+            <div className='flex flex-col md:flex-row'>
+              <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
+                <h3 className='mb-5 -mt-1 section-subheading  '>{data.AcademicAlliance.Description}</h3>   
               </div>
             </div>
-            <div className='grid grid-cols-1 mt-10 gap-14 lg:grid-cols-3'>
-              {data.WhatWeDo.Steps.map((dt) => (
-                <div key="dt" className='flex text-white'>
-                  <svg
-                    xmlns={dt.stepicon}
-                    className='hidden md:block flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current'
-                    viewBox='0 0 24 24'
-                    strokeWidth='1.5'
-                    fill='none'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  >
-                    <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-                    <path d='M19 11v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2'></path>
-                    <path d='M13 13l9 3l-4 2l-2 4l-3 -9'></path>
-                    <line x1='3' y1='3' x2='3' y2='3.01'></line>
-                    <line x1='7' y1='3' x2='7' y2='3.01'></line>
-                    <line x1='11' y1='3' x2='11' y2='3.01'></line>
-                    <line x1='15' y1='3' x2='15' y2='3.01'></line>
-                    <line x1='3' y1='7' x2='3' y2='7.01'></line>
-                    <line x1='3' y1='11' x2='3' y2='11.01'></line>
-                    <line x1='3' y1='15' x2='3' y2='15.01'></line>
-                  </svg>
-                  <div className='relative space-y-2'>
-                    <h4 className='card-heading'>{dt.StepTitle}</h4>
-                    <p className='card-subheading text-gray-300'>{dt.StepDescription}</p>
-                  </div>
-                </div>
-              ))}
+          </div>
+           <div className="hidden md:block">
+                <Image src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={1400} width={1900 }/>
+              </div>
+        </section>
+        {/* /DX Innovation Hub */}
+        {/* Digital Dhaanam */}
+         <section className='w-full mx-auto md:px-8 md:py-20 px-4  bg-white flex flex-col md:flex-row'>
+           <div className="md:w-1/2 w-full hidden md:block">
+                <Image src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDesscription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
+              </div>
+          <div className='md:w-1/2 w-full mx-auto'>
+            <p className='mb-5 section-heading text-black '>{data.DigitalDhaanam.Title}</p>
+            <div className='flex flex-col md:flex-row'>
+              <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
+                <h3 className='mb-5 -mt-1 section-subheading  '> <Markdown
+                    options={{
+                      overrides: {
+                        h3: {
+                          props: {
+                            className: "text-2xl mb-4 text-justify",
+                          },
+                        },
+                         h1: {
+                          props: {
+                            className: "text-2xl mb-4 text-justify",
+                          },
+                        },
+                        li: {
+                          props: {
+                            className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                          }
+                            },
+                            p: {
+                                props: {
+                                className:"text-justify mb-3"
+                            }
+                            },
+                            ol: {
+                                props: {
+                                    className:"mb-4 text-justify"
+                                }
+                            }
+                      },
+                    }}
+                    className=""
+                  >{data.DigitalDhaanam.Description}</Markdown></h3>   
+              </div>
             </div>
           </div>
+          
         </section>
-        {/* <!-- Our Customers--> */}
-        <section className='w-full py-10 pb-16 bg-secondary'>
-          <div className='flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0'>
-            <p className='card-heading text-gray-400 uppercase'>{data.ourcustomerstitle}</p>
-            <div className='flex flex flex-wrap justify-center sm:flex-row space-x-16'>
-              {data.TrustedByLogos.map((dt) => (
-                <svg
-                  key='dt'
-                  className='w-auto h-12 mt-8 text-black fill-current'
-                  viewBox='0 0 2418 2428'
-                  xmlns={dt.imageURL}
-                >
-                  <g stroke='none' strokeWidth='1' fillRule='evenodd'>
-                    <g fillRule='nonzero'>
-                      <path d='M1209 .77C541.628.77.62 543.968.62 1214c0 670.044 541.02 1213.244 1208.38 1213.244 667.346 0 1208.38-543.2 1208.38-1213.244C2417.38 543.969 1876.346.77 1209 .77zM615.504 1565.493v-100.425c-50.842 57.845-108.778 96.391-194.119 95.924-201.926-1.102-365.644-164.379-365.644-367.122 0-202.743 163.718-367.096 365.644-367.096 201.94 0 377.602 163.069 377.602 365.838l.207 371.597-183.69 1.284zm602.6 5.771c-201.938 0-377.601-163.069-377.601-365.838l-.207-617.685h183.418l.246 345.216c50.868-57.832 108.79-96.391 194.145-95.924 201.887 1.128 365.63 164.379 365.63 367.122 0 202.756-163.743 367.11-365.63 367.11zm786.215-8.625c-201.94 0-365.657-164.353-365.657-367.096s163.718-367.096 365.657-367.096c176.233 0 323.894 129.179 358.497 295.827l-183.885-.61c-28.17-66.859-94.381-112.032-171.266-112.032-102.487 0-185.584 83.395-185.584 186.297 0 102.916 83.084 186.35 185.584 186.35 76.885 0 143.913-44.68 172.083-111.566l183.86-.856c-34.111 167.271-182.602 290.782-359.29 290.782h.001z'></path>
-                      <path d='M1213.397 1008.027c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324zm-789.742 0c-102.487 0-185.598 83.422-185.598 186.324 0 102.902 83.11 186.35 185.598 186.35 102.487 0 185.597-83.448 185.597-186.35s-83.11-186.324-185.597-186.324z'></path>
-                    </g>
-                  </g>
-                </svg>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* /Digital Dhaanam */}
+       
         {/* <!--Resources About the Company--> */}
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
@@ -401,7 +377,7 @@ export default function About({ data,h_data,f_data }) {
               </Link>
             </div>
           </div>
-        </section>{" "}
+        </section> 
         {/* / Resources Setion */}
         {/* <!-- Footer CTA Features Page --> */}
         <section className='bg-white'>
@@ -417,7 +393,7 @@ export default function About({ data,h_data,f_data }) {
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
-                  <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
+                  <a className='  inline-block py-3 border-2 border-white px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
                     {data.ctacard.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>

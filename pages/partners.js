@@ -42,11 +42,11 @@ export default function Partners({ data,h_data,f_data }) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -57,11 +57,11 @@ export default function Partners({ data,h_data,f_data }) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",

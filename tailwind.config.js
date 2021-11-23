@@ -13,7 +13,8 @@ module.exports = {
         hero: "url('/assets/hero/home-1.png')",
         herogradient: 'radial-gradient(circle at 75% calc(100% + 20px),#222 0,#727272 90%)',
         cta: "url('/assets/five-stars.svg')",
-        maps:"url('/product/maps/maps_2.svg')"
+        downarrow: "url('/assets/icons/down-arrow.png')",
+        values_gradient:"url('/assets/bg-gradient.png')"
         
       }),
       colors: {

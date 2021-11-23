@@ -41,11 +41,11 @@ export default function Error() {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -56,11 +56,11 @@ export default function Error() {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -107,21 +107,8 @@ export default function Error() {
           },
         ]}
       />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+    
+      
       <section className="relative py-10 2xl:py-20  overflow-hidden h-screen background " >
         <div className="absolute top-0 right-0 -mr-60 md:-mt-112 ">
           <Image src="/404/circle.svg" alt="" width={500} height={400} />

@@ -2,12 +2,14 @@ import Layout from "../component/Layout";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
-import { SocialProfileJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
-
-export default function Contact({ data,h_data ,f_data}) {
+import Markdown from "markdown-to-jsx";
+export default function Contact({ data, h_data, f_data }) {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
       <Head>
@@ -19,30 +21,21 @@ export default function Contact({ data,h_data ,f_data}) {
         ></script>
       </Head>
       <NextSeo
-        title="Simple Usage Example"
-        description="A short description goes here."
-        canonical="https://www.canonical.ie/"
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
         openGraph={{
-          url: "https://www.url.ie/a",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
+          url: `${data.PageSEO.ThumbnailImageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
           images: [
             {
-              url: "https://www.example.ie/og-image-01.jpg",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: "Contact Image Alt",
               type: "image/jpeg",
             },
-            {
-              url: "https://www.example.ie/og-image-02.jpg",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
           ],
           site_name: "SiteName",
         }}
@@ -55,7 +48,7 @@ export default function Contact({ data,h_data ,f_data}) {
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -66,11 +59,11 @@ export default function Contact({ data,h_data ,f_data}) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -93,54 +86,17 @@ export default function Contact({ data,h_data ,f_data}) {
           },
         ]}
       />
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
-      />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
+
       <CorporateContactJsonLd
-        url="http://www.your-company-site.com"
-        logo="http://www.example.com/logo.png"
+        url={`${process.env.url}`}
+        logo={`${process.env.logo}`}
         contactPoint={[
           {
             telephone: "+1-401-555-1212",
             contactType: "customer service",
             areaServed: "US",
-            availableLanguage: ["English", "Spanish", "French"],
+            availableLanguage: ["English", "German"],
           },
           {
             telephone: "+1-877-746-0909",
@@ -152,25 +108,25 @@ export default function Contact({ data,h_data ,f_data}) {
             telephone: "+1-877-453-1304",
             contactType: "technical support",
             contactOption: "TollFree",
-            areaServed: ["US", "CA"],
-            availableLanguage: ["English", "French"],
+            areaServed: ["US", "IN", "IT"],
+            availableLanguage: ["English", "German"],
           },
         ]}
       />
       <Layout h_data={h_data} f_data={f_data}>
-        <section className="relative py-0 bg-white md:m-10 lg:py-10">
-          <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto max-w-7xl xl:px-5 lg:flex-row">
-            <div className="flex flex-col items-center w-full md:px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
-              <div className="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-7/12">
-                <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
+        <section className="relative  bg-white md:m-10 lg:py-0">
+          <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto  xl:px-5 lg:flex-row">
+            <div className="flex flex-col items-center w-full md:px-10 pt-0 pb-20 lg:pt-0 lg:flex-row">
+              <div className="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-8/12">
+                <div className="relative flex flex-col items-center  w-full h-full lg:pr-10">
                   <div className="relative max-w-md">
                     <div className="pb-16 mb-8 border-b border-gray-400">
-                      <h2 className="mt-10 mb-16   heading text-black">
-                        Have a Question?
+                      <h2 className="mt-5 mb-10 sm:text-center  section-heading text-black">
+                        {data.PageTitle}
                       </h2>
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                      <div className="py-2 px-5 mb-4 background rounded-lg">
                         <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 bg-black rounded-lg">
+                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
                             <svg
                               className="w-4 h-4"
                               width="18"
@@ -185,12 +141,34 @@ export default function Contact({ data,h_data ,f_data}) {
                               ></path>
                             </svg>
                           </span>
-                          <p className="subheading  text-white">+1 123456789</p>
+                          <pre className=" text-white">
+                            {" "}
+                            <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-sm text-justify leading-5",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                },
+                              }}
+                              className=""
+                            >
+                              {data.PhoneNumber}
+                            </Markdown>
+                          </pre>
                         </div>
                       </div>
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                      <div className="py-2 px-5 mb-4 background rounded-lg">
                         <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 bg-black rounded-lg">
+                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
                             <svg
                               className="w-5 h-4"
                               width="21"
@@ -205,12 +183,33 @@ export default function Contact({ data,h_data ,f_data}) {
                               ></path>
                             </svg>
                           </span>
-                          <p className="  text-white">support@ktern.com</p>
+                          <pre className="  text-white">
+                            <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-sm text-justify leading-5",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                },
+                              }}
+                              className=""
+                            >
+                              {data.Emails}
+                            </Markdown>
+                          </pre>
                         </div>
                       </div>
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                      <div className="py-2 px-5 mb-4 background rounded-lg">
                         <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 bg-black rounded-lg">
+                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
                             <svg
                               className="w-5 h-5"
                               width="23"
@@ -229,29 +228,53 @@ export default function Contact({ data,h_data ,f_data}) {
                               ></path>
                             </svg>
                           </span>
-                          <p className=" subheading text-white">
-                            Texas, United States
-                          </p>
+                          <pre className=" subheading text-white">
+                            <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-sm text-justify leading-5 ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                  h3: {
+                                    props: {
+                                      className: "leading-8 ",
+                                    },
+                                  },
+                                },
+                              }}
+                              className=""
+                            >
+                              {data.Address}
+                            </Markdown>
+                          </pre>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
+              <div className="relative z-10 w-full  mt-20 lg:mt-0 lg:w-4/12">
                 <div
                   id="crmWebToEntityForm"
                   className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-4 md:p-10 bg-white md:shadow-2xl rounded-xl"
                 >
-                  <h4 className="w-full card-heading  text-4xl text-center leading-snug">
-                    Contact us
+                  <h4 className="w-full card-heading   text-center ">
+                    {data.ContactFormFields.FormTitle}
                   </h4>
                   <form
                     action="https://crm.zoho.in/crm/WebToContactForm"
                     name="WebToContacts240235000000441179"
                     method="POST"
                     acceptCharset="UTF-8"
-                     className="relative w-full mt-6 space-y-8"
+                    className="relative w-full mt-6 space-y-8"
                   >
                     <input
                       type="text"
@@ -291,22 +314,53 @@ export default function Contact({ data,h_data ,f_data}) {
                       id="LDTuvid"
                       name="LDTuvid"
                     />
+
                     {/* <!-- Do not remove this code. --> */}
+             
                     <div className="zcwf_row">
                       <div
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Last_Name">Last Name</label>
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="First_Name"
+                        >
+                          {data.ContactFormFields.FirstName}
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                        required
+                          type="text"
+                          id="First_Name"
+                          name="First Name"
+                          maxLength="40"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
+                        />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                      >
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Last_Name"
+                        >
+                         {data.ContactFormFields.LastName}
+                        </label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
                           type="text"
                           id="Last_Name"
                           name="Last Name"
                           maxLength="80"
                           className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -316,36 +370,22 @@ export default function Contact({ data,h_data ,f_data}) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Account_Name">Account Name</label>
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Email"
+                        >
+                         {data.ContactFormFields.Email}
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                        required
                           type="text"
-                          id="Account_Name"
-                          name="Account Name"
-                          maxLength="100"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                        />
-                        <div className="zcwf_col_help"></div>
-                      </div>
-                    </div>
-                    <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
-                      >
-                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Email">Email</label>
-                      </div>
-                      <div className="zcwf_col_fld">
-                        <input
-                        required
-                          type="email"
                           ftype="email"
                           id="Email"
                           name="Email"
                           maxLength="100"
                           className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
@@ -355,36 +395,20 @@ export default function Contact({ data,h_data ,f_data}) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Phone">Phone</label>
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Description"
+                        >
+                         {data.ContactFormFields.Message}
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <input
-                        required
-                          type="text"
-                          id="Phone"
-                          name="Phone"
-                          maxLength="50"
+                        <textarea
+                          id="Description"
+                          name="Description"
                           className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                        />
-                        <div className="zcwf_col_help"></div>
-                      </div>
-                    </div>
-                    <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
-                      >
-                        <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Mailing_Country">Mailing Country</label>
-                      </div>
-                      <div className="zcwf_col_fld">
-                        <input
-                        required
-                          type="text"
-                          id="Mailing_Country"
-                          name="Mailing Country"
-                          maxLength="100"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                        />
+                          required
+                        ></textarea>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
@@ -393,7 +417,12 @@ export default function Contact({ data,h_data ,f_data}) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="Lead_Source">Lead Source</label>
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Lead_Source"
+                        >
+                          Lead Source
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <select
@@ -456,7 +485,12 @@ export default function Contact({ data,h_data ,f_data}) {
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label htmlFor="CONTACTCF6">Lead Source Form</label>
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="CONTACTCF6"
+                        >
+                          Lead Source Form
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
@@ -465,25 +499,46 @@ export default function Contact({ data,h_data ,f_data}) {
                           name="CONTACTCF6"
                           maxLength="255"
                           value="contact-form"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
+                   <div className="zcwf_row">
+                      <div className="zcwf_col_lab"></div>
+                      <div className="zcwf_col_fld">
+                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
+                    options={{
+                      overrides: {
+                        p:{
+                          props:{
+                            className:"text-sm text-justify leading-5"
+                          }
+                        },
+                        strong:{
+                          props:{
+                            className:"leading-8"
+                          }
+                        }
+                      }}}
+                    className=""
+                  >{data.ContactFormFields.PrivacyStatement}</Markdown></label>
+                        </div> 
+                        </div>                   
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">
                         <input
                           type="submit"
                           id="formsubmit"
-                           className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                                           className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                           value="Submit"
                           title="Submit"
                         />
                       </div>
                     </div>
-
-                    {/* <!-- Do not remove this --- Analytics Tracking code ends. --> */}
                   </form>
                 </div>
               </div>
@@ -496,20 +551,25 @@ export default function Contact({ data,h_data ,f_data}) {
 }
 export const getServerSideProps = async () => {
   // data url from strapi
-  let data = { a: "ab" };
-	const res1 = await fetch('https://api.ktern.com/navbar', {
-		method: 'get',
-	});
+
+  const res = await fetch("https://api.ktern.com/contact", {
+    method: "get",
+  });
+  const data = await res.json();
+  // console.log(data)
+  const res1 = await fetch("https://api.ktern.com/navbar", {
+    method: "get",
+  });
   const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
-		method: 'get',
-	});
-	const f_data = await res2.json();
+  const res2 = await fetch("https://api.ktern.com/footer", {
+    method: "get",
+  });
+  const f_data = await res2.json();
   return {
     props: {
       data: data,
       h_data: h_data,
-      f_data:f_data
+      f_data: f_data,
     },
   };
 };

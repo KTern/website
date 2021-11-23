@@ -49,11 +49,11 @@ export default function PartnerContact({ data,h_data,f_data }) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -64,11 +64,11 @@ export default function PartnerContact({ data,h_data,f_data }) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -115,27 +115,14 @@ export default function PartnerContact({ data,h_data,f_data }) {
           },
         ]}
       />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+    
+      
       <Layout h_data={h_data} f_data={f_data}>
         <div className="py-20 w-full min-h-screen bg-white flex justify-center ">
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-1/3 py-12 md:px-12 bg-white rounded-2xl md:shadow-xl z-20">
             <div>
               <h1 className="  text-center mb-4 cursor-pointer section-heading">
-                Become a Partner
+                {data.PartnerRegistrationForm.FormTitle}
               </h1>
               <p className=" text-center  mb-8  section-subheading text-gray-700 cursor-pointer">
                 For General queries{" "}
@@ -264,153 +251,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
-              <div className="zcwf_row">
-                <div
-                  className="zcwf_col_lab"
-                  style={{ fontSize: "12px", fontFamily: "Arial" }}
-                >
-                  <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                    htmlFor="Account_Name"
-                  >
-                    Account Name
-                  </label>
-                </div>
-                <div className="zcwf_col_fld">
-                  <input
-                  required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                    type="text"
-                    id="Account_Name"
-                    name="Account Name"
-                    maxLength="100"
-                  />
-                  <div className="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div className="zcwf_row">
-                <div
-                  className="zcwf_col_lab"
-                  style={{ fontSize: "12px", fontFamily: "Arial" }}
-                >
-                  <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                    htmlFor="Phone"
-                  >
-                    Phone
-                  </label>
-                </div>
-                <div className="zcwf_col_fld">
-                  <input
-                  required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                    type="text"
-                    id="Phone"
-                    name="Phone"
-                    maxLength="50"
-                  />
-                  <div className="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div className="zcwf_row">
-                <div
-                  className="zcwf_col_lab"
-                  style={{ fontSize: "12px", fontFamily: "Arial" }}
-                >
-                  <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                    htmlFor="Mailing_Country"
-                  >
-                    Mailing Country
-                  </label>
-                </div>
-                <div className="zcwf_col_fld">
-                  <input
-                  required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                    type="text"
-                    id="Mailing_Country"
-                    name="Mailing Country"
-                    maxLength="100"
-                  />
-                  <div className="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div className="zcwf_row wfrm_fld_dpNn">
-                <div
-                  className="zcwf_col_lab"
-                  style={{ fontSize: "12px", fontFamily: "Arial" }}
-                >
-                  <label htmlFor="Lead_Source">Lead Source</label>
-                </div>
-                <div className="zcwf_col_fld">
-                  <select
-                    className="zcwf_col_fld_slt"
-                    id="Lead_Source"
-                    name="Lead Source"
-                  >
-                    <option value="-None-">-None-</option>
-                    <option value="Advertisement">Advertisement</option>
-                    <option selected value="Partner&#x20;Registration">
-                      Partner Registration
-                    </option>
-                    <option value="Webinars">Webinars</option>
-                    <option value="Website&#x20;Contact">
-                      Website Contact
-                    </option>
-                    <option value="Website&#x20;Resources&#x20;Download">
-                      Website Resources Download
-                    </option>
-                    <option value="Cold&#x20;Call">Cold Call</option>
-                    <option value="Employee&#x20;Referral">
-                      Employee Referral
-                    </option>
-                    <option value="External&#x20;Referral">
-                      External Referral
-                    </option>
-                    <option value="OnlineStore">OnlineStore</option>
-                    <option value="Partner">Partner</option>
-                    <option value="Public&#x20;Relations">
-                      Public Relations
-                    </option>
-                    <option value="Sales&#x20;Mail&#x20;Alias">
-                      Sales Mail Alias
-                    </option>
-                    <option value="Seminar&#x20;Partner">
-                      Seminar Partner
-                    </option>
-                    <option value="Seminar-Internal">Seminar-Internal</option>
-                    <option value="Trade&#x20;Show">Trade Show</option>
-                    <option value="Web&#x20;Download">Web Download</option>
-                    <option value="Web&#x20;Research">Web Research</option>
-                    <option value="Web&#x20;Cases">Web Cases</option>
-                    <option value="Web&#x20;Mail">Web Mail</option>
-                    <option value="Chat">Chat</option>
-                    <option value="Twitter">Twitter</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Google&#x2b;">Google&#x2b;</option>
-                  </select>
-                  <div className="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div className="zcwf_row wfrm_fld_dpNn">
-                <div
-                  className="zcwf_col_lab"
-                  style={{ fontSize: "12px", fontFamily: "Arial" }}
-                >
-                  <label htmlFor="CONTACTCF6">Lead Source Form</label>
-                </div>
-                <div className="zcwf_col_fld">
-                  <input
-                    type="text"
-                    id="CONTACTCF6"
-                    name="CONTACTCF6"
-                    maxLength="255"
-                    value="partner-registration-form"
-                  />
-                  <div className="zcwf_col_help"></div>
-                </div>
-              </div>
+             
               <div className="zcwf_row">
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
@@ -433,7 +274,10 @@ export default function PartnerContact({ data,h_data,f_data }) {
 }
 export const getServerSideProps = async () => {
   // data url from strapi
-  let data = { a: "ab" };
+  const res = await fetch('https://api.ktern.com/navbar', {
+		method: 'get',
+	});
+  const data = await res.json();
 	const res1 = await fetch('https://api.ktern.com/navbar', {
 		method: 'get',
 	});

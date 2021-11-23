@@ -65,11 +65,11 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -80,11 +80,11 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -131,21 +131,8 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
           },
         ]}
       />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+    
+      
       <EventJsonLd
         name="My Event"
         startDate="2020-01-23T00:00:00.000Z"
@@ -266,7 +253,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
                                                 <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
                                             </div> */}
                         <span className="ml-2 card-subheading" title="Point 1">
-                          {" "}
+                          
                           <span className="bg-secondary rounded-full px-2 py-1 mr-3">
                             <b>{index + 1}</b>
                           </span>

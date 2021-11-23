@@ -6,15 +6,69 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { useState } from "react";
+import Dropdown from 'react-dropdown';
+import _ from 'lodash';
 export default function Resources({ data,h_data,f_data }) {
-  const [ isFilters, setFilters ] = useState("");
-  
+  function colorChange () {
+    if (typeof process.browser)
+      document.getElementById('option').style.backgroundColor="#00000"
+}
+  const [ isFilters, setFilters ] = useState([]);
+
+  // Drop Down
+  // console.log(data.StreamsFilter)
+
+  let streamOptions = [];
+  let topicOptions = [];
+  let resourceTypeOptions = [];
+  let roleOptions = [];
+  function filterData (data) {
+    let filter = []
+     let val = {}
+    filter.push({'label':'None','Value':'none'})
+    
+    data.map(item => {
+      val = {}
+      val[ 'label' ] = item.Label;
+      val[ 'value' ] = item.Value;
+      filter.push(val) 
+    })
+    
+    // console.log(filter,data)
+    return filter
+  }
+  streamOptions = filterData(data.StreamsFilter);
+  topicOptions = filterData(data.TopicsFilter);
+  resourceTypeOptions = filterData(data.ResourceTypeFilters);
+  roleOptions = filterData(data.RolesFilter);
   const [ResourceList,setResourceList]=useState(data.ResourcesList)
-  let filter=[]
+  let filter = []
+  
+  
+    let Labels=['type','stream','topic','role']
+  function handleChange (event) {
+    let filterArray = {}
+    if (document.getElementById('stream').value!= 'None')
+      filterArray.DigitalStream = document.getElementById('stream').value
+    if (document.getElementById('type').value!= 'None')
+      filterArray.ResourceType = document.getElementById('type').value
+    if (document.getElementById('topic').value!= 'None')
+      filterArray.RelatedTopic = document.getElementById('topic').value
+    if (document.getElementById('role').value!= 'None')
+        filterArray.RelatedRole=document.getElementById('role').value
+   
+console.log(filterArray)
+   
+      filter=_.filter(data.ResourcesList,filterArray)
+  
+       setResourceList(filter);
+   
+  }
+
   function handleFilter (element) {
     filter=[]
     data.ResourcesList.map(item => {
-      if (item.ResourceType == element)
+      if (filterArray.includes(item.ResourceType))
         filter.push(item)
     }
     )
@@ -56,11 +110,11 @@ export default function Resources({ data,h_data,f_data }) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -71,11 +125,11 @@ export default function Resources({ data,h_data,f_data }) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -122,21 +176,8 @@ export default function Resources({ data,h_data,f_data }) {
           },
         ]}
       />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+    
+      
       <Layout h_data={h_data} f_data={f_data}>
         <section className="w-full py-32 background">
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
@@ -181,17 +222,54 @@ export default function Resources({ data,h_data,f_data }) {
               {/* <section className=' flex sm:pt-5  pb-10 items-center justify-end'>
                 <input id='demo-2' style={{ width: "35%" }} type='search' placeholder='Search' />
               </section> */}
-              <section className="pb-10 ">
+              <section className="pb-10 background p-5 sticky z-30 md:top-16 sm:top-10">
+                <h1 className="uppercase text-white navbar-h mb-6">Filter By:</h1>
+                <form onChange={handleChange} className="grid grid-cols-5 gap-6">
+                  <select name="stream" id="stream" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {streamOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                  </select>
+                  <select name="topic" id="topic" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {topicOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                  </select>
+                  <select name="role" id="role" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {roleOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                  </select>
+                  <select name="type" id="type" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {resourceTypeOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                 </select>
+</form>
+              </section>
+              {/* <section className="pb-10 ">
                 {data.ResourceTypeFilters.map((dt) => (
                   <button
                     key="dt"
                     className="hyperlink click-chip outline-green mr-3 focus:bg-gray-200"
-                    onClick={() => { setFilters(dt.FilterSlug);handleFilter(dt.FilterSlug)}}
+                    onClick={() => { handleFilter(dt.FilterSlug)}}
                   >
                     {dt.FilterName}
                   </button>
                 ))}
-              </section>
+              </section> */}
               <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
                 {ResourceList.map((dt) =>        (
                    <div

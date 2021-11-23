@@ -60,11 +60,11 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
           site: "@site",
           cardType: "summary_large_image",
         }}
-        facebook={{
+       facebook={{
           handle: "@handle",
           site: "@site",
           cardType: "summary_large_image",
-          appId: "1234567890",
+          appId: `${process.env.FB_APPID}`,
         }}
         languageAlternates={[
           {
@@ -75,11 +75,11 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Jane Doe",
+            content: "Nivedha",
           },
           {
             name: "application-name",
-            content: "NextSeo",
+            content: "KTern.AI",
           },
           {
             httpEquiv: "x-ua-compatible",
@@ -126,21 +126,8 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
           },
         ]}
       />
-      <LogoJsonLd
-        logo="http://www.your-site.com/images/logo.jpg"
-        url="http://www.your-site.com"
-      />
-      <SocialProfileJsonLd
-        type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+    
+      
       <Layout h_data={h_data} f_data={f_data}>
         {!webinar_data.IsOnDemandWebinar && (
           <section className="relative py-32   overflow-hidden flex  bg-herogradient justify-center ">

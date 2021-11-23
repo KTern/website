@@ -9,6 +9,7 @@ module.exports = {
   },
   images: {
     domains: [
+      "assets-global.website-files.com",
       "storage.googleapis.com",
       "logodix.com",
       "ktern.com",
@@ -27,6 +28,7 @@ module.exports = {
       "web.ktern.com",
       "w3.org",
       "www.w3.org",
+      "stackoverflow.com"
     ],
   },
 
