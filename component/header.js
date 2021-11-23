@@ -19,6 +19,15 @@ function closeNav () {
         document.getElementById("navbar-menu").style.display = 'none';
     }
 }
+ function handleClickOutside (event) {
+         
+             
+                document.getElementById('toggle-1').style.display = "none";
+                  document.getElementById('toggle-2').style.display = "none";
+                 document.getElementById('toggle-3').style.display = "none";
+           
+        
+}
 
 function useOutsideAlerter (ref) {
     
@@ -150,8 +159,10 @@ export default function Header ({h_data}) {
  
 // console.log("HEader",h_data)
     const router = useRouter();
-   
     const overall = useRef(null);
+  
+  
+  
     useOutsideAlerter(overall)
     const [ products,productReady] = useProducts();
     const [ resources, resourceReady ] = useResources();
@@ -196,9 +207,11 @@ export default function Header ({h_data}) {
   }  
 };
     useEffect(() => {   
-  window.addEventListener("scroll", listenToScroll);
-  return () => 
-     window.removeEventListener("scroll", listenToScroll); 
+        window.addEventListener("scroll", listenToScroll);
+        router.events.on('routeChangeComplete',  handleClickOutside)
+  return () => {
+            window.removeEventListener("scroll", listenToScroll);
+        router.events.on('routeChangeComplete',  handleClickOutside)}
     }, [])
     
     return (
