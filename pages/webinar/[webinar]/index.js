@@ -155,7 +155,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative sm:mb-20 ">
           <div
-            className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.CssStreamTag}-primary opacity-30`}
+            className={`absolute inset-0 bg-gradient-to-b bg-${webinar_Data.CssStreamTag}-400 opacity-30`}
           ></div>
 
           <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
@@ -227,7 +227,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
             <div className="flex flex-col items-start md:flex-row">
               <div className="w-full space-y-5 md:w-3/5 md:pr-16">
                 <p
-                  className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.CssStreamTag}-primary`}
+                  className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded bg-${webinar_Data.CssStreamTag}-400`}
                 >
                   <Link href="#_" rel="category">
                     <a className="text-white hyperlink uppercase">

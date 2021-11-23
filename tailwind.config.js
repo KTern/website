@@ -38,7 +38,7 @@ module.exports = {
 
           300: '#B6D1F9',
 
-          400: '#79ADF8',
+          400: '#2666BA',
 
         },
 
@@ -58,7 +58,7 @@ module.exports = {
 
           300: '#6758EE',
 
-          400: '#2011A7',
+          400: '#281C87',
 
         },
 
@@ -98,7 +98,7 @@ module.exports = {
 
           300: '#CD838C',
 
-          400: '#B93F4A',
+          400: '#BA2926',
 
         },
 
@@ -118,12 +118,13 @@ module.exports = {
 
           300: '#3CCD60',
 
-          400: '#2BA84A',
+          400: '#1C8720',
 
         },
         dxaas: {
            primary: '#0B1320',
-      secondary: '#EAEDF2',
+          secondary: '#EAEDF2',
+      400:'#0B1320'
         },
       gray: {
         50: '#E7EAEF',
