@@ -1,13 +1,5 @@
 module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/status',
-        destination: 'https://live.ktern.com',
-        permanent: true,
-      },
-    ]
-  },
+
   target: "serverless",
   reactStrictMode: true,
   throwIfNamespace: false,
