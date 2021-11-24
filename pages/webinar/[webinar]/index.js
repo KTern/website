@@ -155,7 +155,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative sm:mb-20 ">
           <div
-            className={`absolute inset-0 bg-gradient-to-b ${webinar_Data.CssStreamTag} opacity-30`}
+            className={`absolute inset-0 bg-gradient-to-b ${webinar_Data.CssStreamTag} opacity-50`}
           ></div>
 
           <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
