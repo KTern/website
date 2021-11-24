@@ -137,7 +137,7 @@ export default function Webinar ({data,h_data,f_data}) {
                                     <Link href={data.FeaturedWebinar.WebinarURL}>
                                         <a className="md:flex md:flex-col md:flex-shrink-0 w-full overflow-hidden  shadow-lg">
                                     <div className="flex-shrink-0">
-                                         <div className={`mt-4 mx-4 z-20 ${data.FeaturedWebinar.tagClass} text-black  uppercase hyperlink absolute top:0   flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block`}>
+                                        <div className={`mt-4 mx-4 z-20 ${data.FeaturedWebinar.tagClass}  uppercase hyperlink absolute top:0   flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md   uppercase text-black inline-block opactiy-60`}>
                                         <span className="text-white">Digital {data.FeaturedWebinar.tag}</span>
                                     </div>
                             <div className="block  w-full w-80 h-60 relative transition duration-200 ease-out transform hover:scale-110">
@@ -211,7 +211,7 @@ export default function Webinar ({data,h_data,f_data}) {
                                     <div className="">
                                     <Link href={data.PageURL} passHref>
                                             <a className="relative block w-full h-44 overflow-hidden rounded">
-                                                 <div className={`z-20  ${data.RelatedStream} opacity-50  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-white inline-block`}>
+                                                 <div className={`z-20  ${data.RelatedStream} opacity-60  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-white inline-block`}>
                                         <span className="text-white">Digital {data.RelatedStream}</span>
                                     </div>
                                     <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.ImageURL} alt="resource" width="550" height="300"/>
