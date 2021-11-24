@@ -343,7 +343,7 @@ className="navbar-s block p-2 hover:bg-gray-50 text-black ">Digital Labs</a></Li
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[1].Title}</a></Link>
                                         </li>
                                         <li>
-                                                    <Link href={h_data.Resource[2].PageUrl.linkURL}   ><a target="_blank"  onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
+                                                    <Link href={h_data.Resource[2].PageUrl.linkURL}  ><a   onMouseEnter={()=>{setIsProductTourShown(false),setIsDocumentationShown(false);setIsPricingShown(false);setIsCloudLiveShown(false);setIsResourceLibraryShown(false);setIsArticlesShown(true);setIsTrustShown(false);setIsEbooksShown(false);setIsCaseShown(false);setIsWebinarsShown(false)}}
                                          className="navbar-s block p-2 hover:bg-gray-50 text-black ">{h_data.Resource[2].Title}</a></Link>
                                         </li>
                                         <li>

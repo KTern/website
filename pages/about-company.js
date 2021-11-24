@@ -208,10 +208,8 @@ export default function About({ data,h_data,f_data }) {
         {/* <!--Our Values--> */}
         {/* About Company */}
         <section className='w-full md:mx-auto md:px-8 md:py-20 px-4 bg-white flex flex-col md:flex-row'>
-           <div className="md:w-1/2 w-full hidden md:block ">
-                <Image src={data.AboutKTern.Image.imageURL} alt={data.AboutKTern.Image.imageDesscription} height={data.AboutKTern.Image.height} width={data.AboutKTern.Image.width}/>
-              </div>
-          <div className='md:w-1/2 w-full mx-auto'>
+          
+          <div className=' w-full mx-auto'>
             <p className='mb-5 section-heading text-black '>{data.AboutKTern.Title}</p>
             <div className='flex flex-col md:flex-row'>
               <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
@@ -219,7 +217,9 @@ export default function About({ data,h_data,f_data }) {
               </div>
             </div>
           </div>
-          
+           <div className=" w-full hidden md:block ">
+                <Image src={data.AboutKTern.Image.imageURL} alt={data.AboutKTern.Image.imageDesscription} height={data.AboutKTern.Image.height} width={data.AboutKTern.Image.width}/>
+              </div>
         </section>
         {/* /About Company */}
         {/* Values */}
