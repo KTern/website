@@ -147,7 +147,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
                     </div> */}
-              <p className={`max-w-max px-2 py-1 mb-5 bg-${feature_data.cssStreamTag}-400  hyperlink text-gray-900 uppercase bg-white rounded-full `}>
+              <p className={`max-w-max px-4 py-1 mb-5 text-white ${feature_data.cssStreamTag}  hyperlink uppercase  rounded-full `}>
                 {feature_data.PageHeader.Tag}
               </p>
               <h1 className='heading'>{feature_data.PageHeader.header}</h1>
@@ -179,18 +179,18 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
           </div>
         </section>
         {/* <!-- Why Ktern --> */}
-        <section className='md:px-20'>
-          <h2 className='section-heading text-center mt-10 mb-3'>{feature_data.WhySectionTitle}</h2>
-          <p className='section-subheading text-center'>{feature_data.WhySectionDescription}</p>
+        <section className={`md:px-20 ${feature_data.cssStreamTag} text-white py-5 rounded-tr-large rounded-b-large mx-10`}>
+          <h2 className='section-heading text-center text-white mt-10 mb-3'>{feature_data.WhySectionTitle}</h2>
+          <p className='section-subheading text-center text-white'>{feature_data.WhySectionDescription}</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
             <div className='flex flex-wrap justify-center items-center'>
               {feature_data.WhyFeaturePoints.map((dt) => (
                 <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
-                  <span className='flex items-center justify-center w-14 h-14 mb-8  rounded-full'>
-                    <Image src={dt.Icon.imageURL} alt='' width={150} height={150} />
-                  </span>
-                  <h3 className='mb-4  card-heading'>{dt.CardTitle}</h3>
-                  <p className='card-subheading text-gray-500'>{dt.CardDescription}</p>
+                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
+                    <Image src={dt.Icon.imageURL} alt='' width={180} height={180} className=" rounded-full " />
+                  </div>
+                  <h3 className='mb-4 text-white card-heading'>{dt.CardTitle}</h3>
+                  <p className='card-subheading text-gray-200'>{dt.CardDescription}</p>
                 </div>
               ))}
             </div>
@@ -205,7 +205,6 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               {feature_data.FeatureDefinition}
             </p>
           </div>
-
           <div className='flex flex-col md:p-20  md:mx-auto md:space-y-12  '>
             {feature_data.SubFeatures.map((dt, index) => {
               return index % 2 == 0 ? (
@@ -502,7 +501,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               </Link>
             </div>
           </div>
-        </section>{" "}
+        </section>
         {/* / Resources Setion */}
         {/* <!-- Footer CTA Features Page --> */}
         <section className='bg-white'>
@@ -518,7 +517,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={feature_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a className='  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
+                  <a className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>

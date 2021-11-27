@@ -44,21 +44,21 @@ module.exports = {
 
         process: {
 
-          primary: '#281C87',
+          primary: '#4D335C',
 
-          secondary: '#E5E2F3',
+          secondary: '#C7B0D4',
 
 
 
-          50: '#EEEDF8',
+          50: '#B496C5',
 
-          100: '#DDDBF1',
+          100: '#A17BB7',
 
-          200: '#BAB6E3',
+          200: '#8E61A8',
 
-          300: '#6758EE',
+          300: '#795091',
 
-          400: '#281C87',
+          400: '#634176',
 
         },
 
@@ -139,7 +139,18 @@ module.exports = {
       }
     }
     },
-   
+    borderRadius: {
+       none: '0',
+       sm: '0.125rem',
+       DEFAULT: '0.25rem',
+       DEFAULT: '4px',
+       md: '0.375rem',
+       lg: '0.5rem',
+       full: '9999px',
+      large: '200px',
+      xl: '14px',
+      
+    }
   },
   variants: {
     extend: {},

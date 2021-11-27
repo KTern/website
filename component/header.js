@@ -20,7 +20,7 @@ function closeNav () {
     }
 }
  function handleClickOutside (event) {
-         
+         console.log(event)
              
                 document.getElementById('toggle-1').style.display = "none";
                   document.getElementById('toggle-2').style.display = "none";
@@ -36,6 +36,7 @@ function useOutsideAlerter (ref) {
          * Alert if clicked on outside of element
          */
         function handleClickOutside (event) {
+            console.log("outsider",event)
             if (ref.current && !ref.current.contains(event.target)) {
              
                 document.getElementById('toggle-1').style.display = "none";
@@ -98,7 +99,8 @@ function useResources () {
      const ref = useRef();
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    function handleClickOutside (event) {
+      function handleClickOutside (event) {
+        console.log("Resources",event)
             if (ref.current.contains(event.target) && event.target.tagName.toLowerCase() != 'a') {
                
                

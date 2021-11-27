@@ -52,17 +52,15 @@ export default function Card ({data }) {
       
 <span className="my-auto navbar-h text-black text-bold mb-2 uppercase">{data.title}</span></div>
         {isFeature1Shown && (
-          <FeatureCard  data={{title:data.feature1,description:data.feature1_desc,url:data.url1,image:data.feature1_image }}/>
-          )}
+          <FeatureCard  data={{title:data.feature1,description:data.feature1_desc,url:data.url1,image:data.feature1_image }}/>)}
         {isFeature2Shown && (
           <FeatureCard  data={{title:data.feature2,description:data.feature2_desc,url:data.url2,image:data.feature2_image }}/>)}
-         {isFeature3Shown && (
+        {isFeature3Shown && (
           <FeatureCard  data={{title:data.feature3,description:data.feature3_desc,url:data.url3,image:data.feature3_image }}/>)}
-         {isFeature4Shown && (
+        {isFeature4Shown && (
           <FeatureCard  data={{title:data.feature4,description:data.feature4_desc,url:data.url4,image:data.feature4_image }}/>)}
-         {isFeature5Shown && (
-          <FeatureCard  data={{title:data.feature5,description:data.feature5_desc,url:data.url5,image:data.feature5_image }}/>)}
-                
+        {isFeature5Shown && (
+          <FeatureCard  data={{title:data.feature5,description:data.feature5_desc,url:data.url5,image:data.feature5_image }}/>)}      
 </ul>
  </>
     )

@@ -35,18 +35,13 @@ function MyApp ({ Component, pageProps }) {
             __html:`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "f440e91b3668705fa583df5dbc6e74336a479d5c9175a86e330df6b09d955c51c217306de45b754907f8ee064f96a38d", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}}/>
  <SocialProfileJsonLd
         type="Person"
-        name={"your name"}
-        url={`${process.env.url}`}
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
+        name={`${process.env.NAME}`}
+        url={`${process.env.URL}`}
+        sameAs={`${process.env.SOCIALPROFILEJSON}`}
         />
           <LogoJsonLd
-        logo={`${process.env.logo}`}
-        url={`${process.env.url}`}
+        logo={`${process.env.LOGO}`}
+        url={`${process.env.URL}`}
       />
       </Head>
       <Component {...pageProps} />

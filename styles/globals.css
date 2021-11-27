@@ -3,9 +3,9 @@
 	@tailwind utilities;
 	@import 'react-multi-carousel/lib/styles.css';
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 	@import 'react-tabs/style/react-tabs.css';
 	@import 'react-dropdown/style.css';
+	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;900&display=swap');
 	img,
 	svg,
 	video,
@@ -667,52 +667,45 @@
 	} */
 	
 	.background {
-	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #1B465F 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #1B465F 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #1B465F 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.maps {
-	    background: -webkit-linear-gradient(.7turn, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.7turn, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, #F28900 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #F28900 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #F28900 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #F28900 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.process {
-	    background: -webkit-linear-gradient(.7turn, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.7turn, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, #281C87 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #4D335C 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #4D335C 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #4D335C 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.projects {
-	    background: -webkit-linear-gradient(.7turn, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.7turn, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, #2666BA 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #2666BA 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #2666BA 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #2666BA 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.mines {
-	    background: -webkit-linear-gradient(.7turn, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.7turn, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, #BA2926 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #BA2926 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #BA2926 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #BA2926 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.labs {
-	    background: -webkit-linear-gradient(.7turn, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.7turn, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, #1C8720 2.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
+	    background: -webkit-linear-gradient(.97turn, #1C8720 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #1C8720 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #1C8720 3.26%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.dxaas {
 	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
 	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
 	    background: linear-gradient(50.8deg, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    color: var(--white);
 	}
 	
 	.react-tabs__tab--selected {
@@ -724,5 +717,4 @@
 	    background: -webkit-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
 	    background: -moz-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
 	    background: linear-gradient(50.8deg, rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
-	    color: var(--white);
 	}
