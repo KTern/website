@@ -7,7 +7,18 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
+import { useRouter } from 'next/router';
 export default function PartnerContact({ data,h_data,f_data }) {
+  const router=useRouter();
+  console.log(router.query.message);
+  if(router.query.message=="thanks"){
+    if(process.browser)
+    document.getElementById('thanks_container').style.display="block"
+  }
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
       <Head>
@@ -18,11 +29,11 @@ export default function PartnerContact({ data,h_data,f_data }) {
         ></script>
       </Head>
       <NextSeo
-        title="Simple Usage Example"
-        description="A short description goes here."
-        canonical="https://www.canonical.ie/"
+        title={`${data.PageSEO.PageTitle}`}
+        description={`${data.PageSEO.PageDescription}`}
+        canonical={`${data.PageSEO.CanonicalTag}`}
         openGraph={{
-          url: "https://www.url.ie/a",
+          url:`${data.PageSEO.ThumbnailImageURL}`,
           title: "Open Graph Title",
           description: "Open Graph Description",
           images: [
@@ -45,17 +56,17 @@ export default function PartnerContact({ data,h_data,f_data }) {
           ],
           site_name: "SiteName",
         }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-       facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
+      twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
         languageAlternates={[
           {
             hrefLang: "de",
@@ -93,38 +104,19 @@ export default function PartnerContact({ data,h_data,f_data }) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
     
       
       <Layout h_data={h_data} f_data={f_data}>
         <div className="py-20 w-full min-h-screen bg-white flex justify-center ">
+      
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-1/3 py-12 md:px-12 bg-white rounded-2xl md:shadow-xl z-20">
             <div>
               <h1 className="  text-center mb-4 cursor-pointer section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
+              <div id="thanks_container" className="hidden container mx-auto bg-success card-subheading  p-3 mb-2 border-2 border-black  " style={{color:"#333"}}>{data.PartnerRegistrationForm.ThanksMsg}</div>
               <p className=" text-center  mb-8  section-subheading text-gray-700 cursor-pointer">
                {data.PartnerRegistrationForm.FormSubTitle}
               
@@ -160,7 +152,7 @@ export default function PartnerContact({ data,h_data,f_data }) {
                 type="text"
                 style={{ display: "none" }}
                 name="returnURL"
-                value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;partner-register&#x2f;resources"
+                value={data.PartnerRegistrationForm.redirectURL}
               />
               {/* <!-- Do not remove this code. --> */}
               <input

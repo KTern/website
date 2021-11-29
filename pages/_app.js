@@ -7,9 +7,13 @@ import Link from "next/link"
 
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
+let socialProfileList="";
+if(process.env.SOCIALPROFILEJSON){
+socialProfileList=process.env.SOCIALPROFILEJSON.split(',');}
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
+console.log(socialProfileList)
   useEffect(() => {
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
@@ -37,7 +41,7 @@ function MyApp ({ Component, pageProps }) {
         type="Person"
         name={`${process.env.NAME}`}
         url={`${process.env.URL}`}
-        sameAs={`${process.env.SOCIALPROFILEJSON}`}
+        sameAs={socialProfileList}
         />
           <LogoJsonLd
         logo={`${process.env.LOGO}`}

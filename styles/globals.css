@@ -24,9 +24,7 @@
 	    color: red;
 	}
 	
-	.option_0: hover {
-	    background: red;
-	}
+	
 	
 	.anchor {
 	    scroll-margin-top: 80px;
@@ -703,9 +701,9 @@
 	}
 	
 	.dxaas {
-	    background: -webkit-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: -moz-linear-gradient(.97turn, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
-	    background: linear-gradient(50.8deg, rgba(34, 100, 214, .35) 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -webkit-linear-gradient(.97turn, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}
 	
 	.react-tabs__tab--selected {
@@ -714,7 +712,7 @@
 	}
 	
 	.common-background {
-	    background: -webkit-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
-	    background: -moz-linear-gradient(.97turn rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
-	    background: linear-gradient(50.8deg, rgba(0, 0, 0, .35) 50.64%, #FFFFFF 1.86%), #000;
+	    background: -webkit-linear-gradient(.97turn, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: -moz-linear-gradient(.97turn, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
+	    background: linear-gradient(50.8deg, #1B465F 30.86%, rgba(0, 0, 0, .35) 38.64%), #000;
 	}

@@ -7,14 +7,18 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 export default function About({ data,h_data,f_data }) {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
       <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}
-        canonical='https://www.canonical.ie/'
+        canonical={data.PageSEO.CanonicalTag}
         openGraph={{
-          url: "https://www.url.ie/a",
+          url:`${data.PageSEO.ThumbnailImageURL}`,
           title: "Open Graph Title",
           description: "Open Graph Description",
           images: [
@@ -37,17 +41,17 @@ export default function About({ data,h_data,f_data }) {
           ],
           site_name: "SiteName",
         }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-       facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
+      twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
         languageAlternates={[
           {
             hrefLang: "de",
@@ -85,44 +89,13 @@ export default function About({ data,h_data,f_data }) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
-      <LogoJsonLd logo='http://www.your-site.com/images/logo.jpg' url='http://www.your-site.com' />
-      <SocialProfileJsonLd
-        type='Person'
-        name='your name'
-        url='http://www.your-site.com'
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+     
+      
       <Layout h_data={h_data} f_data={f_data}>
-        <section className='relative flex flex-col items-center justify-center w-full px-6 py-20 bg-secondary bg-cover  min-w-screen'>
-          <div className='flex flex-col items-center justify-center md:mx-auto  xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0'>
+        <section className='  relative  flex flex-col items-center justify-center w-full   py-20 bg-secondary bg-cover  min-w-screen'>
+          <div className='flex flex-col items-center justify-center md:mx-auto  xl:p-8 lg:flex-row lg:max-w-7xl lg:p-0'>
             <div className='container space-y-5 relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0'>
               <h1 className='relative z-20   leading-none text-black heading  sm:text-center lg:text-left'>
                 {data.PageHeader.header}
@@ -169,51 +142,77 @@ export default function About({ data,h_data,f_data }) {
           </div>
         </section>
         {/* <!-- Our Vision--> */}
-        <section className='md:max-w-7xl md:mx-auto md:px-8 py-10 px-4  bg-white flex flex-col md:flex-row'>
-          <div className='max-w-6xl mx-auto'>
+        <section className=' lg:max-w-7xl text-justify px-12 relative w-full md:mx-auto  md:py-5 px-4 bg-white flex flex-col md:flex-row'>
+          
+          <div className=' w-full mx-auto'>
             <p className='mb-5 section-heading text-black '>{data.vision.title}</p>
             <div className='flex flex-col md:flex-row'>
-              
-
               <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
-                <h3 className='mb-5 -mt-1 section-subheading  '>{data.vision.statement2}</h3>
-                <Link href={data.vision.ctaurl} passHref>
-                  <a className='inline-flex items-center pb-1  text-black hover:border-blue-500 group '>
-                    <span className='hyperlink group-hover:text-gray-400'>{data.vision.ctatext}</span>
-                    <svg
-                      className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M17 8l4 4m0 0l-4 4m4-4H3'
-                      ></path>
-                    </svg>
-                  </a>
-                </Link>
-                
+                <h3 className='mb-5 -mt-1 section-subheading  '>  <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >
+                             {data.vision.Statement}
+                            </Markdown></h3>   
               </div>
-             
             </div>
           </div>
-           <div className="hidden md:block">
-                <Image src={data.vision.Image.imageURL} alt={data.vision.Image.imageDescription} height={data.vision.Image.height} width={data.vision.Image.width}/>
+           <div className=" w-full hidden md:block ">
+                <Image src={data.vision.Image.imageURL} alt={data.vision.Image.imageDesscription} height={data.vision.Image.height} width={data.vision.Image.width}/>
               </div>
         </section>
-        {/* <!--Our Values--> */}
+        {/* <!--Our Vision--> */}
         {/* About Company */}
-        <section className='w-full md:mx-auto md:px-8 md:py-20 px-4 bg-white flex flex-col md:flex-row'>
+        <section className=' lg:max-w-7xl text-justify px-12 relative w-full md:mx-auto  md:py-5 px-4 bg-white flex flex-col md:flex-row'>
           
           <div className=' w-full mx-auto'>
             <p className='mb-5 section-heading text-black '>{data.AboutKTern.Title}</p>
             <div className='flex flex-col md:flex-row'>
               <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
-                <h3 className='mb-5 -mt-1 section-subheading  '>{data.AboutKTern.Description}</h3>   
+                <h3 className='mb-5 -mt-1 section-subheading  '>  <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >
+                             {data.AboutKTern.Description}
+                            </Markdown></h3>   
               </div>
             </div>
           </div>
@@ -223,7 +222,7 @@ export default function About({ data,h_data,f_data }) {
         </section>
         {/* /About Company */}
         {/* Values */}
-        <div className="flex flex-wrap mx-auto bg-black text-white md:p-20  md:px-44 ">
+        <div className="flex flex-wrap mx-auto bg-black text-white md:p-20  md:px-24 ">
           <div className="w-full md:w-1/3  ">
                         <div className="flex sm:space-x-2 sm:px-20 px-0 md:space-x-10 py-10  sm:py-5 text-center   sticky z-10 md:top-16 sm:top-10 section-heading">
                          {data.Values.Title}
@@ -243,70 +242,86 @@ export default function About({ data,h_data,f_data }) {
         </div>
         {/* /Values */}
         {/* DX Innovation Hub */}
-        <section className='md:max-w-7xl mx-auto px-8 py-20  bg-white flex flex-col md:flex-row'>
+        <section className=' lg:max-w-7xl text-justify px-12 relative  mx-auto px-8 py-5  bg-white flex flex-col md:flex-row'>
           <div className='max-w-6xl mx-auto'>
             <p className='mb-5 section-heading text-black sm:text-center '>{data.AcademicAlliance.Title}</p>
             <div className='flex flex-col md:flex-row'>
               <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
-                <h3 className='mb-5 -mt-1 section-subheading  '>{data.AcademicAlliance.Description}</h3>   
+                <h3 className='mb-5 -mt-1 section-subheading  '> <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >
+                             {data.AcademicAlliance.Description}
+                            </Markdown></h3>   
               </div>
             </div>
           </div>
            <div className="hidden md:block">
-                <Image src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={1400} width={1900 }/>
+                <Image src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={data.AcademicAlliance.Images.height} width={data.AcademicAlliance.Images.width}/>
               </div>
         </section>
         {/* /DX Innovation Hub */}
         {/* Digital Dhaanam */}
-         <section className='w-full mx-auto md:px-8 md:py-20 px-4  bg-white flex flex-col md:flex-row'>
-           <div className="md:w-1/2 w-full hidden md:block">
-                <Image src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDesscription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
-              </div>
-          <div className='md:w-1/2 w-full mx-auto'>
-            <p className='mb-5 section-heading text-black '>{data.DigitalDhaanam.Title}</p>
+          <section className=' lg:max-w-7xl text-justify px-12 relative  mx-auto px-8 py-5  bg-white flex flex-col md:flex-row'>
+          <div className='max-w-6xl mx-auto'>
+            <p className='mb-5 section-heading text-black sm:text-center '>{data.DigitalDhaanam.Title}</p>
             <div className='flex flex-col md:flex-row'>
               <div className='w-full mt-5 md:mt-0 md:w-8/12 '>
                 <h3 className='mb-5 -mt-1 section-subheading  '> <Markdown
-                    options={{
-                      overrides: {
-                        h3: {
-                          props: {
-                            className: "text-2xl mb-4 text-justify",
-                          },
-                        },
-                         h1: {
-                          props: {
-                            className: "text-2xl mb-4 text-justify",
-                          },
-                        },
-                        li: {
-                          props: {
-                            className: "text-justify list-decimal ml-3 mb-1 flex-col",
-                          }
-                            },
-                            p: {
-                                props: {
-                                className:"text-justify mb-3"
-                            }
-                            },
-                            ol: {
-                                props: {
-                                    className:"mb-4 text-justify"
-                                }
-                            }
-                      },
-                    }}
-                    className=""
-                  >{data.DigitalDhaanam.Description}</Markdown></h3>   
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "leading-8",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >
+                             {data.DigitalDhaanam.Description}
+                            </Markdown></h3>   
               </div>
             </div>
           </div>
-          
+           <div className="hidden md:block">
+                <Image src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDescription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
+              </div>
         </section>
         {/* /Digital Dhaanam */}
        
         {/* <!--Resources About the Company--> */}
-        <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
+        <section className=' lg:max-w-7xl text-justify px-12 relative w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
             <div className='flex justify-center w-full pb-5 mb-4 border-gray-200'>
               <h2 className='section-heading  text-gray-800 '>{data.relatedresourcestitle}</h2>
@@ -380,8 +395,8 @@ export default function About({ data,h_data,f_data }) {
         </section> 
         {/* / Resources Setion */}
         {/* <!-- Footer CTA Features Page --> */}
-        <section className='bg-white'>
-          <div className='md:px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl'>
+        <section className=' lg:max-w-7xl text-justify px-12 relative bg-white'>
+          <div className=' py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl'>
             <div className='relative py-6 overflow-hidden  background lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000'>
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>

@@ -60,17 +60,17 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
           ],
           site_name: "SiteName",
         }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-       facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
+      twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
         languageAlternates={[
           {
             hrefLang: "de",
@@ -155,7 +155,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative sm:mb-20 ">
           <div
-            className={`absolute inset-0 bg-gradient-to-b ${webinar_Data.CssStreamTag} opacity-50`}
+            className={`absolute inset-0 bg-gradient-to-b ${webinar_Data.CssStreamTag} `}
           ></div>
 
           <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">

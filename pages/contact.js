@@ -6,6 +6,7 @@ import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 export default function Contact({ data, h_data, f_data }) {
+ 
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -115,6 +116,7 @@ export default function Contact({ data, h_data, f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative  bg-white md:m-10 lg:py-0">
+        <div id="thanks_container" className="hidden container mx-auto bg-green-500 card-subheading  p-3  sticky z-10 md:top-16 sm:top-10">{data.ContactFormFields.ThanksMsg}</div>
           <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto  xl:px-5 lg:flex-row">
             <div className="flex flex-col items-center w-full md:px-10 pt-0 pb-20 lg:pt-0 lg:flex-row">
               <div className="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-8/12">
@@ -142,7 +144,7 @@ export default function Contact({ data, h_data, f_data }) {
                             </svg>
                           </span>
                           <pre className=" text-white">
-                            {" "}
+                          
                             <Markdown
                               options={{
                                 overrides: {
@@ -276,6 +278,7 @@ export default function Contact({ data, h_data, f_data }) {
                     acceptCharset="UTF-8"
                     className="relative w-full mt-6 space-y-8"
                   >
+                 
                     <input
                       type="text"
                       style={{ display: "none" }}

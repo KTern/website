@@ -42,17 +42,17 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
           ],
           site_name: "SiteName",
         }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-       facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
+      twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
         languageAlternates={[
           {
             hrefLang: "de",
@@ -113,18 +113,8 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
           },
         ]}
       />
-      <LogoJsonLd logo='http://www.your-site.com/images/logo.jpg' url='http://www.your-site.com' />
-      <SocialProfileJsonLd
-        type='Person'
-        name='your name'
-        url='http://www.your-site.com'
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
-      />
+     
+      
       <FAQPageJsonLd
         mainEntity={[
           {

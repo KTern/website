@@ -36,17 +36,17 @@ export default function Error() {
           ],
           site_name: "SiteName",
         }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-       facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
+      twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
         languageAlternates={[
           {
             hrefLang: "de",

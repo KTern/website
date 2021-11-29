@@ -52,9 +52,7 @@ var client = Amplitude.init(AMPLITUDE_KEY);
 client.logEvent({
 	event_type: 'Node.js Event',
 	user_id: 'datater@gmail.com',
-	location_lat: 37.77,
-	location_lng: -122.39,
-	ip: '127.0.0.1',
+	
 	event_properties: {
 		keyString: 'valueString',
 		keyInt: 11,
@@ -105,15 +103,15 @@ function Home ({ data ,h_data,f_data}) {
 					site_name: 'SiteName',
 				}}
 				twitter={{
-					handle: `${data.OtherSEO.TwitterHandle}`,
-					site: '@site',
-					cardType: 'summary_large_image',
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
 				}}
 				facebook={{
-					handle: `${data.OtherSEO.FacebookHandle}`,
-					site: `${data.OtherSEO.FacebookSite}`,
-					cardType: 'summary_large_image',
-					appId: '1234567890',
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
 				}}
 				languageAlternates={[
 					{

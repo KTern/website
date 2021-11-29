@@ -18,6 +18,7 @@ module.exports = {
         
       }),
       colors: {
+        success: '#BADA55',
       black: '#0b1320',
       primary: '#0B1320',
       secondary: '#EAEDF2',
@@ -122,9 +123,9 @@ module.exports = {
 
         },
         dxaas: {
-           primary: '#0B1320',
+           primary: '#1B465F',
           secondary: '#EAEDF2',
-      400:'#0B1320'
+      400:'#1B465F'
         },
       gray: {
         50: '#E7EAEF',
