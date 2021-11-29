@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer({ f_data }) {
   return (
     <>
-		  <section className="px-4 py-1 md:py-2 md:px-10 bg-black">
+		  <section className="px-4 py-5 md:py-10 md:px-10 bg-black ">
 			  
 			  <div className=" divide-y md:px-10 mx-auto ">
 				   <div className="flex   lg:mb-2 lg:mb-0 ">
@@ -81,7 +81,7 @@ export default function Footer({ f_data }) {
                   <ul className="">
                     {dt.NavItems.map((dt)=>(<li key="dt" className="mb-2">
                       <Link href={dt.linkURL}>
-                        <a className="navbar-s text-gray-200 hover:text-gray-100 ">
+                        <a className=" text-gray-200 hover:text-gray-100 " style={{fontWeight:300,fontSize:'15px'}}>
                          {dt.buttonTitle}
                         </a>
                       </Link>
@@ -112,7 +112,7 @@ export default function Footer({ f_data }) {
           <div className="flex flex-wrap w-full  lg:mb-2 lg:mb-0 ">
             <div className="md:flex  items-center w-full items-center lg:w-1/2 lg:mb-2 md:mb-0">
              
-              <pre className="py-0 hidden lg:block hyperlink text-white ">
+              <pre className="py-0 hidden lg:block text-white leading-snug" style={{fontWeight:300,fontSize:'15px'}}>
                {f_data.CopyrightStatement}
               </pre>
             </div>
@@ -123,7 +123,7 @@ export default function Footer({ f_data }) {
                
 
                 <p className="py-10 navbar-h  space-x-3 lg:block  text-white ">
-                  {f_data.LegalLinks.map((dt)=>(<span key="dt" className="text-xs font-semibold">
+                  {f_data.LegalLinks.map((dt)=>(<span key="dt" className=" font-semibold" style={{fontWeight:300,fontSize:'12px'}}>
                     <Link href={dt.linkURL}>
                       <a>{dt.buttonTitle}</a>
                     </Link>

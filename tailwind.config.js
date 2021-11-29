@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './component/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -23,6 +24,7 @@ module.exports = {
       primary: '#0B1320',
       secondary: '#EAEDF2',
       white:'#ffffff',
+      teal:colors.teal,
       projects: {
 
           primary: '#2666BA',

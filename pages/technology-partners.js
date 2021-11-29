@@ -6,7 +6,31 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
+import Carousel from 'react-multi-carousel';
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 export default function technical_partner ({data,h_data,f_data}) {
+    let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
     return (
         <>
             
@@ -42,37 +66,37 @@ export default function technical_partner ({data,h_data,f_data}) {
 					],
 					site_name: 'SiteName',
 				}}
-				twitter={{
-					handle: '@handle',
-					site: '@site',
-					cardType: 'summary_large_image',
+                twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
 				}}
 				facebook={{
-					handle: '@handle',
-					site: '@site',
-					cardType: 'summary_large_image',
-					appId: '1234567890',
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
 				}}
-				languageAlternates={[
+                languageAlternates={[
 					{
 						hrefLang: 'de',
 						href: 'https://www.canonical.ie/de',
 					},
 				]}
 				additionalMetaTags={[
-					{
-						property: 'dc:creator',
-						content: 'Jane Doe',
-					},
-					{
-						name: 'application-name',
-						content: 'NextSeo',
-					},
-					{
-						httpEquiv: 'x-ua-compatible',
-						content: 'IE=edge; chrome=1',
-					},
-				]}
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
 				additionalLinkTags={[
 					{
 						rel: 'icon',
@@ -90,44 +114,13 @@ export default function technical_partner ({data,h_data,f_data}) {
 				]}
 			/>
 <BreadcrumbJsonLd
-      itemListElements={[
-        {
-          position: 1,
-          name: 'Books',
-          item: 'https://example.com/books',
-        },
-        {
-          position: 2,
-          name: 'Authors',
-          item: 'https://example.com/books/authors',
-        },
-        {
-          position: 3,
-          name: 'Ann Leckie',
-          item: 'https://example.com/books/authors/annleckie',
-        },
-        {
-          position: 4,
-          name: 'Ancillary Justice',
-          item: 'https://example.com/books/authors/ancillaryjustice',
-        },
-      ]}
+      itemListElements={breadcrumb}
     />
- <LogoJsonLd
-      logo="http://www.your-site.com/images/logo.jpg"
-      url="http://www.your-site.com"
-    />
-<SocialProfileJsonLd
-      type="Person"
-      name="your name"
-      url="http://www.your-site.com"
-      sameAs={[
-        'http://www.facebook.com/your-profile',
-        'http://instagram.com/yourProfile',
-        'http://www.linkedin.com/in/yourprofile',
-        'http://plus.google.com/your_profile',
-      ]}
-            />
+	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
+
              <FAQPageJsonLd
       mainEntity={[
         {
@@ -169,20 +162,20 @@ export default function technical_partner ({data,h_data,f_data}) {
                      </div>   </div>
             </section>
            {/* <!-- Why Become KTern ISV Partner--> */}
-            <section className="relative w-full md:px-8 font-sans leading-6 bg-gray-800 border-0 border-gray-200 border-solid text-black">
+            <section className="relative w-full md:px-8  leading-6 bg-gray-800 border-0 border-gray-200 border-solid text-black">
             <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
-                <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl text-white">Why Become a KTern ISV Partner?</h2>
+                <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl text-white">{data.WhySectionTitle}</h2>
                
                 <div className="grid grid-cols-3 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
                    {data.WhyTechnologyPartner.map((data)=>( <div key="data" className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
-                    <div className="box-border flex flex-col items-center h-full px-2 py-8 mx-4 leading-6 text-center border-solid sm:items-start sm:text-left">
-                            <span className="flex-shrink-0 p-5 font-sans border-0 border-gray-200 rounded-full bg-gray-50 text-gray-50">
-                                        <Image src={data.Icon.imageURL} height="15" width="15" alt=""></Image>
+                    <div className="box-border flex flex-col  h-full px-2 py-8 mx-4 leading-6 border-solid sm:items-start sm:text-left">
+                            <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                                        <Image src={data.Icon.imageURL} height={data.Icon.height} width={data.Icon.width} alt=""></Image>
                                         
-              </span>
-                        <div className="mt-6 font-sans text-center border-0 border-gray-200 sm:text-left text-gray-50">
-                            <span className="box-border card-heading text-center border-solid sm:text-left text-gray-50">{data.CardTitle}</span>
-                            <p className="box-border mx-0 mt-2 mb-0 card-subheading text-center text-gray-300 border-solid sm:text-left">{data.CardDescription}</p>
+              </p>
+                        <div className="mt-6   border-0 border-gray-200 sm:text-left text-gray-50">
+                            <span className="box-border card-heading  border-solid sm:text-left text-gray-50">{data.CardTitle}</span>
+                            <p className="box-border mx-0 mt-2 mb-0 card-subheading  text-gray-300 border-solid sm:text-left">{data.CardDescription}</p>
                         </div>
                     </div>
                     </div>))}             
@@ -190,24 +183,57 @@ export default function technical_partner ({data,h_data,f_data}) {
             </div>
             </section>
             {/* <!-- Partners --> */}
-               <section className="w-full py-10 pb-16 bg-secondary">
-                <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
-                    <p className="card-heading text-gray-400 uppercase">Featured and Previously Seen On</p>
-                    <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
-{data.TrustedByLogos.map((data)=>(<Image key="data" src={data.imageURL} height={data.height} width={data.width} alt={data.imageDescription}></Image>))}
-                    </div>
+            <div className="px-4 py-5">
+						<div className=" px-4 mx-auto">
+							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
+								{data.PartnersLogoTitle}
+							</h2>
+							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+						</div>
+						   <Carousel className='bots flex p-6  z-10' responsive={responsive}>
+            {data.TrustedByLogos.map((dt) => (
+              <div key='dt' className='p-3 bots-card flex-row'>
+                <Image
+                  className=' w-auto lg:w-100'
+                  src={dt.imageURL}
+                  alt={dt.imageDescription}
+                  width={dt.width}
+                  height={dt.height}
+                />
+              </div>
+            ))}
+          </Carousel>
+					</div>
+              {/* <!--Steps to join KTern--> */}
+        
+         <section className="pt-5 pb-0 2xl:py-20 py-5 bg-black overflow-hidden">
+            <div className="px-14 md:mx-auto ">
+                <div className="mb-10 md:max-w-4xl  md:mx-auto sm:mb-24 text-center">
+                            <span className="section-heading  text-white">{data.PartnershipSteps.Title}</span>
+                <h2 className="mt-4 section-subheading text-white">{data.PartnershipSteps.Description}</h2>
                 </div>
-                </section>
-             
+                <div className="grid grid-cols-3 sm:grid-cols-1 gap-3 mb-10">
+                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10 md:mt-20 md:mb-20 lg:mb-0">
+                    <div className="relative flex-col space-y-3">
+                    
+                    <div className="md:mr-8">
+                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">{index+1}</span>
+                    </div>
+                    <div className="max-w-xs">
+                        <h3 className="mb-2 card-heading text-white">{dt.StepTitle}</h3>
+                        <p className="card-subheading text-gray-200">{dt.StepDescription}</p>
+                    </div>
+                    </div>
+                </div>))}
+                
+                </div>
+                
+            </div>
+            </section>
             {/* <!--Faq Section--> */}
       
-   
-   
-
-     {/* <!--KTern Customer Testimonials--> */}
-           
-             <section className="py-10 bg-projects-white">
-                    <h2 className="mb-2 section-heading  text-center">Frequently Asked Questions</h2>
+            <section className="py-10 bg-projects-white">
+                    <h2 className="mb-2 section-heading  text-center">{data.FAQTitle}</h2>
                     <div className="flex space-x-10 p-10">
                         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
                             
@@ -228,66 +254,24 @@ export default function technical_partner ({data,h_data,f_data}) {
                             </div>
                     </div>
                 </section>
-           {/* <!--Steps to join KTern--> */}
-         <section className="pt-5 pb-0 2xl:py-20 bg-black overflow-hidden">
-            <div className="container px-14 mx-auto">
-                <div className="mb-10 max-w-xl mx-auto sm:mb-24 text-center">
-                            <span className="section-heading  text-white">{data.PartnershipSteps.Title}</span>
-                <h2 className="mt-4 section-subheading text-white">{data.PartnershipSteps.Description}</h2>
-                </div>
-                <div className="relative flex flex-wrap justify-center -mx-10 mb-5">
-                        <div className="hidden lg:block absolute inset-y-0 -mr-80 -mt-18"><Image width={200} height={100} src="/partner/dots-gray.svg" alt="" /></div>
-                        <div  className="hidden lg:block absolute top-0 left-0 ml-72 -mt-18"><Image src="/partner/dots-gray.svg" width={200} height={100}  alt=""/></div>
-                <div className="w-full lg:w-1/3 px-10 md:mt-20 md:mb-20 lg:mb-0">
-                    <div className="relative flex">
-                    
-                    <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">1</span>
-                    </div>
-                    <div className="max-w-xs">
-                        <h3 className="mb-6 card-heading text-white">{data.PartnershipSteps.Steps[0].StepTitle}</h3>
-                        <p className="card-subheading text-gray-200">{data.PartnershipSteps.Steps[0].StepDescription}</p>
-                    </div>
-                    </div>
-                </div>
-                <div className="w-full lg:w-1/3 mt-20 px-10 md:mb-20 lg:mb-0">
-                    <div className="flex">
-                    <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">2</span>
-                    </div>
-                    <div className="max-w-xs">
-                         <h3 className="mb-6 card-heading text-white">{data.PartnershipSteps.Steps[1].StepTitle}</h3>
-                        <p className="card-subheading text-gray-200">{data.PartnershipSteps.Steps[1].StepDescription}</p>
-                    </div>
-                    </div>
-                </div>
-                <div className="w-full lg:w-1/3 mt-20 px-10">
-                    <div className="flex">
-                    <div className="mr-8">
-                        <span className="flex justify-center items-center w-14 h-14 text-black bg-white card-heading  rounded-full">3</span>
-                    </div>
-                    <div className="max-w-xs">
-                       <h3 className="mb-6 card-heading text-white">{data.PartnershipSteps.Steps[2].StepTitle}</h3>
-                        <p className="card-subheading text-gray-200">{data.PartnershipSteps.Steps[2].StepDescription}</p>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                
-            </div>
-            </section>
+   
+
+    
+           
+           
+          
 {/* <!-- Footer CTA --> */}
           <section className="bg-white">
                 <div className="md:px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
                 <div className="relative py-6 overflow-hidden  background lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000">
                 <div className="absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
                 <div className="absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5"></div>
-                <div className="relative p-6  md:p-0 md:pb-4">
+                <div className="relative p-6 max-w-xl md:p-0 md:pb-4">
                 <h2 className="card-heading   tracking-tight text-white sm:text-4xl sm:leading-10">{data.CTA.CTATitle}</h2>
                 <p className="w-full mt-5 card-subheading text-white ">{data.CTA.CTADescription}</p>
                 </div>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
-                <Link  href={data.CTA.PrimaryCTA.linkURL} passHref><a className="  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black">{data.CTA.PrimaryCTA.buttonTitle}</a></Link>
+                <Link  href={data.CTA.PrimaryCTA.linkURL} passHref><a className="border-3 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black">{data.CTA.PrimaryCTA.buttonTitle}</a></Link>
                 <Link  href={data.CTA.SecondaryCTA.linkURL} passHref><a className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button">{data.CTA.SecondaryCTA.buttonTitle}</a></Link>
                 </div>
                 </div>

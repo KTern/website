@@ -81,31 +81,35 @@ export default function Pricing ({data,h_data,f_data}) {
                     ],
                     site_name: 'SiteName',
                 }}
-                twitter={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                }}
-                facebook={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
-                    appId: '1234567890',
-                }}
+                 twitter={{
+					handle: `${process.env.TWITTER_HANDLE}`,
+					site: `${process.env.TWITTER_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.FACEBOOK_HANDLE}`,
+					site: `${process.env.FACEBOOK_SITE}`,
+					cardType: `${process.env.CARD_TYPE}`,
+					appId: `${process.env.FB_APPID}`,
+				}}
                 languageAlternates={[{
                     hrefLang: 'de',
                     href: 'https://www.canonical.ie/de',
                 } ]}
-                additionalMetaTags={[{
-                    property: 'dc:creator',
-                    content: 'Jane Doe'
-                    }, {
-                    name: 'application-name',
-                    content: 'NextSeo'
-                    }, {
-                    httpEquiv: 'x-ua-compatible',
-                    content: 'IE=edge; chrome=1'
-                    } ]}
+                additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
                 additionalLinkTags={[
                     {
                         rel: 'icon',
@@ -147,10 +151,10 @@ export default function Pricing ({data,h_data,f_data}) {
         },
       ]}
     />
- <LogoJsonLd
-      logo="http://www.your-site.com/images/logo.jpg"
-      url="http://www.your-site.com"
-    />
+	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
 <SocialProfileJsonLd
       type="Person"
       name="your name"

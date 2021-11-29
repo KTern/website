@@ -13,6 +13,10 @@ export default function About({ data,h_data,f_data }) {
   });
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}

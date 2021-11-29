@@ -12,6 +12,10 @@ export default function TrustCenter({ data ,h_data,f_data}) {
   const [isPartnerVisible, setIsPartnerVisible] = useState(false);
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}

@@ -5,15 +5,11 @@ import { useRouter } from 'next/router'
 import Head from "next/head";
 import Link from "next/link"
 
-import { LogoJsonLd } from "next-seo";
+
 import { SocialProfileJsonLd } from "next-seo";
-let socialProfileList="";
-if(process.env.SOCIALPROFILEJSON){
-socialProfileList=process.env.SOCIALPROFILEJSON.split(',');}
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
-console.log(socialProfileList)
   useEffect(() => {
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
@@ -37,16 +33,7 @@ console.log(socialProfileList)
         <meta name="apple-mobile-web-app-status-bar" content="#0b1320" />
                   <script type="text/javascript" id="zsiqchat"  dangerouslySetInnerHTML={{
             __html:`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "f440e91b3668705fa583df5dbc6e74336a479d5c9175a86e330df6b09d955c51c217306de45b754907f8ee064f96a38d", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}}/>
- <SocialProfileJsonLd
-        type="Person"
-        name={`${process.env.NAME}`}
-        url={`${process.env.URL}`}
-        sameAs={socialProfileList}
-        />
-          <LogoJsonLd
-        logo={`${process.env.LOGO}`}
-        url={`${process.env.URL}`}
-      />
+
       </Head>
       <Component {...pageProps} />
       </>

@@ -57,19 +57,19 @@ export default function TrustCenter ({data,h_data,f_data}) {
 					},
 				]}
 				additionalMetaTags={[
-					{
-						property: 'dc:creator',
-						content: 'Jane Doe',
-					},
-					{
-						name: 'application-name',
-						content: 'NextSeo',
-					},
-					{
-						httpEquiv: 'x-ua-compatible',
-						content: 'IE=edge; chrome=1',
-					},
-				]}
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
 				additionalLinkTags={[
 					{
 						rel: 'icon',
@@ -110,10 +110,10 @@ export default function TrustCenter ({data,h_data,f_data}) {
         },
       ]}
     />
- <LogoJsonLd
-      logo="http://www.your-site.com/images/logo.jpg"
-      url="http://www.your-site.com"
-    />
+	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
 <SocialProfileJsonLd
       type="Person"
       name="your name"
@@ -176,11 +176,16 @@ KTern uses a multi-tenant data model to host all its applications. Each applicat
       </div>
   </div>
                     <div className="w-full md:w-1/3  my-28 ">
-                        <div className="flex sm:space-x-2 md:space-x-10 justify-center items-center  sm:py-5 md:p-5 bg-white border-2  sticky z-10 md:top-16 sm:top-10 ">
-                            <ul>
-                                    {data.idList.map((data) => (<li key="data"><Link href={data.idURL} passHref><a className="hyperlink uppercase">{data.idText}</a></Link></li>))}
+					
+                        <div className="flex sm:space-x-2 md:space-x-10   sm:py-5 md:p-5 bg-white border-2  sticky z-10 md:top-16 sm:top-10 ">
+							
+                            <ol>
+							<b className="card-heading text-center">
+								{data.TableOfContentsHeading}
+							</b>
+                                    {data.idList.map((data) => (<li key="data" className="mt-1 list-decimal mx-5"><Link href={data.idURL} passHref><a className="card-subheading ">{data.idText}</a></Link></li>))}
                                 
-   </ul>
+   </ol>
    </div>
   </div>
 </div>

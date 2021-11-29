@@ -8,6 +8,10 @@ import { SocialProfileJsonLd } from "next-seo";
 export default function Error() {
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title="Simple Usage Example"
         description="A short description goes here."

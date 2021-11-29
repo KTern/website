@@ -120,19 +120,19 @@ function Home ({ data ,h_data,f_data}) {
 					},
 				]}
 				additionalMetaTags={[
-					{
-						property: 'dc:creator',
-						content: 'Jane Doe',
-					},
-					{
-						name: 'application-name',
-						content: 'NextSeo',
-					},
-					{
-						httpEquiv: 'x-ua-compatible',
-						content: 'IE=edge; chrome=1',
-					},
-				]}
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
 				additionalLinkTags={[
 					{
 						rel: 'icon',
@@ -173,18 +173,11 @@ function Home ({ data ,h_data,f_data}) {
 					},
 				]}
 			/>
-			<LogoJsonLd logo="http://www.your-site.com/images/logo.jpg" url="http://www.your-site.com" />
-			<SocialProfileJsonLd
-				type="Person"
-				name="your name"
-				url="http://www.your-site.com"
-				sameAs={[
-					'http://www.facebook.com/your-profile',
-					'http://instagram.com/yourProfile',
-					'http://www.linkedin.com/in/yourprofile',
-					'http://plus.google.com/your_profile',
-				]}
-			/>
+		
+			  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
 			<SoftwareAppJsonLd
 				name="Angry Birds"
 				price="1.00"

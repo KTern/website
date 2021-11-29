@@ -14,6 +14,10 @@ import { SocialProfileJsonLd } from "next-seo";
 export default function Feature_Landing({ feature_data ,h_data,f_data}) {
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title={feature_data.PageSEO.PageTitle}
         description={feature_data.PageSEO.PageDescription}

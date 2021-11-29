@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+import { LogoJsonLd } from "next-seo";
 export default class MyDocument extends Document {
 validateEmail240235000000441168() {
         var form = document.forms['WebToContacts240235000000441168'];
@@ -45,6 +45,38 @@ validateEmail240235000000441168() {
           `,
             }}
           />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
+"@context": "https://schema.org",
+"@type": "Corporation",
+"name": "KTern.AI",
+"alternateName": "KTern",
+"url": "https://ktern.com",
+"logo": "https://storage.googleapis.com/ktern-public-files/website/Brand%20Elements/ktern-logo.png",
+"contactPoint": [{
+"@type": "ContactPoint",
+"telephone": "+1 (530) 830 9925",
+"contactType": "sales",
+"areaServed": "US",
+"availableLanguage": "en"
+},{
+"@type": "ContactPoint",
+"telephone": "+91 (44) 4065 1500",
+"contactType": "customer service",
+"areaServed": ["155","039","154","151","150","145","034","035","030","143","142","419","015","002"],
+"availableLanguage": "en"
+}],
+"sameAs": [
+"https://www.instagram.com/ktern.official",
+"https://twitter.com/KTernOfficial",
+"https://www.facebook.com/KTernAIOfficial",
+"https://www.youtube.com/channel/UCAhQc3bSZ95pucSyweFtusA",
+"https://www.linkedin.com/company/ktern/",
+"https://ktern.ai",
+"https://github.com/KTern"
+]
+}`}}
+/>
           <script type='text/javascript'id='VisitorTracking'>
           </script>
           {/* <!-- Clarity tracking code for https://ktern.com/ --> */}
@@ -64,6 +96,10 @@ validateEmail240235000000441168() {
      fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));`}}/>
   
 
+  <LogoJsonLd
+        logo={process.env.URL}
+        url={process.env.URL}
+      />
 
         </Head>
         <body>

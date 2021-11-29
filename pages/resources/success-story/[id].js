@@ -12,6 +12,10 @@ import Markdown from "markdown-to-jsx";
 const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}

@@ -60,19 +60,19 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
 					},
 				]}
 				additionalMetaTags={[
-					{
-						property: 'dc:creator',
-						content: 'Jane Doe',
-					},
-					{
-						name: 'application-name',
-						content: 'NextSeo',
-					},
-					{
-						httpEquiv: 'x-ua-compatible',
-						content: 'IE=edge; chrome=1',
-					},
-				]}
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
 				additionalLinkTags={[
 					{
 						rel: 'icon',
@@ -113,10 +113,10 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
         },
       ]}
     />
- <LogoJsonLd
-      logo="http://www.your-site.com/images/logo.jpg"
-      url="http://www.your-site.com"
-    />
+	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
 <SocialProfileJsonLd
       type="Person"
       name="your name"

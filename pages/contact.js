@@ -1,12 +1,18 @@
 import Layout from "../component/Layout";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
+import { BreadcrumbJsonLd,LogoJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
+import { useRouter } from 'next/router';
 export default function Contact({ data, h_data, f_data }) {
- 
+  const router=useRouter();
+  console.log(router.query.message);
+  if(router.query.message=="thanks"){
+    if(process.browser)
+    document.getElementById('thanks_container').style.display="block"
+  }
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -88,10 +94,13 @@ export default function Contact({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-
+      <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <CorporateContactJsonLd
-        url={`${process.env.url}`}
-        logo={`${process.env.logo}`}
+        url={process.env.url}
+        logo={process.env.logo}
         contactPoint={[
           {
             telephone: "+1-401-555-1212",
@@ -116,7 +125,6 @@ export default function Contact({ data, h_data, f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative  bg-white md:m-10 lg:py-0">
-        <div id="thanks_container" className="hidden container mx-auto bg-green-500 card-subheading  p-3  sticky z-10 md:top-16 sm:top-10">{data.ContactFormFields.ThanksMsg}</div>
           <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto  xl:px-5 lg:flex-row">
             <div className="flex flex-col items-center w-full md:px-10 pt-0 pb-20 lg:pt-0 lg:flex-row">
               <div className="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-8/12">
@@ -271,12 +279,23 @@ export default function Contact({ data, h_data, f_data }) {
                   <h4 className="w-full card-heading   text-center ">
                     {data.ContactFormFields.FormTitle}
                   </h4>
+                  <div id="thanks_container" class="w-full hidden mt-2 mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+  <div class="flex ">
+    <div class="py-1 pr-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+</svg></div>
+    <div>
+      <p class="font-bold card-subheading">{data.ContactFormFields.ThanksMsg}</p>
+     
+    </div>
+  </div>
+</div>
                   <form
                     action="https://crm.zoho.in/crm/WebToContactForm"
                     name="WebToContacts240235000000441179"
                     method="POST"
                     acceptCharset="UTF-8"
-                    className="relative w-full mt-6 space-y-8"
+                    className="relative w-full mt-2 space-y-5"
                   >
                  
                     <input
@@ -302,7 +321,7 @@ export default function Contact({ data, h_data, f_data }) {
                       type="text"
                       style={{ display: "none" }}
                       name="returnURL"
-                      value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;contact"
+                      value={data.ContactFormFields.redirectURL}
                     />
                     {/* <!-- Do not remove this code. --> */}
                     <input

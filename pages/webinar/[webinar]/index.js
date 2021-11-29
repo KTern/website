@@ -32,6 +32,10 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
 
   return (
     <>
+    	  <LogoJsonLd
+        logo={process.env.LOGO}
+        url={process.env.URL}
+      />
       <NextSeo
         title={webinar_Data.PageSEO.PageTitle}
         description={webinar_Data.PageSEO.PageDescription}
