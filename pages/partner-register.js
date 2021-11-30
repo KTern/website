@@ -120,13 +120,13 @@ export default function PartnerContact({ data,h_data,f_data }) {
               <h1 className="  text-center mb-4 cursor-pointer section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
-              <div id="thanks_container" class=" hidden mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
-  <div class="flex ">
-    <div class="py-1 pr-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <div id="thanks_container" className=" hidden mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+  <div className="flex ">
+    <div className="py-1 pr-4"><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
 </svg></div>
     <div>
-      <p class="font-bold card-subheading">{data.PartnerRegistrationForm.ThanksMsg}</p>
+      <p className="font-bold card-subheading">{data.PartnerRegistrationForm.ThanksMsg}</p>
      
     </div>
   </div>
