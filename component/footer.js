@@ -25,7 +25,7 @@ export default function Footer({ f_data }) {
                 <div className="w-full lg:w-1/2">
                   <div className="flex lg:justify-end mb-6 lg:mb-10">
                    {f_data.SocialMediaLinks.map((dt)=>( <Link key="dt"  href={dt.Url}>
-					   <a title={dt.Title} className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full">
+					   <a title={dt.Title} target="_blank" className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full">
 						   <Image src={dt.ImageUrl} width="20" height="30" alt=""/>
 								   </a>
                                 </Link> ))}
@@ -122,10 +122,10 @@ export default function Footer({ f_data }) {
 
                
 
-                <p className="py-10 navbar-h  space-x-3 lg:block  text-white ">
-                  {f_data.LegalLinks.map((dt)=>(<span key="dt" className=" font-semibold" style={{fontWeight:300,fontSize:'12px'}}>
+                <p className="py-10   space-x-3 lg:block  text-gray-200 ">
+                  {f_data.LegalLinks.map((dt)=>(<span key="dt" className=" " >
                     <Link href={dt.linkURL}>
-                      <a>{dt.buttonTitle}</a>
+                      <a style={{fontWeight:300,fontSize:'13px'}}>{dt.buttonTitle}</a>
                     </Link>
                   </span>))}
                  

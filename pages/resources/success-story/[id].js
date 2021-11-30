@@ -46,7 +46,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
               url: "https://www.example.ie/og-image-04.jpg",
             },
           ],
-          site_name: "SiteName",
+          site_name: "KTern.AI"
         }}
       twitter={{
 					handle: `${process.env.TWITTER_HANDLE}`,

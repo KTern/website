@@ -25,7 +25,7 @@ export default function Resources({ data,h_data,f_data }) {
   function filterData (data) {
     let filter = []
      let val = {}
-    filter.push({'label':'None','Value':'none'})
+    
     
     data.map(item => {
       val = {}
@@ -48,13 +48,13 @@ export default function Resources({ data,h_data,f_data }) {
     let Labels=['type','stream','topic','role']
   function handleChange (event) {
     let filterArray = {}
-    if (document.getElementById('stream').value!= 'None')
+    if (document.getElementById('stream').value!= 'allStreams')
       filterArray.DigitalStream = document.getElementById('stream').value
-    if (document.getElementById('type').value!= 'None')
+    if (document.getElementById('type').value!= 'allTypes')
       filterArray.ResourceType = document.getElementById('type').value
-    if (document.getElementById('topic').value!= 'None')
+    if (document.getElementById('topic').value!= 'allTopics')
       filterArray.RelatedTopic = document.getElementById('topic').value
-    if (document.getElementById('role').value!= 'None')
+    if (document.getElementById('role').value!= 'allRoles')
         filterArray.RelatedRole=document.getElementById('role').value
    
 console.log(filterArray)
@@ -103,7 +103,7 @@ console.log(filterArray)
             { url: "https://www.example.ie/og-image-03.jpg" },
             { url: "https://www.example.ie/og-image-04.jpg" },
           ],
-          site_name: "SiteName",
+          site_name: "KTern.AI"
         }}
       twitter={{
 					handle: `${process.env.TWITTER_HANDLE}`,
@@ -210,22 +210,11 @@ console.log(filterArray)
             </div>
           </div>
         </section>
-
-        <section className="w-full lg:p-10 ">
-          <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
-            {/* <!-- On demand Filter Options--> */}
-
-            {/* <!-- On demand Webinar Card Display--> */}
-
-            <div className="w-full   md:pl-20 mb-4 md:mb-0  mt-10">
-              {/* Chips Section */}
-              {/* <section className=' flex sm:pt-5  pb-10 items-center justify-end'>
-                <input id='demo-2' style={{ width: "35%" }} type='search' placeholder='Search' />
-              </section> */}
-              <section className="pb-10 background p-5 sticky z-30 md:top-16 sm:top-10">
-                <h1 className="uppercase text-white navbar-h mb-6">Filter By:</h1>
-                <form onChange={handleChange} className="grid grid-cols-5 gap-6">
-                  <select name="stream" id="stream" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+        {/* Filter Section */}
+        <section className="sm:hidden block pb-10 background flex items-center justify-center p-5 sticky z-30 md:top-16 sm:top-10">
+                <h1 className="w-1/6 uppercase text-white navbar-h ">Filter By:</h1>
+                <form onChange={handleChange} className="w-5.5/6 grid grid-cols-4 gap-7">
+                  <select name="stream" id="stream" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -233,7 +222,7 @@ console.log(filterArray)
                     {streamOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="topic" id="topic" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+                  <select name="topic" id="topic" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -241,7 +230,7 @@ console.log(filterArray)
                     {topicOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="role" id="role" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+                  <select name="role" id="role" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -249,7 +238,7 @@ console.log(filterArray)
                     {roleOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="type" id="type" className="p-3 pr-6 text-black bg-white  w-150" style={{ webkitAppearance: 'none',
+                  <select name="type" id="type" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -259,6 +248,19 @@ console.log(filterArray)
                  </select>
 </form>
               </section>
+        <section className="w-full lg:p-10 ">
+          
+          <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
+            {/* <!-- On demand Filter Options--> */}
+
+            {/* <!-- On demand Webinar Card Display--> */}
+          
+            <div className="w-full   md:pl-20 mb-4 md:mb-0  mt-10">
+              {/* Chips Section */}
+              {/* <section className=' flex sm:pt-5  pb-10 items-center justify-end'>
+                <input id='demo-2' style={{ width: "35%" }} type='search' placeholder='Search' />
+              </section> */}
+          
               {/* <section className="pb-10 ">
                 {data.ResourceTypeFilters.map((dt) => (
                   <button

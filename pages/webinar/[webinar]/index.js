@@ -27,8 +27,8 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
 }
   };
   const dateFormat = new Date(webinar_Data.WebinarDate);
-  const formattedDate = dateFormat.toLocaleDateString();
-
+ 
+  let formattedDate = dateFormat.toLocaleDateString('en-us',{day:'2-digit',month:'short',year:'numeric'});
 
   return (
     <>
@@ -62,7 +62,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
             { url: "https://www.example.ie/og-image-03.jpg" },
             { url: "https://www.example.ie/og-image-04.jpg" },
           ],
-          site_name: "SiteName",
+          site_name: "KTern.AI"
         }}
       twitter={{
 					handle: `${process.env.TWITTER_HANDLE}`,
@@ -165,10 +165,10 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
           <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
             <div className="flex flex-wrap text-white">
               <div className="relative w-full px-4 mx-auto text-center xl:flex-grow-0 xl:flex-shrink-0">
-                <h1 className="mt-0 mb-2 heading  text-black ">
+                <h1 className="mt-0 mb-2 heading  text-white ">
                   {webinar_Data.WebinarTitle}
                 </h1>
-                <p className="mt-0 mb-4  text-black subheading">
+                <p className="mt-0 mb-4  text-white subheading">
                   {webinar_Data.Type}
                 </p>
               </div>

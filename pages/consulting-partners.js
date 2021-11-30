@@ -208,75 +208,25 @@ export default function Consultingpartner({data,h_data,f_data}){
 					</div>
            
         {/* <!--Detailed Look at Partnership Benefits--> */}
-            <section className="relative py-0 2xl:py-10">
-            {/* <div className="container md:px-20 mx-auto">
-                <div className="mb-20 text-center">
-                
-                <h2 className="mt-8 section-heading">Detailed Look at Partnership Benefits</h2>
+        <section className="relative w-full md:px-8  leading-6 bg-white border-0 border-gray-200 border-solid text-black">
+            <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
+                <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl">{data.WhySectionTitle}</h2>
+               
+                <div className="grid grid-cols-3 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
+                   {data.PartnershipBenefits.map((data)=>( <div key="data" className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
+                    <div className="box-border flex flex-col  h-full px-2 py-8 mx-4 leading-6 border-solid sm:items-start sm:text-left">
+                            <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-500 rounded-full ">
+                                        <Image src={data.Icon.imageURL} height={data.Icon.height} width={data.Icon.width} alt={data.Icon.imageDescription}></Image>
+                                        
+              </p>
+                        <div className="mt-6   border-0 border-gray-200 sm:text-left text-black">
+                            <span className="box-border card-heading  border-solid sm:text-left text-black">{data.Heading }</span>
+                            <p className="box-border mx-0 mt-2 mb-0 card-subheading  text-gray-800 border-solid sm:text-left">{data.BenefitContent}</p>
+                        </div>
+                    </div>
+                    </div>))}             
                 </div>
-                <div>
-                            {data.PartnerBenefits.map((dt) => (
-                                <div key="dt" className="mb-16 overflow-x-auto overflow-y-hidden">
-                    <table className="table-auto w-full mb-10">
-                    <thead className="bg-gray-100">
-                        <tr className="text-lg text-left ">
-                        <th className="pl-16 py-5 card-heading">{dt.mainHeader}</th>
-                        <th className="px-4 py-5">
-                            <div className="flex items-center card-heading">
-                            
-                            {dt.secondary1}
-                            </div>
-                        </th>
-                        <th className="px-4 py-5">
-                            <div className="flex items-center card-heading">
-                            
-                           {dt.secondary2}
-                            </div>
-                        </th>
-                        <th className="px-4 py-5">
-                            <div className="flex items-center card-heading">
-                            
-                           {dt.secondary3}
-                            </div>
-                        </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                                            {dt.tableContent.map((dt1) => (
-                                                <tr key="dt" className="text-lg text-center border-b border-gray-50">
-                        <td className="pl-16 py-6 text-left card-subheading uppercase">{dt1.BenefitTitle}</td>
-                        <td className="pl-10">
-                                                        {dt1.Registered && <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
-                                                            <g clipPath="url(#clip0)">
-                                                                <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
-                                                            </g>
-                                                        </svg>}
-                        </td>
-                       <td className="pl-10">
-                                                        {dt1.Authorized && <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
-                                                            <g clipPath="url(#clip0)">
-                                                                <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
-                                                            </g>
-                                                        </svg>}
-                        </td>
-                        <td className="pl-10">
-                                                        {dt1.Preferred && <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <circle cx="18" cy="18.4595" r="18" fill="#111827" fillOpacity="0.1"></circle>
-                                                            <g clipPath="url(#clip0)">
-                                                                <path d="M15.135 24.797L9 18.662L9.81024 17.8517L15.135 23.1765L26.1898 12.1218L27 12.9321L15.135 24.797Z" fill="#000000"></path>
-                                                            </g>
-                                                        </svg>}
-                        </td>
-                        </tr>))}
-                       
-                    </tbody>
-                    </table>
-                </div>))}
-                
-                </div>
-            </div> */}
+            </div>
             </section>
             {/* <!--KTern Customer Testimonials--> */}
        
