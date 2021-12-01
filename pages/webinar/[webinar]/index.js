@@ -9,7 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import { EventJsonLd } from "next-seo";
 import Head from "next/head";
 import { useRouter } from "next/router";
-export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
+export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
     hour: "numeric",
@@ -18,24 +18,24 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
   });
 
   const router = useRouter();
-    const handleSearch = (event) => {
-
+  const handleSearch = (event) => {
     console.log("clicked" + webinar_Data.Type + event, router.query);
-      if (typeof process.browser) {
-        window.open("/webinar" + `${webinar_Data.redirectURL}`)
-        return true
-}
+    if (typeof process.browser) {
+      window.open("/webinar" + `${webinar_Data.redirectURL}`);
+      return true;
+    }
   };
   const dateFormat = new Date(webinar_Data.WebinarDate);
- 
-  let formattedDate = dateFormat.toLocaleDateString('en-us',{day:'2-digit',month:'short',year:'numeric'});
+
+  let formattedDate = dateFormat.toLocaleDateString("en-us", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
 
   return (
     <>
-    	  <LogoJsonLd
-        logo={process.env.LOGO}
-        url={process.env.URL}
-      />
+      <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <NextSeo
         title={webinar_Data.PageSEO.PageTitle}
         description={webinar_Data.PageSEO.PageDescription}
@@ -62,19 +62,19 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
             { url: "https://www.example.ie/og-image-03.jpg" },
             { url: "https://www.example.ie/og-image-04.jpg" },
           ],
-          site_name: "KTern.AI"
+          site_name: "KTern.AI",
         }}
-      twitter={{
-					handle: `${process.env.TWITTER_HANDLE}`,
-					site: `${process.env.TWITTER_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.FACEBOOK_HANDLE}`,
-					site: `${process.env.FACEBOOK_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-					appId: `${process.env.FB_APPID}`,
-				}}
+        twitter={{
+          handle: `${process.env.TWITTER_HANDLE}`,
+          site: `${process.env.TWITTER_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.FACEBOOK_HANDLE}`,
+          site: `${process.env.FACEBOOK_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+          appId: `${process.env.FB_APPID}`,
+        }}
         languageAlternates={[
           {
             hrefLang: "de",
@@ -135,8 +135,7 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
           },
         ]}
       />
-    
-      
+
       <EventJsonLd
         name="My Event"
         startDate="2020-01-23T00:00:00.000Z"
@@ -202,10 +201,9 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
                   />
                 </div>
                 <div>
-                  <h3 className="sm:text-center hyperlink">{time}&nbsp;{webinar_Data.TimeZone}</h3>
-                 
-                  
-                 
+                  <h3 className="sm:text-center hyperlink">
+                    {time}&nbsp;{webinar_Data.TimeZone}
+                  </h3>
                 </div>
               </div>
               <div className="mb-8  flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
@@ -254,10 +252,9 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
                     <li className="mb-2" key="index">
                       <div className="w-full flex  text-gray-600 md:pr-16">
                         {/* <div className=" block w-4 h-4 relative flex-none">
-                                                <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-                                            </div> */}
+            <svg className="w-5 h-5 mr-1 text-black mt-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+        </div> */}
                         <span className="ml-2 card-subheading" title="Point 1">
-                          
                           <span className="bg-secondary rounded-full px-2 py-1 mr-3">
                             <b>{index + 1}</b>
                           </span>
@@ -271,7 +268,6 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
 
               <div className="w-full mt-16 md:mt-0 md:w-2/5">
                 <div className="mb-14">
-                  {" "}
                   <h2 className="card-heading   text-black sm: md:">
                     Your Panelists
                   </h2>
@@ -298,244 +294,230 @@ export default function WebinarLanding({ webinar_Data ,h_data,f_data}) {
                   <h3 className="mb-6 card-heading  text-center">
                     Register for the Webinar
                   </h3>
-                  <div className=" zcwf_lblLeft crmWebToEntityForm relative w-full mt-6 space-y-8">
-                                      <form
-                                          className="relative w-full mt-6 space-y-8"
-                      action="https://crm.zoho.in/crm/WebToContactForm"
-                      name="WebToContacts240235000000441159"
-                      method="POST"
-                      onSubmit={handleSearch}
-                      acceptCharset="UTF-8"
+                  <div className=" relative w-full mt-6 space-y-10">
+                    {/* <!--Zoho Campaigns Web-Optin Form Starts Here-->  */}
+                    <div
+                      id="sf3zd179095996e297a4942da5ad9cf725919b2102257c52886d7ff2da954890cddd"
+                      data-type="signupform"
+                     
                     >
                       <input
-                        type="text"
-                        style={{display:'none'}}
-                        name="xnQsjsdp"
-                        value="db887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04c"
+                        type="hidden"
+                        id="signupFormType"
+                        value="LargeForm_Vertical"
                       />
+                      <input type="hidden" id="recapTheme" value="2" />
                       <input
                         type="hidden"
-                        name="zc_gad"
-                        id="zc_gad"
-                        value=""
+                        id="isRecapIntegDone"
+                        value="false"
                       />
-                      <input
-                        type="text"
-                        style={{display:'none'}}
-                        name="xmIwtLD"
-                        value="d282bac1d91514c46c75683473f967a1db3bd8391d433e87db690d8ba4a4976b"
-                      />
-                      <input
-                        type="text"
-                        style={{display:'none'}}
-                        name="actionType"
-                        value="Q29udGFjdHM="
-                      />
-                      <input
-                        type="text"
-                        style={{display:'none'}}
-                        name="returnURL"
-                        value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;resources"
-                      />
-                      {/* <!-- Do not remove this code. --> */}
-                      <input
-                        type="text"
-                        style={{display:'none'}}
-                        id="ldeskuid"
-                        name="ldeskuid"
-                      />
-                      <input
-                        type="text"
-                        style={{display:'none'}}
-                        id="LDTuvid"
-                        name="LDTuvid"
-                      />
-                      {/* <!-- Do not remove this code. --> */}
-                      
-                      <div className="zcwf_row">
+                      <div id="customForm">
                         <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
+                          name="SIGNUP_PAGE"
+                          className="large_form_7_css"
+                          id="SIGNUP_PAGE"
+                          
                         >
-                          <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Last_Name">
-                            Last Name
-                          </label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                            type="text"
-                            id="Last_Name"
-                            name="Last Name"
-                            maxLength="80"
-                          />
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row">
-                        <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
-                        >
-                          <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Email">
-                            Email
-                          </label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                            type="email"
-                            ftype="email"
-                            id="Email"
-                            name="Email"
-                            maxLength="100"
-                          />
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row">
-                        <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
-                        >
-                          <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Account_Name">
-                            Account Name
-                          </label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                            type="text"
-                            id="Account_Name"
-                            name="Account Name"
-                            maxLength="100"
-                          />
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row">
-                        <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
-                        >
-                          <label className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Mailing_Country">
-                            Mailing Country
-                          </label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                            type="text"
-                            id="Mailing_Country"
-                            name="Mailing Country"
-                            maxLength="100"
-                          />
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row wfrm_fld_dpNn">
-                        <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
-                        >
-                          <label htmlFor="Lead_Source">Lead Source</label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <select
-                            className="zcwf_col_fld_slt"
-                            id="Lead_Source"
-                            name="Lead Source"
+                          <br />
+                          <div
+                            id="signupMainDiv"
+                            name="SIGNUPFORM"
+                            changeid="SIGNUPFORM"
+                            changename="SIGNUPFORM"
+                          
                           >
-                            <option value="-None-">-None-</option>
-                            <option value="Advertisement">Advertisement</option>
-                            <option value="Partner&#x20;Registration">
-                              Partner Registration
-                            </option>
-                            <option value="Webinars">Webinars</option>
-                            <option value="Website&#x20;Contact">
-                              Website Contact
-                            </option>
-                            <option
-                              selected
-                              value="Website&#x20;Resources&#x20;Download"
-                            >
-                              Website Resources Download
-                            </option>
-                            <option value="Cold&#x20;Call">Cold Call</option>
-                            <option value="Employee&#x20;Referral">
-                              Employee Referral
-                            </option>
-                            <option value="External&#x20;Referral">
-                              External Referral
-                            </option>
-                            <option value="OnlineStore">OnlineStore</option>
-                            <option value="Partner">Partner</option>
-                            <option value="Public&#x20;Relations">
-                              Public Relations
-                            </option>
-                            <option value="Sales&#x20;Mail&#x20;Alias">
-                              Sales Mail Alias
-                            </option>
-                            <option value="Seminar&#x20;Partner">
-                              Seminar Partner
-                            </option>
-                            <option value="Seminar-Internal">
-                              Seminar-Internal
-                            </option>
-                            <option value="Trade&#x20;Show">Trade Show</option>
-                            <option value="Web&#x20;Download">
-                              Web Download
-                            </option>
-                            <option value="Web&#x20;Research">
-                              Web Research
-                            </option>
-                            <option value="Web&#x20;Cases">Web Cases</option>
-                            <option value="Web&#x20;Mail">Web Mail</option>
-                            <option value="Chat">Chat</option>
-                            <option value="Twitter">Twitter</option>
-                            <option value="Facebook">Facebook</option>
-                            <option value="Google&#x2b;">Google&#x2b;</option>
-                          </select>
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row wfrm_fld_dpNn">
-                        <div
-                          className="zcwf_col_lab"
-                          style={{fontSize:'12px', fontFamily: 'Arial'}}
-                        >
-                          <label htmlFor="CONTACTCF6">Lead Source Form</label>
-                        </div>
-                        <div className="zcwf_col_fld">
-                          <input
-                            type="text"
-                            id="CONTACTCF6"
-                            name="CONTACTCF6"
-                            maxLength="255"
-                            value="none"
-                          />
-                          <div className="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div className="zcwf_row">
-                        <div className="zcwf_col_lab"></div>
-                        <div className="zcwf_col_fld">
-                                                  <input
-                                                      className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                           
+                              <form
+                                method="POST"
+                                id="zcampaignOptinForm"
+                                action="https://kter.maillist-manage.in/weboptin.zc"
+                                target="_blank"
+                               className="relative w-full mt-2 space-y-10"
+                              >
+                                <div
+                                  id="SIGNUP_BODY_ALL"
+                                  name="SIGNUP_BODY_ALL"
+                                >
+                                
+                                  
+                                        <div
+                                          name="fieldsdivSf"
+                                          className="flex-col space-y-5"
+                                        >
+                                          <div
+                                            className="zcsffield "
+                                            fieldid="71738000000000023"
+                                          >
+                                            <div>
+                                            <label
+                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                    htmlFor="CONTACT_EMAIL"
+                  >
+                    Email
+                  </label>
+                                              <input
+                                                maxLength="100"
+                                                placeholder="Business Email"
+                                                name="CONTACT_EMAIL"
+                                                changeitem="SIGNUP_FORM_FIELD"
+                                                type="text"
+                                                className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                                              />
+                                            </div>
+                                            <div></div>
+                                          </div>
+                                          <div
+                                            className="zcsffield "
+                                            fieldid="71738000000000029"
+                                          >
+                                            <div>
+                                            <label
+                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                    htmlFor="FIRSTNAME"
+                  >
+                    Full Name
+                  </label>
+                                              <input
+                                                maxLength="100"
+                                                placeholder="Full Name"
+                                                name="FIRSTNAME"
+                                                changeitem="SIGNUP_FORM_FIELD"
+                                                type="text"
+                                                className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                                              />
+                                            </div>
+                                            <div></div>
+                                          </div>
+                                          <div>
+                                          <input
+                                            type="submit"
+                                            action="Save"
+                                            id="zcWebOptin"
+                                            name="SIGNUP_SUBMIT_BUTTON"
+                                            changetype="SIGNUP_SUBMIT_BUTTON_TEXT"
+                                            value="Register Now"
+                                            className="  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
-                            type="submit"
-                            id="formsubmit"
-                            
-                            value="Submit"
-                            title="Submit"
-                          />
+                                          />
+                                        </div>
+                                        </div>
+                              
+                                     
+                                      
+                                    
+                                  {/* <!-- Do not edit the below Zoho Campaigns hidden tags --> 							 */}
+                                  <input
+                                    type="hidden"
+                                    id="fieldBorder"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="zc_trackCode"
+                                    id="zc_trackCode"
+                                    value="ZCFORMVIEW"
+                                    onLoad=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="viewFrom"
+                                    id="viewFrom"
+                                    value="URL_ACTION"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="submitType"
+                                    name="submitType"
+                                    value="optinCustomView"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="lD"
+                                    name="lD"
+                                    value="1fedd54b6f82645"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="emailReportId"
+                                    id="emailReportId"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="zx"
+                                    id="cmpZuid"
+                                    value="1df8ef16d9"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="zcvers"
+                                    value="2.0"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    name="oldListIds"
+                                    id="allCheckedListIds"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="mode"
+                                    name="mode"
+                                    value="OptinCreateView"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="zcld"
+                                    name="zcld"
+                                    value="1fedd54b6f82645"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="zctd"
+                                    name="zctd"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="document_domain"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="zc_Url"
+                                    value="kter.maillist-manage.in"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="new_optin_response_in"
+                                    value="0"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="duplicate_optin_response_in"
+                                    value="0"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="zc_formIx"
+                                    name="zc_formIx"
+                                    value="3zd179095996e297a4942da5ad9cf725919b2102257c52886d7ff2da954890cddd"
+                                  />
+                                  {/* <!-- End of the campaigns hidden tags --> */}
+                                </div>
+                                <input
+                                  type="hidden"
+                                  id="scriptless"
+                                  name="scriptless"
+                                  value="yes"
+                                />
+                              </form>
+                           
+                          </div>
                         </div>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -572,19 +554,19 @@ export const getServerSideProps = async ({ params }) => {
   );
   const data = await res.json();
   // console.log("data", data[0]);
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
-		method: 'get',
-	});
+  const res1 = await fetch("https://api.ktern.com/navbar", {
+    method: "get",
+  });
   const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
-		method: 'get',
-	});
-	const f_data = await res2.json();
+  const res2 = await fetch("https://api.ktern.com/footer", {
+    method: "get",
+  });
+  const f_data = await res2.json();
   return {
     props: {
-      webinar_Data: data[ 0 ],
+      webinar_Data: data[0],
       h_data: h_data,
-      f_data:f_data
+      f_data: f_data,
     },
   };
 };
