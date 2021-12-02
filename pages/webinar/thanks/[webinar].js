@@ -9,6 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import React from "react";
 import ICalendarLink from "react-icalendar-link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { data } from "autoprefixer";
 export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.start);
@@ -174,25 +175,25 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         {/* On demand Webinar */}
         {webinar_data.IsOnDemandWebinar && (
           <section className="relative py-32 text-center  bg-herogradient overflow-hidden justify-center text-white  ">
-            <h1 className="heading mb-5">On-demand Webinar</h1>
+            <h1 className="heading mb-5">{webinar_data.OnDemandWebinar.PageHeader}</h1>
             <p className="subheading mb-10">
-              Democratizing SAP Digital Transformation as a Service(#DXaaS)
+             {webinar_data.OnDemandWebinar.PageSubHeader}
             </p>
 
             <Tabs className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col mb-20">
               <TabList className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center mb-10">
                 <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
-                  Slide
+                  {webinar_data.OnDemandWebinar.Slide}
                 </Tab>
                 <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
-                 Video
+                 {webinar_data.OnDemandWebinar.Video}
                 </Tab>
               </TabList>
 
               <TabPanel className="  mx-auto flex justify-center iterms-center">
                 <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
                   <iframe
-                    src="https://www.slideshare.net/slideshow/embed_code/key/d5rGkEgXFDRN17"
+                    src={webinar_data.OnDemandWebinar.SlideURL}
                   width="560" height="315"
                     frameBorder="0"
                     marginWidth="0"
@@ -211,7 +212,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
               </TabPanel>
               <TabPanel className="  mx-auto flex justify-center iterms-center">
                 <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/1GLQROeWoC4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <iframe width="560" height="315" src={webinar_data.OnDemandWebinar.VideoURL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </h2>
               </TabPanel>
             </Tabs>
@@ -232,182 +233,35 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
               </h2>
             </div>
 
-            <div className="grid grid-cols-12 gap-6 mb-6">
-              <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4">
-                <div className="">
-                  <Link href="#_" passHref>
-                    <a className="relative block w-full h-44 overflow-hidden rounded">
-                      <Image
-                        className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                        src="/product/maps/maps_1.svg"
-                        alt="resource"
-                        layout="fill"
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div className="">
-                  <p className="hyperlink text-gray-400  uppercase mb-4">
-                    Resources
-                  </p>
-                  <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                    SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
-                  </span>
-                  <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
-                      <span className="hyperlink group-hover:text-gray-300">
-                        Read more
-                      </span>
-                      <svg
-                        className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
-                      </svg>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl p-4">
-                <div className="">
-                  <Link href="#_" passHref>
-                    <a className="relative block w-full h-44 overflow-hidden rounded">
-                      <Image
-                        className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                        src="/product/maps/maps_1.svg"
-                        alt="resource"
-                        layout="fill"
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div className="">
-                  <p className="hyperlink text-gray-400  uppercase mb-4">
-                    Resources
-                  </p>
-                  <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                    SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
-                  </span>
-                  <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
-                      <span className="hyperlink group-hover:text-gray-300">
-                        Read more
-                      </span>
-                      <svg
-                        className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
-                      </svg>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl p-4">
-                <div className="">
-                  <Link href="#_" passHref>
-                    <a className="relative block w-full h-44 overflow-hidden rounded">
-                      <Image
-                        className="object-cover bg-secondary object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                        src="/product/maps/maps_1.svg"
-                        alt="resource"
-                        layout="fill"
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div className="">
-                  <p className="hyperlink text-gray-400  uppercase mb-4">
-                    Resources
-                  </p>
-                  <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                    SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
-                  </span>
-                  <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
-                      <span className="hyperlink group-hover:text-gray-300">
-                        Read more
-                      </span>
-                      <svg
-                        className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
-                      </svg>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl p-4">
-                <div className="">
-                  <Link href="#_" passHref>
-                    <a className="relative block w-full h-44 overflow-hidden rounded">
-                      <Image
-                        className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                        src="/product/maps/maps_1.svg"
-                        alt="resource"
-                        layout="fill"
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div className="">
-                  <p className="hyperlink text-gray-400  uppercase mb-4">
-                    Resources
-                  </p>
-                  <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                    SAP Activate – The Heart of KTern and S/4HANA Migration{" "}
-                  </span>
-                  <Link href="#_" passHref>
-                    <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
-                      <span className="hyperlink group-hover:text-gray-300">
-                        Read more
-                      </span>
-                      <svg
-                        className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
-                      </svg>
-                    </a>
-                  </Link>
-                </div>
-              </div>
+            <div className="grid grid-cols-4 gap-6 mb-6">
+           {webinar_data.RelatedResources.map((data)=>( 
+           <div key="data" className={`labs`}>
+           <div  className={`relative w-full h-full bg-white  space-y-3 shadow-lg  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500   p-4`} >
+                   
+                                    <div className="bg-white">
+                                    <Link href={data.CTAUrl} passHref>
+                                            <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                            
+                                    <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                                    </a> 
+                                    </Link>
+                                    </div>
+        <Link href={data.CTAUrl} passHref>
+            <a className="bg-white">
+                                    <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
+                                <Link href={data.CTAUrl}  passHref>
+                                                <a className="flex bg-whiteinline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                                <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                                </svg>
+                                                </a>
+                                            </Link>
+                                            </a>
+                                    </Link>
+                                </div>
+                                </div>))}
+            
             </div>
             <div className="text-center">
               <Link href="#_" passHref>

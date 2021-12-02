@@ -361,7 +361,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                                 placeholder="Business Email"
                                                 name="CONTACT_EMAIL"
                                                 changeitem="SIGNUP_FORM_FIELD"
-                                                type="text"
+                                                type="email"
                                                 className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                               />
                                             </div>

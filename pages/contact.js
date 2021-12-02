@@ -401,7 +401,7 @@ export default function Contact({ data, h_data, f_data }) {
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                          type="text"
+                          type="email"
                           ftype="email"
                           id="Email"
                           name="Email"

@@ -226,15 +226,20 @@ This blueprint will help you define the right plan, the right effort estimate, t
             
                         <div className=" z-10 w-full md:max-w-2xl mt-20 lg:mt-0 lg:w-5/12" id="download"  style={{ paddingTop: '50px',
     marginTop: '-50px'}}>
-                            <div id="crmWebToEntityForm" className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
-                                <h4 className="w-full  card-heading  ">{data.DownloadWhitepaper}</h4>
-                               <form
+                             <div
+                  id="crmWebToEntityForm"
+                  className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl"
+                >
+                  <h4 className="w-full  card-heading  text-center">
+                    {data.FormFields.FormTitle}
+                  </h4>
+                  <form
                     className="relative w-full mt-6 space-y-8"
                     action="https://crm.zoho.in/crm/WebToContactForm"
                     name="WebToContacts240235000000441159"
                     method="POST"
-                   
                     acceptCharset="UTF-8"
+                    target="_blank"
                   >
                     <input
                       type="text"
@@ -259,7 +264,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       type="text"
                       style={{ display: "none" }}
                       name="returnURL"
-                      value="https&#x3a;&#x2f;&#x2f;web.ktern.com&#x2f;resources"
+                      value={data.ResourceUrl}
                     />
                     {/* <!-- Do not remove this code. --> */}
                     <input
@@ -275,84 +280,73 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       name="LDTuvid"
                     />
                     {/* <!-- Do not remove this code. --> */}
-                   
+
                     <div className="zcwf_row">
                       <div
                         className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                        
                       >
-                        <label htmlFor="Last_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Name</label>
+                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="First_Name">
+                         {data.FormFields.FirstName}
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
+                        required
+                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="text"
-                          id="Last_Name"
-                          name="Last Name"
-                                                  maxLength="80"
-                                                  className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                                  required
-                        />
+                          id="First_Name"
+                          name="First Name"
+                          maxLength="40"
+                        ></input>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
                     <div className="zcwf_row">
                       <div
                         className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
+                        
                       >
-                        <label htmlFor="Email" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Email</label>
+                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Last_Name">
+                        {data.FormFields.LastName}
+                        </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
+                        required
+                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          type="text"
+                          id="Last_Name"
+                          name="Last Name"
+                          maxLength="80"
+                        ></input>
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div
+                        className="zcwf_col_lab"
+                        
+                      >
+                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Email">
+                        {data.FormFields.Email}
+                        </label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                        required
+                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="email"
                           ftype="email"
                           id="Email"
                           name="Email"
-                                                  maxLength="100"
-                                                  className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                                  required
-                        />
+                          maxLength="100"
+                          
+                        ></input>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
-                    <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
-                      >
-                        <label htmlFor="Account_Name" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Organization</label>
-                      </div>
-                      <div className="zcwf_col_fld">
-                        <input
-                          type="text"
-                          id="Account_Name"
-                          name="Account Name"
-                                                  maxLength="100"
-                                                  className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                                  required
-                        />
-                        <div className="zcwf_col_help"></div>
-                      </div>
-                    </div>
-                    <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        style={{ fontSize: "12px", fontFamily: "Arial" }}
-                      >
-                        <label htmlFor="Mailing_Country" className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white">Country</label>
-                      </div>
-                      <div className="zcwf_col_fld">
-                        <input
-                          type="text"
-                          id="Mailing_Country"
-                          name="Mailing Country"
-                                                  maxLength="100"
-                                                  className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                                  required
-                        />
-                        <div className="zcwf_col_help"></div>
-                      </div>
-                    </div>
+
                     <div className="zcwf_row wfrm_fld_dpNn">
                       <div
                         className="zcwf_col_lab"
@@ -430,18 +424,17 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         <input
                           type="submit"
                           id="formsubmit"
-                          value="Submit"
-                                                  title="Submit"
-                                                  className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                          value={data.FormFields.SubmitButton}
+                          title="Submit"
+                          className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                         />
                       </div>
                     </div>
-                    
 
                     {/* <!-- Do not remove this --- Analytics Tracking code ends. --> */}
                   </form>
-                            </div>
+                </div>
                             <svg className="hidden md:absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
                             <svg className="hidden md:absolute bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-gray-50 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
                         </div>

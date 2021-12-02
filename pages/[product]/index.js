@@ -743,48 +743,32 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 
             <div className='grid grid-cols-12 gap-6 mb-6'>
               {stream_data.Resource.map((dt) => (
-                <div
-                  key='dt'
-                  className='relative col-span-12 space-y-3 md:col-span-5 lg:col-span-3 shadow-lg hover:shadow-xl  p-4'
-                >
-                  <div className=''>
-                    <Link href='#' passHref>
-                      <a className='relative block w-full h-44 overflow-hidden rounded'>
-                        <Image
-                          className='bg-secondary object-cover object-center w-full h-full transition duration-400 ease-out transform scale-100 hover:scale-105'
-                          src={dt.Icon.imageURL}
-                          alt='resource'
-                          layout='fill'
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className=''>
-                    <p className='hyperlink text-gray-400  uppercase mb-4'>{dt.CardTitle}</p>
-                    <span className='block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 '>
-                      {dt.CardDescription}
-                    </span>
-                    <Link href={dt.CTAUrl} passHref>
-                      <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
-                        <span className='hyperlink group-hover:text-gray-300'>{dt.CTAText}</span>
-                        <svg
-                          className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
-                          fill='none'
-                          stroke='currentColor'
-                          viewBox='0 0 24 24'
-                          xmlns='http://www.w3.org/2000/svg'
-                        >
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth='2'
-                            d='M17 8l4 4m0 0l-4 4m4-4H3'
-                          ></path>
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+               <div key="data" className={`relative transition transform hover:-translate-y-3 duration-500   space-y-3 shadow-lg hover:shadow-xl-${data.RelatedStream}-secondary hover:border-black border-2 p-4`} >
+               <div className="">
+               <Link href={data.PageURL} passHref>
+                       <a className="relative block w-full h-44 overflow-hidden rounded">
+                            <div className={`z-20  ${data.RelatedStream} opacity-60  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-white inline-block`}>
+                   <span className="text-white">Digital {data.RelatedStream}</span>
+               </div>
+               <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.ImageURL} alt="resource" width="550" height="300"/>
+               </a> 
+               </Link>
+               </div>
+<Link href={data.PageURL} passHref>
+<a>
+               <p className="hyperlink text-gray-400  uppercase mb-4">Webinar</p>
+               <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.WebinarTitle}</span>
+           <Link href={data.PageURL}  passHref>
+                           <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                           <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                           <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                           </svg>
+                           </a>
+                       </Link>
+                       </a>
+               </Link>
+           </div>
               ))}
             </div>
             <div className='text-center'>

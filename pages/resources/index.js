@@ -211,10 +211,10 @@ console.log(filterArray)
           </div>
         </section>
         {/* Filter Section */}
-        <section className="sm:hidden block pb-10 background flex items-center justify-center p-5 sticky z-30 md:top-16 sm:top-10">
+        <section className="sm:hidden block  bg-black flex items-center justify-center p-5 sticky z-30 md:top-16 sm:top-10">
                 <h1 className="w-1/6 uppercase text-white navbar-h ">Filter By:</h1>
                 <form onChange={handleChange} className="w-5.5/6 grid grid-cols-4 gap-7">
-                  <select name="stream" id="stream" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
+                  <select name="stream" id="stream" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -222,7 +222,7 @@ console.log(filterArray)
                     {streamOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="topic" id="topic" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
+                  <select name="topic" id="topic" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -230,7 +230,7 @@ console.log(filterArray)
                     {topicOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="role" id="role" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
+                  <select name="role" id="role" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -238,7 +238,7 @@ console.log(filterArray)
                     {roleOptions.map((item)=>(
                       <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
                   </select>
-                  <select name="type" id="type" className="p-3 pr-6 text-black bg-white  w-120" style={{ webkitAppearance: 'none',
+                  <select name="type" id="type" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
    mozAppearance: 'none',
    appearance: 'none',
     background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
@@ -283,7 +283,7 @@ console.log(filterArray)
                       <Link href={dt.ResourceURL} passHref>
                         <a className="relative block w-full h-44 overflow-hidden rounded">
                           <div
-                            className={`z-20  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-black inline-block`}
+                            className={`z-20 ${dt.DigitalStream} absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-gray-200 opacity-60 inline-block`}
                           >
                             <span>Digital {dt.DigitalStream}</span>
                           </div>
