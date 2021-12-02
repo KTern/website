@@ -235,8 +235,9 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
 
             <div className="grid grid-cols-4 gap-6 mb-6">
            {webinar_data.RelatedResources.map((data)=>( 
-           <div key="data" className={`labs`}>
-           <div  className={`relative w-full h-full bg-white  space-y-3 shadow-lg  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500   p-4`} >
+           
+             
+           <div key="data" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
                    
                                     <div className="bg-white">
                                     <Link href={data.CTAUrl} passHref>
@@ -250,7 +251,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
             <a className="bg-white">
                                     <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                                 <Link href={data.CTAUrl}  passHref>
-                                                <a className="flex bg-whiteinline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                                <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                                 <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -260,7 +261,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                                             </a>
                                     </Link>
                                 </div>
-                                </div>))}
+                                ))}
             
             </div>
             <div className="text-center">

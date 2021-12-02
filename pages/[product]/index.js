@@ -346,14 +346,14 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
           </div>
           <Carousel className='bots flex p-10  z-10' responsive={responsive_2}>
-            {stream_data.Logos.map((data) => (
-              <div key='data' className='p-3 bots-card flex-row'>
+            {stream_data.Logos.map((dt) => (
+              <div key='dt' className='p-3 bots-card flex-row'>
                 <Image
                   className=' w-auto lg:w-100'
-                  src={data.logoUrl}
+                  src={dt.logoUrl}
                   alt=''
-                  width={data.width}
-                  height={data.height}
+                  width={dt.width}
+                  height={dt.height}
                   layout=''
                 />
               </div>
@@ -741,34 +741,32 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               <h2 className='section-heading  text-gray-800 '>{stream_data.RelatedResourcesSectionHeading}</h2>
             </div>
 
-            <div className='grid grid-cols-12 gap-6 mb-6'>
+            <div className='grid grid-cols-4 gap-6 mb-6'>
               {stream_data.Resource.map((dt) => (
-               <div key="data" className={`relative transition transform hover:-translate-y-3 duration-500   space-y-3 shadow-lg hover:shadow-xl-${data.RelatedStream}-secondary hover:border-black border-2 p-4`} >
-               <div className="">
-               <Link href={data.PageURL} passHref>
-                       <a className="relative block w-full h-44 overflow-hidden rounded">
-                            <div className={`z-20  ${data.RelatedStream} opacity-60  absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-white inline-block`}>
-                   <span className="text-white">Digital {data.RelatedStream}</span>
-               </div>
-               <Image className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.ImageURL} alt="resource" width="550" height="300"/>
-               </a> 
-               </Link>
-               </div>
-<Link href={data.PageURL} passHref>
-<a>
-               <p className="hyperlink text-gray-400  uppercase mb-4">Webinar</p>
-               <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.WebinarTitle}</span>
-           <Link href={data.PageURL}  passHref>
-                           <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
-                           <span className="hyperlink group-hover:text-gray-300">Read more</span>
-                           <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                           </svg>
-                           </a>
-                       </Link>
-                       </a>
-               </Link>
-           </div>
+             <div key="dt" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
+                   
+             <div className="bg-white">
+             <Link href={dt.CTAUrl} passHref>
+                     <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                     
+             <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width="550" height="300"/>
+             </a> 
+             </Link>
+             </div>
+<Link href={dt.CTAUrl} passHref>
+<a className="bg-white">
+             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.CardTitle}</span>
+         <Link href={dt.CTAUrl}  passHref>
+                         <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                         <span className="hyperlink group-hover:text-gray-300">{dt.CTAText}</span>
+                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                         </svg>
+                         </a>
+                     </Link>
+                     </a>
+             </Link>
+         </div>
               ))}
             </div>
             <div className='text-center'>

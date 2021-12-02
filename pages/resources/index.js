@@ -276,7 +276,7 @@ console.log(filterArray)
                 {ResourceList.map((dt) =>        (
                    <div
                     key="dt"
-                    className="relative  space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4"
+                    className="relative transition transform hover:-translate-y-3 duration-500 hover:border-black border-2   space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4"
                     >
                    
                       <div className="">
