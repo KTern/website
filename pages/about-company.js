@@ -324,8 +324,9 @@ export default function About({ data,h_data,f_data }) {
 
             <div className='grid grid-cols-4 gap-6 mb-6'>
               {data.RelatedResources.map((data) => (
-              <div key="data" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
-                   
+              <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
+<span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
+                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-dxaas-primary `}>   
               <div className="bg-white">
               <Link href={data.CTAUrl} passHref>
                       <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
@@ -347,6 +348,7 @@ export default function About({ data,h_data,f_data }) {
                       </Link>
                       </a>
               </Link>
+              </div>
           </div>
               ))}
             </div>

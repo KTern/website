@@ -179,17 +179,17 @@ console.log(filterArray)
     
       
       <Layout h_data={h_data} f_data={f_data}>
-        <section className="w-full py-32 background">
-          <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
-            <div className="relative z-20 flex flex-col  w-2/3 h-full ">
+        <section className="w-full py-32 background overflow-hidden">
+          <div className="flex flex-col items-center md:px-12 mx-auto lg:flex-row">
+            <div className="relative z-20 flex flex-col sm:px-4 md:w-2/3 h-full ">
               <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.ResourcesTranslations.Resources}
               </p>
-              <h1 className="heading text-white ">{data.PageHeader.header}</h1>
+              <h1 className="heading  text-white ">{data.PageHeader.header}</h1>
               <p className="subheading text-gray-100 pb-7">
                 {data.PageHeader.subHeading}
               </p>
-              <div className="md:flex md:flex-row space-x-4">
+              <div className="md:flex md:flex-row md:space-x-4 sm:space-y-4">
                 <Link
                   rel="noopener noreferrer"
                   href={data.PageHeader.primaryCTA.linkURL}
@@ -251,34 +251,18 @@ console.log(filterArray)
         <section className="w-full lg:p-10 ">
           
           <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
-            {/* <!-- On demand Filter Options--> */}
-
-            {/* <!-- On demand Webinar Card Display--> */}
+            
           
             <div className="w-full   md:pl-20 mb-4 md:mb-0  mt-10">
-              {/* Chips Section */}
-              {/* <section className=' flex sm:pt-5  pb-10 items-center justify-end'>
-                <input id='demo-2' style={{ width: "35%" }} type='search' placeholder='Search' />
-              </section> */}
-          
-              {/* <section className="pb-10 ">
-                {data.ResourceTypeFilters.map((dt) => (
-                  <button
-                    key="dt"
-                    className="hyperlink click-chip outline-green mr-3 focus:bg-gray-200"
-                    onClick={() => { handleFilter(dt.FilterSlug)}}
-                  >
-                    {dt.FilterName}
-                  </button>
-                ))}
-              </section> */}
+            
               <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
                 {ResourceList.map((dt) =>        (
                    <div
                     key="dt"
-                    className="relative transition transform hover:-translate-y-3 duration-500 hover:border-black border-2   space-y-3 shadow-lg hover:shadow-xl hover:border-black border-2 p-4"
+                    className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500"
                     >
-                   
+                       <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.DigitalStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
+                   <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${dt.DigitalStream}-primary `}>
                       <div className="">
                       <Link href={dt.ResourceURL} passHref>
                         <a className="relative block w-full h-44 overflow-hidden rounded">
@@ -329,6 +313,7 @@ console.log(filterArray)
                       </a>
                     </Link>
                  </div>  
+                 </div>
               ))}
               </div>
             </div>

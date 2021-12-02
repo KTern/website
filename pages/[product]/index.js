@@ -361,6 +361,45 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </Carousel>
         </div>
         {/* <!-- /Customer logos Section --> */}
+         {/* <!-- Why Ktern --> */}
+         <section className={`md:px-20 maps text-white py-10 rounded-tr-large rounded-b-large mx-10 mb-10`}>
+          <h2 className='section-heading text-center text-white mt-10 mb-3'>feature_data.WhySectionTitle</h2>
+          <p className='section-subheading text-center text-white'>feature_data.WhySectionDescription</p>
+          <div className='flex justify-center items-center   mx-auto space-x-10 '>
+            <div className='flex flex-wrap justify-center items-center'>
+             
+                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
+                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
+                  </div>
+                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
+                  <p className='card-subheading text-gray-200'>Lorem </p>
+                </div>
+                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
+                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
+                  </div>
+                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
+                  <p className='card-subheading text-gray-200'>Lorem </p>
+                </div>
+                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
+                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
+                  </div>
+                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
+                  <p className='card-subheading text-gray-200'>Lorem </p>
+                </div>
+                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
+                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
+                  </div>
+                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
+                  <p className='card-subheading text-gray-200'>Lorem </p>
+                </div>
+            </div>
+          </div>
+        </section>
+        {/* <!-- /Why Ktern --> */}
         {/* Streams Content Section */}
         <section className='px-5 pb-10 relative overflow-hidden '>
           {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
@@ -641,18 +680,25 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         </section>
         {/*/ Streams Content Section */}
         {/* Bots Section */}
-        <div className='md:px-20 py-10'>
+        <div className={`md:px-20 py-10 `} >
           <div className='px-20'>
             <h2 className='section-heading text-center mb-4'>{stream_data.BotsSectionHeading}</h2>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
           </div>
           <Carousel className='bots flex p-10  ' responsive={responsive}>
             {stream_data.BotCards.map((dt) => (
-              <div key="dt"
-                className={`p-3 bots-card flex-row justify-center items-center shadow-xl  border-2 border-${stream_data.cssstreamtag}-400 text-center `}
+              <div key="dt" className=" relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'250px',width:'310px'}}></span>
+              <div 
+                className={`relative shadow bots-card bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
               >
-                <p className='text-lg font-bold mt-7 mb-4'>{dt.CardTitle}</p>
-                <p className='text-md'>{dt.CardDescription}</p>
+                <div className="relative bg-whitev flex flex-col justify-between flex-1 mr-12 text-black">
+                                            
+                                            <h3 className="my-2 card-heading  text-gray-800">{dt.CardTitle}</h3>       
+                                             <p className="mb-2 card-subheading text-gray-600">{dt.CardDescription}</p>
+                                   
+                                </div>
+              </div>
               </div>
             ))}
           </Carousel>
@@ -742,31 +788,33 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             </div>
 
             <div className='grid grid-cols-4 gap-6 mb-6'>
-              {stream_data.Resource.map((dt) => (
-             <div key="dt" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
-                   
-             <div className="bg-white">
-             <Link href={dt.CTAUrl} passHref>
-                     <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-                     
-             <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width="550" height="300"/>
-             </a> 
-             </Link>
-             </div>
-<Link href={dt.CTAUrl} passHref>
-<a className="bg-white">
-             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.CardTitle}</span>
-         <Link href={dt.CTAUrl}  passHref>
-                         <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                         <span className="hyperlink group-hover:text-gray-300">{dt.CTAText}</span>
-                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                         </svg>
-                         </a>
-                     </Link>
-                     </a>
-             </Link>
-         </div>
+              {stream_data.Resource.map((data) => (
+              <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
+              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
+                              <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-dxaas-primary `}>   
+                            <div className="bg-white">
+                            <Link href={data.CTAUrl} passHref>
+                                    <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    
+                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                            </a> 
+                            </Link>
+                            </div>
+              <Link href={data.CTAUrl} passHref>
+              <a className="bg-white">
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
+                        <Link href={data.CTAUrl}  passHref>
+                                        <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                                    </a>
+                            </Link>
+                            </div>
+                        </div>
               ))}
             </div>
             <div className='text-center'>

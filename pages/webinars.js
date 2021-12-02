@@ -219,7 +219,9 @@ export default function Webinar ({data,h_data,f_data}) {
                        
                         <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
 {data.WebinarList.map(data=>(
-    <div key="data" className={`relative transition transform hover:-translate-y-3 duration-500   space-y-3 shadow-lg hover:shadow-xl-${data.RelatedStream}-secondary hover:border-black border-2 p-4`} >
+    <div key="data"   className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
+                                    <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${data.RelatedStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
+                                    <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${data.RelatedStream}-primary `}>
                                     <div className="">
                                     <Link href={data.PageURL} passHref>
                                             <a className="relative block w-full h-44 overflow-hidden rounded">
@@ -244,6 +246,7 @@ export default function Webinar ({data,h_data,f_data}) {
                                             </Link>
                                             </a>
                                     </Link>
+                                </div>
                                 </div>
 ))}
                             

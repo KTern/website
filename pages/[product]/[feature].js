@@ -432,30 +432,32 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
 
             <div className='grid grid-cols-4 gap-6 mb-6'>
               {feature_data.RelatedResourcesList.map((data) => (
-              <div key="data" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
-                   
-              <div className="bg-white">
-              <Link href={data.CTAUrl} passHref>
-                      <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-                      
-              <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
-              </a> 
-              </Link>
-              </div>
-<Link href={data.CTAUrl} passHref>
-<a className="bg-white">
-              <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
-          <Link href={data.CTAUrl}  passHref>
-                          <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                          <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
-                          <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                          </svg>
-                          </a>
-                      </Link>
-                      </a>
-              </Link>
-          </div>
+                <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
+                <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
+                                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-dxaas-primary `}>   
+                              <div className="bg-white">
+                              <Link href={data.CTAUrl} passHref>
+                                      <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                      
+                              <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                              </a> 
+                              </Link>
+                              </div>
+                <Link href={data.CTAUrl} passHref>
+                <a className="bg-white">
+                              <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
+                          <Link href={data.CTAUrl}  passHref>
+                                          <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                          <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                          <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                          </svg>
+                                          </a>
+                                      </Link>
+                                      </a>
+                              </Link>
+                              </div>
+                          </div>
               ))}
             </div>
             <div className='text-center'>
