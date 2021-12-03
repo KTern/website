@@ -5,10 +5,13 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Dropdown from 'react-dropdown';
 import _ from 'lodash';
+import {useRouter} from "next/router";
 export default function Resources({ data,h_data,f_data }) {
+ const router=useRouter();
+ 
   function colorChange () {
     if (typeof process.browser)
       document.getElementById('option').style.backgroundColor="#00000"
@@ -64,7 +67,21 @@ console.log(filterArray)
        setResourceList(filter);
    
   }
-
+  let video="Video";
+  useEffect(() => {
+  if(router.query.type){
+    let filterArray = {}
+    filterArray.ResourceType = router.query.type
+      
+console.log(filterArray)
+   
+filter=_.filter(data.ResourcesList,filterArray)
+console.log(filter)
+  setResourceList(filter);
+  if(process.browser)
+  document.getElementById('type').value=router.query.type;
+   }
+  },[])
   function handleFilter (element) {
     filter=[]
     data.ResourcesList.map(item => {
@@ -179,7 +196,7 @@ console.log(filterArray)
     
       
       <Layout h_data={h_data} f_data={f_data}>
-        <section className="w-full py-32 background overflow-hidden">
+        <section className="w-full py-24 background overflow-hidden">
           <div className="flex flex-col items-center md:px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col sm:px-4 md:w-2/3 h-full ">
               <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
@@ -256,13 +273,13 @@ console.log(filterArray)
             <div className="w-full   md:pl-20 mb-4 md:mb-0  mt-10">
             
               <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
-                {ResourceList.map((dt) =>        (
+                {ResourceList.slice(0).reverse().map((dt) =>        (
                    <div
                     key="dt"
                     className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500"
                     >
                        <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.DigitalStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
-                   <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${dt.DigitalStream}-primary `}>
+                   <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${dt.DigitalStream}-primary `}>
                       <div className="">
                       <Link href={dt.ResourceURL} passHref>
                         <a className="relative block w-full h-44 overflow-hidden rounded">
@@ -271,13 +288,31 @@ console.log(filterArray)
                           >
                             <span>Digital {dt.DigitalStream}</span>
                           </div>
-                          <Image
+
+                        { dt.ResourceType==video ?
+                         ( <div>
+                           <div className="absolute inset-0 z-10 flex items-center justify-center sm:mb-40">
+                          
+                                        <span className="flex text-white items-center justify-center w-12 h-12 bg-black rounded-full group-hover:text-black shadow-2xl group-hover:bg-white ">
+                                           <svg className="w-auto h-6 ml-1   fill-current" viewBox="0 0 52 66" xmlns="http://www.w3.org/2000/svg"><path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z" fillRule="nonzero"></path></svg>
+                                       </span>
+                                
+                   </div> <Image
                             className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                             src={dt.ImageURL}
                             alt="resource"
                             width="550"
                             height="300"
                           />
+                          </div>):(
+                            <Image
+                            className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                            src={dt.ImageURL}
+                            alt="resource"
+                            width="550"
+                            height="300"
+                          />
+                          )}
                         </a>
                       </Link>
                     </div>
@@ -361,7 +396,8 @@ console.log(filterArray)
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({params}) => {
+  // console.log(params);
   // strapi data to be acquired
   const res = await fetch("https://api.ktern.com/resources");
   const data = await res.json();

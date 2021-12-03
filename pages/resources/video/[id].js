@@ -1,3 +1,4 @@
+import { VideoJsonLd } from "next-seo";
 import Layout from "../../../component/Layout"
 import Head from "next/head"
 import Image from "next/image";
@@ -128,11 +129,27 @@ export default function Video({ data,h_data,f_data }){
         'http://plus.google.com/your_profile',
       ]}
     />
+     <VideoJsonLd
+        name='How to make a Party Coffee Cake'
+        description='This is how you make a Party Coffee Cake.'
+        contentUrl='http://www.example.com/video123.mp4'
+        embedUrl='http://www.example.com/videoplayer?video=123'
+        uploadDate='2018-02-05T08:00:00+08:00'
+      
+        thumbnailUrls={[
+          "https://example.com/photos/1x1/photo.jpg",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/16x9/photo.jpg",
+        ]}
+      />
         <Layout h_data={h_data} f_data={f_data}>
-          <section className={`py-20 px-5 ${data.VideoLandingPage.DigitalStream} flex items-center justify-center text-center`}>
+          <section className={`py-28 px-20 bg-${data.VideoLandingPage.DigitalStream}-secondary space-x-10 flex items-center justify-center text-center`}>
           <div className="w-1/2">
-            <h2 className="text-white section-heading mb-5 text-justify">{data.VideoLandingPage.PageHeader}</h2>
-            <p className="text-gray-100 section-subheading"> <Markdown
+          <p className={`max-w-max px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}>
+               { data.Tag}
+              </p>
+            <h2 className=" card-heading mb-5 text-justify">{data.VideoLandingPage.PageHeader}</h2>
+            <p className=" card-subheading text-justify"> <Markdown
                     options={{
                       overrides: {
                         h3: {

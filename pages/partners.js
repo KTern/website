@@ -131,17 +131,17 @@ export default function Partners({ data,h_data,f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Header Section --> */}
-        <section className='w-full py-28 bg-secondary'>
-          <div className='flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row'>
-            <div className='relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2'>
+        <section className='w-full py-20 px-20 bg-secondary'>
+          <div className='flex flex-col space-x-10  items-center px-4 mx-auto  lg:flex-row'>
+            <div className=' relative z-20 flex flex-col items-start justify-center w-full h-full md:w-1/2'>
               <p className='max-w-max px-2 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full '>
                 {data.PageHeader.Tag}
               </p>
-              <h5 className='mb-3 heading  sm:text-4xl '>{data.PageHeader.header}</h5>
-              <p className='py-5 mb-5 text-gray-600 subheading'>
-                <span className=' subheading'>{data.PageHeader.subHeading}</span>{" "}
+              <h5 className='mb-2 heading  sm:text-4xl '>{data.PageHeader.header}</h5>
+              <p className='py-5 mb-2 text-gray-600 subheading'>
+                <span className=' subheading'>{data.PageHeader.subHeading}</span>
               </p>
-              <div className='md:flex md:items-center md:space-x-4 sm:space-y-6'>
+              <div className='md:flex  md:space-x-4 sm:space-y-6'>
                 <Link href={data.PageHeader.primaryCTA.linkURL} passHref>
                   <a className='lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button '>
                     {data.PageHeader.primaryCTA.buttonTitle}
@@ -157,13 +157,13 @@ export default function Partners({ data,h_data,f_data }) {
                 </Link>
               </div>
             </div>
-            <div className='hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
+            <div className=' hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 md:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
                 src={data.PageHeader.ImageURL}
                 alt='hero image'
-                width={600}
-                height={420}
+                width={data.PageHeader.ImageWidth}
+                height={data.PageHeader.ImageHeight}
               />
             </div>
           </div>
@@ -171,30 +171,39 @@ export default function Partners({ data,h_data,f_data }) {
         {/* <!--KTern Partnership Models--> */}
 
         <section className='relative mx-auto max-w-5xl w-full bg-white'>
-          <div className=' w-full px-5 py-10 mx-auto  md:px-10  '>
+          <div className=' w-full text-center px-5 py-10 mx-auto  md:px-10  '>
             <h5 className='mb-3 section-heading'>{data.PartnershipOpportunities.SectionTitle}</h5>
             <p className=' mb-5 text-gray-600 section-subheading'>
               <span className='section-subheading mb-10'>{data.PartnershipOpportunities.SectionDescription}</span>
             </p>
             <div className='container grid   h-auto md:grid-cols-2 gap-4 sm:mt-16 '>
               {data.PartnershipOpportunities.PartnerCard.map((dt) => (
-                <Link key="dt" href={dt.PageURL} passHref>
-                  <a className='bg-black relative border-2 border-black shadow-md flex flex-col items-start h-50 overflow-hidden rounded-xl group '>
-                    <div
-                      className='block bg-white w-full transition duration-300 ease-in-out transform bg-center bg-cover h-60 hover:scale-110'
-                      style={{ backgroundImage: "url('/partner/consulting-partner-card.svg')" }}
-                    />
-                    <div className='relative z-20 w-full h-1/2 py-8 text-white bg-black border-t-0  px-7'>
-                      <p className='inline-block text-xs  absolute top-0 -mt-3.5 rounded-md px-4 py-2 uppercase text-black bg-gray-200'>
-                        {dt.PartnerTitle}
-                      </p>
-                      <h2 className='mb-5 md:text-3xl card-heading sm:text-xl '>
-                        <p>{dt.CardTitle}</p>
-                      </h2>
-                      <p className='mb-2 card-subheading  text-white opacity-100'>{dt.CardDescription}</p>
-                    </div>
-                  </a>
-                </Link>
+                <div key="dt" className="text-center p-10">
+                  <div className="rounded-full mb-2">
+                    <Image className="rounded-full bg-secondary" src={dt.ImageURL} height={dt.ImageWidth} width={dt.ImageHeight} alt="Partnership models"/>
+                  </div>
+                  <div className="card-heading mb-2">{dt.CardTitle}</div>
+                  <div className="card-subheading mb-2 text-center">{dt.CardDescription}</div>
+                    <Link href={dt.PageURL} passHref>
+                            <a className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
+                              <span className='hyperlink group-hover:text-gray-400'>{dt.CTAText}</span>
+                              <svg
+                                className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
+                                fill='none'
+                                stroke='currentColor'
+                                viewBox='0 0 24 24'
+                                xmlns='http://www.w3.org/2000/svg'
+                              >
+                                <path
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth='2'
+                                  d='M17 8l4 4m0 0l-4 4m4-4H3'
+                                ></path>
+                              </svg>
+                            </a>
+                          </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -203,8 +212,8 @@ export default function Partners({ data,h_data,f_data }) {
         {/* <!--KTern's Partners --> */}
         <div className="px-4 py-5">
 						<div className=" px-4 mx-auto">
-							<h2 className=" text-center  text-gray-500 card-heading sm:text-xl">
-								{data.previouslyseenontitle}
+							<h2 className=" text-center mb-20 mt-1 text-gray-500  section-heading sm:text-xl">
+								{data.PartnerLogoTitle}
 							</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
@@ -224,7 +233,7 @@ export default function Partners({ data,h_data,f_data }) {
 					</div>
 
         {/* <!--Faq Section--> */}
-        <section className='py-10 bg-project-white'>
+        <section className='bg-project-white'>
           <h2 className='mb-2 section-heading  text-center'>{data.faqtitle}</h2>
           <div className='flex space-x-10 p-10'>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto'>
@@ -259,14 +268,14 @@ export default function Partners({ data,h_data,f_data }) {
         </section>
 
         {/* <!--Steps to join KTern--> */}
-        <section className="pt-5 pb-0 2xl:py-20 py-5 bg-black overflow-hidden">
+        <section className="py-14  2xl:py-20  bg-black overflow-hidden">
             <div className="px-14 md:mx-auto ">
                 <div className="mb-10 md:max-w-4xl  md:mx-auto sm:mb-24 text-center">
                             <span className="section-heading  text-white">{data.PartnershipSteps.Title}</span>
                 <h2 className="mt-4 section-subheading text-white">{data.PartnershipSteps.Description}</h2>
                 </div>
-                <div className="grid grid-cols-3 sm:grid-cols-1 gap-3 mb-10">
-                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10 md:mt-20 md:mb-20 lg:mb-0">
+                <div className="grid grid-cols-3 sm:grid-cols-1 gap-3 ">
+                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10 md:mb-10  lg:mb-0">
                     <div className="relative flex-col space-y-3">
                     
                     <div className="md:mr-8">

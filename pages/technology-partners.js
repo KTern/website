@@ -134,8 +134,8 @@ export default function technical_partner ({data,h_data,f_data}) {
       ]}
     />
         <Layout h_data={h_data} f_data={f_data}>
-            <section className="w-full py-28 bg-secondary">
-            <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
+            <section className="w-full py-8 bg-secondary">
+            <div className="flex flex-col items-center space-x-14 px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
                     <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     {data.PageHeader.Tag}
@@ -158,12 +158,12 @@ export default function technical_partner ({data,h_data,f_data}) {
                 </div>
                 </div>
                <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-                    <Image className="relative z-40 w-full h-full" src={data.PageHeader.ImageURL} alt="hero image" width={600 } height={420 }/>
+                    <Image className="relative z-40 w-full h-full" src={data.PageHeader.ImageURL} alt="hero image" width={data.PageHeader.ImageWidth } height={data.PageHeader.ImageHeight}/>
                      </div>   </div>
             </section>
            {/* <!-- Why Become KTern ISV Partner--> */}
             <section className="relative w-full md:px-8  leading-6 bg-gray-800 border-0 border-gray-200 border-solid text-black">
-            <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
+            <div className="flex flex-col items-center max-w-6xl px-8  mx-auto leading-6 border-solid md:items-stretch md:justify-center py-10">
                 <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl text-white">{data.WhySectionTitle}</h2>
                
                 <div className="grid grid-cols-3 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
@@ -183,7 +183,7 @@ export default function technical_partner ({data,h_data,f_data}) {
             </div>
             </section>
             {/* <!-- Partners --> */}
-            <div className="px-4 py-5">
+            <div className="px-4 py-10">
 						<div className=" px-4 mx-auto">
 							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
 								{data.PartnersLogoTitle}
@@ -206,14 +206,14 @@ export default function technical_partner ({data,h_data,f_data}) {
 					</div>
               {/* <!--Steps to join KTern--> */}
         
-         <section className="pt-5 pb-0 2xl:py-20 py-5 bg-black overflow-hidden">
+         <section className="pt-10 pb-10 2xl:py-20 py-5 bg-black overflow-hidden">
             <div className="px-14 md:mx-auto ">
                 <div className="mb-10 md:max-w-4xl  md:mx-auto sm:mb-24 text-center">
                             <span className="section-heading  text-white">{data.PartnershipSteps.Title}</span>
                 <h2 className="mt-4 section-subheading text-white">{data.PartnershipSteps.Description}</h2>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-1 gap-3 mb-10">
-                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10 md:mt-20 md:mb-20 lg:mb-0">
+                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10  md:mb-20 lg:mb-0">
                     <div className="relative flex-col space-y-3">
                     
                     <div className="md:mr-8">

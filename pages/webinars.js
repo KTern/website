@@ -218,10 +218,10 @@ export default function Webinar ({data,h_data,f_data}) {
                         {/* Chips Section */}
                        
                         <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
-{data.WebinarList.map(data=>(
+{data.WebinarList.slice(0).reverse().map(data=>(
     <div key="data"   className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
                                     <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${data.RelatedStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
-                                    <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${data.RelatedStream}-primary `}>
+                                    <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${data.RelatedStream}-primary `}>
                                     <div className="">
                                     <Link href={data.PageURL} passHref>
                                             <a className="relative block w-full h-44 overflow-hidden rounded">
@@ -238,7 +238,7 @@ export default function Webinar ({data,h_data,f_data}) {
                                     <span className="block card-subheading font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.WebinarTitle}</span>
                                 <Link href={data.PageURL}  passHref>
                                                 <a className="inline-flex items-center   text-black hover:text-gray-400 group ">
-                                                <span className="hyperlink group-hover:text-gray-300">Read more</span>
+                                                <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                                 </svg>

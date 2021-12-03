@@ -175,7 +175,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-maps-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-maps-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -246,7 +246,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-project-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -322,7 +322,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-process-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-process-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -398,7 +398,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-labs-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-labs-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -473,7 +473,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border-2 border-black hover:border-mines-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-mines-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">

@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Layout from "../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,12 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -33,7 +40,10 @@ export default function Consultingpartner({data,h_data,f_data}){
   });
     return (
         <>
-            
+            <Head><link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/></Head>
             
             <NextSeo
 				title={data.PageSEO.PageTitle}
@@ -136,7 +146,7 @@ export default function Consultingpartner({data,h_data,f_data}){
     />
         <Layout h_data={h_data} f_data={f_data}>                
             {/* <!-- Header Section --> */}
-                <section className="w-full py-28 bg-secondary">
+                <section className="w-full py-12 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
                     <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
@@ -160,7 +170,7 @@ export default function Consultingpartner({data,h_data,f_data}){
                 </div>
                 </div>
                <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-                    <Image className="relative z-40 w-full h-full" src={data.PageHeader.ImageURL} alt="hero image" width={600 } height={420 }/>
+                    <Image className="relative z-40 w-full h-full" src={data.PageHeader.ImageURL} alt="hero image" width={data.PageHeader.ImageWidth} height={data.PageHeader.ImageHeight }/>
                      </div>   </div>
             </section>
          {/* <!-- Why Become KTern Consulting Partner--> */}
@@ -187,8 +197,8 @@ export default function Consultingpartner({data,h_data,f_data}){
             {/* <!-- Partners --> */}
             <div className="px-4 py-5">
 						<div className=" px-4 mx-auto">
-							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
-								{data.PartnersLogoTitle}
+							<h2 className=" text-center mb-7 text-gray-500 section-heading sm:text-xl">
+								{data.PartnerLogoTitle}
 							</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
@@ -208,14 +218,14 @@ export default function Consultingpartner({data,h_data,f_data}){
 					</div>
            
         {/* <!--Detailed Look at Partnership Benefits--> */}
-        <section className="relative w-full md:px-8  leading-6 bg-white border-0 border-gray-200 border-solid text-black">
-            <div className="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
+        <section className="relative w-full md:px-8 py-10 pb-20 leading-6 bg-white border-0 border-gray-200 border-solid text-black">
+            <div className="flex flex-col items-center max-w-6xl px-8  mx-auto leading-6 border-solid md:items-stretch md:justify-center ">
                 <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl">{data.WhySectionTitle}</h2>
                
-                <div className="grid grid-cols-3 md:gap-5 mt-10 sm:grid-cols-1 lg:grid-cols-12">
-                   {data.PartnershipBenefits.map((data)=>( <div key="data" className="max-w-xs col-span-4  border-0 border-gray-200 text-gray-50">
+                <div className="grid grid-cols-4  mt-10 sm:grid-cols-1 ">
+                   {data.PartnershipBenefits.map((data)=>( <div key="data" className="shadow-lg   border-gray-200 text-gray-50">
                     <div className="box-border flex flex-col  h-full px-2 py-8 mx-4 leading-6 border-solid sm:items-start sm:text-left">
-                            <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-500 rounded-full ">
+                            <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase rounded-full ">
                                         <Image src={data.Icon.imageURL} height={data.Icon.height} width={data.Icon.width} alt={data.Icon.imageDescription}></Image>
                                         
               </p>
@@ -230,21 +240,15 @@ export default function Consultingpartner({data,h_data,f_data}){
             </section>
             {/* <!--KTern Customer Testimonials--> */}
        
-          
-         
-   
-
-
-
             {/* <!--Steps to join KTern--> */}
-            <section className="pt-5 pb-0 2xl:py-20 py-5 bg-black overflow-hidden">
+            <section className="pt-10 pb-5 2xl:py-20 py-5 bg-black overflow-hidden">
             <div className="px-14 md:mx-auto ">
                 <div className="mb-10 md:max-w-4xl  md:mx-auto sm:mb-24 text-center">
                             <span className="section-heading  text-white">{data.PartnershipSteps.Title}</span>
                 <h2 className="mt-4 section-subheading text-white">{data.PartnershipSteps.Description}</h2>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-1 gap-3 mb-10">
-                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10 md:mt-20 md:mb-20 lg:mb-0">
+                {data.PartnershipSteps.Steps.map((dt,index)=>(<div key="index" className="w-full  md:px-10  md:mb-20 lg:mb-0">
                     <div className="relative flex-col space-y-3">
                     
                     <div className="md:mr-8">
@@ -263,22 +267,28 @@ export default function Consultingpartner({data,h_data,f_data}){
             </section>
                {/* <!--KTern FAQ--> */}
 
-               <section className="py-10 bg-projects-white">
-                    <h2 className="mb-2 section-heading  text-center">{data.FAQTitle}</h2>
-                    <div className="flex space-x-10 p-10">
-                        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+               <section className="py-10 bg-secondary">
+                    <h2 className="mb-10 section-heading  text-center">{data.FAQTitle}</h2>
+                    <div className="px-20">
+                        <div className=" ">
                             
-                            {data.FAQSection.map((data) => (
-                                <details key="data" className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
-                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                                        <span className="card-subheading">{data.Question}</span>
-                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                            </summary>
-                                            <hr/>
-                                    <div className="p-4 hyperlink">
-                                          {data.Answer}
-                                    </div>
-                            </details>))}
+                            {data.FAQSection.map((data,index) => (
+                             
+                               <Accordion key="data" className=" mb-3 shadow-lg " >
+                               <AccordionSummary
+                                 expandIcon={<ExpandMoreIcon />}
+                                 aria-controls="panel1a-content"
+                                 id="panel1a-header"
+                                 className=""
+                               >
+                                 <Typography className="navbar-h">{data.Question}</Typography>
+                               </AccordionSummary>
+                               <AccordionDetails>
+                                 <Typography className="navbar-s">{data.Answer}</Typography>
+                               </AccordionDetails>
+                             </Accordion>
+                            
+                            ))}
                              
                          
                             

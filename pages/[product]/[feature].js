@@ -136,7 +136,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
         <section className={`w-full py-20 `} >
-          <div className='flex flex-col items-center px-12 mx-auto lg:flex-row'>
+          <div className='flex flex-col space-x-20 items-center px-12 mx-auto lg:flex-row'>
             <div className='relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2'>
               {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
@@ -161,7 +161,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               </div>
             </div>
 
-            <div className='hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
+            <div className=' hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
                 src={feature_data.PageHeader.ImageURL}
@@ -173,7 +173,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
           </div>
         </section>
         {/* <!-- Why Ktern --> */}
-        <section className={`md:px-20 ${feature_data.cssStreamTag} text-white py-5 rounded-tr-large rounded-b-large mx-10`}>
+        <section className={`md:px-20 ${feature_data.cssStreamTag} text-white py-5 rounded-tr-large rounded-b-large mx-4`}>
           <h2 className='section-heading text-center text-white mt-10 mb-3'>{feature_data.WhySectionTitle}</h2>
           <p className='section-subheading text-center text-white'>{feature_data.WhySectionDescription}</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
@@ -393,11 +393,11 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
         <section className='py-10 bg-project-white'>
           <h2 className='mb-2 section-heading  text-center'>{feature_data.FAQSectionTitle}</h2>
           <div className='flex space-x-10 p-10'>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto'>
+            <div className='flex-col w-full space-y-4 '>
               {feature_data.FAQ.map((dt) => (
-                <details key = "dt" className='relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
+                <details key = "dt" className='relative w-full overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
                   <summary
-                    className=' flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800'
+                    className=' flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-3 hover:text-gray-800'
                     style={{ listStyle: "none" }}
                   >
                     <span className='card-subheading'>{dt.Question}</span>
@@ -434,7 +434,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               {feature_data.RelatedResourcesList.map((data) => (
                 <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
                 <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
-                                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-dxaas-primary `}>   
+                                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-dxaas-primary `}>   
                               <div className="bg-white">
                               <Link href={data.CTAUrl} passHref>
                                       <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">

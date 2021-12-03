@@ -9,6 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import { EventJsonLd } from "next-seo";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { data } from "autoprefixer";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
@@ -237,12 +238,12 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     </a>
                   </Link>
                 </p>
-                <h2 className=" card-heading  text-black sm: md:">About</h2>
+                <h2 className=" card-heading  text-black sm: md:">{webinar_Data.AboutTitle}</h2>
                 <p className=" text-gray-600 card-subheading md:pr-16 text-justify">
                   {webinar_Data.About}
                 </p>
                 <h2 className=" card-heading  text-black sm: md:">
-                  You&apos;ll Learn
+                  {webinar_Data.LearningPointsTitle}
                 </h2>
                 <ul
                   type="circle"
@@ -267,11 +268,11 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
               </div>
 
               <div className="w-full mt-16 md:mt-0 md:w-2/5">
-                <div className="mb-14">
+                <div className="mb-10">
                   <h2 className="card-heading   text-black sm: md:">
-                    Your Panelists
+                    {webinar_Data.PanelistTitle}
                   </h2>
-                  <div className="flex items-center  py-7 rounded-xl">
+                  <div className="flex items-center  py-5 rounded-xl">
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
                         <Image
@@ -290,9 +291,9 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     ))}
                   </div>
                 </div>
-                <div className=" relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
+                <div className=" relative z-10 h-auto p-8  overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
                   <h3 className="mb-6 card-heading  text-center">
-                    Register for the Webinar
+                    {webinar_Data.FormFields.FormTitle}
                   </h3>
                   <div className=" relative w-full mt-6 space-y-10">
                     {/* <!--Zoho Campaigns Web-Optin Form Starts Here-->  */}
@@ -354,7 +355,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="CONTACT_EMAIL"
                   >
-                    Email
+                    {webinar_Data.FormFields.FormTitle}
                   </label>
                                               <input
                                                 maxLength="100"
@@ -376,7 +377,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="FIRSTNAME"
                   >
-                    Full Name
+                    {webinar_Data.FormFields.FullName}
                   </label>
                                               <input
                                                 maxLength="100"
@@ -396,7 +397,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                             id="zcWebOptin"
                                             name="SIGNUP_SUBMIT_BUTTON"
                                             changetype="SIGNUP_SUBMIT_BUTTON_TEXT"
-                                            value="Register Now"
+                                            value={webinar_Data.FormFields.SubmitButton}
                                             className="  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                                           />
@@ -470,7 +471,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                     type="hidden"
                                     id="zcld"
                                     name="zcld"
-                                    value="1fedd54b6f82645"
+                                    value={webinar_Data.FormFields.FormId}
                                   />
                                   <input
                                     type="hidden"

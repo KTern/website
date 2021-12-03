@@ -690,7 +690,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               <div key="dt" className=" relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
               <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'250px',width:'310px'}}></span>
               <div 
-                className={`relative shadow bots-card bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
+                className={`relative shadow bots-card bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
               >
                 <div className="relative bg-whitev flex flex-col justify-between flex-1 mr-12 text-black">
                                             
@@ -790,8 +790,8 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             <div className='grid grid-cols-4 gap-6 mb-6'>
               {stream_data.Resource.map((data) => (
               <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
-              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
-                              <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border-2 border-black hover:border-dxaas-primary `}>   
+              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'400px',width:'345px'}}></span>
+                              <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
                                     <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
@@ -844,19 +844,19 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* / Resources Setion */}
         {/* Cta Section */}
         <section className='bg-white'>
-          <div className='md:px-8 md:py-8 mx-auto sm:py-10  lg:py-20 max-w-7xl'>
+          <div className='md:px-2 md:py-8 mx-auto sm:py-10  lg:py-20 max-w-7xl'>
             <div
               className={`relative py-6 overflow-hidden  ${stream_data.cssstreamtag} lg:py-12 md:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between md:shadow-xl md:bg-purple-1000`}
             >
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
-              <div className='relative p-6  md:p-0 md:pb-4'>
+              <div className='relative w-2/3 p-6  md:p-0 md:pb-4'>
                 <h2 className='card-heading  leading-9 tracking-tight text-white sm:text-4xl sm:leading-10'>
                   {stream_data.FinalCTASection.CTATitle}
                 </h2>
                 <p className='w-full mt-5 card-subheading text-white '>{stream_data.FinalCTASection.CTADescription}</p>
               </div>
-              <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
+              <div className='relative w-1/3 flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
                   <a className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}

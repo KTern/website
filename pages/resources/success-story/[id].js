@@ -264,7 +264,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                       overrides: {
                         h3: {
                           props: {
-                            className: "text-2xl mb-4",
+                            className: "text-2xl mb-4 font-semibold",
                           },
                         },
                          h1: {
@@ -286,6 +286,11 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                                 props: {
                                     className:"mb-4"
                                 }
+                            },
+                            strong:{
+                              props:{
+                                className:""
+                              }
                             }
                       },
                     }}

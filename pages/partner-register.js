@@ -107,9 +107,9 @@ export default function PartnerContact({ data, h_data, f_data }) {
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
 
       <Layout h_data={h_data} f_data={f_data}>
-        <div className="py-20 w-full min-h-screen bg-white flex justify-center ">
-          <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-1/3 py-12 md:px-12 bg-white rounded-2xl md:shadow-xl z-20">
-            <div>
+        <div className="py-20 p-4 bg-partnercontact bg-secondary  w-full min-h-screen bg-white flex justify-center ">
+          <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-2/5 py-12 p-4 bg-white rounded-2xl md:shadow-xl z-20">
+            <div >
               <h1 className="  text-center mb-4 cursor-pointer section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
@@ -145,7 +145,7 @@ export default function PartnerContact({ data, h_data, f_data }) {
               </p>
             </div>
             <form
-              className="relative w-full mt-6 space-y-8"
+              className="relative px-5 w-full mt-6 space-y-8"
               action="https://crm.zoho.in/crm/WebToContactForm"
               name="WebToContacts240235000000441168"
               method="POST"
@@ -267,19 +267,19 @@ export default function PartnerContact({ data, h_data, f_data }) {
               <div className="zcwf_row">
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
-                  <input type="checkbox" id="privacy" value="true" required />
+                  <input className="mr-2" type="checkbox" id="privacy" value="true" required />
                   <label>
                     <Markdown
                       options={{
                         overrides: {
                           p: {
                             props: {
-                              className: "text-sm text-justify leading-5",
+                              className: "text-sm text-justify ",
                             },
                           },
                           strong: {
                             props: {
-                              className: "leading-8",
+                              className: "",
                             },
                           },
                         },

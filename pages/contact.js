@@ -124,154 +124,70 @@ export default function Contact({ data, h_data, f_data }) {
         ]}
       />
       <Layout h_data={h_data} f_data={f_data}>
-        <section className="relative  bg-white md:m-10 lg:py-0">
-          <div className="flex flex-col items-center justify-between p-4 md:px-10 mx-auto  xl:px-5 lg:flex-row">
-            <div className="flex flex-col items-center w-full md:px-10 pt-0 pb-20 lg:pt-0 lg:flex-row">
-              <div className="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-8/12">
-                <div className="relative flex flex-col items-center  w-full h-full lg:pr-10">
-                  <div className="relative max-w-md">
+        <section className="relative  bg-white pt-10 md:m-10 ">
+          <div className="flex flex-col items-center justify-between  mx-auto  xl:px-5 lg:flex-row">
+            <div className="flex flex-col items-center space-x-20 mx-20 w-full pt-0  lg:pt-0 lg:flex-row">
+              <div className="relative w-1/2">
+                <div className="relative flex flex-col items-center  w-full h-full ">
+                  <div className="relative ">
                     <div className="pb-16 mb-8 border-b border-gray-400">
-                      <h2 className="mt-5 mb-10 sm:text-center  section-heading text-black">
+                      <h2 className="mt-5 mb-10 sm:text-center  heading text-black">
                         {data.PageTitle}
                       </h2>
-                      <div className="py-2 px-5 mb-4 background rounded-lg">
+                      <div className="py-2  mb-4  rounded-lg">
                         <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
-                            <svg
-                              className="w-4 h-4"
-                              width="18"
-                              height="18"
-                              viewBox="0 0 18 18"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M17.9347 13.3167C17.811 12.6058 17.2022 12.0401 16.4551 11.94L12.3077 11.3855C11.555 11.2832 10.8101 11.6825 10.4984 12.3528C10.4185 12.5237 10.3521 12.7014 10.2981 12.8848C9.13582 12.4 8.09277 11.7004 7.19375 10.8018C6.29473 9.90315 5.59374 8.86053 5.10992 7.6987C5.29332 7.64471 5.4711 7.57835 5.64213 7.4985C6.31274 7.18695 6.70993 6.44351 6.60866 5.69108L6.05394 1.54536C5.9538 0.797426 5.38784 0.188953 4.66434 0.0641091C4.40105 0.0202451 4.18164 0 3.97348 0C2.61201 0 1.32368 0.71982 0.612565 1.87716C-0.157059 3.13122 -0.0501675 4.73507 0.128736 5.9925C0.533802 8.84029 1.99766 11.7038 4.14451 13.8498C5.74002 15.4446 7.71246 16.6402 9.84693 17.306C10.9339 17.6457 12.2942 18 13.605 18C14.5851 18 15.537 17.802 16.3235 17.2498C17.3733 16.5109 18 15.3052 18 14.0196C18 13.8115 17.9797 13.5911 17.9347 13.3167Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </span>
-                          <pre className=" text-white">
+                     
+                          <p className=" section-subheading text-black">
                           
                             <Markdown
-                              options={{
-                                overrides: {
-                                  p: {
-                                    props: {
-                                      className:
-                                        "text-sm text-justify leading-5",
-                                    },
-                                  },
-                                  strong: {
-                                    props: {
-                                      className: "leading-8",
-                                    },
-                                  },
-                                },
-                              }}
+                                      options={{
+                                        overrides: {
+                                          h3: {
+                                            props: {
+                                              className: "text-2xl mb-4 text-justify",
+                                            },
+                                          },
+                                           h1: {
+                                            props: {
+                                              className: "text-2xl mb-4 text-justify",
+                                            },
+                                          },
+                                          li: {
+                                            props: {
+                                              className: "text-justify list-decimal ml-4 mb-1 flex-col",
+                                            }
+                                              },
+                                              p: {
+                                                  props: {
+                                                  className:"text-justify mb-3 leading-7"
+                                              }
+                                              },
+                                              ol: {
+                                                  props: {
+                                                      className:"mb-4  text-justify"
+                                                  }
+                                              },
+                                              strong:{
+                                                props:{
+                                                  className:"font-semibold"
+                                                }
+                                              }
+                                        },
+                                      }}
+                               
                               className=""
                             >
-                              {data.PhoneNumber}
+                              {data.ContactMessage}
                             </Markdown>
-                          </pre>
+                          </p>
                         </div>
                       </div>
-                      <div className="py-2 px-5 mb-4 background rounded-lg">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
-                            <svg
-                              className="w-5 h-4"
-                              width="21"
-                              height="14"
-                              viewBox="0 0 21 14"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M18.8109 0H2.1878C0.981688 0 0 0.980499 0 2.18676V11.8119C0 13.0182 0.981688 14 2.1878 14H18.8122C20.0183 14 21 13.0182 21 11.8119V2.18676C20.9987 0.980499 20.017 0 18.8109 0ZM19.2492 4.73317L11.716 8.67092C11.3393 8.86387 10.9193 8.96887 10.4993 8.96887C10.0794 8.96887 9.66858 8.86387 9.28273 8.67092L1.74945 4.73317V2.75511L10.0872 7.11288C10.3405 7.24414 10.6555 7.24414 10.9101 7.11288L19.2479 2.75511V4.73317H19.2492Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </span>
-                          <pre className="  text-white">
-                            <Markdown
-                              options={{
-                                overrides: {
-                                  p: {
-                                    props: {
-                                      className:
-                                        "text-sm text-justify leading-5",
-                                    },
-                                  },
-                                  strong: {
-                                    props: {
-                                      className: "leading-8",
-                                    },
-                                  },
-                                },
-                              }}
-                              className=""
-                            >
-                              {data.Emails}
-                            </Markdown>
-                          </pre>
-                        </div>
-                      </div>
-                      <div className="py-2 px-5 mb-4 background rounded-lg">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-12 h-12 mr-5 background rounded-lg">
-                            <svg
-                              className="w-5 h-5"
-                              width="23"
-                              height="23"
-                              viewBox="0 0 23 23"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M18.5 11C16.0185 11 14 13.0962 14 15.6729C14 19.2285 17.8951 22.6871 18.0612 22.8339C18.3123 23.0554 18.6877 23.0554 18.9388 22.8339C19.1049 22.6885 23 19.2298 23 15.6729C23 13.0962 20.9815 11 18.5 11ZM18.5 17.4618C17.5077 17.4618 16.7003 16.6338 16.7003 15.6161C16.7003 14.5985 17.5077 13.7705 18.5 13.7705C19.4923 13.7705 20.2997 14.5985 20.2997 15.6161C20.2997 16.6338 19.4923 17.4618 18.5 17.4618Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M9.01758 0C4.04824 0 0 4.04035 0 9C0 13.9597 4.04824 18 9.01758 18C9.90081 18 10.7583 17.8745 11.5604 17.6315C10.1794 14.5374 10.8571 11.7539 12.7236 9.9193C12.6912 9.9193 12.2597 9.73436 12.2272 9.72086C8.69567 8.37903 5.3927 12.6232 8.35888 16.156C6.02299 15.94 4.00361 14.6171 2.84987 12.7096C4.09829 12.4153 5.00721 11.3057 5.02344 9.9922C5.04373 9.16199 5.60505 8.59232 6.30433 8.43573C9.41794 7.77021 9.7128 3.90535 8.51307 1.83051C9.34355 1.78461 10.0442 1.80756 11.0383 2.10049C10.7881 4.61407 12.1501 7.66087 15.1596 7.37468L16.0158 7.27614C16.0875 7.57312 16.1335 7.87011 16.1605 8.18464C16.7272 8.08745 17.4468 8.06855 18 8.17519C17.5739 3.60027 13.7056 0 9.01758 0Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </span>
-                          <pre className=" subheading text-white">
-                            <Markdown
-                              options={{
-                                overrides: {
-                                  p: {
-                                    props: {
-                                      className:
-                                        "text-sm text-justify leading-5 ",
-                                    },
-                                  },
-                                  strong: {
-                                    props: {
-                                      className: "leading-8",
-                                    },
-                                  },
-                                  h3: {
-                                    props: {
-                                      className: "leading-8 ",
-                                    },
-                                  },
-                                },
-                              }}
-                              className=""
-                            >
-                              {data.Address}
-                            </Markdown>
-                          </pre>
-                        </div>
-                      </div>
+                 
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="relative z-10 w-full  mt-20 lg:mt-0 lg:w-4/12">
+              <div className="relative w-1/2 z-10 mt-20 lg:mt-0 ">
                 <div
                   id="crmWebToEntityForm"
                   className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-4 md:p-10 bg-white md:shadow-2xl rounded-xl"
@@ -535,12 +451,12 @@ export default function Contact({ data, h_data, f_data }) {
                       overrides: {
                         p:{
                           props:{
-                            className:"text-sm text-justify leading-5"
+                            className:"card-subheading text-justify"
                           }
                         },
                         strong:{
                           props:{
-                            className:"leading-8"
+                            className:""
                           }
                         }
                       }}}
@@ -566,6 +482,137 @@ export default function Contact({ data, h_data, f_data }) {
               </div>
             </div>
           </div>
+        </section>
+        <section className="px-36 pb-10">
+               <div className="grid-cols-3 grid gap-5">
+                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                        <div className="flex items-center">
+                     
+                          <p className="p-10 px-10 text-white">
+                          
+                            <Markdown
+                              options={{
+                                overrides: {
+                                  h3: {
+                                    props: {
+                                      className: "text-2xl mb-4 text-justify",
+                                    },
+                                  },
+                                  
+                                   h1: {
+                                    props: {
+                                      className: "text-2xl mb-4 text-justify",
+                                    },
+                                  },
+                                  li: {
+                                    props: {
+                                      className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                                    }
+                                      },
+                                      p: {
+                                          props: {
+                                          className:"text-justify mb-3"
+                                      }
+                                      },
+                                      ol: {
+                                          props: {
+                                              className:"mb-4 text-justify"
+                                          }
+                                      }
+                                },
+                              }}
+                              className=""
+                            >
+                              {data.PhoneNumber}
+                            </Markdown>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                        <div className="flex items-center">
+                        
+                          <p className="p-10 px-10  text-white">
+                            <Markdown 
+                              options={{
+                                overrides: {
+                                  h3: {
+                                    props: {
+                                      className: "text-2xl mb-4 ",
+                                    },
+                                  },
+                                  
+                                   h1: {
+                                    props: {
+                                      className: "text-2xl mb-4 ",
+                                    },
+                                  },
+                                  li: {
+                                    props: {
+                                      className: " list-decimal ml-3 mb-1 flex-col",
+                                    }
+                                      },
+                                      p: {
+                                          props: {
+                                          className:" mb-3"
+                                      }
+                                      },
+                                      ol: {
+                                          props: {
+                                              className:"mb-4 "
+                                          }
+                                      }
+                                },
+                              }}
+                             
+                            >
+                              {data.Email}
+                            </Markdown>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+                        <div className="flex items-center">
+                         
+                          <p className="p-10 px-10   text-white">
+                            <Markdown
+                              options={{
+                                overrides: {
+                                  h3: {
+                                    props: {
+                                      className: " mb-4 text-justify",
+                                    },
+                                  },
+                                  
+                                   h1: {
+                                    props: {
+                                      className: "text-2xl mb-4 text-justify",
+                                    },
+                                  },
+                                  li: {
+                                    props: {
+                                      className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                                    }
+                                      },
+                                      p: {
+                                          props: {
+                                          className:"text-justify mb-3"
+                                      }
+                                      },
+                                      ol: {
+                                          props: {
+                                              className:"mb-4 text-justify"
+                                          }
+                                      }
+                                },
+                              }}
+                              className=""
+                            >
+                              {data.Address}
+                            </Markdown>
+                          </p>
+                        </div>
+                      </div>
+                      </div>
         </section>
       </Layout>
     </>
