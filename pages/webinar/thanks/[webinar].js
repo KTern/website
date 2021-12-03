@@ -135,37 +135,29 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
       
       <Layout h_data={h_data} f_data={f_data}>
         {!webinar_data.IsOnDemandWebinar && (
-          <section className="relative py-32   overflow-hidden flex  bg-herogradient justify-center ">
-            <div className="hidden xl:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-34 lg:mt-24">
-              <Image
-                src="/404/five-stars.svg"
-                alt=""
-                width={400}
-                height={300}
-              />
-            </div>
+          <section className={`relative py-20   overflow-hidden flex   justify-center bg-${webinar_data.CssStreamTag}-secondary`}>
+           
 
             <div className="container px-3 mx-auto">
-              <div className="max-w-3xl mx-auto pb-10 flex-col  text-center">
-                <h2 className="my-10 heading font-bold font-heading text-white ">
-                  Thank You for Registering for the webinar
+              <div className="max-w-3xl mx-auto  flex-col  text-center">
+                <h2 className="my-10 heading font-bold font-heading text-black ">
+                  {webinar_data.WebinarThanksPage.PageHeader}
                 </h2>
                 <div className="max-w-md mx-auto">
-                  <p className="mb-10  card-subheading text-gray-200">
-                    We look forward to you joining our Webinar
+                  <p className="mb-10  subheading text-gray-600">
+                   {webinar_data.WebinarThanksPage.PageSubHeader}
                   </p>
                   <div className="flex space-x-6 items-center justify-center">
-                    <Link href="/" passHref>
-                      <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-white shadow text-lg text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+                    {/* <Link href="/" passHref>
+                      <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
                         Return Home
                       </a>
-                    </Link>
-                    <ICalendarLink event={event} className="text-white ">
-                      <div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-white shadow text-lg text-white font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
-                        Add to Calendar
+                    </Link> */}
+                    <ICalendarLink event={event} className="text-black ">
+                      <div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+                       {webinar_data.WebinarThanksPage.CTAButton.buttonTitle}
                       </div>
                     </ICalendarLink>
-                    ;
                   </div>
                 </div>
               </div>
@@ -174,24 +166,27 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         )}
         {/* On demand Webinar */}
         {webinar_data.IsOnDemandWebinar && (
-          <section className="relative py-32 text-center  bg-herogradient overflow-hidden justify-center text-white  ">
+          <div className={`relative py-24 text-center flex-col   overflow-hidden justify-center text-white  bg-${webinar_data.CssStreamTag}-secondary`}>
+          <section className="relative  text-center flex overflow-hidden justify-center text-black  ">
+            <div className="w-1/2">
             <h1 className="heading mb-5">{webinar_data.OnDemandWebinar.PageHeader}</h1>
             <p className="subheading mb-10">
              {webinar_data.OnDemandWebinar.PageSubHeader}
             </p>
-
-            <Tabs className="px-5 pt-10 pb-0  mx-auto flex flex-wrap flex-col mb-20">
-              <TabList className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center mb-10">
-                <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
+</div>
+<div  className="w-1/2">
+            <Tabs className="px-5  pb-0  mx-auto flex flex-wrap flex-col ">
+              <TabList className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center ">
+                <Tab className="cursor-pointer hyperlink uppercase text-black sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200  tracking-wider rounded-t ">
                   {webinar_data.OnDemandWebinar.Slide}
                 </Tab>
-                <Tab className="cursor-pointer hyperlink uppercase text-white  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200 text-white tracking-wider rounded-t ">
+                <Tab className="cursor-pointer hyperlink uppercase text-black  sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200  tracking-wider rounded-t ">
                  {webinar_data.OnDemandWebinar.Video}
                 </Tab>
               </TabList>
 
-              <TabPanel className="  mx-auto flex justify-center iterms-center">
-                <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
+              <TabPanel className="  justify-center items-center">
+                <h2 className="">
                   <iframe
                     src={webinar_data.OnDemandWebinar.SlideURL}
                   width="560" height="315"
@@ -210,26 +205,28 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                   </iframe>
                 </h2>
               </TabPanel>
-              <TabPanel className="  mx-auto flex justify-center iterms-center">
-                <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
+              <TabPanel className="  flex justify-center items-center">
+                <h2 className="">
                   <iframe width="560" height="315" src={webinar_data.OnDemandWebinar.VideoURL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </h2>
               </TabPanel>
             </Tabs>
-
-            <Link href="/" passHref>
-              <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:textblack shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
-                Return Home
-              </a>
-            </Link>
+</div>
+            
           </section>
+          {/* <Link href="/" passHref>
+          <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:textblack shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
+            Return Home
+          </a>
+        </Link> */}
+        </div>
         )}
         {/* /On demand Webinar */}
         <section className="w-full mb-10 pt-8 bg-white sm:pt-12 md:pt-16">
           <div className="px-2 mx-auto max-w-7xl">
             <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
               <h2 className="section-heading  text-gray-800 ">
-                Related Resources
+                {webinar_data.RelatedResourcesTitle}
               </h2>
             </div>
 
@@ -265,10 +262,10 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
             
             </div>
             <div className="text-center">
-              <Link href="#_" passHref>
+              <Link href="/resources" passHref>
                 <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
                   <span className="hyperlink group-hover:text-gray-300">
-                    View All Resources
+                    {webinar_data.ViewAllResourcesTitle}
                   </span>
                   <svg
                     className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
