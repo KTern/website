@@ -362,7 +362,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         </div>
         {/* <!-- /Customer logos Section --> */}
          {/* <!-- Why Ktern --> */}
-         <section className={`md:px-20 maps text-white py-10 rounded-tr-large rounded-b-large mx-10 mb-10`}>
+         <section className={`md:px-20 ${stream_data.cssstreamtag} text-white py-10 rounded-tr-large rounded-b-large mx-10 mb-10`}>
           <h2 className='section-heading text-center text-white mt-10 mb-3'>feature_data.WhySectionTitle</h2>
           <p className='section-subheading text-center text-white'>feature_data.WhySectionDescription</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
@@ -531,7 +531,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                               fillRule='evenodd'
                               clipRule='evenodd'
                               d='M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z'
-                              fill='#F28900'
+                              fill={dt.topwing}
                             />
                           </svg>
                         </div>
@@ -550,7 +550,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                               fillRule='evenodd'
                               clipRule='evenodd'
                               d='M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z'
-                              fill='#FF9970'
+                              fill={dt.bottomwing}
                             />
                           </svg>
                         </div>
@@ -725,21 +725,15 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                       <div className='absolute top-0 right-0'>
                         <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
                       </div>
-                      <div className='px-4 md:px-10'>
-                        <h3 className='mb-8 card-subheading text-white'>{dt.TestimonialStatement}</h3>
-                        <div className='flex flex-wrap items-center'>
-                          <div className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'>
-                            <Image
-                              width='60%'
-                              height='60%'
-                              className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'
-                              src={dt.AuthorAvatarURL}
-                              alt=''
-                            />
+                      <div className='px-4 md:px-10 flex-col text-center'>
+                          <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>
+                          <div className='flex-col items-center justify-center'>
+                            
+                            <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorName}</p>
+                            <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorDescription}</p>
                           </div>
-                          <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorName}</p>
                         </div>
-                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -754,21 +748,15 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                         <div className='absolute top-0 right-0'>
                           <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
                         </div>
-                        <div className='px-4 md:px-10'>
-                          <h3 className='mb-8 card-subheading text-white'>{dt.TestimonialStatement}</h3>
-                          <div className='flex flex-wrap items-center'>
-                            <div className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'>
-                              <Image
-                                width='60%'
-                                height='60%'
-                                className='w-16 h-16 mb-4 md:mb-0 mr-6 rounded-full'
-                                src={dt.AuthorAvatarURL}
-                                alt=''
-                              />
-                            </div>
+                        <div className='px-4 md:px-10 flex-col text-center'>
+                          <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>
+                          <div className='flex-col items-center justify-center'>
+                            
                             <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorName}</p>
+                            <p className='mb-4 md:mb-0 text-gray-300 hyperlink'>{dt.AuthorDescription}</p>
                           </div>
                         </div>
+
                       </div>
                     </div>
                   </div>

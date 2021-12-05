@@ -295,7 +295,7 @@ export default function PartnerContact({ data, h_data, f_data }) {
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
                   <input
-                    className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                    className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                     type="submit"
                     id="formsubmit"

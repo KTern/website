@@ -7,6 +7,8 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import { FAQPageJsonLd } from "next-seo";
 import Carousel from 'react-multi-carousel';
+
+import Markdown from "markdown-to-jsx";
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -148,7 +150,7 @@ export default function Partners({ data,h_data,f_data }) {
                   </a>
                 </Link>
                 <Link href={data.PageHeader.secondaryCTA.linkURL} passHref>
-                  <a className=' inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button'>
+                  <a className='lg:inline-block py-4 px-6 bg-white hover:bg-gray-300 hover:text-black shadow uppercase text-black border-2 border-black  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button '>
                     {data.PageHeader.secondaryCTA.buttonTitle}
                     <svg className='inline-block w-2 ml-2' fill='currentColor' viewBox='0 0 12 12'>
                       <path d='M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z'></path>
@@ -283,7 +285,29 @@ export default function Partners({ data,h_data,f_data }) {
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-2 card-heading text-white">{dt.StepTitle}</h3>
-                        <p className="card-subheading text-gray-200">{dt.StepDescription}</p>
+                        <p className="card-subheading text-gray-200"> <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >{dt.StepDescription}</Markdown></p>
                     </div>
                     </div>
                 </div>))}

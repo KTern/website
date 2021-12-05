@@ -168,7 +168,7 @@ export default function Webinar ({data,h_data,f_data}) {
                                            {data.FeaturedWebinar.WebinarDescription}
                                                     </span>
                                                     <div className="items-center sm:flex">
-                                                        <div className="relative">
+                                                        <div className="relative mb-5">
                                                             <div className="flex mb-5">
 
                                                         {data.FeaturedWebinar.Speaker.map((data) => (
@@ -191,6 +191,11 @@ export default function Webinar ({data,h_data,f_data}) {
                                                           </div>
                                                             
                                                         </div>
+                                                        <Link href={data.FeaturedWebinar.WebinarURL}>
+										<a target="_blank" className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+                                        {data.FeaturedWebinar.CTAText}
+										</a>
+									</Link>
                                                     
                                 </div>
                                                 </a>

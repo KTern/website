@@ -470,7 +470,7 @@ export default function Contact({ data, h_data, f_data }) {
                         <input
                           type="submit"
                           id="formsubmit"
-                                           className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                                           className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                           value="Submit"
                           title="Submit"

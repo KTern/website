@@ -7,6 +7,8 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
+
+import Markdown from "markdown-to-jsx";
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -221,7 +223,29 @@ export default function technical_partner ({data,h_data,f_data}) {
                     </div>
                     <div className="max-w-xs">
                         <h3 className="mb-2 card-heading text-white">{dt.StepTitle}</h3>
-                        <p className="card-subheading text-gray-200">{dt.StepDescription}</p>
+                        <p className="card-subheading text-gray-200"> <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-900 hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className=""
+                            >{dt.StepDescription}</Markdown></p>
                     </div>
                     </div>
                 </div>))}

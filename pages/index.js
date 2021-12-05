@@ -769,7 +769,7 @@ function Home ({ data ,h_data,f_data}) {
 								<div className="max-w-md mx-auto pb-10">
 									<p className="mb-5  card-subheading text-gray-800"> {} </p>
 									<Link href={data.CTASection.CTAButtonLink}>
-										<a className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+										<a target="_blank" className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
 											{data.CTASection.CTAButtonText}
 										</a>
 									</Link>

@@ -148,7 +148,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               <p className=' text-gray-600 pb-7 subheading'>{feature_data.PageHeader.subHeading}</p>
               <div className='md:flex md:flex-row  w-full sm:w-auto sm:flex-row md:space-x-10'>
                 <Link href={feature_data.PageHeader.primaryCTA.linkURL} passHref>
-                  <a className='sm:mb-4 button inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200'>
+                <a className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -382,7 +382,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                       </svg>
                     </span>
                     <h3 className='mb-3   card-heading text-white'>{dt.CardTitle}</h3>
-                    <p className=' card-subheading text-gray-500'>{dt.CardDescription}</p>
+                    <p className=' card-subheading text-gray-200'>{dt.CardDescription}</p>
                   </div>
                 ))}
               </div>
@@ -433,8 +433,8 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
             <div className='grid grid-cols-4 gap-6 mb-6'>
               {feature_data.RelatedResourcesList.map((data) => (
                 <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
-                <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
-                                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-dxaas-primary `}>   
+                <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${feature_data.cssStreamTag}-secondary `} style={{height:'400px',width:'345px'}}></span>
+                                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${feature_data.cssStreamTag}-primary `}>   
                               <div className="bg-white">
                               <Link href={data.CTAUrl} passHref>
                                       <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">

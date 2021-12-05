@@ -398,7 +398,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                             name="SIGNUP_SUBMIT_BUTTON"
                                             changetype="SIGNUP_SUBMIT_BUTTON_TEXT"
                                             value={webinar_Data.FormFields.SubmitButton}
-                                            className="  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                                            className="cursor-pointer  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                                           />
                                         </div>

@@ -148,8 +148,8 @@ export default function Video({ data,h_data,f_data }){
           <p className={`max-w-max px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}>
                { data.Tag}
               </p>
-            <h2 className=" card-heading mb-5 text-justify">{data.VideoLandingPage.PageHeader}</h2>
-            <p className=" card-subheading text-justify"> <Markdown
+            <h2 className=" section-heading mb-5 text-justify">{data.VideoLandingPage.PageHeader}</h2>
+            <p className=" section-subheading text-justify"> <Markdown
                     options={{
                       overrides: {
                         h3: {

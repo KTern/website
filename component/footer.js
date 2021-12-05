@@ -92,7 +92,7 @@ export default function Footer({ f_data }) {
               </div>
               <div className="flex mb-4">
                {f_data.ImageButton.map((dt)=>( <Link key="dt" href={dt.Url} >
-                  <a className="" title={dt.Title}>
+                  <a target="_blank" className="" title={dt.Title}>
                     <div className=" ">
                       <Image
                         width={150}

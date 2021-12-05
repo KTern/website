@@ -447,7 +447,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                           id="formsubmit"
                           value={data.EBookFormFields.SubmitButton}
                           title="Submit"
-                          className="formsubmit  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                          className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                         />
                       </div>
