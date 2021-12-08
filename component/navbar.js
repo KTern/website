@@ -1,10 +1,10 @@
-import Card from "./card1"       
+    
 import Image from "next/image";
 import Link from "next/link";
-import Card1 from "./card"
+
 import FeatureCard from "./featureCard";
 import React, { useState, useRef, useEffect } from 'react';
-import DoubleBanner from "./doubleBanner"
+
 import { useRouter } from 'next/router'
 import HeaderCard from "./headerCard";
 function openNav () {

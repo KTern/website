@@ -1,5 +1,12 @@
 module.exports = {
-
+  async rewrites() {
+    return [
+      {
+        source: '/article',
+        destination: 'https://web.ktern.com/article/',
+      },
+    ]
+  },
   target: "serverless",
   reactStrictMode: true,
   throwIfNamespace: false,
