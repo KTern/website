@@ -338,7 +338,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                     htmlFor="CONTACT_EMAIL"
                   >
-                    {webinar_Data.FormFields.FormTitle}
+                    {webinar_Data.FormFields.Email}
                   </label>
                                               <input
                                                 maxLength="100"

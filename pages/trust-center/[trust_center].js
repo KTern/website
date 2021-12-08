@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
+import Markdown from "markdown-to-jsx";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -142,7 +143,42 @@ export default function TrustCenter({ data, h_data, f_data }) {
                       {data.heading}
                     </h1>
                     <p className="mb-6 text-justify card-subheading  text-black">
-                      {data.description}
+                    
+                            <Markdown
+                          options={{
+                            overrides: {
+                              h3: {
+                                props: {
+                                  className: "text-2xl mb-4 text-justify",
+                                },
+                              },
+                              h1: {
+                                props: {
+                                  className: "text-2xl mb-4 text-justify",
+                                },
+                              },
+                              li: {
+                                props: {
+                                  className:
+                                    "text-justify list-decimal ml-3 mb-1 flex-col",
+                                },
+                              },
+                              p: {
+                                props: {
+                                  className: "mb-3 text-justify",
+                                },
+                              },
+                              ol: {
+                                props: {
+                                  className: "mb-4 text-justify",
+                                },
+                              },
+                            },
+                          }}
+                          className=""
+                        >
+                          {data.description}
+                        </Markdown>
                     </p>
                   </div>
                 ))}
