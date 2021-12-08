@@ -1,24 +1,36 @@
-import Link from "next/link"
-import Image from "next/image"
-export default function FeatureCard ({ data }) {
-    return (
-          <div className="py-4 px-6  flex space-x-3">
-             <div className="w-1/2">
-                 <h3 className="navbar-h text-black text-bold mb-2 uppercase">{data.title}</h3>
-                 <p className="mb-4 navbar-s">{data.description}</p>
-                  <Link href={data.image.imageURL}  passHref>
-                 <a className="inline-flex items-center pb-1 text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">Learn More
-                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                 </svg>
-                 </a>
-             </Link> 
-            </div>
-     
-             <div className="w-1/2 bg-black">
-                 <Image className=" transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.image.imageURL} alt={data.image.imageDescription}  width={data.image.width} height={data.image.height}/>
-             </div>
-         </div>
-                                           
-    )
-}
+import Image from "next/image";
+import Link from "next/link";
+export default function FeatureCard({ data,border ,color,type}) {
+  return (
+    <div className="flex-col space-y-6 ">
+    <div id="tag" className={` gap-y-4 grid grid-${type}-2  gap-x-8`}>
+      {data.map((dt) => (
+        <div key="dt" id="tag" className={`flex space-x-3 rounded-md ${border} hover:${color} p-4 w-full`}>
+        {dt.Icon!=undefined &&  <Link href={dt.redirectURL} passHref>
+            <a id="tag">
+              <Image
+                id="tag"
+                src={dt.Icon.logoUrl}
+                width={dt.Icon.width}
+                height={dt.Icon.width}
+                alt={dt.Icon.altText}
+              />
+            </a>
+          </Link>}
+          <Link id="tag" href={dt.redirectURL}>
+            <a id="tag">
+              <p id="tag">{dt.Title}</p>
+              <p id="tag" className="text-gray-400">
+                {dt.Description}
+              </p>
+            </a>
+          </Link>
+        </div>
+      ))}
+      
+    </div>
+    
+    
+</div>
+  )
+      }

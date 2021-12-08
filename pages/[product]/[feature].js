@@ -7,11 +7,16 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
+import FAQ from "../../component/faq";
 // import Breadcrumbs from 'nextjs-breadcrumbs';
 {
   /* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */
 }
 export default function Feature_Landing({ feature_data ,h_data,f_data}) {
+  let breadcrumb = [];
+  feature_data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
     	  <LogoJsonLd
@@ -94,28 +99,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
      
       
@@ -390,39 +374,8 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
           </div>
         </section>
         {/* <!--Faq Section--> */}
-        <section className='py-10 bg-project-white'>
-          <h2 className='mb-2 section-heading  text-center'>{feature_data.FAQSectionTitle}</h2>
-          <div className='flex space-x-10 p-10'>
-            <div className='flex-col w-full space-y-4 '>
-              {feature_data.FAQ.map((dt) => (
-                <details key = "dt" className='relative w-full overflow-hidden border-2 border-gray-200  select-none hover:bg-white'>
-                  <summary
-                    className=' flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-3 hover:text-gray-800'
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className='card-subheading'>{dt.Question}</span>
-                    <svg
-                      className=' w-6 h-6 transition-all duration-200 ease-out transform rotate-0'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M12 6v6m0 0v6m0-6h6m-6 0H6'
-                      ></path>
-                    </svg>
-                  </summary>
-                  <hr />
-                  <div className='p-4 hyperlink'>{dt.Answer}</div>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FAQ data={feature_data.FAQ} title={feature_data.FAQSectionTitle}/>
+       
         {/* <!--Resources Section--> */}
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
@@ -530,7 +483,7 @@ export const getServerSideProps = async ({ params }) => {
 
   const data = await res.json();
   // console.log(data[0]);
-	const res1 = await fetch('https://api.ktern.com/navbar', {
+	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();

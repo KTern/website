@@ -7,6 +7,10 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 
 export default function Webinar ({data,h_data,f_data}) {
+    let breadcrumb = [];
+    data.PageSEO.BreadCrumb.map((dt) => {
+      breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+    });
     const date = new Date(data.FeaturedWebinar.Date + "T" + data.FeaturedWebinar.Time);
     const time = date.toLocaleString("en-US", {
         hour: "numeric",
@@ -94,28 +98,7 @@ export default function Webinar ({data,h_data,f_data}) {
                  
     />
 <BreadcrumbJsonLd
-      itemListElements={[
-        {
-          position: 1,
-          name: 'Books',
-          item: 'https://example.com/books',
-        },
-        {
-          position: 2,
-          name: 'Authors',
-          item: 'https://example.com/books/authors',
-        },
-        {
-          position: 3,
-          name: 'Ann Leckie',
-          item: 'https://example.com/books/authors/annleckie',
-        },
-        {
-          position: 4,
-          name: 'Ancillary Justice',
-          item: 'https://example.com/books/authors/ancillaryjustice',
-        },
-      ]}
+      itemListElements={breadcrumb}
     />
 	  <LogoJsonLd
         logo={process.env.LOGO}
@@ -289,7 +272,7 @@ export const getServerSideProps = async () => {
     const res = await fetch("https://api.ktern.com/all-webinars",{method:'get'});
     const data = await res.json();
     // console.log("data", data)
-    	const res1 = await fetch('https://api.ktern.com/navbar', {
+    	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
     const h_data = await res1.json();

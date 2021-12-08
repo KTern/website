@@ -9,6 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import React, { useState, useRef, useEffect } from "react";
 import { isPlainObject } from "lodash";
 import Carousel from "react-multi-carousel";
+import FAQ from "../component/faq";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -38,13 +39,17 @@ function handleClick(selectedOption) {
   }
   total = selectedOptions.length * 3;
   if (selectedOptions.length == 5) total = 10;
-  console.log(selectedOptions)
+  // console.log(selectedOptions)
 }
 function handleTotal() {
   selectedOptions = ["maps", "projects", "process", "labs", "mines"];
   total = 10;
 }
 export default function Pricing({ data, h_data, f_data }) {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   const [isMapsSelected, setIsMapsSelected] = useState(true);
   const [isProjectsSelected, setIsProjectsSelected] = useState(true);
   const [isProcessSelected, setIsProcessSelected] = useState(true);
@@ -165,28 +170,7 @@ export default function Pricing({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <SocialProfileJsonLd
@@ -1653,6 +1637,7 @@ export default function Pricing({ data, h_data, f_data }) {
           </div>
           {/* <!-- /Customer logos Section --> */}
         </section>
+        
       </Layout>
     </>
   );
@@ -1663,7 +1648,7 @@ export const getServerSideProps = async () => {
     method: "get",
   });
   let data = await res.json();
-  console.log(data);
+  // console.log(data);
   const res1 = await fetch("https://api.ktern.com/navbar", {
     method: "get",
   });

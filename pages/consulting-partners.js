@@ -13,7 +13,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import BreadCrumb from "../component/breadcrumb";
+import FAQ from "../component/faq";
 import Markdown from "markdown-to-jsx";
 const responsive = {
     superLargeDesktop: {
@@ -290,34 +291,13 @@ export default function Consultingpartner({data,h_data,f_data}){
             </section>
                {/* <!--KTern FAQ--> */}
 
-               <section className="py-10 bg-secondary">
-                    <h2 className="mb-10 section-heading  text-center">{data.FAQTitle}</h2>
-                    <div className="px-20">
-                        <div className=" ">
+               
                             
-                            {data.FAQSection.map((data,index) => (
-                             
-                               <Accordion key="data" className=" mb-3 shadow-lg " >
-                               <AccordionSummary
-                                 expandIcon={<ExpandMoreIcon />}
-                                 aria-controls="panel1a-content"
-                                 id="panel1a-header"
-                                 className=""
-                               >
-                                 <Typography className="navbar-h">{data.Question}</Typography>
-                               </AccordionSummary>
-                               <AccordionDetails>
-                                 <Typography className="navbar-s">{data.Answer}</Typography>
-                               </AccordionDetails>
-                             </Accordion>
-                            
-                            ))}
+                      <FAQ data={data.FAQSection} title={data.FAQTitle}/>
                              
                          
                             
-                            </div>
-                    </div>
-                </section>
+                      
 {/* <!-- Footer CTA --> */}
 <section className="bg-white">
                 <div className="md:px-8 py-8 mx-auto sm:py-10 lg:py-20 max-w-7xl">
@@ -347,7 +327,7 @@ export const getServerSideProps = async () => {
 	});
 	const data = await res.json();
 	// console.log('data1', data);
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
+  	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();

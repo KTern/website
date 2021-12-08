@@ -66,7 +66,10 @@ import React from 'react'
 client.flush();
 
 function Home ({ data ,h_data,f_data}) {
-	
+	let breadcrumb = [];
+	data.pageSEO.BreadCrumb.map((dt) => {
+	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+	});
 	
 	return (
 		<>
@@ -150,28 +153,7 @@ function Home ({ data ,h_data,f_data}) {
 				]}
 			/>
 			<BreadcrumbJsonLd
-				itemListElements={[
-					{
-						position: 1,
-						name: 'Books',
-						item: 'https://example.com/books',
-					},
-					{
-						position: 2,
-						name: 'Authors',
-						item: 'https://example.com/books/authors',
-					},
-					{
-						position: 3,
-						name: 'Ann Leckie',
-						item: 'https://example.com/books/authors/annleckie',
-					},
-					{
-						position: 4,
-						name: 'Ancillary Justice',
-						item: 'https://example.com/books/authors/ancillaryjustice',
-					},
-				]}
+				itemListElements={breadcrumb}
 			/>
 		
 			  <LogoJsonLd
@@ -788,10 +770,12 @@ export const getServerSideProps = async () => {
 		method: 'get',
 	});
 	const data = await res.json();
-	const res1 = await fetch('https://api.ktern.com/navbar', {
+	
+	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
 	const h_data = await res1.json();
+	
 	const res2 = await fetch('https://api.ktern.com/footer', {
 		method: 'get',
 	});

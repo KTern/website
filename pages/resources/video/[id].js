@@ -8,7 +8,11 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
-export default function Video({ data,h_data,f_data }){
+export default function Video({ data,h_data,f_data,v_data }){
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
     return (
       <>
           <NextSeo
@@ -91,28 +95,7 @@ export default function Video({ data,h_data,f_data }){
 				]}
 			/>
 <BreadcrumbJsonLd
-      itemListElements={[
-        {
-          position: 1,
-          name: 'Books',
-          item: 'https://example.com/books',
-        },
-        {
-          position: 2,
-          name: 'Authors',
-          item: 'https://example.com/books/authors',
-        },
-        {
-          position: 3,
-          name: 'Ann Leckie',
-          item: 'https://example.com/books/authors/annleckie',
-        },
-        {
-          position: 4,
-          name: 'Ancillary Justice',
-          item: 'https://example.com/books/authors/ancillaryjustice',
-        },
-      ]}
+      itemListElements={breadcrumb}
     />
 	  <LogoJsonLd
         logo={process.env.LOGO}
@@ -192,68 +175,43 @@ export default function Video({ data,h_data,f_data }){
         </div>
             </section>
       {/* Related Resources Section */}
-            <section className="w-full mb-10 pt-8 bg-white sm:pt-12 md:pt-16">
-          <div className="px-2 mx-auto max-w-7xl">
-            <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
-              <h2 className="section-heading  text-gray-800 ">
-               {data.VideoLandingPage.RelatedResources}
-              </h2>
+      <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
+          <div className='px-2 mx-auto max-w-7xl'>
+            <div className='flex justify-center w-full pb-5 mb-4 border-gray-200'>
+              <h2 className='section-heading  text-gray-800 '>{data.VideoLandingPage.RelatedResources}</h2>
             </div>
 
-            {/* <div className="grid grid-cols-4 gap-6 mb-6">
-           {data.RelatedResources.map((data)=>( 
-           
-             
-           <div key="data" className={`relative w-full h-full bg-white  space-y-3 shadow-lg  p-4  group overflow-hidden transition transform hover:-translate-y-3 duration-500 hover:border-black border-2 `} >
-                   
-                                    <div className="bg-white">
-                                    <Link href={data.CTAUrl} passHref>
-                                            <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-                                            
-                                    <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
-                                    </a> 
+            <div className='grid grid-cols-4 gap-6 mb-6'>
+              {v_data.map((dt) => (
+              <div key="dt" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
+              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.VideoLandingPage.DigitalStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
+                              <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${dt.VideoLandingPage.DigitalStream}-primary `}>   
+                            <div className="bg-white">
+                            <Link href={dt.PageSEO.PageURL} passHref>
+                                    <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    
+                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.PageSEO.ThumbnailImageURL} alt={dt.VideoLandingPage.PageHeader} width="550" height="300"/>
+                            </a> 
+                            </Link>
+                            </div>
+              <Link href={dt.PageSEO.PageURL} passHref>
+              <a className="bg-white">
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.VideoTitle}</span>
+                        <Link href={dt.PageSEO.PageURL}  passHref>
+                                        <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">{dt.LatestVideoCTA}</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
                                     </Link>
-                                    </div>
-        <Link href={data.CTAUrl} passHref>
-            <a className="bg-white">
-                                    <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
-                                <Link href={data.CTAUrl}  passHref>
-                                                <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                                                <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
-                                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                                </svg>
-                                                </a>
-                                            </Link>
-                                            </a>
-                                    </Link>
-                                </div>
-                                ))}
-            
-            </div> */}
-            <div className="text-center">
-              <Link href="/resources" passHref>
-                <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
-                  <span className="hyperlink group-hover:text-gray-300">
-                    View All Resources
-                  </span>
-                  <svg
-                    className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    ></path>
-                  </svg>
-                </a>
-              </Link>
+                                    </a>
+                            </Link>
+                            </div>
+                        </div>
+              ))}
             </div>
+        
           </div>
         </section>
         </Layout>
@@ -262,13 +220,13 @@ export default function Video({ data,h_data,f_data }){
 }
 
 export const getServerSideProps = async ({params}) => {
-    // strapi data to be acquired
+    // strapi dt to be acquired
     const res = await fetch(`https://api.ktern.com/videos?slug=${params.id}`, {
       method: 'get',
   });
     const data = await res.json();
-    console.log(data)
-        const res1 = await fetch('https://api.ktern.com/navbar', {
+    // console.log(data)
+        const res1 = await fetch('https://api.ktern.com/header', {
           method: 'get',
       });
     const h_data = await res1.json();
@@ -276,10 +234,15 @@ export const getServerSideProps = async ({params}) => {
           method: 'get',
       });
       const f_data = await res2.json();
+      const videos=await fetch(`https://api.ktern.com/videos?_sort=updatedAt:desc&slug_nin=${params.id}&_limit=4`)
+      const v_data=await videos.json()
+      console.log(v_data,v_data.length)
     return {
       props: {
         data: data[0],
         h_data: h_data,
-      f_data:f_data},
+      f_data:f_data,
+      v_data:v_data
+    },
     };
   };

@@ -10,6 +10,7 @@ import { ProductJsonLd } from "next-seo";
 import { VideoJsonLd } from "next-seo";
 
 import { SoftwareAppJsonLd } from "next-seo";
+import FAQ from "../../component/faq";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -49,6 +50,7 @@ const responsive_2 = {
   },
 };
 function next(id, last) {
+
   let elem = document.getElementById(id);
   const styles = window.getComputedStyle(elem);
   const amount = styles.getPropertyValue("--amount");
@@ -72,6 +74,10 @@ function prev(id, last) {
   document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
 }
 export default function DigitalStream({stream_data,h_data,f_data}) {
+  let breadcrumb = [];
+  stream_data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
       <NextSeo
@@ -150,28 +156,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
      
       
@@ -768,6 +753,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
         </section>
         {/* /Testimonial Section */}
+        {/* FAQ Section */}
+        {/* <FAQ data={} title={}/> */}
+        {/*/ FAQ Section */}
         {/* Resources Section */}
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
@@ -898,7 +886,7 @@ export const getStaticProps = async ({ params }) => {
 
   const data = await res.json();
   //  console.log(data[0])
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
+  	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();

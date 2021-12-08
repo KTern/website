@@ -7,7 +7,7 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
-
+import FAQ from "../component/faq";
 import Markdown from "markdown-to-jsx";
 const responsive = {
     superLargeDesktop: {
@@ -255,29 +255,8 @@ export default function technical_partner ({data,h_data,f_data}) {
             </div>
             </section>
             {/* <!--Faq Section--> */}
-      
-            <section className="py-10 bg-projects-white">
-                    <h2 className="mb-2 section-heading  text-center">{data.FAQTitle}</h2>
-                    <div className="flex space-x-10 p-10">
-                        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
-                            
-                            {data.FAQSection.map((data) => (
-                                <details key="data" className="relative overflow-hidden border-2 border-gray-200  select-none hover:bg-white">
-                                    <summary  className=" flex items-center justify-between   text-gray-700 cursor-pointer sm: px-6 py-6 hover:text-gray-800" style={{ listStyle: 'none' }}>
-                                        <span className="card-subheading">{data.Question}</span>
-                                        <svg className=" w-6 h-6 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                            </summary>
-                                            <hr/>
-                                    <div className="p-4 hyperlink">
-                                          {data.Answer}
-                                    </div>
-                            </details>))}
-                             
-                         
-                            
-                            </div>
-                    </div>
-                </section>
+      <FAQ data={data.FAQSection} title={data.FAQTitle}/>
+            
    
 
     
@@ -313,7 +292,7 @@ export const getServerSideProps = async () => {
 	});
 	const data = await res.json();
 	// console.log('data1', data);
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
+  	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
 	const h_data = await res1.json();

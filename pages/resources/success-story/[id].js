@@ -10,6 +10,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Markdown from "markdown-to-jsx";
 const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
     	  <LogoJsonLd
@@ -96,28 +100,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
     
       
@@ -332,7 +315,7 @@ export const getServerSideProps = async (context) => {
   );
   const data = await res.json();
   // console.log(data[0]);
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
+  	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();

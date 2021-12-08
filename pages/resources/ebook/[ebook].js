@@ -9,6 +9,11 @@ import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from "next/router";
 const Ebook_Landing = ({ data, h_data, f_data }) => {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
+
   const router = useRouter();
   // const handleSearch = (event) => {
   //   // console.log("clicked" + webinar_Data.Type + event, router.query);
@@ -99,28 +104,7 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <SocialProfileJsonLd

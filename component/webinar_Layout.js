@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 export default function WebinarLayout ({ data }) {
     const router = useRouter();
-    console.log("Hello",data.learnlist[2])
+    // console.log("Hello",data.learnlist[2])
     const handleSearch = (event) => {
-        console.log("clicked" +data.type+event)
+        // console.log("clicked" +data.type+event)
        
             router.push({
               pathname:"thanks/"+`${data.title}`,

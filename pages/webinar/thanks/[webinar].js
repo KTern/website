@@ -25,7 +25,10 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
   };
   const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [isSlideVisible, setIsSlideVisible] = useState(false);
-
+  let breadcrumb = [];
+  webinar_data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   return (
     <>
     	  <LogoJsonLd
@@ -308,14 +311,14 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
 // }
 // Fetch necessary data for the blog post using params.webinar
 export const getServerSideProps = async ({ params }) => {
-  console.log("in features", params.webinar);
+  // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(
     `https://api.ktern.com/webinars?slug=${params.webinar}`,
     { method: "get" }
   );
   const data = await res.json();
-  console.log("data", data);
+  // console.log("data", data);
   const res1 = await fetch("https://api.ktern.com/navbar", {
     method: "get",
   });

@@ -10,6 +10,10 @@ import Dropdown from 'react-dropdown';
 import _ from 'lodash';
 import {useRouter} from "next/router";
 export default function Resources({ data,h_data,f_data }) {
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
  const router=useRouter();
  
   function colorChange () {
@@ -60,7 +64,7 @@ export default function Resources({ data,h_data,f_data }) {
     if (document.getElementById('role').value!= 'allRoles')
         filterArray.RelatedRole=document.getElementById('role').value
    
-console.log(filterArray)
+// console.log(filterArray)
    
       filter=_.filter(data.ResourcesList,filterArray)
   
@@ -73,10 +77,10 @@ console.log(filterArray)
     let filterArray = {}
     filterArray.ResourceType = router.query.type
       
-console.log(filterArray)
+// console.log(filterArray)
    
 filter=_.filter(data.ResourcesList,filterArray)
-console.log(filter)
+// console.log(filter)
   setResourceList(filter);
   if(process.browser)
   document.getElementById('type').value=router.query.type;
@@ -170,28 +174,7 @@ console.log(filter)
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
     
       
@@ -401,7 +384,7 @@ export const getServerSideProps = async ({params}) => {
   // strapi data to be acquired
   const res = await fetch("https://api.ktern.com/resources");
   const data = await res.json();
-  	const res1 = await fetch('https://api.ktern.com/navbar', {
+  	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();

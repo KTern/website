@@ -11,6 +11,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { data } from "autoprefixer";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
+  let breadcrumb = [];
+  webinar_Data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
     hour: "numeric",
@@ -20,7 +24,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
 
   const router = useRouter();
   const handleSearch = (event) => {
-    console.log("clicked" + webinar_Data.Type + event, router.query);
+    // console.log("clicked" + webinar_Data.Type + event, router.query);
     if (typeof process.browser) {
       window.open("/webinar" + `${webinar_Data.redirectURL}`);
       return true;
@@ -113,28 +117,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
+        itemListElements={breadcrumb}
       />
 
       <EventJsonLd
@@ -547,7 +530,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
 // }
 // Fetch necessary data for the blog post using params.webinar
 export const getServerSideProps = async ({ params }) => {
-  console.log("in features", params.webinar);
+  // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(
     `https://api.ktern.com/webinars?slug=${params.webinar}`,

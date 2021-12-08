@@ -7,7 +7,11 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
-export default function News_Landing({h_data,f_data,data}){
+export default function News_Landing({h_data,f_data,data,n_data}){
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
     return(
         <>
          <NextSeo
@@ -89,9 +93,9 @@ export default function News_Landing({h_data,f_data,data}){
 					},
 				]}
 			/>
-{/* <BreadcrumbJsonLd
+<BreadcrumbJsonLd
       itemListElements={breadcrumb}
-    /> */}
+    />
 	  <LogoJsonLd
         logo={process.env.LOGO}
         url={process.env.URL}
@@ -168,6 +172,37 @@ export default function News_Landing({h_data,f_data,data}){
     
         </div>
             </section>
+            {/* Related news Section */}
+            <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
+          <div className='px-2 mx-auto max-w-7xl'>
+            <div className='flex justify-center w-full pb-5 mb-4 border-gray-200'>
+              <h2 className='section-heading  text-gray-800 '>{data.LatestNewsSectionTitle}</h2>
+            </div>
+
+            <div className='grid grid-cols-4 gap-6 mb-6'>
+              {n_data.map((dt) => (
+             <Link key="dt" href={dt.PageSEO.PageURL} >
+             <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+             <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
+             <div 
+               className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
+             >
+               <div className=" bg-white grid-rows-2 gap-3  mr-12 text-black">
+                                           
+                                          <div className="h-50">
+                                           <h3 className="my-2  header mb-5 text-gray-800">{dt.PageHeader.header}</h3>       
+                                          <div className="bg-dxaas-primary mb-4 h-0.5 w-20"></div>
+                                          </div>
+                                           <div className="h-1/2 navbar-s">{dt.date}</div>
+                               </div>
+             </div>
+             </a>
+             </Link>
+              ))}
+            </div>
+        
+          </div>
+        </section>
             </Layout>
         </>
     )
@@ -179,7 +214,7 @@ export const getServerSideProps = async ({params}) => {
         });
         const data = await res.json();
         // console.log('data1', data);
-          const res1 = await fetch('https://api.ktern.com/navbar', {
+          const res1 = await fetch('https://api.ktern.com/header', {
             method: 'get',
         });
         const h_data = await res1.json();
@@ -187,11 +222,15 @@ export const getServerSideProps = async ({params}) => {
             method: 'get',
         });
         const f_data = await res2.json();
+        const news=await fetch(`https://api.ktern.com/news-center-pages?_sort=updatedAt:desc&slug_nin=${params.news}&_limit=4`)
+        const n_data=await news.json()
+        // console.log(n_data)
         return {
             props: {
           data: data[0],
           h_data: h_data,
-          f_data:f_data
+          f_data:f_data,
+          n_data:n_data
             },
         };
     }

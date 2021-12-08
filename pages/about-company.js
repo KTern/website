@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
-export default function About({ data,h_data,f_data }) {
+export default function About({ data,h_data,f_data ,n_data}) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -362,65 +362,36 @@ export default function About({ data,h_data,f_data }) {
                 </div>
         </section>
         {/* <!--Resources About the Company--> */}
-        <section className=' lg:max-w-7xl text-justify px-12 relative w-full pt-8 bg-white sm:pt-12 md:pt-16'>
+        <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
           <div className='px-2 mx-auto max-w-7xl'>
             <div className='flex justify-center w-full pb-5 mb-4 border-gray-200'>
-              <h2 className='section-heading  text-gray-800 '>{data.relatedresourcestitle}</h2>
+              <h2 className='section-heading  text-gray-800 '>{data.LatestNewsSectionTitle}</h2>
             </div>
 
             <div className='grid grid-cols-4 gap-6 mb-6'>
-              {data.RelatedResources.map((data) => (
-              <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
-<span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-dxaas-secondary `} style={{height:'400px',width:'345px'}}></span>
-                <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-dxaas-primary `}>   
-              <div className="bg-white">
-              <Link href={data.CTAUrl} passHref>
-                      <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-                      
-              <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
-              </a> 
-              </Link>
-              </div>
-<Link href={data.CTAUrl} passHref>
-<a className="bg-white">
-              <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
-          <Link href={data.CTAUrl}  passHref>
-                          <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                          <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
-                          <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                          </svg>
-                          </a>
-                      </Link>
-                      </a>
-              </Link>
-              </div>
-          </div>
+              {n_data.map((dt) => (
+             <Link key="dt" href={dt.PageSEO.PageURL} >
+             <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+             <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
+             <div 
+               className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
+             >
+               <div className=" bg-white grid-rows-2 gap-3  mr-12 text-black">
+                                           
+                                          <div className="h-50">
+                                           <h3 className="my-2  header mb-5 text-gray-800">{dt.PageHeader.header}</h3>       
+                                          <div className="bg-dxaas-primary mb-4 h-0.5 w-20"></div>
+                                          </div>
+                                           <div className="h-1/2 navbar-s">{dt.date}</div>
+                               </div>
+             </div>
+             </a>
+             </Link>
               ))}
             </div>
-            <div className='text-center'>
-              <Link href={data.viewallresources.ctaurl} passHref>
-                <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
-                  <span className='hyperlink group-hover:text-gray-300'>{data.viewallresources.title}</span>
-                  <svg
-                    className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      d='M17 8l4 4m0 0l-4 4m4-4H3'
-                    ></path>
-                  </svg>
-                </a>
-              </Link>
-            </div>
+        
           </div>
-        </section> 
+        </section>
         {/* / Resources Setion */}
         {/* <!-- Footer CTA Features Page --> */}
         <section className=' lg:max-w-7xl text-justify px-12 relative bg-white'>
@@ -454,7 +425,7 @@ export default function About({ data,h_data,f_data }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({params}) => {
   const res = await fetch(`https://api.ktern.com/about-company`, {
     method: "get",
   });
@@ -462,7 +433,7 @@ export const getServerSideProps = async () => {
   const data = await res.json();
 
   // console.log(data);
-	const res1 = await fetch('https://api.ktern.com/navbar', {
+	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
   const h_data = await res1.json();
@@ -470,11 +441,15 @@ export const getServerSideProps = async () => {
 		method: 'get',
 	});
 	const f_data = await res2.json();
+  const news=await fetch(`https://api.ktern.com/news-center-pages?_sort=updatedAt:desc&_limit=4`)
+  const n_data=await news.json()
+  // console.log(n_data)
   return {
     props: {
       data: data,
       h_data: h_data,
-      f_data:f_data
+      f_data:f_data,
+      n_data:n_data
     },
   };
 };

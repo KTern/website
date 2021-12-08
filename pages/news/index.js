@@ -7,6 +7,10 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 export default function News({data,h_data,f_data}){
+  let breadcrumb = [];
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
     return (
        <>
             <NextSeo
@@ -88,9 +92,9 @@ export default function News({data,h_data,f_data}){
 					},
 				]}
 			/>
-{/* <BreadcrumbJsonLd
+<BreadcrumbJsonLd
       itemListElements={breadcrumb}
-    /> */}
+    />
 	  <LogoJsonLd
         logo={process.env.LOGO}
         url={process.env.URL}
@@ -176,11 +180,12 @@ export const getServerSideProps = async () => {
         });
 
         const data = await res.json();
-        console.log('data1', data);
-          const res1 = await fetch('https://api.ktern.com/navbar', {
+        // console.log('data1', data);
+          const res1 = await fetch('https://api.ktern.com/header', {
             method: 'get',
         });
       const h_data = await res1.json();
+      console.log("Header Data",h_data)
       const res2 = await fetch('https://api.ktern.com/footer', {
             method: 'get',
         });
