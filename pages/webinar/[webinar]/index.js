@@ -470,7 +470,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                   <input
                                     type="hidden"
                                     id="zc_Url"
-                                    value="kter.maillist-manage.in"
+                                    value={webinar_Data.FormFields.MailingListId}
                                   />
                                   <input
                                     type="hidden"
