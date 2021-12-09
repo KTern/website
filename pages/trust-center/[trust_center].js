@@ -7,7 +7,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
-  data.PageSEO.BreadCrumb.map((dt) => {
+  data.pageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
   return (
@@ -142,9 +142,8 @@ export default function TrustCenter({ data, h_data, f_data }) {
                     >
                       {data.heading}
                     </h1>
-                    <p className="mb-6 text-justify card-subheading  text-black">
-                    
-                            <Markdown
+                   
+                    <Markdown
                           options={{
                             overrides: {
                               h3: {
@@ -177,9 +176,10 @@ export default function TrustCenter({ data, h_data, f_data }) {
                           }}
                           className=""
                         >
-                          {data.description}
+                          {data.Content}
                         </Markdown>
-                    </p>
+                         
+                     
                   </div>
                 ))}
 

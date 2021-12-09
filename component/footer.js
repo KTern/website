@@ -80,11 +80,16 @@ export default function Footer({ f_data }) {
                   </h3>}
                   <ul className="">
                     {dt.NavItems.map((dt)=>(<li key="dt" className="mb-2">
-                      <Link href={dt.linkURL}>
+                     {dt.openNewTab && <Link href={dt.linkURL}>
+                        <a target="_blank" className=" text-gray-200 hover:text-gray-100 " style={{fontWeight:300,fontSize:'15px'}}>
+                         {dt.buttonTitle}
+                        </a>
+                      </Link>}
+                      {!dt.openNewTab && <Link href={dt.linkURL}>
                         <a className=" text-gray-200 hover:text-gray-100 " style={{fontWeight:300,fontSize:'15px'}}>
                          {dt.buttonTitle}
                         </a>
-                      </Link>
+                      </Link>}
                     </li>))}
                   </ul>
                 </div>))}
@@ -124,9 +129,12 @@ export default function Footer({ f_data }) {
 
                 <p className="py-10   space-x-3 lg:block  text-gray-200 ">
                   {f_data.LegalLinks.map((dt)=>(<span key="dt" className=" " >
-                    <Link href={dt.linkURL}>
+                 {dt.openNewTab &&   <Link href={dt.linkURL}>
+                      <a target="_blank" style={{fontWeight:300,fontSize:'13px'}}>{dt.buttonTitle}</a>
+                    </Link>}
+                    {!dt.openNewTab &&   <Link href={dt.linkURL}>
                       <a style={{fontWeight:300,fontSize:'13px'}}>{dt.buttonTitle}</a>
-                    </Link>
+                    </Link>}
                   </span>))}
                  
                 </p>

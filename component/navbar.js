@@ -563,9 +563,13 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                       <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                           <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
-                                    {h_data.ResourcesList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} passHref><a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
-                                  </li>))}
+                                    {h_data.ResourcesList.map((dt)=>(
+                                    <li key="dt" className="hover:bg-secondary ">
+                                          <Link href={dt.redirectURL} passHref>
+                                              <a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a>
+                                              </Link>        
+                                  </li>
+                                  ))}
                                     <li className="mt-4 hover:bg-secondary">
               <Link href='/resources' passHref>
        <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">See All Resources
@@ -578,29 +582,29 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                       </div>
                   </div>
                   </li>
-                   <li className="toggleable hover:bg-secondary bg-white ">
-              <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input  "/>
-                  <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">{h_data.Partner}</label>
-                  <div id="toggle" role="toggle" className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
-                      <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
-                          <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                  <li className="toggleable hover:bg-secondary bg-white ">
+              <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input "/>
+                  <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header ">Partners</label>
+                  <div id="toggle" role="toggle" className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
+                      <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
+                          <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Partners</h3>
                                     {h_data.PartnersList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
+                                          <Link href={dt.redirectURL} passHref><a htmlFor="toggle-sm-three" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
                                   </li>))}
-                                   
-                                  
+                                    <li className="mt-4 hover:bg-secondary">
+              </li>  
                           </ul>
                       </div>
                   </div>
                   </li>
                   <li className="toggleable hover:bg-secondary bg-white ">
-              <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input  "/>
-                  <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">{h_data.Partner}</label>
+              <input type="checkbox" value="selected" id="toggle-sm-four" className="toggle-input  "/>
+                  <label htmlFor="toggle-sm-four" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">Company</label>
                   <div id="toggle" role="toggle" className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                       <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                           <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                              <h3 className="navbar-h uppercase text-black text-bold mb-2">Partners</h3>
+                              <h3 className="navbar-h uppercase text-black text-bold mb-2">Company</h3>
                                     {h_data.CompanyList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
                                           <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
                                   </li>))}
@@ -611,12 +615,12 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                   </div>
                   </li>
                   <li className="toggleable hover:bg-secondary bg-white ">
-              <input type="checkbox" value="selected" id="toggle-sm-three" className="toggle-input  "/>
-                  <label htmlFor="toggle-sm-three" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">{h_data.Partner}</label>
+              <input type="checkbox" value="selected" id="toggle-sm-five" className="toggle-input  "/>
+                  <label htmlFor="toggle-sm-five" className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  ">Support</label>
                   <div id="toggle" role="toggle" className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300">
                       <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2"> 
                           <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                              <h3 className="navbar-h uppercase text-black text-bold mb-2">Partners</h3>
+                              <h3 className="navbar-h uppercase text-black text-bold mb-2">Support</h3>
                                     {h_data.SupportList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
                                           <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
                                   </li>))}

@@ -143,7 +143,8 @@ export default function About({ data,h_data,f_data ,n_data}) {
             <p className='mb-4 section-heading text-black '>{data.vision.title}</p>
             <div className=' mb-10'>
               <div className='w-full mt-5 md:mt-0  '>
-                <h3 className='mb-5 -mt-1 section-subheading  '>  <Markdown
+                <h3 className='mb-5 -mt-1 section-subheading  '>  
+                <Markdown
                               options={{
                                 overrides: {
                                   p: {
