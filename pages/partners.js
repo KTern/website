@@ -159,7 +159,7 @@ export default function Partners({ data,h_data,f_data }) {
                 </Link>
               </div>
             </div>
-            <div className=' hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 md:w-1/2'>
+            <div className=' hidden lg:block relative ml-10 z-10 w-full h-full my-16 lg:my-0 md:w-1/2'>
               <Image
                 className='relative z-40 w-full h-full'
                 src={data.PageHeader.ImageURL}

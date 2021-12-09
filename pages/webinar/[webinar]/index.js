@@ -538,7 +538,7 @@ export const getServerSideProps = async ({ params }) => {
   );
   const data = await res.json();
   // console.log("data", data[0]);
-  const res1 = await fetch("https://api.ktern.com/navbar", {
+  const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
