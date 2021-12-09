@@ -274,9 +274,9 @@ filter=_.filter(data.ResourcesList,filterArray)
 
                         { dt.ResourceType==video ?
                          ( <div>
-                           <div className="absolute inset-0 z-10 flex items-center justify-center sm:mb-40">
+                           <div className="absolute inset-0 z-10 flex items-center justify-center mb-6">
                           
-                                        <span className="flex text-white items-center justify-center w-12 h-12 bg-black rounded-full group-hover:text-black shadow-2xl group-hover:bg-white ">
+                                        <span className="flex text-white items-center justify-center w-12 h-12 bg-black rounded-full group-hover:text-black shadow-2xl group-hover:bg-white opacity-60">
                                            <svg className="w-auto h-6 ml-1   fill-current" viewBox="0 0 52 66" xmlns="http://www.w3.org/2000/svg"><path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z" fillRule="nonzero"></path></svg>
                                        </span>
                                 
