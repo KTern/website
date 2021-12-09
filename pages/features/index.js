@@ -11,7 +11,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-
+import BreadCrumb from "../../component/breadcrumb"
 import { features } from "process";
 const Feature_index = ({data,h_data,f_data}) => {
     let breadcrumb = [];
@@ -118,7 +118,8 @@ const Feature_index = ({data,h_data,f_data}) => {
             <section id="features" className="w-full py-32 background" >
             <div className=" flex flex-col items-center px-12 mx-auto lg:flex-row">
                 <div className="relative z-20 flex flex-col  w-full h-full ">
-                <p className="max-w-max  inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+                    <BreadCrumb color="white" b_data={breadcrumb}/>
+                <p className="max-w-max mt-4  inline-block px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                     {data.HeroSection.Tag}
                 </p>
                     <h1 className="heading text-white "  >{data.HeroSection.header}</h1>

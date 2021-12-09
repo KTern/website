@@ -5,6 +5,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../../component/breadcrumb";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.pageSEO.BreadCrumb.map((dt) => {
@@ -108,10 +109,11 @@ export default function TrustCenter({ data, h_data, f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* Header Section */}
-        <section className="w-full py-28 bg-herogradient">
+        <section className="w-full py-28 bg-background bg-dxaas-primary bg-no-repeat"  style={{ backgroundPosition: "100% 50%", backgroundSize: "auto" }}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
-              <p className="max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
+              <BreadCrumb color="white" b_data={breadcrumb}/>
+              <p className="max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.pageHeader.Tag}
               </p>
               <h1 className="heading text-white mb-5">

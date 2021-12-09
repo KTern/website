@@ -6,6 +6,7 @@ import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from 'next/router';
+import BreadCrumb from "../component/breadcrumb";
 export default function Contact({ data, h_data, f_data }) {
   const router=useRouter();
   console.log(router.query.message);
@@ -125,12 +126,14 @@ export default function Contact({ data, h_data, f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative  bg-white pt-10 md:m-10 ">
+         
           <div className="flex flex-col items-center justify-between  mx-auto  xl:px-5 lg:flex-row">
             <div className="flex flex-col items-center space-x-20 mx-20 w-full pt-0  lg:pt-0 lg:flex-row">
               <div className="relative w-1/2">
                 <div className="relative flex flex-col items-center  w-full h-full ">
                   <div className="relative ">
                     <div className="pb-16 mb-8 border-b border-gray-400">
+                    <BreadCrumb color="black" b_data={breadcrumb}/>
                       <h2 className="mt-5 mb-10 sm:text-center  heading text-black">
                         {data.PageTitle}
                       </h2>

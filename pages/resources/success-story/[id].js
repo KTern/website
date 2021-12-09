@@ -9,6 +9,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../../../component/breadcrumb";
 const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -115,7 +116,8 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
         <section id="features" className={`w-full py-20  pt-16 ${data.StreamName} `}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
-              <p className={`max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full bg-${data.StreamName}-secondary`}>
+              <BreadCrumb color="white" b_data={breadcrumb}/>
+              <p className={`max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full bg-${data.StreamName}-secondary`}>
                 {data.PageHeader.Tag}
               </p>
               <h1 className="heading text-white ">{data.PageHeader.header}</h1>

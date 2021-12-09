@@ -10,6 +10,7 @@ import { EventJsonLd } from "next-seo";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { data } from "autoprefixer";
+import BreadCrumb from "../../../component/breadcrumb";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -147,6 +148,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
 
           <div className="relative z-20 px-4 py-24 mx-auto text-center text-white max-w-7xl lg:py-32 ">
             <div className="flex flex-wrap text-white">
+              <div className="mb-10"><BreadCrumb color="white" b_data={breadcrumb}/></div>
               <div className="relative w-full px-4 mx-auto text-center xl:flex-grow-0 xl:flex-shrink-0">
                 <h1 className="mt-0 mb-2 heading  text-white ">
                   {webinar_Data.WebinarTitle}

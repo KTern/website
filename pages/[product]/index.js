@@ -11,6 +11,7 @@ import { VideoJsonLd } from "next-seo";
 
 import { SoftwareAppJsonLd } from "next-seo";
 import FAQ from "../../component/faq";
+import BreadCrumb from "../../component/breadcrumb";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -269,10 +270,11 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           <div className='hidden lg:block absolute inset-0 w-full relative'>
             <Image src='/atis-assets/background/lines.svg' alt='' layout='fill' />
           </div>
-
+      
           <div
             className={`relative pt-12 md:pt-10 pb-40 text-white ${stream_data.cssstreamtag} border-b-4 border-${stream_data.cssstreamtag}-400`}
           >
+              <div className="ml-10"> <BreadCrumb color="white" b_data={breadcrumb}/></div>
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
                 <h2 className='mb-3 text-white  heading'>{stream_data.pageHeader.header}</h2>
@@ -348,39 +350,19 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* <!-- /Customer logos Section --> */}
          {/* <!-- Why Ktern --> */}
          <section className={`md:px-20 ${stream_data.cssstreamtag} text-white py-10 rounded-tr-large rounded-b-large mx-10 mb-10`}>
-          <h2 className='section-heading text-center text-white mt-10 mb-3'>feature_data.WhySectionTitle</h2>
-          <p className='section-subheading text-center text-white'>feature_data.WhySectionDescription</p>
+          <h2 className='section-heading text-center text-white mt-10 mb-3'>{stream_data.WhySectionTitle}</h2>
+          <p className='section-subheading text-center text-white'>{stream_data.WhySectionDescription}</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
             <div className='flex flex-wrap justify-center items-center'>
-             
+             {stream_data.WhyStreamPoints.map((dt)=>(
                 <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
                   <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
+                    <Image src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height} className=" rounded-full " />
                   </div>
-                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
-                  <p className='card-subheading text-gray-200'>Lorem </p>
-                </div>
-                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
-                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
-                  </div>
-                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
-                  <p className='card-subheading text-gray-200'>Lorem </p>
-                </div>
-                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
-                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
-                  </div>
-                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
-                  <p className='card-subheading text-gray-200'>Lorem </p>
-                </div>
-                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
-                  <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src="/assets/about.png" alt='' width={180} height={180} className=" rounded-full " />
-                  </div>
-                  <h3 className='mb-4 text-white card-heading'>Testing</h3>
-                  <p className='card-subheading text-gray-200'>Lorem </p>
-                </div>
+                  <h3 className='mb-4 text-white card-heading'>{dt.CardTitle}</h3>
+                  <p className='card-subheading text-gray-200'>{dt.CardDescription} </p>
+                </div>))}
+                
             </div>
           </div>
         </section>
@@ -458,7 +440,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                       </div>
                     </div>
 
-                    <div className='w-full lg:w-1/2 md:px-20 lg:mb-12 lg:mb-20 lg:mb-0 flex items-center'>
+                    <div className='w-full lg:w-1/2 md:px-20 lg:mb-12 lg:mb-20 lg:mb-0 space-x-10 flex items-center'>
                       <div className='w-full text-center lg:text-left'>
                         <div className='max-w-md mx-auto lg:mx-0'>
                           <h2 className='mb-3 card-heading'>
@@ -497,7 +479,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                             width={500}
                             height={400}
                             className='rounded-3xl md:rounded-tl-none bg-gray-100'
-                            src={`/product/${stream_data.cssstreamtag}/${stream_data.cssstreamtag}_2.svg`}
+                            src={dt.imageurl}
                             alt=''
                           />
                         </div>
@@ -673,14 +655,14 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           <Carousel className='bots flex p-10  ' responsive={responsive}>
             {stream_data.BotCards.map((dt) => (
               <div key="dt" className=" relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
-              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'250px',width:'310px'}}></span>
+              <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'500px',width:'310px'}}></span>
               <div 
-                className={`relative shadow bots-card bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
+                className={`relative shadow bots-card bg-white flex-col p-5   group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
               >
-                <div className="relative bg-whitev flex flex-col justify-between flex-1 mr-12 text-black">
-                                            
-                                            <h3 className="my-2 card-heading  text-gray-800">{dt.CardTitle}</h3>       
-                                             <p className="mb-2 card-subheading text-gray-600">{dt.CardDescription}</p>
+                <div className="relative bg-white flex flex-col justify-between flex-1  text-black">
+                                            <Image src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height}/>
+                                            <h3 className="my-2 mt-4 text-md font-bold  text-gray-800">{dt.CardTitle}</h3>       
+                                             <p className="mb-2 navbar-s text-gray-600">{dt.CardDescription}</p>
                                    
                                 </div>
               </div>

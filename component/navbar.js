@@ -363,28 +363,28 @@ return (
                     <div id="tag" className="flex space-x-6 divide-x">
                        <ul id="tag" className=" bg-white px-4 w-full sm:w-1/2 lg:w-2/6   pb-2 pt-2 lg:pt-2" >
                             <h3 id="tag" className="hyperlink text-gray-500 text-bold mb-2 ">{h_data.StreamsTitle}</h3>
-                                <div id="tag" className="flex-col space-y-1">
+                                <div id="tag" className="flex-col ">
                                     <li id="tag">
                                         <Link href="/digital-maps"    passHref><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(true);setIsProcessShown(false);setIsProjectShown(false)}}
-                             className="navbar-s block p-2  text-black hover:bg-maps-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalMaps} /></a></Link>
+                             className=" block p-2  text-black hover:bg-maps-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalMaps} /></a></Link>
                             </li>
                             <li id="tag">
                                         <Link href="/digital-projects"    passHref><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(true)}}
-                             className="navbar-s block p-2  text-black hover:bg-projects-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalProjects} /></a></Link>
+                             className=" block p-2  text-black hover:bg-projects-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalProjects} /></a></Link>
                             </li>
                             <li id="tag">
                                         <Link href="/digital-process"    passHref><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(true);setIsProjectShown(false)}}
-                             className="navbar-s block p-2  text-black hover:bg-process-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalProcess} /></a></Link>
+                             className=" block p-2  text-black hover:bg-process-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalProcess} /></a></Link>
                             </li>
                              <li id="tag">
                             <Link href="/digital-labs"   passHref><a onMouseEnter={() => { setIsLabsShown(true);setIsMinesShown(false);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
-className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalLabs} /></a></Link>
+className=" block p-2  text-black hover:bg-labs-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalLabs} /></a></Link>
                             </li>
                             <li id="tag">
                                         <Link href="/digital-mines"   passHref><a onMouseEnter={() => { setIsLabsShown(false);setIsMinesShown(true);setIsMapsShown(false);setIsProcessShown(false);setIsProjectShown(false)}}
-                                            className="navbar-s block p-2  text-black hover:bg-mines-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalMines} /></a></Link>
+                                            className=" block p-2  text-black hover:bg-mines-secondary rounded-md py-2 "><HeaderCard data={h_data.DigitalMines} /></a></Link>
                             </li>         
-                        <li className="mt-4 mx-2" id="tag">
+                        <li className="mx-2 " id="tag">
             <Link href='/pricing' passHref>
      <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">See Pricing
      <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -565,9 +565,12 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Resources</h3>
                                     {h_data.ResourcesList.map((dt)=>(
                                     <li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} passHref>
+                                         {dt.OpenInNewTab && <Link target="_blank" href={dt.redirectURL} passHref>
                                               <a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a>
-                                              </Link>        
+                                              </Link>  }  
+                                              {!dt.OpenInNewTab && <Link href={dt.redirectURL} passHref>
+                                              <a htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a>
+                                              </Link>  }         
                                   </li>
                                   ))}
                                     <li className="mt-4 hover:bg-secondary">
@@ -590,10 +593,10 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                           <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Partners</h3>
                                     {h_data.PartnersList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} passHref><a htmlFor="toggle-sm-three" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
+{dt.OpenInNewTab &&                                          <Link target="_blank" href={dt.redirectURL} passHref><a htmlFor="toggle-sm-three" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        }
+{!dt.OpenInNewTab &&                                          <Link href={dt.redirectURL} passHref><a htmlFor="toggle-sm-three" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        }
                                   </li>))}
-                                    <li className="mt-4 hover:bg-secondary">
-              </li>  
+                                    
                           </ul>
                       </div>
                   </div>
@@ -606,7 +609,8 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                           <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Company</h3>
                                     {h_data.CompanyList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
+                                         {dt.OpenInNewTab && <Link target="_blank" href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>}
+                                         {!dt.OpenInNewTab && <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>}        
                                   </li>))}
                                    
                                   
@@ -622,7 +626,8 @@ className="navbar-s block p-2  text-black hover:bg-labs-secondary rounded-md py-
                           <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                               <h3 className="navbar-h uppercase text-black text-bold mb-2">Support</h3>
                                     {h_data.SupportList.map((dt)=>(<li key="dt" className="hover:bg-secondary ">
-                                          <Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>        
+                                          {dt.OpenInNewTab &&<Link target="_blank" href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>}
+                                          {!dt.OpenInNewTab &&<Link href={dt.redirectURL} ><a title={dt.Title} htmlFor="toggle-sm-two" className="block cursor-pointer navbar-s py-2 lg:p-6  ">{dt.Title}</a></Link>}        
                                   </li>))}
                                    
                                   

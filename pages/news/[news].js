@@ -7,6 +7,7 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../../component/breadcrumb";
 export default function News_Landing({h_data,f_data,data,n_data}){
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -102,7 +103,9 @@ export default function News_Landing({h_data,f_data,data,n_data}){
       />
 
             <Layout h_data={h_data} f_data={f_data}>
+              
                 <section className="pt-24 bg-white space-y-10 mx-52 flex-col text-center justify-center items-center">
+                <BreadCrumb color="black" b_data={breadcrumb}/>
                     <h2 className="text-black heading">{data.PageHeader.header}</h2>
                     <p className=" text-gray-700 subheading ">{data.PageHeader.subHeading}</p>
                     <hr className=" mx-auto"/>

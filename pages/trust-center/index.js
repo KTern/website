@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
+import BreadCrumb from "../../component/breadcrumb";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -102,6 +103,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
           className="py-32 bg-background bg-no-repeat bg-cover w-full bg-dxaas-primary"
           style={{ backgroundPosition: "100% 50%", backgroundSize: "auto" }}
         >
+         <div className="ml-10">   <BreadCrumb color="white" b_data={breadcrumb}/></div >
           <h2 className="heading text-center text-white">
             {data.PageHeader.header}
           </h2>

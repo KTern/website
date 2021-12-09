@@ -9,6 +9,7 @@ import { FAQPageJsonLd } from "next-seo";
 import Carousel from 'react-multi-carousel';
 import FAQ from "../component/faq";
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../component/breadcrumb";
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -134,9 +135,10 @@ export default function Partners({ data,h_data,f_data }) {
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Header Section --> */}
         <section className='w-full py-20 px-20 bg-secondary'>
-          <div className='flex flex-col space-x-10  items-center px-4 mx-auto  lg:flex-row'>
-            <div className=' relative z-20 flex flex-col items-start justify-center w-full h-full md:w-1/2'>
-              <p className='max-w-max px-2 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full '>
+          <div className='flex flex-col md:space-x-20  items-center px-4 mx-auto  lg:flex-row'>
+            <div className=' relative z-20 flex flex-col items-start justify-center w-full h-full md:w-2/3'>
+            <BreadCrumb color="black" b_data={breadcrumb}/>
+              <p className='max-w-max px-2 mt-4 py-1 mb-5  hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full '>
                 {data.PageHeader.Tag}
               </p>
               <h5 className='mb-2 heading  sm:text-4xl '>{data.PageHeader.header}</h5>
@@ -159,7 +161,7 @@ export default function Partners({ data,h_data,f_data }) {
                 </Link>
               </div>
             </div>
-            <div className=' hidden lg:block relative ml-10 z-10 w-full h-full my-16 lg:my-0 md:w-1/2'>
+            <div className=' hidden lg:block relative ml-10 z-10 w-full h-full my-16 lg:my-0 md:w-1/3'>
               <Image
                 className='relative z-40 w-full h-full'
                 src={data.PageHeader.ImageURL}

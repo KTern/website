@@ -8,6 +8,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import FAQ from "../../component/faq";
+import BreadCrumb from "../../component/breadcrumb";
 // import Breadcrumbs from 'nextjs-breadcrumbs';
 {
   /* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */
@@ -125,7 +126,8 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               {/* <div className="flex hyperlink mb-5 breadcrumb">
                     <Breadcrumbs   rootLabel="Home" activeItemClassName="text-gray-600"   inactiveItemClassName="text-gray-400 " listClassName="flex space-x-1 "  replaceCharacterList={[{ from: '-', to: ' ' }]} />
                     </div> */}
-              <p className={`max-w-max px-4 py-1 mb-5 text-white ${feature_data.cssStreamTag}  hyperlink uppercase  rounded-full `}>
+                  <BreadCrumb color="black" b_data={breadcrumb}/>
+              <p className={`mt-4 max-w-max px-4 py-1 mb-5 text-white ${feature_data.cssStreamTag}  hyperlink uppercase  rounded-full `}>
                 {feature_data.PageHeader.Tag}
               </p>
               <h1 className='heading'>{feature_data.PageHeader.header}</h1>

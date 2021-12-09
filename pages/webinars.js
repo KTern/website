@@ -5,12 +5,100 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
-
+import { useState,useEffect } from "react";
+import {useRouter} from "next/router";
+import _ from 'lodash';
+import BreadCrumb from "../component/breadcrumb";
 export default function Webinar ({data,h_data,f_data}) {
+    // Filters
+    const router=useRouter();
+    const [ isFilters, setFilters ] = useState([]);
+
+    function colorChange () {
+        if (typeof process.browser)
+          document.getElementById('option').style.backgroundColor="#00000"
+    }
+    // Drop Down
+    // console.log(data.StreamsFilter)
+  
+    let streamOptions = [];
+    // let topicOptions = [];
+    // let resourceTypeOptions = [];
+    let roleOptions = [];
+    function filterData (data) {
+      let filter = []
+       let val = {}
+      
+      
+      data.map(item => {
+        val = {}
+        val[ 'label' ] = item.Label;
+        val[ 'value' ] = item.Value;
+        filter.push(val) 
+      })
+      
+       console.log(filter,data)
+      return filter
+    }
+    streamOptions = filterData(data.DigitalStreamsFilter);
+    // topicOptions = filterData(data.TopicsFilter);
+    // resourceTypeOptions = filterData(data.ResourceTypeFilters);
+    roleOptions = filterData(data.RolesFilter);
+    const [ResourceList,setResourceList]=useState(data.WebinarList)
+    let filter = []
+    
+    
+      let Labels=['stream','role']
+    function handleChange (event) {
+      let filterArray = {}
+      if (document.getElementById('stream').value!= 'allStreams')
+        filterArray.RelatedStream = document.getElementById('stream').value
+    //   if (document.getElementById('type').value!= 'allTypes')
+    //     filterArray.ResourceType = document.getElementById('type').value
+    //   if (document.getElementById('topic').value!= 'allTopics')
+    //     filterArray.RelatedTopic = document.getElementById('topic').value
+    //   if (document.getElementById('role').value!= 'allRoles')
+    //       filterArray.RelatedRole=document.getElementById('role').value
+     
+  console.log(filterArray)
+     
+        filter=_.filter(data.WebinarList,filterArray)
+    
+         setResourceList(filter);
+     
+    }
+    let video="Video";
+    useEffect(() => {
+    if(router.query.type){
+      let filterArray = {}
+      filterArray.ResourceType = router.query.type
+        
+  // console.log(filterArray)
+     
+  filter=_.filter(data.WebinarList,filterArray)
+  // console.log(filter)
+    setResourceList(filter);
+    if(process.browser)
+    document.getElementById('type').value=router.query.type;
+     }
+    },[])
+    function handleFilter (element) {
+      filter=[]
+      data.WebinarList.map(item => {
+        if (filterArray.includes(item.ResourceType))
+          filter.push(item)
+      }
+      )
+      
+      setResourceList(filter);
+    }
+   
+    // Filters end
     let breadcrumb = [];
     data.PageSEO.BreadCrumb.map((dt) => {
       breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
     });
+    console.log(breadcrumb)
     const date = new Date(data.FeaturedWebinar.Date + "T" + data.FeaturedWebinar.Time);
     const time = date.toLocaleString("en-US", {
         hour: "numeric",
@@ -117,9 +205,13 @@ export default function Webinar ({data,h_data,f_data}) {
     />
     <Layout h_data={h_data} f_data={f_data}> 
         {/* <!--Upcoming Webinar Section--> */}
+
         <div className=" mx-auto md:py-4">
             <section className="w-full   bg-white py-12 pt-20  background text-white" >
+              <div className="ml-20">
+            <BreadCrumb color="white" b_data={breadcrumb}/></div>
             <div className="flex flex-row items-center justify-center md:mx-auto space-x-5 md:max-w-6xl">
+            
                 <div className="w-1/2 relative flex flex-col items-start justify-center  h-full  px-6 mx-auto xl:max-w-none ">
                             <h2 className=" heading  text-white sm:w-4/5 mb-5 mt-5 text-3">{data.PageHeader.header}</h2>
                             <p className="subheading text-gray-300">{data.PageHeader.subHeading}</p>
@@ -193,7 +285,31 @@ export default function Webinar ({data,h_data,f_data}) {
                    
                 </div>
             </div>
+           
         </section>
+        <section className="sm:hidden block  bg-black flex items-center justify-center p-5 sticky z-30 md:top-16 sm:top-10">
+                <h1 className="w-1/6 uppercase text-white navbar-h ">Filter By:</h1>
+                <form onChange={handleChange} className="w-5.5/6 grid grid-cols-4 gap-7">
+                  <select name="stream" id="stream" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {streamOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                  </select>
+                 
+                  <select name="role" id="role" className="p-2 pr-4 text-black bg-white  w-90" style={{ webkitAppearance: 'none',
+   mozAppearance: 'none',
+   appearance: 'none',
+    background: "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff"
+     }}>
+                    {roleOptions.map((item)=>(
+                      <option id="option"  style={{appearance:'none'}} onMouseEnter={colorChange} key="item" value={item.value}>{item.label}</option>))}
+                  </select>
+               
+</form>
+              </section>
         </div>
          <section className="w-full lg:p-10 ">
                
@@ -206,7 +322,7 @@ export default function Webinar ({data,h_data,f_data}) {
                         {/* Chips Section */}
                        
                         <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
-{data.WebinarList.slice(0).reverse().map(data=>(
+{ResourceList.slice(0).reverse().map(data=>(
     <div key="data"   className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
                                     <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${data.RelatedStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
                                     <div className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${data.RelatedStream}-primary `}>

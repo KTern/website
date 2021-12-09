@@ -151,7 +151,8 @@ export default function Consultingpartner({data,h_data,f_data}){
                 <section className="w-full py-12 bg-secondary">
             <div className="flex flex-col items-center px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                    <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                  <BreadCrumb color="black" b_data={breadcrumb}/>
+                    <p className="max-w-max mt-4 px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     {data.PageHeader.Tag}
                 </p>
                 <h5 className="mb-3 heading font-bold leading-none sm:text-4xl ">
@@ -222,7 +223,7 @@ export default function Consultingpartner({data,h_data,f_data}){
         {/* <!--Detailed Look at Partnership Benefits--> */}
         <section className="relative w-full md:px-8 py-10 pb-20 leading-6 bg-white border-0 border-gray-200 border-solid text-black">
             <div className="flex flex-col items-center max-w-6xl px-8  mx-auto leading-6 border-solid md:items-stretch md:justify-center ">
-                <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl">{data.WhySectionTitle}</h2>
+                <h2 className="w-full m-0 section-heading text-center border-0 border-gray-200 sm:text-3xl">{data.PartnerBenefitTitle}</h2>
                
                 <div className="grid grid-cols-4  mt-10 sm:grid-cols-1 ">
                    {data.PartnershipBenefits.map((data)=>( <div key="data" className="shadow-lg   border-gray-200 text-gray-50">

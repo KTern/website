@@ -6,6 +6,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../component/breadcrumb";
 export default function About({ data,h_data,f_data ,n_data}) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -90,8 +91,11 @@ export default function About({ data,h_data,f_data ,n_data}) {
       
       <Layout h_data={h_data} f_data={f_data}>
         <section className='  relative  flex flex-col items-center justify-center w-full   py-4 background bg-cover  min-w-screen'>
+     
           <div className='flex flex-col space-x-10 items-center justify-center md:mx-auto  xl:p-8 lg:flex-row lg:max-w-7xl lg:p-0'>
+            
             <div className='container space-y-5 relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-white lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0'>
+            <BreadCrumb color="white" b_data={breadcrumb}/>
               <h1 className='relative z-20   leading-none text-white heading  sm:text-center lg:text-left'>
                 {data.PageHeader.header}
                 <br />

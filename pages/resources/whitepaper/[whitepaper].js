@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../../../component/breadcrumb";
 const WhitePaper_Landing = ({data,h_data,f_data}) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -116,9 +117,12 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
             </Head>
         <Layout h_data={h_data} f_data={f_data}>
       <section  className={`${data.StreamName} w-full pt-10 `} >
+       
             <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
+         
                 <div className="relative z-20 flex flex-col  w-2/3 h-full ">
-                <div className={`bg-${data.StreamName}-secondary max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full `}>
+                <BreadCrumb color="white" b_data={breadcrumb}/>
+                <div className={`bg-${data.StreamName}-secondary mt-4  max-w-max px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full `}>
                     {data.PageHeader.Tag}
                 </div>
                     <h1 className="heading text-white "  >{data.PageHeader.header}</h1>

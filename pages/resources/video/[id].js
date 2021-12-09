@@ -8,6 +8,7 @@ import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../../../component/breadcrumb";
 export default function Video({ data,h_data,f_data,v_data }){
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -15,6 +16,9 @@ export default function Video({ data,h_data,f_data,v_data }){
   });
     return (
       <>
+      <Head>
+      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
+      </Head>
           <NextSeo
 				title={data.PageSEO.PageTitle}
 				description={data.PageSEO.PageDescription}
@@ -126,9 +130,13 @@ export default function Video({ data,h_data,f_data,v_data }){
         ]}
       />
         <Layout h_data={h_data} f_data={f_data}>
-          <section className={`py-28 px-20 bg-${data.VideoLandingPage.DigitalStream}-secondary space-x-10 flex items-center justify-center text-center`}>
+        
+          <section className={`py-28 px-20 bg-${data.VideoLandingPage.DigitalStream}-secondary `}>
+          <BreadCrumb color="black" b_data={breadcrumb}/>   
+        <div className="space-x-10 flex items-center justify-center text-center">
           <div className="w-1/2">
-          <p className={`max-w-max px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}>
+        
+          <p className={`max-w-max mt-4 px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}>
                { data.Tag}
               </p>
             <h2 className=" section-heading mb-5 text-justify">{data.VideoLandingPage.PageHeader}</h2>
@@ -167,11 +175,13 @@ export default function Video({ data,h_data,f_data,v_data }){
                    {data.VideoLandingPage.Description}
                   </Markdown>
 </p>
+<div className="sharethis-inline-share-buttons"></div>
         </div>
         <div className="w-1/2">
         <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
                   <iframe width="560" height="315" src={data.VideoLandingPage.VideoEmbedUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </h2>
+        </div>
         </div>
             </section>
       {/* Related Resources Section */}

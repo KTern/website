@@ -10,6 +10,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { isPlainObject } from "lodash";
 import Carousel from "react-multi-carousel";
 import FAQ from "../component/faq";
+import BreadCrumb from "../component/breadcrumb";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -187,9 +188,12 @@ export default function Pricing({ data, h_data, f_data }) {
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Main Pricing Section-->         */}
         <section className="overflow-hidden text-gray-700 ">
+         
           <div className="container px-5 pt-32 pb-4 mx-auto">
+            
             <div className="flex flex-col w-full mb-24 text-center">
-              <div className="relative z-10 max-w-3xl px-12 mx-auto space-y-5 text-center lg:px-0">
+            <BreadCrumb color="black" b_data={breadcrumb}/>
+              <div className="relative mt-4 z-10 max-w-3xl px-12 mx-auto space-y-5 text-center lg:px-0">
                 <h1 className="heading">{data.PageHeader.header}</h1>
                 {/* <p className="mx-auto subheading ">Digital Transformation made simple</p> */}
               </div>

@@ -8,6 +8,7 @@ import { SocialProfileJsonLd } from "next-seo";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from "next/router";
+import BreadCrumb from "../component/breadcrumb";
 export default function PartnerContact({ data, h_data, f_data }) {
   const router = useRouter();
   console.log(router.query.message);
@@ -110,7 +111,8 @@ export default function PartnerContact({ data, h_data, f_data }) {
         <div className="py-20 p-4 bg-partnercontact bg-secondary  w-full min-h-screen bg-white flex justify-center ">
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-2/5 py-12 p-4 bg-white rounded-2xl md:shadow-xl z-20">
             <div >
-              <h1 className="  text-center mb-4 cursor-pointer section-heading">
+              <div className="ml-4"><BreadCrumb color="black" b_data={breadcrumb}/></div>
+              <h1 className="mt-4  text-center mb-4 cursor-pointer section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
               <div

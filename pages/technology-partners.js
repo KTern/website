@@ -9,6 +9,7 @@ import { FAQPageJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 import FAQ from "../component/faq";
 import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../component/breadcrumb";
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -139,7 +140,8 @@ export default function technical_partner ({data,h_data,f_data}) {
             <section className="w-full py-8 bg-secondary">
             <div className="flex flex-col items-center space-x-14 px-4 mx-auto max-w-7xl lg:flex-row">
                 <div className="relative z-20 flex flex-col items-start justify-center w-full h-full lg:w-1/2">
-                    <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
+                  <BreadCrumb color="black" b_data={breadcrumb}/>
+                    <p className="max-w-max mt-4 px-2 py-1 mb-5 font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
                     {data.PageHeader.Tag}
                 </p>
                 <h5 className="mb-3 heading font-bold leading-none sm:text-4xl ">

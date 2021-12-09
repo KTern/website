@@ -10,6 +10,7 @@ import React from "react";
 import ICalendarLink from "react-icalendar-link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { data } from "autoprefixer";
+import BreadCrumb from "../../../component/breadcrumb";
 export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.start);
@@ -142,6 +143,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
            
 
             <div className="container px-3 mx-auto">
+              <BreadCrumb color="black" b_data={breadcrumb}/>
               <div className="max-w-3xl mx-auto  flex-col  text-center">
                 <h2 className="my-10 heading font-bold font-heading text-black ">
                   {webinar_data.WebinarThanksPage.PageHeader}
@@ -171,6 +173,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         {webinar_data.IsOnDemandWebinar && (
           <div className={`relative py-24 text-center flex-col   overflow-hidden justify-center text-white  bg-${webinar_data.CssStreamTag}-secondary`}>
           <section className="relative  text-center flex overflow-hidden justify-center text-black  ">
+          <BreadCrumb color="black" b_data={breadcrumb}/>
             <div className="w-1/2">
             <h1 className="heading mb-5">{webinar_data.OnDemandWebinar.PageHeader}</h1>
             <p className="subheading mb-10">

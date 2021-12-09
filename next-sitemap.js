@@ -1,19 +1,19 @@
 module.exports = {
-  siteUrl: 'https://web.ktern.com',
+  siteUrl: 'https://ktern.com',
   changefreq: 'daily',
-  priority: 0.7,
+  priority: 1.0,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ['/protected-page', '/awesome/secret-page'],
+  exclude: [],
   alternateRefs: [
-    {
-      href: 'https://es.example.com',
-      hreflang: 'en',
-    },
-    {
-      href: 'https://fr.example.com',
-      hreflang: 'en',
-    },
+    // {
+    //   href: 'https://es.example.com',
+    //   hreflang: 'en',
+    // },
+    // {
+    //   href: 'https://fr.example.com',
+    //   hreflang: 'en',
+    // },
   ],
   // Default transformation function
   transform: async (config, path) => {
@@ -25,9 +25,9 @@ module.exports = {
       alternateRefs: config.alternateRefs ?? [],
     }
   },
-  additionalPaths: async (config) => [
-    await config.transform(config, '/additional-page'),
-  ],
+  // additionalPaths: async (config) => [
+  //   await config.transform(config, '/additional-page'),
+  // ],
   robotsTxtOptions: {
     policies: [
       {
@@ -36,11 +36,6 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://web.ktern.com/digital-maps',
-      'https://web.ktern.com/digital-projects',
-        'https://web.ktern.com/digital-process',
-        'https://web.ktern.com/digital-mines',
-      'https://web.ktern.com/digital-labs'
     ],
   },
 }
