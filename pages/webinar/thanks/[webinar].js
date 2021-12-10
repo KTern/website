@@ -13,8 +13,8 @@ import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
 export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
-  const start = new Date(webinar_data.start);
-  const end = new Date(webinar_data.start).setHours(start.getHours() + 1);
+  const start = new Date(webinar_data.DateTime);
+  const end = new Date(webinar_data.DateTime).setHours(start.getHours() + 1);
 
   const event = {
     title: webinar_data.WebinarTitle,
