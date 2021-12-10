@@ -380,7 +380,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                       <div className='relative' style={{ zIndex: 0 }}>
                         <div className='h-128 w-full relative'>
                           <Image
-                            className='rounded-3xl md:rounded-tl-none bg-gray-100'
+                            className='rounded-3xl md:rounded-tl-none bg-white'
                             width={500}
                             height={400}
                             src={dt.imageurl}
@@ -478,7 +478,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           <Image
                             width={500}
                             height={400}
-                            className='rounded-3xl md:rounded-tl-none bg-gray-100'
+                            className='rounded-3xl md:rounded-tl-none bg-white'
                             src={dt.imageurl}
                             alt=''
                           />
@@ -547,7 +547,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                         <div className='relative' style={{ zIndex: 0 }}>
                           <div className='h-128 w-full relative'>
                             <Image
-                              className='rounded-3xl md:rounded-tl-none bg-gray-100'
+                              className='rounded-3xl md:rounded-tl-none bg-white'
                               width={500}
                               height={400}
                               src={dt.imageurl}

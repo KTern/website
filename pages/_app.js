@@ -24,6 +24,9 @@ function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {/* Sharethis */}
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
+        {/*ShareThis  */}
         <link rel="shortcut icon"  href="https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0b1320" />

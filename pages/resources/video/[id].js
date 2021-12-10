@@ -175,7 +175,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                    {data.VideoLandingPage.Description}
                   </Markdown>
 </p>
-<div className="sharethis-inline-share-buttons"></div>
+<div className="sharethis-inline-share-buttons  space-x-4"></div>
         </div>
         <div className="w-1/2">
         <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
