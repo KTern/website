@@ -78,32 +78,19 @@ function Home ({ data ,h_data,f_data}) {
 				description={data.pageSEO.PageDescription}
 				canonical={data.pageSEO.CanonicalTag}
 				openGraph={{
-					url: `${data.pageSEO.ThumbnailImageURL}`,
+					url: `${data.pageSEO.PageURL}`,
 					title: `${data.pageSEO.PageTitle}`,
 					description: `${data.pageSEO.PageDescription}`,
 					images: [
 						{
-							url: 'https://www.example.ie/og-image-01.jpg',
-							width: 800,
-							height: 600,
-							alt: 'Og Image Alt',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-02.jpg',
-							width: 900,
-							height: 800,
-							alt: 'Og Image Alt Second',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-03.jpg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-04.jpg',
-						},
+							url:`${data.pageSEO.ThumbnailImageURL}`,
+							width: 1920,
+							height: 1080,
+							alt: `${data.pageSEO.PageTitle}`,
+							type: 'image/png',
+						}
 					],
-					site_name: 'SiteName',
+					site_name: `${process.env.SITE_TITLE}`,
 				}}
 				twitter={{
 					handle: `${process.env.TWITTER_HANDLE}`,
@@ -116,12 +103,12 @@ function Home ({ data ,h_data,f_data}) {
 					cardType: `${process.env.CARD_TYPE}`,
 					appId: `${process.env.FB_APPID}`,
 				}}
-				languageAlternates={[
-					{
-						hrefLang: `${data.OtherSEO.languageAlternates.hrefLang}`,
-						href: `${data.OtherSEO.languageAlternates.href}`,
-					},
-				]}
+				// languageAlternates={[
+				// 	{
+				// 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+				// 		href: `${h_data.OtherSEO.languageAlternates.href}`,
+				// 	},
+				// ]}
 				additionalMetaTags={[
           {
             property: "dc:creator",
@@ -139,11 +126,11 @@ function Home ({ data ,h_data,f_data}) {
 				additionalLinkTags={[
 					{
 						rel: 'icon',
-						href: 'https://www.test.ie/favicon.ico',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
 					},
 					{
 						rel: 'apple-touch-icon',
-						href: 'https://www.test.ie/touch-icon-ipad.jpg',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
 						sizes: '76x76',
 					},
 					{
@@ -161,15 +148,15 @@ function Home ({ data ,h_data,f_data}) {
         url={process.env.URL}
       />
 			<SoftwareAppJsonLd
-				name="Angry Birds"
-				price="1.00"
+				name= {process.env.NAME}
+				price="0"
 				priceCurrency="USD"
 				aggregateRating={{
-					ratingValue: '4.6',
-					reviewCount: '8864',
+					ratingValue: '4.7',
+					reviewCount: '17',
 				}}
-				operatingSystem="ANDROID"
-				applicationCategory="GameApplication"
+				operatingSystem="Windows 10, Windows 11"
+				applicationCategory="BusinessApplication"
 			/>
 			<div>
 				<Layout h_data={h_data} f_data={f_data}>

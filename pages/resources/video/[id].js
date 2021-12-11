@@ -20,83 +20,70 @@ export default function Video({ data,h_data,f_data,v_data }){
       <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
       </Head>
           <NextSeo
-				title={data.PageSEO.PageTitle}
-				description={data.PageSEO.PageDescription}
-				canonical={data.PageSEO.CanonicalTag}
-				openGraph={{
-					url: `${data.PageSEO.ThumbnailImageURL}`,
-					title: `${data.PageSEO.PageTitle}`,
-					description: `${data.PageSEO.PageDescription}`,
-					images: [
-						{
-							url: 'https://www.example.ie/og-image-01.jpg',
-							width: 800,
-							height: 600,
-							alt: 'Og Image Alt',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-02.jpg',
-							width: 900,
-							height: 800,
-							alt: 'Og Image Alt Second',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-03.jpg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-04.jpg',
-						},
-					],
-					site_name: 'SiteName',
-				}}
-				twitter={{
-					handle: '@handle',
-					site: '@site',
-					cardType: 'summary_large_image',
-				}}
-				facebook={{
-					handle: '@handle',
-					site: '@site',
-					cardType: 'summary_large_image',
-					appId: '1234567890',
-				}}
-				languageAlternates={[
-					{
-						hrefLang: 'de',
-						href: 'https://www.canonical.ie/de',
-					},
-				]}
-				additionalMetaTags={[
+			title={data.PageSEO.PageTitle}
+      description={data.PageSEO.PageDescription}
+      canonical={data.PageSEO.CanonicalTag}
+      openGraph={{
+        url: `${data.PageSEO.PageURL}`,
+        title: `${data.PageSEO.PageTitle}`,
+        description: `${data.PageSEO.PageDescription}`,
+        images: [
           {
-            property: "dc:creator",
-            content: "Nivedha",
-          },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-				additionalLinkTags={[
-					{
-						rel: 'icon',
-						href: 'https://www.test.ie/favicon.ico',
-					},
-					{
-						rel: 'apple-touch-icon',
-						href: 'https://www.test.ie/touch-icon-ipad.jpg',
-						sizes: '76x76',
-					},
-					{
-						rel: 'manifest',
-						href: '/manifest.json',
-					},
-				]}
+            url:`${data.PageSEO.ThumbnailImageURL}`,
+            width: 1920,
+            height: 1080,
+            alt: `${data.PageSEO.PageTitle}`,
+            type: 'image/png',
+          }
+        ],
+        site_name: `${process.env.SITE_TITLE}`,
+      }}
+      twitter={{
+        handle: `${process.env.TWITTER_HANDLE}`,
+        site: `${process.env.TWITTER_SITE}`,
+        cardType: `${process.env.CARD_TYPE}`,
+      }}
+      facebook={{
+        handle: `${process.env.FACEBOOK_HANDLE}`,
+        site: `${process.env.FACEBOOK_SITE}`,
+        cardType: `${process.env.CARD_TYPE}`,
+        appId: `${process.env.FB_APPID}`,
+      }}
+      // languageAlternates={[
+      //   {
+      //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+      //     href: `${h_data.OtherSEO.languageAlternates.href}`,
+      //   },
+      // ]}
+      additionalMetaTags={[
+        {
+          property: "dc:creator",
+          content: "Nivedha",
+        },
+        {
+          name: "application-name",
+          content: "KTern.AI",
+        },
+        {
+          httpEquiv: "x-ua-compatible",
+          content: "IE=edge; chrome=1",
+        },
+      ]}
+      additionalLinkTags={[
+        {
+          rel: 'icon',
+          href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+          sizes: '76x76',
+        },
+        {
+          rel: 'manifest',
+          href: '/manifest.json',
+        },
+      ]}
 			/>
 <BreadcrumbJsonLd
       itemListElements={breadcrumb}
@@ -175,7 +162,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                    {data.VideoLandingPage.Description}
                   </Markdown>
 </p>
-<div className="sharethis-inline-share-buttons  space-x-4"></div>
+<div className="sharethis-inline-share-buttons"></div>
         </div>
         <div className="w-1/2">
         <h2 className="md:px-20 p-4 mx-auto max-w-7xl">

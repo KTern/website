@@ -41,79 +41,70 @@ export default function Partners({ data,h_data,f_data }) {
         url={process.env.URL}
       />
       <NextSeo
-        title={data.PageSEO.PageTitle}
-        description={data.PageSEO.PageDescription}
-        canonical='https://www.canonical.ie/'
-        openGraph={{
-          url:`${data.PageSEO.CanonicalTag}`,
-          title:`${data.PageSEO.PageTitle}`,
-          description:`${data.PageSEO.PageDescription}`,
-          images: [
-            {
-              url: "https://www.example.ie/og-image-01.jpg",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "https://www.example.ie/og-image-02.jpg",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-          ],
-          site_name: "KTern.AI"
-        }}
-      twitter={{
-					handle: `${process.env.TWITTER_HANDLE}`,
-					site: `${process.env.TWITTER_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.FACEBOOK_HANDLE}`,
-					site: `${process.env.FACEBOOK_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-					appId: `${process.env.FB_APPID}`,
-				}}
-        languageAlternates={[
-          {
-            hrefLang: "de",
-            href: "https://www.canonical.ie/de",
-          },
-        ]}
-        additionalMetaTags={[
-          {
-            property: "dc:creator",
-            content: "Nivedha",
-          },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "https://www.test.ie/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "https://www.test.ie/touch-icon-ipad.jpg",
-            sizes: "76x76",
-          },
-          {
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-        ]}
+       	title={data.PageSEO.PageTitle}
+         description={data.PageSEO.PageDescription}
+         canonical={data.PageSEO.CanonicalTag}
+         openGraph={{
+           url: `${data.PageSEO.PageURL}`,
+           title: `${data.PageSEO.PageTitle}`,
+           description: `${data.PageSEO.PageDescription}`,
+           images: [
+             {
+               url:`${data.PageSEO.ThumbnailImageURL}`,
+               width: 1920,
+               height: 1080,
+               alt: `${data.PageSEO.PageTitle}`,
+               type: 'image/png',
+             }
+           ],
+           site_name: `${process.env.SITE_TITLE}`,
+         }}
+         twitter={{
+           handle: `${process.env.TWITTER_HANDLE}`,
+           site: `${process.env.TWITTER_SITE}`,
+           cardType: `${process.env.CARD_TYPE}`,
+         }}
+         facebook={{
+           handle: `${process.env.FACEBOOK_HANDLE}`,
+           site: `${process.env.FACEBOOK_SITE}`,
+           cardType: `${process.env.CARD_TYPE}`,
+           appId: `${process.env.FB_APPID}`,
+         }}
+        //  languageAlternates={[
+        //    {
+        //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        //      href: `${h_data.OtherSEO.languageAlternates.href}`,
+        //    },
+        //  ]}
+         additionalMetaTags={[
+           {
+             property: "dc:creator",
+             content: "Nivedha",
+           },
+           {
+             name: "application-name",
+             content: "KTern.AI",
+           },
+           {
+             httpEquiv: "x-ua-compatible",
+             content: "IE=edge; chrome=1",
+           },
+         ]}
+         additionalLinkTags={[
+           {
+             rel: 'icon',
+             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+           },
+           {
+             rel: 'apple-touch-icon',
+             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+             sizes: '76x76',
+           },
+           {
+             rel: 'manifest',
+             href: '/manifest.json',
+           },
+         ]}
       />
       <BreadcrumbJsonLd
         itemListElements={breadcrumb}
@@ -214,7 +205,7 @@ export default function Partners({ data,h_data,f_data }) {
         </section>
 
         {/* <!--KTern's Partners --> */}
-        <div className="px-4 py-5">
+        <div className="px-4 ">
 						<div className=" px-4 mx-auto">
 							<h2 className=" text-center mb-20 mt-1 text-gray-500  section-heading sm:text-xl">
 								{data.PartnerLogoTitle}

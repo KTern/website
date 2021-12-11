@@ -29,70 +29,70 @@ export default function Contact({ data, h_data, f_data }) {
         ></script>
       </Head>
       <NextSeo
-        title={data.PageSEO.PageTitle}
-        description={data.PageSEO.PageDescription}
-        canonical={data.PageSEO.CanonicalTag}
-        openGraph={{
-          url: `${data.PageSEO.ThumbnailImageURL}`,
-          title: `${data.PageSEO.PageTitle}`,
-          description: `${data.PageSEO.PageDescription}`,
-          images: [
+        	title={data.PageSEO.PageTitle}
+          description={data.PageSEO.PageDescription}
+          canonical={data.PageSEO.CanonicalTag}
+          openGraph={{
+            url: `${data.PageSEO.PageURL}`,
+            title: `${data.PageSEO.PageTitle}`,
+            description: `${data.PageSEO.PageDescription}`,
+            images: [
+              {
+                url:`${data.PageSEO.ThumbnailImageURL}`,
+                width: 1920,
+                height: 1080,
+                alt: `${data.PageSEO.PageTitle}`,
+                type: 'image/png',
+              }
+            ],
+            site_name: `${process.env.SITE_TITLE}`,
+          }}
+          twitter={{
+            handle: `${process.env.TWITTER_HANDLE}`,
+            site: `${process.env.TWITTER_SITE}`,
+            cardType: `${process.env.CARD_TYPE}`,
+          }}
+          facebook={{
+            handle: `${process.env.FACEBOOK_HANDLE}`,
+            site: `${process.env.FACEBOOK_SITE}`,
+            cardType: `${process.env.CARD_TYPE}`,
+            appId: `${process.env.FB_APPID}`,
+          }}
+          // languageAlternates={[
+          //   {
+          //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+          //     href: `${h_data.OtherSEO.languageAlternates.href}`,
+          //   },
+          // ]}
+          additionalMetaTags={[
             {
-              url: `${data.PageSEO.ThumbnailImageURL}`,
-              width: 1920,
-              height: 1080,
-              alt: "Contact Image Alt",
-              type: "image/jpeg",
+              property: "dc:creator",
+              content: "Nivedha",
             },
-          ],
-          site_name: "KTern.AI"
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-        facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-          appId: `${process.env.FB_APPID}`,
-        }}
-        languageAlternates={[
-          {
-            hrefLang: "de",
-            href: "https://www.canonical.ie/de",
-          },
-        ]}
-        additionalMetaTags={[
-          {
-            property: "dc:creator",
-            content: "Nivedha",
-          },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "https://www.test.ie/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "https://www.test.ie/touch-icon-ipad.jpg",
-            sizes: "76x76",
-          },
-          {
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-        ]}
+            {
+              name: "application-name",
+              content: "KTern.AI",
+            },
+            {
+              httpEquiv: "x-ua-compatible",
+              content: "IE=edge; chrome=1",
+            },
+          ]}
+          additionalLinkTags={[
+            {
+              rel: 'icon',
+              href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+            },
+            {
+              rel: 'apple-touch-icon',
+              href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+              sizes: '76x76',
+            },
+            {
+              rel: 'manifest',
+              href: '/manifest.json',
+            },
+          ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd

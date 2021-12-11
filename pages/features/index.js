@@ -21,77 +21,70 @@ const Feature_index = ({data,h_data,f_data}) => {
     return (
         <>
           <NextSeo
-                title={data.PageSEO.PageTitle}
-                description={data.PageSEO.PageDescription}
-                canonical={data.PageSEO.CanonicalTag}
-                openGraph={{
-                    url: `${data.PageSEO.ThumbnailImageURL}`,
-                    title: 'Open Graph Title',
-                                description: 'Open Graph Description',
-                    images: [
-                    {
-                        url: 'https://www.example.ie/og-image-01.jpg',
-                        width: 800,
-                        height: 600,
-                        alt: 'Og Image Alt',
-                        type: 'image/jpeg',
-                    },
-                    {
-                        url: 'https://www.example.ie/og-image-02.jpg',
-                        width: 900,
-                        height: 800,
-                        alt: 'Og Image Alt Second',
-                        type: 'image/jpeg',
-                    },
-                    { url: 'https://www.example.ie/og-image-03.jpg' },
-                    { url: 'https://www.example.ie/og-image-04.jpg' },
-                    ],
-                    site_name: 'SiteName',
-                }}
-                 twitter={{
-					handle: `${process.env.TWITTER_HANDLE}`,
-					site: `${process.env.TWITTER_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.FACEBOOK_HANDLE}`,
-					site: `${process.env.FACEBOOK_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-					appId: `${process.env.FB_APPID}`,
-				}}
-                languageAlternates={[{
-                    hrefLang: 'de',
-                    href: 'https://www.canonical.ie/de',
-                } ]}
-                additionalMetaTags={[
-          {
-            property: "dc:creator",
-            content: "Nivedha",
-          },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-                additionalLinkTags={[
-                    {
-                        rel: 'icon',
-                        href: 'https://www.test.ie/favicon.ico',
-                    },
-                    {
-                        rel: 'apple-touch-icon',
-                        href: 'https://www.test.ie/touch-icon-ipad.jpg',
-                        sizes: '76x76'
-                    },
-                    {
-                        rel: 'manifest',
-                        href: '/manifest.json'
-                    }
-                ]}
+              	title={data.PageSEO.PageTitle}
+                  description={data.PageSEO.PageDescription}
+                  canonical={data.PageSEO.CanonicalTag}
+                  openGraph={{
+                      url: `${data.PageSEO.PageURL}`,
+                      title: `${data.PageSEO.PageTitle}`,
+                      description: `${data.PageSEO.PageDescription}`,
+                      images: [
+                          {
+                              url:`${data.PageSEO.ThumbnailImageURL}`,
+                              width: 1920,
+                              height: 1080,
+                              alt: `${data.PageSEO.PageTitle}`,
+                              type: 'image/png',
+                          }
+                      ],
+                      site_name: `${process.env.SITE_TITLE}`,
+                  }}
+                  twitter={{
+                      handle: `${process.env.TWITTER_HANDLE}`,
+                      site: `${process.env.TWITTER_SITE}`,
+                      cardType: `${process.env.CARD_TYPE}`,
+                  }}
+                  facebook={{
+                      handle: `${process.env.FACEBOOK_HANDLE}`,
+                      site: `${process.env.FACEBOOK_SITE}`,
+                      cardType: `${process.env.CARD_TYPE}`,
+                      appId: `${process.env.FB_APPID}`,
+                  }}
+                //   languageAlternates={[
+                //       {
+                //           hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+                //           href: `${h_data.OtherSEO.languageAlternates.href}`,
+                //       },
+                //   ]}
+                  additionalMetaTags={[
+            {
+              property: "dc:creator",
+              content: "Nivedha",
+            },
+            {
+              name: "application-name",
+              content: "KTern.AI",
+            },
+            {
+              httpEquiv: "x-ua-compatible",
+              content: "IE=edge; chrome=1",
+            },
+          ]}
+                  additionalLinkTags={[
+                      {
+                          rel: 'icon',
+                          href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+                      },
+                      {
+                          rel: 'apple-touch-icon',
+                          href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+                          sizes: '76x76',
+                      },
+                      {
+                          rel: 'manifest',
+                          href: '/manifest.json',
+                      },
+                  ]}
                  
     />
 <BreadcrumbJsonLd
@@ -144,14 +137,15 @@ const Feature_index = ({data,h_data,f_data}) => {
             </section>
             {/* Sticky nav */}
             {/* digital Maps */}
-            <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
+                <div className="grid grid-cols-5 gap-6 px-10  ">
+                    <div className="col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[0].Title}</h2>
                         <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[0].Description}</p>
-
-                    <div className="flex w-full h-full">
+                        </div>
+                    <div className="col-span-3 w-full h-full">
         
-                        <div className="grid  md:grid-cols-2 md:gap-4 w-2/3 ">
+                        <div className="grid  md:grid-cols-2 md:gap-4  ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[0].AllFeaturesCard.map(feature=>(
                                 <div className="mb-10 "  key="feature">
@@ -191,23 +185,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                              </div>
                             ))}
                         </div>
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-  <Image
-    src={digitalmaps}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-                </div>
-            </div>
+                      
 
                     </div>
                 </div>
@@ -215,14 +193,15 @@ const Feature_index = ({data,h_data,f_data}) => {
             </section>
             {/* /digital maps */}
             {/* digital Projects */}
-            <section id="digital-projects" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <section id="digital-projects" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
+                <div  className="grid grid-cols-5 gap-10 px-10  ">
+                <div className="col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[1].Title}</h2>
                     <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[1].Description}</p>
+</div>
+                    <div className="col-span-3 w-full h-full">
 
-                    <div className="flex w-full h-full">
-
-                        <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
+                        <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[1].AllFeaturesCard.map(feature=>(
                                 <div className="mb-10 "  key="feature">
@@ -263,54 +242,33 @@ const Feature_index = ({data,h_data,f_data}) => {
                              </div>
                             ))}
                         </div>
-
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-  <Image
-    src={digitalprojects}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-                </div>
-            </div>
-
                     </div>
                  </div>
 
             </section>
             {/* /Digital Projects */}
             {/* Digital Process */}
-           <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+           <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
+           <div  className="grid grid-cols-5 gap-10 px-10  ">
+                <div className="col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[2].Title}</h2>
-                    <p className="mb-12 section-subheading  text-gray-500">{data.DigitalStreamSection[2].Description}</p>
+                    <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[2].Description}</p>
+</div>
+                    <div className="col-span-3 w-full h-full">
 
-                    <div className="flex w-full h-full">
-
-                        <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
+                        <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[2].AllFeaturesCard.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-process-primary">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
-                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Process Icon"/>
+                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Projects Icon"/>
                                     </div>
                                     
                                             </div>
@@ -318,11 +276,11 @@ const Feature_index = ({data,h_data,f_data}) => {
                                              <p className="mb-2 card-subheading text-gray-600">{feature.Description}</p>
                                     <div className="mt-2">
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                           
-                                                <Link href={feature.CTAUrl}  passHref>
+                                          
+                                                <Link href={feature.CTAUrl}   passHref>
                                 <a className="inline-flex items-center pb-1  text-black group ">
-                                <span className="hyperlink group-hover:text-process-primary">{feature.CTAText}</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-process-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <span className="hyperlink group-hover:text-projects-primary">{feature.CTAText} </span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
@@ -339,54 +297,33 @@ const Feature_index = ({data,h_data,f_data}) => {
                              </div>
                             ))}
                         </div>
-
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-  <Image
-    src={digitalprocess}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
                     </div>
-                </div>
-            </div>
-
-                    </div>
-                  </div>
+                 </div>
 
             </section>
             {/* /Digital Process */}
             {/* Digital Labs */}
-            <section id="digital-labs" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <section id="digital-labs" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
+            <div  className="grid grid-cols-5 gap-10 px-10  ">
+                <div className="col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[3].Title}</h2>
-                    <p className="mb-12 section-subheading  text-gray-500">{data.DigitalStreamSection[3].Description}</p>
+                    <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[3].Description}</p>
+</div>
+                    <div className="col-span-3 w-full h-full">
 
-                    <div className="flex w-full h-full">
-
-                        <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
+                        <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[3].AllFeaturesCard.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-labs-primary">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
-                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Maps Icon"/>
+                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Projects Icon"/>
                                     </div>
                                     
                                             </div>
@@ -394,11 +331,11 @@ const Feature_index = ({data,h_data,f_data}) => {
                                              <p className="mb-2 card-subheading text-gray-600">{feature.Description}</p>
                                     <div className="mt-2">
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            
-                                                <Link href={feature.CTAUrl} passHref>
+                                          
+                                                <Link href={feature.CTAUrl}   passHref>
                                 <a className="inline-flex items-center pb-1  text-black group ">
-                                <span className="hyperlink group-hover:text-labs-primary">{feature.CTAText}</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <span className="hyperlink group-hover:text-projects-primary">{feature.CTAText} </span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
@@ -415,53 +352,33 @@ const Feature_index = ({data,h_data,f_data}) => {
                              </div>
                             ))}
                         </div>
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-  <Image
-    src={digitallabs}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
                     </div>
-                </div>
-            </div>
-
-                    </div>
-                  </div>
+                 </div>
 
             </section>
             {/* /Digital Labs */}
             {/* Digital Mines */}
-            <section id="digital-mines" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20">
-                <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <section id="digital-mines" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
+            <div  className="grid grid-cols-5 gap-10 px-10  ">
+                <div className="col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[4].Title}</h2>
-                    <p className="mb-12 section-subheading  text-gray-500">{data.DigitalStreamSection[4].Description}</p>
+                    <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[4].Description}</p>
+</div>
+                    <div className="col-span-3 w-full h-full">
 
-                    <div className="flex w-full h-full">
-
-                       <div className="grid md:grid-cols-2 md:gap-4 w-2/3 ">
+                        <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[4].AllFeaturesCard.map(feature=>(
                                 <div className="mb-10 "  key="feature">
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-mines-primary">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
-                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Maps Icon"/>
+                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Projects Icon"/>
                                     </div>
                                     
                                             </div>
@@ -469,11 +386,11 @@ const Feature_index = ({data,h_data,f_data}) => {
                                              <p className="mb-2 card-subheading text-gray-600">{feature.Description}</p>
                                     <div className="mt-2">
                                         <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
-                                            
-                                                <Link href={feature.CTAUrl}  passHref>
+                                          
+                                                <Link href={feature.CTAUrl}   passHref>
                                 <a className="inline-flex items-center pb-1  text-black group ">
-                                <span className="hyperlink group-hover:text-mines-primary">{feature.CTAText}</span>
-                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <span className="hyperlink group-hover:text-projects-primary">{feature.CTAText} </span>
+                                <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                                 </a>
@@ -490,27 +407,6 @@ const Feature_index = ({data,h_data,f_data}) => {
                              </div>
                             ))}
                         </div>
-                        
-
-
-                        <div className="hidden w-1/3  lg:block">
-                <div className="absolute w-full max-w-4xl pl-12  -mt-25 ">
-                    <div className="absolute top-0 left-0 w-full h-full mt-2 ml-10 bg-gray-900 rounded-2xl"></div>
-                    <div className="relative overflow-hidden border-2 border-black rounded-2xl">
-                  
-  <Image
-    src={digitalmines}
-    alt="KTern Hero Image"
-    width={1000}
-    height={600}
-    objectFit="cover" 
-  />
-
-
-                    </div>
-                </div>
-            </div>
-
                     </div>
                  </div>
 

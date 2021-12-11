@@ -2,9 +2,10 @@ import Markdown from "markdown-to-jsx";
 export default function FAQ({data,title}){
     return (
         <>
-  <section className="py-10 bg-white">
-                    <h2 className="pb-8 section-heading  text-center">{title}</h2>
-                    <div className="flex-col w-1/2 mx-20">
+  <section className="py-5 bg-white faq-gradient">
+                    <h2 className="pb-8 section-heading  text-center ">{title}</h2>
+                    <div className="grid grid-cols-3   ">
+                    <div className="col-span-2 mx-20">
                        
                             
                             {data.map((data) => (
@@ -63,6 +64,10 @@ export default function FAQ({data,title}){
                                             {/* <hr/> */}
                                     
                             </details>))}
+                    </div>
+                    <div className="col-span-1 h-full  "> 
+                   
+                    </div>
                     </div>
                 </section>
     </>

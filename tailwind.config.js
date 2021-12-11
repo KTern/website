@@ -126,9 +126,10 @@ module.exports = {
 
         },
         dxaas: {
-           primary: '#1B465F',
-          secondary: '#EAEDF2',
-      400:'#1B465F'
+           primary: '#354346',
+          secondary: '#B9C7CA',
+          
+      400:'#354346'
         },
       gray: {
         50: '#E7EAEF',

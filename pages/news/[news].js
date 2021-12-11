@@ -20,34 +20,21 @@ export default function News_Landing({h_data,f_data,data,n_data}){
 				description={data.PageSEO.PageDescription}
 				canonical={data.PageSEO.CanonicalTag}
 				openGraph={{
-					url: `${data.PageSEO.ThumbnailImageURL}`,
+					url: `${data.PageSEO.PageURL}`,
 					title: `${data.PageSEO.PageTitle}`,
 					description: `${data.PageSEO.PageDescription}`,
 					images: [
 						{
-							url: 'https://www.example.ie/og-image-01.jpg',
-							width: 800,
-							height: 600,
-							alt: 'Og Image Alt',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-02.jpg',
-							width: 900,
-							height: 800,
-							alt: 'Og Image Alt Second',
-							type: 'image/jpeg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-03.jpg',
-						},
-						{
-							url: 'https://www.example.ie/og-image-04.jpg',
-						},
+							url:`${data.PageSEO.ThumbnailImageURL}`,
+							width: 1920,
+							height: 1080,
+							alt: `${data.PageSEO.PageTitle}`,
+							type: 'image/png',
+						}
 					],
-					site_name: 'SiteName',
+					site_name: `${process.env.SITE_TITLE}`,
 				}}
-                twitter={{
+				twitter={{
 					handle: `${process.env.TWITTER_HANDLE}`,
 					site: `${process.env.TWITTER_SITE}`,
 					cardType: `${process.env.CARD_TYPE}`,
@@ -58,12 +45,12 @@ export default function News_Landing({h_data,f_data,data,n_data}){
 					cardType: `${process.env.CARD_TYPE}`,
 					appId: `${process.env.FB_APPID}`,
 				}}
-                languageAlternates={[
-					{
-						hrefLang: 'de',
-						href: 'https://www.canonical.ie/de',
-					},
-				]}
+				// languageAlternates={[
+				// 	{
+				// 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+				// 		href: `${h_data.OtherSEO.languageAlternates.href}`,
+				// 	},
+				// ]}
 				additionalMetaTags={[
           {
             property: "dc:creator",
@@ -81,11 +68,11 @@ export default function News_Landing({h_data,f_data,data,n_data}){
 				additionalLinkTags={[
 					{
 						rel: 'icon',
-						href: 'https://www.test.ie/favicon.ico',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
 					},
 					{
 						rel: 'apple-touch-icon',
-						href: 'https://www.test.ie/touch-icon-ipad.jpg',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
 						sizes: '76x76',
 					},
 					{

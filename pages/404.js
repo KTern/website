@@ -74,11 +74,11 @@ export default function Error() {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "https://www.test.ie/favicon.ico",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
           },
           {
             rel: "apple-touch-icon",
-            href: "https://www.test.ie/touch-icon-ipad.jpg",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
             sizes: "76x76",
           },
           {

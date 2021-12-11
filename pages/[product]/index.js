@@ -82,79 +82,70 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
   return (
     <>
       <NextSeo
-        title={stream_data.PageSEO.PageTitle}
-        description={stream_data.PageSEO.PageDescription}
-        canonical='https://www.canonical.ie/'
-        openGraph={{
-          url: "https://www.url.ie/a",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
-          images: [
-            {
-              url: "https://www.example.ie/og-image-01.jpg",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "https://www.example.ie/og-image-02.jpg",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-          ],
-          site_name: "KTern.AI"
-        }}
-      twitter={{
-					handle: `${process.env.TWITTER_HANDLE}`,
-					site: `${process.env.TWITTER_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.FACEBOOK_HANDLE}`,
-					site: `${process.env.FACEBOOK_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-					appId: `${process.env.FB_APPID}`,
-				}}
-        languageAlternates={[
-          {
-            hrefLang: "de",
-            href: "https://www.canonical.ie/de",
-          },
-        ]}
-        additionalMetaTags={[
-          {
-            property: "dc:creator",
-            content: "Nivedha",
-          },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "https://www.test.ie/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "https://www.test.ie/touch-icon-ipad.jpg",
-            sizes: "76x76",
-          },
-          {
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-        ]}
+     	title={stream_data.PageSEO.PageTitle}
+       description={stream_data.PageSEO.PageDescription}
+       canonical={stream_data.PageSEO.CanonicalTag}
+       openGraph={{
+         url: `${stream_data.PageSEO.PageURL}`,
+         title: `${stream_data.PageSEO.PageTitle}`,
+         description: `${stream_data.PageSEO.PageDescription}`,
+         images: [
+           {
+             url:`${stream_data.PageSEO.ThumbnailImageURL}`,
+             width: 1920,
+             height: 1080,
+             alt: `${stream_data.PageSEO.PageTitle}`,
+             type: 'image/png',
+           }
+         ],
+         site_name: `${process.env.SITE_TITLE}`,
+       }}
+       twitter={{
+         handle: `${process.env.TWITTER_HANDLE}`,
+         site: `${process.env.TWITTER_SITE}`,
+         cardType: `${process.env.CARD_TYPE}`,
+       }}
+       facebook={{
+         handle: `${process.env.FACEBOOK_HANDLE}`,
+         site: `${process.env.FACEBOOK_SITE}`,
+         cardType: `${process.env.CARD_TYPE}`,
+         appId: `${process.env.FB_APPID}`,
+       }}
+      //  languageAlternates={[
+      //    {
+      //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+      //      href: `${h_data.OtherSEO.languageAlternates.href}`,
+      //    },
+      //  ]}
+       additionalMetaTags={[
+         {
+           property: "dc:creator",
+           content: "Nivedha",
+         },
+         {
+           name: "application-name",
+           content: "KTern.AI",
+         },
+         {
+           httpEquiv: "x-ua-compatible",
+           content: "IE=edge; chrome=1",
+         },
+       ]}
+       additionalLinkTags={[
+         {
+           rel: 'icon',
+           href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+         },
+         {
+           rel: 'apple-touch-icon',
+           href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+           sizes: '76x76',
+         },
+         {
+           rel: 'manifest',
+           href: '/manifest.json',
+         },
+       ]}
       />
       <BreadcrumbJsonLd
         itemListElements={breadcrumb}
@@ -736,7 +727,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         </section>
         {/* /Testimonial Section */}
         {/* FAQ Section */}
-        {/* <FAQ data={} title={}/> */}
+        <FAQ data={stream_data.FAQSection} title={stream_data.FAQTitle}/>
         {/*/ FAQ Section */}
         {/* Resources Section */}
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>
@@ -749,7 +740,30 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               {stream_data.Resource.map((data) => (
               <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
               <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'400px',width:'345px'}}></span>
-                              <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
+                            {data.OpenNewTab &&  <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
+                            <div className="bg-white">
+                            <Link href={data.CTAUrl} passHref>
+                                    <a target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    
+                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                            </a> 
+                            </Link>
+                            </div>
+              <Link href={data.CTAUrl} passHref>
+              <a className="bg-white">
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
+                        <Link href={data.CTAUrl}  passHref>
+                                        <a target="_blank" className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                        <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        </a>
+                                    </Link>
+                                    </a>
+                            </Link>
+                            </div>}
+                            {!data.OpenNewTab &&  <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
                                     <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
@@ -771,7 +785,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                                     </Link>
                                     </a>
                             </Link>
-                            </div>
+                            </div>}
                         </div>
               ))}
             </div>
@@ -815,11 +829,16 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 <p className='w-full mt-5 card-subheading text-white '>{stream_data.FinalCTASection.CTADescription}</p>
               </div>
               <div className='relative w-1/3 flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
-                <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
+               {stream_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
+                  <a target="_blank" className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
-                </Link>
+                </Link>}
+                {!stream_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
+                  <a  className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
+                    {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
+                  </a>
+                </Link>}
                 <Link rel='noopener noreferrer' href={stream_data.FinalCTASection.SecondaryCTA.linkURL} passHref>
                   <a
                     target='_blank'
