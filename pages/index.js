@@ -50,13 +50,19 @@ import * as Amplitude from '@amplitude/node';
 const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
 var client = Amplitude.init(AMPLITUDE_KEY);
 client.logEvent({
-	event_type: 'Node.js Event',
+	event_type: 'button click',
 	user_id: 'datater@gmail.com',
-	
+
+user_properties:{
+	email:"v.nivedha20@gmail.com",
+	name:"Nivedha"
+},
 	event_properties: {
 		keyString: 'valueString',
 		keyInt: 11,
 		keyBool: true,
+		event_name:"Navigated To",
+		random:"Nivedha"
 	},
 });
 import React from 'react'
