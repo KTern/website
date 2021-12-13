@@ -50,27 +50,21 @@ import * as Amplitude from '@amplitude/node';
 const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
 var client = Amplitude.init(AMPLITUDE_KEY);
 client.logEvent({
-	
-_id: "123456789",
-email: "v.nivedha20@gmail.com",
-name: "Nivedha",
-customerPhase: "Acquisition",
-partnerPhase: "Acquisition",
-customerScore: 0,
-partnerScore: 0,
-maps: 0,
-projects: 0,
-process: 0,
-labs: 0,
-mines: 0,
-aggregateScore: 0,
-eventProperties: {
-page: "Index",
-sectionName:"Header",
-eventName: "Navigated to",
-label: "Contact",
-_id: "123456789"
-}});
+user_id: "",
+
+event_type:"event@gmail.com",
+event_properties :
+{
+	keyString: 'Navigated To',
+		keyInt: 11,
+		keyBool: true,
+		page: "Index",
+		sectionName:"Header",
+		eventName: "",
+		label: "",
+		user_id: ""
+}
+});
 import React from 'react'
 
 // Send any events that are currently queued for sending.
