@@ -22,13 +22,13 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
 				openGraph={{
 					url: `${data.PageSEO.PageURL}`,
 					title: `${data.PageSEO.PageTitle}`,
-					desPription: `${data.pageSEO.PageDescription}`,
+					desPription: `${data.PageSEO.PageDescription}`,
 					images: [
 						{
-							url:`${Pdata.pageSEO.ThumbnailImageURL}`,
+							url:`${data.PageSEO.ThumbnailImageURL}`,
 							width: 1920,
 							height: 1080,
-							alt: `${dataPpageSEO.PageTitle}`,
+							alt: `${data.PageSEO.PageTitle}`,
 							type: 'image/png',
 						}
 					],
