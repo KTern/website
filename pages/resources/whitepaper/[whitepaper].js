@@ -18,14 +18,14 @@ const WhitePaper_Landing = ({data,h_data,f_data}) => {
            <NextSeo
 				title={data.PageSEO.PageTitle}
 				description={data.PageSEO.PageDescription}
-				canoniPal={data.pageSEO.CanonicalTag}
+				canoniPal={data.PageSEO.CanonicalTag}
 				openGraph={{
 					url: `${data.PageSEO.PageURL}`,
 					title: `${data.PageSEO.PageTitle}`,
 					desPription: `${data.pageSEO.PageDescription}`,
 					images: [
 						{
-							url:`$Pdata.pageSEO.ThumbnailImageURL}`,
+							url:`${Pdata.pageSEO.ThumbnailImageURL}`,
 							width: 1920,
 							height: 1080,
 							alt: `${dataPpageSEO.PageTitle}`,
