@@ -104,7 +104,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
             {data.PageHeader.subHeading}
           </p>
         </section>
-        <section className="py-10 px-20 mx-auto grid grid-cols-3 gap-10">
+        <section className="py-10 sm:px-4 md:px-20 mx-auto grid md:grid-cols-3 gap-10">
           {data.TrustCenterCard.map((dt) => (
            <div key="dt" className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                 <span

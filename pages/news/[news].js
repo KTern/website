@@ -91,7 +91,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
 
             <Layout h_data={h_data} f_data={f_data}>
               
-                <section className="pt-24 bg-white space-y-10 mx-52 flex-col text-center justify-center items-center">
+                <section className="pt-24 bg-white space-y-10 mx-4 md:mx-52 flex-col text-center justify-center items-center">
                 <BreadCrumb color="black" b_data={breadcrumb}/>
                     <h2 className="text-black heading">{data.PageHeader.header}</h2>
                     <p className=" text-gray-700 subheading ">{data.PageHeader.subHeading}</p>
@@ -169,7 +169,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
               <h2 className='section-heading  text-gray-800 '>{data.LatestNewsSectionTitle}</h2>
             </div>
 
-            <div className='grid grid-cols-4 gap-6 mb-6'>
+            <div className='grid md:grid-cols-4 gap-6 mb-6'>
               {n_data.map((dt) => (
              <Link key="dt" href={dt.PageSEO.PageURL} >
              <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   

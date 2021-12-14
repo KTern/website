@@ -154,7 +154,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
           <div className="relative z-30  md:px-10 bg-white sm:h-0 ">
             <div className="flex flex-row  items-center sm:h-26 max-w-lg md:p-6 mx-auto space-y-3 overflow-hidden transform -translate-y-12 bg-white rounded-lg shadow-md lg:h-24 lg:max-w-6xl lg:flex-row lg:space-y-0 lg:space-x-3">
               <div className="mb-8  mt-10 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
-                <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative">
+                <div className="block  sm:h-8 w-10 h-10 md:mr-4 relative">
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
@@ -169,7 +169,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                 </div>
               </div>
               <div className="mb-8 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
-                <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative">
+                <div className="block  sm:h-8 w-10 h-10 md:mr-4 relative">
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
@@ -184,7 +184,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                 </div>
               </div>
               <div className="mb-8  flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
-                <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative ">
+                <div className="block  sm:h-10 w-10 h-10 md:mr-4 relative ">
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
@@ -201,7 +201,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
             </div>
           </div>
         </section>
-        <section className="w-full px-3 pt-20 py-10 bg-white xl:px-20 ">
+        <section className="w-full px-6 pt-20 py-10 bg-white xl:px-20 ">
           <div className=" mx-auto">
             <div className="flex flex-col items-start md:flex-row">
               <div className="w-full space-y-5 md:w-3/5 md:pr-16">

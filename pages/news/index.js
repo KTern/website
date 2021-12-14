@@ -104,7 +104,7 @@ export default function News({data,h_data,f_data}){
         </section>
          {/*/ Page Header section */}
          {/* News List Section */}
-        <section className="py-20 grid grid-cols-3 gap-4 px-10 ">
+        <section className="py-20 grid md:grid-cols-3 gap-4 px-10 ">
      {data.NewsCard.slice(0).reverse().map((dt)=>(  
           <Link key="dt" href={dt.PageUrl} >
               <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
@@ -133,7 +133,7 @@ export default function News({data,h_data,f_data}){
             >
               <div className='absolute top-0 right-0 hidden w-full -mt-20 transform rotate-45 translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
               <div className='absolute top-0 left-0 hidden w-full -mt-20 transform rotate-45 -translate-x-1/2 bg-white sm:block h-96 opacity-5'></div>
-              <div className='relative w-2/3 p-6  md:p-0 md:pb-4'>
+              <div className='relative w-full md:w-2/3 p-6  md:p-0 md:pb-4'>
                 <h2 className='card-heading  leading-9 tracking-tight text-white sm:text-4xl sm:leading-10'>
                   {data.CTASection.CTATitle}
                 </h2>
@@ -148,7 +148,7 @@ export default function News({data,h_data,f_data}){
                 <Link rel='noopener noreferrer' href={data.CTASection.SecondaryCTA.linkURL} passHref>
                   <a
                     target='_blank'
-                    className={` inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black`}
+                    className={` inline-block sm:px-16 py-3 md:px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black`}
                   >
                     {data.CTASection.SecondaryCTA.buttonTitle}
                   </a>

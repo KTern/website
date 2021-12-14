@@ -101,7 +101,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
         <section id="features" className={`w-full py-20  pt-16 ${data.StreamName} `}>
-          <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
+          <div className="flex flex-col items-center px-4 md:px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
               <BreadCrumb color="white" b_data={breadcrumb}/>
               <p className={`max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full bg-${data.StreamName}-secondary`}>
@@ -205,7 +205,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                 <div className="relative h-full ml-2 mr-0 sm:mr-10">
                   <span className="absolute top-0 md:left-0 w-full h-full mt-1 md:ml-1  rounded-lg"></span>
                   <div className="relative h-full md:p-1 bg-white rounded-lg">
-                    <div className="grid grid-cols-4  sm:grid-cols-12 md:grid-cols-4">
+                  <div className="grid grid-cols-2  md:grid-cols-4">
                       {data.ValuesDelivered.map((dt) => (
                         <div
                           key="dt"
@@ -228,7 +228,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                   </div>
                 </div>
               </div>
-              <div className="max-w-full " id="case-study" style={{ paddingTop: '60px',
+              <div className="max-w-full px-2" id="case-study" style={{ paddingTop: '60px',
     marginTop: '-60px'}}>
                 <section className="mb-20">
                   <Markdown

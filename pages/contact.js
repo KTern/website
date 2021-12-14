@@ -127,9 +127,9 @@ export default function Contact({ data, h_data, f_data }) {
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative  bg-white pt-10 md:m-10 ">
          
-          <div className="flex flex-col items-center justify-between  mx-auto  xl:px-5 lg:flex-row">
-            <div className="flex flex-col items-center space-x-20 mx-20 w-full pt-0  lg:pt-0 lg:flex-row">
-              <div className="relative w-1/2">
+          <div className="flex flex-col items-center justify-between  md:mx-auto  xl:px-5 lg:flex-row">
+            <div className="flex flex-col  items-center md:space-x-20 px-4 mx-20 w-full pt-0  lg:pt-0 lg:flex-row">
+              <div className="relative md:w-1/2">
                 <div className="relative flex flex-col items-center  w-full h-full ">
                   <div className="relative ">
                     <div className="pb-16 mb-8 border-b border-gray-400">
@@ -190,10 +190,10 @@ export default function Contact({ data, h_data, f_data }) {
                   </div>
                 </div>
               </div>
-              <div className="relative w-1/2 z-10 mt-20 lg:mt-0 ">
+              <div className="relative md:w-1/2 z-10 mt-20 lg:mt-0 ">
                 <div
                   id="crmWebToEntityForm"
-                  className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start p-4 md:p-10 bg-white md:shadow-2xl rounded-xl"
+                  className="zcwf_lblLeft crmWebToEntityForm relative z-10 flex flex-col items-start justify-start md:p-4 md:p-10 bg-white md:shadow-2xl rounded-xl"
                 >
                   <h4 className="w-full card-heading   text-center ">
                     {data.ContactFormFields.FormTitle}
@@ -486,8 +486,8 @@ export default function Contact({ data, h_data, f_data }) {
             </div>
           </div>
         </section>
-        <section className="px-36 pb-10">
-               <div className="grid-cols-3 grid gap-5">
+        <section className="px-4 md:px-36 pb-10">
+               <div className="md:grid-cols-3 grid gap-5">
                       <div className="py-2 px-5 mb-4 bg-black rounded-lg">
                         <div className="flex items-center">
                      

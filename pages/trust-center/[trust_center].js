@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../../component/Layout";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
@@ -14,74 +15,72 @@ export default function TrustCenter({ data, h_data, f_data }) {
   return (
     <>
       <NextSeo
-       	title={data.pageSEO.PageTitle}
-         description={data.pageSEO.PageDescription}
-         canonical={data.pageSEO.CanonicalTag}
-         openGraph={{
-           url: `${data.pageSEO.PageURL}`,
-           title: `${data.pageSEO.PageTitle}`,
-           description: `${data.pageSEO.PageDescription}`,
-           images: [
-             {
-               url:`${data.pageSEO.ThumbnailImageURL}`,
-               width: 1920,
-               height: 1080,
-               alt: `${data.pageSEO.PageTitle}`,
-               type: 'image/png',
-             }
-           ],
-           site_name: `${process.env.SITE_TITLE}`,
-         }}
-         twitter={{
-           handle: `${process.env.TWITTER_HANDLE}`,
-           site: `${process.env.TWITTER_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-         }}
-         facebook={{
-           handle: `${process.env.FACEBOOK_HANDLE}`,
-           site: `${process.env.FACEBOOK_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-           appId: `${process.env.FB_APPID}`,
-         }}
+        title={data.pageSEO.PageTitle}
+        description={data.pageSEO.PageDescription}
+        canonical={data.pageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.pageSEO.PageURL}`,
+          title: `${data.pageSEO.PageTitle}`,
+          description: `${data.pageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.pageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.pageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.TWITTER_HANDLE}`,
+          site: `${process.env.TWITTER_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.FACEBOOK_HANDLE}`,
+          site: `${process.env.FACEBOOK_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+          appId: `${process.env.FB_APPID}`,
+        }}
         //  languageAlternates={[
         //    {
         //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
         //      href: `${h_data.OtherSEO.languageAlternates.href}`,
         //    },
         //  ]}
-         additionalMetaTags={[
-           {
-             property: "dc:creator",
-             content: "Nivedha",
-           },
-           {
-             name: "application-name",
-             content: "KTern.AI",
-           },
-           {
-             httpEquiv: "x-ua-compatible",
-             content: "IE=edge; chrome=1",
-           },
-         ]}
-         additionalLinkTags={[
-           {
-             rel: 'icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-           },
-           {
-             rel: 'apple-touch-icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-             sizes: '76x76',
-           },
-           {
-             rel: 'manifest',
-             href: '/manifest.json',
-           },
-         ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
       />
-      <BreadcrumbJsonLd
-        itemListElements={breadcrumb}
-      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <SocialProfileJsonLd
         type="Person"
@@ -96,10 +95,13 @@ export default function TrustCenter({ data, h_data, f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* Header Section */}
-        <section className="w-full py-28 bg-background bg-dxaas-primary bg-no-repeat"  style={{ backgroundPosition: "100% 50%", backgroundSize: "auto" }}>
-          <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
+        <section
+          className="w-full py-28 bg-background bg-dxaas-primary bg-no-repeat"
+          style={{ backgroundPosition: "100% 50%", backgroundSize: "auto" }}
+        >
+          <div className="flex flex-col items-center sm:px-4 md:px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  w-full h-full ">
-              <BreadCrumb color="white" b_data={breadcrumb}/>
+              <BreadCrumb color="white" b_data={breadcrumb} />
               <p className="max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.pageHeader.Tag}
               </p>
@@ -114,8 +116,27 @@ export default function TrustCenter({ data, h_data, f_data }) {
         </section>
 
         <section>
-          <div className="flex flex-wrap  px-16 ">
-            <div className="w-full md:w-2/3 pr-10 mb-4 md:mb-0">
+          <div className="flex flex-wrap sm:px-6 md:px-16 ">
+            <div
+              id="top"
+              className="anchor hidden sm:block w-full md:w-1/3  my-28 "
+            >
+              <div className="flex sm:space-x-2 md:space-x-10   sm:py-5 md:p-5 bg-white border-2  sticky z-10 md:top-16 sm:top-10 ">
+                <ol>
+                  <b className="card-heading text-center">
+                    {data.TableOfContentsHeading}
+                  </b>
+                  {data.idList.map((data) => (
+                    <li key="data" className="mt-1 list-decimal mx-5">
+                      <Link href={data.idURL} passHref>
+                        <a className="card-subheading ">{data.idText}</a>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+            <div className="w-full md:w-2/3 md:pr-10 mb-4 md:mb-0">
               <div className="max-w-full ">
                 <div className="text-left mb-10">
                   <p className="text-black hyperlink  mt-10">
@@ -124,72 +145,68 @@ export default function TrustCenter({ data, h_data, f_data }) {
                 </div>
                 {data.trustCenterContent.map((data) => (
                   <div key="data">
-                    
                     <h1
                       id={data.tagId}
                       className="anchor card-heading mb-6 text-left  text-black "
                     >
                       {data.heading}
                     </h1>
-                   
+
                     <Markdown
-                          options={{
-                            overrides: {
-                              h3: {
-                                props: {
-                                  className: "text-2xl mb-4 text-justify",
-                                },
-                              },
-                              h1: {
-                                props: {
-                                  className: "text-2xl mb-4 text-justify",
-                                },
-                              },
-                              li: {
-                                props: {
-                                  className:
-                                    "text-justify list-decimal ml-3 mb-1 flex-col",
-                                },
-                              },
-                              p: {
-                                props: {
-                                  className: "mb-3 text-justify",
-                                },
-                              },
-                              ol: {
-                                props: {
-                                  className: "mb-4 text-justify",
-                                },
-                              },
+                      options={{
+                        overrides: {
+                          h3: {
+                            props: {
+                              className: "text-2xl mb-4 text-justify",
                             },
-                          }}
-                          className=""
-                        >
-                          {data.Content}
-                        </Markdown>
-                         
-                     
+                          },
+                          h1: {
+                            props: {
+                              className: "text-2xl mb-4 text-justify",
+                            },
+                          },
+                          li: {
+                            props: {
+                              className:
+                                "text-justify list-decimal ml-3 mb-1 flex-col",
+                            },
+                          },
+                          p: {
+                            props: {
+                              className: "mb-3 text-justify",
+                            },
+                          },
+                          ol: {
+                            props: {
+                              className: "mb-4 text-justify",
+                            },
+                          },
+                        },
+                      }}
+                      className=""
+                    >
+                      {data.Content}
+                    </Markdown>
                   </div>
                 ))}
-
-                {/* <h1 id="application_security" className="anchor  card-heading mb-6 text-left  text-black"> Application Security </h1>
-    
-      
-        <p className="mb-6 text-justify card-subheading text-black">All KTern products are hosted in Google Cloud Platform. The infrastructure for databases and application servers is managed and maintained by the cloud service provider.
-
-At KTern, we take a multifaceted approach to application security, to ensure everything from engineering to deployment, including architecture and quality assurance processes complies with our highest standards of security.</p>
-                            
-                             <h1  id="application_architecture" className="anchor  card-heading mb-6 text-left  text-black"> Application Architecture </h1>
-    
-       
-        <p className="mb-6 text-justify card-subheading text-black">The application is initially protected by GCP’s firewall which is equipped to counter regular DDoS attacks and other network related intrusions. The second layer of protection is KTern’s own application firewall which monitors against offending IPs, users and spam. While the application can be accessed only by users with valid credentials, it should be noted that security in cloud-based products is a shared responsibility between the company and the businesses who own those accounts on the cloud. It should be noted that all account passwords that are stored in the application are one-way hashed and salted.
-
-KTern uses a multi-tenant data model to host all its applications. Each application is serviced from an individual virtual private cloud and each customer is uniquely identified by a tenant ID. The application is engineered and verified to ensure that it always fetches data only for the logged-in tenant. Per this design, no customer has access to another customer’s data. Access to the application by the KTern development team is also controlled, managed and audited. Access to the application and the infrastructure are logged for subsequent audits.
-
-</p> */}
+                  <div className="flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
+                <Link href="#top" passHref>
+                  <a className=" rounded-full p-2  flex items-center justify-center text-black">
+                    <Image
+                      className=""
+                      src="/up-arrow.png"
+                      height="15"
+                      width="15"
+                      alt="up arrow"
+                    />
+                    &nbsp;&nbsp;Go To the Top
+                  </a>
+                </Link>
               </div>
+              </div>
+            
             </div>
-            <div className="w-full md:w-1/3  my-28 ">
+            <div className="hidden md:block w-full md:w-1/3  my-28 ">
               <div className="flex sm:space-x-2 md:space-x-10   sm:py-5 md:p-5 bg-white border-2  sticky z-10 md:top-16 sm:top-10 ">
                 <ol>
                   <b className="card-heading text-center">

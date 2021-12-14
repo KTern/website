@@ -116,7 +116,7 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
       <Layout h_data={h_data} f_data={f_data}>
         <section className={`w-full pt-8 ${data.StreamType}`}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
-            <div className="relative z-20 flex flex-col  w-2/3 h-full ">
+            <div className="relative z-20 flex flex-col  md:w-2/3 h-full ">
               <BreadCrumb color="white" b_data={breadcrumb}/>
               <div className="max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.PageHeader.Tag}

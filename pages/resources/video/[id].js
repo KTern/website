@@ -118,10 +118,10 @@ export default function Video({ data,h_data,f_data,v_data }){
       />
         <Layout h_data={h_data} f_data={f_data}>
         
-          <section className={`py-28 px-20 bg-${data.VideoLandingPage.DigitalStream}-secondary `}>
+          <section className={`py-28 px-4 md:px-20 w-full bg-${data.VideoLandingPage.DigitalStream}-secondary `}>
           <BreadCrumb color="black" b_data={breadcrumb}/>   
-        <div className="space-x-10 flex items-center justify-center text-center">
-          <div className="w-1/2">
+        <div className="md:space-x-10 md:flex md:items-center justify-center text-center">
+          <div className="md:w-1/2 sm: w-full">
         
           <p className={`max-w-max mt-4 px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}>
                { data.Tag}
@@ -164,10 +164,10 @@ export default function Video({ data,h_data,f_data,v_data }){
 </p>
 <div className="sharethis-inline-share-buttons"></div>
         </div>
-        <div className="w-1/2">
-        <h2 className="md:px-20 p-4 mx-auto max-w-7xl">
-                  <iframe width="560" height="315" src={data.VideoLandingPage.VideoEmbedUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </h2>
+        <div className="md:w-1/2 w-full">
+        <div className="md:px-20 md:p-4 md:mx-auto ">
+                  <iframe height={300} width="100%" src={data.VideoLandingPage.VideoEmbedUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
         </div>
         </div>
             </section>
@@ -178,7 +178,7 @@ export default function Video({ data,h_data,f_data,v_data }){
               <h2 className='section-heading  text-gray-800 '>{data.VideoLandingPage.RelatedResources}</h2>
             </div>
 
-            <div className='grid grid-cols-4 gap-6 mb-6'>
+            <div className='grid md:grid-cols-4 gap-6 mb-6'>
               {v_data.map((dt) => (
               <div key="dt" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
               <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.VideoLandingPage.DigitalStream}-secondary `} style={{height:'400px',width:'345px'}}></span>
@@ -195,7 +195,7 @@ export default function Video({ data,h_data,f_data,v_data }){
               <a className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.VideoTitle}</span>
                         <Link href={dt.PageSEO.PageURL}  passHref>
-                                        <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a className="sm:mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{dt.LatestVideoCTA}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

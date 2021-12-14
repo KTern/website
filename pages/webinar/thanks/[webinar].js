@@ -129,6 +129,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
     
       
       <Layout h_data={h_data} f_data={f_data}>
+        
         {!webinar_data.IsOnDemandWebinar && (
           <section className={`relative py-20   overflow-hidden flex   justify-center bg-${webinar_data.CssStreamTag}-secondary`}>
            
@@ -163,16 +164,17 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         {/* On demand Webinar */}
         {webinar_data.IsOnDemandWebinar && (
           <div className={`relative py-24 text-center flex-col   overflow-hidden justify-center text-white  bg-${webinar_data.CssStreamTag}-secondary`}>
-          <section className="relative  text-center flex overflow-hidden justify-center text-black  ">
-          <BreadCrumb color="black" b_data={breadcrumb}/>
-            <div className="w-1/2">
+           <div className="mx-10 sm:mx-4 mb-4"><BreadCrumb  color="black" b_data={breadcrumb}/></div>
+          <section className="relative  text-center md:flex overflow-hidden justify-center text-black  ">
+ {/* <BreadCrumb color="black" b_data={breadcrumb}/> */}
+            <div className="md:w-1/2 w-full">
             <h1 className="heading mb-5">{webinar_data.OnDemandWebinar.PageHeader}</h1>
             <p className="subheading mb-10">
              {webinar_data.OnDemandWebinar.PageSubHeader}
             </p>
 </div>
-<div  className="w-1/2">
-            <Tabs className="px-5  pb-0  mx-auto flex flex-wrap flex-col ">
+<div  className="md:w-1/2 w-full">
+            <Tabs className="md:px-5  pb-0  md:mx-auto flex flex-wrap flex-col ">
               <TabList className="flex md:w-1/2 mx-auto flex-wrap mb-5 text-center items-center justify-center ">
                 <Tab className="cursor-pointer hyperlink uppercase text-black sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font  focus:bg-gray-100 inline-flex items-center leading-none border-gray-200  tracking-wider rounded-t ">
                   {webinar_data.OnDemandWebinar.Slide}
@@ -186,7 +188,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                 <h2 className="">
                   <iframe
                     src={webinar_data.OnDemandWebinar.SlideURL}
-                  width="560" height="315"
+                  width="100%" height="315"
                     frameBorder="0"
                     marginWidth="0"
                     marginHeight="0"
@@ -202,10 +204,10 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                   </iframe>
                 </h2>
               </TabPanel>
-              <TabPanel className="  flex justify-center items-center">
-                <h2 className="">
-                  <iframe width="560" height="315" src={webinar_data.OnDemandWebinar.VideoURL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </h2>
+              <TabPanel className="  flex justify-center px-2 items-center">
+                
+                  <iframe width="100%" height="315" src={webinar_data.OnDemandWebinar.VideoURL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              
               </TabPanel>
             </Tabs>
 </div>
@@ -227,7 +229,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
               </h2>
             </div>
 
-            <div className="grid grid-cols-4 gap-6 mb-6">
+            <div className="grid md:grid-cols-4 gap-6 px-4 mb-6">
            {webinar_data.RelatedResources.map((data)=>( 
            
              
