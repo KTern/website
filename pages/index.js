@@ -51,10 +51,11 @@ const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
 var client = Amplitude.init(AMPLITUDE_KEY);
 client.logEvent({
 	event_type: 'button click',
-	user_id: 'datater@gmail.com',
-
+	user_id: 'edson@gmail.com',
+country:"India",
+version_name:"10",
 user_properties:{
-	email:"v.nivedha20@gmail.com",
+	email:"edson@gmail.com",
 	name:"Nivedha"
 },
 	event_properties: {

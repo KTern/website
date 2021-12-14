@@ -368,8 +368,8 @@ This blueprint will help you define the right plan, the right effort estimate, t
                             Seminar-Internal
                           </option>
                           <option value="Trade&#x20;Show">Trade Show</option>
-                          <option selected value="Web&#x20;Download">
-                            Web Download
+                          <option selected value="WhitePaper">
+                            White Paper
                           </option>
                           <option value="Web&#x20;Research">
                             Web Research
@@ -397,7 +397,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                           id="CONTACTCF6"
                           name="CONTACTCF6"
                           maxLength="255"
-                          value="none"
+                          value={data.PageSEO.PageTitle}
                         />
                         <div className="zcwf_col_help"></div>
                       </div>

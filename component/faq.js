@@ -4,12 +4,12 @@ export default function FAQ({data,title}){
         <>
   <section className="py-5 bg-white faq-gradient">
                     <h2 className="pb-8 section-heading  text-center ">{title}</h2>
-                    <div className="grid grid-cols-3   ">
-                    <div className="col-span-2 mx-20">
+                    <div className="grid  grid-cols-3   ">
+                    <div className="col-span-3 md:col-span-2 md:mx-20">
                        
                             
                             {data.map((data) => (
-                                <details key="data" className="relative overflow-hidden border-b border-gray-300  select-none hover:bg-white">
+                                <details key="data" className="relative overflow-hidden border-b border-gray-300  select-none ">
                                     <summary  className="items-center grid grid-cols-12 py-5 px-6 cursor-pointer" style={{ listStyle: 'none' }}>
                                     <svg className="col-span-1 w-7 h-7 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                         <span className="col-span-11 text-lg font-bold">{data.Question}</span>
@@ -65,7 +65,7 @@ export default function FAQ({data,title}){
                                     
                             </details>))}
                     </div>
-                    <div className="col-span-1 h-full  "> 
+                    <div className="hidden lg:block col-span-1 h-full  "> 
                    
                     </div>
                     </div>

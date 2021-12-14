@@ -125,7 +125,7 @@ export default function Partners({ data,h_data,f_data }) {
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Header Section --> */}
-        <section className='w-full py-20 px-20 bg-secondary'>
+        <section className='w-full py-20 md:px-20 bg-secondary'>
           <div className='flex flex-col md:space-x-20  items-center px-4 mx-auto  lg:flex-row'>
             <div className=' relative z-20 flex flex-col items-start justify-center w-full h-full md:w-2/3'>
             <BreadCrumb color="black" b_data={breadcrumb}/>
@@ -136,20 +136,20 @@ export default function Partners({ data,h_data,f_data }) {
               <p className='py-5 mb-2 text-gray-600 subheading'>
                 <span className=' subheading'>{data.PageHeader.subHeading}</span>
               </p>
-              <div className='md:flex  md:space-x-4 sm:space-y-6'>
-                <Link href={data.PageHeader.primaryCTA.linkURL} passHref>
+              <div className='md:flex sm:flex-col md:space-x-4 sm:space-y-10'>
+                <div><Link href={data.PageHeader.primaryCTA.linkURL} passHref>
                   <a className='lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button '>
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
-                </Link>
-                <Link href={data.PageHeader.secondaryCTA.linkURL} passHref>
+                </Link></div>
+                <div><Link href={data.PageHeader.secondaryCTA.linkURL} passHref>
                   <a className='lg:inline-block py-4 px-6 bg-white hover:bg-gray-300 hover:text-black shadow uppercase text-black border-2 border-black  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button '>
                     {data.PageHeader.secondaryCTA.buttonTitle}
                     <svg className='inline-block w-2 ml-2' fill='currentColor' viewBox='0 0 12 12'>
                       <path d='M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z'></path>
                     </svg>
                   </a>
-                </Link>
+                </Link></div>
               </div>
             </div>
             <div className=' hidden lg:block relative ml-10 z-10 w-full h-full my-16 lg:my-0 md:w-1/3'>

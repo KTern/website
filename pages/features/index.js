@@ -118,7 +118,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                     <h1 className="heading text-white "  >{data.HeroSection.header}</h1>
                     <p className="subheading text-gray-100 pb-7 pt-2">{data.HeroSection.subHeading}</p>
                     
-                    <div className="md:flex md:flex-row space-x-5">
+                    <div className="md:flex md:flex-row md:space-x-5">
                     
                     <Link   rel="noopener noreferrer" href={data.HeroSection.primaryCTA.linkURL}><a target="_blank" className="sm:mb-4 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 border-2 border-white button ">{data.HeroSection.primaryCTA.buttonTitle}</a></Link>
                     <Link  href={data.HeroSection.secondaryCTA.linkURL}><a className="inline-block     shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">{data.HeroSection.secondaryCTA.buttonTitle}</a></Link>
@@ -138,12 +138,12 @@ const Feature_index = ({data,h_data,f_data}) => {
             {/* Sticky nav */}
             {/* digital Maps */}
             <section id="digital-maps" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
-                <div className="grid grid-cols-5 gap-6 px-10  ">
-                    <div className="col-span-2  sticky top-0 ">
+                <div className="grid md:grid-cols-5 gap-6 px-10  ">
+                    <div className="md:col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[0].Title}</h2>
                         <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[0].Description}</p>
                         </div>
-                    <div className="col-span-3 w-full h-full">
+                    <div className="md:col-span-3 w-full h-full">
         
                         <div className="grid  md:grid-cols-2 md:gap-4  ">
                             {/* <!-- Feature blocks first column --> */}
@@ -194,12 +194,12 @@ const Feature_index = ({data,h_data,f_data}) => {
             {/* /digital maps */}
             {/* digital Projects */}
             <section id="digital-projects" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
-                <div  className="grid grid-cols-5 gap-10 px-10  ">
-                <div className="col-span-2  sticky top-0 ">
+                <div  className="grid md:grid-cols-5 gap-10 px-10  ">
+                <div className="md:col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[1].Title}</h2>
                     <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[1].Description}</p>
 </div>
-                    <div className="col-span-3 w-full h-full">
+                    <div className="md:col-span-3 w-full h-full">
 
                         <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
@@ -209,7 +209,7 @@ const Feature_index = ({data,h_data,f_data}) => {
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
                                        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-projects-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -249,12 +249,12 @@ const Feature_index = ({data,h_data,f_data}) => {
             {/* /Digital Projects */}
             {/* Digital Process */}
            <section id="digital-process" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
-           <div  className="grid grid-cols-5 gap-10 px-10  ">
-                <div className="col-span-2  sticky top-0 ">
+           <div  className="grid md:grid-cols-5 gap-10 px-10  ">
+                <div className="md:col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[2].Title}</h2>
                     <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[2].Description}</p>
 </div>
-                    <div className="col-span-3 w-full h-full">
+                    <div className="md:col-span-3 w-full h-full">
 
                         <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
@@ -263,8 +263,8 @@ const Feature_index = ({data,h_data,f_data}) => {
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-process-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
@@ -304,26 +304,26 @@ const Feature_index = ({data,h_data,f_data}) => {
             {/* /Digital Process */}
             {/* Digital Labs */}
             <section id="digital-labs" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
-            <div  className="grid grid-cols-5 gap-10 px-10  ">
-                <div className="col-span-2  sticky top-0 ">
+            <div  className="grid md:grid-cols-5 gap-10 px-10  ">
+                <div className="md:col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[3].Title}</h2>
                     <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[3].Description}</p>
 </div>
-                    <div className="col-span-3 w-full h-full">
+                    <div className="md:col-span-3 w-full h-full">
 
-                        <div className="grid md:grid-cols-2 md:gap-4 ">
+                        <div className="grid md:grid-cols-2 gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
                             {data.DigitalStreamSection[3].AllFeaturesCard.map(feature=>(
-                                <div className="mb-10 "  key="feature">
+                                <div className="mb-10"  key="feature">
                                  <Link href={feature.CTAUrl}>
                                      
-                                    <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
-                                        <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
+                                    <a className="relative flex flex-auto   group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary " ></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-labs-primary">
+                                        <div className="relative bg-white flex flex-col justify-between flex-1  text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">
-                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Projects Icon"/>
+                                    <Image src={feature.IconURL}  layout="fill" alt="Digital Labs Icon"/>
                                     </div>
                                     
                                             </div>
@@ -359,12 +359,12 @@ const Feature_index = ({data,h_data,f_data}) => {
             {/* /Digital Labs */}
             {/* Digital Mines */}
             <section id="digital-mines" className="pt-10 relative w-full py-5 overflow-hidden bg-white md:py-10 xl:pt-36 xl:pb-20 ">
-            <div  className="grid grid-cols-5 gap-10 px-10  ">
-                <div className="col-span-2  sticky top-0 ">
+            <div  className="grid md:grid-cols-5 gap-10 px-10  ">
+                <div className="md:col-span-2  sticky top-0 ">
                     <h2 className="mb-1 section-heading  leading-tight text-gray-900">{data.DigitalStreamSection[4].Title}</h2>
                     <p className="mb-12 section-subheading  text-gray-500">{ data.DigitalStreamSection[4].Description}</p>
 </div>
-                    <div className="col-span-3 w-full h-full">
+                    <div className="md:col-span-3 w-full h-full">
 
                         <div className="grid md:grid-cols-2 md:gap-4 ">
                             {/* <!-- Feature blocks first column --> */}
@@ -373,8 +373,8 @@ const Feature_index = ({data,h_data,f_data}) => {
                                  <Link href={feature.CTAUrl}>
                                      
                                     <a className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
-                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
-                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-project-primary">
+                                       <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
+                                        <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-mines-primary">
                                         <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                                             <div className="flex ">
                                     <div className="relative w-8 h-8">

@@ -274,7 +274,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a
-                      className={`hidden  lg:inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2  hyperlink button`}
+                      className={`inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2  hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
@@ -340,7 +340,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         </div>
         {/* <!-- /Customer logos Section --> */}
          {/* <!-- Why Ktern --> */}
-         <section className={`md:px-20 ${stream_data.cssstreamtag} text-white py-10 rounded-tr-large rounded-b-large mx-10 mb-10`}>
+         <section className={`md:px-20 ${stream_data.cssstreamtag} text-white py-10 md:rounded-tr-large md:rounded-b-large md:mx-10 mb-10`}>
           <h2 className='section-heading text-center text-white mt-10 mb-3'>{stream_data.WhySectionTitle}</h2>
           <p className='section-subheading text-center text-white'>{stream_data.WhySectionDescription}</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
@@ -736,7 +736,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               <h2 className='section-heading  text-gray-800 '>{stream_data.RelatedResourcesSectionHeading}</h2>
             </div>
 
-            <div className='grid grid-cols-4 gap-6 mb-6'>
+            <div className='grid  md:grid-cols-4 gap-6 mb-6'>
               {stream_data.Resource.map((data) => (
               <div key="data" className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500" >
               <span className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${stream_data.cssstreamtag}-secondary `} style={{height:'400px',width:'345px'}}></span>
@@ -753,7 +753,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               <a className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
-                                        <a target="_blank" className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -776,7 +776,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               <a className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
-                                        <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
