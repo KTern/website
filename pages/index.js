@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareAppJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Event from '../component/event';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -46,38 +46,43 @@ function prev(id, last) {
   const iWidth = parseFloat(tokStyles.width);
   document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
 }
-import * as Amplitude from '@amplitude/node';
-const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
-var client = Amplitude.init(AMPLITUDE_KEY);
-client.logEvent({
-	event_type: 'button click',
-	user_id: 'edson@gmail.com',
-country:"India",
-version_name:"10",
-user_properties:{
-	email:"edson@gmail.com",
-	name:"Nivedha"
-},
-	event_properties: {
-		keyString: 'valueString',
-		keyInt: 11,
-		keyBool: true,
-		event_name:"Navigated To",
-		random:"Nivedha"
-	},
-});
-import React from 'react'
 
+// import * as Amplitude from '@amplitude/node';
+// const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
+// var client = Amplitude.init(AMPLITUDE_KEY);
+// client.logEvent({
+// 	event_type: 'button click',
+// 	user_id: 'edson@gmail.com',
+// country:"India",
+// version_name:"10",
+// user_properties:{
+// 	email:"edson@gmail.com",
+// 	name:"Nivedha"
+// },
+// 	event_properties: {
+// 		keyString: 'valueString',
+// 		keyInt: 11,
+// 		keyBool: true,
+// 		event_name:"Navigated To",
+// 		random:"Nivedha"
+// 	},
+// });
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 // Send any events that are currently queued for sending.
 // Will automatically happen on the next event loop.
-client.flush();
+
 
 function Home ({ data ,h_data,f_data}) {
 	let breadcrumb = [];
 	data.pageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
 	});
-	
+	const router = useRouter()
+
+  useEffect(() => {
+     Event(data.Event)
+  }, [])
 	return (
 		<>
 			<NextSeo
@@ -258,7 +263,7 @@ function Home ({ data ,h_data,f_data}) {
 							</svg>
 							{/* <!-- Digital Maps --> */}
 							<div className="relative">
-							<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
+								<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
 										<Image
 											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
@@ -272,7 +277,7 @@ function Home ({ data ,h_data,f_data}) {
 										{data.DigitalStreamsCards[0].StreamDescription}
 									</p>
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
-									<ul className="space-y-2 h-full lg:h-200">
+									<ul className="space-y-2 h-full">
 										{data.DigitalStreamsCards[0].FeaturePoints.map((feature) => (
 											<li
 												key="feature"
@@ -286,10 +291,10 @@ function Home ({ data ,h_data,f_data}) {
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[0].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[0].LandingPageURL} passHref>
-										<a className="inline-flex items-center pb-1 lg:mt-6 text-maps-primary hover:border-blue-500 group ">
-											<span className="hyperlink group-hover:text-maps-300"> Learn More </span>
+										<a className="inline-flex items-center pb-1  text-projects-primary hover:border-blue-500 group ">
+											<span className="hyperlink group-hover:text-projects-300"> Learn More </span>
 											<svg
-												className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300"
+												className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-300"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -305,7 +310,7 @@ function Home ({ data ,h_data,f_data}) {
 										</a>
 									</Link>
 								</div>
-								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-maps-secondary border-2 border-gray-800"></div>
+								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-projects-secondary border-2 border-gray-800"></div>
 							</div>
 							{/* <!-- Digital Projects --> */}
 							<div className="relative">

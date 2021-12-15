@@ -26,74 +26,72 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
   return (
     <>
       <NextSeo
-       	title={data.PageSEO.PageTitle}
-         description={data.PageSEO.PageDescription}
-         canonical={data.PageSEO.CanonicalTag}
-         openGraph={{
-           url: `${data.PageSEO.PageURL}`,
-           title: `${data.PageSEO.PageTitle}`,
-           description: `${data.PageSEO.PageDescription}`,
-           images: [
-             {
-               url:`${data.PageSEO.ThumbnailImageURL}`,
-               width: 1920,
-               height: 1080,
-               alt: `${data.PageSEO.PageTitle}`,
-               type: 'image/png',
-             }
-           ],
-           site_name: `${process.env.SITE_TITLE}`,
-         }}
-         twitter={{
-           handle: `${process.env.TWITTER_HANDLE}`,
-           site: `${process.env.TWITTER_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-         }}
-         facebook={{
-           handle: `${process.env.FACEBOOK_HANDLE}`,
-           site: `${process.env.FACEBOOK_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-           appId: `${process.env.FB_APPID}`,
-         }}
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.TWITTER_HANDLE}`,
+          site: `${process.env.TWITTER_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.FACEBOOK_HANDLE}`,
+          site: `${process.env.FACEBOOK_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+          appId: `${process.env.FB_APPID}`,
+        }}
         //  languageAlternates={[
         //    {
         //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
         //      href: `${h_data.OtherSEO.languageAlternates.href}`,
         //    },
         //  ]}
-         additionalMetaTags={[
-           {
-             property: "dc:creator",
-             content: "Nivedha",
-           },
-           {
-             name: "application-name",
-             content: "KTern.AI",
-           },
-           {
-             httpEquiv: "x-ua-compatible",
-             content: "IE=edge; chrome=1",
-           },
-         ]}
-         additionalLinkTags={[
-           {
-             rel: 'icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-           },
-           {
-             rel: 'apple-touch-icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-             sizes: '76x76',
-           },
-           {
-             rel: 'manifest',
-             href: '/manifest.json',
-           },
-         ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
       />
-      <BreadcrumbJsonLd
-        itemListElements={breadcrumb}
-      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <SocialProfileJsonLd
         type="Person"
@@ -117,7 +115,7 @@ const Ebook_Landing = ({ data, h_data, f_data }) => {
         <section className={`w-full pt-8 ${data.StreamType}`}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col  md:w-2/3 h-full ">
-              <BreadCrumb color="white" b_data={breadcrumb}/>
+              <BreadCrumb color="white" b_data={breadcrumb} />
               <div className="max-w-max mt-4 px-2 py-1 mb-5  hyperlink text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.PageHeader.Tag}
               </div>
@@ -277,18 +275,18 @@ This blueprint will help you define the right plan, the right effort estimate, t
                     {/* <!-- Do not remove this code. --> */}
 
                     <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        
-                      >
-                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="First_Name">
-                         {data.EBookFormFields.FirstName}
+                      <div className="zcwf_col_lab">
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="First_Name"
+                        >
+                          {data.EBookFormFields.FirstName}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                        required
-                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="text"
                           id="First_Name"
                           name="First Name"
@@ -298,18 +296,18 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       </div>
                     </div>
                     <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        
-                      >
-                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Last_Name">
-                        {data.EBookFormFields.LastName}
+                      <div className="zcwf_col_lab">
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Last_Name"
+                        >
+                          {data.EBookFormFields.LastName}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                        required
-                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="text"
                           id="Last_Name"
                           name="Last Name"
@@ -319,18 +317,18 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       </div>
                     </div>
                     <div className="zcwf_row">
-                      <div
-                        className="zcwf_col_lab"
-                        
-                      >
-                        <label   className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white" htmlFor="Email">
-                        {data.EBookFormFields.Email}
+                      <div className="zcwf_col_lab">
+                        <label
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                          htmlFor="Email"
+                        >
+                          {data.EBookFormFields.Email}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <input
-                        required
-                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="email"
                           ftype="email"
                           id="Email"
@@ -409,6 +407,24 @@ This blueprint will help you define the right plan, the right effort estimate, t
                           maxLength="255"
                           value={data.PageSEO.PageTitle}
                         />
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
+                    <div className="zcwf_row wfrm_fld_dpNn">
+                      <div
+                        className="zcwf_col_lab"
+                        style="font-size:12px; font-family: Arial;"
+                      >
+                        <label htmlFor="CONTACTCF7">Stream Type</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="CONTACTCF7"
+                          name="CONTACTCF7"
+                          maxLength="255"
+                          value={data.StreamType}
+                        ></input>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>

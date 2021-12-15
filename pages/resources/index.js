@@ -85,6 +85,18 @@ filter=_.filter(data.ResourcesList,filterArray)
   if(process.browser)
   document.getElementById('type').value=router.query.type;
    }
+   if(router.query.stream){
+    let filterArray = {}
+    filterArray.DigitalStream = router.query.stream
+   }  
+// console.log(filterArray)
+   
+filter=_.filter(data.ResourcesList,filterArray)
+// console.log(filter)
+  setResourceList(filter);
+  if(process.browser)
+  document.getElementById('type').value=router.query.type;
+   
   },[])
   function handleFilter (element) {
     filter=[]

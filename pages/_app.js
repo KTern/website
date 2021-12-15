@@ -7,6 +7,7 @@ import Link from "next/link"
 
 
 import { SocialProfileJsonLd } from "next-seo";
+import Event from '../component/event';
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 
@@ -15,6 +16,7 @@ function MyApp ({ Component, pageProps }) {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_path: url,
       })
+     
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {

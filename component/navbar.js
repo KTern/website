@@ -243,7 +243,7 @@ function useCompany () {
         return [ref, ready];
         }
 export default function Navbar({h_data}){
-    console.log("Navbar",h_data)
+    // console.log("Navbar",h_data)
     const router = useRouter();
     const [overall,overallReady]=useOutsideAlerter();
     const [ products,productReady] = useProducts();
