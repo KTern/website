@@ -291,10 +291,10 @@ function Home ({ data ,h_data,f_data}) {
 									<div className="h-0.5 w-full border-b border-gray-200 my-8"> </div>
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[0].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[0].LandingPageURL} passHref>
-										<a className="inline-flex items-center pb-1  text-projects-primary hover:border-blue-500 group ">
-											<span className="hyperlink group-hover:text-projects-300"> Learn More </span>
+										<a className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
+											<span className="hyperlink group-hover:text-maps-300"> Learn More </span>
 											<svg
-												className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-300"
+												className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -310,7 +310,7 @@ function Home ({ data ,h_data,f_data}) {
 										</a>
 									</Link>
 								</div>
-								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-projects-secondary border-2 border-gray-800"></div>
+								<div className="absolute inset-0 z-10 w-full h-full mt-2 ml-2 bg-maps-secondary border-2 border-gray-800"></div>
 							</div>
 							{/* <!-- Digital Projects --> */}
 							<div className="relative">

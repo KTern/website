@@ -88,15 +88,15 @@ filter=_.filter(data.ResourcesList,filterArray)
    if(router.query.stream){
     let filterArray = {}
     filterArray.DigitalStream = router.query.stream
-   }  
+      
 // console.log(filterArray)
    
 filter=_.filter(data.ResourcesList,filterArray)
 // console.log(filter)
   setResourceList(filter);
   if(process.browser)
-  document.getElementById('type').value=router.query.type;
-   
+  document.getElementById('stream').value=router.query.stream;
+   }
   },[])
   function handleFilter (element) {
     filter=[]
