@@ -413,7 +413,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                     <div className="zcwf_row wfrm_fld_dpNn">
                       <div
                         className="zcwf_col_lab"
-                        style="font-size:12px; font-family: Arial;"
+                       
                       >
                         <label htmlFor="CONTACTCF7">Stream Type</label>
                       </div>
