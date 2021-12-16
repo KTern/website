@@ -1,6 +1,16 @@
 import * as Amplitude from "@amplitude/node";
+import amplitude from 'amplitude-js';
 const AMPLITUDE_KEY = "fc34969fbb47436070b100efc94f9efa";
 var client = Amplitude.init(AMPLITUDE_KEY);
+// Amplitude Js
+if(process.browser){
+amplitude.getInstance().init(AMPLITUDE_KEY); 
+var instance=amplitude.getInstance()}
+export class Amplitude_Props{
+    constructor(){
+        country
+    }
+}
 export default function Event(e_data) {
   function uuidv4() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
@@ -91,9 +101,8 @@ export default function Event(e_data) {
       aggregateScore: `${e_data.interest_score}`,
     },
     event_properties: {
-      keyString: `${e_data.event_name}`,
-      keyInt: 11,
-      keyBool: true,
+    
+    
       pageSource: `${e_data.page_source}`,
       sectionName: `${e_data.section_name}`,
 
@@ -102,8 +111,13 @@ export default function Event(e_data) {
   };
 
   console.log(data);
-  client.logEvent(data);
-  client.flush();
+//   client.logEvent(data);
+var identify = new amplitude.Identify();
+instance.setUserId(user_id);
+instance.identify(identify);
+instance.setUserProperties(data.user_properties);
+instance.logEvent(data.event_type,data.event_properties);
+//   client.flush();
 }
 
 export function resolve_stream_score(data) {
@@ -191,6 +205,6 @@ export function page_event(e_data) {
   };
 
   console.log(data);
-  client.logEvent(data);
+  instance.logEvent(data.event_type,data.event_properties);
   client.flush();
 }
