@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareAppJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
 import Layout from '../component/Layout';
-import Event from '../component/page_event';
+import Event, { resolve_stream_score } from '../component/page_event';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -188,14 +188,14 @@ function Home ({ data ,h_data,f_data}) {
 									<a 
 										target="_blank"
 										className="sm:mb-5 sm:sm-button inline-block py-3 px-14 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button"
-								onClick={()=>{onClick({event_name:"Button Click",section_name:"Hero",page_source:`${data.pageSEO.PageTitle}`,label:`${data.pageHeaderDetails.primaryCTA.buttonTitle}`})}}
+								onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero",page_source:`${data.pageSEO.PageTitle}`,label:`${data.pageHeaderDetails.primaryCTA.buttonTitle}`})}}
 								>
 										{data.pageHeaderDetails.primaryCTA.buttonTitle}
 									</a>
 								</Link>
 								<Link href={data.pageHeaderDetails.secondaryCTA.linkURL}>
 									<a
-									onClick={()=>{onClick({event_name:"Button Click",section_name:"Hero",page_source:`${data.pageSEO.PageTitle}`,label:`${data.pageHeaderDetails.secondaryCTA.buttonTitle}`})}}
+									onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero",page_source:`${data.pageSEO.PageTitle}`,label:`${data.pageHeaderDetails.secondaryCTA.buttonTitle}`})}}
 									 className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">
 										{data.pageHeaderDetails.secondaryCTA.buttonTitle}
 									</a>
@@ -297,7 +297,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[0].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[0].LandingPageURL} passHref>
 										<a 
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Maps"})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('maps'),event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Maps"})}}
 										className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group ">
 											<span className="hyperlink group-hover:text-maps-300"> Learn More </span>
 											<svg
@@ -350,7 +350,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[1].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[1].LandingPageURL} passHref>
 										<a
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Projects"})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('projects'),event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Projects"})}}
 										 className="inline-flex items-center pb-1  text-projects-primary hover:border-blue-500 group ">
 											<span className="hyperlink group-hover:text-projects-300"> Learn More </span>
 											<svg
@@ -403,7 +403,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[2].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[2].LandingPageURL} passHref>
 										<a
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Process"})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('process'),event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Process"})}}
 										 className="inline-flex items-center pb-1  text-process-primary hover:border-blue-500 group ">
 											<span className="hyperlink group-hover:text-process-300"> Learn More </span>
 											<svg
@@ -456,7 +456,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[3].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[3].LandingPageURL} passHref>
 										<a 
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Labs"})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('labs'),event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Labs"})}}
 										className="inline-flex items-center pb-1  text-labs-primary hover:border-blue-500 group ">
 											<span className="hyperlink group-hover:text-labs-300"> Learn More </span>
 											<svg
@@ -511,7 +511,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5 text-gray-600"> {data.DigitalStreamsCards[4].StreamValuePoint} </p>
 									<Link href={data.DigitalStreamsCards[4].LandingPageURL} passHref>
 										<a
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Mines"})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('mines'),event_name:"Link Click",section_name:"Streams Section",page_source:`${data.pageSEO.PageTitle}`,label:"Learn More-Digital Mines"})}}
 										 className="inline-flex items-center pb-1  text-mines-primary hover:border-blue-500 group ">
 											<span className="hyperlink group-hover:text-mines-300"> Learn More </span>
 											<svg
@@ -576,7 +576,7 @@ function Home ({ data ,h_data,f_data}) {
 										<div>
 											{dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
 											<a
-											onClick={()=>{onClick({event_name:"Link Click",section_name:"Customer Success Stories Section",page_source:`${data.pageSEO.PageTitle}`,label:`${dt.CTAText}`})}}
+											onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Customer Success Stories Section",page_source:`${data.pageSEO.PageTitle}`,label:`${dt.CTAText}`})}}
 											 target="_blank"
 												
 											className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
@@ -599,7 +599,7 @@ function Home ({ data ,h_data,f_data}) {
 											</Link>}
 											{!dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
 											<a 
-											onClick={()=>{onClick({event_name:"Link Click",section_name:"Customer Success Stories Section",page_source:`${data.pageSEO.PageTitle}`,label:`${dt.CTAText}`})}}
+											onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Customer Success Stories Section",page_source:`${data.pageSEO.PageTitle}`,label:`${dt.CTAText}`})}}
 											className="inline-flex items-center pb-1  text-white hover:border-blue-500 group ">
 												<span className="hyperlink group-hover:text-gray-400"> {dt.CTAText} </span>
 												<svg
@@ -655,7 +655,7 @@ function Home ({ data ,h_data,f_data}) {
 											<div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
 												<Link href={data.QuickLinks[0].CTAUrl} passHref>
 													<a
-													onClick={()=>{onClick({event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[0].CTAText}`})}}
+													onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[0].CTAText}`})}}
 													 className="inline-flex items-center pb-1  text-black hover:border-blue-500 group ">
 														<span className="hyperlink group-hover:text-gray-400">
 															{data.QuickLinks[0].CTAText}
@@ -684,7 +684,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="p-1 md:px-8 space-y-5 flex flex-col w-full  md:w-1/2">
 								<Link href={data.QuickLinks[1].CTAUrl}>
 									<a 
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[1].CTAText}`})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[1].CTAText}`})}}
 									className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black">
 										<div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
 											<div>
@@ -733,7 +733,7 @@ function Home ({ data ,h_data,f_data}) {
 								</Link>
 								<Link href={data.QuickLinks[2].CTAUrl}>
 									<a
-										onClick={()=>{onClick({event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[2].CTAText}`})}}
+										onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Redirect Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.QuickLinks[2].CTAText}`})}}
 									 className="relative shadow flex flex-auto p-5  group overflow-hidden md:p-8 false border-2 hover:border-black">
 										<div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
 											<div>
@@ -799,7 +799,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5  card-subheading text-gray-800"> {} </p>
 									<Link href={data.CTASection.CTAButtonLink}>
 										<a
-											onClick={()=>{onClick({event_name:"Button Click",section_name:"Footer CTA Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.CTASection.CTAButtonText}`})}}
+											onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Footer CTA Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.CTASection.CTAButtonText}`})}}
 										 target="_blank" className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
 											{data.CTASection.CTAButtonText}
 										</a>

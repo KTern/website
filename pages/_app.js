@@ -12,6 +12,7 @@ function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 // if(process.browser)
 // console.log(document)
+
   useEffect(() => {
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
