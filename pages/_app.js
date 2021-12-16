@@ -7,16 +7,17 @@ import Link from "next/link"
 
 
 import { SocialProfileJsonLd } from "next-seo";
-import Event from '../component/event';
+import {page_event} from "../component/page_event"
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
-
+// if(process.browser)
+// console.log(document)
   useEffect(() => {
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_path: url,
       })
-     
+     page_event({event_name:"Navigated To",page_destination:url})
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {

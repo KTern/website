@@ -34,7 +34,7 @@ module.exports = {
       "cdn1.iconfinder.com",
       "unsplash.com",
       "s.clipartkey.com",
-      "web.ktern.com",
+      "ktern.com",
       "w3.org",
       "www.w3.org",
       "stackoverflow.com"

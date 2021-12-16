@@ -402,6 +402,24 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
+                    <div className="zcwf_row wfrm_fld_dpNn">
+                      <div
+                        className="zcwf_col_lab"
+                       
+                      >
+                        <label htmlFor="CONTACTCF7">Stream Type</label>
+                      </div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          type="text"
+                          id="CONTACTCF7"
+                          name="CONTACTCF7"
+                          maxLength="255"
+                          value={data.StreamName}
+                        ></input>
+                        <div className="zcwf_col_help"></div>
+                      </div>
+                    </div>
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">

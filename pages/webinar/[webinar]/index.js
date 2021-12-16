@@ -11,6 +11,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
+import Event from "../../../component/page_event";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -22,7 +23,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
     hour12: true,
     minute: "numeric",
   });
-
+// Event({event_name:"Navigated To",page_source:webinar_Data.PageSEO.PageTitle})
   const router = useRouter();
   const handleSearch = (event) => {
     // console.log("clicked" + webinar_Data.Type + event, router.query);
@@ -376,6 +377,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                             value={webinar_Data.FormFields.SubmitButton}
                                             className="cursor-pointer  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
+                                            // onClick={()=>{Event({event_name:"Button Click",page_source:webinar_Data.PageSEO.PageTitle,section_name:"Get Access Form",label:webinar_Data.FormFields.SubmitButton})}}
                                           />
                                         </div>
                                         </div>
@@ -447,7 +449,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                     type="hidden"
                                     id="zcld"
                                     name="zcld"
-                                    value={webinar_Data.FormFields.FormId}
+                                    value={webinar_Data.FormFields.MailingListId}
                                   />
                                   <input
                                     type="hidden"
@@ -463,7 +465,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                   <input
                                     type="hidden"
                                     id="zc_Url"
-                                    value={webinar_Data.FormFields.MailingListId}
+                                    value="kter.maillist-manage.in"
                                   />
                                   <input
                                     type="hidden"
@@ -479,7 +481,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                     type="hidden"
                                     id="zc_formIx"
                                     name="zc_formIx"
-                                    value="3zd179095996e297a4942da5ad9cf725919b2102257c52886d7ff2da954890cddd"
+                                    value={webinar_Data.FormFields.FormId}
                                   />
                                   {/* <!-- End of the campaigns hidden tags --> */}
                                 </div>
