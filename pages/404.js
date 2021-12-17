@@ -4,8 +4,12 @@ import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
-
+import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";
 export default function Error() {
+// Amplitude Tracking onClick
+function onClick(data){
+  Event(data)
+  }
   return (
     <>
     	  <LogoJsonLd

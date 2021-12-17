@@ -7,11 +7,16 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import BreadCrumb from "../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 export default function News({data,h_data,f_data}){
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
     return (
        <>
             <NextSeo
@@ -107,7 +112,9 @@ export default function News({data,h_data,f_data}){
         <section className="py-20 grid md:grid-cols-3 gap-4 px-10 ">
      {data.NewsCard.slice(0).reverse().map((dt)=>(  
           <Link key="dt" href={dt.PageUrl} >
-              <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+              <a
+               onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"News Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.NewsTitle}`})}}  
+              className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
               <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
               <div 
                 className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
@@ -141,13 +148,17 @@ export default function News({data,h_data,f_data}){
               </div>
               <div className='relative w-1/3 flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.CTASection.PrimaryCTA.linkURL} passHref>
-                  <a className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button bg-primary button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
+                  <a 
+                   target='_blank'
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CTASection.PrimaryCTA.buttonTitle}`})}}  
+                  className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button bg-primary button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {data.CTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link rel='noopener noreferrer' href={data.CTASection.SecondaryCTA.linkURL} passHref>
                   <a
-                    target='_blank'
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CTASection.SecondaryCTA.buttonTitle}`})}}  
+                   
                     className={` inline-block sm:px-16 py-3 md:px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black`}
                   >
                     {data.CTASection.SecondaryCTA.buttonTitle}

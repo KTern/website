@@ -6,8 +6,8 @@ import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from 'next/router';
-import BreadCrumb from "../component/breadcrumb";
-export default function Contact({ data, h_data, f_data }) {
+import BreadCrumb from "../component/breadcrumb"; 
+ import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function Contact({ data, h_data, f_data }) {
   const router=useRouter();
   console.log(router.query.message);
   if(router.query.message=="thanks"){
@@ -18,6 +18,20 @@ export default function Contact({ data, h_data, f_data }) {
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
+    function onFormClick(data){
+      if(process.browser){
+       
+        localStorage.setItem('name',document.getElementById('First_Name').value+" "+document.getElementById('Last_Name').value);
+        localStorage.setItem('email',document.getElementById('Email').value)
+      }
+    //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
+      Event(data);
+  
+    }
   return (
     <>
       <Head>
@@ -471,6 +485,7 @@ export default function Contact({ data, h_data, f_data }) {
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">
                         <input
+                        onClick={()=>{onFormClick({stream_score:resolve_stream_score('none'),event_name:"Form Click",section_name:"Contact Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`Submit`})}}
                           type="submit"
                           id="formsubmit"
                                            className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 

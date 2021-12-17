@@ -4,13 +4,10 @@ const AMPLITUDE_KEY = "fc34969fbb47436070b100efc94f9efa";
 var client = Amplitude.init(AMPLITUDE_KEY);
 // Amplitude Js
 if(process.browser){
+    // amplitude.getInstance().trackSessionEvents(true);
 amplitude.getInstance().init(AMPLITUDE_KEY); 
 var instance=amplitude.getInstance()}
-export class Amplitude_Props{
-    constructor(){
-        country
-    }
-}
+
 export default function Event(e_data) {
   function uuidv4() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>

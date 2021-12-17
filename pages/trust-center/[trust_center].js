@@ -7,11 +7,16 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.pageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   return (
     <>
       <NextSeo
@@ -168,7 +173,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
                           li: {
                             props: {
                               className:
-                                "text-justify list-decimal ml-3 mb-1 flex-col",
+                                "text-justify list-decimal ml-6 mb-1 flex-col",
                             },
                           },
                           p: {
@@ -189,7 +194,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
                     </Markdown>
                   </div>
                 ))}
-                  <div className="flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
+                  <div className="md:hidden block flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
                 <Link href="#top" passHref>
                   <a className=" rounded-full p-2  flex items-center justify-center text-black">
                     <Image
@@ -212,10 +217,12 @@ export default function TrustCenter({ data, h_data, f_data }) {
                   <b className="card-heading text-center">
                     {data.TableOfContentsHeading}
                   </b>
-                  {data.idList.map((data) => (
-                    <li key="data" className="mt-1 list-decimal mx-5">
-                      <Link href={data.idURL} passHref>
-                        <a className="card-subheading ">{data.idText}</a>
+                  {data.idList.map((dt) => (
+                    <li key="dt" className="mt-1 list-decimal mx-5">
+                      <Link href={dt.idURL} passHref>
+                        <a
+                          onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Table Of Contents Section",page_source:`${data.pageSEO.PageTitle}`,label:`Content-${dt.idText}`})}}
+                           className="card-subheading ">{dt.idText}</a>
                       </Link>
                     </li>
                   ))}

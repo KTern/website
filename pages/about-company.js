@@ -6,8 +6,13 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
-import BreadCrumb from "../component/breadcrumb";
+import BreadCrumb from "../component/breadcrumb"; 
+ import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";
 export default function About({ data,h_data,f_data ,n_data}) {
+// Amplitude Tracking onClick
+function onClick(data){
+  Event(data)
+  }
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -111,7 +116,7 @@ export default function About({ data,h_data,f_data ,n_data}) {
                   href={data.PageHeader.primaryCTA.linkURL}
                 >
                   <a
-                   
+                     onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PageHeader.primaryCTA.buttonTitle}`})}}
                     className=" inline-block py-3 px-16 border-2 border-white bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button"
                   >
                     {data.PageHeader.primaryCTA.buttonTitle}
@@ -378,7 +383,9 @@ export default function About({ data,h_data,f_data ,n_data}) {
             <div className='grid md:grid-cols-4 gap-6 mb-6'>
               {n_data.map((dt) => (
              <Link key="dt" href={dt.PageSEO.PageURL} >
-             <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+             <a
+               onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Related News Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.PageHeader.header}`})}}
+             className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
              <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
              <div 
                className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
@@ -414,12 +421,16 @@ export default function About({ data,h_data,f_data ,n_data}) {
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
-                  <a className='  inline-block py-3 border-2 border-white px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
+                  <a
+                        onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctacard.PrimaryCTA.buttonTitle}`})}}
+                  className='  inline-block py-3 border-2 border-white px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
                     {data.ctacard.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
-                  <a className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
+                  <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctacard.SecondaryCTA.buttonTitle}`})}}
+                  className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
                     {data.ctacard.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>

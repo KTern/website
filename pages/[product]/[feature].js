@@ -9,6 +9,7 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import FAQ from "../../component/faq";
 import BreadCrumb from "../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 // import Breadcrumbs from 'nextjs-breadcrumbs';
 {
   /* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */
@@ -18,6 +19,11 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
   feature_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   return (
     <>
     	  <LogoJsonLd
@@ -125,12 +131,16 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               <p className=' text-gray-600 pb-7 subheading'>{feature_data.PageHeader.subHeading}</p>
               <div className='md:flex md:flex-row sm:space-y-4  w-full sm:w-auto sm:flex-row md:space-x-10'>
                 <Link href={feature_data.PageHeader.primaryCTA.linkURL} passHref>
-              <a className=' border-2 border-white sm:px-16    inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
+              <a
+              	onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.PageHeader.primaryCTA.buttonTitle}`})}}      
+              className=' border-2 border-white sm:px-16    inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={feature_data.PageHeader.secondaryCTA.linkURL} passHref>
-                  <a className='flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block'>
+                  <a 
+                  	onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.PageHeader.secondaryCTA.buttonTitle}`})}}      
+                  className='flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block'>
                     <Image className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} />
                     <span className='button'>&nbsp;&nbsp;{feature_data.PageHeader.secondaryCTA.buttonTitle}</span>
                   </a>
@@ -383,17 +393,23 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                                 {data.OpenNewTab && <div  className={` relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${feature_data.cssStreamTag}-primary `}>   
                               <div className="bg-white">
                               <Link href={data.CTAUrl} passHref>
-                                      <a target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                      <a
+                                      	onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                                      target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                       
                               <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                               </a> 
                               </Link>
                               </div>
                 <Link href={data.CTAUrl} passHref>
-                <a target="_blank" className="bg-white">
+                <a
+                onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Link Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                target="_blank" className="bg-white">
                               <span className=" bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                           <Link href={data.CTAUrl}  passHref>
-                                          <a className="mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                          <a 
+                                          onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                                          className="mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                           <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                           <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -406,17 +422,23 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                               {!data.OpenNewTab && <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${feature_data.cssStreamTag}-primary `}>   
                               <div className="bg-white">
                               <Link href={data.CTAUrl} passHref>
-                                      <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                      <a
+                                      onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                                       className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                       
                               <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                               </a> 
                               </Link>
                               </div>
                 <Link href={data.CTAUrl} passHref>
-                <a className="bg-white">
+                <a 
+                onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                className="bg-white">
                               <span className="  bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                           <Link href={data.CTAUrl}  passHref>
-                                          <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                          <a
+                                          onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                                           className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                           <span className="hyperlink group-hover:text-gray-300 mb-4">{data.CTAText}</span>
                                           <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -432,7 +454,9 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
             </div>
             <div className='text-center'>
               <Link href={feature_data.ViewAllResourcesURL} passHref>
-                <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
+                <a
+                onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.ViewAllResourcesText}`})}}       
+                className='inline-flex items-center   text-black hover:text-gray-400 group '>
                   <span className='hyperlink group-hover:text-gray-300'>{feature_data.ViewAllResourcesText}</span>
                   <svg
                     className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
@@ -468,17 +492,22 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
               </div>
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 {feature_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={feature_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a target="_blank" className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
+                  <a
+                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.FinalCTASection.PrimaryCTA.buttonTitle}`})}}       
+                  target="_blank" className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>}
                 {!feature_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={feature_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
+                  <a
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.FinalCTASection.PrimaryCTA.buttonTitle}`})}}       
+                  className=' border-2 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'>
                     {feature_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>}
                {feature_data.FinalCTASection.SecondaryCTA.openNewTab && <Link rel='noopener noreferrer' href={feature_data.FinalCTASection.SecondaryCTA.linkURL} passHref>
                   <a
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.FinalCTASection.SecondaryCTA.buttonTitle}`})}}       
                     target='_blank'
                     className='  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'
                   >
@@ -487,7 +516,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                 </Link>}
                 {!feature_data.FinalCTASection.SecondaryCTA.openNewTab && <Link rel='noopener noreferrer' href={feature_data.FinalCTASection.SecondaryCTA.linkURL} passHref>
                   <a
-                   
+                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.FinalCTASection.SecondaryCTA.buttonTitle}`})}}  
                     className='  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black'
                   >
                     {feature_data.FinalCTASection.SecondaryCTA.buttonTitle}

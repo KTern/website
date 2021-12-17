@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProductJsonLd } from "next-seo";
 import { VideoJsonLd } from "next-seo";
-
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 import { SoftwareAppJsonLd } from "next-seo";
 import FAQ from "../../component/faq";
 import BreadCrumb from "../../component/breadcrumb";
@@ -79,6 +79,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
   stream_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   return (
     <>
       <NextSeo
@@ -273,7 +277,8 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 <div>
                   <br />
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
-                    <a
+                    <a 
+                    	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"Hero Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.pageHeader.primaryCTA.buttonTitle}`})}}
                       className={`inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2  hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
@@ -441,7 +446,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                         <div className='max-w-sm mx-auto lg:mx-0'>
                           <p className='mb-6 text-black  card-subheading'>{dt.Description}</p>
                           <Link href={dt.CTAUrl} passHref>
-                            <a className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
+                            <a 
+                            	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Link Click",section_name:"Features Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${dt.Title}-${dt.CTAText}`})}}
+                            className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
                               <span className='hyperlink group-hover:text-gray-400'>{dt.CTAText}</span>
                               <svg
                                 className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
@@ -607,7 +614,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           <div className='max-w-sm mx-auto lg:mx-0'>
                             <p className='mb-6 text-black  card-subheading'>{dt.Description}</p>
                             <Link href={dt.CTAUrl} passHref>
-                              <a className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
+                              <a
+                              	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Link Click",section_name:"Features Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${dt.Title}-${dt.CTAText}`})}}
+                               className='inline-flex items-center pb-1  text-black hover:border-blue-400 group '>
                                 <span className='hyperlink group-hover:text-gray-400'>{dt.CTAText}</span>
                                 <svg
                                   className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-400'
@@ -743,17 +752,21 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                             {data.OpenNewTab &&  <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
-                                    <a target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    <a
+                                    	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+                                     target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
               <Link href={data.CTAUrl} passHref>
-              <a className="bg-white">
+              <a className="bg-white"
+                	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}>
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
-                                        <a target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a
+                                          	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}} target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -766,17 +779,23 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                             {!data.OpenNewTab &&  <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary `}>   
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
-                                    <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    <a
+                                      	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+                                     className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
               <Link href={data.CTAUrl} passHref>
-              <a className="bg-white">
+              <a
+                	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+               className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
-                                        <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a
+                                          	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+                                        className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -791,7 +810,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             </div>
             <div className='text-center'>
               <Link href={stream_data.ViewAllResources.LinkURL} passHref>
-                <a className='inline-flex items-center   text-black hover:text-gray-400 group '>
+                <a
+                  	onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.ViewAllResources.LinkText}-${data.CTAUrl}`})}}
+                className='inline-flex items-center   text-black hover:text-gray-400 group '>
                   <span className='hyperlink group-hover:text-gray-300'>{stream_data.ViewAllResources.LinkText}</span>
                   <svg
                     className='w-5 h-6 mt-1 ml-2 group-hover:text-gray-300'
@@ -830,17 +851,22 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               </div>
               <div className='relative w-1/3 flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                {stream_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a target="_blank" className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
+                  <a
+            	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"CTA Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.FinalCTASection.PrimaryCTA.buttonTitle}`})}}      
+                   target="_blank" className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>}
                 {!stream_data.FinalCTASection.PrimaryCTA.openNewTab && <Link href={stream_data.FinalCTASection.PrimaryCTA.linkURL} passHref>
-                  <a  className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
+                  <a
+                  	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"CTA Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.FinalCTASection.PrimaryCTA.buttonTitle}`})}}      
+                  className={` border-2 inline-block py-3 px-10  hover:bg-gray-300 hover:text-black shadow button ${stream_data.cssstreamtag}button  uppercase text-white rounded-r-xl rounded-b-xl transition duration-200 `}>
                     {stream_data.FinalCTASection.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>}
                 <Link rel='noopener noreferrer' href={stream_data.FinalCTASection.SecondaryCTA.linkURL} passHref>
                   <a
+                  	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"CTA Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.FinalCTASection.SecondaryCTA.buttonTitle}`})}}      
                     target='_blank'
                     className={` inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow button uppercase text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black`}
                   >

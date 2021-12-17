@@ -11,12 +11,16 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
-import Event from "../../../component/page_event";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   const date = new Date(webinar_Data.WebinarDate + "T" + webinar_Data.Time);
   const time = date.toLocaleString("en-US", {
     hour: "numeric",
@@ -39,7 +43,16 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
     month: "short",
     year: "numeric",
   });
+  function onFormClick(data){
+    if(process.browser){
+     
+      localStorage.setItem('name',document.getElementById('Full_Name').value);
+      localStorage.setItem('email',document.getElementById('Email').value)
+    }
+  //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
+    Event(data);
 
+  }
   return (
     <>
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
@@ -209,8 +222,10 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                 <p
                   className={`inline-block py-1 pl-4 pr-4 mb-0 -ml-0 hyperlink  leading-5 text-black transform -translate-y-2  rounded ${webinar_Data.CssStreamTag}`}
                 >
-                  <Link href="#_" rel="category">
-                    <a className="text-white hyperlink uppercase">
+                  <Link href={`/digital-${webinar_Data.CssStreamTag}`} rel="category" passHref>
+                    <a
+                     onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_Data.CssStreamTag),event_name:"Link Click",section_name:"Webinar Content Section",page_source:`${webinar_Data.PageSEO.PageTitle}`,label:`${webinar_Data.DigitalStream}`})}}
+                    className="text-white hyperlink uppercase">
                       {webinar_Data.DigitalStream}
                     </a>
                   </Link>
@@ -335,6 +350,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     {webinar_Data.FormFields.Email}
                   </label>
                                               <input
+                                              id="Email"
                                                 maxLength="100"
                                                 placeholder="Business Email"
                                                 name="CONTACT_EMAIL"
@@ -357,6 +373,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     {webinar_Data.FormFields.FullName}
                   </label>
                                               <input
+                                              id="Full_Name"
                                                 maxLength="100"
                                                 placeholder="Full Name"
                                                 name="FIRSTNAME"
@@ -369,6 +386,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                           </div>
                                           <div>
                                           <input
+                                            onClick={()=>{onFormClick({stream_score:resolve_stream_score(webinar_Data.CssStreamTag),event_name:"Form Click",section_name:"Register Form Section",page_source:`${webinar_Data.PageSEO.PageTitle}`,label:`${webinar_Data.FormFields.SubmitButton}`})}}
                                             type="submit"
                                             action="Save"
                                             id="zcWebOptin"

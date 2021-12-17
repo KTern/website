@@ -9,15 +9,28 @@ import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../../component/breadcrumb";
+import  Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
+import React, { useState, useRef, useEffect } from 'react';
+
+import * as YT from "yt-player"
+import YouTubePlayer from 'youtube-player';
+
 export default function Video({ data,h_data,f_data,v_data }){
+  // const [video,videoState]=createEvent();
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
+  
     return (
       <>
       <Head>
       <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
+      <script src='https://www.youtube.com/iframe_api' async></script>
       </Head>
           <NextSeo
 			title={data.PageSEO.PageTitle}
@@ -165,8 +178,10 @@ export default function Video({ data,h_data,f_data,v_data }){
 <div className="sharethis-inline-share-buttons"></div>
         </div>
         <div className="md:w-1/2 w-full">
-        <div className="md:px-20 md:p-4 md:mx-auto ">
-                  <iframe height={300} width="100%" src={data.VideoLandingPage.VideoEmbedUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <div className="md:px-20 md:p-4 md:mx-auto " >
+                  
+                  <div className="content-box" ><iframe  id="vid-player"  
+                  height={300} width="100%" src={data.VideoLandingPage.VideoEmbedUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
                 </div>
         </div>
         </div>
@@ -185,17 +200,23 @@ export default function Video({ data,h_data,f_data,v_data }){
                               <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${dt.VideoLandingPage.DigitalStream}-primary `}>   
                             <div className="bg-white">
                             <Link href={dt.PageSEO.PageURL} passHref>
-                                    <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                    <a 
+                                    onClick={()=>{onClick({stream_score:resolve_stream_score(dt.VideoLandingPage.DigitalStream),event_name:"Card Click",section_name:"Latest Videos Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.LatestVideoCTA}`})}}
+                                    className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.PageSEO.ThumbnailImageURL} alt={dt.VideoLandingPage.PageHeader} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
               <Link href={dt.PageSEO.PageURL} passHref>
-              <a className="bg-white">
+              <a
+               onClick={()=>{onClick({stream_score:resolve_stream_score(dt.VideoLandingPage.DigitalStream),event_name:"Card Click",section_name:"Latest Videos Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.LatestVideoCTA}`})}}
+              className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.VideoTitle}</span>
                         <Link href={dt.PageSEO.PageURL}  passHref>
-                                        <a className="sm:mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                        <a
+                                         onClick={()=>{onClick({stream_score:resolve_stream_score(dt.VideoLandingPage.DigitalStream),event_name:"Card Click",section_name:"Latest Videos Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.LatestVideoCTA}`})}}
+                                        className="sm:mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{dt.LatestVideoCTA}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

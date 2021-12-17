@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function FeatureCard({ data, border, color, type }) {
+export default function FeatureCard({ data, border, color, type,space }) {
   return (
-    <div className="flex-col space-y-6 ">
-      <div id="tag" className={` gap-y-4 grid grid-${type}-2  gap-x-8`}>
+    <div className="flex-col " id="tag">
+      <div id="tag" className={` gap-y-${space} grid grid-${type}-2  gap-x-8`}>
         {data.map((dt) => (
           <div id="tag" key="dt">
           {dt.OpenInNewTab &&
@@ -12,10 +12,10 @@ export default function FeatureCard({ data, border, color, type }) {
             id="tag"
             href={dt.redirectURL} passHref
           >
-            <a target="_blank" className={`flex space-x-3 rounded-md ${border} hover:${color} p-4 w-full`}>
-              <div>
+            <a id="tag" target="_blank" className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
+              <div id="tag">
             {dt.Icon != undefined && (
-              <Link href={dt.redirectURL} passHref>
+              <Link id="tag" href={dt.redirectURL} passHref>
                 <a target="_blank" id="tag">
                   <Image
                     id="tag"
@@ -44,10 +44,10 @@ export default function FeatureCard({ data, border, color, type }) {
             id="tag"
             href={dt.redirectURL} passHref
           >
-            <a className={`flex space-x-3 rounded-md ${border} hover:${color} p-4 w-full`}>
-              <div>
+            <a id="tag" className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
+              <div id="tag">
             {dt.Icon != undefined && (
-              <Link href={dt.redirectURL} passHref>
+              <Link id="tag" href={dt.redirectURL} passHref>
                 <a id="tag">
                   <Image
                     id="tag"

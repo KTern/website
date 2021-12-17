@@ -11,6 +11,7 @@ import ICalendarLink from "react-icalendar-link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.DateTime);
@@ -30,6 +31,10 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
   webinar_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   return (
     <>
     	  <LogoJsonLd
@@ -150,7 +155,8 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                         Return Home
                       </a>
                     </Link> */}
-                    <ICalendarLink event={event} className="text-black ">
+                    <ICalendarLink event={event} className="text-black "  
+                    onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_data.CssStreamTag),event_name:"Button Click",section_name:"Hero Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${webinar_data.WebinarThanksPage.CTAButton.buttonTitle}`})}}>
                       <div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
                        {webinar_data.WebinarThanksPage.CTAButton.buttonTitle}
                       </div>
@@ -237,17 +243,23 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                    
                                     <div className="bg-white">
                                     <Link href={data.CTAUrl} passHref>
-                                            <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                                            <a
+                                            onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_data.CssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${data.CTAText}`})}}
+                                            className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                             
                                     <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                                     </a> 
                                     </Link>
                                     </div>
         <Link href={data.CTAUrl} passHref>
-            <a className="bg-white">
+            <a 
+            onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_data.CssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${data.CTAText}`})}}
+            className="bg-white">
                                     <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                                 <Link href={data.CTAUrl}  passHref>
-                                                <a className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                                <a
+                                                onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_data.CssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${data.CTAText}`})}}
+                                                className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                                 <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                                 <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -262,7 +274,9 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
             </div>
             <div className="text-center">
               <Link href="/resources" passHref>
-                <a className="inline-flex items-center   text-white hover:text-gray-400 group ">
+                <a 
+                onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Related Resources Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${webinar_data.ViewAllResourcesTitle}`})}}
+                className="inline-flex items-center   text-white hover:text-gray-400 group ">
                   <span className="hyperlink group-hover:text-gray-300">
                     {webinar_data.ViewAllResourcesTitle}
                   </span>

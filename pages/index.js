@@ -799,7 +799,7 @@ function Home ({ data ,h_data,f_data}) {
 									<p className="mb-5  card-subheading text-gray-800"> {} </p>
 									<Link href={data.CTASection.CTAButtonLink}>
 										<a
-											onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Footer CTA Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.CTASection.CTAButtonText}`})}}
+											onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.pageSEO.PageTitle}`,label:`${data.CTASection.CTAButtonText}`})}}
 										 target="_blank" className="mb-1 inline-block py-2 px-10  border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
 											{data.CTASection.CTAButtonText}
 										</a>

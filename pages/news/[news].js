@@ -8,11 +8,16 @@ import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 export default function News_Landing({h_data,f_data,data,n_data}){
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
     return(
         <>
          <NextSeo
@@ -135,6 +140,11 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                                 props: {
                                     className:"mb-4 text-justify"
                                 }
+                            },
+                            a:{
+                              props:{
+                                className:"text-blue-900 hover:underline "
+                              }
                             }
                       },
                     }}
@@ -172,7 +182,9 @@ export default function News_Landing({h_data,f_data,data,n_data}){
             <div className='grid md:grid-cols-4 gap-6 mb-6'>
               {n_data.map((dt) => (
              <Link key="dt" href={dt.PageSEO.PageURL} >
-             <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+             <a 
+             onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Latest News Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.PageHeader.header}`})}}  
+             className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
              <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
              <div 
                className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}

@@ -10,11 +10,16 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../../component/breadcrumb";
+import  Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   return (
     <>
     	  <LogoJsonLd
@@ -113,7 +118,9 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
               </p>
               <div className="flex flex-row">
                 <Link href={data.PageHeader.primaryCTA.linkURL}>
-                  <a className=" inline-block border-2 border-white py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+                  <a
+                    onClick={()=>{onClick({stream_score:resolve_stream_score(data.StreamName),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PageHeader.primaryCTA.buttonTitle}`})}}  
+                  className=" inline-block border-2 border-white py-3 px-10 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -158,7 +165,9 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                           className="py-2 px-5 mb-4 bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-300 hover:shadow-md"
                         >
                           <Link href={dt.redirectURL} passHref>
-                            <a className="no-underline">
+                            <a 
+                               onClick={()=>{onClick({stream_score:resolve_stream_score(data.StreamName),event_name:"Link Click",section_name:"KTern's Value Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ListText}`})}}  
+                            className="no-underline">
                               <div className="flex items-center">
                                 <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                   <Image

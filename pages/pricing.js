@@ -11,6 +11,10 @@ import { isPlainObject } from "lodash";
 import Carousel from "react-multi-carousel";
 import FAQ from "../component/faq";
 import BreadCrumb from "../component/breadcrumb";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../component/page_event";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -51,6 +55,10 @@ export default function Pricing({ data, h_data, f_data }) {
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data) {
+    Event(data);
+  }
   const [isMapsSelected, setIsMapsSelected] = useState(true);
   const [isProjectsSelected, setIsProjectsSelected] = useState(true);
   const [isProcessSelected, setIsProcessSelected] = useState(true);
@@ -96,74 +104,72 @@ export default function Pricing({ data, h_data, f_data }) {
   return (
     <>
       <NextSeo
-       	title={data.PageSEO.PageTitle}
-         description={data.PageSEO.PageDescription}
-         canonical={data.PageSEO.CanonicalTag}
-         openGraph={{
-           url: `${data.PageSEO.PageURL}`,
-           title: `${data.PageSEO.PageTitle}`,
-           description: `${data.PageSEO.PageDescription}`,
-           images: [
-             {
-               url:`${data.PageSEO.ThumbnailImageURL}`,
-               width: 1920,
-               height: 1080,
-               alt: `${data.PageSEO.PageTitle}`,
-               type: 'image/png',
-             }
-           ],
-           site_name: `${process.env.SITE_TITLE}`,
-         }}
-         twitter={{
-           handle: `${process.env.TWITTER_HANDLE}`,
-           site: `${process.env.TWITTER_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-         }}
-         facebook={{
-           handle: `${process.env.FACEBOOK_HANDLE}`,
-           site: `${process.env.FACEBOOK_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-           appId: `${process.env.FB_APPID}`,
-         }}
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.TWITTER_HANDLE}`,
+          site: `${process.env.TWITTER_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.FACEBOOK_HANDLE}`,
+          site: `${process.env.FACEBOOK_SITE}`,
+          cardType: `${process.env.CARD_TYPE}`,
+          appId: `${process.env.FB_APPID}`,
+        }}
         //  languageAlternates={[
         //    {
         //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
         //      href: `${h_data.OtherSEO.languageAlternates.href}`,
         //    },
         //  ]}
-         additionalMetaTags={[
-           {
-             property: "dc:creator",
-             content: "Nivedha",
-           },
-           {
-             name: "application-name",
-             content: "KTern.AI",
-           },
-           {
-             httpEquiv: "x-ua-compatible",
-             content: "IE=edge; chrome=1",
-           },
-         ]}
-         additionalLinkTags={[
-           {
-             rel: 'icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-           },
-           {
-             rel: 'apple-touch-icon',
-             href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-             sizes: '76x76',
-           },
-           {
-             rel: 'manifest',
-             href: '/manifest.json',
-           },
-         ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
       />
-      <BreadcrumbJsonLd
-        itemListElements={breadcrumb}
-      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
       <SocialProfileJsonLd
         type="Person"
@@ -179,11 +185,9 @@ export default function Pricing({ data, h_data, f_data }) {
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Main Pricing Section-->         */}
         <section className="overflow-hidden text-gray-700 ">
-         
           <div className="container px-5 pt-32 pb-4 mx-auto">
-            
             <div className="flex flex-col w-full mb-24 text-center">
-            <BreadCrumb color="black" b_data={breadcrumb}/>
+              <BreadCrumb color="black" b_data={breadcrumb} />
               <div className="relative mt-4 z-10 max-w-3xl px-12 mx-auto space-y-5 text-center lg:px-0">
                 <h1 className="heading">{data.PageHeader.header}</h1>
                 {/* <p className="mx-auto subheading ">Digital Transformation made simple</p> */}
@@ -229,6 +233,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     onClick={() => {
                                       setIsMapsSelected(false);
                                       handleClick("maps");
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Maps Section",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Unselect`,
+                                      });
                                     }}
                                   >
                                     Unselect
@@ -244,6 +256,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     onClick={() => {
                                       setIsMapsSelected(true);
                                       handleClick("maps");
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("maps"),
+                                        event_name: "Button Click",
+                                        section_name: "Maps Section",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Select`,
+                                      });
                                     }}
                                   >
                                     Select
@@ -270,7 +290,19 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[0].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a className="flex items-center mb-2 text-gray-600 card-subheading">
+                                <a
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score:
+                                        resolve_stream_score("maps"),
+                                      event_name: "Link Click",
+                                      section_name: "Maps-Key Features Section",
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${dt.listItem}`,
+                                    });
+                                  }}
+                                  className="flex items-center mb-2 text-gray-600 card-subheading"
+                                >
                                   {" "}
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
@@ -332,17 +364,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
 
-                          {data.PricingCard[0].Users.map((dt)=>( <p key="dt" className="flex items-center mb-2 text-gray-600 card-subheading ">
-                            <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                              <Image
-                                src="https://static.thenounproject.com/png/925249-200.png"
-                                alt=""
-                                width={150}
-                                height={150}
-                              />
-                            </span>
-                            {dt.listItem}
-                          </p>
+                          {data.PricingCard[0].Users.map((dt) => (
+                            <p
+                              key="dt"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {dt.listItem}
+                            </p>
                           ))}
                         </div>
                         <div className="w-full border-t">
@@ -352,14 +388,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
-                           {data.PricingCard[0].ExtraText}
+                            {data.PricingCard[0].ExtraText}
                           </p>
                         </div>
                       </details>
                     </div>
                   </div>
                   <div className="w-full mb-3">
-                  <div
+                    <div
                       id="projects"
                       className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
@@ -386,30 +422,24 @@ export default function Pricing({ data, h_data, f_data }) {
                                 </h2>
                               </div>
 
-                              {isProjectsSelected  && (
+                              {isProjectsSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsProjectsSelected(false);
-                                      handleClick("projects");
-                                    }}
+                                    onClick={()=>{ setIsProjectsSelected(false); handleClick("projects");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Projects Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
                                   >
                                     Unselect
                                   </button>
                                   <div id="arrow" className="mt-2"></div>
                                 </div>
                               )}
-                              {!isProjectsSelected  && (
+                              {!isProjectsSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsProjectsSelected(true);
-                                      handleClick("projects");
-                                    }}
+                                    onClick={()=>{ setIsProjectsSelected(true); handleClick("projects");onClick({stream_score:resolve_stream_score('projects'),event_name:"Button Click",section_name:"Projects Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
                                   >
                                     Select
                                   </button>
@@ -435,7 +465,18 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[1].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a className="flex items-center mb-2 text-gray-600 card-subheading">
+                                <a 
+                                 onClick={() => {
+                                  onClick({
+                                    stream_score:
+                                      resolve_stream_score("projects"),
+                                    event_name: "Link Click",
+                                    section_name: "Projects-Key Features Section",
+                                    page_source: `${data.PageSEO.PageTitle}`,
+                                    label: `${dt.listItem}`,
+                                  });
+                                }}
+                                className="flex items-center mb-2 text-gray-600 card-subheading">
                                   {" "}
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
@@ -497,17 +538,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
 
-                          {data.PricingCard[1].Users.map((dt)=>( <p key="dt" className="flex items-center mb-2 text-gray-600 card-subheading ">
-                            <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                              <Image
-                                src="https://static.thenounproject.com/png/925249-200.png"
-                                alt=""
-                                width={150}
-                                height={150}
-                              />
-                            </span>
-                            {dt.listItem}
-                          </p>
+                          {data.PricingCard[1].Users.map((dt) => (
+                            <p
+                              key="dt"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {dt.listItem}
+                            </p>
                           ))}
                         </div>
                         <div className="w-full border-t">
@@ -517,14 +562,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
-                           {data.PricingCard[1].ExtraText}
+                            {data.PricingCard[1].ExtraText}
                           </p>
                         </div>
                       </details>
                     </div>
                   </div>
                   <div className="w-full mb-3">
-                  <div
+                    <div
                       id="process"
                       className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
@@ -551,30 +596,24 @@ export default function Pricing({ data, h_data, f_data }) {
                                 </h2>
                               </div>
 
-                              {isProcessSelected  && (
+                              {isProcessSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsProcessSelected(false);
-                                      handleClick("process");
-                                    }}
+                                    onClick={()=>{ setIsProcessSelected(false); handleClick("process");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Process Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
                                   >
                                     Unselect
                                   </button>
                                   <div id="arrow" className="mt-2"></div>
                                 </div>
                               )}
-                              {!isProcessSelected  && (
+                              {!isProcessSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsProcessSelected(true);
-                                      handleClick("process");
-                                    }}
+                                    onClick={()=>{ setIsProcessSelected(true); handleClick("process");onClick({stream_score:resolve_stream_score('process'),event_name:"Button Click",section_name:"Process Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
                                   >
                                     Select
                                   </button>
@@ -600,7 +639,18 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[2].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a className="flex items-center mb-2 text-gray-600 card-subheading">
+                                <a
+                                 onClick={() => {
+                                  onClick({
+                                    stream_score:
+                                      resolve_stream_score("process"),
+                                    event_name: "Link Click",
+                                    section_name: "Process-Key Features Section",
+                                    page_source: `${data.PageSEO.PageTitle}`,
+                                    label: `${dt.listItem}`,
+                                  });
+                                }}
+                                className="flex items-center mb-2 text-gray-600 card-subheading">
                                   {" "}
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
@@ -662,17 +712,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
 
-                          {data.PricingCard[2].Users.map((dt)=>( <p key="dt" className="flex items-center mb-2 text-gray-600 card-subheading ">
-                            <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                              <Image
-                                src="https://static.thenounproject.com/png/925249-200.png"
-                                alt=""
-                                width={150}
-                                height={150}
-                              />
-                            </span>
-                            {dt.listItem}
-                          </p>
+                          {data.PricingCard[2].Users.map((dt) => (
+                            <p
+                              key="dt"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {dt.listItem}
+                            </p>
                           ))}
                         </div>
                         <div className="w-full border-t">
@@ -682,14 +736,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
-                           {data.PricingCard[2].ExtraText}
+                            {data.PricingCard[2].ExtraText}
                           </p>
                         </div>
                       </details>
                     </div>
                   </div>
                   <div className="w-full mb-3">
-                  <div
+                    <div
                       id="labs"
                       className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
@@ -716,30 +770,24 @@ export default function Pricing({ data, h_data, f_data }) {
                                 </h2>
                               </div>
 
-                              {isLabsSelected  && (
+                              {isLabsSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsLabsSelected(false);
-                                      handleClick("labs");
-                                    }}
+                                    onClick={()=>{ setIsLabsSelected(false); handleClick("labs");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Labs Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
                                   >
                                     Unselect
                                   </button>
                                   <div id="arrow" className="mt-2"></div>
                                 </div>
                               )}
-                              {!isLabsSelected  && (
+                              {!isLabsSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsLabsSelected(true);
-                                      handleClick("labs");
-                                    }}
+                                    onClick={()=>{ setIsLabsSelected(true); handleClick("labs");onClick({stream_score:resolve_stream_score('labs'),event_name:"Button Click",section_name:"Labs Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
                                   >
                                     Select
                                   </button>
@@ -765,7 +813,18 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[3].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a className="flex items-center mb-2 text-gray-600 card-subheading">
+                                <a
+                                 onClick={() => {
+                                  onClick({
+                                    stream_score:
+                                      resolve_stream_score("labs"),
+                                    event_name: "Link Click",
+                                    section_name: "Labs-Key Features Section",
+                                    page_source: `${data.PageSEO.PageTitle}`,
+                                    label: `${dt.listItem}`,
+                                  });
+                                }}
+                                className="flex items-center mb-2 text-gray-600 card-subheading">
                                   {" "}
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
@@ -827,17 +886,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
 
-                          {data.PricingCard[3].Users.map((dt)=>( <p key="dt" className="flex items-center mb-2 text-gray-600 card-subheading ">
-                            <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                              <Image
-                                src="https://static.thenounproject.com/png/925249-200.png"
-                                alt=""
-                                width={150}
-                                height={150}
-                              />
-                            </span>
-                            {dt.listItem}
-                          </p>
+                          {data.PricingCard[3].Users.map((dt) => (
+                            <p
+                              key="dt"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {dt.listItem}
+                            </p>
                           ))}
                         </div>
                         <div className="w-full border-t">
@@ -847,14 +910,14 @@ export default function Pricing({ data, h_data, f_data }) {
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
-                           {data.PricingCard[3].ExtraText}
+                            {data.PricingCard[3].ExtraText}
                           </p>
                         </div>
                       </details>
                     </div>
                   </div>
                   <div className="w-full mb-3">
-                  <div
+                    <div
                       id="mines"
                       className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
@@ -881,30 +944,24 @@ export default function Pricing({ data, h_data, f_data }) {
                                 </h2>
                               </div>
 
-                              {isMinesSelected  && (
+                              {isMinesSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsMinesSelected(false);
-                                      handleClick("mines");
-                                    }}
+                                    onClick={()=>{ setIsMinesSelected(false); handleClick("mines");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Mines Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
                                   >
                                     Unselect
                                   </button>
                                   <div id="arrow" className="mt-2"></div>
                                 </div>
                               )}
-                              {!isMinesSelected  && (
+                              {!isMinesSelected && (
                                 <div className="flex flex-arrow ">
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={() => {
-                                      setIsMinesSelected(true);
-                                      handleClick("mines");
-                                    }}
+                                    onClick={()=>{ setIsMinesSelected(true); handleClick("mines");onClick({stream_score:resolve_stream_score('mines'),event_name:"Button Click",section_name:"Mines Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
                                   >
                                     Select
                                   </button>
@@ -930,7 +987,18 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[4].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a className="flex items-center mb-2 text-gray-600 card-subheading">
+                                <a
+                                 onClick={() => {
+                                  onClick({
+                                    stream_score:
+                                      resolve_stream_score("mines"),
+                                    event_name: "Link Click",
+                                    section_name: "Mines-Key Features Section",
+                                    page_source: `${data.PageSEO.PageTitle}`,
+                                    label: `${dt.listItem}`,
+                                  });
+                                }}
+                                className="flex items-center mb-2 text-gray-600 card-subheading">
                                   {" "}
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
@@ -992,17 +1060,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
 
-                          {data.PricingCard[4].Users.map((dt)=>( <p key="dt" className="flex items-center mb-2 text-gray-600 card-subheading ">
-                            <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                              <Image
-                                src="https://static.thenounproject.com/png/925249-200.png"
-                                alt=""
-                                width={150}
-                                height={150}
-                              />
-                            </span>
-                            {dt.listItem}
-                          </p>
+                          {data.PricingCard[4].Users.map((dt) => (
+                            <p
+                              key="dt"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {dt.listItem}
+                            </p>
                           ))}
                         </div>
                         <div className="w-full border-t">
@@ -1012,7 +1084,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
-                           {data.PricingCard[4].ExtraText}
+                            {data.PricingCard[4].ExtraText}
                           </p>
                         </div>
                       </details>
@@ -1581,7 +1653,18 @@ export default function Pricing({ data, h_data, f_data }) {
 
                     <div className="w-full">
                       <Link href="/contact">
-                        <a className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border-2 border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
+                        <a
+                         onClick={() => {
+                          onClick({
+                            stream_score:
+                              resolve_stream_score("none"),
+                            event_name: "Button Click",
+                            section_name: "Pricing Contact Section",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `Contact Sales`,
+                          });
+                        }}
+                        className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border-2 border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
                           {" "}
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
@@ -1617,22 +1700,23 @@ export default function Pricing({ data, h_data, f_data }) {
               {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
             </div>
             <Carousel className="bots flex p-10  " responsive={responsive}>
-             {data.LogoSectionContent.map((dt)=>( <div key="dt" className="p-3 bots-card flex-row">
-                <Image
-                  className=" w-auto lg:w-100"
-                  src={dt.imageURL}
-                  alt={dt.imageDescription}
-                  width={dt.width}
-                  height={dt.height}
-                  layout="responsive"
-                />
-              </div>))}
-              
+              {data.LogoSectionContent.map((dt) => (
+                <div key="dt" className="p-3 bots-card flex-row">
+                  <Image
+                    className=" w-auto lg:w-100"
+                    src={dt.imageURL}
+                    alt={dt.imageDescription}
+                    width={dt.width}
+                    height={dt.height}
+                    layout="responsive"
+                  />
+                </div>
+              ))}
             </Carousel>
           </div>
           {/* <!-- /Customer logos Section --> */}
         </section>
-        <FAQ data={data.FAQSection} title={data.FAQTitle}/>
+        <FAQ data={data.FAQSection} title={data.FAQTitle} />
       </Layout>
     </>
   );

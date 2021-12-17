@@ -8,11 +8,16 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import BreadCrumb from "../../component/breadcrumb";
+import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  // Amplitude Tracking onClick
+  function onClick(data){
+    Event(data)
+    }
   const [isCustomerVisible, setIsCustomerVisible] = useState(true);
   const [isPartnerVisible, setIsPartnerVisible] = useState(false);
   return (
@@ -126,7 +131,9 @@ export default function TrustCenter({ data, h_data, f_data }) {
                     {dt.Points.map((val)=>(
                     <div key="val">
                          <Link href={val.PageUrl} passHref>
-                              <a className='w-full inline-flex items-center pb-1  text-dxaas-primary hover:border-blue-400 group '>
+                              <a 
+                              onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Trust Center Section",page_source:`${data.PageSEO.PageTitle}`,label:`${val.listItem}`})}}
+                              className='w-full inline-flex items-center pb-1  text-dxaas-primary hover:border-blue-400 group '>
                                 <span className='card-subheading hover:text-gray-400'>{val.listItem}</span>
                                 <svg
                                   className='w-5 h-6 mt-1 ml-2 hover:text-gray-400'

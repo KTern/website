@@ -4,7 +4,7 @@ export default function HeaderCard({data}) {
   // console.log(data)
   return (
     <div id="tag" className="flex space-x-3">
-      <Link href={data.redirectURL} passHref>
+      <Link id="tag" href={data.redirectURL} passHref>
       <a id="tag">
         <Image id="tag" src={data.Icon.logoUrl} width={data.Icon.width} height={data.Icon.width} alt={data.Icon.altText} />
         </a>
