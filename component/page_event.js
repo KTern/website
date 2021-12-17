@@ -1,7 +1,7 @@
-import * as Amplitude from "@amplitude/node";
+
 import amplitude from 'amplitude-js';
 const AMPLITUDE_KEY = "fc34969fbb47436070b100efc94f9efa";
-var client = Amplitude.init(AMPLITUDE_KEY);
+
 // Amplitude Js
 if(process.browser){
     // amplitude.getInstance().trackSessionEvents(true);
@@ -203,5 +203,5 @@ export function page_event(e_data) {
 
   console.log(data);
   instance.logEvent(data.event_type,data.event_properties);
-  client.flush();
+  // client.flush();
 }

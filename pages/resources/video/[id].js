@@ -12,8 +12,7 @@ import BreadCrumb from "../../../component/breadcrumb";
 import  Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 import React, { useState, useRef, useEffect } from 'react';
 
-import * as YT from "yt-player"
-import YouTubePlayer from 'youtube-player';
+
 
 export default function Video({ data,h_data,f_data,v_data }){
   // const [video,videoState]=createEvent();

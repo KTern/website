@@ -2,25 +2,6 @@
 # yarn lockfile v1
 
 
-"@amplitude/identify@^1.9.0":
-  "integrity" "sha512-nmugCZa/VqaOvtYaMwJ22el1xbYK7vPxhdPM057zD0LE4oXUC50GJ/vt65DuT+QIILFjSNOteRK4JUu/1C/cjQ=="
-  "resolved" "https://registry.npmjs.org/@amplitude/identify/-/identify-1.9.0.tgz"
-  "version" "1.9.0"
-  dependencies:
-    "@amplitude/types" "^1.9.0"
-    "@amplitude/utils" "^1.9.0"
-    "tslib" "^1.9.3"
-
-"@amplitude/node@1.9.0":
-  "integrity" "sha512-ES7PHO47X0EyYSFcZRlRSmdXRZiEp5IK2QnLnWjVtDBDWapyTKE2sFFzKrRoeY3SFk1HnxPrRtMvtCBXF2qMjA=="
-  "resolved" "https://registry.npmjs.org/@amplitude/node/-/node-1.9.0.tgz"
-  "version" "1.9.0"
-  dependencies:
-    "@amplitude/identify" "^1.9.0"
-    "@amplitude/types" "^1.9.0"
-    "@amplitude/utils" "^1.9.0"
-    "tslib" "^1.9.3"
-
 "@amplitude/types@^1.9.0":
   "integrity" "sha512-/uVOkAla90Kt2OtwtwZ1ENWkzJLBg6p6tYInr32qRgSHJSsoqpGBf6Oc/u1mRZyyVB2Ne/JIo/FYTFHLv1kt6A=="
   "resolved" "https://registry.npmjs.org/@amplitude/types/-/types-1.9.0.tgz"
@@ -31,7 +12,7 @@
   "resolved" "https://registry.npmjs.org/@amplitude/ua-parser-js/-/ua-parser-js-0.7.26.tgz"
   "version" "0.7.26"
 
-"@amplitude/utils@^1.0.5", "@amplitude/utils@^1.9.0":
+"@amplitude/utils@^1.0.5":
   "integrity" "sha512-RSh3ieP2+X37ZkpEN0MpJ6XxsQ1AbxVpbGU1R5wbrIq3Wlg3uv1q/JJddfyaFdoM55CsW4SrzqiwAD9T2WAI4w=="
   "resolved" "https://registry.npmjs.org/@amplitude/utils/-/utils-1.9.0.tgz"
   "version" "1.9.0"
@@ -1732,13 +1713,6 @@
   "resolved" "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz"
   "version" "3.0.1"
 
-"debug@^2.6.6":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
-
 "debug@^2.6.9":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -3183,16 +3157,6 @@
   "integrity" "sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA="
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
   "version" "1.1.6"
-
-"load-script@^1.0.0":
-  "integrity" "sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ="
-  "resolved" "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz"
-  "version" "1.0.0"
-
-"load-script2@^2.0.1":
-  "integrity" "sha512-pyuw/AR+ycZkRKgkMyXOIf/o2OnRQPc9grjZ04wVOeoJ7SqX97WlcZahl+3/r5qi09L/5d0iCVZ0q4OqNT/v0Q=="
-  "resolved" "https://registry.npmjs.org/load-script2/-/load-script2-2.0.6.tgz"
-  "version" "2.0.6"
 
 "loader-utils@1.2.3":
   "integrity" "sha512-fkpz8ejdnEMG3s37wGL07iSBDg99O9D5yflE9RGNH3hRdx9SOwYfnGYdZOUIZitN8E+E2vkq3MUMYMvPYl5ZZA=="
@@ -5001,11 +4965,6 @@
   dependencies:
     "is-arrayish" "^0.3.1"
 
-"sister@^3.0.0":
-  "integrity" "sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA=="
-  "resolved" "https://registry.npmjs.org/sister/-/sister-3.0.2.tgz"
-  "version" "3.0.2"
-
 "slash@^3.0.0":
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
   "resolved" "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
@@ -5806,22 +5765,6 @@
   "integrity" "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   "version" "0.1.0"
-
-"youtube-player@^5.5.2":
-  "integrity" "sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ=="
-  "resolved" "https://registry.npmjs.org/youtube-player/-/youtube-player-5.5.2.tgz"
-  "version" "5.5.2"
-  dependencies:
-    "debug" "^2.6.6"
-    "load-script" "^1.0.0"
-    "sister" "^3.0.0"
-
-"yt-player@^3.5.0":
-  "integrity" "sha512-nv7Oa5knhwI/hIb1k7FDgAYlQKmAi7xQ6YA01g+JVhBhz/n6i7OytNLsKtT/YqTsnbopGlUitdIwvaV7kXH0Ug=="
-  "resolved" "https://registry.npmjs.org/yt-player/-/yt-player-3.5.0.tgz"
-  "version" "3.5.0"
-  dependencies:
-    "load-script2" "^2.0.1"
 
 "zwitch@^2.0.0":
   "integrity" "sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA=="
