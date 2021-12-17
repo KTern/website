@@ -349,9 +349,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           <h2 className='section-heading text-center text-white mt-10 mb-3'>{stream_data.WhySectionTitle}</h2>
           <p className='section-subheading text-center text-white'>{stream_data.WhySectionDescription}</p>
           <div className='flex justify-center items-center   mx-auto space-x-10 '>
-            <div className='flex flex-wrap justify-center items-center'>
+            <div className='grid md:grid-cols-4 gap-3 justify-center '>
              {stream_data.WhyStreamPoints.map((dt)=>(
-                <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
+                <div key='dt' className='p-6 w-full  md:mb-8 md:mt-8 justify-center items-center '>
                   <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
                     <Image src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height} className=" rounded-full " />
                   </div>

@@ -355,10 +355,10 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
         <section className='pb-10 pt-5 bg-black'>
           <div className='container px-4 mx-auto'>
             <div className='p-16 bg-black'>
-              <div className='flex flex-wrap items-center -mx-10 -mb-10'>
+              <div className='grid md:grid-cols-4 gap-3 -mx-10 -mb-10'>
                 {feature_data.Statistics.map((dt) => (
-                  <div key = "dt" className='w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center'>
-                    <span>
+                  <div key = "dt" className='w-full  px-10 mb-10 text-center'>
+                    <span className="h-20">
                       <svg
                         className='mx-auto mb-6 text-blue-800 h-8 w-8'
                         viewBox='0 0 32 32'
@@ -368,7 +368,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                         <path d='M16 -0.0533447L0 15.7333L16 31.52L32 15.7333L16 -0.0533447ZM3.7708 15.7333L16 3.66718L21.172 8.77022L19.2864 10.6307L16 7.38888L7.5428 15.7333L10.828 18.9759L8.9424 20.8364L3.7708 15.7333ZM20.6876 15.7333L16 20.3596L11.3136 15.7333L16 11.1094L20.6876 15.7333ZM10.828 22.6968L12.7136 20.8364L16 24.0778L24.4584 15.7333L21.172 12.4907L23.0576 10.6303L28.2292 15.7333L16 27.7995L10.828 22.6968Z'></path>
                       </svg>
                     </span>
-                    <h3 className='mb-3   card-heading text-white'>{dt.CardTitle}</h3>
+                    <div  className=' h-20  card-heading text-white'>{dt.CardTitle}</div>
                     <p className=' card-subheading text-gray-200'>{dt.CardDescription}</p>
                   </div>
                 ))}
@@ -408,6 +408,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                               <span className=" bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                           <Link href={data.CTAUrl}  passHref>
                                           <a 
+                                          target="_blank"
                                           onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
                                           className="mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                           <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
@@ -419,11 +420,11 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                                       </a>
                               </Link>
                               </div>}
-                              {!data.OpenNewTab && <div  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${feature_data.cssStreamTag}-primary `}>   
+                              {!data.OpenNewTab && <div  className={` relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${feature_data.cssStreamTag}-primary `}>   
                               <div className="bg-white">
                               <Link href={data.CTAUrl} passHref>
                                       <a
-                                      onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+                                      	onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
                                        className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                       
                               <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
@@ -431,15 +432,15 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                               </Link>
                               </div>
                 <Link href={data.CTAUrl} passHref>
-                <a 
-                onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
-                className="bg-white">
-                              <span className="  bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
+                <a
+                onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Link Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
+              className="bg-white">
+                              <span className=" bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                           <Link href={data.CTAUrl}  passHref>
-                                          <a
+                                          <a 
                                           onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
-                                           className="flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                                          <span className="hyperlink group-hover:text-gray-300 mb-4">{data.CTAText}</span>
+                                          className="mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                          <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                           <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                           </svg>

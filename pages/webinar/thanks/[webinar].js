@@ -171,9 +171,9 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         {webinar_data.IsOnDemandWebinar && (
           <div className={`relative py-24 text-center flex-col   overflow-hidden justify-center text-white  bg-${webinar_data.CssStreamTag}-secondary`}>
            <div className="mx-10 sm:mx-4 mb-4"><BreadCrumb  color="black" b_data={breadcrumb}/></div>
-          <section className="relative  text-center md:flex overflow-hidden justify-center text-black  ">
+          <section className="relative  text-center md:flex overflow-hidden justify-center items-center text-black  ">
  {/* <BreadCrumb color="black" b_data={breadcrumb}/> */}
-            <div className="md:w-1/2 w-full">
+            <div className="md:w-1/2 w-full ">
             <h1 className="heading mb-5">{webinar_data.OnDemandWebinar.PageHeader}</h1>
             <p className="subheading mb-10">
              {webinar_data.OnDemandWebinar.PageSubHeader}

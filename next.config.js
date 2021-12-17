@@ -37,7 +37,8 @@ module.exports = {
       "ktern.com",
       "w3.org",
       "www.w3.org",
-      "stackoverflow.com"
+      "stackoverflow.com",
+      "web.ktern.com"
     ],
   },
 

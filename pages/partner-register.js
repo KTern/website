@@ -117,7 +117,7 @@ import BreadCrumb from "../component/breadcrumb";
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-2/5 py-12 p-4 bg-white rounded-2xl md:shadow-xl z-20">
             <div >
               <div className="ml-4"><BreadCrumb color="black" b_data={breadcrumb}/></div>
-              <h1 className="mt-4  text-center mb-4 cursor-pointer section-heading">
+              <h1 className="mt-4  text-center mb-4 section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
               <div
@@ -147,7 +147,7 @@ import BreadCrumb from "../component/breadcrumb";
                   </div>
                 </div>
               </div>
-              <p className=" text-center  mb-8  section-subheading text-gray-700 cursor-pointer">
+              <p className=" text-center  mb-8  section-subheading text-gray-700 ">
                 {data.PartnerRegistrationForm.FormSubTitle}
               </p>
             </div>

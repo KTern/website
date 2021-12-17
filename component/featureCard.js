@@ -29,8 +29,8 @@ export default function FeatureCard({ data, border, color, type,space }) {
             )}
             <Link id="tag" href={dt.redirectURL}>
               <a target="_blank" id="tag">
-                <p id="tag">{dt.Title}</p>
-                <p id="tag" className="text-gray-400">
+                <p id="tag" className="navbar-h">{dt.Title}</p>
+                <p id="tag" className="navbar-s text-gray-400">
                   {dt.Description}
                 </p>
               </a>
@@ -61,8 +61,8 @@ export default function FeatureCard({ data, border, color, type,space }) {
             )}
             <Link id="tag" href={dt.redirectURL}>
               <a id="tag">
-                <p id="tag">{dt.Title}</p>
-                <p id="tag" className="text-gray-400">
+                <p id="tag" className="navbar-h">{dt.Title}</p>
+                <p id="tag" className="navbar-s text-gray-400">
                   {dt.Description}
                 </p>
               </a>
