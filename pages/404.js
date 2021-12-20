@@ -13,11 +13,11 @@ function onClick(data){
   return (
     <>
     	  <LogoJsonLd
-        logo={process.env.LOGO}
-        url={process.env.URL}
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
       />
       <NextSeo
-        title="Simple Usage Example"
+        title="404"
         description="A short description goes here."
         canonical="https://www.canonical.ie/"
         openGraph={{
@@ -45,15 +45,15 @@ function onClick(data){
           site_name: "KTern.AI"
         }}
       twitter={{
-					handle: `${process.env.TWITTER_HANDLE}`,
-					site: `${process.env.TWITTER_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
+					handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+					site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
 				}}
 				facebook={{
-					handle: `${process.env.FACEBOOK_HANDLE}`,
-					site: `${process.env.FACEBOOK_SITE}`,
-					cardType: `${process.env.CARD_TYPE}`,
-					appId: `${process.env.FB_APPID}`,
+					handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+					site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+					appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
 				}}
         languageAlternates={[
           {
@@ -91,30 +91,9 @@ function onClick(data){
           },
         ]}
       />
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "Books",
-            item: "https://example.com/books",
-          },
-          {
-            position: 2,
-            name: "Authors",
-            item: "https://example.com/books/authors",
-          },
-          {
-            position: 3,
-            name: "Ann Leckie",
-            item: "https://example.com/books/authors/annleckie",
-          },
-          {
-            position: 4,
-            name: "Ancillary Justice",
-            item: "https://example.com/books/authors/ancillaryjustice",
-          },
-        ]}
-      />
+      {/* <BreadcrumbJsonLd
+        itemListElements={}
+      /> */}
     
       
       <section className="relative py-10 2xl:py-20  overflow-hidden h-screen background " >

@@ -118,8 +118,8 @@ widgetPublicKey: "fDEEdt2w4fHwLQmNSisdwUnC",
   
 
   <LogoJsonLd
-        logo={process.env.URL}
-        url={process.env.URL}
+        logo={process.env.NEXT_PUBLIC_URL}
+        url={process.env.NEXT_PUBLIC_URL}
       />
 
         </Head>

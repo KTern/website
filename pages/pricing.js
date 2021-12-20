@@ -101,6 +101,10 @@ export default function Pricing({ data, h_data, f_data }) {
         document.getElementById("mines").style.borderColor = "gray";
     }
   }, []);
+  let faq=[]
+  data.FAQSection.map((dt)=>{
+    faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
+  })
   return (
     <>
       <NextSeo
@@ -120,18 +124,18 @@ export default function Pricing({ data, h_data, f_data }) {
               type: "image/png",
             },
           ],
-          site_name: `${process.env.SITE_TITLE}`,
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
         }}
         twitter={{
-          handle: `${process.env.TWITTER_HANDLE}`,
-          site: `${process.env.TWITTER_SITE}`,
-          cardType: `${process.env.CARD_TYPE}`,
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
         }}
         facebook={{
-          handle: `${process.env.FACEBOOK_HANDLE}`,
-          site: `${process.env.FACEBOOK_SITE}`,
-          cardType: `${process.env.CARD_TYPE}`,
-          appId: `${process.env.FB_APPID}`,
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
         }}
         //  languageAlternates={[
         //    {
@@ -170,17 +174,12 @@ export default function Pricing({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
+      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
       <SocialProfileJsonLd
         type="Person"
-        name="your name"
-        url="http://www.your-site.com"
-        sameAs={[
-          "http://www.facebook.com/your-profile",
-          "http://instagram.com/yourProfile",
-          "http://www.linkedin.com/in/yourprofile",
-          "http://plus.google.com/your_profile",
-        ]}
+        name="KTern.AI"
+        url="https://ktern.com"
+        sameAs={process.env.NEXT_PUBLIC_SOCIALPROFILEJSON.split(',')}
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Main Pricing Section-->         */}

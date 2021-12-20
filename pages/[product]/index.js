@@ -1,3 +1,4 @@
+import { FAQPageJsonLd } from "next-seo";
 import Layout from "../../component/Layout";
 import Carousel from "react-multi-carousel";
 import { NextSeo } from "next-seo";
@@ -79,10 +80,15 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
   stream_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
+  let faq=[]
+  stream_data.FAQSection.map((dt)=>{
+  faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
+})
   // Amplitude Tracking onClick
   function onClick(data){
     Event(data)
     }
+    
   return (
     <>
       <NextSeo
@@ -102,18 +108,18 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
              type: 'image/png',
            }
          ],
-         site_name: `${process.env.SITE_TITLE}`,
+         site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
        }}
        twitter={{
-         handle: `${process.env.TWITTER_HANDLE}`,
-         site: `${process.env.TWITTER_SITE}`,
-         cardType: `${process.env.CARD_TYPE}`,
+         handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+         site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+         cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
        }}
        facebook={{
-         handle: `${process.env.FACEBOOK_HANDLE}`,
-         site: `${process.env.FACEBOOK_SITE}`,
-         cardType: `${process.env.CARD_TYPE}`,
-         appId: `${process.env.FB_APPID}`,
+         handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+         site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+         cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+         appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
        }}
       //  languageAlternates={[
       //    {
@@ -154,9 +160,11 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
       <BreadcrumbJsonLd
         itemListElements={breadcrumb}
       />
-     
+      <FAQPageJsonLd
+        mainEntity={faq}
+      />
       
-      <ProductJsonLd
+      {/* <ProductJsonLd
         productName='Executive Anvil'
         images={[
           "https://example.com/photos/1x1/photo.jpg",
@@ -224,8 +232,8 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           },
         ]}
         mpn='925872'
-      />
-      <VideoJsonLd
+      /> */}
+      {/* <VideoJsonLd
         name='How to make a Party Coffee Cake'
         description='This is how you make a Party Coffee Cake.'
         contentUrl='http://www.example.com/video123.mp4'
@@ -250,15 +258,18 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           endDate: "2020-10-24T14:37:14+00:00",
         }}
         regionsAllowed={["IT", "NL"]}
-      />
-      <SoftwareAppJsonLd
-        name='Angry Birds'
-        price='1.00'
-        priceCurrency='USD'
-        aggregateRating={{ ratingValue: "4.6", reviewCount: "8864" }}
-        operatingSystem='ANDROID'
-        applicationCategory='GameApplication'
-      />
+      /> */}
+    <SoftwareAppJsonLd
+				name= {process.env.NEXT_PUBLIC_NAME}
+				price="0"
+				priceCurrency="USD"
+				aggregateRating={{
+					ratingValue: '4.7',
+					reviewCount: '17',
+				}}
+				operatingSystem="Windows 10, Windows 11"
+				applicationCategory="BusinessApplication"
+			/>
       <Layout h_data={h_data} f_data={f_data}>
         {/* Hero Section */}
         <section className='relative md:py-10 pb-auto pb-72'>

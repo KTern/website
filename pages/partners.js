@@ -42,9 +42,13 @@ export default function Partners({ data, h_data, f_data }) {
   function onClick(data) {
     Event(data);
   }
+  let faq=[]
+  data.FAQList.map((dt)=>{
+    faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
+  })
   return (
     <>
-      <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
+      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
       <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}
@@ -62,18 +66,18 @@ export default function Partners({ data, h_data, f_data }) {
               type: "image/png",
             },
           ],
-          site_name: `${process.env.SITE_TITLE}`,
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
         }}
         twitter={{
-          handle: `${process.env.TWITTER_HANDLE}`,
-          site: `${process.env.TWITTER_SITE}`,
-          cardType: `${process.env.CARD_TYPE}`,
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
         }}
         facebook={{
-          handle: `${process.env.FACEBOOK_HANDLE}`,
-          site: `${process.env.FACEBOOK_SITE}`,
-          cardType: `${process.env.CARD_TYPE}`,
-          appId: `${process.env.FB_APPID}`,
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
         }}
         //  languageAlternates={[
         //    {
@@ -114,16 +118,7 @@ export default function Partners({ data, h_data, f_data }) {
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
 
       <FAQPageJsonLd
-        mainEntity={[
-          {
-            questionName: "How long is the delivery time?",
-            acceptedAnswerText: "3-5 business days.",
-          },
-          {
-            questionName: "Where can I find information about product recalls?",
-            acceptedAnswerText: "Read more on under information.",
-          },
-        ]}
+        mainEntity={faq}
       />
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Header Section --> */}

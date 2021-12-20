@@ -1,6 +1,6 @@
 
 import amplitude from 'amplitude-js';
-const AMPLITUDE_KEY = "fc34969fbb47436070b100efc94f9efa";
+const AMPLITUDE_KEY = "260101b9254c3fd23951dd24c0e89b95";
 
 // Amplitude Js
 if(process.browser){

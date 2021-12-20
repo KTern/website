@@ -55,7 +55,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   }
   return (
     <>
-      <LogoJsonLd logo={process.env.LOGO} url={process.env.URL} />
+      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
       <NextSeo
        	title={webinar_Data.PageSEO.PageTitle}
          description={webinar_Data.PageSEO.PageDescription}
@@ -73,18 +73,18 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                type: 'image/png',
              }
            ],
-           site_name: `${process.env.SITE_TITLE}`,
+           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
          }}
          twitter={{
-           handle: `${process.env.TWITTER_HANDLE}`,
-           site: `${process.env.TWITTER_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
+           handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+           site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+           cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
          }}
          facebook={{
-           handle: `${process.env.FACEBOOK_HANDLE}`,
-           site: `${process.env.FACEBOOK_SITE}`,
-           cardType: `${process.env.CARD_TYPE}`,
-           appId: `${process.env.FB_APPID}`,
+           handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+           site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+           cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+           appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
          }}
         //  languageAlternates={[
         //    {
@@ -126,7 +126,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
         itemListElements={breadcrumb}
       />
 
-      <EventJsonLd
+      {/* <EventJsonLd
         name="My Event"
         startDate="2020-01-23T00:00:00.000Z"
         endDate="2020-01-24T00:00:00.000Z"
@@ -144,7 +144,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
         url="https://example.com/my-event"
         images={["https://example.com/photos/photo.jpg"]}
         description="My event @ my place"
-      />
+      /> */}
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative sm:mb-20 ">
           <div

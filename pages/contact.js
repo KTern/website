@@ -59,18 +59,18 @@ import BreadCrumb from "../component/breadcrumb";
                 type: 'image/png',
               }
             ],
-            site_name: `${process.env.SITE_TITLE}`,
+            site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
           }}
           twitter={{
-            handle: `${process.env.TWITTER_HANDLE}`,
-            site: `${process.env.TWITTER_SITE}`,
-            cardType: `${process.env.CARD_TYPE}`,
+            handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+            site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
           }}
           facebook={{
-            handle: `${process.env.FACEBOOK_HANDLE}`,
-            site: `${process.env.FACEBOOK_SITE}`,
-            cardType: `${process.env.CARD_TYPE}`,
-            appId: `${process.env.FB_APPID}`,
+            handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+            site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+            appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
           }}
           // languageAlternates={[
           //   {
@@ -110,12 +110,12 @@ import BreadCrumb from "../component/breadcrumb";
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd
-        logo={process.env.LOGO}
-        url={process.env.URL}
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
       />
       <CorporateContactJsonLd
-        url={process.env.url}
-        logo={process.env.logo}
+        url={process.env.NEXT_PUBLIC_url}
+        logo={process.env.NEXT_PUBLIC_logo}
         contactPoint={[
           {
             telephone: "+1-401-555-1212",

@@ -19,7 +19,10 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
   feature_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
-
+let faq=[]
+feature_data.FAQ.map((dt)=>{
+  faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
+})
   // Amplitude Tracking onClick
   function onClick(data){
     Event(data)
@@ -27,8 +30,8 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
   return (
     <>
     	  <LogoJsonLd
-        logo={process.env.LOGO}
-        url={process.env.URL}
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
       />
       <NextSeo
         	title={feature_data.PageSEO.PageTitle}
@@ -47,18 +50,18 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
                 type: 'image/png',
               }
             ],
-            site_name: `${process.env.SITE_TITLE}`,
+            site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
           }}
           twitter={{
-            handle: `${process.env.TWITTER_HANDLE}`,
-            site: `${process.env.TWITTER_SITE}`,
-            cardType: `${process.env.CARD_TYPE}`,
+            handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+            site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
           }}
           facebook={{
-            handle: `${process.env.FACEBOOK_HANDLE}`,
-            site: `${process.env.FACEBOOK_SITE}`,
-            cardType: `${process.env.CARD_TYPE}`,
-            appId: `${process.env.FB_APPID}`,
+            handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+            site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+            appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
           }}
           // languageAlternates={[
           //   {
@@ -102,16 +105,7 @@ export default function Feature_Landing({ feature_data ,h_data,f_data}) {
      
       
       <FAQPageJsonLd
-        mainEntity={[
-          {
-            questionName: "How long is the delivery time?",
-            acceptedAnswerText: "3-5 business days.",
-          },
-          {
-            questionName: "Where can I find information about product recalls?",
-            acceptedAnswerText: "Read more on under information.",
-          },
-        ]}
+        mainEntity={faq}
       />
       <Head>
         <script async src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
