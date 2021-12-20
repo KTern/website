@@ -104,12 +104,7 @@ export default function Video({ data,h_data,f_data,v_data }){
         logo={process.env.NEXT_PUBLIC_LOGO}
         url={process.env.NEXT_PUBLIC_URL}
       />
- {/* <SocialProfileJsonLd
-        type="Person"
-        name="KTern.AI"
-        url="https://ktern.com"
-        sameAs={process.env.NEXT_PUBLIC_SOCIALPROFILEJSON.split(',')}
-      /> */}
+ 
      {/* <VideoJsonLd
         name='How to make a Party Coffee Cake'
         description='This is how you make a Party Coffee Cake.'

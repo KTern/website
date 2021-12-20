@@ -100,12 +100,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-      {/* <SocialProfileJsonLd
-        type="Person"
-        name="KTern.AI"
-        url="https://ktern.com"
-        sameAs={process.env.NEXT_PUBLIC_SOCIALPROFILEJSON.split(',')}
-      /> */}
+     
       <Head>
         <script
           type="text/javascript"
