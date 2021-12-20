@@ -95,12 +95,12 @@ const Feature_index = ({ data, h_data, f_data }) => {
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-      <SocialProfileJsonLd
+      {/* <SocialProfileJsonLd
         type="Person"
         name="KTern.AI"
         url="https://ktern.com"
         sameAs={process.env.NEXT_PUBLIC_SOCIALPROFILEJSON.split(',')}
-      />
+      /> */}
       <Layout h_data={h_data} f_data={f_data}>
         {/* HEader */}
         <section id="features" className="w-full py-32 background">

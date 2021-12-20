@@ -266,7 +266,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 				aggregateRating={{
 					ratingValue: '4.7',
 					reviewCount: '17',
-				}}
+			}}
 				operatingSystem="Windows 10, Windows 11"
 				applicationCategory="BusinessApplication"
 			/>
