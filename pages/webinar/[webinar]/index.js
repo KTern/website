@@ -542,15 +542,19 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
 //     }
 // }
 // Fetch necessary data for the blog post using params.webinar
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async (ctx) => {
   // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(
-    `https://api.ktern.com/webinars?slug=${params.webinar}`,
+    `https://api.ktern.com/webinars?slug=${ctx.params.webinar}`,
     { method: "get" }
   );
   const data = await res.json();
-  // console.log("data", data[0]);
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });

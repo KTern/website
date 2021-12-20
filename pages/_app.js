@@ -43,7 +43,14 @@ function MyApp ({ Component, pageProps }) {
 
       </Head>
     
-     
+      <SocialProfileJsonLd
+        type="Person"
+        name="KTern.AI"
+        url="https://ktern.com"
+        sameAs={process.env.NEXT_PUBLIC_SOCIALPROFILEJSON.split(',')}
+      />
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHZVHTK"
+height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
       <Component {...pageProps} />
     
       </>

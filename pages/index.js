@@ -78,7 +78,7 @@ function Home ({ data ,h_data,f_data}) {
 	data.pageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
 	});
-	const srouter = useRouter()
+	const router = useRouter()
 	function onClick(data){
 	Event(data)
 	}

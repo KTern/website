@@ -246,14 +246,18 @@ export default function TrustCenter({ data, h_data, f_data }) {
 //     }
 // }
 // Fetch necessary data for the blog post using params.trust_center
-export const getServerSideProps = async ({ params }) => {
-  const id = params.trust_center;
+export const getServerSideProps = async (ctx) => {
+  const id = ctx.params.trust_center;
   //    fetch strapi data
   const res = await fetch(`https://api.ktern.com/trustcenters?slug=${id}`, {
     method: "get",
   });
   const data = await res.json();
-  // console.log('data', data);
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });

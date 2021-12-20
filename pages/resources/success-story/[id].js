@@ -305,14 +305,18 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
 //     }
 // }
 // Fetch necessary data for the blog post using params.id
-export const getServerSideProps = async (context) => {
-  const id = context.params.id;
+export const getServerSideProps = async (ctx) => {
+  const id = ctx.params.id;
   // strapi data to be fetched
   const res = await fetch(
     `https://api.ktern.com/customer-success-stories?slug=${id}`
   );
   const data = await res.json();
-  // console.log(data[0]);
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});

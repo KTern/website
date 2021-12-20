@@ -209,22 +209,28 @@ export default function News_Landing({h_data,f_data,data,n_data}){
         </>
     )
 }
-export const getServerSideProps = async ({params}) => {
+export const getServerSideProps = async (ctx) => {
         //fetch strapi data
-        const res = await fetch(`https://api.ktern.com/news-center-pages?slug=${params.news}`, {
+        const res = await fetch(`https://api.ktern.com/news-center-pages?slug=${ctx.params.news}`, {
             method: 'get',
         });
         const data = await res.json();
+        if(data[0]==undefined){
+          ctx.res.setHeader('Location', '/404');
+          ctx.res.statusCode = 302;
+          ctx.res.end();
+        }
         // console.log('data1', data);
           const res1 = await fetch('https://api.ktern.com/header', {
             method: 'get',
         });
+
         const h_data = await res1.json();
         const res2 = await fetch('https://api.ktern.com/footer', {
             method: 'get',
         });
         const f_data = await res2.json();
-        const news=await fetch(`https://api.ktern.com/news-center-pages?_sort=updatedAt:desc&slug_nin=${params.news}&_limit=4`)
+        const news=await fetch(`https://api.ktern.com/news-center-pages?_sort=updatedAt:desc&slug_nin=${ctx.params.news}&_limit=4`)
         const n_data=await news.json()
         // console.log(n_data)
         return {

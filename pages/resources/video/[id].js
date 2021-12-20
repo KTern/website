@@ -231,13 +231,17 @@ export default function Video({ data,h_data,f_data,v_data }){
     )
 }
 
-export const getServerSideProps = async ({params}) => {
+export const getServerSideProps = async (ctx) => {
     // strapi dt to be acquired
-    const res = await fetch(`https://api.ktern.com/videos?slug=${params.id}`, {
+    const res = await fetch(`https://api.ktern.com/videos?slug=${ctx.params.id}`, {
       method: 'get',
   });
     const data = await res.json();
-    // console.log(data)
+    if(data[0]==undefined){
+      ctx.res.setHeader('Location', '/404');
+      ctx.res.statusCode = 302;
+      ctx.res.end();
+    }
         const res1 = await fetch('https://api.ktern.com/header', {
           method: 'get',
       });

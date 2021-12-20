@@ -10,11 +10,18 @@ import { SocialProfileJsonLd } from "next-seo";
 import FAQ from "../../component/faq";
 import BreadCrumb from "../../component/breadcrumb";
 import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
+import router, { useRouter } from "next/router";
+import { useEffect } from "react";
 // import Breadcrumbs from 'nextjs-breadcrumbs';
 {
   /* <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script> */
 }
 export default function Feature_Landing({ feature_data ,h_data,f_data}) {
+const router=useRouter();
+useEffect(()=>{
+if(feature_data==undefined)
+  router.push('/404')
+},[])
   let breadcrumb = [];
   feature_data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -527,9 +534,10 @@ feature_data.FAQ.map((dt)=>{
 }
 
 
-export const getServerSideProps = async ({ params }) => {
-  const streamslug = params.product;
-  const featureslug = params.feature;
+export const getServerSideProps = async (ctx) => {
+ 
+  const streamslug = ctx.params.product;
+  const featureslug = ctx.params.feature;
 
   const res = await fetch(`https://api.ktern.com/features?streamslug=${streamslug}&featureslug=${featureslug}`, {
     method: "get",
@@ -537,6 +545,11 @@ export const getServerSideProps = async ({ params }) => {
 
   const data = await res.json();
   // console.log(data[0]);
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
 	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
