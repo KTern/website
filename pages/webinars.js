@@ -30,7 +30,7 @@ export default function Webinar({ data, h_data, f_data }) {
   // console.log(data.StreamsFilter)
 
   let streamOptions = [];
-  // let topicOptions = [];
+  let topicOptions = [];
   // let resourceTypeOptions = [];
   let roleOptions = [];
   function filterData(data) {
@@ -48,7 +48,7 @@ export default function Webinar({ data, h_data, f_data }) {
     return filter;
   }
   streamOptions = filterData(data.DigitalStreamsFilter);
-  // topicOptions = filterData(data.TopicsFilter);
+  topicOptions = filterData(data.TopicsFilter);
   // resourceTypeOptions = filterData(data.ResourceTypeFilters);
   roleOptions = filterData(data.RolesFilter);
   const [ResourceList, setResourceList] = useState(data.WebinarList);
@@ -59,13 +59,12 @@ export default function Webinar({ data, h_data, f_data }) {
     let filterArray = {};
     if (document.getElementById("stream").value != "allStreams")
       filterArray.RelatedStream = document.getElementById("stream").value;
-    //   if (document.getElementById('type').value!= 'allTypes')
+    // if (document.getElementById('type').value!= 'allTypes')
     //     filterArray.ResourceType = document.getElementById('type').value
-    //   if (document.getElementById('topic').value!= 'allTopics')
-    //     filterArray.RelatedTopic = document.getElementById('topic').value
-    //   if (document.getElementById('role').value!= 'allRoles')
-    //       filterArray.RelatedRole=document.getElementById('role').value
-
+    if (document.getElementById('topic').value!= 'allTopics')
+        filterArray.RelatedTopic = document.getElementById('topic').value
+    if (document.getElementById('role').value!= 'allRoles')
+      filterArray.RelatedRole=document.getElementById('role').value;
     // console.log(filterArray);
 
     filter = _.filter(data.WebinarList, filterArray);
@@ -211,7 +210,7 @@ export default function Webinar({ data, h_data, f_data }) {
               </div>
               <div className="md:w-1/2 relative flex items-center md:w-1/2  h-auto sm:px-4 py-5 md:mx-auto overflow-hidden    via-transparent">
                 {/* <!-- Slide Page 1 --> */}
-                <div className="flex md:px-2 md:space-x-10 transition w-full duration-500 ease-out  xl:pl-6 h-94">
+                <div className="flex md:px-2 md:space-x-10transition w-full duration-500 ease-out  xl:pl-6 h-94">
                   {/* <!-- story 1 --> */}
                   <Link href={data.FeaturedWebinar.WebinarURL}>
                     <a
@@ -358,7 +357,7 @@ export default function Webinar({ data, h_data, f_data }) {
             <h1 className="w-1/6 uppercase text-white navbar-h ">Filter By:</h1>
             <form
               onChange={handleChange}
-              className="w-5.5/6 grid grid-cols-4 gap-7"
+              className="max-w-max grid  grid-cols-4 gap-7"
             >
               <select
                 name="stream"
@@ -398,6 +397,30 @@ export default function Webinar({ data, h_data, f_data }) {
                 }}
               >
                 {roleOptions.map((item) => (
+                  <option
+                    id="option"
+                    style={{ appearance: "none" }}
+                    onMouseEnter={colorChange}
+                    key="item"
+                    value={item.value}
+                  >
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+              <select
+                name="topic"
+                id="topic"
+                className="p-2 pr-4 text-black bg-white  w-90"
+                style={{
+                  webkitAppearance: "none",
+                  mozAppearance: "none",
+                  appearance: "none",
+                  background:
+                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                }}
+              >
+                {topicOptions.map((item) => (
                   <option
                     id="option"
                     style={{ appearance: "none" }}
