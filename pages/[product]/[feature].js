@@ -142,7 +142,7 @@ feature_data.FAQ.map((dt)=>{
                   <a 
                   	onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.PageHeader.secondaryCTA.buttonTitle}`})}}      
                   className='flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block'>
-                    <Image className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} />
+                    {/* <Image className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} /> */}
                     <span className='button'>&nbsp;&nbsp;{feature_data.PageHeader.secondaryCTA.buttonTitle}</span>
                   </a>
                 </Link>

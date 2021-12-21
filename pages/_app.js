@@ -29,7 +29,7 @@ function MyApp ({ Component, pageProps }) {
     <>
       <Head>
         {/* Sharethis */}
-        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
+        {/* <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script> */}
         {/*ShareThis  */}
         <link rel="shortcut icon"  href="https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />

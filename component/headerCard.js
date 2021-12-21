@@ -12,7 +12,7 @@ export default function HeaderCard({data}) {
       <Link id="tag" href={data.redirectURL}>
       <a id="tag">
         <p id="tag" className="navbar-h">{data.StreamTitle}</p>
-        <p id="tag" className="navbar-s text-gray-400">{data.StreamDescription}</p>
+        {/* <p id="tag" className="navbar-s text-gray-400">{data.StreamDescription}</p> */}
         </a>
       </Link>
     </div>

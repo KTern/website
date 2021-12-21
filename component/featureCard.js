@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function FeatureCard({ data, border, color, type,space }) {
+export default function FeatureCard({ data, border, color, type,space ,bold}) {
   return (
     <div className="flex-col " id="tag">
       <div id="tag" className={` gap-y-${space} grid grid-${type}-2  gap-x-8`}>
@@ -13,7 +13,7 @@ export default function FeatureCard({ data, border, color, type,space }) {
             href={dt.redirectURL} passHref
           >
             <a id="tag" target="_blank" className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
-              <div id="tag">
+              <div id="tag" className="flex space-x-4">
             {dt.Icon != undefined && (
               <Link id="tag" href={dt.redirectURL} passHref>
                 <a target="_blank" id="tag">
@@ -29,10 +29,10 @@ export default function FeatureCard({ data, border, color, type,space }) {
             )}
             <Link id="tag" href={dt.redirectURL}>
               <a target="_blank" id="tag">
-                <p id="tag" className="navbar-h">{dt.Title}</p>
-                <p id="tag" className="navbar-s text-gray-400">
+                <p id="tag" className={`${bold}`}>{dt.Title}</p>
+                {/* <p id="tag" className="navbar-s text-gray-400">
                   {dt.Description}
-                </p>
+                </p> */}
               </a>
             </Link>
             </div>
@@ -45,7 +45,7 @@ export default function FeatureCard({ data, border, color, type,space }) {
             href={dt.redirectURL} passHref
           >
             <a id="tag" className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
-              <div id="tag">
+              <div id="tag" className="flex space-x-4">
             {dt.Icon != undefined && (
               <Link id="tag" href={dt.redirectURL} passHref>
                 <a id="tag">
@@ -61,10 +61,10 @@ export default function FeatureCard({ data, border, color, type,space }) {
             )}
             <Link id="tag" href={dt.redirectURL}>
               <a id="tag">
-                <p id="tag" className="navbar-h">{dt.Title}</p>
-                <p id="tag" className="navbar-s text-gray-400">
+                <p id="tag"  className={`${bold}`}>{dt.Title}</p>
+                {/* <p id="tag" className="navbar-s text-gray-400">
                   {dt.Description}
-                </p>
+                </p> */}
               </a>
             </Link>
             </div>

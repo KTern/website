@@ -245,9 +245,9 @@ export const getServerSideProps = async (ctx) => {
           method: 'get',
       });
       const f_data = await res2.json();
-      const videos=await fetch(`https://api.ktern.com/videos?_sort=updatedAt:desc&slug_nin=${params.id}&_limit=4`)
+      const videos=await fetch(`https://api.ktern.com/videos?_sort=updatedAt:desc&slug_nin=${ctx.params.id}&_limit=4`)
       const v_data=await videos.json()
-      console.log(v_data,v_data.length)
+      // console.log(v_data,v_data.length)
     return {
       props: {
         data: data[0],

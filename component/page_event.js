@@ -20,7 +20,7 @@ export default function Event(e_data) {
   let user_id;
   let email = "",
     name = "";
-  console.log(localStorage.getItem("user_id"));
+  // console.log(localStorage.getItem("user_id"));
   if (localStorage.getItem("user_id") == undefined) {
     user_id = uuidv4();
     localStorage.setItem("user_id", user_id);
@@ -37,7 +37,7 @@ export default function Event(e_data) {
   } else {
     name = localStorage.getItem("name");
   }
-  console.log("Events", e_data, user_id);
+  // console.log("Events", e_data, user_id);
   if(localStorage.getItem('maps')==undefined)
   {
       localStorage.setItem('maps',0);
@@ -83,7 +83,7 @@ export default function Event(e_data) {
     Number(localStorage.getItem("mines") )
     
   };
-  console.log(stream_score)
+  // console.log(stream_score)
   const data = {
     event_type: e_data.event_name,
     user_id: `${user_id}`,
@@ -106,8 +106,7 @@ export default function Event(e_data) {
       label: `${e_data.label}`,
     },
   };
-
-  console.log(data);
+  // console.log(data);
 //   client.logEvent(data);
 var identify = new amplitude.Identify();
 instance.setUserId(user_id);
@@ -162,7 +161,7 @@ export function page_event(e_data) {
   let user_id;
   let email = "",
     name = "";
-  console.log(localStorage.getItem("user_id"));
+  // console.log(localStorage.getItem("user_id"));
 
   if (localStorage.getItem("user_id") == undefined) {
     user_id = uuidv4();
@@ -201,7 +200,7 @@ export function page_event(e_data) {
     },
   };
 
-  console.log(data);
+  // console.log(data);
   instance.logEvent(data.event_type,data.event_properties);
   // client.flush();
 }

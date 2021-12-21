@@ -19,7 +19,7 @@ function closeNav() {
   }
 }
 function handleClickOutside(event) {
-  console.log(event);
+  // console.log(event);
 
   document.getElementById("toggle-1").style.display = "none";
   document.getElementById("toggle-2").style.display = "none";
@@ -36,7 +36,7 @@ function useOutsideAlerter() {
      * Alert if clicked on outside of element
      */
     function handleClickOutside(event) {
-      console.log("outsider", ref.current, event.target);
+      // console.log("outsider", ref.current, event.target);
       if (
         ref.current &&
         !ref.current.contains(event.target) &&
@@ -563,6 +563,7 @@ export default function Navbar({ h_data }) {
                           space="4"
                           color={"bg-projects-secondary"}
                           data={h_data.DigitalProjectsFeatureList}
+                          bold={"font-semibold"}
                         />
                       )}
                       {isProcessShown && (
@@ -570,6 +571,7 @@ export default function Navbar({ h_data }) {
                           id="tag"
                           border={"none"}
                           type="cols"
+                          bold={"font-semibold"}
                           space="4"
                           color={"bg-process-secondary"}
                           data={h_data.DigitalProcessFeatureList}
@@ -579,6 +581,7 @@ export default function Navbar({ h_data }) {
                         <FeatureCard
                           id="tag"
                           border={"none"}
+                          bold={"font-semibold"}
                           type="cols"
                           space="4"
                           color={"bg-maps-secondary"}
@@ -590,6 +593,7 @@ export default function Navbar({ h_data }) {
                           id="tag"
                           border={"none"}
                           type="cols"
+                          bold={"font-semibold"}
                           space="4"
                           color={"bg-mines-secondary"}
                           data={h_data.DigitalMinesFeatureList}
@@ -598,6 +602,7 @@ export default function Navbar({ h_data }) {
                       {isLabsShown && (
                         <FeatureCard
                           id="tag"
+                          bold={"font-semibold"}
                           border={"none"}
                           type="cols"
                           space="4"
@@ -665,6 +670,7 @@ export default function Navbar({ h_data }) {
                         border={"border"}
                         type={"rows"}
                         space="4"
+                        bold={"none"}
                         color={"bg-secondary"}
                         data={h_data.Resources.WhatsNewSection}
                       />
@@ -676,6 +682,7 @@ export default function Navbar({ h_data }) {
                         space="0"
                         color={"bg-secondary"}
                         type={"cols"}
+                        bold={"font-semibold"}
                         data={h_data.ResourcesList}
                       />
                     </div>
@@ -715,6 +722,7 @@ export default function Navbar({ h_data }) {
                         type={"rows"}
                         space="4"
                         color={"bg-secondary"}
+                        bold={"none"}
                         data={h_data.Partners.WhatsNewSection}
                       />
                     </div>
@@ -726,6 +734,7 @@ export default function Navbar({ h_data }) {
                         color={"bg-secondary"}
                         type={"cols"}
                         data={h_data.PartnersList}
+                        bold={"font-semibold"}
                       />
                     </div>
                   </div>
@@ -763,6 +772,7 @@ export default function Navbar({ h_data }) {
                         border={"border"}
                         type={"rows"}
                         space="4"
+                        bold={"none"}
                         color={"bg-secondary"}
                         data={h_data.Company.WhatsNewSection}
                       />
@@ -774,6 +784,7 @@ export default function Navbar({ h_data }) {
                         space="0"
                         color={"bg-secondary"}
                         type={"cols"}
+                        bold={"font-semibold"}
                         data={h_data.CompanyList}
                       />
                     </div>
@@ -814,6 +825,7 @@ export default function Navbar({ h_data }) {
                         space="4"
                         color={"bg-secondary"}
                         data={h_data.Support.WhatsNewSection}
+                        bold={"none"}
                       />
                     </div>
                     <div className="w-4/6 px-6 ">
@@ -824,6 +836,7 @@ export default function Navbar({ h_data }) {
                         color={"bg-secondary"}
                         type={"cols"}
                         data={h_data.SupportList}
+                        bold={"font-semibold"}
                       />
                     </div>
                   </div>

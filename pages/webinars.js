@@ -44,7 +44,7 @@ export default function Webinar({ data, h_data, f_data }) {
       filter.push(val);
     });
 
-    console.log(filter, data);
+    // console.log(filter, data);
     return filter;
   }
   streamOptions = filterData(data.DigitalStreamsFilter);
@@ -66,7 +66,7 @@ export default function Webinar({ data, h_data, f_data }) {
     //   if (document.getElementById('role').value!= 'allRoles')
     //       filterArray.RelatedRole=document.getElementById('role').value
 
-    console.log(filterArray);
+    // console.log(filterArray);
 
     filter = _.filter(data.WebinarList, filterArray);
 
@@ -101,7 +101,7 @@ export default function Webinar({ data, h_data, f_data }) {
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
-  console.log(breadcrumb);
+  // console.log(breadcrumb);
   const date = new Date(
     data.FeaturedWebinar.Date + "T" + data.FeaturedWebinar.Time
   );
