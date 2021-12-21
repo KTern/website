@@ -544,7 +544,7 @@ export default function Navbar({ h_data }) {
                                 ></path>
                               </svg>
                             </a>
-                          </Link>{" "}
+                          </Link>
                         </li>
                       </div>
                     </ul>
@@ -994,7 +994,7 @@ export default function Navbar({ h_data }) {
                               ></path>
                             </svg>
                           </a>
-                        </Link>{" "}
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -1070,7 +1070,7 @@ export default function Navbar({ h_data }) {
                               ></path>
                             </svg>
                           </a>
-                        </Link>{" "}
+                        </Link>
                       </li>
                     </ul>
                   </div>

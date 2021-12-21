@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import BreadCrumb from "../component/breadcrumb"; 
  import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function PartnerContact({ data, h_data, f_data }) {
   const router = useRouter();
-  console.log(router.query.message);
+  // console.log(router.query.message);
   if (router.query.message == "thanks") {
     if (process.browser)
       document.getElementById("thanks_container").style.display = "block";

@@ -299,7 +299,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
-                                        src="/webinar/calendar.png"
+                                        src="/calendar.png"
                                         alt="Calendar"
                                       />
                                       <time className="ml-2 hyperlink text-black">
@@ -311,7 +311,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
-                                        src="/webinar/clock.png"
+                                        src="/clock.png"
                                         alt="Calendar"
                                       />
                                       <time className="ml-2 hyperlink text-black">
@@ -369,7 +369,7 @@ export default function Webinar({ data, h_data, f_data }) {
                   mozAppearance: "none",
                   appearance: "none",
                   background:
-                    "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
                 }}
               >
                 {streamOptions.map((item) => (
@@ -394,7 +394,7 @@ export default function Webinar({ data, h_data, f_data }) {
                   mozAppearance: "none",
                   appearance: "none",
                   background:
-                    "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
                 }}
               >
                 {roleOptions.map((item) => (

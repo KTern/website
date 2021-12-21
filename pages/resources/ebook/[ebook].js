@@ -110,11 +110,7 @@ function onClick(data){
       <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
      
       <Head>
-        <script
-          type="text/javascript"
-          src="https://platform-api.sharethis.com/js/sharethis.js#property=60f91fc57c9b910013246b36&product=inline-share-buttons"
-          async="async"
-        ></script>
+     
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
         <section className={`w-full pt-8 ${data.StreamType}`}>
@@ -136,6 +132,7 @@ function onClick(data){
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
+
               </div>
             </div>
             <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
@@ -157,6 +154,7 @@ function onClick(data){
                 <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                   <div className="relative max-w-md">
                     <div className="pb-16 mb-8 border-b border-gray-400">
+                   
                       {/* <Link href={data.GoBackToResources.LinkURL} passHref>
                         <a 
                         className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
@@ -172,6 +170,53 @@ function onClick(data){
                           </span>
                         </a>
                       </Link> */}
+                      <div className="flex justify-end items-end mb-3">
+                        <Link  href={`https://twitter.com/intent/tweet?text=${data.PageHeader.header}&url=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='twitter'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
+                            width="20"
+                            height="30"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      <Link  href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='Facebook'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
+                            width="20"
+                            height="20"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      <Link  href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='LinkedIn'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
+                            width="20"
+                            height="30"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      </div>
                       <p className="mt-5 card-subheading text-gray-700 text md:text-left">
                         <Markdown
                           options={{

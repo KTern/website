@@ -132,7 +132,7 @@ export default function technical_partner({ data, h_data, f_data }) {
                 {data.PageHeader.header}
               </h5>
               <p className=" mb-5 text-gray-600 subheading">
-                {data.PageHeader.subHeading}{" "}
+                {data.PageHeader.subHeading}
               </p>
               <div className="md:flex md:items-center md:space-x-4 sm:space-y-6">
                 <Link href={data.PageHeader.primaryCTA.linkURL} passHref>
@@ -184,7 +184,7 @@ export default function technical_partner({ data, h_data, f_data }) {
                 width={data.PageHeader.ImageWidth}
                 height={data.PageHeader.ImageHeight}
               />
-            </div>{" "}
+            </div>
           </div>
         </section>
         {/* <!-- Why Become KTern ISV Partner--> */}
@@ -271,7 +271,7 @@ export default function technical_partner({ data, h_data, f_data }) {
                         {dt.StepTitle}
                       </h3>
                       <p className="card-subheading text-gray-200">
-                        {" "}
+                        
                         <Markdown
                           options={{
                             overrides: {

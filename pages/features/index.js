@@ -2,11 +2,7 @@ import Layout from "../../component/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-import digitalmaps from "/public/features/digital-maps-screenshot.png";
-import digitallabs from "/public/features/digital-labs-screenshot.png";
-import digitalprojects from "/public/features/digital-projects-screenshot.png";
-import digitalprocess from "/public/features/digital-process-screenshot.png";
-import digitalmines from "/public/features/digital-mines-screenshot.png";
+
 import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
@@ -301,7 +297,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                                    onClick={()=>{onClick({stream_score:resolve_stream_score('projects'),event_name:"Card Click",section_name:"Features Section-Projects",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
                                   className="inline-flex items-center pb-1  text-black group ">
                                     <span className="hyperlink group-hover:text-projects-primary">
-                                      {feature.CTAText}{" "}
+                                      {feature.CTAText}
                                     </span>
                                     <svg
                                       className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary"
@@ -380,7 +376,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                                    onClick={()=>{onClick({stream_score:resolve_stream_score('process'),event_name:"Card Click",section_name:"Features Section-Process",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
                                     className="inline-flex items-center pb-1  text-black group ">
                                     <span className="hyperlink group-hover:text-projects-primary">
-                                      {feature.CTAText}{" "}
+                                      {feature.CTAText}
                                     </span>
                                     <svg
                                       className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary"
@@ -459,7 +455,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                                    onClick={()=>{onClick({stream_score:resolve_stream_score('labs'),event_name:"Card Click",section_name:"Features Section-Labs",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
                                    className="inline-flex items-center pb-1  text-black group ">
                                     <span className="hyperlink group-hover:text-projects-primary">
-                                      {feature.CTAText}{" "}
+                                      {feature.CTAText}
                                     </span>
                                     <svg
                                       className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary"
@@ -538,7 +534,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                                    onClick={()=>{onClick({stream_score:resolve_stream_score('mines'),event_name:"Card Click",section_name:"Features Section-Mines",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
                                   className="inline-flex items-center pb-1  text-black group ">
                                     <span className="hyperlink group-hover:text-projects-primary">
-                                      {feature.CTAText}{" "}
+                                      {feature.CTAText}
                                     </span>
                                     <svg
                                       className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-primary"

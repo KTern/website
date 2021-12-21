@@ -28,7 +28,7 @@ export default function Video({ data,h_data,f_data,v_data }){
     return (
       <>
       <Head>
-      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60fa43c683fc3c00121c8da1&product=inline-share-buttons' async='async'></script>
+     
       <script src='https://www.youtube.com/iframe_api' async></script>
       </Head>
           <NextSeo
@@ -164,7 +164,53 @@ export default function Video({ data,h_data,f_data,v_data }){
                    {data.VideoLandingPage.Description}
                   </Markdown>
 </p>
-<div className="sharethis-inline-share-buttons"></div>
+<div className="flex justify-end items-end mb-3">
+                        <Link  href={`https://twitter.com/intent/tweet?text=${data.VideoLandingPage.PageHeader}&url=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='twitter'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
+                            width="20"
+                            height="30"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      <Link  href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='Facebook'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
+                            width="20"
+                            height="20"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      <Link  href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}>
+                        <a
+                          title='LinkedIn'
+                          target="_blank"
+                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
+                        >
+                          
+                          <Image
+                            src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
+                            width="20"
+                            height="30"
+                            alt=""
+                          />
+                        </a>
+                      </Link>
+                      </div>
         </div>
         <div className="md:w-1/2 w-full">
         <div className="md:px-20 md:p-4 md:mx-auto " >

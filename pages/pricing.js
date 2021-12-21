@@ -194,7 +194,7 @@ export default function Pricing({ data, h_data, f_data }) {
                   <div className="w-full mb-3">
                     <div
                       id="maps"
-                      className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
+                      className=" relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
                       {isMapsSelected && (
                         <span className="absolute top-0 right-0 px-3 py-0 text-xs tracking-widest text-white bg-blue-600 rounded-bl">
@@ -202,7 +202,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         </span>
                       )}
                       <details className="">
-                        <summary className="">
+                        <summary className="cursor-pointer">
                           <div className="flex flex-col w-full">
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
@@ -297,7 +297,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   }}
                                   className="flex items-center mb-2 text-gray-600 card-subheading"
                                 >
-                                  {" "}
+                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -322,7 +322,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                {" "}
+                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -347,9 +347,9 @@ export default function Pricing({ data, h_data, f_data }) {
                           {data.PricingCard[0].Bots.map((dt) => (
                             <div
                               key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading   px-3 py-1 bg-white text-black rounded-full"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white  text-black rounded-full"
                             >
-                              {dt.listItem}
+                             <div> {dt.listItem}</div>
                             </div>
                           ))}
                         </div>
@@ -391,7 +391,7 @@ export default function Pricing({ data, h_data, f_data }) {
                   <div className="w-full mb-3">
                     <div
                       id="projects"
-                      className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
+                      className=" relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
                       {isProjectsSelected && (
                         <span className="absolute top-0 right-0 px-3 py-0 text-xs tracking-widest text-white bg-blue-600 rounded-bl">
@@ -399,7 +399,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         </span>
                       )}
                       <details className="">
-                        <summary className="">
+                        <summary className="cursor-pointer">
                           <div className="flex flex-col w-full">
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
@@ -471,7 +471,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   });
                                 }}
                                 className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  {" "}
+                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -496,7 +496,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                {" "}
+                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -521,7 +521,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           {data.PricingCard[1].Bots.map((dt) => (
                             <div
                               key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading   px-3 py-1 bg-white text-black rounded-full"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
                             >
                               {dt.listItem}
                             </div>
@@ -565,7 +565,7 @@ export default function Pricing({ data, h_data, f_data }) {
                   <div className="w-full mb-3">
                     <div
                       id="process"
-                      className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
+                      className=" relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
                       {isProcessSelected && (
                         <span className="absolute top-0 right-0 px-3 py-0 text-xs tracking-widest text-white bg-blue-600 rounded-bl">
@@ -573,7 +573,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         </span>
                       )}
                       <details className="">
-                        <summary className="">
+                        <summary className="cursor-pointer">
                           <div className="flex flex-col w-full">
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
@@ -645,7 +645,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   });
                                 }}
                                 className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  {" "}
+                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -670,7 +670,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                {" "}
+                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -695,7 +695,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           {data.PricingCard[2].Bots.map((dt) => (
                             <div
                               key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading   px-3 py-1 bg-white text-black rounded-full"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
                             >
                               {dt.listItem}
                             </div>
@@ -739,7 +739,7 @@ export default function Pricing({ data, h_data, f_data }) {
                   <div className="w-full mb-3">
                     <div
                       id="labs"
-                      className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
+                      className=" relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
                       {isLabsSelected && (
                         <span className="absolute top-0 right-0 px-3 py-0 text-xs tracking-widest text-white bg-blue-600 rounded-bl">
@@ -747,7 +747,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         </span>
                       )}
                       <details className="">
-                        <summary className="">
+                        <summary className="cursor-pointer">
                           <div className="flex flex-col w-full">
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
@@ -819,7 +819,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   });
                                 }}
                                 className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  {" "}
+                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -844,7 +844,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                {" "}
+                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -869,7 +869,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           {data.PricingCard[3].Bots.map((dt) => (
                             <div
                               key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading   px-3 py-1 bg-white text-black rounded-full"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading  bg-secondary px-3 py-1 bg-white text-black rounded-full"
                             >
                               {dt.listItem}
                             </div>
@@ -913,7 +913,7 @@ export default function Pricing({ data, h_data, f_data }) {
                   <div className="w-full mb-3">
                     <div
                       id="mines"
-                      className="cursor-pointer relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
+                      className=" relative flex flex-col justify-between h-full p-6 overflow-hidden border rounded-lg"
                     >
                       {isMinesSelected && (
                         <span className="absolute top-0 right-0 px-3 py-0 text-xs tracking-widest text-white bg-blue-600 rounded-bl">
@@ -921,7 +921,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         </span>
                       )}
                       <details className="">
-                        <summary className="">
+                        <summary className="cursor-pointer">
                           <div className="flex flex-col w-full">
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
@@ -993,7 +993,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   });
                                 }}
                                 className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  {" "}
+                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -1018,7 +1018,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                {" "}
+                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -1043,7 +1043,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           {data.PricingCard[4].Bots.map((dt) => (
                             <div
                               key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading   px-3 py-1 bg-white text-black rounded-full"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
                             >
                               {dt.listItem}
                             </div>
@@ -1087,7 +1087,7 @@ export default function Pricing({ data, h_data, f_data }) {
                 </div>
                 <div className="hidden sm:block w-full">
                   <div className="w-full ">
-                    <div className="cursor-pointer relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 bg-gray-100 rounded-lg">
+                    <div className=" relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 bg-gray-100 rounded-lg">
                       <div className="flex flex-col w-full">
                         <div className="flex">
                           <div className="w-1/2">
@@ -1118,7 +1118,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                 <Image
-                                  src="/assets/icons/maps.png"
+                                  src={data.PricingCard[0].StreamLogoURL}
                                   alt="Digital Maps"
                                   height={30}
                                   width={30}
@@ -1166,7 +1166,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                 <Image
-                                  src="/assets/icons/projects.png"
+                                  src={data.PricingCard[1].StreamLogoURL}
                                   alt="Digital Projects"
                                   height={30}
                                   width={30}
@@ -1214,7 +1214,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                 <Image
-                                  src="/assets/icons/process.svg"
+                                 src={data.PricingCard[2].StreamLogoURL}
                                   alt="Digital Process"
                                   height={30}
                                   width={30}
@@ -1261,7 +1261,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                 <Image
-                                  src="/assets/icons/Labs.png"
+                                 src={data.PricingCard[3].StreamLogoURL}
                                   alt="Digital Labs"
                                   height={30}
                                   width={30}
@@ -1308,7 +1308,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                                 <Image
-                                  src="/assets/icons/Mines.png"
+                                  src={data.PricingCard[4].StreamLogoURL}
                                   alt="Digital Mines"
                                   height={30}
                                   width={30}
@@ -1358,7 +1358,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="w-4 h-4 ml-2 relative">
                             <Image
                               layout="fill"
-                              src="/pricing/down-arrow-svgrepo-com.svg"
+                              src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
                             />
                           </div>
@@ -1378,7 +1378,7 @@ export default function Pricing({ data, h_data, f_data }) {
               </div>
               <div className="hidden md:block w-2/5">
                 <div className="w-full p-2">
-                  <div className="cursor-pointer relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 background rounded-lg">
+                  <div className=" relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 background rounded-lg">
                     <div className="flex flex-col w-full">
                       <div className="flex">
                         <div className="w-1/2">
@@ -1411,7 +1411,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                               <Image
-                                src="/assets/icons/maps.png"
+                                src={data.PricingCard[0].StreamLogoURL}
                                 alt="Digital Maps"
                                 height={30}
                                 width={30}
@@ -1459,7 +1459,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                               <Image
-                                src="/assets/icons/projects.png"
+                               src={data.PricingCard[1].StreamLogoURL}
                                 alt="Digital Projects"
                                 height={30}
                                 width={30}
@@ -1507,7 +1507,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                               <Image
-                                src="/assets/icons/process.svg"
+                             src={data.PricingCard[2].StreamLogoURL}
                                 alt="Digital Process"
                                 height={30}
                                 width={30}
@@ -1554,7 +1554,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                               <Image
-                                src="/assets/icons/Labs.png"
+                               src={data.PricingCard[3].StreamLogoURL}
                                 alt="Digital Labs"
                                 height={30}
                                 width={30}
@@ -1601,7 +1601,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
                               <Image
-                                src="/assets/icons/Mines.png"
+                                src={data.PricingCard[4].StreamLogoURL}
                                 alt="Digital Mines"
                                 height={30}
                                 width={30}
@@ -1659,12 +1659,12 @@ export default function Pricing({ data, h_data, f_data }) {
                           });
                         }}
                         className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border-2 border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
-                          {" "}
+                          
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
                             <Image
                               layout="fill"
-                              src="/pricing/down-arrow-svgrepo-com.svg"
+                              src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
                             />
                           </div>

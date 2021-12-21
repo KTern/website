@@ -164,34 +164,28 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         mainEntity={faq}
       />
       
-      {/* <ProductJsonLd
-        productName='Executive Anvil'
+      <ProductJsonLd
+        productName={stream_data.pageHeader.header}
         images={[
-          "https://example.com/photos/1x1/photo.jpg",
-          "https://example.com/photos/4x3/photo.jpg",
-          "https://example.com/photos/16x9/photo.jpg",
+          stream_data.PageSEO.ThumbnailImageURL,
+          stream_data.VideoURL
         ]}
-        description="Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height."
-        brand='ACME'
-        color='blue'
-        manufacturerName='Gary Meehan'
-        manufacturerLogo='https://www.example.com/photos/logo.jpg'
-        material='steel'
-        slogan='For the business traveller looking for something to drop from a height.'
-        disambiguatingDescription='Executive Anvil, perfect for the business traveller.'
-        releaseDate='2014-02-05T08:00:00+08:00'
-        productionDate='2015-02-05T08:00:00+08:00'
-        purchaseDate='2015-02-06T08:00:00+08:00'
-        award='Best Executive Anvil Award.'
+        description={stream_data.PageSEO.PageDescription}
+        brand='KTern.AI'
+        color='#0b1320'
+      
+        slogan='Democratizing the digital transformation as a service.'
+        disambiguatingDescription='DXaaS platform for SAP Transformations'
+     
         reviews={[
           {
             author: {
               type: "Person",
-              name: "Jim",
+              name: `${stream_data.TestimonialSection[0].AuthorName}`,
             },
-            datePublished: "2017-01-06T03:37:40Z",
-            reviewBody: "This is my favorite product yet! Thanks Nate for the example products and reviews.",
-            name: "So awesome!!!",
+           
+            reviewBody: `${stream_data.TestimonialSection[0].TestimonialStatement}`,
+            name:`${stream_data.TestimonialSection[1].TestimonialStatement}`,
             reviewRating: {
               bestRating: "5",
               ratingValue: "5",
@@ -199,66 +193,16 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
             },
             publisher: {
               type: "Organization",
-              name: "TwoVit",
+              name: "G2",
             },
           },
         ]}
         aggregateRating={{
-          ratingValue: "4.4",
-          reviewCount: "89",
+          ratingValue: "4.9",
+          reviewCount: "8",
         }}
-        offers={[
-          {
-            price: "119.99",
-            priceCurrency: "USD",
-            priceValidUntil: "2020-11-05",
-            itemCondition: "https://schema.org/UsedCondition",
-            availability: "https://schema.org/InStock",
-            url: "https://www.example.com/executive-anvil",
-            seller: {
-              name: "Executive Objects",
-            },
-          },
-          {
-            price: "139.99",
-            priceCurrency: "CAD",
-            priceValidUntil: "2020-09-05",
-            itemCondition: "https://schema.org/UsedCondition",
-            availability: "https://schema.org/InStock",
-            url: "https://www.example.ca/executive-anvil",
-            seller: {
-              name: "Executive Objects",
-            },
-          },
-        ]}
-        mpn='925872'
-      /> */}
-      {/* <VideoJsonLd
-        name='How to make a Party Coffee Cake'
-        description='This is how you make a Party Coffee Cake.'
-        contentUrl='http://www.example.com/video123.mp4'
-        embedUrl='http://www.example.com/videoplayer?video=123'
-        uploadDate='2018-02-05T08:00:00+08:00'
-        duration='PT1M33S'
-        thumbnailUrls={[
-          "https://example.com/photos/1x1/photo.jpg",
-          "https://example.com/photos/4x3/photo.jpg",
-          "https://example.com/photos/16x9/photo.jpg",
-        ]}
-        expires='2019-02-05T08:00:00+08:00'
-        hasPart={{
-          name: "Preheat oven",
-          startOffset: 30,
-          url: "http://www.example.com/example?t=30",
-        }}
-        watchCount={2347}
-        publication={{
-          isLiveBroadcast: true,
-          startDate: "2020-10-24T14:00:00+00:00",
-          endDate: "2020-10-24T14:37:14+00:00",
-        }}
-        regionsAllowed={["IT", "NL"]}
-      /> */}
+      />
+      
     <SoftwareAppJsonLd
 				name= {process.env.NEXT_PUBLIC_NAME}
 				price="0"
@@ -274,7 +218,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* Hero Section */}
         <section className='relative md:py-10 pb-auto pb-72'>
           <div className='hidden lg:block absolute inset-0 w-full relative'>
-            <Image src='/atis-assets/background/lines.svg' alt='' layout='fill' />
+            <Image src='/lines.svg' alt='' layout='fill' />
           </div>
       
           <div
@@ -376,7 +320,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* <!-- /Why Ktern --> */}
         {/* Streams Content Section */}
         <section className='px-5 pb-10 relative overflow-hidden '>
-          {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/atis-assets/background/lines.svg" alt=""/> */}
+          {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/lines.svg" alt=""/> */}
 
           {stream_data.FeaturesSection.map((dt, index) => {
             return index % 2 == 0 ? (
@@ -436,13 +380,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
+                          <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
                         </div>
                         <div
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
+                          <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
                         </div>
                       </div>
                     </div>
@@ -534,13 +478,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
+                          <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
                         </div>
                         <div
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
+                          <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
                         </div>
                       </div>
                     </div>
@@ -605,13 +549,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                             className='animate-pulse hidden md:block absolute w-60 h-40'
                             style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                           >
-                            <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
+                            <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
                           </div>
                           <div
                             className='animate-pulse hidden md:block absolute w-60 h-40'
                             style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                           >
-                            <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
+                            <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
                           </div>
                         </div>
                       </div>
@@ -698,10 +642,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <div className='px-6 py-12 bg-black   border border-white'>
                     <div className='relative px-4 mx-auto'>
                       <div className='absolute top-0 left-0'>
-                        <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
+                        <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
                       </div>
                       <div className='absolute top-0 right-0'>
-                        <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
+                        <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
                       </div>
                       <div className='px-4 md:px-10 flex-col text-center'>
                           <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>
@@ -721,10 +665,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                     <div className='px-6 py-12   bg-black border border-white'>
                       <div className='relative px-4 mx-auto'>
                         <div className='absolute top-0 left-0'>
-                          <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
+                          <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
                         </div>
                         <div className='absolute top-0 right-0'>
-                          <Image width='10%' height='10%' src='/atis-assets/elements/quote-grey.svg' alt='' />
+                          <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
                         </div>
                         <div className='px-4 md:px-10 flex-col text-center'>
                           <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>

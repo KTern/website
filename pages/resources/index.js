@@ -13,6 +13,7 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../../component/page_event";
+import BreadCrumb from "../../component/breadcrumb";
 export default function Resources({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -185,7 +186,9 @@ export default function Resources({ data, h_data, f_data }) {
         <section className="w-full py-24 background overflow-hidden">
           <div className="flex flex-col items-center md:px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col sm:px-4 md:w-2/3 h-full ">
-              <p className="max-w-max px-2 py-1 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
+              
+            <BreadCrumb color="white" b_data={breadcrumb} />
+              <p className="max-w-max px-2 py-1 mt-4 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.ResourcesTranslations.Resources}
               </p>
               <h1 className="heading  text-white ">{data.PageHeader.header}</h1>
@@ -260,7 +263,7 @@ export default function Resources({ data, h_data, f_data }) {
                 mozAppearance: "none",
                 appearance: "none",
                 background:
-                  "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {streamOptions.map((item) => (
@@ -292,7 +295,7 @@ export default function Resources({ data, h_data, f_data }) {
                 mozAppearance: "none",
                 appearance: "none",
                 background:
-                  "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {topicOptions.map((item) => (
@@ -325,7 +328,7 @@ export default function Resources({ data, h_data, f_data }) {
                 mozAppearance: "none",
                 appearance: "none",
                 background:
-                  "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {roleOptions.map((item) => (
@@ -358,7 +361,7 @@ export default function Resources({ data, h_data, f_data }) {
                 mozAppearance: "none",
                 appearance: "none",
                 background:
-                  "url('/assets/icons/down-arrow.png') 92% / 8% no-repeat #fff",
+                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {resourceTypeOptions.map((item) => (
@@ -419,7 +422,7 @@ export default function Resources({ data, h_data, f_data }) {
                                         ></path>
                                       </svg>
                                     </span>
-                                  </div>{" "}
+                                  </div>
                                   <Image
                                     className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                     src={dt.ImageURL}

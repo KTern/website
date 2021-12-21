@@ -284,7 +284,7 @@ export default function Partners({ data, h_data, f_data }) {
                         {dt.StepTitle}
                       </h3>
                       <p className="card-subheading text-gray-200">
-                        {" "}
+                        
                         <Markdown
                           options={{
                             overrides: {

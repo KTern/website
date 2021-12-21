@@ -172,7 +172,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
-                    src="/webinar/calendar.png"
+                    src="/calendar.png"
                     alt="Calendar"
                   />
                 </div>
@@ -187,7 +187,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
-                    src="/webinar/clock.png"
+                    src="/clock.png"
                     alt="Calendar"
                   />
                 </div>
@@ -202,7 +202,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <Image
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
-                    src="/webinar/tickets.png"
+                    src="/tickets.png"
                     alt="Calendar"
                   />
                 </div>

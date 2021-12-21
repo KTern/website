@@ -223,13 +223,13 @@ feature_data.FAQ.map((dt)=>{
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
+                        <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
+                        <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
                       </div>
                     </div>
                   </div>
@@ -261,13 +261,13 @@ feature_data.FAQ.map((dt)=>{
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/bullets-gray-left.svg' alt='' />
+                        <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/atis-assets/elements/bullets-gray-right.svg' alt='' />
+                        <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
                       </div>
                     </div>
                   </div>
