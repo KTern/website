@@ -4,16 +4,21 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from "next/head";
 import Link from "next/link"
-
+import TagManager from "react-gtm-module"
 
 import { SocialProfileJsonLd } from "next-seo";
 import {page_event} from "../component/page_event"
+const tagManagerArgs = {
+  id: "GTM-MHZVHTK",
+}
+
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 // if(process.browser)
 // console.log(document)
 
   useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_path: url,

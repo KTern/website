@@ -299,7 +299,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
 //     }
 // }
 // Fetch necessary data for the blog post using params.webinar
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(

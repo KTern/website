@@ -272,7 +272,7 @@ export default function Video({ data,h_data,f_data,v_data }){
     )
 }
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
     // strapi dt to be acquired
     const res = await fetch(`https://api.ktern.com/videos?slug=${ctx.params.id}`, {
       method: 'get',

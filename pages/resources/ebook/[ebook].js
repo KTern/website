@@ -708,7 +708,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
 //     }
 // }
 // Fetch necessary data for the blog post using params.ebook
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const ebook = ctx.params.ebook;
   const res = await fetch(`https://api.ktern.com/e-books?slug=${ebook}`);
   const data = await res.json();

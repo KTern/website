@@ -209,7 +209,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
         </>
     )
 }
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
         //fetch strapi data
         const res = await fetch(`https://api.ktern.com/news-center-pages?slug=${ctx.params.news}`, {
             method: 'get',

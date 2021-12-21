@@ -4536,6 +4536,11 @@
   dependencies:
     "classnames" "^2.2.3"
 
+"react-gtm-module@^2.0.11":
+  "integrity" "sha512-8gyj4TTxeP7eEyc2QKawEuQoAZdjKvMY4pgWfycGmqGByhs17fR+zEBs0JUDq4US/l+vbTl+6zvUIx27iDo/Vw=="
+  "resolved" "https://registry.npmjs.org/react-gtm-module/-/react-gtm-module-2.0.11.tgz"
+  "version" "2.0.11"
+
 "react-icalendar-link@3.0.2":
   "integrity" "sha512-WxFor3ZoT3/36Jpn+5V1yp+0Ib3fccETHpWzMFmvEZvSkCUIzZjFq2pqd/9vFIx85VdafWKWHifrfBNlVHzQcQ=="
   "resolved" "https://registry.npmjs.org/react-icalendar-link/-/react-icalendar-link-3.0.2.tgz"

@@ -348,7 +348,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
 //     }
 // }
 // Fetch necessary data for the blog post using params.id
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const id = ctx.params.id;
   // strapi data to be fetched
   const res = await fetch(
