@@ -529,7 +529,7 @@ export default function Resources({ data, h_data, f_data }) {
   );
 }
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   // console.log(params);
   // strapi data to be acquired
   const res = await fetch("https://api.ktern.com/resources");

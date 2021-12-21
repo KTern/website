@@ -542,7 +542,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
 //     }
 // }
 // Fetch necessary data for the blog post using params.webinar
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(

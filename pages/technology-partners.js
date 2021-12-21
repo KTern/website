@@ -361,7 +361,7 @@ export default function technical_partner({ data, h_data, f_data }) {
     </>
   );
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   //    fetch strapi data
   const res = await fetch(`https://api.ktern.com/technology-partners`, {
     method: "get",

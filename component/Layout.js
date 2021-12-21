@@ -16,7 +16,7 @@ export default function Layout ({ children ,h_data,f_data}) {
     )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	const res = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});

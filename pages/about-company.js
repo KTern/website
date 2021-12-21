@@ -443,7 +443,7 @@ function onClick(data){
   );
 }
 
-export const getServerSideProps = async ({params}) => {
+export const getStaticProps = async ({params}) => {
   const res = await fetch(`https://api.ktern.com/about-company`, {
     method: "get",
   });

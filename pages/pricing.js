@@ -1715,7 +1715,7 @@ export default function Pricing({ data, h_data, f_data }) {
     </>
   );
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // data url from strapi
   let res = await fetch("https://api.ktern.com/pricing", {
     method: "get",

@@ -241,7 +241,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
 //     }
 // }
 // Fetch necessary data for the blog post using params.trust_center
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const id = ctx.params.trust_center;
   //    fetch strapi data
   const res = await fetch(`https://api.ktern.com/trustcenters?slug=${id}`, {

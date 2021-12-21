@@ -380,7 +380,7 @@ export default function Consultingpartner({ data, h_data, f_data }) {
     </>
   );
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   //    fetch strapi data
   const res = await fetch(`https://api.ktern.com/consulting-partner`, {
     method: "get",

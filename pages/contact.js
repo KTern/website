@@ -636,7 +636,7 @@ import BreadCrumb from "../component/breadcrumb";
     </>
   );
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // data url from strapi
 
   const res = await fetch("https://api.ktern.com/contact", {

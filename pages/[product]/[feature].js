@@ -534,7 +534,7 @@ feature_data.FAQ.map((dt)=>{
 }
 
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
  
   const streamslug = ctx.params.product;
   const featureslug = ctx.params.feature;
