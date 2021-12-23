@@ -11,7 +11,7 @@ module.exports = {
          sm: {'max': '768px'},
     },
       backgroundImage: theme => ({
-        hero: "url('/assets/hero/home-1.png')",
+        hero: "url('https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-hero.png')",
         herogradient: 'radial-gradient(circle at 75% calc(100% + 20px),#222 0,#727272 90%)',
         cta: "url('/assets/five-stars.svg')",
         downarrow: "url('/assets/icons/down-arrow.png')",

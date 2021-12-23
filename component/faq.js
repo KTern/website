@@ -15,7 +15,7 @@ export default function FAQ({data,title}){
                                         <span className="col-span-11 text-lg font-bold">{data.Question}</span>
                                         
                                             </summary>
-                                            <div className="pb-3 px-4 mx-16  text-lg" style={{color:'#374151'}}>
+                                            <div className="pb-3 px-4 mx-16  text-lg  text-justify" style={{color:'#374151'}}>
                                             <Markdown
                     options={{
                       overrides: {
@@ -46,17 +46,17 @@ export default function FAQ({data,title}){
                             },
                             strong: {
                               props: {
-                                className: "",
+                                className: " text-justify",
                               },
                             },
                             a:{
                               props:{
-                                className:"text-blue-900 hover:underline "
+                                className:" text-justify text-blue-900 hover:underline "
                               }
                             }
                       },
                     }}
-                    className=""
+                    className=" text-justify"
                   >
                      {data.Answer}
                   </Markdown>

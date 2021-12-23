@@ -381,7 +381,7 @@ export default function Navbar({ h_data }) {
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"
-                  height="30%"
+                  height="25%"
                 />
               </a>
             </Link>
@@ -406,7 +406,7 @@ export default function Navbar({ h_data }) {
           {/* /Mobile Menu */}
           <div className="hidden lg:flex p-0">
             <ul className=" flex space-x-2  xl:space-x-10">
-              <li className="toggleable  hover:bg-secondary  " ref={products}>
+              <li className="toggleable  hover:bg-secondary" ref={products}>
                 {/* <li className="toggleable  " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
                 <input
                   type="checkbox"
