@@ -9,7 +9,7 @@ import TagManager from "react-gtm-module"
 import { SocialProfileJsonLd } from "next-seo";
 import {page_event} from "../component/page_event"
 const tagManagerArgs = {
-  id: "GTM-MHZVHTK",
+  gtmId: "GTM-MHZVHTK",
 }
 
 function MyApp ({ Component, pageProps }) {
