@@ -9,13 +9,12 @@ export default function FAQ({data,title}){
                        
                             
                             {data.map((data) => (
-                                <details key="data" className="relative overflow-hidden border-b border-gray-300  select-none ">
-                                    <summary  className="items-center grid grid-cols-12 py-5 px-6 cursor-pointer" style={{ listStyle: 'none' }}>
-                                    <svg className="col-span-1 w-7 h-7 transition-all duration-200 ease-out transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                <details key="data" className="faq  relative overflow-hidden border-b border-gray-300  select-none ">
+                                    <summary  className=" items-center grid grid-cols-12 py-5 px-6 cursor-pointer" style={{ listStyle: 'none' }}>
+                                   
                                         <span className="col-span-11 text-lg font-bold">{data.Question}</span>
-                                        
                                             </summary>
-                                            <div className="pb-3 px-4 mx-16  text-lg  text-justify" style={{color:'#374151'}}>
+                                            <div className="pb-3 px-4 mx-16  text-lg   text-gray-1000" >
                                             <Markdown
                     options={{
                       overrides: {
@@ -31,7 +30,7 @@ export default function FAQ({data,title}){
                         },
                         li: {
                           props: {
-                            className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                            className: " list-decimal ml-3 mb-1 flex-col",
                           }
                             },
                             p: {

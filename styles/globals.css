@@ -36,13 +36,33 @@ details > summary {
 summary::-webkit-details-marker {
   display: none;
 }
-
+/* 
 #arrow::after {
   content: " ►";
 }
 
 details[open] #arrow:after {
   content: " ▼";
+} */
+/* .faq[open]::before{
+  content: '\002D';
+}
+.faq::before{
+  content: '\002B';
+} */
+details[open] summary::before{
+  content: '\002D';
+  font-size: 30px;
+}
+details summary::before{
+  content: '\002B';
+  font-size: 30px;
+}
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 html,
@@ -852,6 +872,13 @@ body {
 
 .faq-gradient {
 
-	background: -webkit-radial-gradient( bottom right, #46595D 5%,#C5D0D3 15%,white 80%);
-	background: radial-gradient(circle at bottom right,#46595D 5%,#C5D0D3 15%,white 80%);
+  background: hsla(190, 14%, 32%, 1);
+
+background: linear-gradient(135deg, hsla(190, 14%, 32%, 1) 10%, hsla(217, 24%, 93%, 1) 100%);
+
+background: -moz-linear-gradient(135deg, hsla(190, 14%, 32%, 1) 10%, hsla(217, 24%, 93%, 1) 100%);
+
+background: -webkit-linear-gradient(135deg, hsla(190, 14%, 32%, 1) 10%, hsla(217, 24%, 93%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#46595D", endColorstr="#EAEDF2", GradientType=1 );
 }
