@@ -17,7 +17,7 @@ export default function FeatureCard({ data, border, color, type,space ,bold}) {
             {dt.Icon != undefined && (
               <Link id="tag" href={dt.redirectURL} passHref>
                 <a target="_blank" id="tag">
-                  <Image
+                  <Image priority
                     id="tag"
                     src={dt.Icon.logoUrl}
                     width={dt.Icon.width}
@@ -49,7 +49,7 @@ export default function FeatureCard({ data, border, color, type,space ,bold}) {
             {dt.Icon != undefined && (
               <Link id="tag" href={dt.redirectURL} passHref>
                 <a id="tag">
-                  <Image
+                  <Image priority
                     id="tag"
                     src={dt.Icon.logoUrl}
                     width={dt.Icon.width}

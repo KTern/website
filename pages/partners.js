@@ -166,7 +166,7 @@ export default function Partners({ data, h_data, f_data }) {
               </div>
             </div>
             <div className=" hidden lg:block relative ml-10 z-10 w-full h-full my-16 lg:my-0 md:w-1/3">
-              <Image
+              <Image priority
                 className="relative z-40 w-full h-full"
                 src={data.PageHeader.ImageURL}
                 alt="hero image"
@@ -192,7 +192,7 @@ export default function Partners({ data, h_data, f_data }) {
               {data.PartnershipOpportunities.PartnerCard.map((dt) => (
                 <div key="dt" className="text-center p-10">
                   <div className="rounded-full mb-2">
-                    <Image
+                    <Image priority
                       className="rounded-full bg-secondary"
                       src={dt.ImageURL}
                       height={dt.ImageWidth}
@@ -244,7 +244,7 @@ export default function Partners({ data, h_data, f_data }) {
           <Carousel className="bots flex p-6  z-10" responsive={responsive}>
             {data.TrustedByLogos.map((dt) => (
               <div key="dt" className="p-3 bots-card flex-row">
-                <Image
+                <Image priority
                   className=" w-auto lg:w-100"
                   src={dt.imageURL}
                   alt={dt.imageDescription}

@@ -34,7 +34,7 @@ export default function WebinarLayout ({ data }) {
                 <div className="flex flex-row  items-center sm:h-26 max-w-lg md:p-6 mx-auto space-y-3 overflow-hidden transform -translate-y-12 bg-white rounded-lg shadow-md lg:h-24 lg:max-w-6xl lg:flex-row lg:space-y-0 lg:space-x-3">
                         <div className="mb-8  mt-10 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                             <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative">
-                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/calendar.png" alt="Calendar"/>
+                            <Image priority layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/calendar.png" alt="Calendar"/>
                             </div>
                             <div>
                             <h3 className="sm:text-center hyperlink  lg:">{data.date}</h3>
@@ -43,7 +43,7 @@ export default function WebinarLayout ({ data }) {
                         </div>
                         <div className="mb-8 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                         <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative">
-                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
+                            <Image priority layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/clock.png" alt="Calendar"/>
                             </div>
                             <div>
                             <h3 className="sm:text-center hyperlink">{data.time}</h3>
@@ -53,7 +53,7 @@ export default function WebinarLayout ({ data }) {
                         </div>
                         <div className="mb-8  flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                         <div className="block  sm:h-6 w-10 h-10 md:mr-4 relative ">
-                            <Image layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/tickets.png" alt="Calendar"/>
+                            <Image priority layout="fill" className=" w-full shadow-sm max-h-20" src="/webinar/tickets.png" alt="Calendar"/>
                             </div>
                             <div>
                             <h3 className="sm:text-center  hyperlink sm:mb-10">{data.cost}</h3>
@@ -99,7 +99,7 @@ export default function WebinarLayout ({ data }) {
                                 {data.panellist.map(member => (
                                     <div className="text-center pr-6 " key={member} >
                                             <div className=" block w-40 h-40 relative ">
-                                                <Image layout="fill" className="mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.image} alt=""/>
+                                                <Image priority layout="fill" className="mx-auto rounded-full mb-6 object-cover border-2 border-black" src={member.image} alt=""/>
                                             </div>
                                             <h3 className="mb-1   card-heading">{member.name}</h3>
                                             <p className="text-gray-500 card-subheading">{member.designation}</p>

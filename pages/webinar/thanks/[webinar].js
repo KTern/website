@@ -226,7 +226,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
                                             onClick={()=>{onClick({stream_score:resolve_stream_score(webinar_data.CssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${webinar_data.PageSEO.PageTitle}`,label:`${data.CTAText}`})}}
                                             className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                             
-                                    <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                                    <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                                     </a> 
                                     </Link>
                                     </div>

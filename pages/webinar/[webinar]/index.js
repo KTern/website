@@ -169,7 +169,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
             <div className="flex flex-row  items-center sm:h-26 max-w-lg md:p-6 mx-auto space-y-3 overflow-hidden transform -translate-y-12 bg-white rounded-lg shadow-md lg:h-24 lg:max-w-6xl lg:flex-row lg:space-y-0 lg:space-x-3">
               <div className="mb-8  mt-10 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                 <div className="block  sm:h-8 w-10 h-10 md:mr-4 relative">
-                  <Image
+                  <Image priority
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
                     src="/calendar.png"
@@ -184,7 +184,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
               </div>
               <div className="mb-8 flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                 <div className="block  sm:h-8 w-10 h-10 md:mr-4 relative">
-                  <Image
+                  <Image priority
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
                     src="/clock.png"
@@ -199,7 +199,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
               </div>
               <div className="mb-8  flex sm:flex-col items-center lg:justify-center w-1/3 px-4">
                 <div className="block  sm:h-10 w-10 h-10 md:mr-4 relative ">
-                  <Image
+                  <Image priority
                     layout="fill"
                     className=" w-full shadow-sm max-h-20"
                     src="/tickets.png"
@@ -267,7 +267,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <div className="flex items-center  py-5 rounded-xl">
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
-                        <Image
+                        <Image priority
                           width="150"
                           height="150"
                           className="mx-auto rounded-full mb-2  border-3 border-black border-solid"

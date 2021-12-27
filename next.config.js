@@ -3,8 +3,11 @@ module.exports = {
     return [
       {
         source: '/article',
-        destination: 'https://web.ktern.com/article/',
-      },
+        destination: 'https://ktern.com/article/',
+      },{
+        source:'/company/contact',
+        destination:'/contact'
+      }
     ]
   },
   target: "serverless",

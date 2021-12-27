@@ -10,7 +10,7 @@ export default function Footer({ f_data }) {
           <div className="flex   lg:mb-2 lg:mb-0 ">
             <div className="w-full  lg:w-1/3 lg:mb-2 md:mb-0">
               <Link className="  text-white   " href="#" passHref>
-                <Image
+                <Image priority
                   src={f_data.WhiteLogoUrl}
                   alt=""
                   width={150}
@@ -29,7 +29,7 @@ export default function Footer({ f_data }) {
                           target="_blank"
                           className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full"
                         >
-                          <Image
+                          <Image priority
                             src={dt.ImageUrl}
                             width="20"
                             height="30"
@@ -72,7 +72,7 @@ export default function Footer({ f_data }) {
                           {dt.OneLineStatement}
                         </div>
                         <div>
-                          <Image
+                          <Image priority
                             src={dt.DigitalStreamsLogo.imageURL}
                             alt={dt.DigitalStreamsLogo.imageDescription}
                             width={dt.DigitalStreamsLogo.width}
@@ -127,7 +127,7 @@ export default function Footer({ f_data }) {
                   <Link key="dt" href={dt.Url}>
                     <a target="_blank" className="" title={dt.Title}>
                       <div className=" ">
-                        <Image
+                        <Image priority
                           width={150}
                           src={dt.ImageUrl}
                           className="sm:w-20 mb-6 h-auto text-white "

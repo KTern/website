@@ -423,7 +423,7 @@ export default function Resources({ data, h_data, f_data }) {
                                       </svg>
                                     </span>
                                   </div>
-                                  <Image
+                                  <Image priority
                                     className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                     src={dt.ImageURL}
                                     alt="resource"
@@ -432,7 +432,7 @@ export default function Resources({ data, h_data, f_data }) {
                                   />
                                 </div>
                               ) : (
-                                <Image
+                                <Image priority
                                   className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                   src={dt.ImageURL}
                                   alt="resource"

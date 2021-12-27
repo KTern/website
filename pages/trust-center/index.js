@@ -121,7 +121,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
                 >
                   <div className=" bg-white mr-12 w-full text-black">
                     <div>
-                      <Image src={dt.IconURL} width="50" height="50" alt="Sample " />
+                      <Image priority src={dt.IconURL} width="50" height="50" alt="Sample " />
                     </div>
                     <div className="h-50">
                       <h3 className="my-2  card-heading mb-5 text-gray-800">

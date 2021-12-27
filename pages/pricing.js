@@ -207,7 +207,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={data.PricingCard[0].StreamLogoURL}
                                     alt="Digital maps"
                                     height={40}
@@ -364,7 +364,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image
+                                <Image priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -378,7 +378,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="w-full border-t">
                           {/* <button className="inline-flex items-center justify-center w-full px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"> 
                                         View All Features
-                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                        <div className="w-4 h-4 ml-2 relative"><Image priority layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
@@ -404,7 +404,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={data.PricingCard[1].StreamLogoURL}
                                     alt="Digital maps"
                                     height={40}
@@ -538,7 +538,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image
+                                <Image priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -552,7 +552,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="w-full border-t">
                           {/* <button className="inline-flex items-center justify-center w-full px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"> 
                                         View All Features
-                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                        <div className="w-4 h-4 ml-2 relative"><Image priority layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
@@ -578,7 +578,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={data.PricingCard[2].StreamLogoURL}
                                     alt="Digital process"
                                     height={40}
@@ -712,7 +712,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image
+                                <Image priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -726,7 +726,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="w-full border-t">
                           {/* <button className="inline-flex items-center justify-center w-full px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"> 
                                         View All Features
-                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                        <div className="w-4 h-4 ml-2 relative"><Image priority layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
@@ -752,7 +752,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={data.PricingCard[3].StreamLogoURL}
                                     alt="Digital process"
                                     height={40}
@@ -886,7 +886,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image
+                                <Image priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -900,7 +900,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="w-full border-t">
                           {/* <button className="inline-flex items-center justify-center w-full px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"> 
                                         View All Features
-                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                        <div className="w-4 h-4 ml-2 relative"><Image priority layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
@@ -926,7 +926,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={data.PricingCard[4].StreamLogoURL}
                                     alt="Digital mines"
                                     height={40}
@@ -1060,7 +1060,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image
+                                <Image priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -1074,7 +1074,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="w-full border-t">
                           {/* <button className="inline-flex items-center justify-center w-full px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"> 
                                         View All Features
-                                        <div className="w-4 h-4 ml-2 relative"><Image layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
+                                        <div className="w-4 h-4 ml-2 relative"><Image priority layout="fill" src="/pricing/down-arrow-svgrepo-com.svg"  alt="down arrow"/></div>
                                     </button>
                                      */}
                           <p className="mt-3 text-xs text-center text-gray-500">
@@ -1117,7 +1117,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image
+                                <Image priority
                                   src={data.PricingCard[0].StreamLogoURL}
                                   alt="Digital Maps"
                                   height={30}
@@ -1165,7 +1165,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image
+                                <Image priority
                                   src={data.PricingCard[1].StreamLogoURL}
                                   alt="Digital Projects"
                                   height={30}
@@ -1213,7 +1213,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image
+                                <Image priority
                                  src={data.PricingCard[2].StreamLogoURL}
                                   alt="Digital Process"
                                   height={30}
@@ -1260,7 +1260,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image
+                                <Image priority
                                  src={data.PricingCard[3].StreamLogoURL}
                                   alt="Digital Labs"
                                   height={30}
@@ -1307,7 +1307,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image
+                                <Image priority
                                   src={data.PricingCard[4].StreamLogoURL}
                                   alt="Digital Mines"
                                   height={30}
@@ -1356,7 +1356,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <button className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
-                            <Image
+                            <Image priority
                               layout="fill"
                               src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
@@ -1366,7 +1366,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         {/* <Link href="" passHref>
                         <a  className="flex flex-row justify-center text-center mt-2 py-3 px-8 rounded-r-xl rounded-b-xl  button  ">        
                         <span className="flex items-center justify-center w-5 h-5 bg-transparent rounded-lg ">
-                                                <Image src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
+                                                <Image priority src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
                                                 </span>        
                                 <span className="button ">&nbsp;&nbsp;Share Price</span>
                         </a>
@@ -1410,7 +1410,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image
+                              <Image priority
                                 src={data.PricingCard[0].StreamLogoURL}
                                 alt="Digital Maps"
                                 height={30}
@@ -1458,7 +1458,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image
+                              <Image priority
                                src={data.PricingCard[1].StreamLogoURL}
                                 alt="Digital Projects"
                                 height={30}
@@ -1506,7 +1506,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image
+                              <Image priority
                              src={data.PricingCard[2].StreamLogoURL}
                                 alt="Digital Process"
                                 height={30}
@@ -1553,7 +1553,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image
+                              <Image priority
                                src={data.PricingCard[3].StreamLogoURL}
                                 alt="Digital Labs"
                                 height={30}
@@ -1600,7 +1600,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image
+                              <Image priority
                                 src={data.PricingCard[4].StreamLogoURL}
                                 alt="Digital Mines"
                                 height={30}
@@ -1662,7 +1662,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
-                            <Image
+                            <Image priority
                               layout="fill"
                               src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
@@ -1673,7 +1673,7 @@ export default function Pricing({ data, h_data, f_data }) {
                       {/* <Link href="" passHref>
                         <a  className="flex flex-row justify-center text-center mt-2 py-3 px-8 rounded-r-xl rounded-b-xl  button  ">        
                         <span className="flex items-center justify-center w-5 h-5 bg-transparent rounded-lg ">
-                                                <Image src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
+                                                <Image priority src="/assets/icons/upload.png" alt="Digital Mines" height={30} width={30}/>
                                                 </span>        
                                 <span className="button ">&nbsp;&nbsp;Share Price</span>
                         </a>
@@ -1696,7 +1696,7 @@ export default function Pricing({ data, h_data, f_data }) {
             <Carousel className="bots flex p-10  " responsive={responsive}>
               {data.LogoSectionContent.map((dt) => (
                 <div key="dt" className="p-3 bots-card flex-row">
-                  <Image
+                  <Image priority
                     className=" w-auto lg:w-100"
                     src={dt.imageURL}
                     alt={dt.imageDescription}

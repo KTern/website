@@ -136,7 +136,7 @@ function onClick(data){
               </div>
             </div>
             <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-              <Image
+              <Image priority
                 width={500}
                 height={500}
                 alt="hero"
@@ -158,7 +158,7 @@ function onClick(data){
                       {/* <Link href={data.GoBackToResources.LinkURL} passHref>
                         <a 
                         className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                          <Image
+                          <Image priority
                             width={40}
                             alt="left-arrow"
                             height={20}
@@ -178,7 +178,7 @@ function onClick(data){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
                             width="20"
                             height="30"
@@ -193,7 +193,7 @@ function onClick(data){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
                             width="20"
                             height="20"
@@ -208,7 +208,7 @@ function onClick(data){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
                             width="20"
                             height="30"

@@ -198,7 +198,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image
+                                <Image priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Maps Icon"
@@ -277,7 +277,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image
+                                <Image priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"
@@ -356,7 +356,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image
+                                <Image priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"
@@ -435,7 +435,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                           <div className="relative bg-white flex flex-col justify-between flex-1  text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image
+                                <Image priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Labs Icon"
@@ -514,7 +514,7 @@ const Feature_index = ({ data, h_data, f_data }) => {
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image
+                                <Image priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"

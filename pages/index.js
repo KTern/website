@@ -215,7 +215,7 @@ function Home ({ data ,h_data,f_data}) {
 						   <Carousel className='bots flex p-6  z-10' responsive={responsive}>
             {data.TrustedByLogos.map((dt) => (
               <div key='dt' className='p-3 bots-card flex-row'>
-                <Image
+                <Image priority
                   className=' w-auto lg:w-100'
                   src={dt.imageURL}
                   alt={dt.imageDescription}
@@ -270,7 +270,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										<Image priority
 											src={data.DigitalStreamsCards[0].StreamLogo.imageURL}
 											alt={data.DigitalStreamsCards[0].StreamLogo.imageDescription}
 											height={data.DigitalStreamsCards[0].StreamLogo.height}
@@ -323,7 +323,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col p-5 bg-white h-full border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										<Image priority
 											src={data.DigitalStreamsCards[1].StreamLogo.imageURL}
 											alt={data.DigitalStreamsCards[1].StreamLogo.imageDescription}
 											height={data.DigitalStreamsCards[1].StreamLogo.height}
@@ -376,7 +376,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col h-full p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										<Image priority
 											src={data.DigitalStreamsCards[2].StreamLogo.imageURL}
 											alt={data.DigitalStreamsCards[2].StreamLogo.imageDescription}
 											height={data.DigitalStreamsCards[2].StreamLogo.height}
@@ -429,7 +429,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col h-full p-5 bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										<Image priority
 											src={data.DigitalStreamsCards[3].StreamLogo.imageURL}
 											alt={data.DigitalStreamsCards[3].StreamLogo.imageDescription}
 											height={data.DigitalStreamsCards[3].StreamLogo.height}
@@ -484,7 +484,7 @@ function Home ({ data ,h_data,f_data}) {
 							<div className="relative">
 								<div className="relative z-20 flex flex-col p-5 h-full bg-white border-2 border-gray-800">
 									<span className="flex  w-8 h-8 mb-3 mr-8 bg-transparent rounded-lg">
-										<Image
+										<Image priority
 											src={data.DigitalStreamsCards[4].StreamLogo.imageURL}
 											alt={data.DigitalStreamsCards[4].StreamLogo.imageDescription}
 											height={data.DigitalStreamsCards[4].StreamLogo.height}
@@ -542,7 +542,7 @@ function Home ({ data ,h_data,f_data}) {
 								{data.ProductUVP.map((product) => (
 									<div key="product" className="p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 mt-8">
 										<span className="flex items-center justify-center w-14 h-14 mb-8  rounded-full">
-											<Image
+											<Image priority
 												src={product.Icon.imageURL}
 												alt={product.Icon.imageDescription}
 												width={product.Icon.width}
@@ -564,7 +564,7 @@ function Home ({ data ,h_data,f_data}) {
 									<div key="dt" className=" grid-rows-3  w-full  px-12  ">
 										<div className="     rounded-full">
 										
-											<Image
+											<Image priority
 												src={dt.Icon.imageURL}
 												alt={dt.Icon.imageDescription}
 												width={dt.Icon.width}
@@ -638,7 +638,7 @@ function Home ({ data ,h_data,f_data}) {
 												}}
 											>
 												<div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk max-w-[200px] mx-0 mr-auto md:max-w-none transform transition-transform group-hover:scale-105 duration-700  mx-auto w-full">
-													<Image
+													<Image priority
 														className="mr-auto"
 														src={data.QuickLinks[0].Icon.imageURL}
 														alt={data.QuickLinks[0].Icon.imageDescription}
@@ -719,7 +719,7 @@ function Home ({ data ,h_data,f_data}) {
 										</div>
 										<div className="flex flex-col items-end -mr-4 justify-end md:hidden lg:flex w-6/12 mt-auto false ">
 											<div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk transition-transform duration-700 transform group-hover:scale-105  mx-auto w-full">
-												<Image
+												<Image priority
 													className="object-contain w-full ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4"
 													src={data.QuickLinks[1].Icon.imageURL}
 													alt={data.QuickLinks[1].Icon.imageDescription}
@@ -768,7 +768,7 @@ function Home ({ data ,h_data,f_data}) {
 										</div>
 										<div className="flex flex-col items-end -mr-4 justify-end md:hidden lg:flex w-6/12 mt-auto false ">
 											<div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk transition-transform duration-700 transform group-hover:scale-105  mx-auto w-full">
-												<Image
+												<Image priority
 													className="object-contain w-full h-auto ml-auto max-h-[150px] max-w-[150px] md:max-w-[250px] md:max-h-[250px] -mr-4"
 													src={data.QuickLinks[2].Icon.imageURL}
 													draggable="false"

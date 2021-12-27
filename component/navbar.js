@@ -359,7 +359,7 @@ export default function Navbar({ h_data }) {
           <div className="hidden lg:block">
             <Link href={h_data.Logo.Url} passHref>
               <a title={h_data.Logo.Title} className="mx-8">
-                <Image
+                <Image priority
                   className="text-lg font-medium xl:mx-20 "
                   width="130"
                   height="30"
@@ -377,7 +377,7 @@ export default function Navbar({ h_data }) {
                 title={h_data.Logo.Title}
                 className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
-                <Image
+                <Image priority
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"
@@ -875,7 +875,7 @@ export default function Navbar({ h_data }) {
                 title={h_data.Logo.Title}
                 className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
-                <Image
+                <Image priority
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"

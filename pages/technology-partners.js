@@ -177,7 +177,7 @@ export default function technical_partner({ data, h_data, f_data }) {
               </div>
             </div>
             <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-              <Image
+              <Image priority
                 className="relative z-40 w-full h-full"
                 src={data.PageHeader.ImageURL}
                 alt="hero image"
@@ -202,7 +202,7 @@ export default function technical_partner({ data, h_data, f_data }) {
                 >
                   <div className="box-border flex flex-col  h-full px-2 py-8 mx-4 leading-6 border-solid sm:items-start sm:text-left">
                     <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
-                      <Image
+                      <Image priority
                         src={data.Icon.imageURL}
                         height={data.Icon.height}
                         width={data.Icon.width}
@@ -234,7 +234,7 @@ export default function technical_partner({ data, h_data, f_data }) {
           <Carousel className="bots flex p-6  z-10" responsive={responsive}>
             {data.TrustedByLogos.map((dt) => (
               <div key="dt" className="p-3 bots-card flex-row">
-                <Image
+                <Image priority
                   className=" w-auto lg:w-100"
                   src={dt.imageURL}
                   alt={dt.imageDescription}

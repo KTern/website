@@ -142,7 +142,7 @@ feature_data.FAQ.map((dt)=>{
                   <a 
                   	onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${feature_data.PageHeader.secondaryCTA.buttonTitle}`})}}      
                   className='flex py-3 px-8 bg-white hover:bg-gray-300 hover:text-black shadow button border-2 border-black rounded-r-xl rounded-b-xl transition duration-200 button inline-block'>
-                    {/* <Image className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} /> */}
+                    {/* <Image priority className=' w-6 h-6' src='/save-file.svg' alt='save file' width={15} height={20} /> */}
                     <span className='button'>&nbsp;&nbsp;{feature_data.PageHeader.secondaryCTA.buttonTitle}</span>
                   </a>
                 </Link>
@@ -150,7 +150,7 @@ feature_data.FAQ.map((dt)=>{
             </div>
 
             <div className=' hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2'>
-              <Image
+              <Image priority
                 className='relative z-40 w-full h-full'
                 src={feature_data.PageHeader.ImageURL}
                 alt='hero image'
@@ -169,7 +169,7 @@ feature_data.FAQ.map((dt)=>{
               {feature_data.WhyFeaturePoints.map((dt) => (
                 <div key='dt' className='p-6 w-full md:w-1/2 lg:w-1/4  md:mb-8 md:mt-8 justify-center items-center '>
                   <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src={dt.Icon.imageURL} alt='' width={180} height={180} className=" rounded-full " />
+                    <Image priority src={dt.Icon.imageURL} alt='' width={180} height={180} className=" rounded-full " />
                   </div>
                   <h3 className='mb-4 text-white card-heading'>{dt.CardTitle}</h3>
                   <p className='card-subheading text-gray-200'>{dt.CardDescription}</p>
@@ -199,7 +199,7 @@ feature_data.FAQ.map((dt)=>{
                   <div className='hidden md:block flex items-center mb-8 w-1/2 sm:order-last'>
                     <div className='relative' style={{ zIndex: 0 }}>
                       <div className=' '>
-                        <Image src={dt.Icon.imageURL} alt='' width={dt.Icon.width} height={dt.Icon.height} />
+                        <Image priority src={dt.Icon.imageURL} alt='' width={dt.Icon.width} height={dt.Icon.height} />
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
@@ -223,13 +223,13 @@ feature_data.FAQ.map((dt)=>{
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
+                        <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
+                        <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
                       </div>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ feature_data.FAQ.map((dt)=>{
                   <div className='hidden md:block relative flex items-center mb-8 w-1/2'>
                     <div className='relative' style={{ zIndex: 0 }}>
                       <div className=' relative '>
-                        <Image src={dt.Icon.imageURL} alt=''  width={dt.Icon.width} height={dt.Icon.height}/>
+                        <Image priority src={dt.Icon.imageURL} alt=''  width={dt.Icon.width} height={dt.Icon.height}/>
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
@@ -261,13 +261,13 @@ feature_data.FAQ.map((dt)=>{
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
+                        <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
                       </div>
                       <div
                         className='animate-pulse hidden md:block absolute w-60 h-40'
                         style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                       >
-                        <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
+                        <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
                       </div>
                     </div>
                   </div>
@@ -398,7 +398,7 @@ feature_data.FAQ.map((dt)=>{
                                       	onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
                                       target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                       
-                              <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                              <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                               </a> 
                               </Link>
                               </div>
@@ -428,7 +428,7 @@ feature_data.FAQ.map((dt)=>{
                                       	onClick={()=>{onClick({stream_score:resolve_stream_score(feature_data.cssStreamTag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${feature_data.PageSEO.PageTitle}`,label:`${data.CTAText}+'-'${data.CardTitle}`})}}       
                                        className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                       
-                              <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                              <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                               </a> 
                               </Link>
                               </div>

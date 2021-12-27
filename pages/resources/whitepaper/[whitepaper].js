@@ -33,18 +33,19 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
   }
   return (
     <>
-      <NextSeo
+     <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}
-        canoniPal={data.PageSEO.CanonicalTag}
+        canonical={data.PageSEO.CanonicalTag}
         openGraph={{
           url: `${data.PageSEO.PageURL}`,
           title: `${data.PageSEO.PageTitle}`,
-          desPription: `${data.PageSEO.PageDescription}`,
+          description: `${data.PageSEO.PageDescription}`,
           images: [
             {
               url: `${data.PageSEO.ThumbnailImageURL}`,
               width: 1920,
+              height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
               type: "image/png",
             },
@@ -62,12 +63,12 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
           cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
           appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
         }}
-        // languageAlternates={[
-        // 	{
-        // 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
-        // 		href: `${h_data.OtherSEO.languageAlternates.href}`,
-        // 	},
-        // ]}
+        //  languageAlternates={[
+        //    {
+        //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        //      href: `${h_data.OtherSEO.languageAlternates.href}`,
+        //    },
+        //  ]}
         additionalMetaTags={[
           {
             property: "dc:creator",
@@ -130,7 +131,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
               </div>
             </div>
             <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-              <Image
+              <Image priority
                 width={500}
                 height={500}
                 alt="hero"
@@ -150,7 +151,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
                     <div className="pb-16 mb-8 border-b border-gray-400">
                       {/* <Link href={data.GoBackToResources.LinkURL} passHref>
                         <a className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
-                          <Image
+                          <Image priority
                             width={40}
                             alt="left-arrow"
                             height={20}
@@ -170,7 +171,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
                             width="20"
                             height="30"
@@ -185,7 +186,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
                             width="20"
                             height="20"
@@ -200,7 +201,7 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
                             width="20"
                             height="30"

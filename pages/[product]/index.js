@@ -218,7 +218,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* Hero Section */}
         <section className='relative md:py-10 pb-auto pb-72'>
           <div className='hidden lg:block absolute inset-0 w-full relative'>
-            <Image src='/lines.svg' alt='' layout='fill' />
+            <Image priority src='/lines.svg' alt='' layout='fill' />
           </div>
       
           <div
@@ -246,7 +246,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white border-4 border-${stream_data.cssstreamtag}-400 shadow-2xl rounded-2xl `}
             >
               <div className='rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative'>
-                <Image
+                <Image priority
                   className={`rounded-3xl  md:rounded-6xl`}
                   layout='fill'
                   src={stream_data.VideoURL}
@@ -286,7 +286,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           <Carousel className='bots flex p-10  z-10' responsive={responsive_2}>
             {stream_data.Logos.map((dt) => (
               <div key='dt' className='p-3 bots-card flex-row'>
-                <Image
+                <Image priority
                   className=' w-auto lg:w-100'
                   src={dt.logoUrl}
                   alt=''
@@ -308,7 +308,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
              {stream_data.WhyStreamPoints.map((dt)=>(
                 <div key='dt' className='p-6 w-full  md:mb-8 md:mt-8 justify-center items-center '>
                   <div className='flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white'>
-                    <Image src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height} className=" rounded-full " />
+                    <Image priority src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height} className=" rounded-full " />
                   </div>
                   <h3 className='mb-4 text-white card-heading'>{dt.CardTitle}</h3>
                   <p className='card-subheading text-gray-200'>{dt.CardDescription} </p>
@@ -320,7 +320,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* <!-- /Why Ktern --> */}
         {/* Streams Content Section */}
         <section className='px-5 pb-10 relative overflow-hidden '>
-          {/* <Image className="hidden lg:block absolute inset-0 w-full" src="/lines.svg" alt=""/> */}
+          {/* <Image priority className="hidden lg:block absolute inset-0 w-full" src="/lines.svg" alt=""/> */}
 
           {stream_data.FeaturesSection.map((dt, index) => {
             return index % 2 == 0 ? (
@@ -330,7 +330,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                     <div className='hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center'>
                       <div className='relative' style={{ zIndex: 0 }}>
                         <div className='h-128 w-full relative'>
-                          <Image
+                          <Image priority
                             className='rounded-3xl md:rounded-tl-none bg-white'
                             width={500}
                             height={400}
@@ -380,13 +380,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
+                          <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
                         </div>
                         <div
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
+                          <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
                         </div>
                       </div>
                     </div>
@@ -428,7 +428,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                     <div className='invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center'>
                       <div className='absolute mr-4' style={{ zIndex: 0 }}>
                         <div>
-                          <Image
+                          <Image priority
                             width={500}
                             height={400}
                             className='rounded-3xl md:rounded-tl-none bg-white'
@@ -478,13 +478,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
+                          <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
                         </div>
                         <div
                           className='animate-pulse hidden md:block absolute w-60 h-40'
                           style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                         >
-                          <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
+                          <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
                         </div>
                       </div>
                     </div>
@@ -499,7 +499,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                       <div className='w-full lg:w-1/2 px-4 flex items-center justify-center'>
                         <div className='relative' style={{ zIndex: 0 }}>
                           <div className='h-128 w-full relative'>
-                            <Image
+                            <Image priority
                               className='rounded-3xl md:rounded-tl-none bg-white'
                               width={500}
                               height={400}
@@ -549,13 +549,13 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                             className='animate-pulse hidden md:block absolute w-60 h-40'
                             style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
                           >
-                            <Image layout='fill' src='/bullets-gray-left.svg' alt='' />
+                            <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
                           </div>
                           <div
                             className='animate-pulse hidden md:block absolute w-60 h-40'
                             style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
                           >
-                            <Image layout='fill' src='/bullets-gray-right.svg' alt='' />
+                            <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
                           </div>
                         </div>
                       </div>
@@ -615,7 +615,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                 className={`relative shadow bots-card bg-white flex-col p-5   group overflow-hidden false border border-black hover:border-${stream_data.cssstreamtag}-primary bots-card`}
               >
                 <div className="relative bg-white flex flex-col justify-between flex-1  text-black">
-                                            <Image src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height}/>
+                                            <Image priority src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width={dt.Icon.width} height={dt.Icon.height}/>
                                             <h3 className="my-2 mt-4 text-md font-bold  text-gray-800">{dt.CardTitle}</h3>       
                                              <p className="mb-2 navbar-s text-gray-600">{dt.CardDescription}</p>
                                    
@@ -628,7 +628,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
         {/* /Bots Section */}
         {/* Testimonial Section */}
         <section className='sm:px-4 relative py-10 md:py-15 bg-black overflow-x-hidden'>
-          {/* <Image width="10%" height="10%" className="absolute h-24 md:h-auto top-0 left-0 right-0" src="/atis-assets/elements/line-top.svg" alt=""/> */}
+          {/* <Image priority width="10%" height="10%" className="absolute h-24 md:h-auto top-0 left-0 right-0" src="/atis-assets/elements/line-top.svg" alt=""/> */}
 
           <h2 className='mb-10 lg:mb-10   section-heading text-center  text-white  '>
             {stream_data.TestimonialSectionHeading}
@@ -642,10 +642,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <div className='px-6 py-12 bg-black   border border-white'>
                     <div className='relative px-4 mx-auto'>
                       <div className='absolute top-0 left-0'>
-                        <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
+                        <Image priority width='10%' height='10%' src='/quote-grey.svg' alt='' />
                       </div>
                       <div className='absolute top-0 right-0'>
-                        <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
+                        <Image priority width='10%' height='10%' src='/quote-grey.svg' alt='' />
                       </div>
                       <div className='px-4 md:px-10 flex-col text-center'>
                           <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>
@@ -665,10 +665,10 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                     <div className='px-6 py-12   bg-black border border-white'>
                       <div className='relative px-4 mx-auto'>
                         <div className='absolute top-0 left-0'>
-                          <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
+                          <Image priority width='10%' height='10%' src='/quote-grey.svg' alt='' />
                         </div>
                         <div className='absolute top-0 right-0'>
-                          <Image width='10%' height='10%' src='/quote-grey.svg' alt='' />
+                          <Image priority width='10%' height='10%' src='/quote-grey.svg' alt='' />
                         </div>
                         <div className='px-4 md:px-10 flex-col text-center'>
                           <h3 className='mb-8 card-subheading text-white '>{dt.TestimonialStatement}</h3>
@@ -711,7 +711,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                                     	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
                                      target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
-                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                            <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
@@ -738,7 +738,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                                       	onClick={()=>{onClick({stream_score:resolve_stream_score(stream_data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
                                      className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
-                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                            <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>

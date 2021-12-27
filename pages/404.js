@@ -18,13 +18,13 @@ export default function Error({ data }) {
       <section className="relative py-10 2xl:py-20  overflow-hidden background ">
        
         {/* <div className="hidden lg:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-44 lg:mt-20">
-          <Image src="/404/five-stars.svg" alt="" width={400} height={300} />
+          <Image priority src="/404/five-stars.svg" alt="" width={400} height={300} />
         </div> */}
-        {/* <div className="hidden lg:block absolute top-0 left-0 h-64 -ml-10"><Image  src="/404/blue-double-circle.svg" alt="" width={400} height={300}/></div> */}
-        {/* <div className="absolute bottom-0 left-0 h-80"><Image  src="/404/half-double-circle.svg" alt="" width={400} height={300}/></div> */}
+        {/* <div className="hidden lg:block absolute top-0 left-0 h-64 -ml-10"><Image priority  src="/404/blue-double-circle.svg" alt="" width={400} height={300}/></div> */}
+        {/* <div className="absolute bottom-0 left-0 h-80"><Image priority  src="/404/half-double-circle.svg" alt="" width={400} height={300}/></div> */}
         <div className="justify-center items-center flex-col mt-6  px-4 ">
           <div className=" mx-auto">
-            {/* <div className="mx-40 justify-center items-center flex"><Image   src="/404/error-404.svg" alt="" width={400} height={300}/></div> */}
+            {/* <div className="mx-40 justify-center items-center flex"><Image priority   src="/404/error-404.svg" alt="" width={400} height={300}/></div> */}
             <div className=" m-auto text-center  ">
               <h2 className="mb-6  text-white font-bold section-heading ">
                 {data.PageTitle}

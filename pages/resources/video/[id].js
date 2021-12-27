@@ -172,7 +172,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
                             width="20"
                             height="30"
@@ -187,7 +187,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
                             width="20"
                             height="20"
@@ -202,7 +202,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
                             width="20"
                             height="30"
@@ -239,7 +239,7 @@ export default function Video({ data,h_data,f_data,v_data }){
                                     onClick={()=>{onClick({stream_score:resolve_stream_score(dt.VideoLandingPage.DigitalStream),event_name:"Card Click",section_name:"Latest Videos Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.LatestVideoCTA}`})}}
                                     className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
-                            <Image className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.PageSEO.ThumbnailImageURL} alt={dt.VideoLandingPage.PageHeader} width="550" height="300"/>
+                            <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.PageSEO.ThumbnailImageURL} alt={dt.VideoLandingPage.PageHeader} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>

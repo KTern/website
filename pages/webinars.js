@@ -272,7 +272,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                           key="data"
                                           className="h-16 mr-6 rounded-full mr-10 "
                                         >
-                                          <Image
+                                          <Image priority
                                             width="60%"
                                             height="60%"
                                             className="w-16 h-16 mr-6 rounded-full"
@@ -294,7 +294,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                   </div>
                                   <div className="flex ">
                                     <div className="block mt-14  h-10 mr-4 relative left-0 flex flex-wrap items-center">
-                                      <Image
+                                      <Image priority
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
@@ -306,7 +306,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                       </time>
                                     </div>
                                     <div className="block mt-14  h-10 mr-4 relative left-0 flex-wrap flex items-center">
-                                      <Image
+                                      <Image priority
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
@@ -482,7 +482,7 @@ export default function Webinar({ data, h_data, f_data }) {
                                   Digital {dt.RelatedStream}
                                 </span>
                               </div>
-                              <Image
+                              <Image priority
                                 className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                 src={dt.ImageURL}
                                 alt="resource"

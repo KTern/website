@@ -134,7 +134,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1  rounded-lg"></span>
                     <div className="relative w-full h-full p-5 bg-white  rounded-lg">
                       <div className=" lg:block justify-end w-full pl-0 overflow-hidden ">
-                        <Image
+                        <Image priority
                           width={500}
                           height={400}
                           alt="hero"
@@ -166,7 +166,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                             className="no-underline">
                               <div className="flex items-center">
                                 <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                  <Image
+                                  <Image priority
                                     src={dt.ListImageURL}
                                     height={dt.height}
                                     width={dt.width}
@@ -243,7 +243,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
                             width="20"
                             height="30"
@@ -258,7 +258,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
                             width="20"
                             height="20"
@@ -273,7 +273,7 @@ const Customer_Success_Story_Landing = ({ data,h_data ,f_data}) => {
                           className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
                         >
                           
-                          <Image
+                          <Image priority
                             src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
                             width="20"
                             height="30"

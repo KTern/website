@@ -187,7 +187,7 @@ export default function TrustCenter({ data, h_data, f_data }) {
                   <div className="md:hidden block flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
                 <Link href="#top" passHref>
                   <a className=" rounded-full p-2  flex items-center justify-center text-black">
-                    <Image
+                    <Image priority
                       className=""
                       src="/up-arrow.png"
                       height="15"

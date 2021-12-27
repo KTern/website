@@ -6,7 +6,7 @@ export default function HeaderCard({data}) {
     <div id="tag" className="flex space-x-3">
       <Link id="tag" href={data.redirectURL} passHref>
       <a id="tag">
-        <Image id="tag" src={data.Icon.logoUrl} width={data.Icon.width} height={data.Icon.width} alt={data.Icon.altText} />
+        <Image priority id="tag" src={data.Icon.logoUrl} width={data.Icon.width} height={data.Icon.width} alt={data.Icon.altText} />
         </a>
       </Link>
       <Link id="tag" href={data.redirectURL}>

@@ -140,7 +140,7 @@ function onClick(data){
                 </svg>
               </div> */}
               <div className='z-10 object-cover w-full md:px-10'>
-                <Image width={500} height={400} src={data.PageHeader.ImageURL} alt='' />
+                <Image priority width={500} height={400} src={data.PageHeader.ImageURL} alt='' />
               </div>
              
             </div>
@@ -251,7 +251,7 @@ function onClick(data){
          {/* DX Innovation Hub */}
         <section className='md:w-1/2 sm:w-full text-justify   bg-white '>
         <div className="hidden md:block">
-                <Image src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={data.AcademicAlliance.Images.height} width={data.AcademicAlliance.Images.width}/>
+                <Image priority src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={data.AcademicAlliance.Images.height} width={data.AcademicAlliance.Images.width}/>
               </div>
             <p className='mb-5 card-heading text-black sm:text-center '>{data.AcademicAlliance.Title}</p>
            
@@ -285,14 +285,14 @@ function onClick(data){
           
         
            {/* <div className="hidden md:block">
-                <Image src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={300} width={500}/>
+                <Image priority src={data.AcademicAlliance.Images.imageURL} alt={data.AcademicAlliance.Images.imageDescription} height={300} width={500}/>
               </div> */}
         </section>
         {/* /DX Innovation Hub */}
         {/* Digital Dhaanam */}
         <section className=' md:w-1/2 sm:w-full text-justify bg-white '>
         <div className="hidden md:block">
-                <Image src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDescription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
+                <Image priority src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDescription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
               </div>
             <p className='mb-5 card-heading text-black sm:text-center '>{data.DigitalDhaanam.Title}</p>
          
@@ -326,7 +326,7 @@ function onClick(data){
            
           
            {/* <div className="hidden md:block">
-                <Image src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDescription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
+                <Image priority src={data.DigitalDhaanam.Images.imageURL} alt={data.DigitalDhaanam.Images.imageDescription} height={data.DigitalDhaanam.Images.height} width={data.DigitalDhaanam.Images.width}/>
               </div> */}
         </section>
         {/* /Digital Dhaanam */}
@@ -351,7 +351,7 @@ function onClick(data){
                     </div>
                     <div className="grid grid-cols-1 mt-10 gap-14 lg:grid-cols-3">
                         {data.FastFacts.Steps.map((dt)=>(<div key="dt" className="flex text-white">
-                            <div className="pr-5"><Image src={dt.stepicon} height={40} width={40} alt=""/></div>
+                            <div className="pr-5"><Image priority src={dt.stepicon} height={40} width={40} alt=""/></div>
                             <div className="relative space-y-2">
                                 <h4 className="card-heading">{dt.StepTitle}</h4>
                                 <p className="card-subheading text-gray-300">{dt.StepDescription}
@@ -368,7 +368,7 @@ function onClick(data){
                     <p className="card-heading text-gray-400 uppercase">{data.ourcustomerstitle}</p>
                     <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
                         {data.TrustedByLogos.map((dt)=>(<div key="dt">
-                          <Image src={dt.imageURL} height={dt.height} width={dt.width} alt={dt.imageDescription}/>
+                          <Image priority src={dt.imageURL} height={dt.height} width={dt.width} alt={dt.imageDescription}/>
                         </div>))}
                     </div>
                 </div>
