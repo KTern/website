@@ -1,14 +1,25 @@
 module.exports = {
   async rewrites() {
-    return [
-      {
-        source: '/article',
-        destination: 'https://ktern.com/article/',
-      },{
-        source:'/company/contact',
-        destination:'/contact'
-      }
-    ]
+    return {
+      beforeFiles: [
+        // These rewrites are checked after headers/redirects
+        // and before all files including _next/public files which
+        // allows overriding page files
+        {
+          source: '/company/contact',
+          destination: '/contact',
+        },
+      ],
+     
+      fallback: [
+        // These rewrites are checked after both pages/public files
+        // and dynamic routes are checked
+        {
+          source: '/company/contact',
+          destination: `https://ktern.com/contact`,
+        },
+      ],
+    }
   },
   target: "serverless",
   reactStrictMode: true,
