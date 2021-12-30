@@ -488,7 +488,7 @@ export default function Navbar({ h_data }) {
           </div>
         </div>
       </nav>
-
+{/* Mobile Menu */}
       <div id="navbar-menu" className="py-20 z-50 hidden relative bg-white">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav className="py-2  nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm  px-6 bg-white border-r overflow-y-auto">
@@ -526,83 +526,48 @@ export default function Navbar({ h_data }) {
           </div>
           <div>
             <ul>
-              <li className="toggleable hover:bg-secondary bg-white ">
+            <li className="toggleable hover:bg-secondary bg-white ">
                 <input
                   type="checkbox"
                   value="selected"
                   id="toggle-sm-one"
-                  className="toggle-input  "
+                  className="toggle-input "
                 />
                 <label
                   htmlFor="toggle-sm-one"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  "
+                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
                 >
                   Products
                 </label>
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
+                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
-                  <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
+                    <ul className="bg-white px-4 w-full   border-gray-300  pb-6 pt-6 ">
                       <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                        {h_data.Streams}
+                       Products
                       </h3>
-                      <li className="hover:bg-secondary ">
-                        <Link href="/digital-maps">
-                          <a
-                            htmlFor="toggle-sm-two"
-                            className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                          >
-                            Digital Maps
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="hover:bg-secondary ">
-                        <Link href="/digital-projects">
-                          <a
-                            htmlFor="toggle-sm-two"
-                            className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                          >
-                            Digital Projects
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="hover:bg-secondary ">
-                        <Link href="/digital-process">
-                          <a
-                            htmlFor="toggle-sm-two"
-                            className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                          >
-                            Digital Process
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="hover:bg-secondary ">
-                        <Link href="/digital-labs">
-                          <a
-                            htmlFor="toggle-sm-two"
-                            className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                          >
-                            Digital Labs
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="hover:bg-secondary ">
-                        <Link href="/digital-mines">
-                          <a
-                            htmlFor="toggle-sm-two"
-                            className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                          >
-                            Digital Mines
-                          </a>
-                        </Link>
-                      </li>
+                      {h_data.Products.map((dt) => (
+                        <li key="dt" className="hover:bg-secondary ">
+                         
+                         
+                            <Link href={dt.redirectURL} passHref>
+                              <a
+                                htmlFor="toggle-sm-two"
+                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
+                              >
+                                {dt.Title}
+                              </a>
+                            </Link>
+                        
+                        </li>
+                      ))}
                       <li className="mt-4 hover:bg-secondary">
-                        <Link href="/pricing" passHref>
+                        <Link href={h_data.cta.linkURL} passHref>
                           <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">
-                            See Pricing
+                            {h_data.cta.buttonTitle}
                             <svg
                               className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
                               fill="none"
@@ -643,7 +608,7 @@ export default function Navbar({ h_data }) {
                   className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
                   <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
                       <h3 className="navbar-h uppercase text-black text-bold mb-2">
                         Resources
                       </h3>
@@ -719,7 +684,7 @@ export default function Navbar({ h_data }) {
                   className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
                   <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
                       <h3 className="navbar-h uppercase text-black text-bold mb-2">
                         Partners
                       </h3>
@@ -760,31 +725,34 @@ export default function Navbar({ h_data }) {
                   type="checkbox"
                   value="selected"
                   id="toggle-sm-four"
-                  className="toggle-input  "
+                  className="toggle-input "
                 />
                 <label
                   htmlFor="toggle-sm-four"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  "
+                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
                 >
                   Company
                 </label>
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
+                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
-                  <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
+                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
                       <h3 className="navbar-h uppercase text-black text-bold mb-2">
                         Company
                       </h3>
                       {h_data.CompanyList.map((dt) => (
                         <li key="dt" className="hover:bg-secondary ">
                           {dt.OpenInNewTab && (
-                            <Link target="_blank" href={dt.redirectURL}>
+                            <Link
+                              target="_blank"
+                              href={dt.redirectURL}
+                              passHref
+                            >
                               <a
-                                title={dt.Title}
-                                htmlFor="toggle-sm-two"
+                                htmlFor="toggle-sm-three"
                                 className="block cursor-pointer navbar-s py-2 lg:p-6  "
                               >
                                 {dt.Title}
@@ -792,10 +760,9 @@ export default function Navbar({ h_data }) {
                             </Link>
                           )}
                           {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL}>
+                            <Link href={dt.redirectURL} passHref>
                               <a
-                                title={dt.Title}
-                                htmlFor="toggle-sm-two"
+                                htmlFor="toggle-sm-three"
                                 className="block cursor-pointer navbar-s py-2 lg:p-6  "
                               >
                                 {dt.Title}
@@ -813,31 +780,34 @@ export default function Navbar({ h_data }) {
                   type="checkbox"
                   value="selected"
                   id="toggle-sm-five"
-                  className="toggle-input  "
+                  className="toggle-input "
                 />
                 <label
                   htmlFor="toggle-sm-five"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header bg-white  "
+                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
                 >
                   Support
                 </label>
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
+                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
-                  <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
+                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
                       <h3 className="navbar-h uppercase text-black text-bold mb-2">
                         Support
                       </h3>
                       {h_data.SupportList.map((dt) => (
                         <li key="dt" className="hover:bg-secondary ">
                           {dt.OpenInNewTab && (
-                            <Link target="_blank" href={dt.redirectURL}>
+                            <Link
+                              target="_blank"
+                              href={dt.redirectURL}
+                              passHref
+                            >
                               <a
-                                title={dt.Title}
-                                htmlFor="toggle-sm-two"
+                                htmlFor="toggle-sm-three"
                                 className="block cursor-pointer navbar-s py-2 lg:p-6  "
                               >
                                 {dt.Title}
@@ -845,10 +815,9 @@ export default function Navbar({ h_data }) {
                             </Link>
                           )}
                           {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL}>
+                            <Link href={dt.redirectURL} passHref>
                               <a
-                                title={dt.Title}
-                                htmlFor="toggle-sm-two"
+                                htmlFor="toggle-sm-three"
                                 className="block cursor-pointer navbar-s py-2 lg:p-6  "
                               >
                                 {dt.Title}
@@ -863,11 +832,11 @@ export default function Navbar({ h_data }) {
               </li>
             </ul>
           </div>
-          <div className="pt-6 flex-col space-y-6">
+          <div className="pt-6 mx-4 flex-col space-x-6">
             <Link href={h_data.PrimaryCTA.linkURL}>
               <a
                 title={h_data.PrimaryCTA.buttonTitle}
-                className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                className="uppercase text-sm font-bold"
               >
                 {h_data.PrimaryCTA.buttonTitle}
               </a>
