@@ -199,10 +199,10 @@ export default function Navbar({ h_data }) {
                     <div className="grid grid-cols-5 gap-6 mx-auto">
                       {h_data.Products.map((dt) => (
                         <Link key="dt" href={dt.redirectURL}>
-                          <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-3 duration-500 ">
+                          <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-5 duration-500 ">
                             
                             <div
-                              className={`relative  rounded-lg shadow w-full bg-white flex-col p-3   group overflow-hidden false shadow-xl  `}
+                              className={`relative  rounded-lg  w-full bg-white flex-col p-3   group overflow-hidden false shadow-xl  `}
                             >
                               <div className=" bg-white mr-12 w-full text-black">
                                 <p className={`uppercase text-${dt.css}-primary hyperlink mb-2`}>{dt.tagPhrase}</p>
