@@ -18,235 +18,11 @@ function closeNav() {
     document.getElementById("navbar-menu").style.display = "none";
   }
 }
-function handleClickOutside(event) {
-  // console.log(event);
 
-  document.getElementById("toggle-1").style.display = "none";
-  document.getElementById("toggle-2").style.display = "none";
-  document.getElementById("toggle-3").style.display = "none";
-  document.getElementById("toggle-4").style.display = "none";
-  document.getElementById("toggle-5").style.display = "none";
-}
-
-function useOutsideAlerter() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event) {
-      // console.log("outsider", ref.current, event.target);
-      if (
-        ref.current &&
-        !ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        document.getElementById("toggle-1").style.display = "none";
-        document.getElementById("toggle-2").style.display = "none";
-        document.getElementById("toggle-3").style.display = "none";
-        document.getElementById("toggle-5").style.display = "none";
-        document.getElementById("toggle-4").style.display = "none";
-      }
-    }
-
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-
-  return [ref, ready];
-}
-function checkAll(a, b, c, d) {
-  if (document.getElementById(a).style.display == "block") {
-    document.getElementById(a).style.display = "none";
-  }
-  if (document.getElementById(b).style.display == "block") {
-    document.getElementById(b).style.display = "none";
-  }
-  if (document.getElementById(c).style.display == "block") {
-    document.getElementById(c).style.display = "none";
-  }
-  if (document.getElementById(d).style.display == "block") {
-    document.getElementById(d).style.display = "none";
-  }
-}
-function useProducts() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      //    console.log("products",event.target.id)
-
-      if (
-        ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        if (document.getElementById("toggle-1").style.display == "block") {
-          document.getElementById("toggle-1").style.display = "none";
-          document.getElementById("toggle-2").style.display = "none";
-          document.getElementById("toggle-3").style.display = "none";
-          document.getElementById("toggle-4").style.display = "none";
-          document.getElementById("toggle-5").style.display = "none";
-        } else {
-          checkAll("toggle-2", "toggle-3", "toggle-4", "toggle-5");
-          document.getElementById("toggle-1").style.display = "block";
-        }
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref.current]);
-
-  return [ref, ready];
-}
-function useResources() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    function handleClickOutside(event) {
-      //    console.log("Resources",event)
-      if (
-        ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        if (document.getElementById("toggle-2").style.display == "block") {
-          document.getElementById("toggle-1").style.display = "none";
-          document.getElementById("toggle-2").style.display = "none";
-          document.getElementById("toggle-3").style.display = "none";
-          document.getElementById("toggle-4").style.display = "none";
-          document.getElementById("toggle-5").style.display = "none";
-        } else {
-          checkAll("toggle-1", "toggle-3", "toggle-4", "toggle-5");
-          document.getElementById("toggle-2").style.display = "block";
-        }
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref.current]);
-
-  return [ref, ready];
-}
-function usePartners() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        if (document.getElementById("toggle-3").style.display == "block") {
-          document.getElementById("toggle-1").style.display = "none";
-          document.getElementById("toggle-2").style.display = "none";
-          document.getElementById("toggle-3").style.display = "none";
-          document.getElementById("toggle-4").style.display = "none";
-          document.getElementById("toggle-5").style.display = "none";
-        } else {
-          checkAll("toggle-1", "toggle-2", "toggle-4", "toggle-5");
-          document.getElementById("toggle-3").style.display = "block";
-        }
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref.current]);
-
-  return [ref, ready];
-}
-function useCompany() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      // console.log("Company", ref.current.contains(event.target) , event.target.tagName.toLowerCase() != 'a' , event.target.id!='tag')
-      if (
-        ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        if (document.getElementById("toggle-4").style.display == "block") {
-          document.getElementById("toggle-1").style.display = "none";
-          document.getElementById("toggle-2").style.display = "none";
-          document.getElementById("toggle-3").style.display = "none";
-          document.getElementById("toggle-4").style.display = "none";
-          document.getElementById("toggle-5").style.display = "none";
-        } else {
-          checkAll("toggle-1", "toggle-2", "toggle-3", "toggle-5");
-          document.getElementById("toggle-4").style.display = "block";
-        }
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref.current]);
-
-  return [ref, ready];
-}
-function useSupport() {
-  const ref = useRef();
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        ref.current.contains(event.target) &&
-        event.target.tagName.toLowerCase() != "a" &&
-        event.target.id != "tag"
-      ) {
-        if (document.getElementById("toggle-5").style.display == "block") {
-          document.getElementById("toggle-1").style.display = "none";
-          document.getElementById("toggle-2").style.display = "none";
-          document.getElementById("toggle-3").style.display = "none";
-          document.getElementById("toggle-4").style.display = "none";
-          document.getElementById("toggle-5").style.display = "none";
-        } else {
-          checkAll("toggle-1", "toggle-2", "toggle-3", "toggle-4");
-          document.getElementById("toggle-5").style.display = "block";
-        }
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref.current]);
-
-  return [ref, ready];
-}
 export default function Navbar({ h_data }) {
   // console.log("Navbar",h_data)
   const router = useRouter();
-  const [overall, overallReady] = useOutsideAlerter();
-  const [products, productReady] = useProducts();
-  const [resources, resourceReady] = useResources();
-  const [partners, partnersReady] = usePartners();
-  const [company, companyReady] = useCompany();
-  const [support, supportReady] = useSupport();
+
   // const [ headerNew, changeHeader ] = useState(false);
   const [isProjectShown, setIsProjectShown] = useState(true);
   const [isProcessShown, setIsProcessShown] = useState(false);
@@ -287,16 +63,15 @@ export default function Navbar({ h_data }) {
   };
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    router.events.on("routeChangeComplete", handleClickOutside);
+
     return () => {
       window.removeEventListener("scroll", listenToScroll);
-      router.events.on("routeChangeComplete", handleClickOutside);
     };
   }, []);
 
   return (
     <>
-      <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md" ref={overall}>
+      <nav className="p-0 bg-white  w-full   fixed z-1 shadow-md">
         {/* Top banner */}
         {isVisible &&
           isOpen &&
@@ -359,7 +134,8 @@ export default function Navbar({ h_data }) {
           <div className="hidden lg:block">
             <Link href={h_data.Logo.Url} passHref>
               <a title={h_data.Logo.Title} className="mx-8">
-                <Image priority
+                <Image
+                  priority
                   className="text-lg font-medium xl:mx-20 "
                   width="130"
                   height="30"
@@ -377,7 +153,8 @@ export default function Navbar({ h_data }) {
                 title={h_data.Logo.Title}
                 className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
-                <Image priority
+                <Image
+                  priority
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"
@@ -387,7 +164,7 @@ export default function Navbar({ h_data }) {
             </Link>
           </div>
           {/* /KTern Logo mobile */}
-          {/* Mobile Menu */}
+          {/* Mobile Menu Icon*/}
           <div className="lg:hidden py-2">
             <button
               className="navbar-burger flex items-center mr-5 p-2 hover:bg-gray-50 rounded"
@@ -403,269 +180,120 @@ export default function Navbar({ h_data }) {
               </svg>
             </button>
           </div>
-          {/* /Mobile Menu */}
-          <div className="hidden lg:flex p-0">
-            <ul className=" flex space-x-2  xl:space-x-10">
-              <li className="toggleable  hover:bg-secondary" ref={products}>
-                {/* <li className="toggleable  " onMouseLeave={() => { setIsLabsShown(false); setIsMinesShown(false); setIsMapsShown(false); setIsProcessShown(false); setIsProjectShown(true) }}> */}
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-one"
-                  className="toggle-input"
-                />
+          {/* /Mobile Menu Icon*/}
+          {/* Header menu */}
+          <div className="hidden lg:flex ">
+            <ul className="container flex ">
+              <li className="hoverable hover:border-2 hover:bg-secondary">
                 <label
-                  htmlFor="toggle-one"
-                  id="label"
-                  className="block cursor-pointer  px-2 lg:p-5 header  "
-                  onMouseEnter={() => {
-                    setIsLabsShown(false);
-                    setIsMinesShown(false);
-                    setIsMapsShown(true);
-                    setIsProcessShown(false);
-                    setIsProjectShown(false);
-                  }}
+                  htmlFor="toggle-products"
+                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
                 >
                   Products
                 </label>
-                <div
-                  id="toggle-1"
-                  role="toggle"
-                  className="px-6 py-2   mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
-                >
-                  <div id="tag" className="flex space-x-6 divide-x">
-                    <ul
-                      id="tag"
-                      className=" bg-white px-4 w-full sm:w-1/2 lg:w-2/6   pb-2 pt-2 lg:pt-2"
-                    >
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 "
-                      >
-                        {h_data.StreamsTitle}
-                      </h3>
-                      <div id="tag" className="flex-col ">
-                        <li id="tag">
-                          <Link href="/digital-maps" id="tag" passHref>
-                            <a
-                              onMouseEnter={() => {
-                                setIsLabsShown(false);
-                                setIsMinesShown(false);
-                                setIsMapsShown(true);
-                                setIsProcessShown(false);
-                                setIsProjectShown(false);
-                              }}
-                              className=" block p-2  text-black hover:bg-maps-secondary rounded-md py-2 "
+                <div id="toggle-2" role="toggle" className="mega-menu   ">
+                  <div
+                    id="tag"
+                    className="space-x-10 flex-col  bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
+                  >
+                    <div className="grid grid-cols-5 gap-6 mx-auto">
+                      {h_data.Products.map((dt) => (
+                        <Link key="dt" href={dt.redirectURL}>
+                          <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-3 duration-500 ">
+                            
+                            <div
+                              className={`relative  rounded-lg shadow w-full bg-white flex-col p-3   group overflow-hidden false shadow-xl  `}
                             >
-                              <HeaderCard id="tag" data={h_data.DigitalMaps} />
-                            </a>
-                          </Link>
-                        </li>
-                        <li id="tag">
-                          <Link href="/digital-projects" passHref>
-                            <a
-                              onMouseEnter={() => {
-                                setIsLabsShown(false);
-                                setIsMinesShown(false);
-                                setIsMapsShown(false);
-                                setIsProcessShown(false);
-                                setIsProjectShown(true);
-                              }}
-                              className=" block p-2  text-black hover:bg-projects-secondary rounded-md py-2 "
-                            >
-                              <HeaderCard data={h_data.DigitalProjects} />
-                            </a>
-                          </Link>
-                        </li>
-                        <li id="tag">
-                          <Link href="/digital-process" passHref>
-                            <a
-                              onMouseEnter={() => {
-                                setIsLabsShown(false);
-                                setIsMinesShown(false);
-                                setIsMapsShown(false);
-                                setIsProcessShown(true);
-                                setIsProjectShown(false);
-                              }}
-                              className=" block p-2  text-black hover:bg-process-secondary rounded-md py-2 "
-                            >
-                              <HeaderCard data={h_data.DigitalProcess} />
-                            </a>
-                          </Link>
-                        </li>
-                        <li id="tag">
-                          <Link href="/digital-labs" passHref>
-                            <a
-                              onMouseEnter={() => {
-                                setIsLabsShown(true);
-                                setIsMinesShown(false);
-                                setIsMapsShown(false);
-                                setIsProcessShown(false);
-                                setIsProjectShown(false);
-                              }}
-                              className=" block p-2  text-black hover:bg-labs-secondary rounded-md py-2 "
-                            >
-                              <HeaderCard data={h_data.DigitalLabs} />
-                            </a>
-                          </Link>
-                        </li>
-                        <li id="tag">
-                          <Link href="/digital-mines" passHref>
-                            <a
-                              onMouseEnter={() => {
-                                setIsLabsShown(false);
-                                setIsMinesShown(true);
-                                setIsMapsShown(false);
-                                setIsProcessShown(false);
-                                setIsProjectShown(false);
-                              }}
-                              className=" block p-2  text-black hover:bg-mines-secondary rounded-md py-2 "
-                            >
-                              <HeaderCard data={h_data.DigitalMines} />
-                            </a>
-                          </Link>
-                        </li>
-                        <li className="mx-2 " id="tag">
-                          <Link href="/pricing" passHref>
-                            <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">
-                              See Pricing
-                              <svg
-                                className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                ></path>
-                              </svg>
-                            </a>
-                          </Link>
-                        </li>
-                      </div>
-                    </ul>
-                    <div id="tag" className="w-4/6 px-10 mx-auto ">
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 mt-3"
-                      >
-                        {h_data.FeatureTitle}
-                      </h3>
-                      {isProjectShown && (
-                        <FeatureCard
-                          id="tag"
-                          border={"none"}
-                          type="cols"
-                          space="4"
-                          color={"bg-projects-secondary"}
-                          data={h_data.DigitalProjectsFeatureList}
-                          bold={"font-semibold"}
-                        />
-                      )}
-                      {isProcessShown && (
-                        <FeatureCard
-                          id="tag"
-                          border={"none"}
-                          type="cols"
-                          bold={"font-semibold"}
-                          space="4"
-                          color={"bg-process-secondary"}
-                          data={h_data.DigitalProcessFeatureList}
-                        />
-                      )}
-                      {isMapsShown && (
-                        <FeatureCard
-                          id="tag"
-                          border={"none"}
-                          bold={"font-semibold"}
-                          type="cols"
-                          space="4"
-                          color={"bg-maps-secondary"}
-                          data={h_data.DigitalMapsFeatureList}
-                        />
-                      )}
-                      {isMinesShown && (
-                        <FeatureCard
-                          id="tag"
-                          border={"none"}
-                          type="cols"
-                          bold={"font-semibold"}
-                          space="4"
-                          color={"bg-mines-secondary"}
-                          data={h_data.DigitalMinesFeatureList}
-                        />
-                      )}
-                      {isLabsShown && (
-                        <FeatureCard
-                          id="tag"
-                          bold={"font-semibold"}
-                          border={"none"}
-                          type="cols"
-                          space="4"
-                          color={"bg-labs-secondary"}
-                          data={h_data.DigitalLabsFeatureList}
-                        />
-                      )}
-                      <Link id="tag" href="/features" passHref>
-                        <a
-                          id="tag"
-                          className="px-2 py-4 inline-flex h-1/8 items-center pb-1 bottom-0  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400 justify-end"
-                        >
-                          See All Features
-                          <svg
-                            id="tag"
-                            className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              id="tag"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </Link>
+                              <div className=" bg-white mr-12 w-full text-black">
+                                <p className={`uppercase text-${dt.css}-primary hyperlink mb-2`}>{dt.tagPhrase}</p>
+                                <div className="h-50">
+                                <Image
+                                      priority
+                                      src={dt.Logo.logoUrl}
+                                      width={dt.Logo.width}
+                                      height={dt.Logo.height}
+                                      alt={dt.Logo.altText}
+                                    />
+                                  <div className="flex space-x-8">
+                                    
+                                    <div>
+                                      <h3 className=" font-bold text-md mb-2 text-gray-800">
+                                        {dt.Title}
+                                      </h3>
+                                      <p className="text-sm">
+                                        {dt.Description}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                      ))}
+
                     </div>
+                   <div className="flex justify-end pt-4"> <Link href={h_data.cta.linkURL} passHref>
+                              <a
+                              // onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
+                               className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">
+                                {h_data.cta.buttonTitle}
+                                </span>
+                                <svg
+                                  className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                  ></path>
+                                </svg>
+                              </a>
+                            </Link>
+                            </div>
                   </div>
+                 
                 </div>
               </li>
-              <li className="toggleable  hover:bg-secondary" ref={resources}>
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-resources"
-                  className="toggle-input"
-                />
+              <li className="hoverable hover:border-2  hover:bg-secondary">
                 <label
                   htmlFor="toggle-resources"
-                  className="block cursor-pointer py-3 px-2 lg:p-5 header  "
+                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
                 >
                   Resources
                 </label>
-                <div
-                  id="toggle-2"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
-                >
-                  <div id="tag" className="flex space-x-6 divide-x">
+                <div id="toggle-2" role="toggle" className="mega-menu   ">
+                  <div
+                    id="tag"
+                    className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
+                  >
                     <div id="tag" className="w-2/6 px-4 h-full  ">
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 mt-2"
-                      >
-                        {h_data.Resources.SectionTitle}
-                      </h3>
-
-                      <FeatureCard
+                      <div>
+                        <h3 className="text-lg mb-2 font-bold">
+                          {h_data.Resources.WhatsNewSection.Title}
+                        </h3>
+                        <p className="text-md mb-6">
+                          {h_data.Resources.WhatsNewSection.Description}
+                        </p>
+                        <Link
+                          href={h_data.Resources.WhatsNewSection.redirectURL}
+                          passhref
+                        >
+                          <a
+                            title={h_data.Resources.WhatsNewSection.Title}
+                            className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                          >
+                            {h_data.Resources.WhatsNewSection.ctaText}
+                          </a>
+                        </Link>
+                      </div>
+                      {/* <FeatureCard
                         id="tag"
                         border={"border"}
                         type={"rows"}
@@ -673,7 +301,7 @@ export default function Navbar({ h_data }) {
                         bold={"none"}
                         color={"bg-secondary"}
                         data={h_data.Resources.WhatsNewSection}
-                      />
+                      /> */}
                     </div>
                     <div className="w-4/6 px-6  ">
                       <FeatureCard
@@ -689,42 +317,38 @@ export default function Navbar({ h_data }) {
                   </div>
                 </div>
               </li>
-              <li className="toggleable  hover:bg-secondary" ref={partners}>
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-partners"
-                  className="toggle-input"
-                />
+              <li className="hoverable hover:border-2  hover:bg-secondary">
                 <label
                   htmlFor="toggle-partners"
-                  className="block cursor-pointer py-3 px-2 lg:p-5 header  "
+                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
                 >
                   Partners
                 </label>
-                <div
-                  id="toggle-3"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
-                >
-                  <div id="tag" className="flex space-x-6 divide-x">
+                <div id="toggle-3" role="toggle" className="mega-menu   ">
+                  <div
+                    id="tag"
+                    className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
+                  >
                     <div id="tag" className="w-2/6 px-4 h-full  ">
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 mt-3"
-                      >
-                        {h_data.Partners.SectionTitle}
-                      </h3>
-
-                      <FeatureCard
-                        id="tag"
-                        border={"border"}
-                        type={"rows"}
-                        space="4"
-                        color={"bg-secondary"}
-                        bold={"none"}
-                        data={h_data.Partners.WhatsNewSection}
-                      />
+                      <div>
+                        <h3 className="text-lg mb-2 font-bold">
+                          {h_data.Partners.WhatsNewSection.Title}
+                        </h3>
+                        <p className="text-md mb-6">
+                          {h_data.Partners.WhatsNewSection.Description}
+                        </p>
+                        <Link
+                          href={h_data.Partners.WhatsNewSection.redirectURL}
+                          passhref
+                        >
+                          <a
+                            title={h_data.Partners.WhatsNewSection.Title}
+                            className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                          >
+                            {h_data.Partners.WhatsNewSection.ctaText}
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
@@ -740,42 +364,38 @@ export default function Navbar({ h_data }) {
                   </div>
                 </div>
               </li>
-              <li className="toggleable  hover:bg-secondary" ref={company}>
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-Company"
-                  className="toggle-input"
-                />
+              <li className="hoverable hover:border-2  hover:bg-secondary">
                 <label
                   htmlFor="toggle-Company"
-                  className="block cursor-pointer py-3 px-2 lg:p-5 header  "
+                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
                 >
                   Company
                 </label>
-                <div
-                  id="toggle-4"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
-                >
-                  <div id="tag" className="flex space-x-6 divide-x">
+                <div id="toggle-4" role="toggle" className="mega-menu   ">
+                  <div
+                    id="tag"
+                    className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
+                  >
                     <div id="tag" className="w-2/6 px-4 h-full  ">
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 mt-3"
-                      >
-                        {h_data.Company.SectionTitle}
-                      </h3>
-
-                      <FeatureCard
-                        id="tag"
-                        border={"border"}
-                        type={"rows"}
-                        space="4"
-                        bold={"none"}
-                        color={"bg-secondary"}
-                        data={h_data.Company.WhatsNewSection}
-                      />
+                      <div>
+                        <h3 className="text-lg mb-2 font-bold">
+                          {h_data.Company.WhatsNewSection.Title}
+                        </h3>
+                        <p className="text-md mb-6">
+                          {h_data.Company.WhatsNewSection.Description}
+                        </p>
+                        <Link
+                          href={h_data.Company.WhatsNewSection.redirectURL}
+                          passhref
+                        >
+                          <a
+                            title={h_data.Company.WhatsNewSection.Title}
+                            className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                          >
+                            {h_data.Company.WhatsNewSection.ctaText}
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
@@ -791,7 +411,7 @@ export default function Navbar({ h_data }) {
                   </div>
                 </div>
               </li>
-              <li className="toggleable  hover:bg-secondary" ref={support}>
+              <li className="hoverable hover:border-2  hover:bg-secondary">
                 <input
                   type="checkbox"
                   value="selected"
@@ -800,33 +420,35 @@ export default function Navbar({ h_data }) {
                 />
                 <label
                   htmlFor="toggle-Support"
-                  className="block cursor-pointer py-3 px-2 lg:p-5 header  "
+                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
                 >
                   Support
                 </label>
-                <div
-                  id="toggle-5"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
-                >
-                  <div id="tag" className="flex space-x-6 divide-x">
+                <div id="toggle-5" role="toggle" className="mega-menu   ">
+                  <div
+                    id="tag"
+                    className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
+                  >
                     <div id="tag" className="w-2/6 px-4 h-full  ">
-                      <h3
-                        id="tag"
-                        className="hyperlink text-gray-500 text-bold mb-2 mt-3"
-                      >
-                        {h_data.Support.SectionTitle}
-                      </h3>
-
-                      <FeatureCard
-                        id="tag"
-                        border={"border"}
-                        type={"rows"}
-                        space="4"
-                        color={"bg-secondary"}
-                        data={h_data.Support.WhatsNewSection}
-                        bold={"none"}
-                      />
+                      <div>
+                        <h3 className="text-lg mb-2 font-bold">
+                          {h_data.Support.WhatsNewSection.Title}
+                        </h3>
+                        <p className="text-md mb-6">
+                          {h_data.Support.WhatsNewSection.Description}
+                        </p>
+                        <Link
+                          href={h_data.Support.WhatsNewSection.redirectURL}
+                          passhref
+                        >
+                          <a
+                            title={h_data.Support.WhatsNewSection.Title}
+                            className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                          >
+                            {h_data.Support.WhatsNewSection.ctaText}
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
@@ -844,6 +466,7 @@ export default function Navbar({ h_data }) {
               </li>
             </ul>
           </div>
+          {/* /Header menu */}
           <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
             <Link href={h_data.PrimaryCTA.linkURL} passhref>
               <a
@@ -875,7 +498,8 @@ export default function Navbar({ h_data }) {
                 title={h_data.Logo.Title}
                 className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
-                <Image priority
+                <Image
+                  priority
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"
@@ -918,7 +542,7 @@ export default function Navbar({ h_data }) {
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
+                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
                 >
                   <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                     <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -1016,7 +640,7 @@ export default function Navbar({ h_data }) {
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
+                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
                   <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -1092,7 +716,7 @@ export default function Navbar({ h_data }) {
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
+                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
                 >
                   <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                     <ul className="bg-white px-4 w-full  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -1147,7 +771,7 @@ export default function Navbar({ h_data }) {
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
+                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
                 >
                   <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                     <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
@@ -1200,7 +824,7 @@ export default function Navbar({ h_data }) {
                 <div
                   id="toggle"
                   role="toggle"
-                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white  border-2 border-gray-300"
+                  className="p-6 z-50 mega-menu mb-16 sm:mb-0 shadow-2xl  "
                 >
                   <div className=" container bg-white mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
                     <ul className="bg-white px-4 w-full z-0  lg:w-1/4 border-gray-300 lg:border-b lg:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">

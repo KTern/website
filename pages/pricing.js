@@ -15,6 +15,7 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../component/page_event";
+import Markdown from "markdown-to-jsx";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -191,6 +192,7 @@ export default function Pricing({ data, h_data, f_data }) {
             <div className="flex flex-row">
               <div className="md:w-3/5 w-full  mr-10">
                 <div className="flex flex-wrap">
+                  {/*Maps  */}
                   <div className="w-full mb-3">
                     <div
                       id="maps"
@@ -277,7 +279,20 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                        <div className="flex">
+                        <div className="border-t  pt-5 mb-6 pb-1">
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
+                          </div>
+                          {data.PricingCard[0].Bots.map((dt) => (
+                            <div
+                              key="dt"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white  text-black rounded-full"
+                            >
+                             <div> {dt.listItem}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex border-b mb-5 pb-2">
                           <div className=" justify-between pt-6 border-t w-1/2">
                             <h2 className="mb-3 text-lg font-bold  ">
                               Key Features
@@ -339,21 +354,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               </p>
                             ))}
                           </div>
-                        </div>
-                        <div className="border-t border-b pt-5 mb-6 pb-2">
-                          <div className="flex flex-row justify-between">
-                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
-                          </div>
-                          {data.PricingCard[0].Bots.map((dt) => (
-                            <div
-                              key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white  text-black rounded-full"
-                            >
-                             <div> {dt.listItem}</div>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="">
+                        </div>  
+                        <div className=" ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -388,6 +390,8 @@ export default function Pricing({ data, h_data, f_data }) {
                       </details>
                     </div>
                   </div>
+                  {/*/Maps  */}
+                  {/* Projects */}
                   <div className="w-full mb-3">
                     <div
                       id="projects"
@@ -452,7 +456,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                        <div className="flex">
+                       
+                        <div className="border-t  pt-5 mb-4 ">
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
+                          </div>
+                          {data.PricingCard[1].Bots.map((dt) => (
+                            <div
+                              key="dt"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
+                            >
+                              {dt.listItem}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex border-b  pt-5 mb-6 pb-2">
                           <div className=" justify-between pt-6 border-t w-1/2">
                             <h2 className="mb-3 text-lg font-bold  ">
                               Key Features
@@ -514,19 +532,6 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="border-t border-b pt-5 mb-6 pb-2">
-                          <div className="flex flex-row justify-between">
-                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
-                          </div>
-                          {data.PricingCard[1].Bots.map((dt) => (
-                            <div
-                              key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
-                            >
-                              {dt.listItem}
-                            </div>
-                          ))}
-                        </div>
                         <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
@@ -562,6 +567,8 @@ export default function Pricing({ data, h_data, f_data }) {
                       </details>
                     </div>
                   </div>
+                  {/* /Projects */}
+                  {/* Process */}
                   <div className="w-full mb-3">
                     <div
                       id="process"
@@ -626,7 +633,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                        <div className="flex">
+                   
+                        <div className="border-t  pt-5 mb-4 ">
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
+                          </div>
+                          {data.PricingCard[2].Bots.map((dt) => (
+                            <div
+                              key="dt"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
+                            >
+                              {dt.listItem}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex border-b pt-5 mb-6 pb-2">
                           <div className=" justify-between pt-6 border-t w-1/2">
                             <h2 className="mb-3 text-lg font-bold  ">
                               Key Features
@@ -688,19 +709,6 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="border-t border-b pt-5 mb-6 pb-2">
-                          <div className="flex flex-row justify-between">
-                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
-                          </div>
-                          {data.PricingCard[2].Bots.map((dt) => (
-                            <div
-                              key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
-                            >
-                              {dt.listItem}
-                            </div>
-                          ))}
-                        </div>
                         <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
@@ -736,6 +744,8 @@ export default function Pricing({ data, h_data, f_data }) {
                       </details>
                     </div>
                   </div>
+                  {/* /Process */}
+                  {/* Labs */}
                   <div className="w-full mb-3">
                     <div
                       id="labs"
@@ -800,7 +810,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                        <div className="flex">
+                      
+                        <div className="border-t  pt-5 mb-4 ">
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
+                          </div>
+                          {data.PricingCard[3].Bots.map((dt) => (
+                            <div
+                              key="dt"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading  bg-secondary px-3 py-1 bg-white text-black rounded-full"
+                            >
+                              {dt.listItem}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex border-b pt-5 mb-6 pb-2">
                           <div className=" justify-between pt-6 border-t w-1/2">
                             <h2 className="mb-3 text-lg font-bold  ">
                               Key Features
@@ -862,19 +886,6 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="border-t border-b pt-5 mb-6 pb-2">
-                          <div className="flex flex-row justify-between">
-                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
-                          </div>
-                          {data.PricingCard[3].Bots.map((dt) => (
-                            <div
-                              key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading  bg-secondary px-3 py-1 bg-white text-black rounded-full"
-                            >
-                              {dt.listItem}
-                            </div>
-                          ))}
-                        </div>
                         <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
@@ -910,6 +921,8 @@ export default function Pricing({ data, h_data, f_data }) {
                       </details>
                     </div>
                   </div>
+                  {/* /Labs */}
+                  {/* Mines */}
                   <div className="w-full mb-3">
                     <div
                       id="mines"
@@ -974,7 +987,21 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                        <div className="flex">
+                       
+                        <div className="border-t  pt-5 mb-4 ">
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
+                          </div>
+                          {data.PricingCard[4].Bots.map((dt) => (
+                            <div
+                              key="dt"
+                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
+                            >
+                              {dt.listItem}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex  border-b pt-5 mb-6 pb-2">
                           <div className=" justify-between pt-6 border-t w-1/2">
                             <h2 className="mb-3 text-lg font-bold  ">
                               Key Features
@@ -1036,19 +1063,6 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="border-t border-b pt-5 mb-6 pb-2">
-                          <div className="flex flex-row justify-between">
-                            <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
-                          </div>
-                          {data.PricingCard[4].Bots.map((dt) => (
-                            <div
-                              key="dt"
-                              className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white text-black rounded-full"
-                            >
-                              {dt.listItem}
-                            </div>
-                          ))}
-                        </div>
                         <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
@@ -1084,23 +1098,24 @@ export default function Pricing({ data, h_data, f_data }) {
                       </details>
                     </div>
                   </div>
+                  {/* /Mines */}
                 </div>
                 <div className="hidden sm:block w-full">
                   <div className="w-full ">
-                    <div className=" relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 bg-gray-100 rounded-lg">
+                    <div className=" relative flex flex-col  justify-between h-full p-6 overflow-hidden border border-gray-600 background rounded-lg">
                       <div className="flex flex-col w-full">
                         <div className="flex">
                           <div className="w-1/2">
-                            <h2 className="mb-1 card-heading">Overall</h2>
-                            <h1 className="flex items-center pb-4 mb-4 card-heading text-gray-900 border-b border-gray-200">
+                            <h2 className="mb-1 card-heading text-white">Overall</h2>
+                            <h1 className="flex items-center pb-4 mb-4 card-heading text-white border-b border-gray-200">
                               <span>${total}K</span>
-                              <span className="ml-1 text-lg font-normal text-gray-500">
+                              <span className="ml-1 text-lg font-normal text-gray-200">
                                 /MO
                               </span>
                             </h1>
                           </div>
                           <div
-                            className="w-1/2  border-2 text-center mb-14 rounded-lg  text-black justify-center flex items-center"
+                            className="w-1/2  border-2 text-center mb-14 rounded-lg  text-white cursor-pointer justify-center flex items-center"
                             onClick={() => {
                               setIsMinesSelected(true);
                               setIsProjectsSelected(true);
@@ -1351,9 +1366,42 @@ export default function Pricing({ data, h_data, f_data }) {
                           </div>
                         )}
                       </div>
-
+                      <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-white text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-500 text-justify hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className="text-white mb-2"
+                            >
+                             {data.PricingTerms}
+                            </Markdown>
                       <div className="w-full">
-                        <button className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
+                        <button  onClick={() => {
+                          onClick({
+                            stream_score:
+                              resolve_stream_score("none"),
+                            event_name: "Button Click",
+                            section_name: "Pricing Contact Section",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `Contact Sales`,
+                          });
+                        }} className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
                             <Image priority
@@ -1393,7 +1441,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           </h1>
                         </div>
                         <div
-                          className="w-1/2  border-2 text-center mb-14 rounded-lg  text-white justify-center flex items-center"
+                          className="w-1/2  border-2 text-center mb-14 rounded-lg cursor-pointer text-white justify-center flex items-center"
                           onClick={() => {
                             setIsMinesSelected(true);
                             setIsProjectsSelected(true);
@@ -1453,7 +1501,6 @@ export default function Pricing({ data, h_data, f_data }) {
                           </div>
                         </div>
                       )}
-
                       {isProjectsSelected && (
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
@@ -1501,7 +1548,6 @@ export default function Pricing({ data, h_data, f_data }) {
                           </div>
                         </div>
                       )}
-
                       {isProcessSelected && (
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
@@ -1644,7 +1690,31 @@ export default function Pricing({ data, h_data, f_data }) {
                         </div>
                       )}
                     </div>
-
+                    <Markdown
+                              options={{
+                                overrides: {
+                                  p: {
+                                    props: {
+                                      className:
+                                        "text-white text-md text-justify ",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "",
+                                    },
+                                  },
+                                  a:{
+                                    props:{
+                                      className:"text-blue-500 text-justify hover:underline "
+                                    }
+                                  }
+                                },
+                              }}
+                              className="text-white mb-2"
+                            >
+                             {data.PricingTerms}
+                            </Markdown>
                     <div className="w-full">
                       <Link href="/contact">
                         <a

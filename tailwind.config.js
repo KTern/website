@@ -17,7 +17,9 @@ module.exports = {
         downarrow: "url('/assets/icons/down-arrow.png')",
         values_gradient:"url('/assets/bg-gradient.png')",
         background:"url('/background.svg')",
-        partnercontact:"url('/contact-bg.svg')"
+        partnercontact:"url('/contact-bg.svg')",
+        blob:"url('/blob.svg')",
+        dots:"url('/bullets-gray-left.svg')"
       }),
       colors: {
         success: '#BADA55',
@@ -30,105 +32,102 @@ module.exports = {
 
           primary: '#2666BA',
 
-          secondary: '#F2F4FA',
+          secondary: '#DDE9F8',
 
-          bg: '#E7EAEF',
+          50: '#BBD3F1',
 
-          50: '#EBF0FA',
+          100: '#78A6E3',
 
-          100: '#E3ECFA',
+          200: '#5690DC',
 
-          200: '#D4E3FA',
-
-          300: '#B6D1F9',
+          300: '#347AD5',
 
           400: '#2666BA',
 
         },
-
         process: {
 
-          primary: '#4D335C',
+          primary: '#795091',
 
-          secondary: '#C7B0D4',
+          secondary: '#D9CAE2',
 
 
 
-          50: '#B496C5',
+          50: '#C7B0D4',
 
-          100: '#A17BB7',
+          100: '#B496C5',
 
-          200: '#8E61A8',
+          200: '#A17BB7',
 
-          300: '#795091',
+          300: '#8E61A8',
 
           400: '#634176',
 
         },
-
         maps: {
 
-          primary: '#F28900',
+          primary: '#E07F00',
 
-          secondary: '#FFF6EB',
+          secondary: '#FFDCAD',
 
 
 
-          50: '#FFE2D6',
+          50: '#FFCA85',
 
-          100: '#FFD3C2',
+          100: '#FFB85C',
 
-          200: '#FFA785',
+          200: '#FFA733',
 
-          300: '#FF9970',
+          300: '#FF950A',
 
           400: '#F28900',
 500:'#F28900'
         },
-
         mines: {
 
           primary: '#BA2926',
 
-          secondary: '#F3E4E2',
+          secondary: '#F1BCBB',
 
 
 
-          50: '#FAF0F0',
+          50: '#EA9B99',
 
-          100: '#EAC2C5',
+          100: '#E37978',
 
-          200: '#DB959A',
+          200: '#DC5856',
 
-          300: '#CD838C',
+          300: '#D53734',
 
           400: '#BA2926',
 
         },
-
         labs: {
 
-          primary: '#1C8720',
+          primary: '#26BA2B',
 
-          secondary: '#E2F3E2',
+          secondary: '#BBF1BD',
 
 
 
-          50: '#F0F9F3',
+          50: '#99EA9C',
 
-          100: '#D7F1DD',
+          100: '#78E37B',
 
-          200: '#BEE7C8',
+          200: '#56DC5A',
 
-          300: '#3CCD60',
+          300: '#34D539',
 
           400: '#1C8720',
 
         },
         dxaas: {
-           primary: '#354346',
-          secondary: '#B9C7CA',
-          
+           primary: '#607A80',
+          secondary: '#D0DADC',
+       300:'#738F96'  ,
+       200:'#8BA2A7',
+       100:'#A2B5B9',
+       50:'#B9C8CA', 
       400:'#354346'
         },
       gray: {

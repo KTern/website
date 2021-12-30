@@ -9,7 +9,7 @@ export default function FAQ({data,title}){
                        
                             
                             {data.map((data) => (
-                                <details key="data" className="faq  relative overflow-hidden border-b border-gray-300  select-none ">
+                                <details key="data" className="details  relative overflow-hidden border-b border-gray-300  select-none ">
                                     <summary  className=" items-center grid grid-cols-12 py-5 px-6 cursor-pointer" style={{ listStyle: 'none' }}>
                                    
                                         <span className="col-span-11 text-lg font-bold">{data.Question}</span>

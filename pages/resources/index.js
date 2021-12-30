@@ -79,6 +79,7 @@ export default function Resources({ data, h_data, f_data }) {
   }
   let video = "Video";
   useEffect(() => {
+    // console.log("Hello",router.query)
     if (router.query.type) {
       let filterArray = {};
       filterArray.ResourceType = router.query.type;
@@ -92,6 +93,7 @@ export default function Resources({ data, h_data, f_data }) {
         document.getElementById("type").value = router.query.type;
     }
     if (router.query.stream) {
+      console.log(router.query.stream)
       let filterArray = {};
       filterArray.DigitalStream = router.query.stream;
 
@@ -103,7 +105,7 @@ export default function Resources({ data, h_data, f_data }) {
       if (process.browser)
         document.getElementById("stream").value = router.query.stream;
     }
-  }, []);
+  }, [router]);
   function handleFilter(element) {
     filter = [];
     data.ResourcesList.map((item) => {

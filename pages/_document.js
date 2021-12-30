@@ -67,7 +67,7 @@ widgetPublicKey: "fDEEdt2w4fHwLQmNSisdwUnC",
           `,
             }}
           />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{
+          <script  type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{
 "@context": "https://schema.org",
 "@type": "Corporation",
@@ -119,7 +119,7 @@ widgetPublicKey: "fDEEdt2w4fHwLQmNSisdwUnC",
   
 
   <LogoJsonLd
-        logo={process.env.NEXT_PUBLIC_URL}
+        logo={process.env.NEXT_PUBLIC_LOGO}
         url={process.env.NEXT_PUBLIC_URL}
       />
 

@@ -222,9 +222,9 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
           </div>
       
           <div
-            className={`relative pt-12 md:pt-10 pb-40 text-white ${stream_data.cssstreamtag} border-b-4 border-${stream_data.cssstreamtag}-400`}
+            className={`relative pt-12 md:pt-10 pb-40 text-white ${stream_data.cssstreamtag}   `}
           >
-              <div className="ml-10"> <BreadCrumb color="white" b_data={breadcrumb}/></div>
+              <div className="ml-10"> <BreadCrumb color="black" b_data={breadcrumb}/></div>
             <div className='relative container mx-auto px-4'>
               <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
                 <h2 className='mb-3 text-white  heading'>{stream_data.pageHeader.header}</h2>
@@ -234,7 +234,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
                   <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
                     <a 
                     	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"Hero Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.pageHeader.primaryCTA.buttonTitle}`})}}
-                      className={`inline-block py-3 px-10 ${stream_data.cssstreamtag}-button hover:bg-gray-100 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2  hyperlink button`}
+                      className={`inline-block py-3 px-10 ${stream_data.cssstreamtag}-button bg-black text-gray-100 hover:bg-gray-100 hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                     >
                       {stream_data.pageHeader.primaryCTA.buttonTitle}
                     </a>
@@ -243,7 +243,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
               </div>
             </div>
             <div
-              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white border-4 border-${stream_data.cssstreamtag}-400 shadow-2xl rounded-2xl `}
+              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white  shadow-2xl rounded-2xl `}
             >
               <div className='rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative'>
                 <Image priority

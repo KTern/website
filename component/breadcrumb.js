@@ -5,7 +5,7 @@ export default function BreadCrumb({ b_data ,color}) {
       {b_data.map((dt, index) => (
           <div className="" key="dt">
         {index<b_data.length-1 && <Link href={dt.item} passHref>
-          <a className={`hyperlink mr-3 text-gray-400 `}>{dt.name}&nbsp;&nbsp;{index<(b_data.length-1)&& "/"}</a>
+          <a className={`hyperlink mr-3 text-gray-300 `}>{dt.name}&nbsp;&nbsp;{index<(b_data.length-1)&& "/"}</a>
         </Link>}
        
         {index>=b_data.length-1 && 

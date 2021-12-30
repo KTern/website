@@ -1,5 +1,4 @@
 import Layout from "../../../component/Layout";
-import WebinarLayout from "../../../component/webinar_Layout";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
