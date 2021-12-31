@@ -56,6 +56,27 @@ details[open] #arrow:after {
   content: '\002B';
   font-size: 30px;
 }
+.m-header[open] summary::after{
+  content: '▲';
+  font-size: 15px;
+  font-weight: 400;
+  
+}
+.m-header summary::after{
+  content: ' ▼';
+  font-size: 15px;
+  font-weight: 400;
+  
+  
+}
+.m-header[open] summary span{
+margin-bottom: 4px;
+
+}
+.m-header summary span{
+margin-bottom: 4px;
+  }
+ 
 .questions:checked ~ .plus {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);

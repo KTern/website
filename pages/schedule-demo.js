@@ -5,8 +5,11 @@ export default function ScheduleDemo({h_data,f_data}){
     return (
         <>
         <Layout h_data={h_data} f_data={f_data}>
+          
 <InlineWidget
-     styles={{height:'1000px'}}
+
+
+     styles={{height:'850px',marginTop:'50px'}}
      url="https://calendly.com/ktern-ai/30min?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=111217&primary_color=1b465f"
    />
         </Layout>

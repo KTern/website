@@ -148,10 +148,10 @@ export default function Navbar({ h_data }) {
           {/*/ KTern Logo Desktop */}
           {/* KTern Logo mobile */}
           <div className="hidden sm:block">
-            <Link href={h_data.Logo.Url} passHref>
+          <Link href={h_data.Logo.Url} passHref>
               <a
                 title={h_data.Logo.Title}
-                className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
+                className=" hidden mx-6 sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
                 <Image
                   priority
@@ -171,7 +171,7 @@ export default function Navbar({ h_data }) {
               onClick={openNav}
             >
               <svg
-                className="block h-4 w-4"
+                className="block h-5 w-5"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -200,22 +200,24 @@ export default function Navbar({ h_data }) {
                       {h_data.Products.map((dt) => (
                         <Link key="dt" href={dt.redirectURL}>
                           <a className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-5 duration-500 ">
-                            
                             <div
                               className={`relative  rounded-lg  w-full bg-white flex-col p-3   group overflow-hidden false shadow-xl  `}
                             >
                               <div className=" bg-white mr-12 w-full text-black">
-                                <p className={`uppercase text-${dt.css}-primary hyperlink mb-2`}>{dt.tagPhrase}</p>
+                                <p
+                                  className={`uppercase text-${dt.css}-primary hyperlink mb-2`}
+                                >
+                                  {dt.tagPhrase}
+                                </p>
                                 <div className="h-50">
-                                <Image
-                                      priority
-                                      src={dt.Logo.logoUrl}
-                                      width={dt.Logo.width}
-                                      height={dt.Logo.height}
-                                      alt={dt.Logo.altText}
-                                    />
+                                  <Image
+                                    priority
+                                    src={dt.Logo.logoUrl}
+                                    width={dt.Logo.width}
+                                    height={dt.Logo.height}
+                                    alt={dt.Logo.altText}
+                                  />
                                   <div className="flex space-x-8">
-                                    
                                     <div>
                                       <h3 className=" font-bold text-md mb-2 text-gray-800">
                                         {dt.Title}
@@ -231,34 +233,35 @@ export default function Navbar({ h_data }) {
                           </a>
                         </Link>
                       ))}
-
                     </div>
-                   <div className="flex justify-end pt-4"> <Link href={h_data.cta.linkURL} passHref>
-                              <a
-                              // onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
-                               className="inline-flex items-center   text-black hover:text-gray-400 group ">
-                                <span className="hyperlink group-hover:text-gray-300">
-                                {h_data.cta.buttonTitle}
-                                </span>
-                                <svg
-                                  className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                  ></path>
-                                </svg>
-                              </a>
-                            </Link>
-                            </div>
+                    <div className="flex justify-end pt-4">
+                      {" "}
+                      <Link href={h_data.cta.linkURL} passHref>
+                        <a
+                          // onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
+                          className="inline-flex items-center   text-black hover:text-gray-400 group "
+                        >
+                          <span className="hyperlink group-hover:text-gray-300">
+                            {h_data.cta.buttonTitle}
+                          </span>
+                          <svg
+                            className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
-                 
                 </div>
               </li>
               <li className="hoverable hover:border-2  hover:bg-secondary">
@@ -488,22 +491,22 @@ export default function Navbar({ h_data }) {
           </div>
         </div>
       </nav>
-{/* Mobile Menu */}
+      {/* Mobile Menu */}
       <div id="navbar-menu" className="py-20 z-50 hidden relative bg-white">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav className="py-2  nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm  px-6 bg-white border-r overflow-y-auto">
+        <nav className="py-6  nav fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm  px-6 bg-white border-r overflow-y-auto">
           <div className="flex items-center justify-between mb-8">
             <Link href={h_data.Logo.Url} passHref>
               <a
                 title={h_data.Logo.Title}
-                className="mx-6 hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
+                className=" hidden sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
               >
                 <Image
                   priority
                   src={h_data.Logo.ImageUrl}
                   alt="Ktern Logo"
                   width="100%"
-                  height="30%"
+                  height="25%"
                 />
               </a>
             </Link>
@@ -526,309 +529,150 @@ export default function Navbar({ h_data }) {
           </div>
           <div>
             <ul>
-            <li className="toggleable hover:bg-secondary bg-white ">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-sm-one"
-                  className="toggle-input "
-                />
-                <label
-                  htmlFor="toggle-sm-one"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
+              <li className="toggleable  py-1 bg-white ">
+                <details
+                  key="data"
+                  className="m-header   relative overflow-hidden  px-2 bg-white select-none "
                 >
-                  Products
-                </label>
-                <div
-                  id="toggle"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
-                >
-                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full   border-gray-300  pb-6 pt-6 ">
-                      <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                       Products
-                      </h3>
-                      {h_data.Products.map((dt) => (
-                        <li key="dt" className="hover:bg-secondary ">
-                         
-                         
-                            <Link href={dt.redirectURL} passHref>
-                              <a
-                                htmlFor="toggle-sm-two"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                        
-                        </li>
-                      ))}
-                      <li className="mt-4 hover:bg-secondary">
-                        <Link href={h_data.cta.linkURL} passHref>
-                          <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">
-                            {h_data.cta.buttonTitle}
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                      Products
+                    </span>
+                  </summary>
+                  
+                  {h_data.Products.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
               </li>
-              <li className="toggleable hover:bg-secondary bg-white ">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-sm-two"
-                  className="toggle-input "
-                />
-                <label
-                  htmlFor="toggle-sm-two"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
-                  Resources
-                </label>
-                <div
-                  id="toggle"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
-                >
-                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
-                      <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                        Resources
-                      </h3>
-                      {h_data.ResourcesList.map((dt) => (
-                        <li key="dt" className="hover:bg-secondary ">
-                          {dt.OpenInNewTab && (
-                            <Link
-                              target="_blank"
-                              href={dt.redirectURL}
-                              passHref
-                            >
-                              <a
-                                htmlFor="toggle-sm-two"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                          {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL} passHref>
-                              <a
-                                htmlFor="toggle-sm-two"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                      <li className="mt-4 hover:bg-secondary">
-                        <Link href="/resources" passHref>
-                          <a className="inline-flex items-center pb-1  text-black hover:border-blue-500 group hyperlink group-hover:text-gray-400">
-                            See All Resources
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Resources
+                    </span>
+                  </summary>
+                  
+                  {h_data.ResourcesList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
               </li>
-              <li className="toggleable hover:bg-secondary bg-white ">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-sm-three"
-                  className="toggle-input "
-                />
-                <label
-                  htmlFor="toggle-sm-three"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
-                  Partners
-                </label>
-                <div
-                  id="toggle"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
-                >
-                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
-                      <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                        Partners
-                      </h3>
-                      {h_data.PartnersList.map((dt) => (
-                        <li key="dt" className="hover:bg-secondary ">
-                          {dt.OpenInNewTab && (
-                            <Link
-                              target="_blank"
-                              href={dt.redirectURL}
-                              passHref
-                            >
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                          {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL} passHref>
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Partners
+                    </span>
+                  </summary>
+                  
+                  {h_data.PartnersList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
               </li>
-              <li className="toggleable hover:bg-secondary bg-white ">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-sm-four"
-                  className="toggle-input "
-                />
-                <label
-                  htmlFor="toggle-sm-four"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
-                  Company
-                </label>
-                <div
-                  id="toggle"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
-                >
-                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
-                      <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                        Company
-                      </h3>
-                      {h_data.CompanyList.map((dt) => (
-                        <li key="dt" className="hover:bg-secondary ">
-                          {dt.OpenInNewTab && (
-                            <Link
-                              target="_blank"
-                              href={dt.redirectURL}
-                              passHref
-                            >
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                          {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL} passHref>
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Company
+                    </span>
+                  </summary>
+                  
+                  {h_data.CompanyList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
               </li>
-              <li className="toggleable hover:bg-secondary bg-white ">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-sm-five"
-                  className="toggle-input "
-                />
-                <label
-                  htmlFor="toggle-sm-five"
-                  className="block cursor-pointer py-2 px-4 lg:p-6 header "
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
-                  Support
-                </label>
-                <div
-                  id="toggle"
-                  role="toggle"
-                  className="p-2  mega-menu mb-16 z-50 sm:mb-0 shadow-2xl bg-secondary "
-                >
-                  <div className=" container mx-auto w-full flex flex-wrap justify-between bg-secondary  mx-2">
-                    <ul className="bg-white px-4 w-full border-gray-300  pb-6 pt-6 ">
-                      <h3 className="navbar-h uppercase text-black text-bold mb-2">
-                        Support
-                      </h3>
-                      {h_data.SupportList.map((dt) => (
-                        <li key="dt" className="hover:bg-secondary ">
-                          {dt.OpenInNewTab && (
-                            <Link
-                              target="_blank"
-                              href={dt.redirectURL}
-                              passHref
-                            >
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                          {!dt.OpenInNewTab && (
-                            <Link href={dt.redirectURL} passHref>
-                              <a
-                                htmlFor="toggle-sm-three"
-                                className="block cursor-pointer navbar-s py-2 lg:p-6  "
-                              >
-                                {dt.Title}
-                              </a>
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Support
+                    </span>
+                  </summary>
+                  
+                  {h_data.SupportList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
               </li>
             </ul>
           </div>
@@ -836,7 +680,7 @@ export default function Navbar({ h_data }) {
             <Link href={h_data.PrimaryCTA.linkURL}>
               <a
                 title={h_data.PrimaryCTA.buttonTitle}
-                className="uppercase text-sm font-bold"
+                className="uppercase text-md font-bold"
               >
                 {h_data.PrimaryCTA.buttonTitle}
               </a>
@@ -844,7 +688,7 @@ export default function Navbar({ h_data }) {
             <Link href={h_data.SecondaryCTA.linkURL}>
               <a
                 title={h_data.SecondaryCTA.buttonTitle}
-                className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
+                className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-md text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
               >
                 {h_data.SecondaryCTA.buttonTitle}
               </a>
