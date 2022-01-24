@@ -865,8 +865,13 @@ export const getStaticProps = async ({ params }) => {
   const res = await fetch(`https://api.ktern.com/digital-streams?slug=${streamname}`, {
     method: "get",
   });
-
+  if(res==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   const data = await res.json();
+  
   //  console.log(data[0])
   	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',

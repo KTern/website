@@ -2,7 +2,7 @@ import Markdown from "markdown-to-jsx";
 export default function FAQ({data,title}){
     return (
         <>
-  <section className="py-5 bg-white faq-gradient">
+  <section className="py-16 bg-white bg-bg ">
                     <h2 className="pb-8 section-heading  text-center ">{title}</h2>
                     <div className="grid  grid-cols-3   ">
                     <div className="col-span-3 md:col-span-2 md:mx-20">

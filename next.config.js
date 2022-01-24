@@ -41,6 +41,7 @@ module.exports = {
   },
   images: {
     domains: [
+      "img.icons8.com",
       "cdn-icons-png.flaticon.com",
       "assets-global.website-files.com",
       "storage.googleapis.com",

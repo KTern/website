@@ -19,7 +19,12 @@ module.exports = {
         background:"url('/background.svg')",
         partnercontact:"url('/contact-bg.svg')",
         blob:"url('/blob.svg')",
-        dots:"url('/bullets-gray-left.svg')"
+        dots:"url('/bullets-gray-left.svg')",
+        events:"url('/events/4853433.jpg')",
+        banner:"url('/events/banner-1.jpg')",
+        eventsbg:"url('/events-landing/pattern.svg')",
+        events:"url('/events/events-bg.svg')",
+        roadshowbg:"url('/events-landing/events-bg.svg')"
       }),
       colors: {
         success: '#BADA55',
@@ -28,6 +33,13 @@ module.exports = {
       secondary: '#EAEDF2',
       white:'#ffffff',
       teal:colors.teal,
+      amber:colors.amber,
+      sky:colors.sky,
+      violet:colors.violet,
+      cyan:colors.cyan,
+      rose:colors.rose,
+      indigo:colors.indigo,
+      bg:'#F9FAFC',
       projects: {
 
           primary: '#2666BA',
@@ -131,6 +143,7 @@ module.exports = {
       400:'#354346'
         },
       gray: {
+        10:'#858B91',
         50: '#E7EAEF',
         100: '#DDE0E5',
         200: '#CFD2D8',
@@ -153,7 +166,9 @@ module.exports = {
        full: '9999px',
       large: '200px',
       xl: '14px',
-      
+      xl10:'30px',
+      wide:'500px',
+      '3xl':'60px'
     }
   },
   variants: {
