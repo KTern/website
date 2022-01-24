@@ -132,6 +132,7 @@ export default function Events({ h_data, f_data, data }) {
           <div className="grid md:grid-cols-6 grid-row-2 lg:gap-y-10 md:gap-x-4">
             <div className="relative md:col-span-4 mb-40 lg:mb-0   md:px-4 ">
               <div><Image
+              priority
                 className="w-full hidden"
                 src={data.otherEvents[0].imageUrl}
                 layout="fill"
