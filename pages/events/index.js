@@ -42,7 +42,7 @@ export default function Events({ h_data, f_data, data }) {
             </div>
             <Image
               priority
-              src="/events/events-calendar.svg"
+              src={`${data.bannerSection.ImageURL}`}
               alt=""
               height={`${data.bannerSection.ImageHeight}`}
               width={`${data.bannerSection.ImageWidth}`}
@@ -402,7 +402,7 @@ export const getServerSideProps = async () => {
     method: "get",
   });
   const data = await res.json();
-  console.log("data", data);
+  // console.log("data", data);
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });
