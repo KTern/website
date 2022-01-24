@@ -397,7 +397,7 @@ export default function Events({ h_data, f_data, data }) {
           <p className="section-subheading mb-10">
             Let&apos;s support the green cause
           </p>
-          <div className="grid lg:grid-cols-6 grid-rows-2 gap-y-4 lg:gap-8 mb-10">
+          <div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
             <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
               <Link href="/" passHref>
                 <a
@@ -455,7 +455,7 @@ export default function Events({ h_data, f_data, data }) {
               </Link>
             </div>
           </div>
-          <div className="grid grid-rows-3 lg:grid-cols-3 gap-y-4 lg:gap-8">
+          <div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
             <div className=" flex items-center justify-center rounded-xl shadow-xl">
               {" "}
               <Link href="/" passHref>
@@ -526,7 +526,7 @@ export default function Events({ h_data, f_data, data }) {
         </section>
         {/* /Featured Articles */}
         {/* Discussions Section */}
-        <section className="py-20 grid lg:grid-cols-4 text-center grid-rows-4 px-10">
+        <section className="py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
         <div className="lg:hidden block  flex flex-col px-10">
             <h2 className="section-heading mb-4 mt-5">Join our discussions</h2>
             <p className="section-subheading text-gray-400">
@@ -589,21 +589,21 @@ export default function Events({ h_data, f_data, data }) {
     </body>
   );
 }
-export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-  const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" }];
-  const paths = data.map((index) => {
-    return {
-      params: { e_category: index.e_category, event: index.event },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   // dynamic route array values must be acquired here from strapi
+//   const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" }];
+//   const paths = data.map((index) => {
+//     return {
+//       params: { e_category: index.e_category, event: index.event },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const name = params.e_category;
 
   const res = await fetch(

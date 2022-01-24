@@ -395,7 +395,7 @@ export default function Events({ h_data, f_data, data }) {
     </Layout>
   );
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // data url from strapi)
   const res = await fetch("https://api.ktern.com/events", {
     method: "get",
