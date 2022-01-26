@@ -30,27 +30,29 @@ export default function Events({ h_data, f_data, data }) {
     // Render a countdown
     return (
       <div className="flex md:space-x-4  ">
-        <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading ">
+        
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
           {days}
-        </span>
-        <span className="items-center flex justify-center text-white text-3xl">
+        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Days</p></div>
+        
+        <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading ">
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
           {hours}
-        </span>
-        <span className="items-center flex justify-center text-white text-3xl">
+        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Hours</p></div>
+        <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading ">
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
           {minutes}
-        </span>
-        <span className="items-center flex justify-center text-white text-3xl">
+        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Minutes</p></div>
+        <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading ">
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
           {seconds}
-        </span>
+        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Seconds</p></div>
       </div>
     );
   };
@@ -59,7 +61,7 @@ export default function Events({ h_data, f_data, data }) {
       <Layout h_data={h_data} f_data={f_data} className="">
         {/* Hero Section */}
         <section className="overflow-hidden  bg-black py-10">
-          <div className="   bg-opacity-40 bg-roadshowbg rounded-b-9xl pb-20 overflow-hidden  shadow-xl ">
+          <div className="   bg-opacity-10 bg-roadshowbg rounded-b-9xl pb-20 overflow-hidden  shadow-xl ">
             <div className=" px-4 mx-auto pb-5">
               <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
                 <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
@@ -113,6 +115,7 @@ export default function Events({ h_data, f_data, data }) {
             <div className="grid md:grid-cols-5 grid-cols-2  gap-10">
               <div className=" px-5 mb-4">
                 <Image
+                priority
                   width={100}
                   height={100}
                   className="h-20 w-20 mx-auto rounded-full object-cover object-top"
@@ -124,6 +127,7 @@ export default function Events({ h_data, f_data, data }) {
               </div>
               <div className=" px-5 mb-4">
                 <Image
+                priority
                   width={100}
                   height={100}
                   className="h-20 w-20 mx-auto rounded-full object-cover object-top"
@@ -135,6 +139,7 @@ export default function Events({ h_data, f_data, data }) {
               </div>
               <div className=" px-5 mb-4">
                 <Image
+                priority
                   width={100}
                   height={100}
                   className="h-20 w-20 mx-auto rounded-full object-cover object-top"
@@ -147,6 +152,7 @@ export default function Events({ h_data, f_data, data }) {
 
               <div className=" px-5 mb-4">
                 <Image
+                priority
                   width={100}
                   height={100}
                   className="h-20 w-20 mx-auto rounded-full object-cover object-top"
@@ -158,6 +164,7 @@ export default function Events({ h_data, f_data, data }) {
               </div>
               <div className=" px-5 mb-4">
                 <Image
+                priority
                   width={100}
                   height={100}
                   className="h-20 w-20 mx-auto rounded-full object-cover object-top"
@@ -327,6 +334,7 @@ export default function Events({ h_data, f_data, data }) {
             <div className="bg-sky-100 rounded-b-xl10 rounded-tr-xl10 flex flex-col items-center justify-center mb-4  md:mx-24 md:px-12 py-5">
               <div className="h-100  w-auto bg-white my-10 shadow-2xl rounded-xl transform translate-10 ">
                 <Image
+                priority
                   src="/events-landing/form.svg"
                   height={250}
                   width={300}
@@ -336,6 +344,7 @@ export default function Events({ h_data, f_data, data }) {
             </div>
             <div className="mx-auto">
               <Image
+              priority
                 src="/events-landing/form-template.jpg"
                 width={400}
                 height={370}
@@ -372,6 +381,7 @@ export default function Events({ h_data, f_data, data }) {
                 <div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
                 <div className="flex items-center justify-center bg-blue-100 p-10 shadow-2xl rounded-tr-xl10 rounded-b-xl10">
                   <Image
+                  priority
                     className="relative z-10 "
                     src="/events-landing/phone-full-2.png"
                     alt=""
@@ -383,6 +393,7 @@ export default function Events({ h_data, f_data, data }) {
             </div>
           </div>
           <Image
+          priority
             width={100}
             height={100}
             className="hidden md:block absolute top-0 right-0 h-full -mr-32"
