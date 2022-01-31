@@ -817,3 +817,6 @@ background: -webkit-linear-gradient(90deg, hsla(355, 74%, 62%, 1) 0%, hsla(0, 0%
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", endColorstr="#080808", GradientType=1 );
 }
+.live-text{
+  background:linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241))
+}

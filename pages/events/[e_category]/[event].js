@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Countdown from "react-countdown";
 import Layout from "../../../component/Layout";
-
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import image from "next/image";
+import Head from "next/head";
 import { Timeline } from "react-twitter-widgets";
 const responsive = {
   superLargeDesktop: {
@@ -25,579 +26,804 @@ const responsive = {
     items: 1,
   },
 };
+function checkBoxSelected(e, t) {
+  var r = e.getAttribute("check"),
+    o = e.value ? e.value : "",
+    n = e.form;
+  if (n) {
+    var i = "#checkBoxValue_" + t,
+      a = n.querySelector(i);
+    if (
+      ("notChecked" == r
+        ? (e.setAttribute("check", "checked"),
+          e.setAttribute("checked", "checked"))
+        : (e.removeAttribute("checked"), e.setAttribute("check", "notChecked")),
+      "checked" != r)
+    )
+      a && "" == a.value ? (a.value += o) : a && (a.value += ";" + o);
+    else {
+      var c = a.value.split(";"),
+        l = o;
+      c.splice(c.indexOf(l), 1), (a.value = c.join(";"));
+    }
+  }
+}
 export default function Events({ h_data, f_data, data }) {
+  // Count down renderer
+  const [countDownState, setCountDownState] = useState(false);
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    // Render a countdown
+    // console.log(completed)
+    if (completed) setCountDownState(true);
     return (
       <div className="flex md:space-x-4  ">
-        
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
-          {days}
-        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Days</p></div>
-        
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
+          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+            {days}
+          </span>
+          <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
+            Days
+          </p>
+        </div>
+
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
-          {hours}
-        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Hours</p></div>
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
+          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+            {hours}
+          </span>
+          <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
+            Hours
+          </p>
+        </div>
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
-          {minutes}
-        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Minutes</p></div>
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
+          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+            {minutes}
+          </span>
+          <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
+            Minutes
+          </p>
+        </div>
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md"><span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
-          {seconds}
-        </span><p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">Seconds</p></div>
+        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
+          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+            {seconds}
+          </span>
+          <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
+            Seconds
+          </p>
+        </div>
       </div>
     );
   };
+
   return (
-    <body className="">
-      <Layout h_data={h_data} f_data={f_data} className="">
-        {/* Hero Section */}
-        <section className="overflow-hidden  bg-black py-10">
-          <div className="   bg-opacity-10 bg-roadshowbg rounded-b-9xl pb-20 overflow-hidden  shadow-xl ">
-            <div className=" px-4 mx-auto pb-5">
-              <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
-                <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
-                  Better communication and work
-                </span>
-                <h1 className="max-w-lg mb-6 mx-auto  text-center text-white subheading  leading-tight">
-                  Stay home and Create design
-                </h1>
-                <Countdown
-                
-                  renderer={renderer}
-                  date={"2022-01-25T20:38:03"}
-                  className="mb-4"
-                />
-                <div className="flex space-x-4 mt-10">
-                  <Link href="#SeeAllTracks" passHref>
-                    <a
-                      className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
-                    >
-                      See All Tracks
-                    </a>
-                  </Link>
-                  <Link href="#RegisterNow" passHref>
-                    <a
-                      className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
-                    >
-                      Reserve your Seat Now
-                    </a>
-                  </Link>
+    <>
+      <body className="">
+        <Layout h_data={h_data} f_data={f_data} className="events">
+          {/* Hero Section */}
+          <section className="overflow-hidden  py-10 ">
+            <div className="    bg-roadshowbg bg-cover rounded-b-9xl pb-20 overflow-hidden  shadow-xl ">
+              <div className=" px-4 mx-auto pb-5">
+                <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
+                  <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
+                   {data.heroSection.header}
+                  </span>
+                  <h1 className="max-w-lg mb-6 mx-auto  text-center text-white subheading  leading-tight">
+                    {data.heroSection.subHeading}
+                  </h1>
+                  {!countDownState && (
+                    <Countdown
+                      renderer={renderer}
+                      date={data.eventDate}
+                      className="mb-4"
+                    />
+                  )}
+                  {countDownState && (
+                    <div className="text-black text-lg font-bold uppercase live-text p-3 rounded-md ">
+                      {data.alternateBannerText}
+                    </div>
+                  )}
+                  <div className="flex space-x-4 mt-10">
+                    <Link href={`#${data.heroSection.primaryCTA.linkURL}`} passHref>
+                      <a
+                        className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                      >
+                        {data.heroSection.primaryCTA.buttonTitle}
+                      </a>
+                    </Link>
+                    {!countDownState && (
+                      <Link href={`#${data.heroSection.secondaryCTA.linkURL}`} passHref>
+                        <a
+                          className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                        >
+                          {data.heroSection.secondaryCTA.buttonTitle}
+                        </a>
+                      </Link>
+                    )}
+                    {countDownState && (
+                      <Link href={`#${data.alternateCta.CTAButtonLink}`} passHref>
+                        <a
+                          className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                        >
+                         {data.alternateCta.CTAButtonText}
+                        </a>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        {/* /Hero Section */}
-        {/* Speakers Section */}
-        <section className="pb-10 pt-5">
-          <div className="container mx-auto text-center ">
-            <div className=" mx-auto mb-8">
-              <span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
-                Our Speakers
-              </span>
-              <h2 className="section-heading mt-2 mb-4 ">
-                Inspired by the elite
-              </h2>
-              <p className="text-sky-700 leading-loose section-subheading">
-                Watch out for the premier speakers of this Digital Roadshow
-                &nbsp;|&nbsp; Jan 24 - Jan 28
-              </p>
-            </div>
-            <div className="grid md:grid-cols-5 grid-cols-2  gap-10">
-              <div className=" px-5 mb-4">
-                <Image
-                priority
-                  width={100}
-                  height={100}
-                  className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                  alt=""
-                />
-                <p className="mt-6 mb-2 text-md">Anne Bailey</p>
-                <p className="text-gray-600 text-sm">CEO</p>
-              </div>
-              <div className=" px-5 mb-4">
-                <Image
-                priority
-                  width={100}
-                  height={100}
-                  className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                  alt=""
-                />
-                <p className="mt-6 mb-2 text-md">Anne Bailey</p>
-                <p className="text-gray-600 text-sm">CEO</p>
-              </div>
-              <div className=" px-5 mb-4">
-                <Image
-                priority
-                  width={100}
-                  height={100}
-                  className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                  alt=""
-                />
-                <p className="mt-6 mb-2 text-md">Anne Bailey</p>
-                <p className="text-gray-600 text-sm">CEO</p>
-              </div>
-
-              <div className=" px-5 mb-4">
-                <Image
-                priority
-                  width={100}
-                  height={100}
-                  className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                  alt=""
-                />
-                <p className="mt-6 mb-2 text-md">Julie Brown</p>
-                <p className="text-gray-600 text-sm">Head of Development</p>
-              </div>
-              <div className=" px-5 mb-4">
-                <Image
-                priority
-                  width={100}
-                  height={100}
-                  className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                  src="https://images.unsplash.com/photo-1556474835-b0f3ac40d4d1?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                  alt=""
-                />
-                <p className="mt-6 mb-2 text-md">Tom Jones</p>
-                <p className="text-gray-600 text-sm">Head of Operations</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/*/ Speakers Section */}
-        {/* Featured Events */}
-        <section id="SeeAllTracks" className="anchor">
-         <section className=" px-10 py-5  bg-eventsbg bg-cover  mx-5">
-          <svg
-            className="absolute -mt-20 hidden lg:block"
-            width="320"
-            height="380"
-            viewBox="0 0 1920 1080"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1347,578.9999999999999C1342.571923275551,688.9403392132672,1219.9546011784512,865.4225877905782,1136.7267807814264,914.882508860439C1053.4989603844017,964.3424299302998,902.3137668478092,929.5732778959044,847.6330776178515,875.7595264191646C792.9523883878938,821.9457749424247,818.8314916713223,701.9198421397215,808.6426454016803,592C798.4537991320383,482.0801578602785,727.391234045593,272.367061317363,786.4999999999998,216.24047358083556C845.6087659544065,160.11388584430813,1069.8785744614543,194.78055251097467,1163.295241128121,255.24047358083538C1256.7119077947877,315.7003946506961,1351.428076724449,469.05966078673265,1347,578.9999999999999C1342.571923275551,688.9403392132672,1219.9546011784512,865.4225877905782,1136.7267807814264,914.882508860439"
-              fill="#f0f9ff"
-            />
-          </svg>
-          <div className="flex z-10 flex-col px-4 mx-auto overflow-hidden">
-            <h2 className=" text-center  text-black section-heading mb-6">
-              Featured Events
-            </h2>
-            <p className="section-subheading text-center text-skys-700">
-              Immerse yourself in 5 days of digital exploration and useful
-              information on SAP DevOps
-            </p>
-          </div>
-          <Carousel
-            className=" flex py-5   z-10 -mx-4 overflow-hidden "
-            responsive={responsive}
-          >
-            {data.Resource.map((data) => (
-              <div
-                key="data"
-                className="h-full w-80 relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500"
-              >
-                {data.OpenNewTab && (
-                  <div
-                    className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
-                  >
-                    <div className="bg-white">
-                      <Link href={data.CTAUrl} passHref>
-                        <a
-                          target="_blank"
-                          className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
-                        >
-                          <Image
-                            priority
-                            className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                            src={data.Icon.imageURL}
-                            alt={data.Icon.imageDescription}
-                            width="550"
-                            height="300"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <Link href={data.CTAUrl} passHref>
-                      <a className="bg-white">
-                        <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                          {data.CardTitle}
-                        </span>
-                        <Link href={data.CTAUrl} passHref>
-                          <a
-                            target="_blank"
-                            className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
-                          >
-                            <span className="hyperlink group-hover:text-gray-300">
-                              {data.CTAText}
-                            </span>
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2  group-hover:text-gray-300"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </a>
-                    </Link>
-                  </div>
-                )}
-                {!data.OpenNewTab && (
-                  <div
-                    className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}
-                  >
-                    <div className="bg-white">
-                      <Link href={data.CTAUrl} passHref>
-                        <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-                          <Image
-                            priority
-                            className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                            src={data.Icon.imageURL}
-                            alt={data.Icon.imageDescription}
-                            width="550"
-                            height="300"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <Link href={data.CTAUrl} passHref>
-                      <a className="bg-white">
-                        <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                          {data.CardTitle}
-                        </span>
-                        <Link href={data.CTAUrl} passHref>
-                          <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                            <span className="hyperlink group-hover:text-gray-300">
-                              {data.CTAText}
-                            </span>
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ))}
-          </Carousel>
           </section>
-        </section>
-        {/* /Featured Events */}
-        {/* Register Section */}
-        <section id="RegisterNow" className="anchor">
-          <section className="py-10 px-5">
-          <div className="flex flex-col items-center justify-center text-justify">
-            <p className="section-heading mb-5">Reserve Your Seat Now</p>
-            <p className="section-subheading max-w-2xl text-gray-700 text-center mb-5">
-              Register for free to hear what our SAP fraternity says on the
-              disruptive automation in SAP world. What next ? Also get your SAP
-              DXaaS Kit and benefit from valuable insights.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-1 ">
-            <div className="bg-sky-100 rounded-b-xl10 rounded-tr-xl10 flex flex-col items-center justify-center mb-4  md:mx-24 md:px-12 py-5">
-              <div className="h-100  w-auto bg-white my-10 shadow-2xl rounded-xl transform translate-10 ">
-                <Image
-                priority
-                  src="/events-landing/form.svg"
-                  height={250}
-                  width={300}
-                  alt="Forming ideas"
-                />
-              </div>
-            </div>
-            <div className="mx-auto">
-              <Image
-              priority
-                src="/events-landing/form-template.jpg"
-                width={400}
-                height={370}
-                alt="form template"
-              />
-            </div>
-          </div>
-          </section>
-        </section>
-        {/*/ Register Section */}
-        {/* Access Report */}
-        <section className="relative bg-white   overflow-hidden">
-          <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full  rounded-b-10xl"></div>
-          <div className="relative  mx-auto">
-            <div className="flex flex-wrap items-center text-center">
-              <div className="w-full md:w-1/2 px-20">
-                <h2 className="mt-8 mb-8 section-heading leading-tight">
-                  Enterprise-Ops Value Assessment Report
+          {/* /Hero Section */}
+          {/* Speakers Section */}
+          <section className="pb-10 pt-5 events">
+            <div className="container mx-auto text-center ">
+              <div className=" mx-auto mb-8">
+                <span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
+                 {data.speakers.tag}
+                </span>
+                <h2 className="section-heading mt-2 mb-4 ">
+                  {data.speakers.heading}
                 </h2>
-                <p className="mb-10 section-subheading text-darkBlueGray-400">
-                  All participants get to have your tailor-made report with
-                  insights to streamline your SAP DevOps in your SAP landscape -
-                  (All for Free).
+                <p className="text-sky-700 leading-loose section-subheading">
+                 {data.speakers.subHeading}
                 </p>
-                <Link href="/" passHref>
-                  <a
-                    className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+              </div>
+              <div className="grid md:grid-cols-5 grid-cols-2  gap-10">
+                {data.speakers.speakersList.map((dt)=>(<div key="dt" className=" px-5 mb-4">
+                  <Image
+                    priority
+                    width={dt.imageWidth}
+                    height={dt.imageHeight}
+                    className="h-20 w-20 mx-auto rounded-full object-cover object-top"
+                    src={dt.imageUrl}
+                    alt={dt.imageAlt}
+                  />
+                  <p className="mt-6 mb-2 text-md">{dt.speakerName}</p>
+                  <p className="text-gray-600 text-sm">{dt.designation	}</p>
+                </div>))}
+                
+              </div>
+            </div>
+          </section>
+          {/*/ Speakers Section */}
+          {/* Featured Events */}
+          <section id={data.heroSection.primaryCTA.linkURL} className="anchor events">
+            <section className=" px-10 py-10 bg-eventsbg bg-cover  mx-5">
+              <svg
+                className="absolute -mt-20 hidden lg:block"
+                width="320"
+                height="380"
+                viewBox="0 0 1920 1080"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1347,578.9999999999999C1342.571923275551,688.9403392132672,1219.9546011784512,865.4225877905782,1136.7267807814264,914.882508860439C1053.4989603844017,964.3424299302998,902.3137668478092,929.5732778959044,847.6330776178515,875.7595264191646C792.9523883878938,821.9457749424247,818.8314916713223,701.9198421397215,808.6426454016803,592C798.4537991320383,482.0801578602785,727.391234045593,272.367061317363,786.4999999999998,216.24047358083556C845.6087659544065,160.11388584430813,1069.8785744614543,194.78055251097467,1163.295241128121,255.24047358083538C1256.7119077947877,315.7003946506961,1351.428076724449,469.05966078673265,1347,578.9999999999999C1342.571923275551,688.9403392132672,1219.9546011784512,865.4225877905782,1136.7267807814264,914.882508860439"
+                  fill="#f0f9ff"
+                />
+              </svg>
+              <div className="flex z-10 flex-col px-4 mx-auto overflow-hidden">
+                <h2 className=" text-center  text-black section-heading mb-6">
+                  {data.featuredEventsHeading}
+                </h2>
+                <p className="section-subheading text-center text-skys-700">
+                  {data.featuredEventsSubHeading}
+                </p>
+              </div>
+              <Carousel
+                className=" flex py-5   z-10 -mx-4 overflow-hidden "
+                responsive={responsive}
+              >
+                {data.events.map((data) => (
+                  <div
+                    key="data"
+                    className="h-full w-80 relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500"
                   >
-                    Access Report
+                    {data.OpenNewTab && (
+                      <div
+                        className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
+                      >
+                        <div className="bg-white">
+                          <Link href={data.CTAUrl} passHref>
+                            <a
+                              target="_blank"
+                              className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+                            >
+                              <Image
+                                priority
+                                className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                                src={data.Icon.imageURL}
+                                alt={data.Icon.imageDescription}
+                                width="550"
+                                height="300"
+                              />
+                            </a>
+                          </Link>
+                        </div>
+                        <Link href={data.CTAUrl} passHref>
+                          <a className="bg-white">
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                              {data.CardTitle}
+                            </span>
+                            <Link href={data.CTAUrl} passHref>
+                              <a
+                                target="_blank"
+                                className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
+                              >
+                                <span className="hyperlink group-hover:text-gray-300">
+                                  {data.CTAText}
+                                </span>
+                                <svg
+                                  className="w-5 h-6 mt-1 ml-2  group-hover:text-gray-300"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                  ></path>
+                                </svg>
+                              </a>
+                            </Link>
+                          </a>
+                        </Link>
+                      </div>
+                    )}
+                    {!data.OpenNewTab && (
+                      <div
+                        className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}
+                      >
+                        <div className="bg-white">
+                          <Link href={data.CTAUrl} passHref>
+                            <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                              <Image
+                                priority
+                                className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                                src={data.Icon.imageURL}
+                                alt={data.Icon.imageDescription}
+                                width="550"
+                                height="300"
+                              />
+                            </a>
+                          </Link>
+                        </div>
+                        <Link href={data.CTAUrl} passHref>
+                          <a className="bg-white">
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                              {data.CardTitle}
+                            </span>
+                            <Link href={data.CTAUrl} passHref>
+                              <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                <span className="hyperlink group-hover:text-gray-300">
+                                  {data.CTAText}
+                                </span>
+                                <svg
+                                  className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                  ></path>
+                                </svg>
+                              </a>
+                            </Link>
+                          </a>
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </Carousel>
+            </section>
+          </section>
+          {/* /Featured Events */}
+          {/* Video Banner */}
+          {countDownState && (
+            <section id={data.alternateCta.CTAButtonLink} className="anchor events py-10 text-center justify-center items-center flex flex-col">
+              <h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
+              <p className="section-subheading mb-6 text-center">
+                {data.eventVideo.subHeading}
+              </p>
+              <div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+                <div>
+                  <iframe
+                    className="hidden lg:block"
+                    style={{
+                      height: "calc(89vh - 100px)",
+                      width: "calc(130vh)",
+                    }}
+                    src={data.eventVideo.videoUrl}
+                    title={data.eventVideo.heading}
+                    frameBorder="0"
+                    scrolling="no"
+                    allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                  <iframe
+                    className="lg:hidden block"
+                    style={{
+                      height: "calc(59vh - 100px)",
+                      width: "calc(60vh)",
+                    }}
+                    src={data.eventVideo.videoUrl}
+                    title={data.eventVideo.heading}
+                    frameBorder="0"
+                    scrolling="no"
+                    allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </section>
+          )}
+          {/* /Video Banner */}
+          {/* Register Section */}
+          {!countDownState && (
+            <section id={data.heroSection.secondaryCTA.linkURL} className="anchor events">
+              <section className="py-5 pb-10 px-5">
+                <div className="flex flex-col items-center justify-center text-justify">
+                  <p className="section-heading mb-2">{data.registerSection.header}</p>
+                  <p className="section-subheading max-w-2xl text-gray-700 text-center mb-2">
+                    {data.registerSection.subHeading}
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-1 ">
+                  <div className="bg-sky-100 rounded-b-xl10 rounded-tr-xl10 flex flex-col items-center justify-center mb-4  md:mx-24 md:px-12 py-5">
+                    <div className="h-100  w-auto bg-white my-10 shadow-2xl rounded-xl transform translate-10 ">
+                      <Image
+                        priority
+                        src={data.registerSection.ImageURL}
+                        height={data.registerSection.ImageWidth}
+                        width={data.registerSection.ImageHeight}
+                        alt="Forming ideas"
+                      />
+                    </div>
+                  </div>
+                  <div className="md:mx-16">
+                    <div className=" relative z-10 h-auto p-8  overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
+                      <h3 className="mb-6 card-heading  text-center">
+                        {data.form.title}
+                      </h3>
+                      <form
+                        method="POST"
+                        id="zcampaignOptinForm"
+                        className="relative w-full mt-2 space-y-10"
+                        action="https://kter.maillist-manage.in/weboptin.zc"
+                        target="_blank"
+                      >
+                        <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                          <div id="SIGNUP_BODY" name="SIGNUP_BODY">
+                            <div>
+                              <div>
+                                <div
+                                  name="fieldsdivSf"
+                                  className="flex-col space-y-5"
+                                >
+                                  <div
+                                    className="zcsffield "
+                                    fieldid="71738000000000023"
+                                  >
+                                    <div>
+                                      <label
+                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                                        htmlFor="CONTACT_EMAIL"
+                                      >
+                                       {data.form.email}
+                                      </label>
+                                      <input
+                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                                        maxLength="100"
+                                        placeholder="Business Email"
+                                        name="CONTACT_EMAIL"
+                                        changeitem="SIGNUP_FORM_FIELD"
+                                        type="text"
+                                      />
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                  <div
+                                    className="zcsffield "
+                                    fieldid="71738000000000029"
+                                  >
+                                    <div>
+                                      <label
+                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                                        htmlFor="FIRSTNAME"
+                                      >
+                                        {data.form.name}
+                                      </label>
+                                      <input
+                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                                        maxLength="100"
+                                        placeholder="Full Name"
+                                        name="FIRSTNAME"
+                                        changeitem="SIGNUP_FORM_FIELD"
+                                        type="text"
+                                      />
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                  <div
+                                    className="zcsffield "
+                                    fieldid="71738000002653048"
+                                  >
+                                    <div>
+                                      <label
+                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                                        title="Events"
+                                      >
+                                        {data.form.events}
+                                      </label>
+
+                                      <div className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
+                                       {data.form.eventsList.map((dt)=>(
+                                       <div key="dt" className="flex space-x-2 items-center">
+                                          <input
+                                            type="checkbox"
+                                            names="CONTACT_CF7"
+                                            multi="true"
+                                            zc_display_name=""
+                                            onClick={(e) =>
+                                              checkBoxSelected(
+                                                e.target,
+                                                "CONTACT_CF7"
+                                              )
+                                            }
+                                            check="notChecked"
+                                            value={dt.eventValue}
+                                          />
+                                          <p className="text-sm "> {dt.eventName}</p>
+                                        </div>))}
+                                        
+                                      </div>
+                                      <input
+                                        type="hidden"
+                                        id="checkBoxValue_CONTACT_CF7"
+                                        name="CONTACT_CF7"
+                                        value=""
+                                      />
+                                      <div></div>
+
+                                      <div></div>
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                </div>
+                                <input
+                                  type="hidden"
+                                  id="secretid"
+                                  value="6LdNeDUUAAAAAG5l7cJfv1AA5OKLslkrOa_xXxLs"
+                                />
+                                <div></div>
+
+                                <div className="mt-5">
+                                  <input
+                                    type="submit"
+                                    action="Save"
+                                    id="zcWebOptin"
+                                    name="SIGNUP_SUBMIT_BUTTON"
+                                    changetype="SIGNUP_SUBMIT_BUTTON_TEXT"
+                                    value={data.form.submitButton}
+                                    className="cursor-pointer  inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                                  rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <input type="hidden" id="fieldBorder" value="" />
+                          <input
+                            type="hidden"
+                            name="zc_trackCode"
+                            id="zc_trackCode"
+                            value="ZCFORMVIEW"
+                            onLoad=""
+                          />
+                          <input
+                            type="hidden"
+                            name="viewFrom"
+                            id="viewFrom"
+                            value="URL_ACTION"
+                          />
+                          <input
+                            type="hidden"
+                            id="submitType"
+                            name="submitType"
+                            value="optinCustomView"
+                          />
+                          <input
+                            type="hidden"
+                            id="lD"
+                            name="lD"
+                            value="1fedd54b70d1dcd"
+                          />
+                          <input
+                            type="hidden"
+                            name="emailReportId"
+                            id="emailReportId"
+                            value=""
+                          />
+                          <input
+                            type="hidden"
+                            name="zx"
+                            id="cmpZuid"
+                            value="1df8f43af3"
+                          />
+                          <input type="hidden" name="zcvers" value="2.0" />
+                          <input
+                            type="hidden"
+                            name="oldListIds"
+                            id="allCheckedListIds"
+                            value=""
+                          />
+                          <input
+                            type="hidden"
+                            id="mode"
+                            name="mode"
+                            value="OptinCreateView"
+                          />
+                          <input
+                            type="hidden"
+                            id="zcld"
+                            name="zcld"
+                            value="1fedd54b70d1dcd"
+                          />
+                          <input
+                            type="hidden"
+                            id="zctd"
+                            name="zctd"
+                            value={data.form.mailingListId}
+                          />
+                          <input type="hidden" id="document_domain" value="" />
+                          <input
+                            type="hidden"
+                            id="zc_Url"
+                            value="kter.maillist-manage.in"
+                          />
+                          <input
+                            type="hidden"
+                            id="new_optin_response_in"
+                            value="0"
+                          />
+                          <input
+                            type="hidden"
+                            id="duplicate_optin_response_in"
+                            value="0"
+                          />
+                          <input
+                            type="hidden"
+                            id="zc_formIx"
+                            name="zc_formIx"
+                            value={data.form.formId}
+                          />
+                        </div>
+                        <input
+                          type="hidden"
+                          id="scriptless"
+                          name="scriptless"
+                          value="yes"
+                        />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          )}
+          {/*/ Register Section */}
+          {/* Access Report */}
+          <section className="relative bg-white py-20  events overflow-hidden">
+            <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full  rounded-b-10xl"></div>
+            <div className="relative  mx-auto">
+              <div className="flex flex-wrap items-center text-center">
+                <div className="w-full md:w-1/2 px-20">
+                  <h2 className="mt-8 mb-8 section-heading leading-tight">
+                    {data.accessReportSection.CardTitle}
+                  </h2>
+                  <p className="mb-10 section-subheading text-darkBlueGray-400">
+                    {data.accessReportSection.CardDescription}
+                  </p>
+                  <Link href={data.accessReportSection.CTAUrl} passHref>
+                    <a
+                      target="_blank"
+                      className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                    >
+                     {data.accessReportSection.CTAText}
+                    </a>
+                  </Link>
+                </div>
+                <div className="relative w-full md:w-1/2 px-10   ">
+                  <div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
+                  <div className="flex items-center justify-center bg-blue-100 p-10 shadow-2xl rounded-tr-xl10 rounded-b-xl10">
+                    <Image
+                      priority
+                      className="relative z-10 "
+                      src={data.accessReportSection.Icon.imageURL}
+                      alt={data.accessReportSection.Icon.imageDescription}
+                      width={data.accessReportSection.Icon.width}
+                      height={data.accessReportSection.Icon.height}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* /Access Report */}
+          {/* Featured Articles */}
+          <section className="events px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
+            <h2 className="section-heading mb-4">{data.featuredArticlesSectionHeading}</h2>
+            <p className="section-subheading mb-10">
+              {data.featureArticlesSectionSubheading}
+            </p>
+            <div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
+              <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
+                <Link href={data.featuredArticles[0].CTAUrl} passHref>
+                  <a
+                    target="_blank"
+                    className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  >
+                    <div className="hidden lg:block">
+                      <Image
+                        priority
+                        className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                        src={data.featuredArticles[0].Icon.imageURL}
+                        alt={data.featuredArticles[0].Icon.imageDescription}
+                        width={data.featuredArticles[0].Icon.width}
+                        height={data.featuredArticles[0].Icon.height}
+                      />
+                    </div>
+                    <div className="lg:hidden block">
+                      <Image
+                        priority
+                        className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                        src={data.featuredArticles[0].Icon.imageURL}
+                        alt={data.featuredArticles[0].Icon.imageDescription}
+                        width="650"
+                        height="470"
+                      />
+                    </div>
+                    <div className="px-4 ">
+                      <p className="md:text-lg text-md font-semibold  mb-2">
+                       {data.featuredArticles[0].CardTitle}
+                      </p>
+                    </div>
                   </a>
                 </Link>
               </div>
-              <div className="relative w-full md:w-1/2 px-10   ">
-                <div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
-                <div className="flex items-center justify-center bg-blue-100 p-10 shadow-2xl rounded-tr-xl10 rounded-b-xl10">
-                  <Image
-                  priority
-                    className="relative z-10 "
-                    src="/events-landing/phone-full-2.png"
-                    alt=""
-                    width={"500px"}
-                    height={"400px"}
-                  />
-                </div>
+
+              <div className="lg:col-span-2  flex flex-col items-center justify-center rounded-xl10 shadow-xl">
+                <Link href={data.featuredArticles[1].CTAUrl} passHref>
+                  <a
+                    target="_blank"
+                    className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  >
+                    <Image
+                      priority
+                      className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+                      src={data.featuredArticles[1].Icon.imageURL}
+                      alt=""
+                      width={data.featuredArticles[1].Icon.width}
+                      height={data.featuredArticles[1].Icon.height}
+                    />
+                    <p className="text-md mb-4 font-semibold px-4">
+                     {data.CardTitle}
+                    </p>
+                  </a>
+                </Link>
               </div>
             </div>
-          </div>
-          <Image
-          priority
-            width={100}
-            height={100}
-            className="hidden md:block absolute top-0 right-0 h-full -mr-32"
-            src="/events-landing/line-right.svg"
-            alt=""
-          />
-        </section>
-        {/* /Access Report */}
-        {/* Featured Articles */}
-        <section className=" px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
-          <h2 className="section-heading mb-4">Go Digital Go Green</h2>
-          <p className="section-subheading mb-10">
-            Let&apos;s support the green cause
-          </p>
-          <div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
-            <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-              <Link href="/" passHref>
-                <a
-                  target="_blank"
-                  className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-                >
-                  <div className="hidden lg:block">
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="750"
-                    height="260"
-                  /></div>
-                  <div className="lg:hidden block">
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="650"
-                    height="470"
-                  /></div>
-                  <div className="px-4 ">
-                    <p className="md:text-lg text-md font-semibold  mb-2">
-                      KTern accelerated S/4HANA Conversion for an E-Services
-                      Provider in the Kingdom of Saudi Arabia​
+            <div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
+              {data.featuredArticles.map((dt,index)=>{
+               return index>1 ? (<div key="dt" className=" flex items-center justify-center rounded-xl shadow-xl"> 
+                <Link href={dt.CTAUrl} passHref>
+                  <a
+                    target="_blank"
+                    className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  >
+                    <Image
+                      priority
+                      className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+                      src={dt.Icon.imageURL}
+                      alt={dt.Icon.imageDescription}
+                      width={dt.Icon.width}
+                      height={dt.Icon.height}
+                    />
+                    <p className="text-md mb-4 font-semibold px-4">
+                      {dt.CardTitle}
                     </p>
-               
-                  </div>
-                </a>
-              </Link>
+                  </a>
+                </Link>
+              </div>):(<></>)
+            })}
             </div>
-
-            <div className="lg:col-span-2  flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-              <Link href="/" passHref>
+          </section>
+          {/* /Featured Articles */}
+          {/* Discussions Section */}
+          <section className="events py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
+            <div className="lg:hidden block  flex flex-col px-10">
+              <h2 className="section-heading mb-4 mt-5">
+               {data.discussionSection.heading}
+              </h2>
+              <p className="section-subheading text-gray-400">
+                {data.discussionSection.subHeading}
+              </p>
+              <Image
+                height={350}
+                width={300}
+                alt=""
+                src="/events-landing/follow.png"
+              />
+            </div>
+            <div className="border border-gray-100">
+              <Timeline
+                className="col-span-1"
+                dataSource={{
+                  sourceType: "profile",
+                  screenName: `${data.discussionSection.twitterScreenName}`,
+                }}
+                options={{
+                  height: "400",
+                }}
+              />
+            </div>
+           {data.discussionSection.linkedIn.map((dt)=>( 
+           <div key="dt" className="grid grid-rows-8 ">
+              <iframe
+                className=" row-span-4 mb-2  h-full w-full  border-gray-100"
+                src={`${dt.postId}`}
+                scrolling="yes"
+                frameBorder="0"
+                allowFullScreen=""
+                title="Embedded post"
+              />
+              <Link
+                href={dt.redirectUrl	}
+                passHref
+              >
                 <a
                   target="_blank"
-                  className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b"
                 >
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="650"
-                    height="470"
-                  />
-                  <p className="text-md mb-4 font-semibold px-4">
-                    KTern accelerated S/4HANA Conversion for an E-Services
-                    Provider in the Kingdom of Saudi Arabia​
-                  </p>
+                  View on LinkedIn
                 </a>
               </Link>
+            </div>))}
+          
+            <div className="hidden lg:block flex flex-col px-10">
+              <h2 className="section-heading mb-4 mt-5">
+               {data.discussionSection.heading}
+              </h2>
+              <p className="section-subheading text-gray-400">
+                {data.discussionSection.subHeading}
+              </p>
+              <Image
+                height={data.discussionSection.image.height}
+                width={data.discussionSection.image.width}
+                alt={data.discussionSection.image.imageDescription}
+                src={data.discussionSection.image.imageURL}
+              />
             </div>
-          </div>
-          <div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
-            <div className=" flex items-center justify-center rounded-xl shadow-xl">
-              {" "}
-              <Link href="/" passHref>
-                <a
-                  target="_blank"
-                  className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-                >
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="650"
-                    height="400"
-                  />
-                  <p className="text-md mb-4 font-semibold px-4">
-                    KTern accelerated S/4HANA Conversion for an E-Services
-                    Provider in the Kingdom of Saudi Arabia​
-                  </p>
-                </a>
-              </Link>
-            </div>
-            <div className=" flex items-center justify-center rounded-xl shadow-xl">
-              {" "}
-              <Link href="/" passHref>
-                <a
-                  target="_blank"
-                  className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-                >
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="650"
-                    height="400"
-                  />
-                  <p className="text-md mb-4 font-semibold px-4">
-                    KTern accelerated S/4HANA Conversion for an E-Services
-                    Provider in the Kingdom of Saudi Arabia​
-                  </p>
-                </a>
-              </Link>
-            </div>
-            <div className=" flex items-center justify-center rounded-xl shadow-xl">
-              {" "}
-              <Link href="/" passHref>
-                <a
-                  target="_blank"
-                  className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-                >
-                  <Image
-                    priority
-                    className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-                    src="/events-landing/core-feature.png"
-                    alt=""
-                    width="650"
-                    height="400"
-                  />
-                  <p className="text-md mb-4 font-semibold px-4">
-                    KTern accelerated S/4HANA Conversion for an E-Services
-                    Provider in the Kingdom of Saudi Arabia​
-                  </p>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </section>
-        {/* /Featured Articles */}
-        {/* Discussions Section */}
-        <section className="py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
-        <div className="lg:hidden block  flex flex-col px-10">
-            <h2 className="section-heading mb-4 mt-5">Join our discussions</h2>
-            <p className="section-subheading text-gray-400">
-              #DigitalRoadshow #KTern #SAP #DXaaS
-            </p>
-            <Image height={350} width={300} alt="" src="/events-landing/follow.png"/>
-          </div>
-          <div className="border border-gray-100">
-            <Timeline
-              className="col-span-1"
-              dataSource={{
-                sourceType: "profile",
-                screenName: "KternOfficial",
-              }}
-              options={{
-                height: "400",
-              }}
-            />
-          </div>
-          <div className="grid grid-rows-8 ">
-            <iframe
-              className=" row-span-4 mb-4  h-full w-full  border-gray-100"
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6886254574198501376"
-              scrolling="yes"
-              frameBorder="0"
-              allowFullScreen=""
-              title="Embedded post"
-            />
-            <Link href="https://www.linkedin.com/posts/ktern_benefits-of-quality-assurance-activity-6886254574659870720-zpPT" passHref>
-              <a target="_blank" className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b">
-                View on LinkedIn
-              </a>
-            </Link>
-          </div>
-          <div className="grid grid-rows-8">
-            <iframe
-              className=" row-span-4 mb-3 h-full w-full  border-gray-100"
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6886254574198501376"
-              scrolling="yes"
-              frameBorder="0"
-              allowFullScreen=""
-              title="Embedded post"
-            />
-            <Link href="https://www.linkedin.com/posts/ktern_benefits-of-quality-assurance-activity-6886254574659870720-zpPT" passHref>
-              <a target="_blank" className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b">
-                View on LinkedIn
-              </a>
-            </Link>
-          </div>
-          <div className="hidden lg:block flex flex-col px-10">
-            <h2 className="section-heading mb-4 mt-5">Join our discussions</h2>
-            <p className="section-subheading text-gray-400">
-              #DigitalRoadshow #KTern #SAP #DXaaS
-            </p>
-            <Image height={220} width={100} alt="" src="/events-landing/follow.png"/>
-          </div>
-        </section>
-        {/* /Discussions Section */}
-      </Layout>
-    </body>
+          </section>
+          {/* /Discussions Section */}
+        </Layout>
+      </body>
+    </>
   );
 }
 // export const getStaticPaths = async () => {
@@ -615,17 +841,16 @@ export default function Events({ h_data, f_data, data }) {
 // };
 
 export const getServerSideProps = async ({ params }) => {
-  const name = params.e_category;
+  const event_name = params.event;
 
   const res = await fetch(
-    `https://api.ktern.com/digital-streams?slug=digital-projects`,
+    `https://api.ktern.com/events-libraries?eventSlug=${event_name}`,
     {
       method: "get",
     }
   );
-
   const data = await res.json();
-  // console.log(data[0]);
+   console.log(data[0]);
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });

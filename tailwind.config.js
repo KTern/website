@@ -20,7 +20,6 @@ module.exports = {
         partnercontact:"url('/contact-bg.svg')",
         blob:"url('/blob.svg')",
         dots:"url('/bullets-gray-left.svg')",
-        events:"url('/events/4853433.jpg')",
         banner:"url('/events/banner-1.jpg')",
         eventsbg:"url('/events-landing/pattern.svg')",
         events:"url('/events/events-bg.svg')",
@@ -168,7 +167,8 @@ module.exports = {
       xl: '14px',
       xl10:'30px',
       wide:'500px',
-      '3xl':'60px'
+      '3xl':'60px',
+      doublefull:'15000px'
     }
   },
   variants: {

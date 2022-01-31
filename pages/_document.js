@@ -122,7 +122,6 @@ widgetPublicKey: "fDEEdt2w4fHwLQmNSisdwUnC",
         logo={process.env.NEXT_PUBLIC_LOGO}
         url={process.env.NEXT_PUBLIC_URL}
       />
-
         </Head>
         <body>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHZVHTK"

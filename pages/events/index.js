@@ -258,15 +258,15 @@ export default function Events({ h_data, f_data, data }) {
             </h2>
           </div>
 
-          {/* <div className='grid md:grid-cols-4 gap-6 mb-8'>
-              {data.featuresWebinars.map((data) => (
+          <div className='grid md:grid-cols-4 gap-6 mb-8'>
+              {data.featuredWebinars.map((data) => (
               <div key="data" className="relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500" >
               
                             {data.OpenNewTab &&  <div  className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}>   
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
                                     <a
-                                    	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+                                    
                                      target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
@@ -279,7 +279,7 @@ export default function Events({ h_data, f_data, data }) {
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
                                         <a
-                                          	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}} target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                                     target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -293,7 +293,7 @@ export default function Events({ h_data, f_data, data }) {
                             <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
                                     <a
-                                      	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
+                            
                                      className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
@@ -302,12 +302,10 @@ export default function Events({ h_data, f_data, data }) {
                             </div>
               <Link href={data.CTAUrl} passHref>
               <a
-                	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
                className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
                         <Link href={data.CTAUrl}  passHref>
                                         <a
-                                          	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}
                                         className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                         <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -320,7 +318,7 @@ export default function Events({ h_data, f_data, data }) {
                             </div>}
                         </div>
               ))}
-            </div> */}
+            </div>
           <div className="text-center">
             <Link href="/webinars" passHref>
               <a
@@ -359,8 +357,8 @@ export default function Events({ h_data, f_data, data }) {
       </section>
       {/* /Resources Section */}
       {/* CTA Section */}
-      <section className="events relative py-24 font-heading font-medium bg-white rounded-t-10xl overflow-hidden">
-        <div className="relative container px-4 mx-auto z-10">
+      <section className=" events-bg  relative py-20 font-heading font-medium bg-white  overflow-hidden">
+        <div className="relative  container  px-4 mx-auto z-10">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="mb-4 section-heading leading-tight">
               {data.ctaSection.CTATitle}
