@@ -722,7 +722,7 @@ export default function Events({ h_data, f_data, data }) {
                       height={data.featuredArticles[1].Icon.height}
                     />
                     <p className="text-md mb-4 font-semibold px-4">
-                     {data.CardTitle}
+                     {data.featuredArticles[1].CardTitle}
                     </p>
                   </a>
                 </Link>
