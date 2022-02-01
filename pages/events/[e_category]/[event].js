@@ -175,7 +175,7 @@ export default function Events({ h_data, f_data, data }) {
                  {data.speakers.subHeading}
                 </p>
               </div>
-              <div className="grid md:grid-cols-5 grid-cols-2  gap-10">
+              <div className="flex items-center justify-center space-x-4 mx-auto">
                 {data.speakers.speakersList.map((dt)=>(<div key="dt" className=" px-5 mb-4">
                   <Image
                     priority
