@@ -840,8 +840,8 @@ export default function Events({ h_data, f_data, data }) {
 //   };
 // };
 
-export const getServerSideProps = async ({ params }) => {
-  const event_name = params.event;
+export const getServerSideProps = async (ctx) => {
+  const event_name = ctx.params.event;
 
   const res = await fetch(
     `https://api.ktern.com/events-libraries?eventSlug=${event_name}`,
@@ -849,6 +849,11 @@ export const getServerSideProps = async ({ params }) => {
       method: "get",
     }
   );
+  if(res.size==0){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   const data = await res.json();
    console.log(data[0]);
   const res1 = await fetch("https://api.ktern.com/header", {
