@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Countdown from "react-countdown";
 import Layout from "../../../component/Layout";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import image from "next/image";
 import Head from "next/head";
 import { Timeline } from "react-twitter-widgets";
+import Markdown from "markdown-to-jsx";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -26,6 +27,8 @@ const responsive = {
     items: 1,
   },
 };
+let events=[]
+// Zoho check box validation
 function checkBoxSelected(e, t) {
   var r = e.getAttribute("check"),
     o = e.value ? e.value : "",
@@ -39,14 +42,21 @@ function checkBoxSelected(e, t) {
           e.setAttribute("checked", "checked"))
         : (e.removeAttribute("checked"), e.setAttribute("check", "notChecked")),
       "checked" != r)
-    )
+    ){
       a && "" == a.value ? (a.value += o) : a && (a.value += ";" + o);
-    else {
+    }
+    else {  
       var c = a.value.split(";"),
         l = o;
       c.splice(c.indexOf(l), 1), (a.value = c.join(";"));
+      
     }
   }
+  // console.log(e.value)
+  if(events.includes(e.value))
+  events.splice(events.indexOf(e.value), 1);
+  else
+  events.push(e.value)
 }
 export default function Events({ h_data, f_data, data }) {
   // Count down renderer
@@ -101,7 +111,27 @@ export default function Events({ h_data, f_data, data }) {
       </div>
     );
   };
+  useEffect(() => {
+    window.addEventListener("click", validateForm);
 
+    return () => {
+      window.removeEventListener("click", validateForm);
+    };
+  }, []);
+  function validateForm(){
+    // console.log("clicked")
+      if(events.length>0){
+        // console.log("Hello")
+        document.getElementById("eventsField").setCustomValidity('');
+        document.getElementById('zcWebOptin').disabled=false
+        
+      }
+      else{
+        document.getElementById("eventsField").setCustomValidity("Please select atleast one event");
+        // document.getElementById('zcWebOptin').disabled=true
+        
+      }
+  }
   return (
     <>
       <body className="">
@@ -427,12 +457,13 @@ export default function Events({ h_data, f_data, data }) {
                                        {data.form.email}
                                       </label>
                                       <input
+                                      required
                                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                         maxLength="100"
                                         placeholder="Business Email"
                                         name="CONTACT_EMAIL"
                                         changeitem="SIGNUP_FORM_FIELD"
-                                        type="text"
+                                        type="email"
                                       />
                                     </div>
                                     <div></div>
@@ -449,6 +480,7 @@ export default function Events({ h_data, f_data, data }) {
                                         {data.form.name}
                                       </label>
                                       <input
+                                      required
                                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                         maxLength="100"
                                         placeholder="Full Name"
@@ -471,10 +503,11 @@ export default function Events({ h_data, f_data, data }) {
                                         {data.form.events}
                                       </label>
 
-                                      <div className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
+                                      <div  className="  block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
                                        {data.form.eventsList.map((dt)=>(
                                        <div key="dt" className="flex space-x-2 items-center">
-                                          <input
+                                          <input id="eventsField"
+                                          name="checkbox-group"
                                             type="checkbox"
                                             names="CONTACT_CF7"
                                             multi="true"
@@ -483,8 +516,7 @@ export default function Events({ h_data, f_data, data }) {
                                               checkBoxSelected(
                                                 e.target,
                                                 "CONTACT_CF7"
-                                              )
-                                            }
+                                              )}
                                             check="notChecked"
                                             value={dt.eventValue}
                                           />
@@ -504,6 +536,24 @@ export default function Events({ h_data, f_data, data }) {
                                     </div>
                                     <div></div>
                                   </div>
+                                  <div className="zcwf_col_fld">
+                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
+                    options={{
+                      overrides: {
+                        p:{
+                          props:{
+                            className:"card-subheading text-justify"
+                          }
+                        },
+                        strong:{
+                          props:{
+                            className:""
+                          }
+                        }
+                      }}}
+                    className=""
+                  >{data.form.UserConsent}</Markdown></label>
+                        </div> 
                                 </div>
                                 <input
                                   type="hidden"
@@ -514,6 +564,7 @@ export default function Events({ h_data, f_data, data }) {
 
                                 <div className="mt-5">
                                   <input
+                                  
                                     type="submit"
                                     action="Save"
                                     id="zcWebOptin"
@@ -849,7 +900,7 @@ export const getServerSideProps = async (ctx) => {
       method: "get",
     }
   );
-  console.log(res)
+  // console.log(res)
   
   const data = await res.json();
   if(data[0]==undefined){
