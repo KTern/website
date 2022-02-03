@@ -849,13 +849,15 @@ export const getServerSideProps = async (ctx) => {
       method: "get",
     }
   );
-  if(res.size==0){
+  console.log(res)
+  
+  const data = await res.json();
+  if(data[0]==undefined){
+  
     ctx.res.setHeader('Location', '/404');
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const data = await res.json();
-   console.log(data[0]);
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });
