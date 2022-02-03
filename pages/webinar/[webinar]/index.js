@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
 import Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
+import Markdown from "markdown-to-jsx";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -230,9 +231,42 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   </Link>
                 </p>
                 <h2 className=" card-heading  text-black sm: md:">{webinar_Data.AboutTitle}</h2>
-                <p className=" text-gray-600 card-subheading md:pr-16 text-justify">
-                  {webinar_Data.About}
-                </p>
+                
+                <Markdown
+                      options={{
+                        overrides: {
+                          h3: {
+                            props: {
+                              className: "text-2xl mb-4 text-justify",
+                            },
+                          },
+                          h1: {
+                            props: {
+                              className: "text-2xl mb-4 text-justify",
+                            },
+                          },
+                          li: {
+                            props: {
+                              className:
+                                "text-justify list-decimal ml-6 mb-1 flex-col",
+                            },
+                          },
+                          p: {
+                            props: {
+                              className: "mb-3  text-gray-600 card-subheading md:pr-16 text-justify",
+                            },
+                          },
+                          ol: {
+                            props: {
+                              className: "mb-4 text-justify",
+                            },
+                          },
+                        },
+                      }}
+                      className=""
+                    >
+                     {webinar_Data.About}
+                    </Markdown>
                 <h2 className=" card-heading  text-black sm: md:">
                   {webinar_Data.LearningPointsTitle}
                 </h2>
