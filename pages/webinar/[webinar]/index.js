@@ -389,6 +389,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                                 name="CONTACT_EMAIL"
                                                 changeitem="SIGNUP_FORM_FIELD"
                                                 type="email"
+                                                required
                                                 className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                               />
                                             </div>
@@ -407,6 +408,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   </label>
                                               <input
                                               id="Full_Name"
+                                              required
                                                 maxLength="100"
                                                 placeholder="Full Name"
                                                 name="FIRSTNAME"
@@ -417,6 +419,24 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                             </div>
                                             <div></div>
                                           </div>
+                                          <div className="zcwf_col_fld">
+                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
+                    options={{
+                      overrides: {
+                        p:{
+                          props:{
+                            className:"card-subheading text-justify"
+                          }
+                        },
+                        strong:{
+                          props:{
+                            className:""
+                          }
+                        }
+                      }}}
+                    className=""
+                  >{webinar_Data.FormFields.UserConsent}</Markdown></label>
+                        </div> 
                                           <div>
                                           <input
                                             onClick={()=>{onFormClick({stream_score:resolve_stream_score(webinar_Data.CssStreamTag),event_name:"Form Click",section_name:"Register Form Section",page_source:`${webinar_Data.PageSEO.PageTitle}`,label:`${webinar_Data.FormFields.SubmitButton}`})}}
@@ -431,6 +451,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                             // onClick={()=>{Event({event_name:"Button Click",page_source:webinar_Data.PageSEO.PageTitle,section_name:"Get Access Form",label:webinar_Data.FormFields.SubmitButton})}}
                                           />
                                         </div>
+                                     
                                         </div>
                               
                                      
