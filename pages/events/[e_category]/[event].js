@@ -9,7 +9,7 @@ import Head from "next/head";
 import { Timeline } from "react-twitter-widgets";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from 'next/router'
-
+import BreadCrumb from "../../../component/breadcrumb";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -149,10 +149,19 @@ export default function Events({ h_data, f_data, data }) {
       <body className="">
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
-          <section className="overflow-hidden  py-10 ">
-            <div className="  bg-roadshowbg bg-cover rounded-b-9xl pb-32 overflow-auto  shadow-xl ">
+          <section className="overflow-hidden  pt-4">
+            <div className="  bg-roadshowbg bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl ">
               <div className=" px-4 mx-auto pb-5">
+              
+             
                 <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
+                <div className="mx-60 mt-10"><BreadCrumb
+                color={"white"}
+                b_data={[
+                  { position: "", name: "Home", item: "/" },
+                  { position: "dt.position", name: "Events", item: "/events" },
+                ]}
+              /></div>
                   <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
                    {data.heroSection.header}
                   </span>
@@ -713,7 +722,7 @@ export default function Events({ h_data, f_data, data }) {
                 </div>
                 <div className="relative w-full md:w-1/2 px-10   ">
                   <div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
-                  <div className="flex items-center justify-center bg-blue-100 p-10 shadow-2xl rounded-tr-xl10 rounded-b-xl10">
+                  <div className="flex items-center justify-center  p-5 shadow-2xl rounded-tr-xl10 rounded-b-xl10">
                     <Image
                       priority
                       className="relative z-10 "
