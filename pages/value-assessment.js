@@ -1,5 +1,5 @@
 import Layout from "../component/Layout";
-import Link from "next/Link";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ViewSlider from "react-view-slider";
 import ReactSlider from "react-slider";
@@ -124,7 +124,7 @@ export default function ValueAssesment({ h_data, f_data }) {
     <Layout h_data={h_data} f_data={f_data}>
       <div
         className="bg-valueBg bg-cover text-white flex flex-col space-y-16 items-center justify-center overflow-hidden"
-        style={{ height: "96vh" }}
+        style={{ height: "100vh" }}
       >
          <ViewSlider className="mx-auto text-white flex flex-col items-center justify-center "
         renderView={renderView}
