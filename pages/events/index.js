@@ -17,7 +17,7 @@ export default function Events({ h_data, f_data, data }) {
   return (
     <Layout h_data={h_data} f_data={f_data}>
       {/* Banner Section */}
-      <section className="relative py-8 top-10 text-white bg-events bg-cover bg-sky-800 overflow-hidden rounded-t-10">
+      <section className="relative py-10  top-10 text-white bg-events bg-cover bg-eventsprimary overflow-hidden rounded-t-10">
         <div className="container md:px-4 mx-auto">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-16">
             <div className="relative px-20 mb-10 md:mb-0 text-center md:text-left z-10">
@@ -123,7 +123,7 @@ export default function Events({ h_data, f_data, data }) {
       </div>
       {/* /Highlighted Event Section */}
       {/* Other Events Section */}
-      <section className=" font-medium py-2 bg-events  pb-20 rounded-b-10xl">
+      <section className=" font-medium py-2   pb-20 rounded-b-10xl">
         <div className="container px-4 mx-auto">
           {/* <span className="block mb-9 uppercase tracking-widest hyperlink leading-4 text-gray-300">Discover out blog</span> */}
           <h2 className=" section-heading leading-tight text-center mb-7">

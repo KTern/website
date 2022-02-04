@@ -8,6 +8,8 @@ import image from "next/image";
 import Head from "next/head";
 import { Timeline } from "react-twitter-widgets";
 import Markdown from "markdown-to-jsx";
+import { useRouter } from 'next/router'
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -28,6 +30,7 @@ const responsive = {
   },
 };
 let events=[]
+
 // Zoho check box validation
 function checkBoxSelected(e, t) {
   var r = e.getAttribute("check"),
@@ -59,10 +62,15 @@ function checkBoxSelected(e, t) {
   events.push(e.value)
 }
 export default function Events({ h_data, f_data, data }) {
-  // Count down renderer
+ 
   const [countDownState, setCountDownState] = useState(false);
+  // Count down renderer
+
+  
+  // @refresh reset
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     // console.log(completed)
+    
     if (completed) setCountDownState(true);
     return (
       <div className="flex md:space-x-4  ">
@@ -111,24 +119,28 @@ export default function Events({ h_data, f_data, data }) {
       </div>
     );
   };
+  const router = useRouter();
   useEffect(() => {
-    window.addEventListener("click", validateForm);
-
-    return () => {
-      window.removeEventListener("click", validateForm);
-    };
+   if(countDownState){ window.addEventListener("click", validateForm);}
+    window.addEventListener('popstate', ()=>{
+      
+     
+     router.reload()
+      setCountDownState(false)
+    });
   }, []);
+  // Form checkbox Validation
   function validateForm(){
-    // console.log("clicked")
+  
       if(events.length>0){
-        // console.log("Hello")
+     
         document.getElementById("eventsField").setCustomValidity('');
         document.getElementById('zcWebOptin').disabled=false
         
       }
       else{
         document.getElementById("eventsField").setCustomValidity("Please select atleast one event");
-        // document.getElementById('zcWebOptin').disabled=true
+      
         
       }
   }
@@ -138,13 +150,13 @@ export default function Events({ h_data, f_data, data }) {
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
           <section className="overflow-hidden  py-10 ">
-            <div className="    bg-roadshowbg bg-cover rounded-b-9xl pb-20 overflow-hidden  shadow-xl ">
+            <div className="  bg-roadshowbg bg-cover rounded-b-9xl pb-32 overflow-auto  shadow-xl ">
               <div className=" px-4 mx-auto pb-5">
                 <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
                   <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
                    {data.heroSection.header}
                   </span>
-                  <h1 className="max-w-lg mb-6 mx-auto  text-center text-white subheading  leading-tight">
+                  <h1 className="max-w-xl mb-6 mx-auto  text-center text-white subheading  leading-tight">
                     {data.heroSection.subHeading}
                   </h1>
                   {!countDownState && (

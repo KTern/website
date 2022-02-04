@@ -23,7 +23,8 @@ module.exports = {
         banner:"url('/events/banner-1.jpg')",
         eventsbg:"url('/events-landing/pattern.svg')",
         events:"url('/events/events-bg.svg')",
-        roadshowbg:"url('/events-landing/events-bg.svg')"
+        roadshowbg:"url('/events-landing/events-bg.svg')",
+        valueBg:"url('/assessment/background.png')"
       }),
       colors: {
         success: '#BADA55',
@@ -31,6 +32,7 @@ module.exports = {
       primary: '#0B1320',
       secondary: '#EAEDF2',
       white:'#ffffff',
+      eventsprimary:'#070B1D',
       teal:colors.teal,
       amber:colors.amber,
       sky:colors.sky,

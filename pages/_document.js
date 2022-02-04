@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-css-tags */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { LogoJsonLd } from "next-seo";
+
 export default class MyDocument extends Document {
 validateEmail240235000000441168() {
         var form = document.forms['WebToContacts240235000000441168'];
@@ -29,7 +31,8 @@ validateEmail240235000000441168() {
     return (
       <Html>
         <Head>
-      
+        <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css"/>
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css"/>
         {/* <!-- Google Tag Manager --> */}
 <script  dangerouslySetInnerHTML={{
               __html: `function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
