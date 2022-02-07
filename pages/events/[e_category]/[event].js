@@ -66,10 +66,8 @@ let events = [];
 export default function Events({ h_data, f_data, data }) {
   const router = useRouter();
   console.log(router.query.message);
-  if (router.query.message == "thanks") {
-    if (process.browser)
-      document.getElementById("thanks_container").style.display = "block";
-  }
+ 
+  
   let breadcrumb = [];
 	data.PageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -133,8 +131,13 @@ export default function Events({ h_data, f_data, data }) {
       </div>
     );
   };
- 
+  // Message Container on Form Submission
+  const [thanksState,setThanksState]=useState(false)
+  
   useEffect(() => {
+    if (router.query.message == 'thanks') {
+      setThanksState(true);
+  }
     if (countDownState) {
       window.addEventListener("click", validateForm);
     }
@@ -584,9 +587,10 @@ export default function Events({ h_data, f_data, data }) {
                       <h3 className="mb-6 card-heading  text-center">
                         {data.form.title}
                       </h3>
-                      <div
+                      {thanksState &&
+                       <div
                 id="thanks_container"
-                className=" hidden mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+                className="block  mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
                 role="alert"
               >
                 <div className="flex ">
@@ -606,11 +610,11 @@ export default function Events({ h_data, f_data, data }) {
                   </div>
                   <div>
                     <p className="font-bold card-subheading">
-                      {data.form.ThanksMessage}
+                     { data.form.ThanksMessage}
                     </p>
                   </div>
                 </div>
-              </div>
+              </div>}
                       <form
                         method="POST"
                         id="zcampaignOptinForm"
