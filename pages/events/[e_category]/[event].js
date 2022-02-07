@@ -64,6 +64,12 @@ let events = [];
 //   else events.push(e.value);
 // }
 export default function Events({ h_data, f_data, data }) {
+  const router = useRouter();
+  console.log(router.query.message);
+  if (router.query.message == "thanks") {
+    if (process.browser)
+      document.getElementById("thanks_container").style.display = "block";
+  }
   let breadcrumb = [];
 	data.PageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -127,7 +133,7 @@ export default function Events({ h_data, f_data, data }) {
       </div>
     );
   };
-  const router = useRouter();
+ 
   useEffect(() => {
     if (countDownState) {
       window.addEventListener("click", validateForm);
@@ -578,12 +584,39 @@ export default function Events({ h_data, f_data, data }) {
                       <h3 className="mb-6 card-heading  text-center">
                         {data.form.title}
                       </h3>
+                      <div
+                id="thanks_container"
+                className=" hidden mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+                role="alert"
+              >
+                <div className="flex ">
+                  <div className="py-1 pr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-bold card-subheading">
+                      data.PartnerRegistrationForm.ThanksMsg
+                    </p>
+                  </div>
+                </div>
+              </div>
                       <form
                         method="POST"
                         id="zcampaignOptinForm"
                         className="relative w-full mt-2 space-y-10"
                         action="https://kter.maillist-manage.in/weboptin.zc"
-                        target="_blank"
+                      
                       >
                         <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
                           <div id="SIGNUP_BODY" name="SIGNUP_BODY">
