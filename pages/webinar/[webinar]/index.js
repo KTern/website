@@ -12,7 +12,6 @@ import Event, {
 } from "../../../component/page_event";
 import Markdown from "markdown-to-jsx";
 import React, { useState, useRef, useEffect } from "react";
-import { Popover } from "@varld/popover";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -331,16 +330,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
                         
-                        <Popover
-      
-                          popover={({ visible, open, close }) => {
-                            return (
-                              <div className="mx-20 ">
-                                  {member.PopoverContent}
-                              </div>
-                            );
-                          }}
-                        >
+                      
                           <Image
                             priority
                             id="panelist"
@@ -351,7 +341,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                             alt=""
                             onMouseDown={(e) => handleClick(e)}
                           />
-                        </Popover>
+                      
                         <h3 className="font-bold   text-lg">{member.Name}</h3>
                         <p className="text-gray-500 hyperlink">
                           {member.Description}
