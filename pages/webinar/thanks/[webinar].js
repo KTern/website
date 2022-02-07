@@ -205,6 +205,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
         </Link> */}
         </div>
         )}
+       
         {/* /On demand Webinar */}
         <section className="w-full mb-10 pt-8 bg-white sm:pt-12 md:pt-16">
           <div className="px-2 mx-auto max-w-7xl">

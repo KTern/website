@@ -38,7 +38,7 @@ let question = [
   },
 ];
 export default function ValueAssesment({ h_data, f_data }) {
-  const [keyValue, setKey] = useState(0);
+  const [keyValue, setKey] = useState(-1);
   let key = 0;
   useEffect(() => {
     document
@@ -243,6 +243,7 @@ export default function ValueAssesment({ h_data, f_data }) {
           >
             Start Quiz
           </button>
+          
         </div>
       </Layout>
     </>

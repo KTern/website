@@ -4,15 +4,11 @@ import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
-import { SocialProfileJsonLd } from "next-seo";
-import { EventJsonLd } from "next-seo";
-import Head from "next/head";
 import { useRouter } from "next/router";
-import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
 import Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 import Markdown from "markdown-to-jsx";
-import ReactTooltip from "react-tooltip";
+import React, { useState, useRef, useEffect } from "react";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -44,6 +40,13 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
     month: "short",
     year: "numeric",
   });
+  const [open,setState]=useState(false);
+  function handleClick(e){
+    setState(true)
+  }
+  function handleClose(e) {
+    setState(false)
+  }
   function onFormClick(data){
     if(process.browser){
      
@@ -52,7 +55,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
     }
   //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
     Event(data);
-
+   
   }
   return (
     <>
@@ -302,28 +305,20 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
                         <Image priority
-                          data-for="main"
-                     data-tip={member.PopoverContent}
-                     data-iscapture="true"
+                        id="panelist"
                           width="150"
                           height="150"
                           className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
                           src={member.AvatarURL}
                           alt=""
+                          onClick={(e)=>handleClick(e)}
                         />
 
                         <h3 className="font-bold   text-lg">{member.Name}</h3>
                         <p className="text-gray-500 hyperlink">
                           {member.Description}
                         </p>
-                         <ReactTooltip
-                         className=" text-justify"
-            id="main"
-            place="top"
-            type="dark"
-            effect="solid"
-            multiline={true}
-          />
+                     
                       </div>
                     ))}
                   </div>

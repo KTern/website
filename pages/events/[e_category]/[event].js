@@ -753,7 +753,7 @@ export default function Events({ h_data, f_data, data }) {
                                         }}
                                         className=""
                                       >
-                                        {data.form.UserConsent}
+                                        {data.form.PrivacyStatement}
                                       </Markdown>
                                     </label>
                                   </div>
