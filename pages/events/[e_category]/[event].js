@@ -240,8 +240,7 @@ export default function Events({ h_data, f_data, data }) {
         },
       }}
       performers={performers}
-      url={data.EventsSEO.WebUrl}
-      
+      url={data.EventsSEO.WebUrl} 
     />
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
@@ -315,6 +314,30 @@ export default function Events({ h_data, f_data, data }) {
             </div>
           </section>
           {/* /Hero Section */}
+          {/* Logos Section */}
+          <div className="px-4 pt-14">
+						<div className=" px-4 mx-auto">
+							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
+								{data.TrustedByStatement}
+							</h2>
+							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+						</div>
+						   <Carousel className='bots flex p-6  z-10' responsive={responsive}>
+            {data.TrustedByLogos.map((dt) => (
+              <div key='dt' className='p-3 bots-card flex-row'>
+                <Image priority
+                  className=' w-auto lg:w-100'
+                  src={dt.logoUrl}
+                  alt={dt.altText}
+                  width={dt.width}
+                  height={dt.height}
+                  layout=''
+                />
+              </div>
+            ))}
+          </Carousel>
+					</div>
+          {/* Logos Section */}
           {/* Speakers Section */}
           <section className="pb-10 sm:px-6 pt-5 events">
             <div className="container mx-auto text-center ">
@@ -940,7 +963,7 @@ export default function Events({ h_data, f_data, data }) {
             </p>
             <div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
               <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-                <Link href={data.featuredArticles[0].CTAUrl} passHref>
+                {data.featuredArticles[0].OpenNewTab && <Link href={data.featuredArticles[0].CTAUrl} passHref>
                   <a
                     target="_blank"
                     className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
@@ -971,11 +994,42 @@ export default function Events({ h_data, f_data, data }) {
                       </p>
                     </div>
                   </a>
-                </Link>
+                </Link>}
+                {!data.featuredArticles[0].OpenNewTab && <Link href={data.featuredArticles[0].CTAUrl} passHref>
+                  <a
+                    className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  >
+                    <div className="hidden lg:block">
+                      <Image
+                        priority
+                        className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                        src={data.featuredArticles[0].Icon.imageURL}
+                        alt={data.featuredArticles[0].Icon.imageDescription}
+                        width={data.featuredArticles[0].Icon.width}
+                        height={data.featuredArticles[0].Icon.height}
+                      />
+                    </div>
+                    <div className="lg:hidden block">
+                      <Image
+                        priority
+                        className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                        src={data.featuredArticles[0].Icon.imageURL}
+                        alt={data.featuredArticles[0].Icon.imageDescription}
+                        width="650"
+                        height="470"
+                      />
+                    </div>
+                    <div className="px-4 ">
+                      <p className="md:text-lg text-md font-semibold  mb-2">
+                        {data.featuredArticles[0].CardTitle}
+                      </p>
+                    </div>
+                  </a>
+                </Link>}
               </div>
 
               <div className="lg:col-span-2  flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-                <Link href={data.featuredArticles[1].CTAUrl} passHref>
+                {data.featuredArticles[1].OpenNewTab && <Link href={data.featuredArticles[1].CTAUrl} passHref>
                   <a
                     target="_blank"
                     className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
@@ -992,7 +1046,25 @@ export default function Events({ h_data, f_data, data }) {
                       {data.featuredArticles[1].CardTitle}
                     </p>
                   </a>
-                </Link>
+                </Link>}
+                {!data.featuredArticles[1].OpenNewTab && <Link href={data.featuredArticles[1].CTAUrl} passHref>
+                  <a
+                   
+                    className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                  >
+                    <Image
+                      priority
+                      className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+                      src={data.featuredArticles[1].Icon.imageURL}
+                      alt=""
+                      width={data.featuredArticles[1].Icon.width}
+                      height={data.featuredArticles[1].Icon.height}
+                    />
+                    <p className="text-md mb-4 font-semibold px-4">
+                      {data.featuredArticles[1].CardTitle}
+                    </p>
+                  </a>
+                </Link>}
               </div>
             </div>
             <div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
@@ -1002,7 +1074,7 @@ export default function Events({ h_data, f_data, data }) {
                     key="dt"
                     className=" flex items-center justify-center rounded-xl shadow-xl"
                   >
-                    <Link href={dt.CTAUrl} passHref>
+                    {dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
                       <a
                         target="_blank"
                         className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
@@ -1019,7 +1091,24 @@ export default function Events({ h_data, f_data, data }) {
                           {dt.CardTitle}
                         </p>
                       </a>
-                    </Link>
+                    </Link>}
+                    {!dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
+                      <a
+                        className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                      >
+                        <Image
+                          priority
+                          className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+                          src={dt.Icon.imageURL}
+                          alt={dt.Icon.imageDescription}
+                          width={dt.Icon.width}
+                          height={dt.Icon.height}
+                        />
+                        <p className="text-md mb-4 font-semibold px-4">
+                          {dt.CardTitle}
+                        </p>
+                      </a>
+                    </Link>}
                   </div>
                 ) : (
                   <></>
