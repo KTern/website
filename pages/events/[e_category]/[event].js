@@ -606,7 +606,7 @@ export default function Events({ h_data, f_data, data }) {
                   </div>
                   <div>
                     <p className="font-bold card-subheading">
-                      data.PartnerRegistrationForm.ThanksMsg
+                      {data.form.ThanksMessage}
                     </p>
                   </div>
                 </div>
