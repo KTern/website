@@ -316,7 +316,7 @@ export default function Events({ h_data, f_data, data }) {
           </section>
           {/* /Hero Section */}
           {/* Speakers Section */}
-          <section className="pb-10 pt-5 events">
+          <section className="pb-10 sm:px-6 pt-5 events">
             <div className="container mx-auto text-center ">
               <div className=" mx-auto mb-8">
                 <span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
@@ -329,14 +329,11 @@ export default function Events({ h_data, f_data, data }) {
                   {data.speakers.subHeading}
                 </p>
               </div>
-              <div className="flex items-center justify-center space-x-4 mx-auto">
+              <div className="grid grid-cols-1 gap-2 md:flex md:items-center md:justify-center md:space-x-4 mx-auto">
                
                 {data.speakers.speakersList.map((dt) => (
                   <div key="dt" className=" px-5 mb-4" >
                     <Image
-                    //  data-for="main"
-                    //  data-tip="Hello<br />multiline<br />tooltip"
-                    //  data-iscapture="true"
                       priority
                       width={dt.imageWidth}
                       height={dt.imageHeight}
@@ -366,7 +363,7 @@ export default function Events({ h_data, f_data, data }) {
             id={data.heroSection.primaryCTA.linkURL}
             className="anchor events"
           >
-            <section className=" px-10 py-10 bg-eventsbg bg-cover  mx-5">
+            <section className=" md:px-10 py-10 bg-eventsbg bg-cover  mx-5">
               <svg
                 className="absolute -mt-20 hidden lg:block"
                 width="320"
@@ -562,7 +559,7 @@ export default function Events({ h_data, f_data, data }) {
               className="anchor events"
             >
               <section className="py-5 pb-10 px-5">
-                <div className="flex flex-col items-center justify-center text-justify">
+                <div className="flex flex-col items-center justify-center text-center">
                   <p className="section-heading mb-2">
                     {data.registerSection.header}
                   </p>
@@ -888,7 +885,7 @@ export default function Events({ h_data, f_data, data }) {
             <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full  rounded-b-10xl"></div>
             <div className="relative  mx-auto">
               <div className="flex flex-wrap items-center text-center">
-                <div className="w-full md:w-1/2 px-20">
+                <div className="w-full md:w-1/2 px-6 md:px-20">
                   <h2 className="mt-8 mb-8 section-heading leading-tight">
                     {data.accessReportSection.CardTitle}
                   </h2>
@@ -930,10 +927,10 @@ export default function Events({ h_data, f_data, data }) {
           {/* /Access Report */}
           {/* Featured Articles */}
           <section className="events px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
-            <h2 className="section-heading mb-4">
+            <h2 className="section-heading mb-4 ">
               {data.featuredArticlesSectionHeading}
             </h2>
-            <p className="section-subheading mb-10">
+            <p className="section-subheading mb-10 text-center">
               {data.featureArticlesSectionSubheading}
             </p>
             <div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
