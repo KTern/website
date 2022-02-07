@@ -317,12 +317,12 @@ export default function Events({ h_data, f_data, data }) {
           {/* Logos Section */}
           <div className="px-4 pt-14">
 						<div className=" px-4 mx-auto">
-							<h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
+							<h2 className="section-heading mt-2 mb-4 text-center">
 								{data.TrustedByStatement}
 							</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
-						   <Carousel className='bots flex p-6  z-10' responsive={responsive}>
+						   <Carousel className='bots flex p-6 items-center justify-center  z-10' responsive={responsive}>
             {data.TrustedByLogos.map((dt) => (
               <div key='dt' className='p-3 bots-card flex-row'>
                 <Image priority
