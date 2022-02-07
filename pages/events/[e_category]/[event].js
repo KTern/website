@@ -840,13 +840,13 @@ export default function Events({ h_data, f_data, data }) {
                             type="hidden"
                             id="zcld"
                             name="zcld"
-                            value="1fedd54b70d1dcd"
+                            value={data.form.mailingListId}
                           />
                           <input
                             type="hidden"
                             id="zctd"
                             name="zctd"
-                            value={data.form.mailingListId}
+                            value=""
                           />
                           <input type="hidden" id="document_domain" value="" />
                           <input
