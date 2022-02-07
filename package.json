@@ -14,6 +14,7 @@
         "@emotion/styled": "^11.6.0",
         "@mui/icons-material": "^5.2.0",
         "@mui/material": "^5.2.2",
+        "@varld/popover": "^0.1.0",
         "amplitude-js": "^8.13.1",
         "axios": "0.23.0",
         "bootstrap": "5.1.3",

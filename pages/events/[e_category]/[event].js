@@ -749,6 +749,11 @@ export default function Events({ h_data, f_data, data }) {
                                                 className: "",
                                               },
                                             },
+                                            a:{
+                                              props:{
+                                                className:"text-blue-800"
+                                              }
+                                        }
                                           },
                                         }}
                                         className=""

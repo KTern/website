@@ -821,3 +821,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
 .live-text{
   background:linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241))
 }
+
+
+::ng-deep .go2197912528{
+  background-color: #000;
+}
