@@ -1036,10 +1036,11 @@ export default function Events({ h_data, f_data, data }) {
                 {data.discussionSection.subHeading}
               </p>
               <Image
+              priority
                 height={350}
                 width={300}
-                alt=""
-                src="/events-landing/follow.png"
+                alt={data.discussionSection.image.imageDescription}
+                src={data.discussionSection.image.imageURL}
               />
             </div>
             <div className="border border-gray-100">
@@ -1083,6 +1084,7 @@ export default function Events({ h_data, f_data, data }) {
                 {data.discussionSection.subHeading}
               </p>
               <Image
+              priority
                 height={data.discussionSection.image.height}
                 width={data.discussionSection.image.width}
                 alt={data.discussionSection.image.imageDescription}
