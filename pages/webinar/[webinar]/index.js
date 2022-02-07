@@ -12,6 +12,7 @@ import { data } from "autoprefixer";
 import BreadCrumb from "../../../component/breadcrumb";
 import Event,{resolve_interest_score,resolve_stream_score} from "../../../component/page_event";
 import Markdown from "markdown-to-jsx";
+import ReactTooltip from "react-tooltip";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -301,6 +302,9 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
                         <Image priority
+                          data-for="main"
+                     data-tip={member.PopoverContent}
+                     data-iscapture="true"
                           width="150"
                           height="150"
                           className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
@@ -312,6 +316,14 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                         <p className="text-gray-500 hyperlink">
                           {member.Description}
                         </p>
+                         <ReactTooltip
+                         className=" text-justify"
+            id="main"
+            place="top"
+            type="dark"
+            effect="solid"
+            multiline={true}
+          />
                       </div>
                     ))}
                   </div>

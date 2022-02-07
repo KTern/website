@@ -2,14 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Countdown from "react-countdown";
 import Layout from "../../../component/Layout";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import image from "next/image";
 import Head from "next/head";
 import { Timeline } from "react-twitter-widgets";
 import Markdown from "markdown-to-jsx";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import BreadCrumb from "../../../component/breadcrumb";
+import ReactTooltip from "react-tooltip";
+// SEO Tags
+import { NextSeo } from "next-seo";
+import { BreadcrumbJsonLd } from "next-seo";
+import { LogoJsonLd } from "next-seo";
+import { EventJsonLd } from 'next-seo';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -29,53 +35,55 @@ const responsive = {
     items: 1,
   },
 };
-let events=[]
+let events = [];
 
 // Zoho check box validation
-function checkBoxSelected(e, t) {
-  var r = e.getAttribute("check"),
-    o = e.value ? e.value : "",
-    n = e.form;
-  if (n) {
-    var i = "#checkBoxValue_" + t,
-      a = n.querySelector(i);
-    if (
-      ("notChecked" == r
-        ? (e.setAttribute("check", "checked"),
-          e.setAttribute("checked", "checked"))
-        : (e.removeAttribute("checked"), e.setAttribute("check", "notChecked")),
-      "checked" != r)
-    ){
-      a && "" == a.value ? (a.value += o) : a && (a.value += ";" + o);
-    }
-    else {  
-      var c = a.value.split(";"),
-        l = o;
-      c.splice(c.indexOf(l), 1), (a.value = c.join(";"));
-      
-    }
-  }
-  // console.log(e.value)
-  if(events.includes(e.value))
-  events.splice(events.indexOf(e.value), 1);
-  else
-  events.push(e.value)
-}
+// function checkBoxSelected(e, t) {
+//   var r = e.getAttribute("check"),
+//     o = e.value ? e.value : "",
+//     n = e.form;
+//   if (n) {
+//     var i = "#checkBoxValue_" + t,
+//       a = n.querySelector(i);
+//     if (
+//       ("notChecked" == r
+//         ? (e.setAttribute("check", "checked"),
+//           e.setAttribute("checked", "checked"))
+//         : (e.removeAttribute("checked"), e.setAttribute("check", "notChecked")),
+//       "checked" != r)
+//     ) {
+//       a && "" == a.value ? (a.value += o) : a && (a.value += ";" + o);
+//     } else {
+//       var c = a.value.split(";"),
+//         l = o;
+//       c.splice(c.indexOf(l), 1), (a.value = c.join(";"));
+//     }
+//   }
+//   // console.log(e.value)
+//   if (events.includes(e.value)) events.splice(events.indexOf(e.value), 1);
+//   else events.push(e.value);
+// }
 export default function Events({ h_data, f_data, data }) {
- 
+  let breadcrumb = [];
+	data.PageSEO.BreadCrumb.map((dt) => {
+	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+	});
+  let performers=[]
+  data.speakers.speakersList.map((dt)=>{
+      performers.push({name:dt.speakerName})
+  })
   const [countDownState, setCountDownState] = useState(false);
   // Count down renderer
 
-  
   // @refresh reset
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     // console.log(completed)
-    
+
     if (completed) setCountDownState(true);
     return (
       <div className="flex md:space-x-4  ">
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
-          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+        <div className="flex flex-col items-center uppercase text-white  font-bold text-sm">
+          <span className="h-16 w-16 items-center bg-white bg-opacity-10 flex justify-center  border border-white  text-white shadow-xl rounded-full text-2xl font-bold  mb-2">
             {days}
           </span>
           <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
@@ -86,8 +94,8 @@ export default function Events({ h_data, f_data, data }) {
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
-          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+        <div className="flex flex-col items-center uppercase text-white  font-bold text-sm">
+          <span className="h-16 w-16 items-center bg-white bg-opacity-10 flex justify-center  border border-white  text-white shadow-xl rounded-full text-2xl font-bold  mb-2">
             {hours}
           </span>
           <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
@@ -97,8 +105,8 @@ export default function Events({ h_data, f_data, data }) {
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
-          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+        <div className="flex flex-col items-center uppercase text-white  font-bold text-sm">
+          <span className="h-16 w-16 items-center bg-white bg-opacity-10 flex justify-center  border border-white  text-white shadow-xl rounded-full text-2xl font-bold  mb-2">
             {minutes}
           </span>
           <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
@@ -108,8 +116,8 @@ export default function Events({ h_data, f_data, data }) {
         <span className="items-center mb-10 flex justify-center text-white text-3xl">
           :
         </span>
-        <div className="flex flex-col items-center uppercase text-white font-bold text-md">
-          <span className="h-20 w-20 items-center events-bg flex justify-center bg-white border-2 border-white  text-sky-800 shadow-xl rounded-full heading  mb-2">
+        <div className="flex flex-col items-center uppercase text-white  font-bold text-sm">
+          <span className="h-16 w-16 items-center bg-white bg-opacity-10 flex justify-center  border border-white  text-white shadow-xl rounded-full text-2xl font-bold  mb-2">
             {seconds}
           </span>
           <p className="events-bg px-2 py-1 rounded-lg text-black shadow-xl  font-bold">
@@ -121,49 +129,126 @@ export default function Events({ h_data, f_data, data }) {
   };
   const router = useRouter();
   useEffect(() => {
-   if(countDownState){ window.addEventListener("click", validateForm);}
-    window.addEventListener('popstate', ()=>{
-      
-     
-     router.reload()
-      setCountDownState(false)
+    if (countDownState) {
+      window.addEventListener("click", validateForm);
+    }
+    window.addEventListener("popstate", () => {
+      router.reload();
+      setCountDownState(false);
     });
   }, []);
   // Form checkbox Validation
-  function validateForm(){
-  
-      if(events.length>0){
-     
-        document.getElementById("eventsField").setCustomValidity('');
-        document.getElementById('zcWebOptin').disabled=false
-        
-      }
-      else{
-        document.getElementById("eventsField").setCustomValidity("Please select atleast one event");
-      
-        
-      }
+  function validateForm() {
+    if (events.length > 0) {
+      document.getElementById("eventsField").setCustomValidity("");
+      document.getElementById("zcWebOptin").disabled = false;
+    } else {
+      document
+        .getElementById("eventsField")
+        .setCustomValidity("Please select atleast one event");
+    }
   }
   return (
     <>
       <body className="">
+      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
+      <NextSeo
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+        }}
+        //  languageAlternates={[
+        //    {
+        //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        //      href: `${h_data.OtherSEO.languageAlternates.href}`,
+        //    },
+        //  ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
+      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
+      <EventJsonLd
+      name={data.EventsSEO.EventName}
+      startDate={data.EventsSEO.StartDate}
+      endDate={data.EventsSEO.EndDate}
+      location={{
+        type:`${data.EventsSEO.Location}`,
+        name: `${data.EventsSEO.Location}`,
+        sameAs: `${data.EventsSEO.WebUrl}`,
+        address: {
+        },
+      }}
+      performers={performers}
+      url={data.EventsSEO.WebUrl}
+      
+    />
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
           <section className="overflow-hidden  pt-4">
             <div className="  bg-roadshowbg bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl ">
               <div className=" px-4 mx-auto pb-5">
-              
-             
+              <div className="mx-28 mt-10">
+                    <BreadCrumb
+                      color={"white"}
+                      b_data={breadcrumb}
+                    />
+                  </div>
                 <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
-                <div className="mx-60 mt-10"><BreadCrumb
-                color={"white"}
-                b_data={[
-                  { position: "", name: "Home", item: "/" },
-                  { position: "dt.position", name: "Events", item: "/events" },
-                ]}
-              /></div>
+                 
                   <span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
-                   {data.heroSection.header}
+                    {data.heroSection.header}
                   </span>
                   <h1 className="max-w-xl mb-6 mx-auto  text-center text-white subheading  leading-tight">
                     {data.heroSection.subHeading}
@@ -181,7 +266,10 @@ export default function Events({ h_data, f_data, data }) {
                     </div>
                   )}
                   <div className="flex space-x-4 mt-10">
-                    <Link href={`#${data.heroSection.primaryCTA.linkURL}`} passHref>
+                    <Link
+                      href={`#${data.heroSection.primaryCTA.linkURL}`}
+                      passHref
+                    >
                       <a
                         className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                       >
@@ -189,7 +277,10 @@ export default function Events({ h_data, f_data, data }) {
                       </a>
                     </Link>
                     {!countDownState && (
-                      <Link href={`#${data.heroSection.secondaryCTA.linkURL}`} passHref>
+                      <Link
+                        href={`#${data.heroSection.secondaryCTA.linkURL}`}
+                        passHref
+                      >
                         <a
                           className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                         >
@@ -198,11 +289,14 @@ export default function Events({ h_data, f_data, data }) {
                       </Link>
                     )}
                     {countDownState && (
-                      <Link href={`#${data.alternateCta.CTAButtonLink}`} passHref>
+                      <Link
+                        href={`#${data.alternateCta.CTAButtonLink}`}
+                        passHref
+                      >
                         <a
                           className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                         >
-                         {data.alternateCta.CTAButtonText}
+                          {data.alternateCta.CTAButtonText}
                         </a>
                       </Link>
                     )}
@@ -217,35 +311,52 @@ export default function Events({ h_data, f_data, data }) {
             <div className="container mx-auto text-center ">
               <div className=" mx-auto mb-8">
                 <span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
-                 {data.speakers.tag}
+                  {data.speakers.tag}
                 </span>
                 <h2 className="section-heading mt-2 mb-4 ">
                   {data.speakers.heading}
                 </h2>
                 <p className="text-sky-700 leading-loose section-subheading">
-                 {data.speakers.subHeading}
+                  {data.speakers.subHeading}
                 </p>
               </div>
               <div className="flex items-center justify-center space-x-4 mx-auto">
-                {data.speakers.speakersList.map((dt)=>(<div key="dt" className=" px-5 mb-4">
-                  <Image
-                    priority
-                    width={dt.imageWidth}
-                    height={dt.imageHeight}
-                    className="h-20 w-20 mx-auto rounded-full object-cover object-top"
-                    src={dt.imageUrl}
-                    alt={dt.imageAlt}
-                  />
-                  <p className="mt-6 mb-2 text-md">{dt.speakerName}</p>
-                  <p className="text-gray-600 text-sm">{dt.designation	}</p>
-                </div>))}
-                
+               
+                {data.speakers.speakersList.map((dt) => (
+                  <div key="dt" className=" px-5 mb-4" >
+                    <Image
+                    //  data-for="main"
+                    //  data-tip="Hello<br />multiline<br />tooltip"
+                    //  data-iscapture="true"
+                      priority
+                      width={dt.imageWidth}
+                      height={dt.imageHeight}
+                      className="h-16 w-16 mx-auto rounded-full object-cover object-top"
+                      src={dt.imageUrl}
+                      alt={dt.imageAlt}
+                    />
+                  
+                    <p className="mt-6 mb-2 text-md">{dt.speakerName}</p>
+                    <p className="text-gray-600 text-sm">{dt.designation}</p>
+                     {/* <ReactTooltip
+            id="main"
+            place="right"
+            type="dark"
+            effect="solid"
+            multiline={true}
+          /> */}
+                  </div>
+                  
+                ))}
               </div>
             </div>
           </section>
           {/*/ Speakers Section */}
           {/* Featured Events */}
-          <section id={data.heroSection.primaryCTA.linkURL} className="anchor events">
+          {data.ToggleFeaturedEvents && <section
+            id={data.heroSection.primaryCTA.linkURL}
+            className="anchor events"
+          >
             <section className=" px-10 py-10 bg-eventsbg bg-cover  mx-5">
               <svg
                 className="absolute -mt-20 hidden lg:block"
@@ -299,8 +410,11 @@ export default function Events({ h_data, f_data, data }) {
                         </div>
                         <Link href={data.CTAUrl} passHref>
                           <a className="bg-white">
-                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                            <span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
                               {data.CardTitle}
+                            </span>
+                            <span className="bg-white block card-subheading h-1/5  leading-tight text-gray-700  hover:text-gray-900 ">
+                              {data.CardDescription}
                             </span>
                             <Link href={data.CTAUrl} passHref>
                               <a
@@ -350,8 +464,11 @@ export default function Events({ h_data, f_data, data }) {
                         </div>
                         <Link href={data.CTAUrl} passHref>
                           <a className="bg-white">
-                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                          <span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
                               {data.CardTitle}
+                            </span>
+                            <span className="bg-white block card-subheading  leading-tight text-gray-700  hover:text-gray-900 ">
+                              {data.CardDescription}
                             </span>
                             <Link href={data.CTAUrl} passHref>
                               <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
@@ -382,12 +499,17 @@ export default function Events({ h_data, f_data, data }) {
                 ))}
               </Carousel>
             </section>
-          </section>
+          </section>}
           {/* /Featured Events */}
           {/* Video Banner */}
           {countDownState && (
-            <section id={data.alternateCta.CTAButtonLink} className="anchor events py-10 text-center justify-center items-center flex flex-col">
-              <h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
+            <section
+              id={data.alternateCta.CTAButtonLink}
+              className="anchor events py-10 text-center justify-center items-center flex flex-col"
+            >
+              <h2 className="section-heading mb-3">
+                {data.eventVideo.heading}
+              </h2>
               <p className="section-subheading mb-6 text-center">
                 {data.eventVideo.subHeading}
               </p>
@@ -426,10 +548,15 @@ export default function Events({ h_data, f_data, data }) {
           {/* /Video Banner */}
           {/* Register Section */}
           {!countDownState && (
-            <section id={data.heroSection.secondaryCTA.linkURL} className="anchor events">
+            <section
+              id={data.heroSection.secondaryCTA.linkURL}
+              className="anchor events"
+            >
               <section className="py-5 pb-10 px-5">
                 <div className="flex flex-col items-center justify-center text-justify">
-                  <p className="section-heading mb-2">{data.registerSection.header}</p>
+                  <p className="section-heading mb-2">
+                    {data.registerSection.header}
+                  </p>
                   <p className="section-subheading max-w-2xl text-gray-700 text-center mb-2">
                     {data.registerSection.subHeading}
                   </p>
@@ -475,10 +602,10 @@ export default function Events({ h_data, f_data, data }) {
                                         className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                                         htmlFor="CONTACT_EMAIL"
                                       >
-                                       {data.form.email}
+                                        {data.form.email}
                                       </label>
                                       <input
-                                      required
+                                        required
                                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                         maxLength="100"
                                         placeholder="Business Email"
@@ -501,7 +628,7 @@ export default function Events({ h_data, f_data, data }) {
                                         {data.form.name}
                                       </label>
                                       <input
-                                      required
+                                        required
                                         className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                         maxLength="100"
                                         placeholder="Full Name"
@@ -512,7 +639,7 @@ export default function Events({ h_data, f_data, data }) {
                                     </div>
                                     <div></div>
                                   </div>
-                                  <div
+                                  {/* <div
                                     className="zcsffield "
                                     fieldid="71738000002653048"
                                   >
@@ -524,26 +651,34 @@ export default function Events({ h_data, f_data, data }) {
                                         {data.form.events}
                                       </label>
 
-                                      <div  className="  block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
-                                       {data.form.eventsList.map((dt)=>(
-                                       <div key="dt" className="flex space-x-2 items-center">
-                                          <input id="eventsField"
-                                          name="checkbox-group"
-                                            type="checkbox"
-                                            names="CONTACT_CF7"
-                                            multi="true"
-                                            zc_display_name=""
-                                            onClick={(e) =>
-                                              checkBoxSelected(
-                                                e.target,
-                                                "CONTACT_CF7"
-                                              )}
-                                            check="notChecked"
-                                            value={dt.eventValue}
-                                          />
-                                          <p className="text-sm "> {dt.eventName}</p>
-                                        </div>))}
-                                        
+                                      <div className="  block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
+                                        {data.form.eventsList.map((dt) => (
+                                          <div
+                                            key="dt"
+                                            className="flex space-x-2 items-center"
+                                          >
+                                            <input
+                                              id="eventsField"
+                                              name="checkbox-group"
+                                              type="checkbox"
+                                              names="CONTACT_CF7"
+                                              multi="true"
+                                              zc_display_name=""
+                                              onClick={(e) =>
+                                                checkBoxSelected(
+                                                  e.target,
+                                                  "CONTACT_CF7"
+                                                )
+                                              }
+                                              check="notChecked"
+                                              value={dt.eventValue}
+                                            />
+                                            <p className="text-sm ">
+                                              {" "}
+                                              {dt.eventName}
+                                            </p>
+                                          </div>
+                                        ))}
                                       </div>
                                       <input
                                         type="hidden"
@@ -556,25 +691,38 @@ export default function Events({ h_data, f_data, data }) {
                                       <div></div>
                                     </div>
                                     <div></div>
-                                  </div>
+                                  </div> */}
                                   <div className="zcwf_col_fld">
-                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
-                    options={{
-                      overrides: {
-                        p:{
-                          props:{
-                            className:"card-subheading text-justify"
-                          }
-                        },
-                        strong:{
-                          props:{
-                            className:""
-                          }
-                        }
-                      }}}
-                    className=""
-                  >{data.form.UserConsent}</Markdown></label>
-                        </div> 
+                                    <input
+                                      type="checkbox"
+                                      id="privacy"
+                                      value="true"
+                                      required
+                                    />
+                                    <label>
+                                      {" "}
+                                      <Markdown
+                                        options={{
+                                          overrides: {
+                                            p: {
+                                              props: {
+                                                className:
+                                                  "card-subheading text-justify",
+                                              },
+                                            },
+                                            strong: {
+                                              props: {
+                                                className: "",
+                                              },
+                                            },
+                                          },
+                                        }}
+                                        className=""
+                                      >
+                                        {data.form.UserConsent}
+                                      </Markdown>
+                                    </label>
+                                  </div>
                                 </div>
                                 <input
                                   type="hidden"
@@ -585,7 +733,6 @@ export default function Events({ h_data, f_data, data }) {
 
                                 <div className="mt-5">
                                   <input
-                                  
                                     type="submit"
                                     action="Save"
                                     id="zcWebOptin"
@@ -711,14 +858,21 @@ export default function Events({ h_data, f_data, data }) {
                   <p className="mb-10 section-subheading text-darkBlueGray-400">
                     {data.accessReportSection.CardDescription}
                   </p>
-                  <Link href={data.accessReportSection.CTAUrl} passHref>
+                  {data.accessReportSection.OpenNewTab && <Link href={data.accessReportSection.CTAUrl} passHref>
                     <a
                       target="_blank"
                       className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                     >
-                     {data.accessReportSection.CTAText}
+                      {data.accessReportSection.CTAText}
                     </a>
-                  </Link>
+                  </Link>}
+                  {!data.accessReportSection.OpenNewTab && <Link href={data.accessReportSection.CTAUrl} passHref>
+                    <a
+                      className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                    >
+                      {data.accessReportSection.CTAText}
+                    </a>
+                  </Link>}
                 </div>
                 <div className="relative w-full md:w-1/2 px-10   ">
                   <div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
@@ -739,7 +893,9 @@ export default function Events({ h_data, f_data, data }) {
           {/* /Access Report */}
           {/* Featured Articles */}
           <section className="events px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
-            <h2 className="section-heading mb-4">{data.featuredArticlesSectionHeading}</h2>
+            <h2 className="section-heading mb-4">
+              {data.featuredArticlesSectionHeading}
+            </h2>
             <p className="section-subheading mb-10">
               {data.featureArticlesSectionSubheading}
             </p>
@@ -772,7 +928,7 @@ export default function Events({ h_data, f_data, data }) {
                     </div>
                     <div className="px-4 ">
                       <p className="md:text-lg text-md font-semibold  mb-2">
-                       {data.featuredArticles[0].CardTitle}
+                        {data.featuredArticles[0].CardTitle}
                       </p>
                     </div>
                   </a>
@@ -794,35 +950,42 @@ export default function Events({ h_data, f_data, data }) {
                       height={data.featuredArticles[1].Icon.height}
                     />
                     <p className="text-md mb-4 font-semibold px-4">
-                     {data.featuredArticles[1].CardTitle}
+                      {data.featuredArticles[1].CardTitle}
                     </p>
                   </a>
                 </Link>
               </div>
             </div>
             <div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
-              {data.featuredArticles.map((dt,index)=>{
-               return index>1 ? (<div key="dt" className=" flex items-center justify-center rounded-xl shadow-xl"> 
-                <Link href={dt.CTAUrl} passHref>
-                  <a
-                    target="_blank"
-                    className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+              {data.featuredArticles.map((dt, index) => {
+                return index > 1 ? (
+                  <div
+                    key="dt"
+                    className=" flex items-center justify-center rounded-xl shadow-xl"
                   >
-                    <Image
-                      priority
-                      className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-                      src={dt.Icon.imageURL}
-                      alt={dt.Icon.imageDescription}
-                      width={dt.Icon.width}
-                      height={dt.Icon.height}
-                    />
-                    <p className="text-md mb-4 font-semibold px-4">
-                      {dt.CardTitle}
-                    </p>
-                  </a>
-                </Link>
-              </div>):(<></>)
-            })}
+                    <Link href={dt.CTAUrl} passHref>
+                      <a
+                        target="_blank"
+                        className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+                      >
+                        <Image
+                          priority
+                          className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+                          src={dt.Icon.imageURL}
+                          alt={dt.Icon.imageDescription}
+                          width={dt.Icon.width}
+                          height={dt.Icon.height}
+                        />
+                        <p className="text-md mb-4 font-semibold px-4">
+                          {dt.CardTitle}
+                        </p>
+                      </a>
+                    </Link>
+                  </div>
+                ) : (
+                  <></>
+                );
+              })}
             </div>
           </section>
           {/* /Featured Articles */}
@@ -830,7 +993,7 @@ export default function Events({ h_data, f_data, data }) {
           <section className="events py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
             <div className="lg:hidden block  flex flex-col px-10">
               <h2 className="section-heading mb-4 mt-5">
-               {data.discussionSection.heading}
+                {data.discussionSection.heading}
               </h2>
               <p className="section-subheading text-gray-400">
                 {data.discussionSection.subHeading}
@@ -854,32 +1017,30 @@ export default function Events({ h_data, f_data, data }) {
                 }}
               />
             </div>
-           {data.discussionSection.linkedIn.map((dt)=>( 
-           <div key="dt" className="grid grid-rows-8 ">
-              <iframe
-                className=" row-span-4 mb-2  h-full w-full  border-gray-100"
-                src={`${dt.postId}`}
-                scrolling="yes"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              />
-              <Link
-                href={dt.redirectUrl	}
-                passHref
-              >
-                <a
-                  target="_blank"
-                  className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b"
-                >
-                  View on LinkedIn
-                </a>
-              </Link>
-            </div>))}
-          
+            {data.discussionSection.linkedIn.map((dt) => (
+              <div key="dt" className="grid grid-rows-8 ">
+                <iframe
+                  className=" row-span-4 mb-2  h-full w-full  border-gray-100"
+                  src={`${dt.postId}`}
+                  scrolling="yes"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                />
+                <Link href={dt.redirectUrl} passHref>
+                  <a
+                    target="_blank"
+                    className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b"
+                  >
+                    View on LinkedIn
+                  </a>
+                </Link>
+              </div>
+            ))}
+
             <div className="hidden lg:block flex flex-col px-10">
               <h2 className="section-heading mb-4 mt-5">
-               {data.discussionSection.heading}
+                {data.discussionSection.heading}
               </h2>
               <p className="section-subheading text-gray-400">
                 {data.discussionSection.subHeading}
@@ -922,11 +1083,10 @@ export const getServerSideProps = async (ctx) => {
     }
   );
   // console.log(res)
-  
+
   const data = await res.json();
-  if(data[0]==undefined){
-  
-    ctx.res.setHeader('Location', '/404');
+  if (data[0] == undefined) {
+    ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }

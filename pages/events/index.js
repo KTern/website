@@ -3,7 +3,14 @@ import Link from "next/link";
 import BreadCrumb from "../../component/breadcrumb";
 import Layout from "../../component/Layout";
 import ReactPlayer from "react-player";
+import { NextSeo } from "next-seo";
+import { BreadcrumbJsonLd } from "next-seo";
+import { LogoJsonLd } from "next-seo";
 export default function Events({ h_data, f_data, data }) {
+  let breadcrumb = [];
+	data.PageSEO.BreadCrumb.map((dt) => {
+	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+	});
   function formatDate(date) {
     const dateFormat = new Date(date);
 
@@ -15,6 +22,75 @@ export default function Events({ h_data, f_data, data }) {
     return formattedDate;
   }
   return (
+    <>
+     <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
+      <NextSeo
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+        }}
+        //  languageAlternates={[
+        //    {
+        //      hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        //      href: `${h_data.OtherSEO.languageAlternates.href}`,
+        //    },
+        //  ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
+      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
     <Layout h_data={h_data} f_data={f_data}>
       {/* Banner Section */}
       <section className="relative py-10  top-10 text-white bg-events bg-cover bg-eventsprimary overflow-hidden rounded-t-10">
@@ -23,10 +99,7 @@ export default function Events({ h_data, f_data, data }) {
             <div className="relative px-20 mb-10 md:mb-0 text-center md:text-left z-10">
               <BreadCrumb
                 color={"white"}
-                b_data={[
-                  { position: "", name: "Home", item: "/" },
-                  { position: "dt.position", name: "Events", item: "/events" },
-                ]}
+                b_data={breadcrumb}
               />
               <h1 className="mb-3 mt-4 text-6xl font-bold  leading-tight">
                 {data.bannerSection.header}
@@ -392,6 +465,7 @@ export default function Events({ h_data, f_data, data }) {
       </section>
       {/* /CTA Section */}
     </Layout>
+    </>
   );
 }
 export const getServerSideProps = async () => {
