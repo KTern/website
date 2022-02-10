@@ -305,31 +305,23 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 							</div>
 						</div>
 						<div className="relative w-full lg:w-1/2 px-4">
-							<div className={`absolute inset-x-0  max-w-2xl mx-auto bg-white  shadow-2xl rounded-2xl `}>
-								<div className="rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative">
-                  <img
+							<img
 								className="hidden lg:block lg:absolute top-0 left-0 mt-52 ml-10"
 								src="https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right.svg"
 								alt=""
 							/>
-									<Image
-										priority
-										className={`rounded-3xl  md:rounded-6xl`}
-										layout="fill"
-										src={stream_data.VideoURL}
-										alt=""
-									/>
-								</div>
-							</div>		
-              {/* <img
-								className="hidden lg:block lg:absolute top-32 right-20 w-3/4 rounded-tl-3xl object-cover"
-								src="https://storage.googleapis.com/ktern-public-files/website/Feature%20Heros/New/Change%20Impact%20Mining.svg"
+
+							<Image
+								priority
+								className={`rounded-3xl  md:rounded-6xl`}
+								layout="fill"
+								src={stream_data.VideoURL}
 								alt=""
-							/> */}
+							/>
 						</div>
 					</div>
 				</section>
-				
+
 				{/* /Hero Section */}
 				{/* <!-- Customer logos Section --> */}
 				<div className="px-4 pt-10 pb-10">
