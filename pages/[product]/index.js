@@ -314,7 +314,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 							/> */}
 									<Image
 										priority
-										className={`rounded-3xl  md:rounded-6xl`}
+										className={`hidden lg:block lg:absolute top-32 right-20 w-3/4 rounded-tl-3xl object-cover`}
 										layout="fill"
 										src={stream_data.VideoURL}
 										alt=""
