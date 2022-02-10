@@ -216,64 +216,117 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 			/>
       <Layout h_data={h_data} f_data={f_data}>
         {/* Hero Section */}
-        <section className='relative md:py-10 pb-auto pb-72'>
-          <div className='hidden lg:block absolute inset-0 w-full relative'>
-            <Image priority src='/lines.svg' alt='' layout='fill' />
-          </div>
-      
-          <div
-            className={`relative pt-12 md:pt-10 pb-40 text-white ${stream_data.cssstreamtag}   `}
-          >
-              <div className="ml-10"> <BreadCrumb color="black" b_data={breadcrumb}/></div>
-            <div className='relative container mx-auto px-4'>
-              <div className='max-w-2xl mx-auto text-center mb-12 md:mb-8'>
-                <h2 className='mb-3 text-white  heading'>{stream_data.pageHeader.header}</h2>
-                <span className='mb-3  text-white subheading'>{stream_data.pageHeader.subHeading}</span>
-                <div>
-                  <br />
-                  <Link href={stream_data.pageHeader.primaryCTA.linkURL} passHref>
-                    <a 
-                    	onClick={()=>{onClick({stream_score:resolve_stream_score("none"),event_name:"Button Click",section_name:"Hero Section",page_source:`${stream_data.PageSEO.PageTitle}`,label:`${stream_data.pageHeader.primaryCTA.buttonTitle}`})}}
-                      className={`inline-block py-3 px-10 ${stream_data.cssstreamtag}-button bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
-                    >
-                      {stream_data.pageHeader.primaryCTA.buttonTitle}
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`absolute inset-x-0  max-w-2xl mx-auto px-4 bg-white  shadow-2xl rounded-2xl `}
-            >
-              <div className='rounded-3xl md:rounded-6xl md:rounded-tl-none h-80 w-100 relative'>
-                <Image priority
-                  className={`rounded-3xl  md:rounded-6xl`}
-                  layout='fill'
-                  src={stream_data.VideoURL}
-                  alt=''
-                />
-              </div>
-              <div className='absolute inset-0 flex items-center justify-center '>
-                {/* <Link href='/video' passHref>
-                  <a className='flex items-center justify-center hover:bg-black rounded-full bg-white animate-pulse'>
-                    <svg
-                      className={`w-16 h-16 hover:text-${stream_data.cssstreamtag}-secondary text-${stream_data.cssstreamtag}-400  transition duration-200`}
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fillRule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z'
-                        clipRule='evenodd'
-                      ></path>
-                    </svg>
-                  </a>
-                </Link> */}
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="relative pb-8 overflow-hidden bg-rose-50">
+				<div className="hidden lg:block absolute inset-0 mr-20 mt-10">
+					<img
+						className="ml-auto h-64"
+						src="https://shuffle.dev/zeus-assets/images/backgrounds/light-circle.svg"
+						alt=""
+					/>
+					{/* <img
+						className="ml-auto h-64"
+						src="https://shuffle.dev/zeus-assets/images/backgrounds/yellow-blue.svg"
+						alt=""
+					/> */}
+					{/* <img
+						className="ml-auto h-64"
+						src="https://shuffle.dev/zeus-assets/images/backgrounds/light-eclipse.svg"
+						alt=""
+					/> */}
+				</div>
+				<div className="flex flex-wrap -mx-4">
+					<div className="w-full lg:w-1/2 pt-12 pb-6 px-4 flex justify-center">
+						<div className="px-16 pl-24 sm:p-8 sm:py-0">
+							<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-8">
+								{/* <span className="text-xs text-blue-400 font-semibold">Whats new at Shuffle</span> */}
+								<span className="p-1 text-xs rounded mines text-white font-semibold">DIGITAL MINES</span>
+								<h1 className="heading mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
+									Take care of your performance every day.
+								</h1>
+								<p className="text-lg text-gray-500">
+									Build a well-presented brand that everyone will love. Take care to develop resources
+									continually and integrity them with previous projects.
+								</p>
+							</div>
+							<div className="relative flex flex-wrap">
+								<input
+									className="relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded"
+									type="text"
+									placeholder="e.g hello@shuffle.dev"
+								/>
+								{/* <span className="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">
+									Email Address
+								</span> */}
+								<button className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">
+									Start&nbsp;for&nbsp;free
+								</button>
+							</div>
+							<div className="rating pt-5">
+								<div className="rating-star"></div>
+								<div className="rating-star"></div>
+								<div className="rating-star"></div>
+								<div className="rating-star"></div>
+								<div className="rating-star"></div>
+								<span className="pl-3">Based on 10,000+ reviews on</span>
+								{/* <img
+									className="w-1/3 pt-5"
+									src="https://clickup.com/landing/images/reviews/color/g2crowd.png"
+								/> */}
+							</div>
+							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5">
+								<div className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
+									<img
+										className="mx-auto lg:mx-0 h-5"
+										src="https://shuffle.dev/zeus-assets/logo/slack-gray.svg"
+										alt=""
+									/>
+								</div>
+								<div className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
+									<img
+										className="mx-auto lg:mx-0 h-5"
+										src="https://shuffle.dev/zeus-assets/logo/slack-gray.svg"
+										alt=""
+									/>
+								</div>
+								<div className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
+									<img
+										className="mx-auto lg:mx-0 h-5"
+										src="https://shuffle.dev/zeus-assets/logo/slack-gray.svg"
+										alt=""
+									/>
+								</div>
+								<div className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
+									<img
+										className="mx-auto lg:mx-0 h-5"
+										src="https://shuffle.dev/zeus-assets/logo/slack-gray.svg"
+										alt=""
+									/>
+								</div>
+								<div className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
+									<img
+										className="mx-auto lg:mx-0 h-5"
+										src="https://shuffle.dev/zeus-assets/logo/slack-gray.svg"
+										alt=""
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="relative w-full lg:w-1/2 px-4">
+						<img
+							className="hidden lg:block lg:absolute top-0 left-0 mt-52 ml-10"
+							src="https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right.svg"
+							alt=""
+						/>
+
+						<img
+							className="hidden lg:block lg:absolute top-32 right-20 w-3/4 rounded-tl-3xl object-cover"
+							src="https://storage.googleapis.com/ktern-public-files/website/Feature%20Heros/New/Change%20Impact%20Mining.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</section>
         {/* /Hero Section */}
         {/* <!-- Customer logos Section --> */}
         <div className='px-4 pt-40 pb-10'>

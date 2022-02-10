@@ -208,11 +208,22 @@ a:hover {
 
 .heading {
   font-family: "Barlow", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 40px;
   line-height: 50px;
 }
 
+.rating-star {
+  width: 15px;
+  height: 15px;
+  background: url(https://clickup.com/landing/images/icons/rating-star.svg) center/contain no-repeat;
+  display: inline-block;
+}
+
+.rating {
+  display: inline-block;
+  vertical-align: text-top;
+}
 .sm-heading {
   font-family: "Barlow", sans-serif;
   font-weight: 700;
@@ -223,7 +234,7 @@ a:hover {
 .subheading {
   font-family: "Barlow", sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 31px;
 }
 
@@ -745,6 +756,20 @@ body {
 
 .dxaas {
   background: linear-gradient(81.86deg, #607A80 1.11%, rgba(8, 15, 25, 0.87) 44.32%, #000000 100%);
+}
+
+.bg-image {
+  
+}
+
+.dots-wrapper {
+  height: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url(https://assets-global.website-files.com/60a5136f2c6c8e4fb3a130d9/60abc6de18e7521211e636e5_dots-tile.svg);
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: repeat-x;
 }
 
 .react-tabs__tab--selected {
