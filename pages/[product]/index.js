@@ -322,8 +322,14 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 										src="https://shuffle.dev/flex-ui-assets/elements/circle3-orange.svg"
 										alt=""
 									/>
-
-									<img className="relative rounded-5xl" src={stream_data.VideoURL} alt="" />
+									<Image
+										priority
+										className={`relative rounded-5xl`}
+										layout="fill"
+										src={stream_data.VideoURL}
+										alt=""
+									/>
+									{/* <img className="relative rounded-5xl" src={stream_data.VideoURL} alt="" /> */}
 								</div>
 							</div>
 						</div>
