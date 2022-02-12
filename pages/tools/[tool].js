@@ -1,13 +1,20 @@
 import Layout from "../../component/Layout";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import ViewSlider from "react-view-slider";
 import ReactSlider from "react-slider";
 import { data } from "autoprefixer";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { ToastContainer, toast } from "react-toast";
-import { NextSeo, BreadcrumbJsonLd, LogoJsonLd, SocialProfileJsonLd, SoftwareAppJsonLd } from 'next-seo';
+import {
+  NextSeo,
+  BreadcrumbJsonLd,
+  LogoJsonLd,
+  SocialProfileJsonLd,
+  SoftwareAppJsonLd,
+} from "next-seo";
 import BreadCrumb from "../../component/breadcrumb";
 let form_data = {};
 let checkBoxData = [];
@@ -15,17 +22,17 @@ let valid = false;
 let score = 0;
 export default function ValueAssesment({ h_data, f_data, data }) {
   const [keyValue, setKey] = useState(-1);
+  const router = useRouter()
   let key = -1;
   let breadcrumb = [];
-	data.PageSEO.BreadCrumb.map((dt) => {
-	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
-	});
+  data.PageSEO.BreadCrumb.map((dt) => {
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+  });
   useEffect(() => {
+   console.log(keyValue)
     document
       .getElementById("button_field")
       .addEventListener("click", validateForm);
-
-   
   }, []);
 
   function operator(factor, opp, value) {
@@ -43,14 +50,12 @@ export default function ValueAssesment({ h_data, f_data, data }) {
   function scoreCalculator(value) {
     switch (data.Quiz[key].QuestionType) {
       case "SingleChoice": {
-        // console.log(value);
         data.Quiz[key].QuizValues.map((dt) => {
           if (dt.Value == value) score += dt.Score;
         });
         break;
       }
       case "MultipleChoice": {
-        // console.log(value);
         data.Quiz[key].QuizValues.map((dt) => {
           if (value.includes(dt.Value)) score += dt.Score;
         });
@@ -58,12 +63,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
       }
       case "Slider": {
         // console.log(value, score);
-        data.Quiz[key].SliderChoices.map((dt) => {
-          if (value >= dt.StartLimit && value < dt.EndLimit) {
             // console.log(operator(dt.Factor, dt.Operation, value));
-            score += Number(operator(dt.Factor, dt.Operation, value));
-          }
-        });
+            score += Number(operator(data.Quiz[key].SliderChoices[0].Factor, data.Quiz[key].SliderChoices[0].Operation, value));
         break;
       }
     }
@@ -75,6 +76,23 @@ export default function ValueAssesment({ h_data, f_data, data }) {
   }
 
   function validateForm(e) {
+    console.log(key,keyValue)
+    if (key >= 0 && data.Quiz[key].QuestionType == "Slider") {
+      if (data.Quiz[key].QuestionType == "Slider")
+       { 
+      if(document.getElementById("slider").innerHTML<=0){
+        toast.warn("Please fill all required fields.");
+        setTimeout(toast.hideAll, 2000);
+        valid = false;
+      }
+      else{
+       
+        document.getElementById("button_field").disabled = false;
+        valid = true;
+      }
+          }
+    }
+    else{
     if (document.getElementById("form").text_field != undefined) {
       if (document.getElementById("form").text_field.value != 0) {
         if (document.getElementById("text_field").type == "email") {
@@ -112,33 +130,38 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           valid = false;
         }
       }
-    } else {
-      if (key == -1) valid = true;
     }
-    if (valid) {
-      let value;
-      if (key != -1 && key < data.Quiz.length) {
-        if (data.Quiz[key].QuestionType == "MultipleChoice")
-          value = checkBoxData;
-        else value = document.getElementById("form").text_field.value;
-      }
-      // console.log("KEY", form_data, key);
-      if (value != undefined) {
-        form_data[data.Quiz[key].Question] = value;
-        scoreCalculator(value);
-      }
-      changeSlide();
-    }
+   }
+   if (key == -1) valid = true;
+  
+   if (valid ) {
+     let value;
+     if (key != -1 && key < data.Quiz.length) {
+       if (data.Quiz[key].QuestionType == "MultipleChoice")
+         value = checkBoxData;
+      else if(data.Quiz[key].QuestionType=="Slider"){
+         value=Number(document.getElementById("slider").innerHTML)}
+       else value = document.getElementById("form").text_field.value;
+     }
+  
+     if (value != undefined) {
+       form_data[data.Quiz[key].Question] = value;
+       scoreCalculator(value);
+     }
+     changeSlide();
+   }
   }
   // Change Slide
   function changeSlide() {
+    console.log(form_data)
     checkBoxData = [];
     key += 1;
     setKey(key);
+    console.log(key,keyValue)
   }
   // This function renders the view at the given index.
   const renderView = ({ index, active, transitionState }) => {
-    let data1 = data.Quiz[index];
+     let data1 = data.Quiz[index];
     switch (data1.QuestionType) {
       case "Textbox":
         return (
@@ -181,8 +204,9 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           </div>
         );
       case "Slider":
+      
         return (
-          <div className=" text-white flex flex-col events  items-center justify-center ">
+     <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
               className="heading text-center mb-10"
               style={{ width: "100vh" }}
@@ -190,16 +214,24 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             >
               {data1.Question}
             </h1>
-            <input
-              required
+            <ReactSlider
               id="text_field"
-              type="range"
               name="text_field"
-              min={0}
-              max={10}
-              className="bg-opacity-20 text-xl bg-white  mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
-              style={{ width: "70vh" }}
+              className="horizontal-slider rounded-full mb-5 cursor-pointer "
               defaultValue={0}
+              min={`${data1.SliderChoices[0].StartLimit}`}
+              max={data1.SliderChoices[0].EndLimit}
+              style={{ width: "65vh" }}
+              renderThumb={(props, state) => (
+                <div className="" {...props}>
+                  <span
+                    id="slider"
+                    className="bg-black p-1  cursor-pointer rounded-t-doublefull"
+                  >
+                    {state.valueNow}
+                  </span>
+                </div>
+              )}
             />
           </div>
         );
@@ -264,43 +296,43 @@ export default function ValueAssesment({ h_data, f_data, data }) {
 
   return (
     <>
-    	<NextSeo
-				title={data.PageSEO.PageTitle}
-				description={data.PageSEO.PageDescription}
-				canonical={data.PageSEO.CanonicalTag}
-				openGraph={{
-					url: `${data.PageSEO.PageURL}`,
-					title: `${data.PageSEO.PageTitle}`,
-					description: `${data.PageSEO.PageDescription}`,
-					images: [
-						{
-							url:`${data.PageSEO.ThumbnailImageURL}`,
-							width: 1920,
-							height: 1080,
-							alt: `${data.PageSEO.PageTitle}`,
-							type: 'image/png',
-						}
-					],
-					site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
-				}}
-				twitter={{
-					handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
-					site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
-					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
-					site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
-					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-					appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
-				}}
-				// languageAlternates={[
-				// 	{
-				// 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
-				// 		href: `${h_data.OtherSEO.languageAlternates.href}`,
-				// 	},
-				// ]}
-				additionalMetaTags={[
+      <NextSeo
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+        }}
+        // languageAlternates={[
+        // 	{
+        // 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        // 		href: `${h_data.OtherSEO.languageAlternates.href}`,
+        // 	},
+        // ]}
+        additionalMetaTags={[
           {
             property: "dc:creator",
             content: "Nivedha",
@@ -314,27 +346,25 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             content: "IE=edge; chrome=1",
           },
         ]}
-				additionalLinkTags={[
-					{
-						rel: 'icon',
-						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-					},
-					{
-						rel: 'apple-touch-icon',
-						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-						sizes: '76x76',
-					},
-					{
-						rel: 'manifest',
-						href: '/manifest.json',
-					},
-				]}
-			/>
-			<BreadcrumbJsonLd
-				itemListElements={breadcrumb}
-			/>
-		
-			  <LogoJsonLd
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
+      />
+      <BreadcrumbJsonLd itemListElements={breadcrumb} />
+
+      <LogoJsonLd
         logo={process.env.NEXT_PUBLIC_LOGO}
         url={process.env.NEXT_PUBLIC_URL}
       />
@@ -346,12 +376,15 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           id="form"
           className="bg-valueBg events py-20 bg-cover text-white flex flex-col space-y-16 items-center justify-center overflow-hidden"
           // style={{ height: "96vh" }}
+          onSubmit={(e) => {
+            e.preventDefault();
+console.log(e.target)
+            key += 1;
+           
+          }}
         >
-           <BreadCrumb
-                      color={"white"}
-                      b_data={breadcrumb}
-                    />
-          <ToastContainer />
+          <BreadCrumb color={"white"} b_data={breadcrumb} />
+          <ToastContainer position="top-right" />
           {keyValue == -1 && (
             <div className=" text-white flex flex-col events  items-center justify-center ">
               <h1 className="heading w-2/4 text-center mb-10">
@@ -374,56 +407,70 @@ export default function ValueAssesment({ h_data, f_data, data }) {
 
           {keyValue >= data.Quiz.length && (
             <div className="text-white heading text-center ">
-             <p className="heading text-center mb-4"> Score:&nbsp;{score}</p>
+              <p className="heading text-center mb-4"> Score:&nbsp;{score}</p>
               {data.QuizRecommendations.map((dt) => (
                 <p key="dt mt-5">
                   {score >= dt.ScoreFrom && score <= dt.ScoreTill && (
-                    <div className="flex flex-col space-y-6 flex-wrap ">
+                    <div className="flex flex-col items-center justify-center  space-y-6 flex-wrap ">
                       <p className="heading text-center mb-4">
-                       Level &nbsp; {dt.LevelNumber} &nbsp;| &nbsp;{dt.LevelName}
+                        Level &nbsp; {dt.LevelNumber} &nbsp;| &nbsp;
+                        {dt.LevelName}
                       </p>
                       <div className="mx-20 text-center">
-                    <Markdown
-                      options={{
-                        overrides: {
-                          h3: {
-                            props: {
-                              className: "text-2xl mb-4   text-center",
+                        <Markdown
+                          options={{
+                            overrides: {
+                              h3: {
+                                props: {
+                                  className: "text-2xl mb-4   text-center",
+                                },
+                              },
+                              h1: {
+                                props: {
+                                  className: "text-2xl mb-4   text-center",
+                                },
+                              },
+                              li: {
+                                props: {
+                                  className: " list-decimal ml-6 mb-1 flex-col",
+                                },
+                              },
+                              p: {
+                                props: {
+                                  className:
+                                    "mb-3 text-md  text-center",
+                                },
+                              },
+                              ol: {
+                                props: {
+                                  className: "mb-4 ",
+                                },
+                              },
+                              a: {
+                                props: {
+                                  className: "text-blue-800",
+                                },
+                              },
                             },
-                          },
-                          h1: {
-                            props: {
-                              className: "text-2xl mb-4   text-center",
-                            },
-                          },
-                          li: {
-                            props: {
-                              className:
-                                " list-decimal ml-6 mb-1 flex-col",
-                            },
-                          },
-                          p: {
-                            props: {
-                              className: "mb-3 card-subheading  text-center",
-                            },
-                          },
-                          ol: {
-                            props: {
-                              className: "mb-4 ",
-                            },
-                          },
-                          a:{
-                            props:{
-                              className:"text-blue-800"
-                            }
-                      }
-                        },
-                      }}
-                      className="mx-20 text-center"
-                    >
-                      {dt.Recommendations}
-                    </Markdown>
-                    </div>
+                          }}
+                          className="mx-20 text-center"
+                        >
+                          {dt.Recommendations}
+                        </Markdown>
+                      </div>
+                      <button
+                   name="restart"  
+              id="button_field"
+              type="button"
+              className="py-3 bg-opacity-40 hover:bg-opacity-40 sm:mb-4 text-sm border border-white  inline-block  px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase "
+             onClick={(e)=>{
+              router.reload(window.location.pathname)        
+             }
+               
+             }
+            >
+            <p>{data.Buttons[1].buttonTitle}</p>
+            </button>
                     </div>
                   )}
                 </p>
@@ -445,12 +492,20 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     </>
   );
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async (ctx) => {
   //    fetch strapi data
-  const res = await fetch(`https://api.ktern.com/value-assessment-roi`, {
+  
+  const res = await fetch(`https://api.ktern.com/tools?QuizSlug=${ctx.params.tool}`, {
     method: "get",
   });
+  
   const data = await res.json();
+  console.log(data[0].Quiz)
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
+    ctx.res.statusCode = 302;
+    ctx.res.end();
+  }
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
   });
@@ -461,7 +516,7 @@ export const getStaticProps = async () => {
   const f_data = await res2.json();
   return {
     props: {
-      data: data,
+      data: data[0],
       h_data: h_data,
       f_data: f_data,
     },
