@@ -167,8 +167,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         return (
           <div className=" text-white flex flex-col events   items-center justify-center ">
             <h1
-              className="text-4xl text-center mb-20"
-              style={{ width: "100vh" }}
+              className="text-4xl text-center mb-20 mx-2"
+             
               htmlFor="text_field"
             >
               {data1.Question}
@@ -178,8 +178,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               type="text"
               id="text_field"
               name="text_field"
-              className="bg-opacity-20 text-xl bg-white  mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
-              style={{ width: "70vh" }}
+              className="bg-opacity-20 text-xl bg-white sm:w-2/3  mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
             />
           </div>
         );
@@ -187,8 +187,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         return (
           <div className=" text-white flex flex-col events   items-center justify-center ">
             <h1
-              className="text-4xl text-center mb-20"
-              style={{ width: "100vh" }}
+              className="text-4xl text-center mb-20 mx-2"
+
               htmlFor="text_field"
             >
               {data1.Question}
@@ -198,8 +198,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               type="email"
               id="text_field"
               name="text_field"
-              className="bg-opacity-20 text-xl bg-white  mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
-              style={{ width: "70vh" }}
+              className="bg-opacity-20 text-xl bg-white w-1/4 sm:w-2/3 mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
             />
           </div>
         );
@@ -208,8 +208,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         return (
      <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
-              className="heading text-center mb-10"
-              style={{ width: "100vh" }}
+              className="heading text-center mb-10 w-full md:w-1/2"
+            
               htmlFor="text_field"
             >
               {data1.Question}
@@ -217,11 +217,11 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             <ReactSlider
               id="text_field"
               name="text_field"
-              className="horizontal-slider rounded-full mb-5 cursor-pointer "
+              className="horizontal-slider sm:w-2/3 rounded-full mb-5 cursor-pointer "
               defaultValue={0}
               min={`${data1.SliderChoices[0].StartLimit}`}
               max={data1.SliderChoices[0].EndLimit}
-              style={{ width: "65vh" }}
+              
               renderThumb={(props, state) => (
                 <div className="" {...props}>
                   <span
@@ -239,15 +239,15 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         return (
           <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
-              className="heading w-3/5 text-center mb-10"
-              style={{ width: "100vh" }}
+              className="sm:subheading heading text-center mb-10 w-full md:w-1/2"
+              
               htmlFor="text_field"
             >
               {data1.Question}
             </h1>
             <select
-              className="bg-opacity-20 text-xl bg-white mx-4 pr-4 mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
-              style={{ width: "70vh" }}
+              className="bg-opacity-20 text-xl bg-white sm:w-2/3 w-1/4 pr-4 mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
               name="text_field"
               id="text_field"
               required
@@ -269,8 +269,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         return (
           <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
-              className="heading text-center mb-10"
-              style={{ width: "100vh" }}
+              className="heading text-center mb-10 w-full md:w-1/2"
+            
             >
               {data1.Question}
             </h1>
@@ -372,9 +372,10 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout h_data={h_data} f_data={f_data}>
+      
         <form
           id="form"
-          className="bg-valueBg events py-20 bg-cover text-white flex flex-col space-y-16 items-center justify-center overflow-hidden"
+          className="bg-valueBg events py-20 bg-cover text-white flex flex-col space-y-16 overflow-hidden"
           // style={{ height: "96vh" }}
           onSubmit={(e) => {
             e.preventDefault();
@@ -383,21 +384,23 @@ console.log(e.target)
            
           }}
         >
-          <BreadCrumb color={"white"} b_data={breadcrumb} />
+         <div className="mx-10">
+         <BreadCrumb  color={"white"} b_data={breadcrumb} />
+         </div>
           <ToastContainer position="top-right" />
           {keyValue == -1 && (
             <div className=" text-white flex flex-col events  items-center justify-center ">
-              <h1 className="heading w-2/4 text-center mb-10">
+              <h1 className="heading md:w-2/4 text-center mb-10">
                 {data.QuizTitle}
               </h1>
-              <p className="subheading w-2/4 text-center">
+              <p className="subheading md:w-2/4 text-center">
                 {data.QuizDescription}
               </p>
             </div>
           )}
           {keyValue < data.Quiz.length && (
             <ViewSlider
-              className="mx-auto text-white flex flex-col items-center justify-center "
+              className=" "
               renderView={renderView}
               numViews={4}
               activeView={keyValue}
@@ -411,23 +414,23 @@ console.log(e.target)
               {data.QuizRecommendations.map((dt) => (
                 <p key="dt mt-5">
                   {score >= dt.ScoreFrom && score <= dt.ScoreTill && (
-                    <div className="flex flex-col items-center justify-center  space-y-6 flex-wrap ">
+                    <div className="flex flex-col space-y-6">
                       <p className="heading text-center mb-4">
                         Level &nbsp; {dt.LevelNumber} &nbsp;| &nbsp;
                         {dt.LevelName}
                       </p>
-                      <div className="mx-20 text-center">
+                      <div className=" mx-auto text-center">
                         <Markdown
                           options={{
                             overrides: {
                               h3: {
                                 props: {
-                                  className: "text-2xl mb-4   text-center",
+                                  className: "text-xl mb-4   text-center",
                                 },
                               },
                               h1: {
                                 props: {
-                                  className: "text-2xl mb-4   text-center",
+                                  className: "text-lg mb-4   text-center",
                                 },
                               },
                               li: {
@@ -438,7 +441,7 @@ console.log(e.target)
                               p: {
                                 props: {
                                   className:
-                                    "mb-3 text-md  text-center",
+                                    "mb-3 text-md sm:text-sm text-center",
                                 },
                               },
                               ol: {
@@ -453,7 +456,7 @@ console.log(e.target)
                               },
                             },
                           }}
-                          className="mx-20 text-center"
+                          className=" text-center"
                         >
                           {dt.Recommendations}
                         </Markdown>
@@ -462,7 +465,7 @@ console.log(e.target)
                    name="restart"  
               id="button_field"
               type="button"
-              className="py-3 bg-opacity-40 hover:bg-opacity-40 sm:mb-4 text-sm border border-white  inline-block  px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase "
+              className="mx-auto py-3 bg-opacity-40 hover:bg-opacity-40 sm:mb-4 text-sm border border-white  inline-block  px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase "
              onClick={(e)=>{
               router.reload(window.location.pathname)        
              }
@@ -481,7 +484,7 @@ console.log(e.target)
             <button
               id="button_field"
               type="button"
-              className=" bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
+              className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
             >
               {keyValue == -1 && <p>{data.Buttons[0].buttonTitle}</p>}
               {keyValue >= 0 && <p>{data.Buttons[2].buttonTitle}</p>}
@@ -500,7 +503,7 @@ export const getServerSideProps = async (ctx) => {
   });
   
   const data = await res.json();
-  console.log(data[0].Quiz)
+  // console.log(data[0].Quiz)
   if(data[0]==undefined){
     ctx.res.setHeader('Location', '/404');
     ctx.res.statusCode = 302;
