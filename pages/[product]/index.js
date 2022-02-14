@@ -1,95 +1,94 @@
-import { FAQPageJsonLd } from "next-seo";
-import Layout from "../../component/Layout";
-import Carousel from "react-multi-carousel";
-import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
-import { SocialProfileJsonLd } from "next-seo";
-import Image from "next/image";
-import Link from "next/link";
-import { ProductJsonLd } from "next-seo";
-import { VideoJsonLd } from "next-seo";
-import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
-import { SoftwareAppJsonLd } from "next-seo";
-import FAQ from "../../component/faq";
-import BreadCrumb from "../../component/breadcrumb";
+import { FAQPageJsonLd } from 'next-seo';
+import Layout from '../../component/Layout';
+import Carousel from 'react-multi-carousel';
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ProductJsonLd } from 'next-seo';
+import { VideoJsonLd } from 'next-seo';
+import Event, { resolve_interest_score, resolve_stream_score } from '../../component/page_event';
+import { SoftwareAppJsonLd } from 'next-seo';
+import FAQ from '../../component/faq';
+import BreadCrumb from '../../component/breadcrumb';
 const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+	superLargeDesktop: {
+		// the naming can be any, depends on you.
+		breakpoint: { max: 4000, min: 3000 },
+		items: 5,
+	},
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 3,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 2,
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+	},
 };
 const responsive_2 = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+	superLargeDesktop: {
+		// the naming can be any, depends on you.
+		breakpoint: { max: 4000, min: 3000 },
+		items: 5,
+	},
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 4,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 2,
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+	},
 };
 function next(id, last) {
-
-  let elem = document.getElementById(id);
-  const styles = window.getComputedStyle(elem);
-  const amount = styles.getPropertyValue("--amount");
-  const gapV = styles.getPropertyValue("--gap-v");
-  const gapM = amount * gapV;
-  const tokElem = document.getElementById(token);
-  const tokStyles = window.getComputedStyle(tokElem);
-  const iWidth = parseFloat(tokStyles.width);
-  document.getElementById(id).scrollBy({ left: iWidth * amount + gapM, behavior: "smooth" });
+	let elem = document.getElementById(id);
+	const styles = window.getComputedStyle(elem);
+	const amount = styles.getPropertyValue('--amount');
+	const gapV = styles.getPropertyValue('--gap-v');
+	const gapM = amount * gapV;
+	const tokElem = document.getElementById(token);
+	const tokStyles = window.getComputedStyle(tokElem);
+	const iWidth = parseFloat(tokStyles.width);
+	document.getElementById(id).scrollBy({ left: iWidth * amount + gapM, behavior: 'smooth' });
 }
 
 function prev(id, last) {
-  let elem = document.getElementById(id);
-  const styles = window.getComputedStyle(elem);
-  const amount = styles.getPropertyValue("--amount");
-  const gapV = styles.getPropertyValue("--gap-v");
-  const gapM = amount * gapV;
-  const tokElem = document.getElementById(token);
-  const tokStyles = window.getComputedStyle(tokElem);
-  const iWidth = parseFloat(tokStyles.width);
-  document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
+	let elem = document.getElementById(id);
+	const styles = window.getComputedStyle(elem);
+	const amount = styles.getPropertyValue('--amount');
+	const gapV = styles.getPropertyValue('--gap-v');
+	const gapM = amount * gapV;
+	const tokElem = document.getElementById(token);
+	const tokStyles = window.getComputedStyle(tokElem);
+	const iWidth = parseFloat(tokStyles.width);
+	document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: 'smooth' });
 }
-export default function DigitalStream({stream_data,h_data,f_data}) {
-  let breadcrumb = [];
-  stream_data.PageSEO.BreadCrumb.map((dt) => {
-    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
-  });
-  let faq=[]
-  stream_data.FAQSection.map((dt)=>{
-  faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
-})
-  // Amplitude Tracking onClick
-  function onClick(data){
-    Event(data)
-    }
-    
-  return (
+export default function DigitalStream({ stream_data, h_data, f_data }) {
+	let breadcrumb = [];
+	stream_data.PageSEO.BreadCrumb.map((dt) => {
+		breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+	});
+	let faq = [];
+	stream_data.FAQSection.map((dt) => {
+		faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
+	});
+	// Amplitude Tracking onClick
+	function onClick(data) {
+		Event(data);
+	}
+
+	return (
 		<>
 			<NextSeo
 				title={stream_data.PageSEO.PageTitle}
@@ -207,13 +206,11 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 			/>
 			<Layout h_data={h_data} f_data={f_data}>
 				{/* Hero Section */}
-				{/* <section className={`relative overflow-hidden bg-${stream_data.cssstreamtag}`}> */}
 				<section className={`relative overflow-hidden section-${stream_data.cssstreamtag}`}>
-					<div className="flex flex-wrap -mx-4">
+					<div className="flex flex-wrap -mx-4 pb-10">
 						<div className="w-full lg:w-1/2 pt-12 pb-6 px-4 flex justify-center">
 							<div className="px-16 pl-24 sm:p-8 sm:py-0">
 								<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-8">
-									{/* <span className="text-xs text-blue-400 font-semibold">Whats new at Shuffle</span> */}
 									<div className="mb-4">
 										{' '}
 										<BreadCrumb color="black" b_data={breadcrumb} />
@@ -232,9 +229,6 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 										type="text"
 										placeholder="e.g hello@shuffle.dev"
 									/>
-									{/* <span className="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">
-									Email Address
-								</span> */}
 									<button className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">
 										Start&nbsp;for&nbsp;free
 									</button>
@@ -322,74 +316,117 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 										src="https://shuffle.dev/flex-ui-assets/elements/circle3-orange.svg"
 										alt=""
 									/>
-									<Image
+									{/* <Image
 										priority
 										className={`relative rounded-5xl`}
 										layout="fill"
 										src={stream_data.VideoURL}
 										alt=""
-									/>
-									{/* <img className="relative rounded-5xl" src={stream_data.VideoURL} alt="" /> */}
+									/> */}
+									<img className="relative rounded-5xl" src={stream_data.VideoURL} alt="" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-
 				{/* /Hero Section */}
-				{/* <!-- Customer logos Section --> */}
-				<div className="px-4 pt-10 pb-10">
-					<div className="container px-4 mx-auto">
-						<h2 className=" text-center  text-gray-400 section-heading sm:sm-section-heading">
-							{stream_data.LogoHeading}
-						</h2>
-						{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
-					</div>
-					<Carousel className="bots flex p-10  z-10" responsive={responsive_2}>
-						{stream_data.Logos.map((dt) => (
-							<div key="dt" className="p-3 bots-card flex-row">
-								<Image
-									priority
-									className=" w-auto lg:w-100"
-									src={dt.logoUrl}
-									alt=""
-									width={dt.width}
-									height={dt.height}
-									layout=""
-								/>
-							</div>
-						))}
-					</Carousel>
-				</div>
-				{/* <!-- /Customer logos Section --> */}
+
 				{/* <!-- Why Ktern --> */}
-				<section
-					className={`md:px-20 ${stream_data.cssstreamtag} text-white py-10 md:rounded-tr-large md:rounded-b-large md:mx-10 mb-10`}
-				>
-					<h2 className="section-heading text-center text-white mt-10 mb-3">{stream_data.WhySectionTitle}</h2>
-					<p className="section-subheading text-center text-white">{stream_data.WhySectionDescription}</p>
-					<div className="flex justify-center items-center   mx-auto space-x-10 ">
-						<div className="grid md:grid-cols-4 gap-3 justify-center ">
-							{stream_data.WhyStreamPoints.map((dt) => (
-								<div key="dt" className="p-6 w-full  md:mb-8 md:mt-8 justify-center items-center ">
-									<div className="flex items-center  justify-center p-2 w-16 h-16 mb-8 rounded-full bg-white">
-										<Image
-											priority
-											src={dt.Icon.imageURL}
-											alt={dt.Icon.imageDescription}
-											width={dt.Icon.width}
-											height={dt.Icon.height}
-											className=" rounded-full "
-										/>
-									</div>
-									<h3 className="mb-4 text-white card-heading">{dt.CardTitle}</h3>
-									<p className="card-subheading text-gray-200">{dt.CardDescription} </p>
+				<section className="bg-streamsBg py-12 bg-white overflow-hidden">
+					<div className="container px-4 mx-auto">
+						<div className="text-center">
+							<span
+								className={`p-1 text-xs rounded ${stream_data.cssstreamtag} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
+							>
+								DIGITAL MINES
+							</span>
+							<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+								{stream_data.WhySectionTitle}
+							</h2>
+							<p className="mb-12 section-subheading md:text-1xl text-center text-black px-12">
+								{stream_data.WhySectionDescription}
+							</p>
+						</div>
+						<div className="flex flex-wrap -mx-4">
+							<div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+								<div className="relative mx-auto md:ml-0 max-w-max">
+									<img
+										className="absolute z-10 -right-8 -top-8 w-28 md:w-auto"
+										src="https://shuffle.dev/flex-ui-assets/elements/circle3-yellow.svg"
+										alt=""
+									/>
+									<img
+										className="absolute z-10 -left-10 -bottom-8 w-28 md:w-auto"
+										src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
+										alt=""
+									/>
+									<img src="https://shuffle.dev/flex-ui-assets/images/how-it-works/stock.png" alt="" />
 								</div>
-							))}
+							</div>
+							<div className="w-full md:w-1/2 px-4">
+								<div className="flex flex-wrap -mx-4 text-center md:text-left">
+									{stream_data.WhyStreamPoints.map((dt, index) => (
+										<div
+											key="dt"
+											className="w-full md:w-1/2 p-8 mb-4 hover:bg-white rounded-md hover:shadow-xl transition duration-200"
+										>
+											<div
+												className={`inline-flex text-white items-center justify-center mb-4 w-12 h-12 text-xl ${stream_data.cssstreamtag} font-semibold rounded-full`}
+											>
+												{index + 1}
+											</div>
+											<h3 className="mb-2 text-xl font-bold">{dt.CardTitle}</h3>
+											<p className="font-medium text-coolGray-500">{dt.CardDescription}</p>
+										</div>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
 				{/* <!-- /Why Ktern --> */}
+
+				{/* Customer Logo */}
+				<section className="py-20 xl:pt-24 bg-zinc">
+					<div className="container px-4 mx-auto">
+						<div className="flex flex-wrap items-center -mx-4">
+							<div className="w-full lg:w-1/2 px-12 mb-8">
+								<div className="max-w-md">
+									<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+										Our Clients
+									</span>
+									<h3 className="mb-8 text-4xl md:text-5xl text-coolGray-900 font-bold tracking-tighter">
+										Trusted by the top companies in this industry
+									</h3>
+									<p className="text-lg md:text-xl text-coolGray-500 font-medium">
+										The only SaaS business platform that combines CRM, marketing automation &amp; commerce.
+									</p>
+								</div>
+							</div>
+							<div className="w-full lg:w-1/2 px-4">
+								<div className="flex flex-wrap justify-center -mx-4">
+									{stream_data.Logos.map((dt) => (
+										<div key="dt" className="w-full md:w-1/2 px-4 mb-8">
+											<div className="flex items-center h-32 md:h-36 px-4 md:px-8 rounded-md bg-coolGray-50 shadow-md  hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+												<Image
+													priority
+													className=" w-auto lg:w-100"
+													src={dt.logoUrl}
+													alt=""
+													width={dt.width}
+													height={dt.height}
+													layout=""
+												/>
+											</div>
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				{/* /Customer Logo */}
+
 				{/* Streams Content Section */}
 				<section className="px-5 pb-10 relative overflow-hidden ">
 					{/* <Image priority className="hidden lg:block absolute inset-0 w-full" src="/lines.svg" alt=""/> */}
@@ -696,6 +733,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 					})}
 				</section>
 				{/*/ Streams Content Section */}
+
 				{/* Bots Section */}
 				<div className={`md:px-20 py-10 `}>
 					<div className="px-20">
@@ -732,6 +770,7 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 					</Carousel>
 				</div>
 				{/* /Bots Section */}
+
 				{/* Testimonial Section */}
 				<section className="sm:px-4 relative py-10 md:py-15 bg-black overflow-x-hidden">
 					{/* <Image priority width="10%" height="10%" className="absolute h-24 md:h-auto top-0 left-0 right-0" src="/atis-assets/elements/line-top.svg" alt=""/> */}
@@ -1013,6 +1052,31 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 				</section>
 				{/* / Resources Setion */}
 				{/* / Resources Setion */}
+				{/* <!-- Customer logos Section --> */}
+				<div className="bg-white bg-bg px-4 pt-10 pb-10">
+					<div className="container px-4 mx-auto">
+						<h2 className=" text-center  text-gray-400 section-heading sm:sm-section-heading">
+							{stream_data.LogoHeading}
+						</h2>
+						{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+					</div>
+					<Carousel className="bots flex p-10  z-10" responsive={responsive_2}>
+						{stream_data.Logos.map((dt) => (
+							<div key="dt" className="p-3 bots-card flex-row">
+								<Image
+									priority
+									className=" w-auto lg:w-100"
+									src={dt.logoUrl}
+									alt=""
+									width={dt.width}
+									height={dt.height}
+									layout=""
+								/>
+							</div>
+						))}
+					</Carousel>
+				</div>
+				{/* <!-- /Customer logos Section --> */}
 				{/* Cta Section */}
 				<section className="bg-white">
 					<div className="md:px-2 md:py-8 mx-auto sm:py-10  lg:py-20 max-w-7xl">
@@ -1095,57 +1159,57 @@ export default function DigitalStream({stream_data,h_data,f_data}) {
 				{/* /Cta Section */}
 			</Layout>
 		</>
-  );
+	);
 }
 
 export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-  const data = [
-    { product: "digital-maps" },
-    { product: "digital-projects" },
-    { product: "digital-process" },
-    { product: "digital-labs" },
-    { product: "digital-mines" },
-  ];
+	// dynamic route array values must be acquired here from strapi
+	const data = [
+		{ product: 'digital-maps' },
+		{ product: 'digital-projects' },
+		{ product: 'digital-process' },
+		{ product: 'digital-labs' },
+		{ product: 'digital-mines' },
+	];
 
-  const paths = data.map((index) => {
-    return {
-      params: { product: index.product },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
+	const paths = data.map((index) => {
+		return {
+			params: { product: index.product },
+		};
+	});
+	return {
+		paths,
+		fallback: false,
+	};
 };
 
 export const getStaticProps = async ({ params }) => {
-  const streamname = params.product;
+	const streamname = params.product;
 
-  const res = await fetch(`https://api.ktern.com/digital-streams?slug=${streamname}`, {
-    method: "get",
-  });
-  if(res==undefined){
-    ctx.res.setHeader('Location', '/404');
-    ctx.res.statusCode = 302;
-    ctx.res.end();
-  }
-  const data = await res.json();
-  
-  //  console.log(data[0])
-  	const res1 = await fetch('https://api.ktern.com/header', {
+	const res = await fetch(`https://api.ktern.com/digital-streams?slug=${streamname}`, {
 		method: 'get',
 	});
-  const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
+	if (res == undefined) {
+		ctx.res.setHeader('Location', '/404');
+		ctx.res.statusCode = 302;
+		ctx.res.end();
+	}
+	const data = await res.json();
+
+	//  console.log(data[0])
+	const res1 = await fetch('https://api.ktern.com/header', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
+	const res2 = await fetch('https://api.ktern.com/footer', {
 		method: 'get',
 	});
 	const f_data = await res2.json();
-  return {
-    props: {
-      stream_data: data[ 0 ],
-      h_data: h_data,
-      f_data:f_data
-    }
-  };
+	return {
+		props: {
+			stream_data: data[0],
+			h_data: h_data,
+			f_data: f_data,
+		},
+	};
 };
