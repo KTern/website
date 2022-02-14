@@ -920,3 +920,15 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
 ::ng-deep .go2197912528{
   background-color: #000;
 }
+
+/* Slider */
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 5px;
+  border: 1px solid grey;
+  background-color:white ;
+ 
+}
+
+

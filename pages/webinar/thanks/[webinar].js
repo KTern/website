@@ -16,7 +16,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
   // var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' ,hours:'numeric',minutes:'numeric'};
   const start = new Date(webinar_data.DateTime);
   const end = new Date(webinar_data.DateTime).setHours(start.getHours() + 1);
-
+  console.log(webinar_data.DateTime,start,end)
   const event = {
     title: webinar_data.WebinarTitle,
     description: "",
@@ -25,6 +25,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
     location: "",
     attendees: [],
   };
+  console.log(event)
   const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [isSlideVisible, setIsSlideVisible] = useState(false);
   let breadcrumb = [];

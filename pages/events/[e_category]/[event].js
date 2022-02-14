@@ -408,7 +408,7 @@ export default function Events({ h_data, f_data, data }) {
                 </p>
               </div>
               <Carousel
-                className=" flex py-5   z-10 -mx-4 overflow-hidden "
+                className=" flex py-5 items-center  z-10 -mx-4 overflow-hidden "
                 responsive={responsive}
               >
                 {data.events.map((data) => (
