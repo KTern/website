@@ -227,7 +227,7 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 									<input
 										className="relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded"
 										type="text"
-										placeholder="e.g hello@shuffle.dev"
+										placeholder="Enter your Business Email"
 									/>
 									<button className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">
 										Start&nbsp;for&nbsp;free
@@ -428,303 +428,98 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 				{/* /Customer Logo */}
 
 				{/* Streams Content Section */}
-				<section className="px-5 pb-10 relative overflow-hidden ">
-					{/* <Image priority className="hidden lg:block absolute inset-0 w-full" src="/lines.svg" alt=""/> */}
-
+				<section className="py-24 md:py-32 bg-white overflow-hidden">
 					{stream_data.FeaturesSection.map((dt, index) => {
 						return index % 2 == 0 ? (
-							<div key="dt" className="relative pt-20 rounded-t-3xl pb-12 lg:pb-24">
-								<div className="w-full md:container mx-auto px-4">
-									<div className="flex flex-wrap -mx-4">
-										<div className="hidden sm:block w-full lg:w-1/2 px-4 flex items-center justify-center">
-											<div className="relative" style={{ zIndex: 0 }}>
-												<div className="h-128 w-full relative">
-													<Image
-														priority
-														className="rounded-3xl md:rounded-tl-none bg-white"
-														width={500}
-														height={400}
-														src={dt.imageurl}
-														alt=""
-													/>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ top: '-2rem', right: '3rem', zIndex: -1 }}
-												>
-													<svg
-														width="98"
-														height="98"
-														viewBox="0 0 98 98"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															fillRule="evenodd"
-															clipRule="evenodd"
-															d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z"
-															fill={dt.topwing}
-														/>
-													</svg>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ bottom: '-2rem', right: '-2rem', zIndex: -1 }}
-												>
-													<svg
-														width="166"
-														height="165"
-														viewBox="0 0 166 165"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															fillRule="evenodd"
-															clipRule="evenodd"
-															d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z"
-															fill={dt.bottomwing}
-														/>
-													</svg>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ bottom: '2.5rem', right: '-4.5rem', zIndex: -1 }}
-												>
-													<Image priority layout="fill" src="/bullets-gray-left.svg" alt="" />
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ top: '3rem', left: '-8rem', zIndex: -1 }}
-												>
-													<Image priority layout="fill" src="/bullets-gray-right.svg" alt="" />
-												</div>
-											</div>
-										</div>
-
-										<div className="w-full lg:w-1/2 md:px-20 lg:mb-12 lg:mb-20 lg:mb-0 space-x-10 flex items-center">
-											<div className="w-full text-center lg:text-left">
-												<div className="max-w-md mx-auto lg:mx-0">
-													<h2 className="mb-3 card-heading">
-														<span className="card-heading">{dt.Title} </span>
-													</h2>
-												</div>
-												<div className="max-w-sm mx-auto lg:mx-0">
-													<p className="mb-6 text-black  card-subheading">{dt.Description}</p>
-													<Link href={dt.CTAUrl} passHref>
-														<a
-															onClick={() => {
-																onClick({
-																	stream_score: resolve_stream_score(stream_data.cssstreamtag),
-																	event_name: 'Link Click',
-																	section_name: 'Features Section',
-																	page_source: `${stream_data.PageSEO.PageTitle}`,
-																	label: `${dt.Title}-${dt.CTAText}`,
-																});
-															}}
-															className="inline-flex items-center pb-1  text-black hover:border-blue-400 group "
-														>
-															<span className="hyperlink group-hover:text-gray-400">{dt.CTAText}</span>
-															<svg
-																className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-																fill="none"
-																stroke="currentColor"
-																viewBox="0 0 24 24"
-																xmlns="http://www.w3.org/2000/svg"
-															>
-																<path
-																	strokeLinecap="round"
-																	strokeLinejoin="round"
-																	strokeWidth="2"
-																	d="M17 8l4 4m0 0l-4 4m4-4H3"
-																></path>
-															</svg>
-														</a>
-													</Link>
-													<div className="my-12"></div>
-												</div>
-											</div>
-										</div>
-										<div className="invisible lg:visible w-full lg:w-1/2 px-4 flex items-center justify-center">
-											<div className="absolute mr-4" style={{ zIndex: 0 }}>
-												<div>
-													<Image
-														priority
-														width={500}
-														height={400}
-														className="rounded-3xl md:rounded-tl-none bg-white"
-														src={dt.imageurl}
-														alt=""
-													/>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ top: '-2rem', right: '3rem', zIndex: -1 }}
-												>
-													<svg
-														width="98"
-														height="98"
-														viewBox="0 0 98 98"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															fillRule="evenodd"
-															clipRule="evenodd"
-															d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z"
-															fill={dt.topwing}
-														/>
-													</svg>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ bottom: '-2rem', right: '-2rem', zIndex: -1 }}
-												>
-													<svg
-														width="166"
-														height="165"
-														viewBox="0 0 166 165"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															fillRule="evenodd"
-															clipRule="evenodd"
-															d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z"
-															fill={dt.bottomwing}
-														/>
-													</svg>
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ bottom: '2.5rem', right: '-4.5rem', zIndex: -1 }}
-												>
-													<Image priority layout="fill" src="/bullets-gray-left.svg" alt="" />
-												</div>
-												<div
-													className="animate-pulse hidden md:block absolute w-60 h-40"
-													style={{ top: '3rem', left: '-8rem', zIndex: -1 }}
-												>
-													<Image priority layout="fill" src="/bullets-gray-right.svg" alt="" />
-												</div>
-											</div>
+							<div className="container px-4 py-4 mx-auto">
+								<div className="flex flex-wrap lg:items-center -mx-4">
+									<div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+										<span
+											className={`inline-block py-px px-2 mb-4 text-xs leading-5 text-white ${stream_data.cssstreamtag} font-medium uppercase rounded-full shadow-sm`}
+										>
+											{dt.Title}
+										</span>
+										<h1 className="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">
+											{dt.Title}
+										</h1>
+										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
+										<a
+											className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+											href="#"
+										>
+											Get Started
+										</a>
+									</div>
+									<div className="w-full md:w-1/2 px-4">
+										<div className="relative mx-auto md:mr-0 max-w-max">
+											{/* <img
+												className="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400"
+												src="https://shuffle.dev/flex-ui-assets/elements/circle3-yellow.svg"
+												alt=""
+											/> */}
+											<img
+												className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500"
+												src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
+												alt=""
+											/>
+											{/* <img src="https://shuffle.dev//flex-ui-assets/images/features/stock2.png" alt="" /> */}
+											<Image
+													priority
+													className="rounded-3xl md:rounded-tl-none bg-white"
+													width={500}
+													height={400}
+													src={dt.imageurl}
+													alt=""
+												/>
 										</div>
 									</div>
 								</div>
 							</div>
 						) : (
 							index % 2 != 0 && (
-								<div key="dt" className="relative pt-2  lg:pb-24 pb-12 lg:pb-24">
-									<div className="container mx-auto px-20">
-										<div className="flex flex-wrap -mx-20">
-											<div className="w-full lg:w-1/2 px-4 flex items-center justify-center">
-												<div className="relative" style={{ zIndex: 0 }}>
-													<div className="h-128 w-full relative">
-														<Image
-															priority
-															className="rounded-3xl md:rounded-tl-none bg-white"
-															width={500}
-															height={400}
-															src={dt.imageurl}
-															alt=""
-														/>
-													</div>
-													<div
-														className="animate-pulse hidden md:block absolute w-60 h-40"
-														style={{ top: '-2rem', right: '3rem', zIndex: -1 }}
-													>
-														<svg
-															width="98"
-															height="98"
-															viewBox="0 0 98 98"
-															fill="none"
-															xmlns="http://www.w3.org/2000/svg"
-														>
-															<path
-																fillRule="evenodd"
-																clipRule="evenodd"
-																d="M0 49V0H49H50L49.99 0.00980377C76.595 0.537064 98 22.2688 98 49C98 76.062 76.062 98 49 98C21.938 98 0 76.062 0 49Z"
-																fill={dt.topwing}
-															/>
-														</svg>
-													</div>
-													<div
-														className="animate-pulse hidden md:block absolute w-60 h-40"
-														style={{ bottom: '-2rem', right: '-2rem', zIndex: -1 }}
-													>
-														<svg
-															width="166"
-															height="165"
-															viewBox="0 0 166 165"
-															fill="none"
-															xmlns="http://www.w3.org/2000/svg"
-														>
-															<path
-																fillRule="evenodd"
-																clipRule="evenodd"
-																d="M82.9727 164.999C82.8152 165 82.6577 165 82.5 165C36.9365 165 0 128.063 0 82.5C0 36.9365 36.9365 0 82.5 0C128.063 0 165 36.9365 165 82.5C165 83.2975 164.989 84.0924 164.966 84.8844L165.21 165H82.9714L82.9727 164.999Z"
-																fill={dt.bottomwing}
-															/>
-														</svg>
-													</div>
-													<div
-														className="animate-pulse hidden md:block absolute w-60 h-40"
-														style={{ bottom: '2.5rem', right: '-4.5rem', zIndex: -1 }}
-													>
-														<Image priority layout="fill" src="/bullets-gray-left.svg" alt="" />
-													</div>
-													<div
-														className="animate-pulse hidden md:block absolute w-60 h-40"
-														style={{ top: '3rem', left: '-8rem', zIndex: -1 }}
-													>
-														<Image priority layout="fill" src="/bullets-gray-right.svg" alt="" />
-													</div>
-												</div>
+								<div className="container px-4 py-4 mx-auto">
+									<div className="flex flex-wrap p-4 lg:items-center -mx-4">
+										<div className="w-full md:w-1/2 px-4">
+											<div className="relative mx-auto md:mr-0 max-w-max">
+												<img
+													className="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400"
+													src="https://shuffle.dev/flex-ui-assets/elements/circle3-yellow.svg"
+													alt=""
+												/>
+												{/* <img
+													className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500"
+													src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
+													alt=""
+												/> */}
+												<Image
+													priority
+													className="rounded-3xl md:rounded-tl-none bg-white"
+													width={500}
+													height={400}
+													src={dt.imageurl}
+													alt=""
+												/>
+												{/* <img src="https://shuffle.dev//flex-ui-assets/images/features/stock2.png" alt="" /> */}
 											</div>
-											<div className="w-full lg:w-1/2 md:px-20  lg:mb-20 lg:mb-0 flex items-center">
-												<div className="w-full text-center lg:text-left">
-													<div className="max-w-md mx-auto lg:mx-0">
-														<h2 className="mb-3  card-heading">
-															<span className="card-heading">{dt.Title}</span>
-														</h2>
-													</div>
-													<div className="max-w-sm mx-auto lg:mx-0">
-														<p className="mb-6 text-black  card-subheading">{dt.Description}</p>
-														<Link href={dt.CTAUrl} passHref>
-															<a
-																onClick={() => {
-																	onClick({
-																		stream_score: resolve_stream_score(stream_data.cssstreamtag),
-																		event_name: 'Link Click',
-																		section_name: 'Features Section',
-																		page_source: `${stream_data.PageSEO.PageTitle}`,
-																		label: `${dt.Title}-${dt.CTAText}`,
-																	});
-																}}
-																className="inline-flex items-center pb-1  text-black hover:border-blue-400 group "
-															>
-																<span className="hyperlink group-hover:text-gray-400">
-																	{dt.CTAText}
-																</span>
-																<svg
-																	className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
-																	fill="none"
-																	stroke="currentColor"
-																	viewBox="0 0 24 24"
-																	xmlns="http://www.w3.org/2000/svg"
-																>
-																	<path
-																		strokeLinecap="round"
-																		strokeLinejoin="round"
-																		strokeWidth="2"
-																		d="M17 8l4 4m0 0l-4 4m4-4H3"
-																	></path>
-																</svg>
-															</a>
-														</Link>
-														<div className="my-12"></div>
-													</div>
-												</div>
-											</div>
+										</div>
+										<div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+											<span
+												className={`inline-block py-px px-2 mb-4 text-xs leading-5 text-white ${stream_data.cssstreamtag} font-medium uppercase rounded-full shadow-sm`}
+											>
+												{dt.Title}
+											</span>
+											<h1 className="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">
+												{dt.Title}
+											</h1>
+											<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+												{dt.Description}
+											</p>
+											<a
+												className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+												href="#"
+											>
+												Get Started
+											</a>
 										</div>
 									</div>
 								</div>
@@ -831,9 +626,11 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 					</div>
 				</section>
 				{/* /Testimonial Section */}
+
 				{/* FAQ Section */}
 				<FAQ data={stream_data.FAQSection} title={stream_data.FAQTitle} />
 				{/*/ FAQ Section */}
+
 				{/* Resources Section */}
 				<section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
 					<div className="px-2 mx-auto max-w-7xl">
@@ -1051,7 +848,7 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 					</div>
 				</section>
 				{/* / Resources Setion */}
-				{/* / Resources Setion */}
+
 				{/* <!-- Customer logos Section --> */}
 				<div className="bg-white bg-bg px-4 pt-10 pb-10">
 					<div className="container px-4 mx-auto">
@@ -1077,6 +874,7 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 					</Carousel>
 				</div>
 				{/* <!-- /Customer logos Section --> */}
+
 				{/* Cta Section */}
 				<section className="bg-white">
 					<div className="md:px-2 md:py-8 mx-auto sm:py-10  lg:py-20 max-w-7xl">
