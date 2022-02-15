@@ -138,9 +138,13 @@ export default function ValueAssesment({ h_data, f_data, data }) {
      let value;
      if (key != -1 && key < data.Quiz.length) {
        if (data.Quiz[key].QuestionType == "MultipleChoice")
-         value = checkBoxData;
+         {let val='';
+           checkBoxData.map((dt)=>{
+           val+=','+dt;
+         })
+           value = val;}
       else if(data.Quiz[key].QuestionType=="Slider"){
-         value=Number(document.getElementById("slider").innerHTML)}
+         value=String(document.getElementById("slider").innerHTML)}
        else value = document.getElementById("form").text_field.value;
      }
   
@@ -158,6 +162,36 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     key += 1;
     setKey(key);
     console.log(key,keyValue)
+    if(key==(data.Quiz.length)){
+      PostData()
+    }
+  }
+  async function PostData(){
+    let form_value=[]
+    data.Quiz.map((dt)=>{
+      let value={}
+      value["Question"]=dt.Question;
+      value["Answer"]=form_data[dt.Question]
+      form_value.push(value)
+    })
+    let  val={
+      "Userdata":form_value,
+      "email":form_value[data.Quiz.length-1].Answer,
+      "tool":data.PageSEO.PageURL
+    }
+
+   console.log(JSON.stringify(val))
+   await fetch(`https://api.ktern.com/tools-reports`, {
+    method: "post",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify(val)
+    
+    
+  }).then((res)=>{
+    console.log(res)
+  });
   }
   // This function renders the view at the given index.
   const renderView = ({ index, active, transitionState }) => {
@@ -487,7 +521,8 @@ console.log(e.target)
               className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
             >
               {keyValue == -1 && <p>{data.Buttons[0].buttonTitle}</p>}
-              {keyValue >= 0 && <p>{data.Buttons[2].buttonTitle}</p>}
+              {keyValue >= 0 && keyValue <(data.Quiz.length-1) && <p>{data.Buttons[2].buttonTitle}</p>}
+              {keyValue ==(data.Quiz.length-1)  && <p>{data.Buttons[3].buttonTitle}</p>}
             </button>
           )}
         </form>
