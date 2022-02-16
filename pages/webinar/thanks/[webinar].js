@@ -19,10 +19,10 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
   console.log(webinar_data.DateTime,start,end)
   const event = {
     title: webinar_data.WebinarTitle,
-    description: "",
+    description: `${webinar_data.iCalDescription}`,
     startTime: start,
     endTime: end,
-    location: "",
+    location: `${webinar_data.PageSEO.PageURL}`,
     attendees: [],
   };
   console.log(event)
