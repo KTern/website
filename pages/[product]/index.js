@@ -90,6 +90,7 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 
 	return (
 		<>
+			{/* Page SEO */}
 			<NextSeo
 				title={stream_data.PageSEO.PageTitle}
 				description={stream_data.PageSEO.PageDescription}
@@ -158,7 +159,6 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 			/>
 			<BreadcrumbJsonLd itemListElements={breadcrumb} />
 			<FAQPageJsonLd mainEntity={faq} />
-
 			<ProductJsonLd
 				productName={stream_data.pageHeader.header}
 				images={[stream_data.PageSEO.ThumbnailImageURL, stream_data.VideoURL]}
@@ -192,31 +192,33 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 					reviewCount: '8',
 				}}
 			/>
-
 			<SoftwareAppJsonLd
 				name={process.env.NEXT_PUBLIC_NAME}
 				price="0"
 				priceCurrency="USD"
 				aggregateRating={{
-					ratingValue: '4.7',
-					reviewCount: '17',
+					ratingValue: '4.6',
+					reviewCount: '22',
 				}}
 				operatingSystem="Windows 10, Windows 11"
 				applicationCategory="BusinessApplication"
 			/>
+			{/* / Page SEO */}
 			<Layout h_data={h_data} f_data={f_data}>
 				{/* Hero Section */}
 				<section className={`relative overflow-hidden section-${stream_data.cssstreamtag}`}>
 					<div className="flex flex-wrap -mx-4 pb-10">
 						<div className="w-full lg:w-1/2 pt-12 pb-6 px-4 flex justify-center">
 							<div className="px-16 pl-24 sm:p-8 sm:py-0">
-								<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-8">
+								<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-4">
 									<div className="mb-4">
 										{' '}
 										<BreadCrumb color="black" b_data={breadcrumb} />
 									</div>
-									<span className={`p-1 text-xs rounded ${stream_data.cssstreamtag} text-white font-semibold`}>
-										DIGITAL MINES
+									<span
+										className={`p-1 text-xs uppercase rounded ${stream_data.cssstreamtag} text-white font-semibold`}
+									>
+										{stream_data.StreamName}
 									</span>
 									<h1 className="heading mt-6 mb-4 lg:mb-6 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
 										{stream_data.pageHeader.header}
@@ -301,21 +303,21 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 						<div className="w-full md:w-1/2 p-16 pt-32">
 							<div className="relative h-full px-4 pt-8 bg-white rounded-md shadow-md">
 								<div className="relative mx-auto md:mr-0 max-w-max">
-									<img
+									{/* <img
 										className="absolute z-10 -left-28 -top-24 w-14 md:w-auto"
 										src="https://shuffle.dev/flex-ui-assets/elements/circle3-orange.svg"
 										alt=""
-									/>
+									/> */}
 									{/* <img
 										className="absolute z-10 -left-28 -top-24 w-14 md:w-auto"
 										src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
 										alt=""
 									/> */}
-									<img
+									{/* <img
 										className="absolute z-10 -right-14 -bottom-12 w-28 md:w-auto"
 										src="https://shuffle.dev/flex-ui-assets/elements/circle3-orange.svg"
 										alt=""
-									/>
+									/> */}
 									{/* <Image
 										priority
 										className={`relative rounded-5xl`}
@@ -387,13 +389,13 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 				{/* <!-- /Why Ktern --> */}
 
 				{/* Customer Logo */}
-				<section className="py-20 xl:pt-24 bg-zinc">
+				<section className="py-10 pt-12 bg-zinc">
 					<div className="container px-4 mx-auto">
 						<div className="flex flex-wrap items-center -mx-4">
 							<div className="w-full lg:w-1/2 px-12 mb-8">
 								<div className="max-w-md">
 									<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
-										Our Clients
+										{stream_data.TestimonialSectionHeading}
 									</span>
 									<h3 className="mb-8 text-4xl md:text-5xl text-coolGray-900 font-bold tracking-tighter">
 										Trusted by the top companies in this industry
@@ -428,7 +430,7 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 				{/* /Customer Logo */}
 
 				{/* Streams Content Section */}
-				<section className="py-24 md:py-32 bg-white overflow-hidden">
+				<section className="py-6 md:py-8 bg-white overflow-hidden">
 					{stream_data.FeaturesSection.map((dt, index) => {
 						return index % 2 == 0 ? (
 							<div className="container px-4 py-4 mx-auto">
@@ -443,12 +445,22 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 											{dt.Title}
 										</h1>
 										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
-										<a
-											className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
-											href="#"
-										>
-											Get Started
-										</a>
+										<Link href={dt.CTAUrl} passHref>
+											<a
+												onClick={() => {
+													onClick({
+														stream_score: resolve_stream_score(stream_data.cssstreamtag),
+														event_name: 'Link Click',
+														section_name: 'Features Section',
+														page_source: `${stream_data.PageSEO.PageTitle}`,
+														label: `${dt.Title}-${dt.CTAText}`,
+													});
+												}}
+												className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+											>
+												{dt.CTAText}
+											</a>
+										</Link>
 									</div>
 									<div className="w-full md:w-1/2 px-4">
 										<div className="relative mx-auto md:mr-0 max-w-max">
@@ -457,20 +469,32 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 												src="https://shuffle.dev/flex-ui-assets/elements/circle3-yellow.svg"
 												alt=""
 											/> */}
-											<img
+											{/* <img
 												className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500"
 												src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
 												alt=""
-											/>
+											/> */}
 											{/* <img src="https://shuffle.dev//flex-ui-assets/images/features/stock2.png" alt="" /> */}
-											<Image
-													priority
-													className="rounded-3xl md:rounded-tl-none bg-white"
-													width={500}
-													height={400}
-													src={dt.imageurl}
-													alt=""
-												/>
+											{/* <Image
+												priority
+												className="rounded-3xl md:rounded-tl-none bg-white"
+												width={500}
+												height={400}
+												src={dt.imageurl}
+												alt=""
+											/> */}
+											<div
+                          className='animate-pulse hidden md:block absolute w-60 h-40'
+                          style={{ bottom: "2.5rem", right: "-4.5rem", zIndex: -1 }}
+                        >
+                          <Image priority layout='fill' src='/bullets-gray-left.svg' alt='' />
+                        </div>
+                        <div
+                          className='animate-pulse hidden md:block absolute w-60 h-40'
+                          style={{ top: "3rem", left: "-8rem", zIndex: -1 }}
+                        >
+                          <Image priority layout='fill' src='/bullets-gray-right.svg' alt='' />
+                        </div>
 										</div>
 									</div>
 								</div>
@@ -514,12 +538,22 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 											<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
 												{dt.Description}
 											</p>
-											<a
-												className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
-												href="#"
-											>
-												Get Started
-											</a>
+											<Link href={dt.CTAUrl} passHref>
+												<a
+													onClick={() => {
+														onClick({
+															stream_score: resolve_stream_score(stream_data.cssstreamtag),
+															event_name: 'Link Click',
+															section_name: 'Features Section',
+															page_source: `${stream_data.PageSEO.PageTitle}`,
+															label: `${dt.Title}-${dt.CTAText}`,
+														});
+													}}
+													className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white ${stream_data.cssstreamtag} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+												>
+													{dt.CTAText}
+												</a>
+											</Link>
 										</div>
 									</div>
 								</div>
@@ -531,9 +565,10 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 
 				{/* Bots Section */}
 				<div className={`md:px-20 py-10 `}>
-					<div className="px-20">
-						<h2 className="section-heading text-center mb-4">{stream_data.BotsSectionHeading}</h2>
-						{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
+					<div className="px-20 text-center">
+						<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+							{stream_data.BotsSectionHeading}
+						</h3>
 					</div>
 					<Carousel className="bots flex p-10  " responsive={responsive}>
 						{stream_data.BotCards.map((dt) => (
@@ -567,64 +602,33 @@ export default function DigitalStream({ stream_data, h_data, f_data }) {
 				{/* /Bots Section */}
 
 				{/* Testimonial Section */}
-				<section className="sm:px-4 relative py-10 md:py-15 bg-black overflow-x-hidden">
-					{/* <Image priority width="10%" height="10%" className="absolute h-24 md:h-auto top-0 left-0 right-0" src="/atis-assets/elements/line-top.svg" alt=""/> */}
-
-					<h2 className="mb-10 lg:mb-10   section-heading text-center  text-white  ">
-						{stream_data.TestimonialSectionHeading}
-					</h2>
-					<div className="flex flex-wrap lg:flex-nowrap justify-center">
-						<div className="hidden lg:block  opacity-50 flex-shrink-0 w-full max-w-md px-3"></div>
-
-						{stream_data.TestimonialSection.map((dt, index) => {
-							return index % 2 == 0 ? (
-								<div key="dt" className="flex-shrink-0  w-full lg:max-w-md px-3 lg:mt-20 mb-6 lg:mb-0">
-									<div className="px-6 py-12 bg-black   border border-white">
-										<div className="relative px-4 mx-auto">
-											<div className="absolute top-0 left-0">
-												<Image priority width="10%" height="10%" src="/quote-grey.svg" alt="" />
-											</div>
-											<div className="absolute top-0 right-0">
-												<Image priority width="10%" height="10%" src="/quote-grey.svg" alt="" />
-											</div>
-											<div className="px-4 md:px-10 flex-col text-center">
-												<h3 className="mb-8 card-subheading text-white ">{dt.TestimonialStatement}</h3>
-												<div className="flex-col items-center justify-center">
-													<p className="mb-4 md:mb-0 text-gray-300 hyperlink">{dt.AuthorName}</p>
-													<p className="mb-4 md:mb-0 text-gray-300 hyperlink">{dt.AuthorDescription}</p>
-												</div>
-											</div>
-										</div>
+				<section className="py-24 md:pb-28 bg-white">
+					<div className="container px-4 mx-auto">
+						<div className="mb-16">
+							<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+								Quotes
+							</span>
+							<h2 className="mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter">
+								Testimonial from Flex app users
+							</h2>
+							<p className="text-xl font-medium text-coolGray-500">{stream_data.TestimonialSectionHeading}</p>
+						</div>
+						<div className="flex flex-wrap -mx-4">
+							{stream_data.TestimonialSection.map((dt) => (
+								<div key="dt" className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+									<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
+										<h3 className="pb-14 mb-auto text-xl md:text-2xl font-medium">
+											{dt.TestimonialStatement}
+										</h3>
+										<h4 className="mb-1 text-lg font-semibold">Macauley Herring</h4>
+										<p className="text-lg text-coolGray-400">CEO &amp; Founder at Flex.co</p>
 									</div>
 								</div>
-							) : (
-								index % 2 != 0 && (
-									<div className="flex-shrink-0 w-full lg:max-w-md px-3 mb-6 lg:mb-0">
-										<div className="px-6 py-12   bg-black border border-white">
-											<div className="relative px-4 mx-auto">
-												<div className="absolute top-0 left-0">
-													<Image priority width="10%" height="10%" src="/quote-grey.svg" alt="" />
-												</div>
-												<div className="absolute top-0 right-0">
-													<Image priority width="10%" height="10%" src="/quote-grey.svg" alt="" />
-												</div>
-												<div className="px-4 md:px-10 flex-col text-center">
-													<h3 className="mb-8 card-subheading text-white ">{dt.TestimonialStatement}</h3>
-													<div className="flex-col items-center justify-center">
-														<p className="mb-4 md:mb-0 text-gray-300 hyperlink">{dt.AuthorName}</p>
-														<p className="mb-4 md:mb-0 text-gray-300 hyperlink">{dt.AuthorDescription}</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								)
-							);
-						})}
-
-						<div className="hidden lg:block opacity-50 flex-shrink-0 w-full max-w-md px-3"></div>
+							))}
+						</div>
 					</div>
 				</section>
+
 				{/* /Testimonial Section */}
 
 				{/* FAQ Section */}
