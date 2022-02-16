@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 require('../styles/globals.css') 
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from "next/head";
 import Link from "next/link"
@@ -11,13 +11,13 @@ import {page_event} from "../component/page_event"
 const tagManagerArgs = {
   gtmId: "GTM-MHZVHTK",
 }
-
+import { StoreProvider } from '../component/modal';
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 // if(process.browser)
 // console.log(document)
-
   useEffect(() => {
+    
     TagManager.initialize(tagManagerArgs)
     const handleRouteChange = url => {
       window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
@@ -49,8 +49,9 @@ function MyApp ({ Component, pageProps }) {
     
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHZVHTK"
 height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
+<StoreProvider>
       <Component {...pageProps} />
-    
+      </StoreProvider>
       </>
     )
 }
