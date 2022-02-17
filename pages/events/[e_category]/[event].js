@@ -36,7 +36,7 @@ const responsive = {
   },
 };
 let events = [];
-
+import Event, { resolve_stream_score } from '../../../component/page_event';
 // Zoho check box validation
 // function checkBoxSelected(e, t) {
 //   var r = e.getAttribute("check"),
@@ -64,6 +64,9 @@ let events = [];
 //   else events.push(e.value);
 // }
 export default function Events({ h_data, f_data, data }) {
+  function onClick(data){
+    Event(data)
+    }
   const router = useRouter();
   console.log(router.query.message);
  
@@ -279,6 +282,7 @@ export default function Events({ h_data, f_data, data }) {
                       passHref
                     >
                       <a
+                      onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.heroSection.primaryCTA.buttonTitle}`})}}
                         className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                       >
                         {data.heroSection.primaryCTA.buttonTitle}
@@ -290,6 +294,7 @@ export default function Events({ h_data, f_data, data }) {
                         passHref
                       >
                         <a
+                        onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.heroSection.secondaryCTA.buttonTitle}`})}}
                           className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                         >
                           {data.heroSection.secondaryCTA.buttonTitle}
@@ -302,6 +307,7 @@ export default function Events({ h_data, f_data, data }) {
                         passHref
                       >
                         <a
+                               onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.alternateCta.CTAButtonText}`})}}
                           className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                         >
                           {data.alternateCta.CTAButtonText}
@@ -423,6 +429,7 @@ export default function Events({ h_data, f_data, data }) {
                         <div className="bg-white">
                           <Link href={data.CTAUrl} passHref>
                             <a
+                                                           onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}`})}}
                               target="_blank"
                               className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
                             >
@@ -438,7 +445,8 @@ export default function Events({ h_data, f_data, data }) {
                           </Link>
                         </div>
                         <Link href={data.CTAUrl} passHref>
-                          <a className="bg-white">
+                          <a  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}`})}}
+                          className="bg-white">
                             <span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
                               {data.CardTitle}
                             </span>
@@ -447,6 +455,7 @@ export default function Events({ h_data, f_data, data }) {
                             </span>
                             <Link href={data.CTAUrl} passHref>
                               <a
+                          onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAText}`})}}
                                 target="_blank"
                                 className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
                               >
@@ -479,7 +488,9 @@ export default function Events({ h_data, f_data, data }) {
                       >
                         <div className="bg-white">
                           <Link href={data.CTAUrl} passHref>
-                            <a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+                            <a
+                             onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}`})}}
+                             className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                               <Image
                                 priority
                                 className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
@@ -492,7 +503,9 @@ export default function Events({ h_data, f_data, data }) {
                           </Link>
                         </div>
                         <Link href={data.CTAUrl} passHref>
-                          <a className="bg-white">
+                          <a 
+                           onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}`})}}
+                          className="bg-white">
                           <span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
                               {data.CardTitle}
                             </span>
@@ -500,12 +513,15 @@ export default function Events({ h_data, f_data, data }) {
                               {data.CardDescription}
                             </span>
                             <Link href={data.CTAUrl} passHref>
-                              <a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+                              <a
+                              onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAText}`})}}
+                               className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
                                 <span className="hyperlink group-hover:text-gray-300">
                                   {data.CTAText}
                                 </span>
                                 <svg
-                                  className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                            
+                            className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -795,6 +811,18 @@ export default function Events({ h_data, f_data, data }) {
 
                                 <div className="mt-5">
                                   <input
+                                  
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score: resolve_stream_score(
+                                        'none'
+                                      ),
+                                      event_name: "Form Click",
+                                      section_name: "Register Form Section",
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${data.form.submitButton}`,
+                                    });
+                                  }}
                                     type="submit"
                                     action="Save"
                                     id="zcWebOptin"
@@ -922,6 +950,7 @@ export default function Events({ h_data, f_data, data }) {
                   </p>
                   {data.accessReportSection.OpenNewTab && <Link href={data.accessReportSection.CTAUrl} passHref>
                     <a
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Access Report Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.accessReportSection.CTAText}`})}}
                       target="_blank"
                       className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                     >
@@ -930,7 +959,8 @@ export default function Events({ h_data, f_data, data }) {
                   </Link>}
                   {!data.accessReportSection.OpenNewTab && <Link href={data.accessReportSection.CTAUrl} passHref>
                     <a
-                      className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Access Report Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.accessReportSection.CTAText}`})}}
+                     className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
                     >
                       {data.accessReportSection.CTAText}
                     </a>
@@ -965,6 +995,7 @@ export default function Events({ h_data, f_data, data }) {
               <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
                 {data.featuredArticles[0].OpenNewTab && <Link href={data.featuredArticles[0].CTAUrl} passHref>
                   <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`      ${data.featuredArticles[0].CardTitle}+${data.featuredArticles[0].CardTitle}`})}}
                     target="_blank"
                     className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                   >
@@ -997,6 +1028,7 @@ export default function Events({ h_data, f_data, data }) {
                 </Link>}
                 {!data.featuredArticles[0].OpenNewTab && <Link href={data.featuredArticles[0].CTAUrl} passHref>
                   <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`      ${data.featuredArticles[0].CardTitle}+${data.featuredArticles[0].CardTitle}`})}}
                     className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                   >
                     <div className="hidden lg:block">
@@ -1031,6 +1063,7 @@ export default function Events({ h_data, f_data, data }) {
               <div className="lg:col-span-2  flex flex-col items-center justify-center rounded-xl10 shadow-xl">
                 {data.featuredArticles[1].OpenNewTab && <Link href={data.featuredArticles[1].CTAUrl} passHref>
                   <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`      ${data.featuredArticles[1].CardTitle}+${data.featuredArticles[1].CardTitle}`})}}
                     target="_blank"
                     className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                   >
@@ -1049,7 +1082,7 @@ export default function Events({ h_data, f_data, data }) {
                 </Link>}
                 {!data.featuredArticles[1].OpenNewTab && <Link href={data.featuredArticles[1].CTAUrl} passHref>
                   <a
-                   
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.featuredArticles[1].CardTitle}+${data.featuredArticles[1].CardTitle}`})}} 
                     className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                   >
                     <Image
@@ -1076,6 +1109,7 @@ export default function Events({ h_data, f_data, data }) {
                   >
                     {dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
                       <a
+                      onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.featuredArticles[1].CardTitle}+${data.featuredArticles[1].CardTitle}`})}} 
                         target="_blank"
                         className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                       >
@@ -1094,6 +1128,7 @@ export default function Events({ h_data, f_data, data }) {
                     </Link>}
                     {!dt.OpenNewTab && <Link href={dt.CTAUrl} passHref>
                       <a
+                      onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Featured Articles Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.featuredArticles[1].CardTitle}+${data.featuredArticles[1].CardTitle}`})}} 
                         className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
                       >
                         <Image
@@ -1158,6 +1193,7 @@ export default function Events({ h_data, f_data, data }) {
                 />
                 <Link href={dt.redirectUrl} passHref>
                   <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"View Discussion Section",page_source:`${data.PageSEO.PageTitle}`,label:`View on LinkedIn`})}} 
                     target="_blank"
                     className="row-span-1 sm:border-l flex items-center justify-center text-xs text-sky-700 border-t border-r border-b"
                   >

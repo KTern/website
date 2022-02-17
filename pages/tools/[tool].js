@@ -16,11 +16,15 @@ import {
   SoftwareAppJsonLd,
 } from "next-seo";
 import BreadCrumb from "../../component/breadcrumb";
+import Event, { resolve_stream_score } from '../../component/page_event';
 let form_data = {};
 let checkBoxData = [];
 let valid = false;
 let score = 0;
 export default function ValueAssesment({ h_data, f_data, data }) {
+  function onClick(data){
+    Event(data)
+    }
   const [keyValue, setKey] = useState(-1);
   const router = useRouter()
   let key = -1;
@@ -190,7 +194,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     
     
   }).then((res)=>{
-    console.log(res)
+    // console.log(res)
   });
   }
   // This function renders the view at the given index.
@@ -412,6 +416,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           className="bg-valueBg events py-20 bg-cover text-white flex flex-col space-y-16 overflow-hidden"
           // style={{ height: "96vh" }}
           onSubmit={(e) => {
+            
             e.preventDefault();
 console.log(e.target)
             key += 1;
@@ -519,7 +524,8 @@ console.log(e.target)
               id="button_field"
               type="button"
               className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
-            >
+              onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.Buttons[2].buttonTitle}`})}} 
+           >
               {keyValue == -1 && <p>{data.Buttons[0].buttonTitle}</p>}
               {keyValue >= 0 && keyValue <(data.Quiz.length-1) && <p>{data.Buttons[2].buttonTitle}</p>}
               {keyValue ==(data.Quiz.length-1)  && <p>{data.Buttons[3].buttonTitle}</p>}

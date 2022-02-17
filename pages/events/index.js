@@ -6,7 +6,11 @@ import ReactPlayer from "react-player";
 import { NextSeo } from "next-seo";
 import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
+import Event, { resolve_stream_score } from '../../component/page_event';
 export default function Events({ h_data, f_data, data }) {
+  function onClick(data){
+    Event(data)
+    }
   let breadcrumb = [];
 	data.PageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
@@ -108,7 +112,8 @@ export default function Events({ h_data, f_data, data }) {
                 {data.bannerSection.subHeading}
               </p>
               <Link href={data.bannerSection.primaryCTA.linkURL} passHref>
-                <a className="sm:mb-4 inline-block py-3 px-3 md:px-10 border-2 border-black bg-white hover:bg-gray-300 hover:text-black shadow   text-black  rounded-r-xl rounded-b-xl transition duration-200 button ">
+                <a  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.bannerSection.primaryCTA.buttonTitle}`})}} 
+                 className="sm:mb-4 inline-block py-3 px-3 md:px-10 border-2 border-black bg-white hover:bg-gray-300 hover:text-black shadow   text-black  rounded-r-xl rounded-b-xl transition duration-200 button ">
                   {data.bannerSection.primaryCTA.buttonTitle}
                 </a>
               </Link>
@@ -146,7 +151,9 @@ export default function Events({ h_data, f_data, data }) {
                     href={data.highlightedEvent.primaryCTA.linkURL}
                     passHref
                   >
-                    <a className="lg:inline-block py-3 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">
+                    <a
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Highlighted Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.highlightedEvent.primaryCTA.buttonTitle}`})}}
+                    className="lg:inline-block py-3 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">
                       {data.highlightedEvent.primaryCTA.buttonTitle}
                     </a>
                   </Link>
@@ -156,7 +163,9 @@ export default function Events({ h_data, f_data, data }) {
                     href={data.highlightedEvent.secondaryCTA.linkURL}
                     passHref
                   >
-                    <a className=" lg:inline-block py-3 px-6 bg-white hover:bg-gray-300 hover:text-black shadow uppercase text-black border-2 border-black  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">
+                    <a
+                                 onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Highlighted Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.highlightedEvent.secondaryCTA.buttonTitle}`})}}
+                    className=" lg:inline-block py-3 px-6 bg-white hover:bg-gray-300 hover:text-black shadow uppercase text-black border-2 border-black  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">
                       {data.highlightedEvent.secondaryCTA.buttonTitle}
                       <svg
                         className="inline-block w-2 ml-2"
@@ -174,7 +183,7 @@ export default function Events({ h_data, f_data, data }) {
               <Image
                 priority
                 height="1100px"
-                width="1900px"
+                width="1800px"
                 src="/events/pattern-small.png"
                 alt=""
               />
@@ -234,7 +243,9 @@ export default function Events({ h_data, f_data, data }) {
                   </p>
 
                   <Link href={data.otherEvents[0].ctaUrl} passHref>
-                    <a className="sm:mb-4 inline-block py-3 px-2 md:px-10 bg-black hover:bg-gray-200 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200  button ">
+                    <a 
+                    onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Others Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.otherEvents[0].ctaText}`})}}
+                    className="sm:mb-4 inline-block py-3 px-2 md:px-10 bg-black hover:bg-gray-200 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200  button ">
                       {data.otherEvents[0].ctaText}
                     </a>
                   </Link>
@@ -245,7 +256,9 @@ export default function Events({ h_data, f_data, data }) {
             <div className="relative md:col-span-2  px-4">
               <div className="flex flex-col space-y-10 p -mx-4">
                 <Link href={data.otherEvents[1].ctaUrl}>
-                  <a className="relative border-t-4 rounded-tr-xl border-black">
+                  <a
+                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Others Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.otherEvents[0].ctaText}`})}}
+                  className="relative border-t-4 rounded-tr-xl border-black">
                     <div className="py-12 px-6 md:px-14 bg-white rounded-tr-xl shadow-md">
                       <div className="flex items-center mb-4">
                         <p className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600">
@@ -257,7 +270,7 @@ export default function Events({ h_data, f_data, data }) {
                         </p>
                       </div>
                       <Link href={data.otherEvents[1].ctaUrl}>
-                        <a className="inline-block ">
+                        <a onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Others Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.otherEvents[1].ctaText}`})}} className="inline-block ">
                           <h3 className="font-heading leading-normal card-heading">
                             {data.otherEvents[1].heading}
                           </h3>
@@ -267,7 +280,7 @@ export default function Events({ h_data, f_data, data }) {
                   </a>
                 </Link>
                 <Link href={data.otherEvents[2].ctaUrl}>
-                  <a className="relative border-t-4 rounded-tr-xl border-black">
+                  <a onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Others Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.otherEvents[2].ctaText}`})}} className="relative border-t-4 rounded-tr-xl border-black">
                     <div className="py-12 px-6 md:px-14 bg-white rounded-tr-xl shadow-md">
                       <div className="flex items-center mb-4">
                         <p className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600">
@@ -278,8 +291,8 @@ export default function Events({ h_data, f_data, data }) {
                           {formatDate(data.otherEvents[2].date)}
                         </p>
                       </div>
-                      <Link href={data.otherEvents[2].ctaUrl}>
-                        <a className="inline-block ">
+                  .    <Link href={data.otherEvents[2].ctaUrl}>
+                        <a onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"Others Events Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.otherEvents[2].ctaText}`})}} className="inline-block ">
                           <h3 className="font-heading leading-normal card-heading">
                             {data.otherEvents[2].heading}
                           </h3>
@@ -332,28 +345,28 @@ export default function Events({ h_data, f_data, data }) {
           </div>
 
           <div className='grid md:grid-cols-4 gap-6 mb-8'>
-              {data.featuredWebinars.map((data) => (
-              <div key="data" className="relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500" >
+              {data.featuredWebinars.map((dt) => (
+              <div key="dt" className="relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500" >
               
-                            {data.OpenNewTab &&  <div  className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}>   
+                            {dt.OpenNewTab &&  <div  className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}>   
                             <div className="bg-white">
-                            <Link href={data.CTAUrl} passHref>
+                            <Link href={dt.CTAUrl} passHref>
                                     <a
-                                    
+                                    onClick={()=>{onClick({stream_score:resolve_stream_score(dt.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.CardTitle}-${dt.CTAUrl}`})}}
                                      target="_blank" className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
-                            <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
+                            <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={dt.Icon.imageURL} alt={dt.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
-              <Link href={data.CTAUrl} passHref>
+              <Link href={dt.CTAUrl} passHref>
               <a className="bg-white"
-                	onClick={()=>{onClick({stream_score:resolve_stream_score(data.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CardTitle}-${data.CTAUrl}`})}}>
-                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
-                        <Link href={data.CTAUrl}  passHref>
+                	uonClick={()=>{onClick({stream_score:resolve_stream_score(dt.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.CardTitle}-${dt.CTAUrl}`})}}>
+                            <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{dt.CardTitle}</span>
+                        <Link href={dt.CTAUrl}  passHref>
                                         <a
                                      target="_blank" className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                                        <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                        <span className="hyperlink group-hover:text-gray-300">{dt.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                         </svg>
@@ -362,25 +375,26 @@ export default function Events({ h_data, f_data, data }) {
                                     </a>
                             </Link>
                             </div>}
-                            {!data.OpenNewTab &&  <div  className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}>   
+                            {!dt.OpenNewTab &&  <div  className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}>   
                             <div className="bg-white">
-                            <Link href={data.CTAUrl} passHref>
+                            <Link href={dt.CTAUrl} passHref>
                                     <a
-                            
+                            onClick={()=>{onClick({stream_score:resolve_stream_score(dt.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.CardTitle}-${dt.CTAUrl}`})}}
                                      className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
                                     
                             <Image priority className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src={data.Icon.imageURL} alt={data.Icon.imageDescription} width="550" height="300"/>
                             </a> 
                             </Link>
                             </div>
-              <Link href={data.CTAUrl} passHref>
+              <Link href={dt.CTAUrl} passHref>
               <a
-               className="bg-white">
+              onClick={()=>{onClick({stream_score:resolve_stream_score(dt.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.CardTitle}-${dt.CTAUrl}`})}} className="bg-white">
                             <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">{data.CardTitle}</span>
-                        <Link href={data.CTAUrl}  passHref>
+                        <Link href={dt.CTAUrl}  passHref>
                                         <a
+                                        onClick={()=>{onClick({stream_score:resolve_stream_score(dt.cssstreamtag),event_name:"Card Click",section_name:"Related Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.CardTitle}-${dt.CTAUrl}`})}}
                                         className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-                                        <span className="hyperlink group-hover:text-gray-300">{data.CTAText}</span>
+                                        <span className="hyperlink group-hover:text-gray-300">{dt.CTAText}</span>
                                         <svg className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                         </svg>
@@ -401,7 +415,7 @@ export default function Events({ h_data, f_data, data }) {
                     event_name: "Link Click",
                     section_name: "Related Resources Section",
                     page_source: `${data.PageSEO.PageTitle}`,
-                    label: `${data.ViewAllResources.LinkText}-${data.CTAUrl}`,
+                    label: `See All Webinars`,
                   });
                 }}
                 className="inline-flex items-center mb-4  text-black hover:text-gray-400 group "
@@ -441,12 +455,16 @@ export default function Events({ h_data, f_data, data }) {
             </p>
             <div className="flex space-x-2 md:space-x-5 justify-center">
               <Link href={data.ctaSection.PrimaryCTA.linkURL} passHref>
-                <a className="sm:mb-4 border-2 border-white  inline-block py-3 px-2 md:px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button ">
+                <a
+                onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctaSection.PrimaryCTA.buttonTitle}`})}}
+                className="sm:mb-4 border-2 border-white  inline-block py-3 px-2 md:px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button ">
                   {data.ctaSection.PrimaryCTA.buttonTitle}
                 </a>
               </Link>
               <Link href={data.ctaSection.SecondaryCTA.linkURL} passHref>
-                <a className="sm:mb-4 inline-block py-2 px-2 md:px-10 bg-white hover:bg-gray-300 hover:text-black shadow   text-black  rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black button ">
+                <a
+                onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctaSection.SecondaryCTA.buttonTitle}`})}}
+                className="sm:mb-4 inline-block py-2 px-2 md:px-10 bg-white hover:bg-gray-300 hover:text-black shadow   text-black  rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black button ">
                   {data.ctaSection.SecondaryCTA.buttonTitle}
                 </a>
               </Link>
@@ -454,7 +472,7 @@ export default function Events({ h_data, f_data, data }) {
           </div>
         </div>
         <div>
-          <img
+          <Image
             priority
             layout="fill"
             className="absolute top-64 md:top-0 left-1/2 transform -translate-x-1/2 h-full"
