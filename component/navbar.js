@@ -63,8 +63,11 @@ export default function Navbar({ h_data }) {
   };
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-
+    router.events.on('routeChangeComplete',()=>{
+      closeNav()
+    })
     return () => {
+      
       window.removeEventListener("scroll", listenToScroll);
     };
   }, []);

@@ -973,3 +973,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
   display: none;
 }
 /* /Modal */
+
+/* Common background */
+.background {
+  background: linear-gradient(81.86deg, #607A80 1.11%, rgba(8, 15, 25, 0.87) 44.32%, #000000 100%);
+}
