@@ -183,7 +183,6 @@ export default function Resources({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-
       <Layout h_data={h_data} f_data={f_data}>
         <section className="w-full py-24 background overflow-hidden">
           <div className="flex flex-col items-center md:px-12 mx-auto lg:flex-row">

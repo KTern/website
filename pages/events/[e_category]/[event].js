@@ -36,7 +36,7 @@ const responsive = {
   },
 };
 let events = [];
-
+import Event, { resolve_stream_score } from '../../../component/page_event';
 // Zoho check box validation
 // function checkBoxSelected(e, t) {
 //   var r = e.getAttribute("check"),
@@ -64,6 +64,9 @@ let events = [];
 //   else events.push(e.value);
 // }
 export default function Events({ h_data, f_data, data }) {
+  function onClick(data){
+    Event(data)
+    }
   const router = useRouter();
   console.log(router.query.message);
  

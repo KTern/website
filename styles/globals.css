@@ -1042,19 +1042,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
 }
 /* /Modal */
 
-/* Start: Digital Maps */
-.banner-maps {
-  background-color: #fceabb;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ffcc00' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ff0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ffd914' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ff2900' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffe529' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ff5200' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ffef3d' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff7a00' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23fff852' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ffa300' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ffff66' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ffcc00' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
+/* Common background */
+.background {
+  background: linear-gradient(81.86deg, #607A80 1.11%, rgba(8, 15, 25, 0.87) 44.32%, #000000 100%);
 }
-
-.tag-maps {
-  background: linear-gradient(81.78deg, #F28900 1.11%, rgba(157, 89, 0, 0.92) 26.79%, #000000 105.58%);
-}
-/* End: Digital Maps  */
-
-
-
-
