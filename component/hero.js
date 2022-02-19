@@ -44,14 +44,20 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5">
 								{banner_data.ReviewImages.map((dt) => {
 									<div key="dt" className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
-										<Image
+										{/* <Image
 											priority
 											className={`mx-auto lg:mx-0 h-5`}
 											layout="fill"
-											src={`dt.imageURL`}
-											alt={`dt.imageDescription`}
-											width={`dt.width`}
-											height={`dt.height`}
+											src={dt.imageURL}
+											alt={dt.imageDescription}
+											width={dt.width}
+											height={dt.height}
+										/> */}
+										<Image
+											src="https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-cyborg-hero.png"
+											alt="Landscape picture"
+											width={500}
+											height={500}
 										/>
 									</div>;
 								})}
@@ -65,10 +71,10 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 									priority
 									className={`relative rounded-5xl`}
 									layout="fill"
-									src={`banner_data.BannerImage.imageURL`}
-									alt={`banner_data.BannerImage.imageDescription`}
-									width={`banner_data.BannerImage.width`}
-									height={`banner_data.BannerImage.height`}
+									src={banner_data.BannerImage.imageURL}
+									alt={banner_data.BannerImage.imageDescription}
+									width={banner_data.BannerImage.width}
+									height={banner_data.BannerImage.height}
 								/>
 							</div>
 						</div>
