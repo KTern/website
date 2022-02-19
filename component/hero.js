@@ -47,8 +47,11 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 										<Image
 											priority
 											className={`mx-auto lg:mx-0 h-5`}
-											src={dt.imageURL}
-											alt={dt.imageDescription}
+											layout="fill"
+											src={`dt.imageURL`}
+											alt={`dt.imageDescription`}
+											width={`dt.width`}
+											height={`dt.height`}
 										/>
 									</div>;
 								})}
@@ -62,10 +65,10 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 									priority
 									className={`relative rounded-5xl`}
 									layout="fill"
-									src={banner_data.BannerImage.imageURL}
-									alt={banner_data.BannerImage.imageDescription}
-									width={banner_data.BannerImage.width}
-									height={banner_data.BannerImage.height}
+									src={`banner_data.BannerImage.imageURL`}
+									alt={`banner_data.BannerImage.imageDescription`}
+									width={`banner_data.BannerImage.width`}
+									height={`banner_data.BannerImage.height`}
 								/>
 							</div>
 						</div>
