@@ -47,11 +47,8 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 										<Image
 											priority
 											className={`mx-auto lg:mx-0 h-5`}
-											layout="fill"
 											src={dt.imageURL}
 											alt={dt.imageDescription}
-											width={dt.width}
-											height={dt.height}
 										/>
 									</div>;
 								})}
