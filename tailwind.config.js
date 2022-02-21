@@ -40,149 +40,132 @@ module.exports = {
       violet:colors.violet,
       cyan:colors.cyan,
       rose:colors.rose,
-      indigo:colors.indigo,
-      bg:'#F9FAFC',
-      projects: {
+     
+				indigo: colors.indigo,
+				slate: colors.slate,
+				bg: '#F9FAFC',
+				zinc: '#fafafa',
+				projects: {
+					primary: '#2666BA',
 
-          primary: '#2666BA',
+					secondary: '#DDE9F8',
 
-          secondary: '#DDE9F8',
+					50: '#BBD3F1',
 
-          50: '#BBD3F1',
+					100: '#78A6E3',
 
-          100: '#78A6E3',
+					200: '#5690DC',
 
-          200: '#5690DC',
+					300: '#347AD5',
 
-          300: '#347AD5',
+					400: '#2666BA',
+				},
+				process: {
+					primary: '#795091',
 
-          400: '#2666BA',
+					secondary: '#D9CAE2',
 
-        },
-        process: {
+					50: '#C7B0D4',
 
-          primary: '#795091',
+					100: '#B496C5',
 
-          secondary: '#D9CAE2',
+					200: '#A17BB7',
 
+					300: '#8E61A8',
 
+					400: '#634176',
+				},
+				maps: {
+					primary: '#E07F00',
 
-          50: '#C7B0D4',
+					secondary: '#FFDCAD',
 
-          100: '#B496C5',
+					50: '#FFCA85',
 
-          200: '#A17BB7',
+					100: '#FFB85C',
 
-          300: '#8E61A8',
+					200: '#FFA733',
 
-          400: '#634176',
+					300: '#FF950A',
 
-        },
-        maps: {
+					400: '#F28900',
+					500: '#F28900',
+				},
+				mines: {
+					primary: '#BA2926',
 
-          primary: '#E07F00',
+					secondary: '#F1BCBB',
 
-          secondary: '#FFDCAD',
+					50: '#EA9B99',
 
+					100: '#E37978',
 
+					200: '#DC5856',
 
-          50: '#FFCA85',
+					300: '#D53734',
 
-          100: '#FFB85C',
+					400: '#BA2926',
+				},
+				labs: {
+					primary: '#26BA2B',
 
-          200: '#FFA733',
+					secondary: '#BBF1BD',
 
-          300: '#FF950A',
+					50: '#99EA9C',
 
-          400: '#F28900',
-500:'#F28900'
-        },
-        mines: {
+					100: '#78E37B',
 
-          primary: '#BA2926',
+					200: '#56DC5A',
 
-          secondary: '#F1BCBB',
+					300: '#34D539',
 
-
-
-          50: '#EA9B99',
-
-          100: '#E37978',
-
-          200: '#DC5856',
-
-          300: '#D53734',
-
-          400: '#BA2926',
-
-        },
-        labs: {
-
-          primary: '#26BA2B',
-
-          secondary: '#BBF1BD',
-
-
-
-          50: '#99EA9C',
-
-          100: '#78E37B',
-
-          200: '#56DC5A',
-
-          300: '#34D539',
-
-          400: '#1C8720',
-
-        },
-        dxaas: {
-           primary: '#607A80',
-          secondary: '#D0DADC',
-       300:'#738F96'  ,
-       200:'#8BA2A7',
-       100:'#A2B5B9',
-       50:'#B9C8CA', 
-      400:'#354346'
-        },
-      gray: {
-        10:'#858B91',
-        50: '#E7EAEF',
-        100: '#DDE0E5',
-        200: '#CFD2D8',
-        300: '#B3B7BE',
-        400:'#7B8089'
-      },
-       backgroundSize: {
-       '50%': '50%',
-       '16': '4rem',
-      }
-    }
-    },
-    borderRadius: {
-       none: '0',
-       sm: '0.125rem',
-       DEFAULT: '0.25rem',
-       DEFAULT: '4px',
-       md: '0.375rem',
-       lg: '0.5rem',
-       full: '9999px',
-      large: '200px',
-      xl: '14px',
-      xl10:'30px',
-      wide:'500px',
-      '3xl':'60px',
-      doublefull:'15000px'
-    }
-  },
-  variants: {
-    extend: {},
-    overflow: ['responsive'],
-  },
-  plugins: [
-    
-  ],
-  corePlugins: {
-  
-     fontFamily: false,
-  }
-}
+					400: '#1C8720',
+				},
+				dxaas: {
+					primary: '#607A80',
+					secondary: '#D0DADC',
+					300: '#738F96',
+					200: '#8BA2A7',
+					100: '#A2B5B9',
+					50: '#B9C8CA',
+					400: '#354346',
+				},
+				gray: {
+					10: '#858B91',
+					50: '#E7EAEF',
+					100: '#DDE0E5',
+					200: '#CFD2D8',
+					300: '#B3B7BE',
+					400: '#7B8089',
+				},
+				backgroundSize: {
+					'50%': '50%',
+					16: '4rem',
+				},
+			},
+		},
+		borderRadius: {
+			none: '0',
+			sm: '0.125rem',
+			DEFAULT: '0.25rem',
+			DEFAULT: '4px',
+			md: '0.375rem',
+			lg: '0.5rem',
+			full: '9999px',
+			large: '200px',
+			xl: '14px',
+			xl10: '30px',
+			wide: '500px',
+			'3xl': '60px',
+			doublefull: '15000px',
+		},
+	},
+	variants: {
+		extend: {},
+		overflow: ['responsive'],
+	},
+	plugins: [],
+	corePlugins: {
+		fontFamily: false,
+	},
+};

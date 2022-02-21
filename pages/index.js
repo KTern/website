@@ -47,26 +47,6 @@ function prev(id, last) {
   document.getElementById(id).scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
 }
 
-// import * as Amplitude from '@amplitude/node';
-// const AMPLITUDE_KEY = 'fc34969fbb47436070b100efc94f9efa';
-// var client = Amplitude.init(AMPLITUDE_KEY);
-// client.logEvent({
-// 	event_type: 'button click',
-// 	user_id: 'edson@gmail.com',
-// country:"India",
-// version_name:"10",
-// user_properties:{
-// 	email:"edson@gmail.com",
-// 	name:"Nivedha"
-// },
-// 	event_properties: {
-// 		keyString: 'valueString',
-// 		keyInt: 11,
-// 		keyBool: true,
-// 		event_name:"Navigated To",
-// 		random:"Nivedha"
-// 	},
-// });
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 // Send any events that are currently queued for sending.
