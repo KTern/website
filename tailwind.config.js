@@ -24,7 +24,8 @@ module.exports = {
         eventsbg:"url('/events-landing/pattern.svg')",
         events:"url('/events/events-bg.svg')",
         roadshowbg:"url('/events-landing/events-bg.svg')",
-        valueBg:"url('/assessment/background.png')"
+        valueBg:"url('/assessment/background.png')",
+		mobileeventsbg:"url('/events-landing/bg.png')"
       }),
       colors: {
         success: '#BADA55',

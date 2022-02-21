@@ -93,7 +93,7 @@ export default function Events({ h_data, f_data, data }) {
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
     <Layout h_data={h_data} f_data={f_data}>
       {/* Banner Section */}
-      <section className="relative py-10  top-10 text-white bg-events bg-cover bg-eventsprimary overflow-hidden rounded-t-10">
+      <section className="relative py-10  top-10 text-white sm:bg-mobileeventsbg md:bg-events bg-cover bg-eventsprimary overflow-hidden rounded-t-10">
         <div className="container md:px-4 mx-auto">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-16">
             <div className="relative px-20 mb-10 md:mb-0 text-center md:text-left z-10">
