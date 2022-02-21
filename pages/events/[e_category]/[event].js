@@ -248,7 +248,7 @@ export default function Events({ h_data, f_data, data }) {
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
           <section className="overflow-hidden  pt-4">
-            <div className="  bg-roadshowbg bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl ">
+            <div className=" sm:bg-mobileeventsbg md:bg-roadshowbg bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl ">
               <div className=" px-4 mx-auto pb-5">
               <div className="mx-28 mt-10">
                     <BreadCrumb

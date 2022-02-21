@@ -11,7 +11,6 @@ import {page_event} from "../component/page_event"
 const tagManagerArgs = {
   gtmId: "GTM-MHZVHTK",
 }
-import { StoreProvider } from '../component/modal';
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 // if(process.browser)
@@ -49,9 +48,9 @@ function MyApp ({ Component, pageProps }) {
     
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHZVHTK"
 height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-<StoreProvider>
+{/* <StoreProvider> */}
       <Component {...pageProps} />
-      </StoreProvider>
+      {/* </StoreProvider> */}
       </>
     )
 }
