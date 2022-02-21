@@ -266,7 +266,7 @@ export default function Events({ h_data, f_data, data }) {
 										</div>
 									)}
 									<div className="flex space-x-4 mt-10">
-										<Link href={`#${data.heroSection.primaryCTA.linkURL}`} passHref>
+										<Link href={`${data.heroSection.primaryCTA.linkURL}`} passHref>
 											<a
 												className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
 											>
@@ -274,7 +274,7 @@ export default function Events({ h_data, f_data, data }) {
 											</a>
 										</Link>
 										{!countDownState && (
-											<Link href={`#${data.heroSection.secondaryCTA.linkURL}`} passHref>
+											<Link href={`${data.heroSection.secondaryCTA.linkURL}`} passHref>
 												<a
 													className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
 												>
@@ -283,7 +283,7 @@ export default function Events({ h_data, f_data, data }) {
 											</Link>
 										)}
 										{countDownState && (
-											<Link href={`#${data.alternateCta.CTAButtonLink}`} passHref>
+											<Link href={`${data.alternateCta.CTAButtonLink}`} passHref>
 												<a
 													className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
 												>
@@ -298,7 +298,7 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Hero Section */}
 					{/* Logos Section */}
-					<div className="px-4 pt-14">
+					<div id={data.SectionID.FeaturedPartners} className="anchor px-4 pt-14">
 						<div className=" px-4 mx-auto">
 							<h2 className="section-heading mt-2 mb-4 text-center">{data.TrustedByStatement}</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
@@ -321,7 +321,7 @@ export default function Events({ h_data, f_data, data }) {
 					</div>
 					{/* Logos Section */}
 					{/* Speakers Section */}
-					<section className="relative bg-white pb-10 sm:px-6 pt-5 events">
+					<section  id={data.SectionID.Speakers} className="anchor relative bg-white pb-10 sm:px-6 pt-5 events">
 						<div className="container mx-auto text-center">
 							<div className=" mx-auto mb-8">
 								<span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
@@ -356,7 +356,7 @@ export default function Events({ h_data, f_data, data }) {
 					{/*/ Speakers Section */}
 					{/* Featured Events */}
 					{data.ToggleFeaturedEvents && (
-						<section id={data.heroSection.primaryCTA.linkURL} className="anchor events">
+						<section  id={data.SectionID.FeaturedEvents} className="anchor events">
 							<section className=" md:px-10 py-10 bg-eventsbg bg-cover  mx-5">
 								<svg
 									className="absolute -mt-20 hidden lg:block"
@@ -503,9 +503,9 @@ export default function Events({ h_data, f_data, data }) {
 					)}
 					{/* /Featured Events */}
 					{/* Video Banner */}
-					{countDownState && (
+					{!data.isVideoSectionVisible && (
 						<section
-							id={data.alternateCta.CTAButtonLink}
+						id={data.SectionID.EventVideo}
 							className="anchor events py-10 text-center justify-center items-center flex flex-col"
 						>
 							<h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
@@ -544,8 +544,8 @@ export default function Events({ h_data, f_data, data }) {
 					)}
 					{/* /Video Banner */}
 					{/* Register Section */}
-					{!countDownState && (
-						<section id={data.heroSection.secondaryCTA.linkURL} className="anchor events">
+					{!data.isRegistrationFormVisible && (
+						<section  id={data.SectionID.Registration} className="anchor events">
 							<section className="py-5 pb-10 px-5">
 								<div className="flex flex-col items-center justify-center text-center">
 									<p className="section-heading mb-2">{data.registerSection.header}</p>
@@ -786,7 +786,7 @@ export default function Events({ h_data, f_data, data }) {
 					)}
 					{/*/ Register Section */}
 					{/* Access Report */}
-					<section className="relative bg-white py-20  events overflow-hidden">
+					<section  id={data.SectionID.ValueReport} className="anchor relative bg-white py-20  events overflow-hidden">
 						<div className="hidden md:block absolute top-0 right-0 w-1/2 h-full  rounded-b-10xl"></div>
 						<div className="relative  mx-auto">
 							<div className="flex flex-wrap items-center text-center">
@@ -835,7 +835,7 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Access Report */}
 					{/* Featured Articles */}
-					<section className="events px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
+					<section  id={data.SectionID.Resources} className="events anchor px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
 						<h2 className="section-heading mb-4 ">{data.featuredArticlesSectionHeading}</h2>
 						<p className="section-subheading mb-10 text-center">{data.featureArticlesSectionSubheading}</p>
 						<div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
@@ -989,7 +989,7 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Featured Articles */}
 					{/* Discussions Section */}
-					<section className="events py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
+					<section  id={data.SectionID.SocialMediaFeed} className="events anchor py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
 						<div className="lg:hidden block  flex flex-col px-10">
 							<h2 className="section-heading mb-4 mt-5">{data.discussionSection.heading}</h2>
 							<p className="section-subheading text-gray-400">{data.discussionSection.subHeading}</p>
@@ -1052,21 +1052,26 @@ export default function Events({ h_data, f_data, data }) {
 		</>
   );
 }
-// export const getStaticPaths = async () => {
-//   // dynamic route array values must be acquired here from strapi
-//   const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" }];
-//   const paths = data.map((index) => {
-//     return {
-//       params: { e_category: index.e_category, event: index.event },
-//     };
-//   });
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+export const getStaticPaths = async () => {
+  // dynamic route array values must be acquired here from strapi
+  const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" },
+  { e_category: "webcast", event: "digital-webcast-2022" },
+  { e_category: "linkedin-live", event: "digital-linkedin-live-2022" },
+  { e_category: "podcast", event: "digital-podcast-2022" },
+  { e_category: "youtube-premiere", event: "digital-youtube-premiere-2022" }
+];
+  const paths = data.map((index) => {
+    return {
+      params: { e_category: index.e_category, event: index.event },
+    };
+  });
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const event_name = ctx.params.event;
 
   const res = await fetch(
