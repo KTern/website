@@ -1052,26 +1052,21 @@ export default function Events({ h_data, f_data, data }) {
 		</>
   );
 }
-export const getStaticPaths = async () => {
-  // dynamic route array values must be acquired here from strapi
-  const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" },
-  { e_category: "webcast", event: "digital-webcast-2022" },
-  { e_category: "linkedin-live", event: "digital-linkedin-live-2022" },
-  { e_category: "podcast", event: "digital-podcast-2022" },
-  { e_category: "youtube-premiere", event: "digital-youtube-premiere-2022" }
-];
-  const paths = data.map((index) => {
-    return {
-      params: { e_category: index.e_category, event: index.event },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   // dynamic route array values must be acquired here from strapi
+//   const data = [{ e_category: "roadshow", event: "digital-roadshow-2022" }];
+//   const paths = data.map((index) => {
+//     return {
+//       params: { e_category: index.e_category, event: index.event },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const event_name = ctx.params.event;
 
   const res = await fetch(
