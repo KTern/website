@@ -511,12 +511,12 @@ export default function Events({ h_data, f_data, data }) {
 						>
 							<h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
 							<p className="section-subheading mb-6 text-center">{data.eventVideo.subHeading}</p>
-							{data.isPodcastPage &&<div>
-								<a href={data.eventVideo.videoUrl}>
+							{data.IsPodcastPage && <div>
+								<a rel="noreferrer" target="_blank" href={data.eventVideo.videoUrl}>
 								<img src="https://www.gstatic.com/podcasts_console/promote/English_EN/EN_Google_Podcasts_Badge.svg" width="150" height="38" alt="Listen on Google Podcasts"/>
 								</a>
 								</div>}
-								{!data.isPodcastPage && <div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+								{!data.IsPodcastPage && <div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
 								
 								
 								
@@ -1077,16 +1077,17 @@ export default function Events({ h_data, f_data, data }) {
 
 export const getServerSideProps = async (ctx) => {
   const event_name = ctx.params.event;
-
+  const webcast=ctx.params.e_category
   const res = await fetch(
-    `https://api.ktern.com/events-libraries?eventSlug=${event_name}`,
+    `https://api.ktern.com/events-libraries?eventSlug=${event_name}&&categorySlug=${webcast}`,
     {
       method: "get",
     }
   );
-  // console.log(res)
+  
 
   const data = await res.json();
+  console.log(data) 
   if (data[0] == undefined) {
     ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
