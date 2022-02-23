@@ -502,6 +502,7 @@ export default function Events({ h_data, f_data, data }) {
 						</section>
 					)}
 					{/* /Featured Events */}
+					
 					{/* Video Banner */}
 					{!data.isVideoSectionVisible && (
 						<section
@@ -510,7 +511,15 @@ export default function Events({ h_data, f_data, data }) {
 						>
 							<h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
 							<p className="section-subheading mb-6 text-center">{data.eventVideo.subHeading}</p>
-							<div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+							{data.isPodcastPage &&<div>
+								<a href={data.eventVideo.videoUrl}>
+								<img src="https://www.gstatic.com/podcasts_console/promote/English_EN/EN_Google_Podcasts_Badge.svg" width="150" height="38" alt="Listen on Google Podcasts"/>
+								</a>
+								</div>}
+								{!data.isPodcastPage && <div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+								
+								
+								
 								<div>
 									<iframe
 										className="hidden lg:block"
@@ -539,7 +548,7 @@ export default function Events({ h_data, f_data, data }) {
 										allowFullScreen
 									></iframe>
 								</div>
-							</div>
+							</div>}
 						</section>
 					)}
 					{/* /Video Banner */}
