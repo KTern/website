@@ -1011,7 +1011,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
  
 }
 
-
 /* Modal */
 .modal {
   position: fixed;
@@ -1045,4 +1044,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E65763", en
 /* Common background */
 .background {
   background: linear-gradient(81.86deg, #607A80 1.11%, rgba(8, 15, 25, 0.87) 44.32%, #000000 100%);
+}
+
+/* Tags */
+.tag-maps {
+  background: linear-gradient(81.78deg, #F28900 1.11%, rgba(157, 89, 0, 0.92) 26.79%, #000000 105.58%);
 }
