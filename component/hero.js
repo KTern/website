@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import BreadCrumb from '../component/breadcrumb';
+import Breadcrumbs from './breadcrumb-new';
 
-export default function Hero({ banner_data, stream, breadcrumb }) {
-	let form = banner_data.ProductsBannerForm;
+export default function Hero({ data, stream, breadcrumb }) {
+	let form = data.ProductsBannerForm;
 	return (
 		<>
 			<section className={`relative overflow-hidden section-${stream}`}>
@@ -13,15 +13,15 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 							<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-4">
 								<div className="mb-4">
 									{' '}
-									<BreadCrumb color="black" b_data={breadcrumb} />
+									<Breadcrumbs breadcrumb={breadcrumb} />
 								</div>
 								<span className={`p-1 text-xs uppercase rounded tag-${stream} text-white font-semibold`}>
-									{banner_data.DigitalStreamTitle}
+									{data.DigitalStreamTitle}
 								</span>
-								<h1 className="heading mt-6 mb-4 lg:mb-6 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
-									{banner_data.BannerHeadline}
+								<h1 className="heading mt-4 mb-4 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
+									{data.BannerHeadline}
 								</h1>
-								<p className="text-lg text-gray-500 sm:text-center">{banner_data.BannerSubHeadline}</p>
+								<p className="text-lg text-gray-500 sm:text-center">{data.BannerSubHeadline}</p>
 							</div>
 							<div className="relative flex flex-wrap">
 								<input
@@ -39,42 +39,36 @@ export default function Hero({ banner_data, stream, breadcrumb }) {
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
-								<span className="pl-3">{banner_data.ReviewStatement}</span>
+								<span className="pl-3">{data.ReviewStatement}</span>
 							</div>
 							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5">
-								{banner_data.ReviewImages.map((dt) => {
+								{data.ReviewImages.map((dt) => (
 									<div key="dt" className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
-										{/* <Image
+										<Image
 											priority
 											className={`mx-auto lg:mx-0 h-5`}
-											layout="fill"
+											// layout="fill"
 											src={dt.imageURL}
 											alt={dt.imageDescription}
-											width={dt.width}
-											height={dt.height}
-										/> */}
-										<Image
-											src="https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-cyborg-hero.png"
-											alt="Landscape picture"
-											width={500}
-											height={500}
+											width={dt.height}
+											height={dt.width}
 										/>
-									</div>;
-								})}
+									</div>
+								))}
 							</div>
 						</div>
 					</div>
-					<div className="w-full md:w-1/2 p-16 pt-32">
+					<div className="w-full lg:w-1/2 p-8 pr-24 pt-32">
 						<div className="relative h-full px-4 pt-8 bg-white rounded-md shadow-md">
 							<div className="relative mx-auto md:mr-0 max-w-max">
 								<Image
 									priority
 									className={`relative rounded-5xl`}
 									layout="fill"
-									src={banner_data.BannerImage.imageURL}
-									alt={banner_data.BannerImage.imageDescription}
-									width={banner_data.BannerImage.width}
-									height={banner_data.BannerImage.height}
+									src={data.BannerImage.imageURL}
+									alt={data.BannerImage.imageDescription}
+									// width={data.BannerImage.width}
+									// height={data.BannerImage.height}
 								/>
 							</div>
 						</div>

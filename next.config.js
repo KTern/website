@@ -64,7 +64,8 @@ module.exports = {
       "w3.org",
       "www.w3.org",
       "stackoverflow.com",
-      "web.ktern.com"
+      "web.ktern.com",
+      "shuffle.dev"
     ],
   },
 
