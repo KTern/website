@@ -5,14 +5,12 @@ export default function ValuePoints({ data, stream }) {
 				<div className="container px-4 mx-auto">
 					<div className="text-center">
 						<span
-							className={`p-1 text-xs rounded ${stream.cssstreamtag} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
+							className={`p-1 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 						>
 							{data.Tag}
 						</span>
-						<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
-							{data.Title}
-						</h2>
-						<p className="mb-12 section-subheading md:text-1xl text-center text-black px-12">
+						<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">{data.Title}</h2>
+						<p className="m-6 mb-12 section-subheading md:text-1xl text-center text-black px-12 text-lg md:text-xl font-medium">
 							{data.Description}
 						</p>
 					</div>
@@ -40,12 +38,14 @@ export default function ValuePoints({ data, stream }) {
 										className="w-full md:w-1/2 p-8 mb-4 hover:bg-white rounded-md hover:shadow-xl transition duration-200"
 									>
 										<div
-											className={`inline-flex text-white items-center justify-center mb-4 w-12 h-12 text-xl ${stream} font-semibold rounded-full`}
+											className={`inline-flex text-white items-center justify-center mb-4 w-12 h-12 text-xl tag-${stream} font-semibold rounded-full`}
 										>
 											{index + 1}
 										</div>
 										<h3 className="mb-2 text-xl font-bold">{dt.Title}</h3>
-										<p className="font-medium text-coolGray-500">{dt.Description}</p>
+										<p className="text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200">
+											{dt.Description}
+										</p>
 									</div>
 								))}
 							</div>
