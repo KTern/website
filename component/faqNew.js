@@ -1,7 +1,15 @@
+import { FAQPageJsonLd } from 'next-seo';
 import Markdown from 'markdown-to-jsx';
-export default function FAQ({ data, title, stream }) {
+
+export default function FaqNew({ data, title, stream }) {
+	// FAQ JSON LD
+	let faq = [];
+	data.FAQ.map((dt) => {
+		faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
+	});
 	return (
 		<>
+			<FAQPageJsonLd mainEntity={faq} />
 			<section className="py-12 bg-white bg-bg ">
 				<div className="text-center">
 					<span
@@ -10,10 +18,10 @@ export default function FAQ({ data, title, stream }) {
 						QUESTIONS
 					</span>
 				</div>
-				<h2 className="pb-8 section-heading  text-center ">{title}</h2>
+				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter text-center ">{title}</h2>
 				<div className="grid  grid-cols-3   ">
 					<div className="col-span-3 md:col-span-2 md:mx-20">
-						{data.map((data) => (
+						{data.FAQ.map((data) => (
 							<details
 								key="data"
 								className="details  relative overflow-hidden border-b border-gray-300  select-none "

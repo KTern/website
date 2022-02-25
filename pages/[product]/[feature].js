@@ -378,7 +378,7 @@ feature_data.FAQ.map((dt)=>{
           </div>
         </section>
         {/* <!--Faq Section--> */}
-        <FAQ data={feature_data.FAQ} title={feature_data.FAQSectionTitle} stream={feature_data.cssStreamTag} />
+        <FAQ data={feature_data.FAQ} title={feature_data.FAQSectionTitle} />
        
         {/* <!--Resources Section--> */}
         <section className='w-full pt-8 bg-white sm:pt-12 md:pt-16'>

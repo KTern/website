@@ -7,10 +7,10 @@ import SEOProduct from '../../component/seo-product';
 import StreamFeatures from '../../component/streamFeatures';
 import Testimonial from '../../component/testimonial';
 import ValuePoints from '../../component/valuePoints';
-import FAQ from '../../component/faq';
 import FeaturedResources from '../../component/featuredResources';
 import AppBanner from '../../component/appBanner';
 import CtaBar from '../../component/ctaBar';
+import FaqNew from '../../component/faqNew';
 
 export default function DigitalStream({ pageData, headerData, footerData }) {
 
@@ -50,7 +50,7 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 					stream={pageData.ProductsDevAttributes.Stream}
 				></Testimonial>
 				<AppBanner></AppBanner>
-				<FAQ
+				<FaqNew
 					data={pageData.ProductsFAQ}
 					title={pageData.ProductsFAQ.SectionTitle}
 					stream={pageData.ProductsDevAttributes.Stream}
