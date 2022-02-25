@@ -10,7 +10,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 				<div className="flex flex-wrap -mx-4 pb-10">
 					<div className="w-full lg:w-1/2 pt-12 pb-6 px-4 flex justify-center">
 						<div className="px-16 pl-24 sm:p-8 sm:py-0">
-							<div className="ml-auto max-w-xl mb-8 lg:mb-8 m-4">
+							<div className="ml-auto mb-8 lg:mb-8 m-4">
 								<div className="mb-4">
 									{' '}
 									<Breadcrumbs breadcrumb={breadcrumb} />
@@ -21,7 +21,9 @@ export default function Hero({ data, stream, breadcrumb }) {
 								<h1 className="heading mt-4 mb-4 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
 									{data.BannerHeadline}
 								</h1>
-								<p className="text-lg text-gray-500 sm:text-center">{data.BannerSubHeadline}</p>
+								<p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium">
+									{data.BannerSubHeadline}
+								</p>
 							</div>
 							<div className="relative flex flex-wrap">
 								<input
@@ -29,11 +31,11 @@ export default function Hero({ data, stream, breadcrumb }) {
 									type="text"
 									placeholder={form.EmailPlaceholder}
 								/>
-								<button className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-black bg-black hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200">
+								<button className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-gray hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 tag-maps">
 									{form.ButtonPlaceholder}
 								</button>
 							</div>
-							<div className="rating pt-5">
+							<div className="rating pt-5 sm:hidden">
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
@@ -41,7 +43,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 								<div className="rating-star"></div>
 								<span className="pl-3">{data.ReviewStatement}</span>
 							</div>
-							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5">
+							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5 sm:hidden">
 								{data.ReviewImages.map((dt) => (
 									<div key="dt" className="w-1/2 md:w-1/3 lg:w-1/5 px-2 mb-12">
 										<Image
@@ -58,7 +60,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 							</div>
 						</div>
 					</div>
-					<div className="w-full lg:w-1/2 p-8 pr-24 pt-32">
+					<div className="w-full lg:w-1/2 p-8 pr-24 pt-32 sm:hidden">
 						<div className="relative h-full px-4 pt-8 bg-white rounded-md shadow-md">
 							<div className="relative mx-auto md:mr-0 max-w-max">
 								<Image

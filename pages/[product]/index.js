@@ -1,17 +1,18 @@
-import { FAQPageJsonLd } from 'next-seo';
+import MultiCarousel from '../../component/carousel';
 import Hero from '../../component/hero';
 import Layout from '../../component/Layout';
-import Event from '../../component/page_event';
+import LogoBanner from '../../component/logo-banner';
 import SEO from '../../component/seo';
 import SEOProduct from '../../component/seo-product';
+import StreamFeatures from '../../component/streamFeatures';
+import Testimonial from '../../component/testimonial';
 import ValuePoints from '../../component/valuePoints';
+import FAQ from '../../component/faq';
+import FeaturedResources from '../../component/featuredResources';
+import AppBanner from '../../component/appBanner';
+import CtaBar from '../../component/ctaBar';
 
 export default function DigitalStream({ pageData, headerData, footerData }) {
-	// FAQ JSON LD
-	let faq = [];
-	pageData.ProductsFAQ.FAQ.map((dt) => {
-		faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
-	});
 
 	// Testimonials JSON LD
 	let testimonials = [];
@@ -19,14 +20,8 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 		testimonials.push({ statement: dt.TestimonialStatement, author: dt.AuthorName });
 	});
 
-	// Amplitude Tracking onClick
-	function onClick(data) {
-		Event(data);
-	}
-
 	return (
 		<>
-			{/* START: SEO  */}
 			<SEO data={pageData.PageSEO}></SEO>
 			<SEOProduct
 				product={pageData.ProductsBanner.DigitalStreamTitle}
@@ -36,24 +31,36 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 				ratingValue={pageData.ProductsBanner.RatingValue}
 				reviewCount={pageData.ProductsBanner.ReviewCount}
 			/>
-			{/* START: FAQ JSON LD  */}
-			<FAQPageJsonLd mainEntity={faq} />
-			{/* END: FAQ JSON LD  */}
-			{/* END: SEO  */}
-			{/* START: Page Layout */}
 			<Layout h_data={headerData} f_data={footerData}>
-				{/* START: Hero  */}
 				<Hero
 					data={pageData.ProductsBanner}
 					stream={pageData.ProductsDevAttributes.Stream}
 					breadcrumb={pageData.PageSEO.BreadCrumb}
 				></Hero>
-				{/* END: Hero  */}
-				{/* START: Value Points --> */}
 				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream}></ValuePoints>
-				{/* END: Value Points --> */}
+				<LogoBanner data={pageData.CustomerLogo} stream={pageData.ProductsDevAttributes.Stream}></LogoBanner>
+				<StreamFeatures
+					data={pageData.StreamFeatures}
+					source={pageData.PageSEO.PageTitle}
+					stream={pageData.ProductsDevAttributes.Stream}
+				></StreamFeatures>
+				<MultiCarousel data={pageData.Bots} stream={pageData.ProductsDevAttributes.Stream}></MultiCarousel>
+				<Testimonial
+					data={pageData.ProductsTestimonials}
+					stream={pageData.ProductsDevAttributes.Stream}
+				></Testimonial>
+				<AppBanner></AppBanner>
+				<FAQ
+					data={pageData.ProductsFAQ}
+					title={pageData.ProductsFAQ.SectionTitle}
+					stream={pageData.ProductsDevAttributes.Stream}
+				/>
+				<FeaturedResources
+					data={pageData.FeaturedResources}
+					stream={pageData.ProductsDevAttributes.Stream}
+				></FeaturedResources>
+				<CtaBar></CtaBar>
 			</Layout>
-			{/* END: Page Layout  */}
 		</>
 	);
 }
