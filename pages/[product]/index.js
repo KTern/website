@@ -49,7 +49,7 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 					data={pageData.ProductsTestimonials}
 					stream={pageData.ProductsDevAttributes.Stream}
 				></Testimonial>
-				<AppBanner></AppBanner>
+				<AppBanner stream={pageData.ProductsDevAttributes.Stream}></AppBanner>
 				<FaqNew
 					data={pageData.ProductsFAQ}
 					title={pageData.ProductsFAQ.SectionTitle}
