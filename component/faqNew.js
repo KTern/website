@@ -13,7 +13,7 @@ export default function FaqNew({ data, title, stream }) {
 			<section className="py-12 bg-white bg-bg ">
 				<div className="text-center">
 					<span
-						className={`text-xs rounded ${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
+						className={`text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 					>
 						QUESTIONS
 					</span>

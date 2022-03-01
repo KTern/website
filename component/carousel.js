@@ -24,7 +24,7 @@ export default function MultiCarousel({data, stream}) {
 		<div className={`md:px-20 py-10 sm:hidden bg-zinc`}>
 			<div className="px-20 text-center">
 				<span
-					className={`p-1 text-xs rounded ${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
+					className={`p-1 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 				>
 					{data.Tag}
 				</span>
@@ -39,7 +39,7 @@ export default function MultiCarousel({data, stream}) {
 							<div className="group border border-black relative h-full px-8 pt-16 pb-8 bg-coolGray-50 group-hover:bg-white rounded-md shadow-md hover:shadow-xl transition duration-200">
 								<div className="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2 inline-flex h-16 w-16 items-center justify-center bg-white rounded-full transition duration-200">
 									<div
-										className={`inline-flex items-center justify-center w-12 h-12 text-white ${stream} rounded-full`}
+										className={`inline-flex items-center justify-center w-12 h-12 text-white tag-${stream} rounded-full`}
 									>
 										<svg
 											width="16"

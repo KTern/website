@@ -1,62 +1,46 @@
 export default function CtaBar({}) {
 	return (
 		<>
-			<section className="relative p-12 pb-20">
-				<div className="py-12 bg-gray-800 overflow-hidden">
-					{/* <img
-						className="hidden lg:block absolute top-0 left-0 -ml-64 mt-24"
-						src="https://shuffle.dev/zospace-assets/lines/circle.svg"
-						alt=""
-					/>
-					<img className="hidden lg:block absolute top-0 left-0 -ml-12" src="./maps-half-circle.svg" alt="" />
-					<img
-						className="hidden lg:block absolute top-0 right-0 w-96 h-96 -mt-40 -mr-32"
-						src="https://shuffle.dev/zospace-assets/lines/circle.svg"
-						alt=""
-					/>
-					<img
-						className="hidden lg:block absolute top-0 right-0"
-						src="https://shuffle.dev/zospace-assets/images/stars.svg"
-						alt=""
-					/> */}
-					<div className="container px-8 mx-auto">
-						<div className="relative flex flex-wrap items-center -m-4">
-							<div className="w-full lg:w-2/5 p-4">
-								<h3 className="mb-10 text-5xl text-white font-bold font-heading">Subscribe now!</h3>
-								<p className="text-xl text-gray-200">
-									Winter is comming, dignissim and accumsan, lacus semper, ipsum fermentum.
-								</p>
+			<section className="bg-maps py-8">
+				<div className="container px-8 py-8 mx-24">
+					<div className="p-12 rounded overflow-hidden card-maps">
+						<div className="flex flex-wrap -mx-4">
+							<div className="w-full md:w-1/2 px-4">
+								<h3 className="mb-2 font-medium text-white text-3xl md:text-3xl leading-tight font-bold tracking-tighter">
+									<span className="text-white mr-2">Generate</span>
+									<span>Monthly Reports</span>
+								</h3>
+								{/* <p className="mb-4 text-white">
+									Good customer relationship management is the foundation of modern business. Take care of the
+									development.
+								</p> */}
+								<a
+									className="inline-flex items-center py-2 mt-4 px-3 rounded text-xs text-white bg-red-500 hover:bg-red-600 rounded"
+									href="#"
+								>
+									<span className="mr-1">
+										<svg
+											width="14"
+											height="14"
+											viewBox="0 0 14 14"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M4.3335 12.3333H2.3335C2.15669 12.3333 1.98712 12.2631 1.86209 12.1381C1.73707 12.013 1.66683 11.8435 1.66683 11.6666V9.66665C1.66683 9.48984 1.59659 9.32027 1.47157 9.19524C1.34654 9.07022 1.17697 8.99998 1.00016 8.99998C0.823352 8.99998 0.653782 9.07022 0.528758 9.19524C0.403734 9.32027 0.333496 9.48984 0.333496 9.66665V11.6666C0.333496 12.1971 0.54421 12.7058 0.919283 13.0809C1.29436 13.4559 1.80306 13.6666 2.3335 13.6666H4.3335C4.51031 13.6666 4.67988 13.5964 4.8049 13.4714C4.92992 13.3464 5.00016 13.1768 5.00016 13C5.00016 12.8232 4.92992 12.6536 4.8049 12.5286C4.67988 12.4036 4.51031 12.3333 4.3335 12.3333V12.3333ZM1.00016 4.99998C1.17697 4.99998 1.34654 4.92974 1.47157 4.80472C1.59659 4.67969 1.66683 4.51012 1.66683 4.33331V2.33331C1.66683 2.1565 1.73707 1.98693 1.86209 1.86191C1.98712 1.73688 2.15669 1.66665 2.3335 1.66665H4.3335C4.51031 1.66665 4.67988 1.59641 4.8049 1.47138C4.92992 1.34636 5.00016 1.17679 5.00016 0.99998C5.00016 0.823169 4.92992 0.653599 4.8049 0.528575C4.67988 0.403551 4.51031 0.333313 4.3335 0.333313H2.3335C1.80306 0.333313 1.29436 0.544027 0.919283 0.9191C0.54421 1.29417 0.333496 1.80288 0.333496 2.33331V4.33331C0.333496 4.51012 0.403734 4.67969 0.528758 4.80472C0.653782 4.92974 0.823352 4.99998 1.00016 4.99998ZM11.6668 0.333313H9.66683C9.49002 0.333313 9.32045 0.403551 9.19543 0.528575C9.0704 0.653599 9.00016 0.823169 9.00016 0.99998C9.00016 1.17679 9.0704 1.34636 9.19543 1.47138C9.32045 1.59641 9.49002 1.66665 9.66683 1.66665H11.6668C11.8436 1.66665 12.0132 1.73688 12.1382 1.86191C12.2633 1.98693 12.3335 2.1565 12.3335 2.33331V4.33331C12.3335 4.51012 12.4037 4.67969 12.5288 4.80472C12.6538 4.92974 12.8234 4.99998 13.0002 4.99998C13.177 4.99998 13.3465 4.92974 13.4716 4.80472C13.5966 4.67969 13.6668 4.51012 13.6668 4.33331V2.33331C13.6668 1.80288 13.4561 1.29417 13.081 0.9191C12.706 0.544027 12.1973 0.333313 11.6668 0.333313ZM9.66683 6.99998C9.66683 6.82317 9.59659 6.6536 9.47157 6.52858C9.34654 6.40355 9.17697 6.33331 9.00016 6.33331H7.66683V4.99998C7.66683 4.82317 7.59659 4.6536 7.47157 4.52858C7.34654 4.40355 7.17697 4.33331 7.00016 4.33331C6.82335 4.33331 6.65378 4.40355 6.52876 4.52858C6.40373 4.6536 6.3335 4.82317 6.3335 4.99998V6.33331H5.00016C4.82335 6.33331 4.65378 6.40355 4.52876 6.52858C4.40373 6.6536 4.3335 6.82317 4.3335 6.99998C4.3335 7.17679 4.40373 7.34636 4.52876 7.47138C4.65378 7.59641 4.82335 7.66665 5.00016 7.66665H6.3335V8.99998C6.3335 9.17679 6.40373 9.34636 6.52876 9.47138C6.65378 9.59641 6.82335 9.66665 7.00016 9.66665C7.17697 9.66665 7.34654 9.59641 7.47157 9.47138C7.59659 9.34636 7.66683 9.17679 7.66683 8.99998V7.66665H9.00016C9.17697 7.66665 9.34654 7.59641 9.47157 7.47138C9.59659 7.34636 9.66683 7.17679 9.66683 6.99998ZM13.0002 8.99998C12.8234 8.99998 12.6538 9.07022 12.5288 9.19524C12.4037 9.32027 12.3335 9.48984 12.3335 9.66665V11.6666C12.3335 11.8435 12.2633 12.013 12.1382 12.1381C12.0132 12.2631 11.8436 12.3333 11.6668 12.3333H9.66683C9.49002 12.3333 9.32045 12.4036 9.19543 12.5286C9.0704 12.6536 9.00016 12.8232 9.00016 13C9.00016 13.1768 9.0704 13.3464 9.19543 13.4714C9.32045 13.5964 9.49002 13.6666 9.66683 13.6666H11.6668C12.1973 13.6666 12.706 13.4559 13.081 13.0809C13.4561 12.7058 13.6668 12.1971 13.6668 11.6666V9.66665C13.6668 9.48984 13.5966 9.32027 13.4716 9.19524C13.3465 9.07022 13.177 8.99998 13.0002 8.99998Z"
+												fill="#F1988F"
+											></path>
+										</svg>
+									</span>
+									<span>Add New Report</span>
+								</a>
 							</div>
-							<div className="w-full lg:w-3/5 p-4">
-								<div className="lg:max-w-xl mx-auto">
-									<div className="mb-8 sm:flex sm:items-center sm:bg-white sm:rounded-full">
-										<span className="hidden sm:inline-block pl-6 lg:pl-10">
-											<svg
-												width="37"
-												height="37"
-												viewBox="0 0 37 37"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
-												<circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
-												<circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
-											</svg>
-										</span>
-										<input
-											className="w-full sm:w-auto mb-4 sm:mb-0 pl-8 sm:pl-4 py-5 rounded-full placeholder-gray-900 font-bold focus:outline-none"
-											type="email"
-											placeholder="Drop your Email"
-										/>
-										<button className="w-full sm:w-auto ml-auto px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
-											Subscribe
-										</button>
-									</div>
-									<p className="text-gray-300">
-										<span>The brown fox jumps over</span>
-										<span className="text-white">the lazy dog.</span>
-									</p>
-								</div>
+							<div className="relative w-full md:w-1/2 px-4 hidden md:block">
+								<img
+									className="md:absolute top-0 right-0 md:-mt-12 h-72 object-cover"
+									src="https://shuffle.dev/artemis-assets/images/saly-group.png"
+									alt=""
+								/>
 							</div>
 						</div>
 					</div>
