@@ -9,7 +9,7 @@ export default function Testimonial({ data, stream }) {
 						>
 							{data.TagTitle}
 						</span>
-						<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter text-black">
+						<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold text-black">
 							{data.SectionTitle}
 						</h3>
 					</div>
@@ -33,7 +33,7 @@ export default function Testimonial({ data, stream }) {
 					{data.Testimonials.map((dt, index) => (
 						<div key="dt" className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 							<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
-								<h3 className="pb-14 mb-auto text-xl md:text-xl font-medium text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200">
+								<h3 className="pb-14 mb-auto text-xl md:text-xl font-medium text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200 ibm-plex">
 									{dt.TestimonialStatement}
 								</h3>
 								<h4 className="mb-1 text-lg font-semibold">{dt.AuthorName}</h4>

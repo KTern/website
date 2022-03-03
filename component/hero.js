@@ -1,15 +1,14 @@
 import Image from 'next/image';
-
 import Breadcrumbs from './breadcrumb-new';
 
 export default function Hero({ data, stream, breadcrumb }) {
 	let form = data.ProductsBannerForm;
 	return (
 		<>
-			<section className={`relative overflow-hidden section-${stream}`}>
-				<div className="flex flex-wrap -mx-4 pb-10">
-					<div className="w-full lg:w-1/2 pt-12 pb-6 px-4 flex justify-center">
-						<div className="px-16 pl-24 sm:p-8 sm:py-0">
+			<section className={`relative section-${stream} overflow-hidden`}>
+				<div className="flex flex-wrap pb-4">
+					<div className="w-full lg:w-1/2 pt-12 pb-6 flex justify-center">
+						<div className="px-12 pl-24 sm:p-8 sm:py-0">
 							<div className="ml-auto mb-8 lg:mb-8 m-4">
 								<div className="mb-4">
 									{' '}
@@ -21,7 +20,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 								<h1 className="heading mt-4 mb-4 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
 									{data.BannerHeadline}
 								</h1>
-								<p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium">
+								<p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium ibm-plex">
 									{data.BannerSubHeadline}
 								</p>
 							</div>
@@ -42,7 +41,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 										id="EMBED_FORM_EMAIL_LABEL"
 									/>
 									<button
-										className="w-full md:w-auto py-3 px-6 md:ml-2 text-sm text-white font-medium leading-normal border-2 border-gray hover:bg-gray-300 hover:text-black shadow text-white  rounded-r-xl rounded-b-xl transition duration-200 tag-maps"
+										className={`ml-4 inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
 										name="SIGNUP_SUBMIT_BUTTON"
 										id="zcWebOptin"
 										value="SIGN UP"
@@ -80,11 +79,11 @@ export default function Hero({ data, stream, breadcrumb }) {
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
-								<span className="pl-3">{data.ReviewStatement}</span>
+								<span className="pl-3 ibm-plex text-gray-600">{data.ReviewStatement}</span>
 							</div>
-							<div className="flex flex-wrap items-center justify-center -mx-2 -mb-12 mt-5 sm:hidden">
+							<div className="flex flex-wrap items-center justify-center -mx-2 mb-6 mt-5 sm:hidden">
 								{data.ReviewImages.map((dt) => (
-									<div key="dt" className="w-1/4 md:w-1/4 lg:w-1/4 mb-12">
+									<div key="dt" className="w-1/4 md:w-1/4 lg:w-1/4">
 										<Image
 											priority
 											className={`mx-auto lg:mx-0 h-5`}
@@ -99,20 +98,15 @@ export default function Hero({ data, stream, breadcrumb }) {
 							</div>
 						</div>
 					</div>
-					<div className="w-full lg:w-1/2 p-8 pr-24 pt-32 sm:hidden">
-						<div className="relative h-full p-8 bg-white rounded-md shadow-md">
-							<div className="relative mx-auto md:mr-0 max-w-max">
-								{/* <Image
-									priority
-									className={`relative rounded-5xl`}
-									layout="responsive"
+					<div className="w-full lg:w-1/2 pr-12 pt-24 sm:hidden">
+						<div className="relative h-full items-center justify-center">
+							<div className="relative mx-auto md:mr-0 max-w-max mb-8 p-8">
+								<img
 									src={data.BannerImage.imageURL}
 									alt={data.BannerImage.imageDescription}
 									width={data.BannerImage.width}
 									height={data.BannerImage.height}
-								/> */}
-								<img  src={data.BannerImage.imageURL} width={data.BannerImage.width}
-									height={data.BannerImage.height} />
+								/>
 							</div>
 						</div>
 					</div>

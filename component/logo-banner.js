@@ -13,10 +13,10 @@ export default function LogoBanner({ data, stream }) {
 										{data.Tag}
 									</span>
 								</div>
-								<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+								<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold">
 									{data.Title}
 								</h3>
-								<p className="text-lg md:text-xl text-coolGray-500 font-medium">{data.Description}</p>
+								<p className="text-lg md:text-xl text-coolGray-500 font-medium ibm-plex">{data.Description}</p>
 							</div>
 						</div>
 						<div className="w-full lg:w-1/2 px-4">

@@ -9,7 +9,7 @@ export default function FeaturedResources({ data, stream }) {
 						>
 							{data.Tag}
 						</span>
-						<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+						<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold">
 							{data.SectionTitle}
 						</h3>
 					</div>
@@ -19,7 +19,7 @@ export default function FeaturedResources({ data, stream }) {
 							<div className="w-full px-3 mb-5">
 								<a href={data.Resource[0].CTAUrl}>
 									<div className="relative h-64 mx-auto rounded">
-										<div className={`absolute inset-0 maps-card rounded`}></div>
+										<div className={`absolute inset-0 banner-${stream} rounded`}></div>
 										<div className="absolute inset-0 p-6 flex flex-col items-start">
 											<p className="text-xl lg:text-2xl pt-20 text-black font-bold">
 												<span
@@ -41,9 +41,9 @@ export default function FeaturedResources({ data, stream }) {
 									<div className="relative mx-auto rounded h-64">
 										<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 										<div
-											className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg"
+											className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg "
 											style={{
-												backgroundImage: `url(/dots-left.svg)`,
+												backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/circle-${stream}.svg)`,
 												backgroundPosition: 'bottom left',
 												backgroundRepeat: 'no-repeat',
 											}}
@@ -67,8 +67,8 @@ export default function FeaturedResources({ data, stream }) {
 										<div
 											className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg"
 											style={{
-												backgroundImage: `url(/dots-left.svg)`,
-												backgroundPosition: 'bottom left',
+												backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/dots-${stream}.svg)`,
+												backgroundPosition: 'bottom right',
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
@@ -95,7 +95,7 @@ export default function FeaturedResources({ data, stream }) {
 										<div
 											className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg"
 											style={{
-												backgroundImage: `url(/dots-left.svg)`,
+												backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/dots-${stream}.svg)`,
 												backgroundPosition: 'bottom left',
 												backgroundRepeat: 'no-repeat',
 											}}
@@ -121,8 +121,8 @@ export default function FeaturedResources({ data, stream }) {
 										<div
 											className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg"
 											style={{
-												backgroundImage: `url(/dots-left.svg)`,
-												backgroundPosition: 'bottom left',
+												backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/circle-${stream}.svg)`,
+												backgroundPosition: 'bottom right',
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
@@ -144,7 +144,7 @@ export default function FeaturedResources({ data, stream }) {
 							<div className="w-full px-3 mb-5">
 								<a href={data.Resource[5].CTAUrl}>
 									<div className="relative h-64 mx-auto rounded">
-										<div className={`absolute inset-0 maps-card rounded`}></div>
+										<div className={`absolute inset-0 banner-${stream} rounded`}></div>
 										<div className="absolute inset-0 p-6 flex flex-col items-start">
 											<p className="text-xl lg:text-2xl pt-20 text-black font-bold">
 												<span
