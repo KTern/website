@@ -18,7 +18,7 @@ export default function FaqNew({ data, title, stream }) {
 						QUESTIONS
 					</span>
 				</div>
-				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter text-center ">{title}</h2>
+				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold text-center ">{title}</h2>
 				<div className="grid  grid-cols-3   ">
 					<div className="col-span-3 md:col-span-2 md:mx-20">
 						{data.FAQ.map((data) => (
@@ -73,7 +73,7 @@ export default function FaqNew({ data, title, stream }) {
 												},
 											},
 										}}
-										className=" text-justify"
+										className=" text-justify ibm-plex"
 									>
 										{data.Answer}
 									</Markdown>

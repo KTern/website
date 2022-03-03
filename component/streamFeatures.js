@@ -20,10 +20,10 @@ export default function StreamFeatures({ data, source, stream }) {
 									>
 										{dt.Tag}
 									</span>
-									<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+									<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold">
 										{dt.Title}
 									</h1>
-									<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
+									<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium ibm-plex">{dt.Description}</p>
 									<Link href={dt.CTAUrl} passHref>
 										<a
 											onClick={() => {
@@ -35,7 +35,7 @@ export default function StreamFeatures({ data, source, stream }) {
 													label: `${dt.Title}-${dt.CTAText}`,
 												});
 											}}
-											className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+											className={`inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow ibm-plex`}
 										>
 											{dt.CTAText}
 										</a>
@@ -45,10 +45,8 @@ export default function StreamFeatures({ data, source, stream }) {
 								<div className="sm:block sm:hidden w-full lg:w-1/2 px-8 flex items-center justify-center">
 									<div className="relative" style={{ zIndex: 0 }}>
 										<div className="h-128 w-full relative">
-											<Image
-												priority
+											<img
 												className="rounded-3xl md:rounded-tl-none bg-white"
-												layout="fill"
 												src={dt.ImageURL}
 												alt={dt.Title}
 											/>
@@ -70,10 +68,8 @@ export default function StreamFeatures({ data, source, stream }) {
 									<div className="sm:block sm:hidden w-full lg:w-1/2 px-8 flex items-center justify-center">
 										<div className="relative" style={{ zIndex: 0 }}>
 											<div className="h-128 w-full relative">
-												<Image
-													priority
+												<img
 													className="rounded-3xl md:rounded-tl-none bg-white"
-													layout="fill"
 													src={dt.ImageURL}
 													alt={dt.Title}
 												/>
@@ -93,10 +89,10 @@ export default function StreamFeatures({ data, source, stream }) {
 										>
 											{dt.Tag}
 										</span>
-										<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">
+										<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold ">
 											{dt.Title}
 										</h1>
-										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
+										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium ibm-plex">{dt.Description}</p>
 										<Link href={dt.CTAUrl} passHref>
 											<a
 												onClick={() => {
@@ -108,7 +104,7 @@ export default function StreamFeatures({ data, source, stream }) {
 														label: `${dt.Title}-${dt.CTAText}`,
 													});
 												}}
-												className={`inline-block py-4 px-5 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-amber-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+												className={`inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow ibm-plex`}
 											>
 												{dt.CTAText}
 											</a>

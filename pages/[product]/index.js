@@ -49,7 +49,7 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 					data={pageData.ProductsTestimonials}
 					stream={pageData.ProductsDevAttributes.Stream}
 				></Testimonial>
-				<AppBanner stream={pageData.ProductsDevAttributes.Stream}></AppBanner>
+				<AppBanner data={pageData.AcoladeBanner} stream={pageData.ProductsDevAttributes.Stream}></AppBanner>
 				<FaqNew
 					data={pageData.ProductsFAQ}
 					title={pageData.ProductsFAQ.SectionTitle}
@@ -59,7 +59,7 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 					data={pageData.FeaturedResources}
 					stream={pageData.ProductsDevAttributes.Stream}
 				></FeaturedResources>
-				<CtaBar></CtaBar>
+				<CtaBar data={pageData.CTABar} stream={pageData.ProductsDevAttributes.Stream}></CtaBar>
 			</Layout>
 		</>
 	);
@@ -69,10 +69,10 @@ export const getStaticPaths = async () => {
 	// dynamic route array values must be acquired here from strapi
 	const data = [
 		{ product: 'digital-maps' },
-		// { product: 'digital-projects' },
-		// { product: 'digital-process' },
-		// { product: 'digital-labs' },
-		// { product: 'digital-mines' },
+		{ product: 'digital-projects' },
+		{ product: 'digital-process' },
+		{ product: 'digital-labs' },
+		{ product: 'digital-mines' },
 	];
 
 	const paths = data.map((index) => {

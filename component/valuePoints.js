@@ -9,8 +9,8 @@ export default function ValuePoints({ data, stream }) {
 						>
 							{data.Tag}
 						</span>
-						<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter">{data.Title}</h2>
-						<p className="m-6 mb-12 section-subheading md:text-1xl text-center text-black px-12 text-lg md:text-xl font-medium">
+						<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold">{data.Title}</h2>
+						<p className="m-6 mb-12 section-subheading md:text-1xl text-center text-black px-12 text-lg md:text-xl font-medium ibm-plex">
 							{data.Description}
 						</p>
 					</div>
@@ -19,15 +19,15 @@ export default function ValuePoints({ data, stream }) {
 							<div className="relative mx-auto md:ml-0 max-w-max">
 								<img
 									className="absolute z-10 -right-8 -top-8 w-28 md:w-auto"
-									src="https://shuffle.dev/flex-ui-assets/elements/circle3-yellow.svg"
+									src={data.TopImageURL}
 									alt=""
 								/>
 								<img
 									className="absolute z-10 -left-10 -bottom-8 w-28 md:w-auto"
-									src="https://shuffle.dev/flex-ui-assets/elements/dots3-blue.svg"
+									src={data.BottomImageURL}
 									alt=""
 								/>
-								<img src="https://shuffle.dev/flex-ui-assets/images/how-it-works/stock.png" alt="" />
+								<img src={data.BaseImageURL} alt="" />
 							</div>
 						</div>
 						<div className="w-full md:w-1/2 px-4">
@@ -43,7 +43,7 @@ export default function ValuePoints({ data, stream }) {
 											{index + 1}
 										</div>
 										<h3 className="mb-2 text-xl font-bold">{dt.Title}</h3>
-										<p className="text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200">
+										<p className="text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200 ibm-plex">
 											{dt.Description}
 										</p>
 									</div>
