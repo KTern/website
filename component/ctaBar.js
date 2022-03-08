@@ -10,13 +10,12 @@ export default function CtaBar({ stream, data }) {
 									<span className="text-white font-bold  mr-2 ibm-plex">{data.SectionHeading}</span>
 								</h3>
 								{data.CTAButton.map((dt) => (
-									<a
-										key="dt"
-										className={`sm:m-2 mr-2 inline-block p-4 w-full md:w-auto text-base leading-4 text-white bg-gray-600 hover:bg-gray-400 font-large text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
-										href={dt.linkURL}
-									>
-										{dt.buttonTitle}
-									</a>
+									<div key="dt">
+										{dt.openNewTab
+											? <a className={`sm:m-2 mr-2 inline-block p-4 w-full md:w-auto text-base leading-4 text-white bg-gray-600 hover:bg-gray-400 font-large text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`} href={dt.linkURL} target="_blank" rel="noreferrer"> {dt.buttonTitle}</a>
+											: <a className={`sm:m-2 mr-2 inline-block p-4 w-full md:w-auto text-base leading-4 text-white bg-gray-600 hover:bg-gray-400 font-large text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`} href={dt.linkURL}> {dt.buttonTitle}</a>
+										}
+									</div>
 								))}
 							</div>
 							<div className="relative w-full md:w-1/2 px-4 hidden md:block">
