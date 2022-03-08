@@ -329,7 +329,7 @@ export default function FeaturedResources({ data, stream }) {
 												<span
 													className={`p-2 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 												>
-													{data.Resource[4].Tag} h
+													{data.Resource[4].Tag}
 												</span>
 												<p className="pt-4 text-xl lg:text-2xl text-black font-bold">
 													{data.Resource[4].ResourceTitle}
