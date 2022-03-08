@@ -464,7 +464,7 @@ console.log(e.target)
                             overrides: {
                               h3: {
                                 props: {
-                                  className: "text-xl mb-4   text-center",
+                                  className: "text-md mb-4   text-center",
                                 },
                               },
                               h1: {
@@ -474,13 +474,13 @@ console.log(e.target)
                               },
                               li: {
                                 props: {
-                                  className: " list-decimal ml-6 mb-1 flex-col",
+                                  className: "text-xl list-decimal ml-6 mb-1 flex-col",
                                 },
                               },
                               p: {
                                 props: {
                                   className:
-                                    "mb-3 text-md sm:text-sm text-center",
+                                    "mb-3 text-xl sm:text-sm text-justify",
                                 },
                               },
                               ol: {
