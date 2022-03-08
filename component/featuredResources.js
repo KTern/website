@@ -106,7 +106,7 @@ export default function FeaturedResources({ data, stream }) {
 							<div className="w-1/2 lg:w-1/2 px-3 mb-5 md:hidden lg:hidden xl:hidden 2xl:hidden">
 								{data.Resource[1].OpenNewTab ? (
 									<a href={data.Resource[1].CTAUrl} target="_blank" rel="noreferrer">
-										<div className="relative mx-auto rounded h-64 sm:h-32">
+										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg sm:px-8 sm:text-center sm:items-center sm:justify-center sm:p-2">
 												<span
@@ -122,7 +122,7 @@ export default function FeaturedResources({ data, stream }) {
 									</a>
 								) : (
 									<a href={data.Resource[1].CTAUrl}>
-										<div className="relative mx-auto rounded h-64 sm:h-32">
+										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg sm:px-8 sm:text-center sm:items-center sm:justify-center sm:p-2">
 												<span
@@ -193,14 +193,7 @@ export default function FeaturedResources({ data, stream }) {
 									<a href={data.Resource[2].CTAUrl} target="_blank" rel="noreferrer">
 										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
-											<div
-												className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2"
-												style={{
-													backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/dots-${stream}.svg)`,
-													backgroundPosition: 'bottom right',
-													backgroundRepeat: 'no-repeat',
-												}}
-											>
+											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2  items-center justify-center">
 												<span
 													className={`p-2 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 												>
@@ -216,14 +209,7 @@ export default function FeaturedResources({ data, stream }) {
 									<a href={data.Resource[2].CTAUrl}>
 										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
-											<div
-												className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2"
-												style={{
-													backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/dots-${stream}.svg)`,
-													backgroundPosition: 'bottom right',
-													backgroundRepeat: 'no-repeat',
-												}}
-											>
+											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2">
 												<span
 													className={`p-2 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 												>
@@ -294,7 +280,7 @@ export default function FeaturedResources({ data, stream }) {
 							<div className="w-1/2 lg:w-1/2 px-3 mb-5 md:hidden lg:hidden xl:hidden 2xl:hidden">
 								{data.Resource[3].OpenNewTab ? (
 									<a href={data.Resource[3].CTAUrl} target="_blank" rel="noreferrer">
-										<div className="relative mx-auto rounded h-64 sm:h-32">
+										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg sm:px-8 sm:text-center sm:items-center sm:justify-center sm:p-2">
 												<span
@@ -310,7 +296,7 @@ export default function FeaturedResources({ data, stream }) {
 									</a>
 								) : (
 									<a href={data.Resource[3].CTAUrl}>
-										<div className="relative mx-auto rounded h-64 sm:h-32">
+										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg sm:px-8 sm:text-center sm:items-center sm:justify-center sm:p-2">
 												<span
@@ -381,14 +367,7 @@ export default function FeaturedResources({ data, stream }) {
 									<a href={data.Resource[4].CTAUrl} target="_blank" rel="noreferrer">
 										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
-											<div
-												className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2"
-												style={{
-													backgroundImage: `url(https://storage.googleapis.com/ktern-public-files/website/patterns/dots-${stream}.svg)`,
-													backgroundPosition: 'bottom right',
-													backgroundRepeat: 'no-repeat',
-												}}
-											>
+											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resorcesBg sm:text-center sm:p-2  items-center justify-center">
 												<span
 													className={`p-2 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 												>
