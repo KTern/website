@@ -12,7 +12,7 @@ import AppBanner from '../../component/appBanner';
 import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
 
-export default function DigitalStream({ pageData, headerData, footerData }) {
+export default function DigitalStream({ pageData, headerData, footerData, background }) {
 
 	// Testimonials JSON LD
 	let testimonials = [];
@@ -36,6 +36,7 @@ export default function DigitalStream({ pageData, headerData, footerData }) {
 					data={pageData.ProductsBanner}
 					stream={pageData.ProductsDevAttributes.Stream}
 					breadcrumb={pageData.PageSEO.BreadCrumb}
+					background={background}
 				></Hero>
 				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream}></ValuePoints>
 				<LogoBanner data={pageData.CustomerLogo} stream={pageData.ProductsDevAttributes.Stream}></LogoBanner>
@@ -117,6 +118,7 @@ export const getStaticProps = async ({ params }) => {
 			pageData: p_data[0],
 			headerData: h_data,
 			footerData: f_data,
+			background: 'section'
 		},
 	};
 };
