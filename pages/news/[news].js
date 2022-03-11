@@ -128,7 +128,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                         },
                         li: {
                           props: {
-                            className: "text-justify  ml-3 mb-1 flex-col",
+                            className: "text-justify  list-decimal  ml-3 mb-1 flex-col",
                           }
                             },
                             p: {
@@ -138,7 +138,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                             },
                             ol: {
                                 props: {
-                                    className:"mb-4 list-decimal text-justify"
+                                    className:"mb-4 text-justify"
                                 }
                             },
 			    ul: {
