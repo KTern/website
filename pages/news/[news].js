@@ -141,6 +141,11 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                                     className:"mb-4 text-justify"
                                 }
                             },
+			    ul: {
+                                props: {
+                                    className:"mb-4 text-justify"
+                                }
+                            },
                             a:{
                               props:{
                                 className:"text-blue-900 hover:underline "
