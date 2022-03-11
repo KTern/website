@@ -42,7 +42,10 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 					background={background}
 				></Hero>
 				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream}></ValuePoints>
-				<TestimonialSingle></TestimonialSingle>
+				<TestimonialSingle
+					data={pageData.CustomerTestimonial}
+					stream={pageData.ProductsDevAttributes.Stream}
+				></TestimonialSingle>
 				<StreamFeatures
 					data={pageData.StreamFeatures}
 					source={pageData.PageSEO.PageTitle}
@@ -73,102 +76,102 @@ export const getStaticPaths = async () => {
 			product: 'digital-maps',
 			feature: 'business-process-mining',
 		},
-		{
-			product: 'digital-maps',
-			feature: 'custom-code-analysis',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'timeline-effort-estimation',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'landscape-assessment',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'transformation-insights',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'digital-workspace',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'sap-activate-cockpit',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'social-collaboration',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'signoffs-workflows',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'project-reporting',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-orchestration',
-		},
-		{
-			product: 'digital-process',
-			feature: 'sap-scope-item-cockpit',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-modelling',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-dashboards',
-		},
-		{
-			product: 'digital-process',
-			feature: 'custom-process-adaptation',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-repository',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-scripts-evidences-defects',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-reporting',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-scenario-recommendations',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'uat-signoffs',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'change-impact-mining',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'test-fit-gaps',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'process-impact',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'change-impact-orchestration',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'release-impact-analytics',
-		},
+		// {
+		// 	product: 'digital-maps',
+		// 	feature: 'custom-code-analysis',
+		// },
+		// {
+		// 	product: 'digital-maps',
+		// 	feature: 'timeline-effort-estimation',
+		// },
+		// {
+		// 	product: 'digital-maps',
+		// 	feature: 'landscape-assessment',
+		// },
+		// {
+		// 	product: 'digital-maps',
+		// 	feature: 'transformation-insights',
+		// },
+		// {
+		// 	product: 'digital-projects',
+		// 	feature: 'digital-workspace',
+		// },
+		// {
+		// 	product: 'digital-projects',
+		// 	feature: 'sap-activate-cockpit',
+		// },
+		// {
+		// 	product: 'digital-projects',
+		// 	feature: 'social-collaboration',
+		// },
+		// {
+		// 	product: 'digital-projects',
+		// 	feature: 'signoffs-workflows',
+		// },
+		// {
+		// 	product: 'digital-projects',
+		// 	feature: 'project-reporting',
+		// },
+		// {
+		// 	product: 'digital-process',
+		// 	feature: 'process-orchestration',
+		// },
+		// {
+		// 	product: 'digital-process',
+		// 	feature: 'sap-scope-item-cockpit',
+		// },
+		// {
+		// 	product: 'digital-process',
+		// 	feature: 'process-modelling',
+		// },
+		// {
+		// 	product: 'digital-process',
+		// 	feature: 'process-dashboards',
+		// },
+		// {
+		// 	product: 'digital-process',
+		// 	feature: 'custom-process-adaptation',
+		// },
+		// {
+		// 	product: 'digital-labs',
+		// 	feature: 'test-repository',
+		// },
+		// {
+		// 	product: 'digital-labs',
+		// 	feature: 'test-scripts-evidences-defects',
+		// },
+		// {
+		// 	product: 'digital-labs',
+		// 	feature: 'test-reporting',
+		// },
+		// {
+		// 	product: 'digital-labs',
+		// 	feature: 'test-scenario-recommendations',
+		// },
+		// {
+		// 	product: 'digital-labs',
+		// 	feature: 'uat-signoffs',
+		// },
+		// {
+		// 	product: 'digital-mines',
+		// 	feature: 'change-impact-mining',
+		// },
+		// {
+		// 	product: 'digital-mines',
+		// 	feature: 'test-fit-gaps',
+		// },
+		// {
+		// 	product: 'digital-mines',
+		// 	feature: 'process-impact',
+		// },
+		// {
+		// 	product: 'digital-mines',
+		// 	feature: 'change-impact-orchestration',
+		// },
+		// {
+		// 	product: 'digital-mines',
+		// 	feature: 'release-impact-analytics',
+		// },
 	];
 
 	const paths = data.map((index) => {
