@@ -15,7 +15,6 @@ import {
   useWindowHeight,
 } from "@react-hook/window-size";
 import Confetti from "react-confetti";
-import { RadioGroup, RadioButton } from "react-radio-buttons";
 import {
   NextSeo,
   BreadcrumbJsonLd,
@@ -34,7 +33,6 @@ export default function ValueAssesment({ h_data, f_data, data }) {
   function onClick(data) {
     Event(data);
   }
-  const [confettiState, setConfetti] = useState(true);
   const [width, height] = useWindowSize();
   const [keyValue, setKey] = useState(-1);
   const router = useRouter();
