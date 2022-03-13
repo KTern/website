@@ -1,19 +1,27 @@
+import { FAQPageJsonLd } from 'next-seo';
 import Markdown from 'markdown-to-jsx';
-export default function FAQ({ data, title, stream }) {
+
+export default function FaqNew({ data, title, stream }) {
+	// FAQ JSON LD
+	let faq = [];
+	data.FAQ.map((dt) => {
+		faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
+	});
 	return (
 		<>
-			<section className="py-12 bg-white bg-bg ">
+			<FAQPageJsonLd mainEntity={faq} />
+			<section className="py-12 bg-white bg-bg sm:p-4">
 				<div className="text-center">
 					<span
-						className={`text-xs rounded ${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
+						className={`text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
 					>
 						QUESTIONS
 					</span>
 				</div>
-				<h2 className="pb-8 section-heading  text-center ">{title}</h2>
+				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold text-center ibm-plex">{title}</h2>
 				<div className="grid  grid-cols-3   ">
 					<div className="col-span-3 md:col-span-2 md:mx-20">
-						{data.map((data) => (
+						{data.FAQ.map((data) => (
 							<details
 								key="data"
 								className="details  relative overflow-hidden border-b border-gray-300  select-none "
@@ -65,7 +73,7 @@ export default function FAQ({ data, title, stream }) {
 												},
 											},
 										}}
-										className=" text-justify"
+										className=" text-justify ibm-plex"
 									>
 										{data.Answer}
 									</Markdown>

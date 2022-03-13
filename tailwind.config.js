@@ -8,7 +8,7 @@ module.exports = {
 		},
 		extend: {
 			screens: {
-				sm: { max: '768px' },
+				sm: { max: '1000px' },
 			},
 			backgroundImage: (theme) => ({
 				hero: "url('https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-hero.png')",
@@ -25,18 +25,23 @@ module.exports = {
 				events: "url('/events/events-bg.svg')",
 				roadshowbg: "url('/events-landing/events-bg.svg')",
 				valueBg: "url('/assessment/background.png')",
-				streamsBg: "url('/pattern-white.svg')",
-				mobileeventsbg:"url('/events-landing/bg.png')"
+				ptmaps: 'url(/maps-pattern.png)',
+				ptprojects: 'url(/projects-pattern.png)',
+				ptprocess: 'url(/process-pattern.png)',
+				ptlabs: 'url(/labs-pattern.png)',
+				ptmines: 'url(/mines-pattern.png)',
+				mobileeventsbg: "url('/events-landing/bg.png')",
 			}),
 			colors: {
 				success: '#BADA55',
 				black: '#0b1320',
 				primary: '#0B1320',
-				secondary: '#EAEDF2',
+				secondary: '#F5F5F5',
 				white: '#ffffff',
 				eventsprimary: '#070B1D',
 				teal: colors.teal,
 				amber: colors.amber,
+				orange: colors.orange,
 				sky: colors.sky,
 				violet: colors.violet,
 				cyan: colors.cyan,
