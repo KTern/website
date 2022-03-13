@@ -1,4 +1,3 @@
-
 import React, { useCallback, useRef } from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
 
@@ -104,14 +103,6 @@ export default function Kit({ pageData, headerData, footerData, heroData }) {
 					</div>
 				</section>
 				<div id="resources" className="py-6">
-					{/* <Confetti
-						width={width - 50}
-						height={height}
-						tweenDuration={1}
-						numberOfPieces={20}
-						gravity={0.1}
-					/> */}
-					{/* <button onClick={fire}>Fire</button> */}
 					<ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
 					<FeaturedResources
 						data={pageData.FeaturedResources}

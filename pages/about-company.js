@@ -116,6 +116,7 @@ function onClick(data){
                   href={data.PageHeader.primaryCTA.linkURL}
                 >
                   <a
+                  target={data.PageHeader.primaryCTA.openNewTab?'_blank':'_self'}
                      onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PageHeader.primaryCTA.buttonTitle}`})}}
                     className=" inline-block py-3 px-16 border-2 border-white bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button"
                   >
@@ -422,6 +423,7 @@ function onClick(data){
               <div className='relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0'>
                 <Link href={data.ctacard.PrimaryCTA.linkURL} passHref>
                   <a
+                   target={data.ctacard.PrimaryCTA.openNewTab?'_blank':'_self'}
                         onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctacard.PrimaryCTA.buttonTitle}`})}}
                   className='  inline-block py-3 border-2 border-white px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black'>
                     {data.ctacard.PrimaryCTA.buttonTitle}
@@ -429,6 +431,7 @@ function onClick(data){
                 </Link>
                 <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
                   <a
+                   target={data.PageHeader.secondaryCTA.openNewTab?'_blank':'_self'}
                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctacard.SecondaryCTA.buttonTitle}`})}}
                   className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
                     {data.ctacard.SecondaryCTA.buttonTitle}
