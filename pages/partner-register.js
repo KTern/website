@@ -9,6 +9,7 @@ import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from "next/router";
 import BreadCrumb from "../component/breadcrumb"; 
+import Email from "../component/pattern";
  import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function PartnerContact({ data, h_data, f_data }) {
   const router = useRouter();
   // console.log(router.query.message);
@@ -204,7 +205,7 @@ import BreadCrumb from "../component/breadcrumb";
                   style={{ fontSize: "12px", fontFamily: "Arial" }}
                 >
                   <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                    className="label"
                     htmlFor="First_Name"
                   >
                     {data.PartnerRegistrationForm.FirstName}
@@ -213,7 +214,7 @@ import BreadCrumb from "../component/breadcrumb";
                 <div className="zcwf_col_fld">
                   <input
                     required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                    className="input"
                     type="text"
                     id="First_Name"
                     name="First Name"
@@ -228,7 +229,7 @@ import BreadCrumb from "../component/breadcrumb";
                   style={{ fontSize: "12px", fontFamily: "Arial" }}
                 >
                   <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                    className="label"
                     htmlFor="Last_Name"
                   >
                     {data.PartnerRegistrationForm.LastName}
@@ -237,7 +238,7 @@ import BreadCrumb from "../component/breadcrumb";
                 <div className="zcwf_col_fld">
                   <input
                     required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                    className="input"
                     type="text"
                     id="Last_Name"
                     name="Last Name"
@@ -252,22 +253,14 @@ import BreadCrumb from "../component/breadcrumb";
                   style={{ fontSize: "12px", fontFamily: "Arial" }}
                 >
                   <label
-                    className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                    className="label"
                     htmlFor="Email"
                   >
                     {data.PartnerRegistrationForm.Email}
                   </label>
                 </div>
                 <div className="zcwf_col_fld">
-                  <input
-                    required
-                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                    type="email"
-                    ftype="email"
-                    id="Email"
-                    name="Email"
-                    maxLength="100"
-                  />
+                  <Email/>
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
@@ -303,8 +296,7 @@ import BreadCrumb from "../component/breadcrumb";
                 <div className="zcwf_col_fld">
                   <input
                   onClick={()=>{onFormClick({stream_score:resolve_stream_score('none'),event_name:"Form Click",section_name:"Partner Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PartnerRegistrationForm.SubmitButton}`})}}
-                    className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
-                                            rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
+                    className="formsubmit form-button"
                     type="submit"
                     id="formsubmit"
                     value={data.PartnerRegistrationForm.SubmitButton}

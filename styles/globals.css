@@ -8,7 +8,6 @@
 @import 'react-dyn-tabs/style/react-dyn-tabs.css';
 @import 'react-dyn-tabs/themes/react-dyn-tabs-card.css';
 @import url('../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css');
-
 img,
 svg,
 video,
@@ -1310,3 +1309,27 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
 .panel-content {
   text-align: center;
 }
+
+@layer base{
+  .label {
+    @apply absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white;
+  }
+  .input{
+    @apply block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black;
+  }
+  .form-button{
+    @apply border-2 border-black cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease-in;
+  }
+  .left-aligned{
+    @apply sm:w-full lg:w-1/2 sm:block sm:hidden w-full lg:w-1/2 px-8 flex items-center justify-center;
+  }
+  .right-aligned{
+    @apply sm:p-8 sm:text-justify px-4 mb-16 sm:mb-4 md:mb-0 sm:text-center sm:w-full lg:w-1/2;
+  }
+}
+
+ @layer components{
+   .card{
+     @apply shadow-md rounded-lg;
+   }
+ }

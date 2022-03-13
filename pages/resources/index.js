@@ -381,7 +381,9 @@ export default function Resources({ data, h_data, f_data }) {
         </section>
         <section className="w-full lg:p-10 ">
           <div className="flex flex-wrap md:-mx-4 -mb-4 md:mb-0 px-2 md:px-10">
+        
             <div className="w-full   md:pl-20 mb-4 md:mb-0  mt-10">
+           
               <div className="xl:gap-6 gap-3 grid sm:grid-cols-1 w-full grid-cols-2 xl:grid-cols-3 p-3 mx-auto xl:p-6">
                 {ResourceList.slice(0)
                   .reverse()
@@ -481,8 +483,15 @@ export default function Resources({ data, h_data, f_data }) {
                       </div>
                     </div>
                   ))}
+                  
               </div>
+
             </div>
+            {
+                    ResourceList.length==0 && <div className=" text-center text-md px-10 py-1 rounded-lg animate-pulse mx-auto text-dxaas-primary">
+                     {data.noAvailableResourceText}
+                    </div>
+                  }
           </div>
         </section>
         {/* <!-- Footer--> */}
