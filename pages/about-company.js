@@ -431,7 +431,7 @@ function onClick(data){
                 </Link>
                 <Link href={data.ctacard.SecondaryCTA.linkURL} passHref>
                   <a
-                   target={data.PageHeader.secondaryCTA.openNewTab?'_blank':'_self'}
+                   target={data.ctacard.SecondaryCTA.openNewTab?'_blank':'_self'}
                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.ctacard.SecondaryCTA.buttonTitle}`})}}
                   className='  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button'>
                     {data.ctacard.SecondaryCTA.buttonTitle}
