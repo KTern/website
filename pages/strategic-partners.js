@@ -35,9 +35,9 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
 										></path>
 									</svg>
@@ -59,9 +59,9 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
 										></path>
 									</svg>
@@ -83,9 +83,9 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
 										></path>
 									</svg>
@@ -121,11 +121,11 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 											xmlns="http://www.w3.org/2000/svg"
 											className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7"
 											viewBox="0 0 24 24"
-											stroke-width="1.5"
+											strokeWidth="1.5"
 											stroke="#2c3e50"
 											fill="none"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 										>
 											<path d="M0 0h24v24H0z" stroke="none"></path>
 											<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5M16 5.25l-8 4.5"></path>
@@ -148,11 +148,11 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 											xmlns="http://www.w3.org/2000/svg"
 											className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7"
 											viewBox="0 0 24 24"
-											stroke-width="1.5"
+											strokeWidth="1.5"
 											stroke="#2c3e50"
 											fill="none"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 										>
 											<path d="M0 0h24v24H0z" stroke="none"></path>
 											<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5M16 5.25l-8 4.5"></path>
@@ -175,11 +175,11 @@ export default function StrategicPartnersLandingPage({ pageData, headerData, foo
 											xmlns="http://www.w3.org/2000/svg"
 											className="leading-6 text-center text-gray-700 align-middle stroke-current w-7 h-7"
 											viewBox="0 0 24 24"
-											stroke-width="1.5"
+											strokeWidth="1.5"
 											stroke="#2c3e50"
 											fill="none"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 										>
 											<path d="M0 0h24v24H0z" stroke="none"></path>
 											<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5M16 5.25l-8 4.5"></path>
