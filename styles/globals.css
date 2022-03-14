@@ -1080,6 +1080,12 @@ video {
   font-family: 'IBM Plex Sans',sans-serif;
 }
 
+/* DXaaS  */
+
+.tag-dxaas {
+  background: #8b5cf6;
+}
+
 /* Digital Maps  */
 
 .section-maps {
