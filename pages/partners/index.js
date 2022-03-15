@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from '../component/Layout';
+import Layout from '../../component/Layout';
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { LogoJsonLd } from 'next-seo';
 import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import Carousel from 'react-multi-carousel';
-import FAQ from '../component/faq';
+import FAQ from '../../component/faq';
 import Markdown from 'markdown-to-jsx';
-import BreadCrumb from '../component/breadcrumb';
-import Event, { resolve_interest_score, resolve_stream_score } from '../component/page_event';
+import BreadCrumb from '../../component/breadcrumb';
+import Event, { resolve_interest_score, resolve_stream_score } from '../../component/page_event';
 const responsive = {
 	superLargeDesktop: {
 		// the naming can be any, depends on you.
