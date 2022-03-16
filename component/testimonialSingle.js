@@ -1,4 +1,4 @@
-export default function TestimonialSingle({ data, stream}) {
+export default function TestimonialSingle({ data, stream }) {
 	return (
 		<>
 			<section className="bg-maps py-8">
@@ -26,14 +26,29 @@ export default function TestimonialSingle({ data, stream}) {
 										</a>
 									</div>
 									<div className="pt-12 px-8 w-full lg:w-2/3">
-										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
-											{data.Testimonial.TestimonialStatement}
-										</p>
+										<div className="relative max-w-5xl sm:px-6 pb-6 mb-10 mx-auto text-center">
+											<img
+												className="absolute top-0 left-0"
+												src="https://shuffle.dev/flex-ui-assets/elements/testimonials/quote-top-green.svg"
+												alt=""
+											/>
+											<img
+												className="absolute bottom-0 right-0"
+												src="https://shuffle.dev/flex-ui-assets/elements/testimonials/quote-down-green.svg"
+												alt=""
+											/>
+											<div className="relative">
+												<h2 className="pt-4 text-xl  font-semibold tracking-tighter">
+													{data.Testimonial.TestimonialStatement}
+												</h2>
+											</div>
+										</div>
 										<h4 className="text-xl font-bold font-heading text-center">
 											{data.Testimonial.AuthorName}
 										</h4>
 										<p className="text-gray-500 text-center">{data.Testimonial.AuthorDescription}</p>
-										<div className="flex flex-wrap p-4">
+										<div className="border-b border-coolGray-100 p-4"></div>
+										<div className="flex flex-wrap px-2">
 											{data.Logos.map((dt) => (
 												<div key="dt" className="w-1/2 md:w-1/3 lg:w-1/3 p-2">
 													<div className="py-2 lg:py-4">

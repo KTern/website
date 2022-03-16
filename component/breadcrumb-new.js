@@ -15,7 +15,7 @@ export default function Breadcrumbs({ breadcrumb }) {
 			<BreadcrumbJsonLd itemListElements={breadcrumbs} />
 			{/* END: Breadcrumbs JSON LD*/}
 			{/* START: Breadcrumbs  */}
-			<section className="flex flex-wrap text-gray-500">
+			<section className="flex flex-wrap text-gray-400">
 				{breadcrumbs.map((dt, index) => (
 					<div className="" key="dt">
 						{index < breadcrumbs.length - 1 && (
