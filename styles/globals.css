@@ -1090,6 +1090,11 @@ video {
   color: #8b5cf6;
 }
 
+.border-dxaas {
+  --tw-border-opacity: 1;
+  border-color: #8b5cf6;
+}
+
 /* Digital Maps  */
 
 .section-maps {
@@ -1138,6 +1143,10 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   background: #FFF7EB;
 }
 
+.border-maps {
+  --tw-border-opacity: 1;
+  border-color: #F28900;
+}
 /* Digital Projects  */
 
 .section-projects {
@@ -1315,8 +1324,8 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   width: 30vw;
   border-left: 6px solid #0B1320;
   color: black;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 10%;
+  padding-top: 10%;
 }
 
 .react-tabs__tab-panel {

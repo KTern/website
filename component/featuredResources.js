@@ -27,7 +27,7 @@ export default function FeaturedResources({ data, stream }) {
 														{data.Resource[0].Tag}
 													</span>
 													<br />
-													{data.Resource[0].ResourceTitle}
+													<span>{data.Resource[0].ResourceTitle}</span>
 												</p>
 											</div>
 										</div>

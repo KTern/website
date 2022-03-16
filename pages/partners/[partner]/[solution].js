@@ -39,7 +39,7 @@ export default function PartnerSolutionLandingPage({ pageData, headerData, foote
 					title={pageData.PricingSectionTitle}
 					data={pageData.PricingComponent}
 				></PricingCard>
-				<PricingTerms stream={stream} data={pageData.PricingTerms}></PricingTerms>
+				<PricingTerms stream={stream} data={pageData.PricingTerms}></PricingTerms>				
 				<CTABar1 stream={stream} data={pageData.CTACard}></CTABar1>
 			</Layout>
 		</>

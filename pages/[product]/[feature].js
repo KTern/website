@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
 import FeaturedResources from '../../component/featuredResources';
+import FeaturedResourcesComponent from '../../component/featuredResources1';
 import Hero from '../../component/hero';
 import Layout from '../../component/Layout';
 import SEO from '../../component/seo';
@@ -59,10 +60,16 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 					title={pageData.FAQ.SectionTitle}
 					stream={pageData.ProductsDevAttributes.Stream}
 				/>
-				<FeaturedResources
+				{/* <FeaturedResources
 					data={pageData.FeaturedResources}
 					stream={pageData.ProductsDevAttributes.Stream}
-				></FeaturedResources>
+				></FeaturedResources> */}
+				<FeaturedResourcesComponent
+					resources={pageData.ResourcesComponent}
+					stream={pageData.ProductsDevAttributes.Stream}
+					articles={pageData.Articles}
+					news={pageData.News}
+				></FeaturedResourcesComponent>
 				<CtaBar data={pageData.CTABar} stream={pageData.ProductsDevAttributes.Stream}></CtaBar>
 			</Layout>
 		</>
