@@ -469,7 +469,7 @@ export default function Navbar({ h_data }) {
                   </div>
                 </div>
               </li>
-              <li className="hoverable hover:border-2  hover:bg-secondary">
+              {/* <li className="hoverable hover:border-2   hover:bg-secondary">
                 <input
                   type="checkbox"
                   value="selected"
@@ -482,12 +482,12 @@ export default function Navbar({ h_data }) {
                 >
                   Solutions
                 </label>
-                <div id="toggle-5" role="toggle" className="mega-menu   ">
+                <div id="toggle-5" role="toggle" className="mega-menu  ">
                   <div
                     id="tag"
                     className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
                   >
-                    <div id="tag" className="w-2/6 px-4 h-full  ">
+                    <div id="tag" className="w-1/6 px-4 h-full  ">
                       <div>
                         <h3 className="text-lg mb-2 font-bold">
                           {h_data.Support.WhatsNewSection.Title}
@@ -508,12 +508,29 @@ export default function Navbar({ h_data }) {
                         </Link>
                       </div>
                     </div>
-                    <div className="w-4/6 px-6 ">
+                    <div className="w-5/6 px-6 overflow-y-scroll navbar-scroll max-h-screen">
                       <ListCard
                         cardData={[
                           {
                             heading: "By Industry",
                             list: [
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
                               { url: "/a", value: "BPO",openNewTab:true },
                               { url: "/b", value: "Insurance",openNewTab:false},
                               { url: "/c", value: "Healthcare",openNewTab:true },
@@ -539,13 +556,82 @@ export default function Navbar({ h_data }) {
                               { url: "/", value: "Telecom" },
                             ],
                           },
-                          
+                          {
+                            heading: "By Function",
+                            list: [
+                              { url: "/", value: "BPO" },
+                              { url: "/", value: "Insurance" },
+                              { url: "/", value: "Healthcare" },
+                              { url: "/", value: "Telecom" },
+                            ],
+                          },
+                          {
+                            heading: "By Function",
+                            list: [
+                              { url: "/", value: "BPO" },
+                              { url: "/", value: "Insurance" },
+                              { url: "/", value: "Healthcare" },
+                              { url: "/", value: "Telecom" },
+                            ],
+                          },
+                          {
+                            heading: "By Industry",
+                            list: [
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                            ],
+                          },
+                          {
+                            heading: "By Industry",
+                            list: [
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                            ],
+                          },
+                          {
+                            heading: "By Industry",
+                            list: [
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                            ],
+                          },
+                          {
+                            heading: "By Industry",
+                            list: [
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                              { url: "/a", value: "BPO",openNewTab:true },
+                              { url: "/b", value: "Insurance",openNewTab:false},
+                              { url: "/c", value: "Healthcare",openNewTab:true },
+                              { url: "/d", value: "Telecom" ,openNewTab:false},
+                            ],
+                          },
                         ]}
                       ></ListCard>
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
           {/* /Header menu */}
@@ -743,7 +829,7 @@ export default function Navbar({ h_data }) {
                   {/* <hr/> */}
                 </details>
               </li>
-              <li className="toggleable  py-1 bg-white ">
+              {/* <li className="toggleable  py-1 bg-white ">
                 <details
                   key="data"
                   className="m-header   relative overflow-hidden px-2  bg-white select-none "
@@ -793,9 +879,8 @@ export default function Navbar({ h_data }) {
                       ></ListCard>
                     </div>
 
-                  {/* <hr/> */}
                 </details>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="pt-6 mx-4 flex-col space-x-6">

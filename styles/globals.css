@@ -1339,3 +1339,24 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
      @apply shadow-md rounded-lg;
    }
  }
+.navbar-scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color:#607A80  ;
+  @apply rounded-xl
+}
+
+.navbar-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+.navbar-scroll::-webkit-scrollbar-thumb {
+  background: rgb(7, 7, 7); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.navbar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #009eb3; 
+}

@@ -9,6 +9,7 @@ import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { ToastContainer, toast } from "react-toast";
 import { pattern } from "../../component/pattern";
+
 import {
   useWindowSize,
   useWindowWidth,
@@ -42,9 +43,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
   function operator(factor, opp, value) {
     switch (opp) {
       case "Add":
@@ -86,18 +85,18 @@ export default function ValueAssesment({ h_data, f_data, data }) {
   }
   function checkBox(e, value, type) {
     if (type == "multiple") {
-    
       if (!checkBoxData.includes(value)) {
         document.getElementById(value).checked = true;
-        
-        document.getElementById(value).parentElement.className =" bg-opacity-60 text-primary border-black border rounded-md bg-white w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  "
-          
+
+        document.getElementById(value).parentElement.className =
+          " bg-opacity-60 text-primary border-black border rounded-md bg-white w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  ";
 
         checkBoxData.push(value);
       } else {
         document.getElementById(value).checked = false;
         checkBoxData.splice(checkBoxData.indexOf(value), 1);
-        document.getElementById(value).parentElement.className = " bg-white rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  ";
+        document.getElementById(value).parentElement.className =
+          " bg-white rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  ";
       }
     } else {
       if (radioButtonData != value) {
@@ -112,10 +111,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     valid = false;
   }
   function validateForm(e) {
- 
     if (keyValue >= 0) {
       if (data.Quiz[keyValue].QuestionType == "SingleChoice") {
-        
         if (radioButtonData != "") {
           document.getElementById("button_field").disabled = false;
           valid = true;
@@ -133,7 +130,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
         ) {
           valid = true;
           document.getElementById("button_field").disabled = false;
-        } else throwError("Please enter valid email.");
+        } else throwError("Please enter valid business email.");
       } else if (data.Quiz[keyValue].QuestionType == "Textbox") {
         if (document.getElementById("form").text_field.value != "") {
           valid = true;
@@ -174,7 +171,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
       checkBoxData = [];
       key = keyValue + 1;
       setKey(key);
-    
+
       if (keyValue == data.Quiz.length - 1) {
         PostData();
       }
@@ -184,9 +181,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     }
   }
   async function PostData() {
-   
     let form_value = [];
-  
+
     data.Quiz.map((dt) => {
       let value = {};
       value["Question"] = dt.Question;
@@ -288,11 +284,18 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               {data1.Question}
             </h1>
 
-            <div id="radio" className="flex mb-2 space-y-4 flex-col cursor-pointer">
+            <div
+              id="radio"
+              className="flex mb-2 space-y-4 flex-col cursor-pointer"
+            >
               {data1.QuizValues.map((dt) => (
                 <div
                   key="dt"
-                  className={`${radioButtonData==dt.Value?'bg-opacity-60 text-primary border-black border':''} bg-white  rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  `}
+                  className={`${
+                    radioButtonData == dt.Value
+                      ? "bg-opacity-60 text-primary border-black border"
+                      : ""
+                  } bg-white  rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  `}
                   onClick={(e) => {
                     checkBox(e, dt.Value, "single");
                   }}
@@ -421,7 +424,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
       <Layout h_data={h_data} f_data={f_data} className="overflow-x-hidden">
         <form
           id="form"
-          className=" events py-20 bg-cover text-white flex flex-col space-y-16 overflow-hidden"
+          className="  events py-20 bg-cover text-white flex flex-col space-y-4 overflow-hidden"
           style={{
             backgroundImage: `url(${data.backgroundImage})`,
             backgroundRepeat: "no-repeat",
@@ -431,15 +434,41 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             key += 1;
           }}
         >
-         
-             
-           
+          
           <div className="mx-10">
             <BreadCrumb color={"white"} b_data={breadcrumb} />
           </div>
-          <ToastContainer position="top-right" />
+          {keyValue>-1 && keyValue< data.Quiz.length &&
+           <div className="flex items-center justify-center py-4">
+           <div className={`w-${data.Quiz.length*8}  absolute h-1 bg-bg rounded-full  `}></div>
+           <div className="flex items-center z-0 justify-center space-x-2 ">
+             {data.Quiz.map((key, index) => (
+               <span
+               onClick={(e) => {
+                changeSlide("prev");
+                onClick({
+                  stream_score: resolve_stream_score("none"),
+                  event_name: "Button Click",
+                  section_name: "Form Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `${data.Buttons[2].buttonTitle}`,
+                });
+              }}
+                 key="index"
+                 className={`${
+                   keyValue == index
+                     ? "bg-primary text-secondary border-2 border-bg"
+                     : "bg-secondary text-primary"
+                 } w-8 h-8 flex items-center justify-center  rounded-full `}
+               >
+                 {index + 1}
+               </span>
+             ))}
+           </div>
+         </div> }
+          <ToastContainer className="" position="bottom-right" />
           {keyValue == -1 && (
-            <div className=" text-white flex flex-col events  items-center justify-center ">
+            <div className="mx-4 py-20 text-white flex flex-col events  items-center justify-center ">
               <h1 className="heading md:w-2/4 text-center mb-10">
                 {data.QuizTitle}
               </h1>
@@ -449,13 +478,8 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             </div>
           )}
           {keyValue != -1 && keyValue < data.Quiz.length && (
-            <div className="flex flex-col space-y-3">
-              <div className="flex items-center justify-center text-xl">
-                <span className="max-w-fit mr-4 px-6 leading-loose py-1 w-30 items-center bg-white bg-opacity-30 flex justify-center  border border-white  text-white shadow-xl rounded-full font-semibold  ">
-                  {keyValue + 1} out of {data.Quiz.length}
-                </span>
-              </div>
-
+            <div className="flex mx-4 flex-col space-y-3 py-5">
+             
               <ViewSlider
                 className=" "
                 renderView={renderView}
@@ -467,14 +491,13 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           )}
 
           {keyValue >= data.Quiz.length && (
-            
-            <div className="text-white  ">
-               <Confetti
+            <div className="text-white mx-4 ">
+              <Confetti
                 // numberOfPieces={50}
                 width={width}
                 height={height}
                 tweenDuration={100}
-             recycle={false}
+                recycle={false}
               />
               <p className="heading text-center mb-4"> Score:&nbsp;{score}</p>
               {data.QuizRecommendations.map((dt) => (
@@ -501,8 +524,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
                               },
                               li: {
                                 props: {
-                                  className:
-                                    " p-1 section-subheading",
+                                  className: " p-1 section-subheading",
                                 },
                               },
                               p: {
@@ -516,10 +538,11 @@ export default function ValueAssesment({ h_data, f_data, data }) {
                                   className: "mb-4 list-decimal ",
                                 },
                               },
-                              ul:{
-                                props:{
-                                  className:'mb-4 flex flex-col justify-center list-disc '
-                                }
+                              ul: {
+                                props: {
+                                  className:
+                                    "mb-4 flex flex-col justify-center list-disc ",
+                                },
                               },
                               a: {
                                 props: {
@@ -568,7 +591,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
             </button>
           )}
           {keyValue >= 0 && keyValue < data.Quiz.length - 1 && (
-            <div className="flex space-x-20 items-center justify-center">
+            <div className="flex  mx-auto sm:space-x-4 md:space-x-20 items-center justify-center">
               <button
                 id="button_field"
                 type="button"
