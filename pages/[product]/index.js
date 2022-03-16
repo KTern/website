@@ -11,6 +11,7 @@ import FeaturedResources from '../../component/featuredResources';
 import AppBanner from '../../component/appBanner';
 import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
+import FeaturedResourcesComponent from '../../component/featuredResources1';
 
 export default function DigitalStream({ pageData, headerData, footerData, background }) {
 
@@ -60,6 +61,7 @@ export default function DigitalStream({ pageData, headerData, footerData, backgr
 					data={pageData.FeaturedResources}
 					stream={pageData.ProductsDevAttributes.Stream}
 				></FeaturedResources>
+				{/* <FeaturedResourcesComponent></FeaturedResourcesComponent> */}
 				<CtaBar data={pageData.CTABar} stream={pageData.ProductsDevAttributes.Stream}></CtaBar>
 			</Layout>
 		</>

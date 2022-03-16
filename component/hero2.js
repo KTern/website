@@ -27,7 +27,7 @@ export default function Hero2({ data, stream, breadcrumb }) {
 							<h2 className="ibm-plex my-6 text-4xl lg:text-5xl text-gray-50 font-bold">{data.Heading}</h2>
 							<p className="max-w-md mx-auto mb-6 text-gray-300 text-lg leading-loose">{data.SubHeading}</p>
 
-							<div className="flex items-center justify-center p-2 sm:flex-row sm:pt-4">
+							{/* <div className="flex items-center justify-center p-2 sm:flex-row sm:pt-4">
 								<a
 									href={data.CTAButtons[0].linkURL}
 									className={`cursor-pointer	mr-8 sm:ml-0 sm:uppercase sm:w-3/4 sm:mt-1 inline-block p-4 w-full md:w-auto  text-white tag-${stream} hover:bg-gray-600 font-medium text-center rounded-r-xl rounded-b-xl`}
@@ -40,7 +40,7 @@ export default function Hero2({ data, stream, breadcrumb }) {
 								>
 									{data.CTAButtons[1].buttonTitle}
 								</a>
-							</div>
+							</div> */}
 							<div className="pb-2 pt-6">
 								<div className="flex flex-wrap  items-center justify-center">
 									<div className="mb-4 w-full md:w-1/2 lg:w-1/4  sm:hidden px-2">
