@@ -343,7 +343,7 @@ const [windowSize,setWindowSize]=useState(0)
               {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
             </div>
             <Carousel
-              className="bots flex p-4 items-center justify-center  z-10"
+              className="bots flex p-4 items-center lg:justify-center  z-10"
               responsive={responsive}
             >
               {data.TrustedByLogos.map((dt) => (

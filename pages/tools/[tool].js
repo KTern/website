@@ -153,6 +153,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           value = String(document.getElementById("slider").innerHTML);
         } else if (data.Quiz[keyValue].QuestionType == "SingleChoice") {
           value = radioButtonData;
+          setRadioButtonData('')
         } else {
           value = document.getElementById("form").text_field.value;
         }
