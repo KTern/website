@@ -6,14 +6,14 @@ export default function ListCard({ cardData }) {
    { cols=cardData.length;
 gap=cols+6}
     else
-    {cols=cardData.length-1;
-        gap=cols+2;
+    {cols=cardData.length/2+4;
+        gap=cols+1;
     }
   return (
-    <div className={` grid grid-cols-1 lg:grid-cols-${cols} gap-4 md:gap-${gap} `}>
+    <div className={` flex space-x-2 pb-20 `}>
       {cardData.map((data, index) => (
-        <div key="index" className="card  py-2 hover:bg-bg hover:scale-x-110 transform">
-          <h2 className=" font-bold mb-2 p-2 border-b">{data.heading}</h2>
+        <div key="index" className="  hover:bg-bg hover:scale-x-110 transform">
+          <h2 className="sticky top-0 bg-white h-14 font-bold mb-2 p-2 border-b">{data.heading}</h2>
           <div className="flex flex-col ">
           {data.list.map((dt, index) => (
             <Link key={index} href={dt.url}>

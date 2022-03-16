@@ -16,7 +16,7 @@ const canvasStyles = {
 	left: 0,
 };
 
-export default function Kit({ pageData, headerData, footerData, heroData }) {
+export default function Kit({ pageData, headerData, footerData, heroData, stream }) {
   const refAnimationInstance = useRef(null);
 
   const getInstance = useCallback((instance) => {
@@ -141,6 +141,7 @@ export const getServerSideProps = async (ctx) => {
 			headerData: h_data,
 			footerData: f_data,
 			heroData: data[0].NoImageHero,
+			stream: 'dxaas'
 		},
 	};
 };

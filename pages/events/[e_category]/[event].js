@@ -136,11 +136,16 @@ export default function Events({ h_data, f_data, data }) {
   };
   // Message Container on Form Submission
   const [thanksState, setThanksState] = useState(false);
-
+const [windowSize,setWindowSize]=useState(0)
   useEffect(() => {
     if (router.query.message == "thanks") {
       setThanksState(true);
     }
+    setWindowSize(window.innerWidth)
+    window.addEventListener('resize',()=>{
+      setWindowSize(window.innerWidth)
+    })
+  
     if (countDownState) {
       window.addEventListener("click", validateForm);
     }
@@ -162,6 +167,7 @@ export default function Events({ h_data, f_data, data }) {
   }
   return (
     <>
+    
       <body className="">
         <LogoJsonLd
           logo={process.env.NEXT_PUBLIC_LOGO}
@@ -247,15 +253,17 @@ export default function Events({ h_data, f_data, data }) {
           performers={performers}
           url={data.EventsSEO.WebUrl}
         />
+        
         <Layout h_data={h_data} f_data={f_data} className="events">
           {/* Hero Section */}
           <section className="overflow-hidden  pt-4">
             <div
               style={{
-                backgroundImage: `url(${data.heroSection.ImageURL})`,
+                
+                backgroundImage: windowSize>400 ? `url(${data.heroSection.ImageURL})`:'url(/events-landing/bg.png)',
                 backgroundRepeat: "no-repeat",
               }}
-              className=" sm:bg-mobileeventsbg  bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl "
+              className=" sm:bg-mobileeventsbg  bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl !important"
             >
               <div className=" px-4 mx-auto pb-5">
                 <div className="mx-28 mt-10">
@@ -335,7 +343,7 @@ export default function Events({ h_data, f_data, data }) {
               {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
             </div>
             <Carousel
-              className="bots flex p-4 items-center justify-center  z-10"
+              className="bots flex p-4 items-center lg:justify-center  z-10"
               responsive={responsive}
             >
               {data.TrustedByLogos.map((dt) => (
@@ -426,7 +434,7 @@ export default function Events({ h_data, f_data, data }) {
                   </p>
                 </div>
                 <Carousel
-                  className={`flex py-5 items-center ${data.events.length>=4?'':'justify-center'}  z-10 -mx-4 overflow-hidden `}
+                  className={`flex py-5 items-center lg:${data.events.length>=4?'':'justify-center'}  z-10 -mx-4 overflow-hidden `}
                   responsive={responsive}
                 >
                   {data.events.map((data) => (
