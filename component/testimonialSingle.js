@@ -1,7 +1,7 @@
 export default function TestimonialSingle({ data, stream }) {
 	return (
 		<>
-			<section className="bg-maps py-8">
+			<section className={`bg-${stream} py-8 `}>
 				<div className="container px-4 mx-auto text-center">
 					<span
 						className={`p-1 text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
