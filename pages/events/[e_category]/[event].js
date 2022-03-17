@@ -444,13 +444,13 @@ const [windowSize,setWindowSize]=useState(0)
                     >
                     
                         <div
-                          className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
+                          className={`relative  bg-white flex-col p-5 px-5  group false rounded-xl shadow-lg `}
                         >
                           <div className="bg-white">
                             <Link href={data.CTAUrl} passHref>
                               <a
                                 target={data.OpenNewTab?'_blank':'_self'}
-                                className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+                                className="relative h-2/6 w-full block w-full  overflow-hidden rounded"
                               >
                                 <Image
                                   priority
@@ -468,13 +468,13 @@ const [windowSize,setWindowSize]=useState(0)
                               <span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
                                 {data.CardTitle}
                               </span>
-                              <span className="bg-white block card-subheading h-1/5  leading-tight text-gray-700  hover:text-gray-900 ">
+                              <span className="bg-white block card-subheading h-2/6  leading-tight text-gray-700  hover:text-gray-900 ">
                                 {data.CardDescription}
                               </span>
                               <Link href={data.CTAUrl} passHref>
                                 <a
                                   target={data.OpenNewTab?'_blank':'_self'}
-                                  className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
+                                  className="mb-10 flex bg-white w-full inline-flex  items-center   text-black hover:text-gray-400 group "
                                 >
                                   <span className="hyperlink group-hover:text-gray-300">
                                     {data.CTAText}
