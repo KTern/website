@@ -8,14 +8,6 @@ import { data } from "autoprefixer";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { ToastContainer, toast } from "react-toast";
-import { pattern } from "../../component/pattern";
-
-import {
-  useWindowSize,
-  useWindowWidth,
-  useWindowHeight,
-} from "@react-hook/window-size";
-import Confetti from "react-confetti";
 import {
   NextSeo,
   BreadcrumbJsonLd,
@@ -24,26 +16,29 @@ import {
   SoftwareAppJsonLd,
 } from "next-seo";
 import BreadCrumb from "../../component/breadcrumb";
-import Event, { resolve_stream_score } from "../../component/page_event";
+import Event, { resolve_stream_score } from '../../component/page_event';
 let form_data = {};
 let checkBoxData = [];
-
 let valid = false;
 let score = 0;
 export default function ValueAssesment({ h_data, f_data, data }) {
-  function onClick(data) {
-    Event(data);
-  }
-  const [width, height] = useWindowSize();
+  function onClick(data){
+    Event(data)
+    }
   const [keyValue, setKey] = useState(-1);
-  const router = useRouter();
-  const [radioButtonData, setRadioButtonData] = useState("");
+  const router = useRouter()
   let key = -1;
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
-  useEffect(() => {}, []);
+  useEffect(() => {
+   console.log(keyValue)
+    document
+      .getElementById("button_field")
+      .addEventListener("click", validateForm);
+  }, []);
+
   function operator(factor, opp, value) {
     switch (opp) {
       case "Add":
@@ -57,164 +52,161 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     }
   }
   function scoreCalculator(value) {
-    // console.log(value);
-    switch (data.Quiz[keyValue].QuestionType) {
+    switch (data.Quiz[key].QuestionType) {
       case "SingleChoice": {
-        data.Quiz[keyValue].QuizValues.map((dt) => {
+        data.Quiz[key].QuizValues.map((dt) => {
           if (dt.Value == value) score += dt.Score;
         });
         break;
       }
       case "MultipleChoice": {
-        data.Quiz[keyValue].QuizValues.map((dt) => {
+        data.Quiz[key].QuizValues.map((dt) => {
           if (value.includes(dt.Value)) score += dt.Score;
         });
         break;
       }
       case "Slider": {
-        score += Number(
-          operator(
-            data.Quiz[keyValue].SliderChoices[0].Factor,
-            data.Quiz[keyValue].SliderChoices[0].Operation,
-            value
-          )
-        );
+        // console.log(value, score);
+            // console.log(operator(dt.Factor, dt.Operation, value));
+            score += Number(operator(data.Quiz[key].SliderChoices[0].Factor, data.Quiz[key].SliderChoices[0].Operation, value));
         break;
       }
     }
   }
-  function checkBox(e, value, type) {
-    if (type == "multiple") {
-      if (!checkBoxData.includes(value)) {
-        document.getElementById(value).checked = true;
-
-        document.getElementById(value).parentElement.className =
-          " bg-opacity-60 text-primary border-black border rounded-md bg-white w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  ";
-
-        checkBoxData.push(value);
-      } else {
-        document.getElementById(value).checked = false;
-        checkBoxData.splice(checkBoxData.indexOf(value), 1);
-        document.getElementById(value).parentElement.className =
-          " bg-white rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  ";
-      }
-    } else {
-      if (radioButtonData != value) {
-        document.getElementById(value).checked = true;
-        setRadioButtonData(value);
-      }
-    }
+  function checkBox(e) {
+    if (!checkBoxData.includes(e.target.value))
+      checkBoxData.push(e.target.value);
+    else checkBoxData.splice(checkBoxData.indexOf(e.target.value), 1);
   }
-  function throwError(msg) {
-    toast.warn(msg);
-    setTimeout(toast.hideAll, 2000);
-    valid = false;
-  }
+
   function validateForm(e) {
-    if (keyValue >= 0) {
-      if (data.Quiz[keyValue].QuestionType == "SingleChoice") {
-        if (radioButtonData != "") {
-          document.getElementById("button_field").disabled = false;
-          valid = true;
-        } else throwError("Please fill all required fields.");
-      } else if (data.Quiz[keyValue].QuestionType == "MultipleChoice") {
-        if (checkBoxData.length > 0) {
-          document.getElementById("button_field").disabled = false;
-          valid = true;
-        } else throwError("Please fill all required fields.");
-      } else if (data.Quiz[keyValue].QuestionType == "Email") {
-        if (
-          String(document.getElementById("form").text_field.value).match(
-            pattern.pattern
-          )
-        ) {
-          valid = true;
-          document.getElementById("button_field").disabled = false;
-        } else throwError("Please enter valid business email.");
-      } else if (data.Quiz[keyValue].QuestionType == "Textbox") {
-        if (document.getElementById("form").text_field.value != "") {
-          valid = true;
-          document.getElementById("button_field").disabled = false;
-        } else throwError("Please fill all required fields.");
+    console.log(key,keyValue)
+    if (key >= 0 && data.Quiz[key].QuestionType == "Slider") {
+      if (data.Quiz[key].QuestionType == "Slider")
+       { 
+      if(document.getElementById("slider").innerHTML<=0){
+        toast.warn("Please fill all required fields.");
+        setTimeout(toast.hideAll, 2000);
+        valid = false;
       }
+      else{
+       
+        document.getElementById("button_field").disabled = false;
+        valid = true;
+      }
+          }
     }
-    if (keyValue == -1) valid = true;
-
-    if (valid) {
-      let value;
-      if (keyValue != -1 && keyValue < data.Quiz.length) {
-        if (data.Quiz[keyValue].QuestionType == "MultipleChoice") {
-          let val = "";
-          checkBoxData.map((dt) => {
-            val += "," + dt;
-          });
-          value = val;
-        } else if (data.Quiz[keyValue].QuestionType == "Slider") {
-          value = String(document.getElementById("slider").innerHTML);
-        } else if (data.Quiz[keyValue].QuestionType == "SingleChoice") {
-          value = radioButtonData;
-          setRadioButtonData('')
+    else{
+    if (document.getElementById("form").text_field != undefined) {
+      if (document.getElementById("form").text_field.value != 0) {
+        if (document.getElementById("text_field").type == "email") {
+          if (
+            String(document.getElementById("form").text_field.value)
+              .toLowerCase()
+              .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+              )
+          ) {
+            document.getElementById("button_field").disabled = false;
+            valid = true;
+          } else {
+            toast.warn("Please enter valid Email.");
+            setTimeout(toast.hideAll, 2000);
+            valid = false;
+          }
         } else {
-          value = document.getElementById("form").text_field.value;
+          document.getElementById("button_field").disabled = false;
+          valid = true;
+        }
+      } else {
+        if (document.getElementById("text_field").type == "checkbox") {
+          if (checkBoxData.length > 0) {
+            document.getElementById("button_field").disabled = false;
+            valid = true;
+          } else {
+            toast.warn("Please fill all required fields.");
+            setTimeout(toast.hideAll, 2000);
+            valid = false;
+          }
+        } else {
+          toast.warn("Please fill all required fields.");
+          setTimeout(toast.hideAll, 2000);
+          valid = false;
         }
       }
-
-      if (value != undefined) {
-        form_data[data.Quiz[keyValue].Question] = value;
-        scoreCalculator(value);
-      }
-      changeSlide("next");
     }
+   }
+   if (key == -1) valid = true;
+  
+   if (valid ) {
+     let value;
+     if (key != -1 && key < data.Quiz.length) {
+       if (data.Quiz[key].QuestionType == "MultipleChoice")
+         {let val='';
+           checkBoxData.map((dt)=>{
+           val+=','+dt;
+         })
+           value = val;}
+      else if(data.Quiz[key].QuestionType=="Slider"){
+         value=String(document.getElementById("slider").innerHTML)}
+       else value = document.getElementById("form").text_field.value;
+     }
+  
+     if (value != undefined) {
+       form_data[data.Quiz[key].Question] = value;
+       scoreCalculator(value);
+     }
+     changeSlide();
+   }
   }
   // Change Slide
-  function changeSlide(value) {
-    if (value == "next") {
-      checkBoxData = [];
-      key = keyValue + 1;
-      setKey(key);
-
-      if (keyValue == data.Quiz.length - 1) {
-        PostData();
-      }
-    } else {
-      key = keyValue - 1;
-      setKey(key);
+  function changeSlide() {
+    console.log(form_data)
+    checkBoxData = [];
+    key += 1;
+    setKey(key);
+    console.log(key,keyValue)
+    if(key==(data.Quiz.length)){
+      PostData()
     }
   }
-  async function PostData() {
-    let form_value = [];
+  async function PostData(){
+    let form_value=[]
+    data.Quiz.map((dt)=>{
+      let value={}
+      value["Question"]=dt.Question;
+      value["Answer"]=form_data[dt.Question]
+      form_value.push(value)
+    })
+    let  val={
+      "Userdata":form_value,
+      "email":form_value[data.Quiz.length-1].Answer,
+      "tool":data.PageSEO.PageURL
+    }
 
-    data.Quiz.map((dt) => {
-      let value = {};
-      value["Question"] = dt.Question;
-      value["Answer"] = form_data[dt.Question];
-      form_value.push(value);
-    });
-    let val = {
-      Userdata: form_value,
-      email: form_value[data.Quiz.length - 1].Answer,
-      tool: data.PageSEO.PageURL,
-    };
-    // console.log(val);
-    await fetch(`https://api.ktern.com/tools-reports`, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(val),
-    }).then((res) => {
-      //  console.log(res)
-    });
+   console.log(JSON.stringify(val))
+   await fetch(`https://api.ktern.com/tools-reports`, {
+    method: "post",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify(val)
+    
+    
+  }).then((res)=>{
+    // console.log(res)
+  });
   }
   // This function renders the view at the given index.
   const renderView = ({ index, active, transitionState }) => {
-    let data1 = data.Quiz[index];
+     let data1 = data.Quiz[index];
     switch (data1.QuestionType) {
       case "Textbox":
         return (
           <div className=" text-white flex flex-col events   items-center justify-center ">
             <h1
               className="text-4xl text-center mb-20 mx-2"
+             
               htmlFor="text_field"
             >
               {data1.Question}
@@ -225,6 +217,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               id="text_field"
               name="text_field"
               className="bg-opacity-20 text-xl bg-white sm:w-2/3  mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
             />
           </div>
         );
@@ -233,6 +226,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           <div className=" text-white flex flex-col events   items-center justify-center ">
             <h1
               className="text-4xl text-center mb-20 mx-2"
+
               htmlFor="text_field"
             >
               {data1.Question}
@@ -243,14 +237,17 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               id="text_field"
               name="text_field"
               className="bg-opacity-20 text-xl bg-white w-1/4 sm:w-2/3 mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
             />
           </div>
         );
       case "Slider":
+      
         return (
-          <div className=" text-white flex flex-col events  items-center justify-center ">
+     <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
               className="heading text-center mb-10 w-full md:w-1/2"
+            
               htmlFor="text_field"
             >
               {data1.Question}
@@ -259,9 +256,10 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               id="text_field"
               name="text_field"
               className="horizontal-slider sm:w-2/3 rounded-full mb-5 cursor-pointer "
-              defaultValue={1}
+              defaultValue={0}
               min={`${data1.SliderChoices[0].StartLimit}`}
               max={data1.SliderChoices[0].EndLimit}
+              
               renderThumb={(props, state) => (
                 <div className="" {...props}>
                   <span
@@ -280,63 +278,52 @@ export default function ValueAssesment({ h_data, f_data, data }) {
           <div className=" text-white flex flex-col events  items-center justify-center ">
             <h1
               className="sm:subheading heading text-center mb-10 w-full md:w-1/2"
+              
               htmlFor="text_field"
             >
               {data1.Question}
             </h1>
-
-            <div
-              id="radio"
-              className="flex mb-2 space-y-4 flex-col cursor-pointer"
+            <select
+              className="bg-opacity-20 text-xl bg-white sm:w-2/3 w-1/4 pr-4 mb-10 rounded-xl p-4 focus:outline-none focus:bg-opacity-40"
+             
+              name="text_field"
+              id="text_field"
+              required
             >
               {data1.QuizValues.map((dt) => (
-                <div
+                <option
                   key="dt"
-                  className={`${
-                    radioButtonData == dt.Value
-                      ? "bg-opacity-60 text-primary border-black border"
-                      : ""
-                  } bg-white  rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  `}
-                  onClick={(e) => {
-                    checkBox(e, dt.Value, "single");
-                  }}
+                  className="bg-opacity-20 text-xl text-black mb-10   p-4 focus:outline-none hover:bg-opacity-40"
+                  style={{ width: "70vh" }}
+                  value={dt.Value}
                 >
-                  <input
-                    type="radio"
-                    value={dt.Value}
-                    name={dt.Value}
-                    id={dt.Value}
-                    className="hidden "
-                  />
-                  <label className="cursor-pointer text-lg">{dt.Value}</label>
-                </div>
+                  {dt.Value}
+                </option>
               ))}
-            </div>
+            </select>
           </div>
         );
       case "MultipleChoice":
         return (
           <div className=" text-white flex flex-col events  items-center justify-center ">
-            <h1 className="heading text-center mb-10 w-full md:w-1/2">
+            <h1
+              className="heading text-center mb-10 w-full md:w-1/2"
+            
+            >
               {data1.Question}
             </h1>
-            <div className="flex mb-2 space-y-4 flex-col cursor-pointer">
+            <div className="flex mb-2 space-y-4 flex-col">
               {data1.QuizValues.map((dt) => (
-                <div
-                  key="dt"
-                  onClick={(e) => {
-                    checkBox(e, dt.Value, "multiple");
-                  }}
-                  className={` bg-white rounded-md bg-opacity-20 w-full px-20 py-3 cursor-pointer  hover:bg-opacity-60  `}
-                >
+                <div key="dt" className="">
                   <input
                     type="checkbox"
                     value={dt.Value}
-                    name={dt.Value}
-                    id={dt.Value}
-                    className="hidden "
+                    id="text_field"
+                    name="text_field"
+                    onClick={checkBox}
+                    className="mr-4 rounded-full"
                   />
-                  <label className="cursor-pointer text-lg">{dt.Value}</label>
+                  <label>{dt.Value}</label>
                 </div>
               ))}
             </div>
@@ -422,54 +409,26 @@ export default function ValueAssesment({ h_data, f_data, data }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout h_data={h_data} f_data={f_data} className="overflow-x-hidden">
+      <Layout h_data={h_data} f_data={f_data}>
+      
         <form
           id="form"
-          className="  events py-20 bg-cover text-white flex flex-col space-y-4 overflow-hidden"
-          style={{
-            backgroundImage: `url(${data.backgroundImage})`,
-            backgroundRepeat: "no-repeat",
-          }}
+          className="bg-valueBg events py-20 bg-cover text-white flex flex-col space-y-16 overflow-hidden"
+          // style={{ height: "96vh" }}
           onSubmit={(e) => {
+            
             e.preventDefault();
+console.log(e.target)
             key += 1;
+           
           }}
         >
-          
-          <div className="mx-10">
-            <BreadCrumb color={"white"} b_data={breadcrumb} />
-          </div>
-          {keyValue>-1 && keyValue< data.Quiz.length &&
-           <div className="flex items-center justify-center py-4">
-           <div className={`w-${data.Quiz.length*8}  absolute h-1 bg-bg rounded-full  `}></div>
-           <div className="flex items-center z-0 justify-center space-x-2 ">
-             {data.Quiz.map((key, index) => (
-               <span
-               onClick={(e) => {
-                changeSlide("prev");
-                onClick({
-                  stream_score: resolve_stream_score("none"),
-                  event_name: "Button Click",
-                  section_name: "Form Section",
-                  page_source: `${data.PageSEO.PageTitle}`,
-                  label: `${data.Buttons[2].buttonTitle}`,
-                });
-              }}
-                 key="index"
-                 className={`${
-                   keyValue == index
-                     ? "bg-primary text-secondary border-2 border-bg"
-                     : "bg-secondary text-primary"
-                 } w-8 h-8 flex items-center justify-center  rounded-full `}
-               >
-                 {index + 1}
-               </span>
-             ))}
-           </div>
-         </div> }
-          <ToastContainer className="" position="bottom-right" />
+         <div className="mx-10">
+         <BreadCrumb  color={"white"} b_data={breadcrumb} />
+         </div>
+          <ToastContainer position="top-right" />
           {keyValue == -1 && (
-            <div className="mx-4 py-20 text-white flex flex-col events  items-center justify-center ">
+            <div className=" text-white flex flex-col events  items-center justify-center ">
               <h1 className="heading md:w-2/4 text-center mb-10">
                 {data.QuizTitle}
               </h1>
@@ -478,174 +437,98 @@ export default function ValueAssesment({ h_data, f_data, data }) {
               </p>
             </div>
           )}
-          {keyValue != -1 && keyValue < data.Quiz.length && (
-            <div className="flex mx-4 flex-col space-y-3 py-5">
-             
-              <ViewSlider
-                className=" "
-                renderView={renderView}
-                numViews={4}
-                activeView={keyValue}
-                animateHeight
-              />
-            </div>
+          {keyValue < data.Quiz.length && (
+            <ViewSlider
+              className=" "
+              renderView={renderView}
+              numViews={4}
+              activeView={keyValue}
+              animateHeight
+            />
           )}
 
           {keyValue >= data.Quiz.length && (
-            <div className="text-white mx-4 ">
-              <Confetti
-                // numberOfPieces={50}
-                width={width}
-                height={height}
-                tweenDuration={100}
-                recycle={false}
-              />
+            <div className="text-white heading text-center ">
               <p className="heading text-center mb-4"> Score:&nbsp;{score}</p>
               {data.QuizRecommendations.map((dt) => (
                 <p key="dt mt-5">
                   {score >= dt.ScoreFrom && score <= dt.ScoreTill && (
-                    <div className="flex flex-col space-y-6 ">
-                      <p className="section-heading text-center mb-4">
+                    <div className="flex flex-col space-y-6">
+                      <p className="heading text-center mb-4">
                         Level &nbsp; {dt.LevelNumber} &nbsp;| &nbsp;
                         {dt.LevelName}
                       </p>
-                      <div className="mx-auto bg-black shadow-2xl  bg-opacity-80 card p-6">
+                      <div className=" mx-auto text-center">
                         <Markdown
                           options={{
                             overrides: {
                               h3: {
                                 props: {
-                                  className: "section-heading mb-2   ",
+                                  className: "text-xl mb-4   text-center",
                                 },
                               },
                               h1: {
                                 props: {
-                                  className: "text-lg mb-4   ",
+                                  className: "text-lg mb-4   text-center",
                                 },
                               },
                               li: {
                                 props: {
-                                  className: " p-1 section-subheading",
+                                  className: " list-decimal ml-6 mb-1 flex-col",
                                 },
                               },
                               p: {
                                 props: {
                                   className:
-                                    "mb-4 section-subheading sm:text-sm",
+                                    "mb-3 text-md sm:text-sm text-center",
                                 },
                               },
                               ol: {
                                 props: {
-                                  className: "mb-4 list-decimal ",
-                                },
-                              },
-                              ul: {
-                                props: {
-                                  className:
-                                    "mb-4 flex flex-col justify-center list-disc ",
+                                  className: "mb-4 ",
                                 },
                               },
                               a: {
                                 props: {
-                                  className: "text-blue-200  border-b ",
+                                  className: "text-blue-800",
                                 },
                               },
                             },
                           }}
-                          className="p-4  "
+                          className=" text-center"
                         >
                           {dt.Recommendations}
                         </Markdown>
                       </div>
-                      <a
-                        name="restart"
-                        id="button_field"
-                        type="button"
-                        className="mx-auto py-3 bg-opacity-40 hover:bg-opacity-40 sm:mb-4 text-sm border border-white  inline-block  px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase "
-                        href={data.Buttons[1].linkURL}
-                      >
-                        <p>{data.Buttons[1].buttonTitle}</p>
-                      </a>
+                      <button
+                   name="restart"  
+              id="button_field"
+              type="button"
+              className="mx-auto py-3 bg-opacity-40 hover:bg-opacity-40 sm:mb-4 text-sm border border-white  inline-block  px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase "
+             onClick={(e)=>{
+              router.reload(window.location.pathname)        
+             }
+               
+             }
+            >
+            <p>{data.Buttons[1].buttonTitle}</p>
+            </button>
                     </div>
                   )}
                 </p>
               ))}{" "}
             </div>
           )}
-          {keyValue == -1 && (
+          {keyValue < data.Quiz.length && (
             <button
               id="button_field"
               type="button"
               className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
-              onClick={() => {
-                changeSlide("next");
-                onClick({
-                  stream_score: resolve_stream_score("none"),
-                  event_name: "Button Click",
-                  section_name: "Form Section",
-                  page_source: `${data.PageSEO.PageTitle}`,
-                  label: `${data.Buttons[2].buttonTitle}`,
-                });
-              }}
-            >
-              <p>{data.Buttons[0].buttonTitle}</p>
-            </button>
-          )}
-          {keyValue >= 0 && keyValue < data.Quiz.length - 1 && (
-            <div className="flex  mx-auto sm:space-x-4 md:space-x-20 items-center justify-center">
-              <button
-                id="button_field"
-                type="button"
-                className=" bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
-                onClick={(e) => {
-                  changeSlide("prev");
-                  onClick({
-                    stream_score: resolve_stream_score("none"),
-                    event_name: "Button Click",
-                    section_name: "Form Section",
-                    page_source: `${data.PageSEO.PageTitle}`,
-                    label: `${data.Buttons[2].buttonTitle}`,
-                  });
-                }}
-              >
-                <p>Prev</p>
-              </button>
-              <button
-                id="button_field"
-                type="button"
-                className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
-                onClick={(e) => {
-                  validateForm();
-                  onClick({
-                    stream_score: resolve_stream_score("none"),
-                    event_name: "Button Click",
-                    section_name: "Form Section",
-                    page_source: `${data.PageSEO.PageTitle}`,
-                    label: `${data.Buttons[2].buttonTitle}`,
-                  });
-                }}
-              >
-                <p>Next</p>
-              </button>
-            </div>
-          )}
-          {keyValue == data.Quiz.length - 1 && (
-            <button
-              id="button_field"
-              type="submit"
-              className="mx-auto justify-center items-center bg-opacity-40 hover:bg-opacity-40 sm:mb-4 border border-white  inline-block py-3 px-2  bg-black hover:bg-gray-300 hover:text-black shadow   text-white px-16  rounded-r-xl rounded-b-xl transition duration-200 uppercase text-md "
-              onClick={() => {
-                validateForm();
-                onClick({
-                  stream_score: resolve_stream_score("none"),
-                  event_name: "Button Click",
-                  section_name: "Form Section",
-                  page_source: `${data.PageSEO.PageTitle}`,
-                  label: `${data.Buttons[2].buttonTitle}`,
-                });
-              }}
-            >
-              <p>{data.Buttons[3].buttonTitle}</p>
+              onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.Buttons[2].buttonTitle}`})}} 
+           >
+              {keyValue == -1 && <p>{data.Buttons[0].buttonTitle}</p>}
+              {keyValue >= 0 && keyValue <(data.Quiz.length-1) && <p>{data.Buttons[2].buttonTitle}</p>}
+              {keyValue ==(data.Quiz.length-1)  && <p>{data.Buttons[3].buttonTitle}</p>}
             </button>
           )}
         </form>
@@ -655,18 +538,15 @@ export default function ValueAssesment({ h_data, f_data, data }) {
 }
 export const getServerSideProps = async (ctx) => {
   //    fetch strapi data
-
-  const res = await fetch(
-    `https://api.ktern.com/tools?QuizSlug=${ctx.params.tool}`,
-    {
-      method: "get",
-    }
-  );
-
+  
+  const res = await fetch(`https://api.ktern.com/tools?QuizSlug=${ctx.params.tool}`, {
+    method: "get",
+  });
+  
   const data = await res.json();
   // console.log(data[0].Quiz)
-  if (data[0] == undefined) {
-    ctx.res.setHeader("Location", "/404");
+  if(data[0]==undefined){
+    ctx.res.setHeader('Location', '/404');
     ctx.res.statusCode = 302;
     ctx.res.end();
   }

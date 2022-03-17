@@ -10,7 +10,7 @@ export default function ScheduleDemo({h_data,f_data}){
 
 
      styles={{height:'850px',marginTop:'50px'}}
-     url="https://calendly.com/ktern-jacob/personalized-ktern-demo?month=2022-03"
+     url="https://calendly.com/ktern-ai/30min?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=111217&primary_color=1b465f"
    />
         </Layout>
         </>
