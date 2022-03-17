@@ -128,7 +128,7 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                         },
                         li: {
                           props: {
-                            className: "text-justify list-decimal ml-3 mb-1 flex-col",
+                            className: "text-justify  ml-3 mb-1 flex-col",
                           }
                             },
                             p: {
@@ -138,8 +138,13 @@ export default function News_Landing({h_data,f_data,data,n_data}){
                             },
                             ol: {
                                 props: {
-                                    className:"mb-4 text-justify"
+                                    className:"list-decimal mb-4 text-justify"
                                 }
+                            },
+                            ul:{
+                              props:{
+                                className:'list-disc mb-4 text-justify'
+                              }
                             },
                             a:{
                               props:{
@@ -184,10 +189,10 @@ export default function News_Landing({h_data,f_data,data,n_data}){
              <Link key="dt" href={dt.PageSEO.PageURL} >
              <a 
              onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Latest News Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.PageHeader.header}`})}}  
-             className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
-             <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
+             className=" hover:shadow-xl  shadow-md border shadow-sky-600  rounded-lg  relative flex  flex-wrap px-2  group overflow-hidden false transition transform hover:-translate-y-3 duration-200 ">   
+            
              <div 
-               className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
+               className="relative  bg-white flex-col p-5 px-5  group overflow-hidden false  "
              >
                <div className=" bg-white grid-rows-2 gap-3  mr-12 text-black">
                                            

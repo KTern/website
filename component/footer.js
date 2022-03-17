@@ -95,27 +95,17 @@ export default function Footer({ f_data }) {
                     <ul className="">
                       {dt.NavItems.map((dt) => (
                         <li key="dt" className="mb-2 w-full ">
-                          {dt.openNewTab && (
+                         
                             <Link href={dt.linkURL}>
                               <a
-                                target="_blank"
+                               target={dt.openNewTab?'_blank':'_self'}
                                 className=" text-gray-200 hover:text-gray-100 w-full"
                                 style={{ fontWeight: 300, fontSize: "15px" }}
                               >
                                 {dt.buttonTitle}
                               </a>
                             </Link>
-                          )}
-                          {!dt.openNewTab && (
-                            <Link href={dt.linkURL}>
-                              <a
-                                className=" text-gray-200 hover:text-gray-100 "
-                                style={{ fontWeight: 300, fontSize: "15px" }}
-                              >
-                                {dt.buttonTitle}
-                              </a>
-                            </Link>
-                          )}
+                        
                         </li>
                       ))}
                     </ul>
@@ -155,23 +145,14 @@ export default function Footer({ f_data }) {
               <p className="py-10   space-x-3 lg:block  text-gray-200 ">
                 {f_data.LegalLinks.map((dt) => (
                   <span key="dt" className=" ">
-                    {dt.openNewTab && (
                       <Link href={dt.linkURL}>
                         <a
-                          target="_blank"
+                          target={dt.openNewTab?'_blank':'_self'}
                           style={{ fontWeight: 300, fontSize: "13px" }}
                         >
                           {dt.buttonTitle}
                         </a>
                       </Link>
-                    )}
-                    {!dt.openNewTab && (
-                      <Link href={dt.linkURL}>
-                        <a style={{ fontWeight: 300, fontSize: "13px" }}>
-                          {dt.buttonTitle}
-                        </a>
-                      </Link>
-                    )}
                   </span>
                 ))}
               </p>

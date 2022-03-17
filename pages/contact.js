@@ -1,37 +1,46 @@
 import Layout from "../component/Layout";
 import Link from "next/link";
+import Script from "next/script";
 import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd,LogoJsonLd } from "next-seo";
+import { BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
 import { CorporateContactJsonLd } from "next-seo";
 import Head from "next/head";
 import Markdown from "markdown-to-jsx";
-import { useRouter } from 'next/router';
-import BreadCrumb from "../component/breadcrumb"; 
- import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function Contact({ data, h_data, f_data }) {
-  const router=useRouter();
+import { useRouter } from "next/router";
+import BreadCrumb from "../component/breadcrumb";
+import Email from "../component/pattern";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../component/page_event";
+export default function Contact({ data, h_data, f_data }) {
+  const router = useRouter();
   // console.log(router.query.message);
-  if(router.query.message=="thanks"){
-    if(process.browser)
-    document.getElementById('thanks_container').style.display="block"
+  if (router.query.message == "thanks") {
+    if (process.browser)
+      document.getElementById("thanks_container").style.display = "block";
   }
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
   // Amplitude Tracking onClick
-  function onClick(data){
-    Event(data)
+  function onClick(data) {
+    Event(data);
+  }
+  function onFormClick(data) {
+    if (process.browser) {
+      localStorage.setItem(
+        "name",
+        document.getElementById("First_Name").value +
+          " " +
+          document.getElementById("Last_Name").value
+      );
+      localStorage.setItem("email", document.getElementById("Email").value);
     }
-    function onFormClick(data){
-      if(process.browser){
-       
-        localStorage.setItem('name',document.getElementById('First_Name').value+" "+document.getElementById('Last_Name').value);
-        localStorage.setItem('email',document.getElementById('Email').value)
-      }
     //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
-      Event(data);
-  
-    }
+    Event(data);
+  }
   return (
     <>
       <Head>
@@ -42,71 +51,72 @@ import BreadCrumb from "../component/breadcrumb";
           src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a175e22919270e151702cc8d3eb82a033bgiddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307"
         ></script>
       </Head>
+
       <NextSeo
-        	title={data.PageSEO.PageTitle}
-          description={data.PageSEO.PageDescription}
-          canonical={data.PageSEO.CanonicalTag}
-          openGraph={{
-            url: `${data.PageSEO.PageURL}`,
-            title: `${data.PageSEO.PageTitle}`,
-            description: `${data.PageSEO.PageDescription}`,
-            images: [
-              {
-                url:`${data.PageSEO.ThumbnailImageURL}`,
-                width: 1920,
-                height: 1080,
-                alt: `${data.PageSEO.PageTitle}`,
-                type: 'image/png',
-              }
-            ],
-            site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
-          }}
-          twitter={{
-            handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
-            site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
-            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-          }}
-          facebook={{
-            handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
-            site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
-            cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-            appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
-          }}
-          // languageAlternates={[
-          //   {
-          //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
-          //     href: `${h_data.OtherSEO.languageAlternates.href}`,
-          //   },
-          // ]}
-          additionalMetaTags={[
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
             {
-              property: "dc:creator",
-              content: "Nivedha",
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
             },
-            {
-              name: "application-name",
-              content: "KTern.AI",
-            },
-            {
-              httpEquiv: "x-ua-compatible",
-              content: "IE=edge; chrome=1",
-            },
-          ]}
-          additionalLinkTags={[
-            {
-              rel: 'icon',
-              href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-            },
-            {
-              rel: 'apple-touch-icon',
-              href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-              sizes: '76x76',
-            },
-            {
-              rel: 'manifest',
-              href: '/manifest.json',
-            },
-          ]}
+          ],
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+        }}
+        // languageAlternates={[
+        //   {
+        //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        //     href: `${h_data.OtherSEO.languageAlternates.href}`,
+        //   },
+        // ]}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
       <LogoJsonLd
@@ -140,58 +150,55 @@ import BreadCrumb from "../component/breadcrumb";
       />
       <Layout h_data={h_data} f_data={f_data}>
         <section className="relative  bg-white pt-10 md:m-10 ">
-         
           <div className="flex flex-col items-center justify-between  md:mx-auto  xl:px-5 lg:flex-row">
             <div className="flex flex-col  items-center md:space-x-20 px-4 mx-20 w-full pt-0  lg:pt-0 lg:flex-row">
               <div className="relative md:w-1/2">
                 <div className="relative flex flex-col items-center  w-full h-full ">
                   <div className="relative ">
                     <div className="pb-16 mb-8 border-b border-gray-400">
-                    <BreadCrumb color="black" b_data={breadcrumb}/>
+                      <BreadCrumb color="black" b_data={breadcrumb} />
                       <h2 className="mt-5 mb-10 sm:text-center  heading text-black">
                         {data.PageTitle}
                       </h2>
                       <div className="py-2  mb-4  rounded-lg">
                         <div className="flex items-center">
-                     
                           <p className=" section-subheading text-black">
-                          
                             <Markdown
-                                      options={{
-                                        overrides: {
-                                          h3: {
-                                            props: {
-                                              className: "text-2xl mb-4 text-justify",
-                                            },
-                                          },
-                                           h1: {
-                                            props: {
-                                              className: "text-2xl mb-4 text-justify",
-                                            },
-                                          },
-                                          li: {
-                                            props: {
-                                              className: "text-justify list-decimal ml-4 mb-1 flex-col",
-                                            }
-                                              },
-                                              p: {
-                                                  props: {
-                                                  className:"text-justify mb-3 leading-7"
-                                              }
-                                              },
-                                              ol: {
-                                                  props: {
-                                                      className:"mb-4  text-justify"
-                                                  }
-                                              },
-                                              strong:{
-                                                props:{
-                                                  className:"font-semibold"
-                                                }
-                                              }
-                                        },
-                                      }}
-                               
+                              options={{
+                                overrides: {
+                                  h3: {
+                                    props: {
+                                      className: "text-2xl mb-4 text-justify",
+                                    },
+                                  },
+                                  h1: {
+                                    props: {
+                                      className: "text-2xl mb-4 text-justify",
+                                    },
+                                  },
+                                  li: {
+                                    props: {
+                                      className:
+                                        "text-justify list-decimal ml-4 mb-1 flex-col",
+                                    },
+                                  },
+                                  p: {
+                                    props: {
+                                      className: "text-justify mb-3 leading-7",
+                                    },
+                                  },
+                                  ol: {
+                                    props: {
+                                      className: "mb-4  text-justify",
+                                    },
+                                  },
+                                  strong: {
+                                    props: {
+                                      className: "font-semibold",
+                                    },
+                                  },
+                                },
+                              }}
                               className=""
                             >
                               {data.ContactMessage}
@@ -199,7 +206,6 @@ import BreadCrumb from "../component/breadcrumb";
                           </p>
                         </div>
                       </div>
-                 
                     </div>
                   </div>
                 </div>
@@ -212,17 +218,33 @@ import BreadCrumb from "../component/breadcrumb";
                   <h4 className="w-full card-heading   text-center ">
                     {data.ContactFormFields.FormTitle}
                   </h4>
-                  <div id="thanks_container" className="w-full hidden mt-2 mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
-  <div className="flex ">
-    <div className="py-1 pr-4"><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-</svg></div>
-    <div>
-      <p className="font-bold card-subheading">{data.ContactFormFields.ThanksMsg}</p>
-     
-    </div>
-  </div>
-</div>
+                  <div
+                    id="thanks_container"
+                    className="w-full hidden mt-2 mb-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+                    role="alert"
+                  >
+                    <div className="flex ">
+                      <div className="py-1 pr-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-bold card-subheading">
+                          {data.ContactFormFields.ThanksMsg}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   <form
                     action="https://crm.zoho.in/crm/WebToContactForm"
                     name="WebToContacts240235000000441179"
@@ -230,7 +252,6 @@ import BreadCrumb from "../component/breadcrumb";
                     acceptCharset="UTF-8"
                     className="relative w-full mt-2 space-y-5"
                   >
-                 
                     <input
                       type="text"
                       style={{ display: "none" }}
@@ -271,16 +292,13 @@ import BreadCrumb from "../component/breadcrumb";
                     />
 
                     {/* <!-- Do not remove this code. --> */}
-             
+
                     <div className="zcwf_row">
                       <div
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="First_Name"
-                        >
+                        <label className="label" htmlFor="First_Name">
                           {data.ContactFormFields.FirstName}
                         </label>
                       </div>
@@ -290,7 +308,7 @@ import BreadCrumb from "../component/breadcrumb";
                           id="First_Name"
                           name="First Name"
                           maxLength="40"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          className="input"
                           required
                         />
                         <div className="zcwf_col_help"></div>
@@ -301,11 +319,8 @@ import BreadCrumb from "../component/breadcrumb";
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="Last_Name"
-                        >
-                         {data.ContactFormFields.LastName}
+                        <label className="label" htmlFor="Last_Name">
+                          {data.ContactFormFields.LastName}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
@@ -314,7 +329,7 @@ import BreadCrumb from "../component/breadcrumb";
                           id="Last_Name"
                           name="Last Name"
                           maxLength="80"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          className="input"
                           required
                         />
                         <div className="zcwf_col_help"></div>
@@ -325,23 +340,12 @@ import BreadCrumb from "../component/breadcrumb";
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="Email"
-                        >
-                         {data.ContactFormFields.Email}
+                        <label className="label" htmlFor="Email">
+                          {data.ContactFormFields.Email}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <input
-                          type="email"
-                          ftype="email"
-                          id="Email"
-                          name="Email"
-                          maxLength="100"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                          required
-                        />
+                        <Email/>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
@@ -350,18 +354,15 @@ import BreadCrumb from "../component/breadcrumb";
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="Description"
-                        >
-                         {data.ContactFormFields.Message}
+                        <label className="label" htmlFor="Description">
+                          {data.ContactFormFields.Message}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
                         <textarea
                           id="Description"
                           name="Description"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          className="input"
                           required
                         ></textarea>
                         <div className="zcwf_col_help"></div>
@@ -372,10 +373,7 @@ import BreadCrumb from "../component/breadcrumb";
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="Lead_Source"
-                        >
+                        <label className="label" htmlFor="Lead_Source">
                           Lead Source
                         </label>
                       </div>
@@ -440,10 +438,7 @@ import BreadCrumb from "../component/breadcrumb";
                         className="zcwf_col_lab"
                         style={{ fontSize: "12px", fontFamily: "Arial" }}
                       >
-                        <label
-                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
-                          htmlFor="CONTACTCF6"
-                        >
+                        <label className="label" htmlFor="CONTACTCF6">
                           Lead Source Form
                         </label>
                       </div>
@@ -454,42 +449,61 @@ import BreadCrumb from "../component/breadcrumb";
                           name="CONTACTCF6"
                           maxLength="255"
                           value="contact-form"
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          className="input"
                           required
                         />
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
-                   <div className="zcwf_row">
-                      <div className="zcwf_col_lab"></div>
-                      <div className="zcwf_col_fld">
-                        <input type="checkbox" id="privacy" value="true" required/><label> <Markdown
-                    options={{
-                      overrides: {
-                        p:{
-                          props:{
-                            className:"card-subheading text-justify"
-                          }
-                        },
-                        strong:{
-                          props:{
-                            className:""
-                          }
-                        }
-                      }}}
-                    className=""
-                  >{data.ContactFormFields.PrivacyStatement}</Markdown></label>
-                        </div> 
-                        </div>                   
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">
                         <input
-                        onClick={()=>{onFormClick({stream_score:resolve_stream_score('none'),event_name:"Form Click",section_name:"Contact Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`Submit`})}}
+                          type="checkbox"
+                          id="privacy"
+                          value="true"
+                          required
+                        />
+                        <label>
+                          {" "}
+                          <Markdown
+                            options={{
+                              overrides: {
+                                p: {
+                                  props: {
+                                    className: "card-subheading text-justify",
+                                  },
+                                },
+                                strong: {
+                                  props: {
+                                    className: "",
+                                  },
+                                },
+                              },
+                            }}
+                            className=""
+                          >
+                            {data.ContactFormFields.PrivacyStatement}
+                          </Markdown>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="zcwf_row">
+                      <div className="zcwf_col_lab"></div>
+                      <div className="zcwf_col_fld">
+                        <input
+                          onClick={() => {
+                            onFormClick({
+                              stream_score: resolve_stream_score("none"),
+                              event_name: "Form Click",
+                              section_name: "Contact Form Section",
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `Submit`,
+                            });
+                          }}
                           type="submit"
                           id="formsubmit"
-                                           className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
-                                            rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
+                          className="formsubmit form-button"
                           value="Submit"
                           title="Submit"
                         />
@@ -502,135 +516,132 @@ import BreadCrumb from "../component/breadcrumb";
           </div>
         </section>
         <section className="px-4 md:px-36 pb-10">
-               <div className="md:grid-cols-3 grid gap-5">
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
-                        <div className="flex items-center">
-                     
-                          <p className="p-10 px-10 text-white">
-                          
-                            <Markdown
-                              options={{
-                                overrides: {
-                                  h3: {
-                                    props: {
-                                      className: "text-2xl mb-4 text-justify",
-                                    },
-                                  },
-                                  
-                                   h1: {
-                                    props: {
-                                      className: "text-2xl mb-4 text-justify",
-                                    },
-                                  },
-                                  li: {
-                                    props: {
-                                      className: "text-justify list-decimal ml-3 mb-1 flex-col",
-                                    }
-                                      },
-                                      p: {
-                                          props: {
-                                          className:"text-justify mb-3"
-                                      }
-                                      },
-                                      ol: {
-                                          props: {
-                                              className:"mb-4 text-justify"
-                                          }
-                                      }
-                                },
-                              }}
-                              className=""
-                            >
-                              {data.PhoneNumber}
-                            </Markdown>
-                          </p>
-                        </div>
-                      </div>
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
-                        <div className="flex items-center">
-                        
-                          <p className="p-10 px-10  text-white">
-                            <Markdown 
-                              options={{
-                                overrides: {
-                                  h3: {
-                                    props: {
-                                      className: "text-2xl mb-4 ",
-                                    },
-                                  },
-                                  
-                                   h1: {
-                                    props: {
-                                      className: "text-2xl mb-4 ",
-                                    },
-                                  },
-                                  li: {
-                                    props: {
-                                      className: " list-decimal ml-3 mb-1 flex-col",
-                                    }
-                                      },
-                                      p: {
-                                          props: {
-                                          className:" mb-3"
-                                      }
-                                      },
-                                      ol: {
-                                          props: {
-                                              className:"mb-4 "
-                                          }
-                                      }
-                                },
-                              }}
-                             
-                            >
-                              {data.Email}
-                            </Markdown>
-                          </p>
-                        </div>
-                      </div>
-                      <div className="py-2 px-5 mb-4 bg-black rounded-lg">
-                        <div className="flex items-center">
-                         
-                          <p className="p-10 px-10   text-white">
-                            <Markdown
-                              options={{
-                                overrides: {
-                                  h3: {
-                                    props: {
-                                      className: " mb-4 text-justify",
-                                    },
-                                  },
-                                  
-                                   h1: {
-                                    props: {
-                                      className: "text-2xl mb-4 text-justify",
-                                    },
-                                  },
-                                  li: {
-                                    props: {
-                                      className: "text-justify list-decimal ml-3 mb-1 flex-col",
-                                    }
-                                      },
-                                      p: {
-                                          props: {
-                                          className:"text-justify mb-3"
-                                      }
-                                      },
-                                      ol: {
-                                          props: {
-                                              className:"mb-4 text-justify"
-                                          }
-                                      }
-                                },
-                              }}
-                              className=""
-                            >
-                              {data.Address}
-                            </Markdown>
-                          </p>
-                        </div>
-                      </div>
-                      </div>
+          <div className="md:grid-cols-3 grid gap-5">
+            <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+              <div className="flex items-center">
+                <p className="p-10 px-10 text-white">
+                  <Markdown
+                    options={{
+                      overrides: {
+                        h3: {
+                          props: {
+                            className: "text-2xl mb-4 text-justify",
+                          },
+                        },
+
+                        h1: {
+                          props: {
+                            className: "text-2xl mb-4 text-justify",
+                          },
+                        },
+                        li: {
+                          props: {
+                            className:
+                              "text-justify list-decimal ml-3 mb-1 flex-col",
+                          },
+                        },
+                        p: {
+                          props: {
+                            className: "text-justify mb-3",
+                          },
+                        },
+                        ol: {
+                          props: {
+                            className: "mb-4 text-justify",
+                          },
+                        },
+                      },
+                    }}
+                    className=""
+                  >
+                    {data.PhoneNumber}
+                  </Markdown>
+                </p>
+              </div>
+            </div>
+            <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+              <div className="flex items-center">
+                <p className="p-10 px-10  text-white">
+                  <Markdown
+                    options={{
+                      overrides: {
+                        h3: {
+                          props: {
+                            className: "text-2xl mb-4 ",
+                          },
+                        },
+
+                        h1: {
+                          props: {
+                            className: "text-2xl mb-4 ",
+                          },
+                        },
+                        li: {
+                          props: {
+                            className: " list-decimal ml-3 mb-1 flex-col",
+                          },
+                        },
+                        p: {
+                          props: {
+                            className: " mb-3",
+                          },
+                        },
+                        ol: {
+                          props: {
+                            className: "mb-4 ",
+                          },
+                        },
+                      },
+                    }}
+                  >
+                    {data.Email}
+                  </Markdown>
+                </p>
+              </div>
+            </div>
+            <div className="py-2 px-5 mb-4 bg-black rounded-lg">
+              <div className="flex items-center">
+                <p className="p-10 px-10   text-white">
+                  <Markdown
+                    options={{
+                      overrides: {
+                        h3: {
+                          props: {
+                            className: " mb-4 text-justify",
+                          },
+                        },
+
+                        h1: {
+                          props: {
+                            className: "text-2xl mb-4 text-justify",
+                          },
+                        },
+                        li: {
+                          props: {
+                            className:
+                              "text-justify list-decimal ml-3 mb-1 flex-col",
+                          },
+                        },
+                        p: {
+                          props: {
+                            className: "text-justify mb-3",
+                          },
+                        },
+                        ol: {
+                          props: {
+                            className: "mb-4 text-justify",
+                          },
+                        },
+                      },
+                    }}
+                    className=""
+                  >
+                    {data.Address}
+                  </Markdown>
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </Layout>
     </>

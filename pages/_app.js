@@ -11,7 +11,6 @@ import {page_event} from "../component/page_event"
 const tagManagerArgs = {
   gtmId: "GTM-MHZVHTK",
 }
-import { StoreProvider } from '../component/modal';
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
 // if(process.browser)
