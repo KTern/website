@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Breadcrumbs from './breadcrumb-new';
 
-export default function Hero({ data, stream, breadcrumb }) {
+export default function Hero({ data, stream, breadcrumb, background }) {
 	let form = data.ProductsBannerForm;
 	return (
 		<>
-			<section className={`relative section-${stream} overflow-hidden`}>
-				<div className="flex flex-wrap pb-4">
+			<section className={`relative  overflow-hidden`}>
+				<div className={` flex flex-wrap pb-4  ${background}-${stream}`} >
 					<div className="w-full lg:w-1/2 pt-12 pb-6 flex justify-center">
 						<div className="px-12 pl-24 sm:p-8 sm:py-0">
 							<div className="ml-auto mb-8 lg:mb-8 m-4">
@@ -14,19 +14,21 @@ export default function Hero({ data, stream, breadcrumb }) {
 									{' '}
 									<Breadcrumbs breadcrumb={breadcrumb} />
 								</div>
-								<span className={`p-1 text-xs uppercase rounded tag-${stream} text-white font-semibold`}>
-									{data.DigitalStreamTitle}
-								</span>
-								<h1 className="heading mt-4 mb-4 text-4xl lg:text-5xl font-semibold ease-in sm:text-center">
+								<div className="sm:text-center">
+									<span className={`p-1 text-xs uppercase rounded tag-${stream} text-white font-semibold`}>
+										{data.DigitalStreamTitle}
+									</span>
+								</div>
+								<h1 className="heading mt-4 mb-4 text-4xl lg:text-5xl font-semibold ease-in sm:text-center  ibm-plex">
 									{data.BannerHeadline}
 								</h1>
-								<p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium ibm-plex">
+								<p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium">
 									{data.BannerSubHeadline}
 								</p>
 							</div>
 							<div>
 								<form
-									className="relative flex flex-wrap"
+									className="relative flex flex-wrap sm:items-center sm:justify-center"
 									method="POST"
 									id="zcampaignOptinForm"
 									action="https://maillist-manage.in/weboptin.zc"
@@ -39,9 +41,10 @@ export default function Hero({ data, stream, breadcrumb }) {
 										changeitem="SIGNUP_FORM_FIELD"
 										name="CONTACT_EMAIL"
 										id="EMBED_FORM_EMAIL_LABEL"
+										required
 									/>
 									<button
-										className={`ml-4 inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
+										className={`ml-4 sm:ml-0 sm:uppercase sm:w-3/4 sm:mt-1 inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
 										name="SIGNUP_SUBMIT_BUTTON"
 										id="zcWebOptin"
 										value="SIGN UP"
@@ -79,7 +82,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
 								<div className="rating-star"></div>
-								<span className="pl-3 ibm-plex text-gray-600">{data.ReviewStatement}</span>
+								<span className="pl-3 text-gray-600">{data.ReviewStatement}</span>
 							</div>
 							<div className="flex flex-wrap items-center justify-center -mx-2 mb-6 mt-5 sm:hidden">
 								{data.ReviewImages.map((dt) => (
@@ -100,7 +103,7 @@ export default function Hero({ data, stream, breadcrumb }) {
 					</div>
 					<div className="w-full lg:w-1/2 pr-12 pt-24 sm:hidden">
 						<div className="relative h-full items-center justify-center">
-							<div className="relative mx-auto md:mr-0 max-w-max mb-8 p-8">
+							<div className={`relative mx-auto md:mr-0 max-w-max mb-8  p-8 `}>
 								<img
 									src={data.BannerImage.imageURL}
 									alt={data.BannerImage.imageDescription}

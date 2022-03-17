@@ -10,7 +10,7 @@ export default function FaqNew({ data, title, stream }) {
 	return (
 		<>
 			<FAQPageJsonLd mainEntity={faq} />
-			<section className="py-12 bg-white bg-bg ">
+			<section className="py-12 bg-white bg-bg sm:p-4">
 				<div className="text-center">
 					<span
 						className={`text-xs rounded tag-${stream} text-white font-semibold inline-block py-px px-2 mb-4 text-xs leading-5 uppercase rounded-full shadow-sm`}
@@ -18,9 +18,9 @@ export default function FaqNew({ data, title, stream }) {
 						QUESTIONS
 					</span>
 				</div>
-				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold text-center ">{title}</h2>
+				<h2 className="mb-4 text-3xl md:text-5xl leading-tight font-bold text-center ibm-plex">{title}</h2>
 				<div className="grid  grid-cols-3   ">
-					<div className="col-span-3 md:col-span-2 md:mx-20">
+					<div className="col-span-3 md:col-span-3 md:mx-60 ">
 						{data.FAQ.map((data) => (
 							<details
 								key="data"
@@ -73,16 +73,16 @@ export default function FaqNew({ data, title, stream }) {
 												},
 											},
 										}}
-										className=" text-justify ibm-plex"
+										className=" text-justify ibm-plex "
 									>
 										{data.Answer}
 									</Markdown>
 								</div>
-								{/* <hr/> */}
 							</details>
 						))}
 					</div>
 					<div className="hidden lg:block col-span-1 h-full  "></div>
+					
 				</div>
 			</section>
 		</>

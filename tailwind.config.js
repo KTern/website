@@ -1,47 +1,52 @@
 const colors = require('tailwindcss/colors')
 module.exports = {
- purge: ['./pages/**/*.{js,ts,jsx,tsx}', './component/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    fontFamily: {
-      body:['myriad-pro',' sans-serif']
-    },
-    extend: {
-      screens: {
-         sm: {'max': '768px'},
-    },
-      backgroundImage: theme => ({
-        hero: "url('https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-hero.png')",
-        herogradient: 'radial-gradient(circle at 75% calc(100% + 20px),#222 0,#727272 90%)',
-        cta: "url('/assets/five-stars.svg')",
-        downarrow: "url('/assets/icons/down-arrow.png')",
-        values_gradient:"url('/assets/bg-gradient.png')",
-        background:"url('/background.svg')",
-        partnercontact:"url('/contact-bg.svg')",
-        blob:"url('/blob.svg')",
-        dots:"url('/bullets-gray-left.svg')",
-        banner:"url('/events/banner-1.jpg')",
-        eventsbg:"url('/events-landing/pattern.svg')",
-        events:"url('/events/events-bg.svg')",
-        roadshowbg:"url('/events-landing/events-bg.svg')",
-        valueBg:"url('/assessment/background.png')",
-		mobileeventsbg:"url('/events-landing/bg.png')"
-      }),
-      colors: {
-        success: '#BADA55',
-      black: '#0b1320',
-      primary: '#0B1320',
-      secondary: '#EAEDF2',
-      white:'#ffffff',
-      eventsprimary:'#070B1D',
-      teal:colors.teal,
-			amber: colors.amber,
-			orange: colors.orange,
-      sky:colors.sky,
-      violet:colors.violet,
-      cyan:colors.cyan,
-      rose:colors.rose,
-     
+	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './component/**/*.{js,ts,jsx,tsx}'],
+	darkMode: false, // or 'media' or 'class'
+	theme: {
+		fontFamily: {
+			body: ['myriad-pro', ' sans-serif'],
+		},
+		extend: {
+			screens: {
+				sm: { max: '1000px' },
+			},
+			backgroundImage: (theme) => ({
+				hero: "url('https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-hero.png')",
+				herogradient: 'radial-gradient(circle at 75% calc(100% + 20px),#222 0,#727272 90%)',
+				cta: "url('/assets/five-stars.svg')",
+				downarrow: "url('/assets/icons/down-arrow.png')",
+				values_gradient: "url('/assets/bg-gradient.png')",
+				background: "url('/background.svg')",
+				partnercontact: "url('/contact-bg.svg')",
+				blob: "url('/blob.svg')",
+				dots: "url('/bullets-gray-left.svg')",
+				banner: "url('/events/banner-1.jpg')",
+				eventsbg: "url('/events-landing/pattern.svg')",
+				events: "url('/events/events-bg.svg')",
+				roadshowbg: "url('/events-landing/events-bg.svg')",
+				valueBg: "url('/assessment/background.png')",
+				ptmaps: 'url(/maps-pattern.png)',
+				ptprojects: 'url(/projects-pattern.png)',
+				ptprocess: 'url(/process-pattern.png)',
+				ptlabs: 'url(/labs-pattern.png)',
+				ptmines: 'url(/mines-pattern.png)',
+				mobileeventsbg: "url('/events-landing/bg.png')",
+			}),
+			colors: {
+				success: '#BADA55',
+				black: '#0b1320',
+				primary: '#0B1320',
+				secondary: '#F5F5F5',
+				white: '#ffffff',
+				eventsprimary: '#070B1D',
+				teal: colors.teal,
+				amber: colors.amber,
+				orange: colors.orange,
+				sky: colors.sky,
+				violet: colors.violet,
+				cyan: colors.cyan,
+				rose: colors.rose,
+
 				indigo: colors.indigo,
 				slate: colors.slate,
 				bg: '#F9FAFC',

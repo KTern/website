@@ -28,7 +28,7 @@ export default function MultiCarousel({data, stream}) {
 				>
 					{data.Tag}
 				</span>
-				<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold">
+				<h3 className="mb-4 text-3xl md:text-5xl leading-tight font-bold ibm-plex">
 					{data.Title}
 				</h3>
 			</div>
@@ -56,11 +56,11 @@ export default function MultiCarousel({data, stream}) {
 									</div>
 								</div>
 								<div className="text-center">
-									<h3 className={`mb-4 text-xl leading-7 text-coolGray-900 font-bold max-w-xs`}>
+									<h3 className={`mb-4 text-xl leading-7 text-coolGray-900 font-bold max-w-xs ibm-plex`}>
 										{dt.Title}
 									</h3>
 								</div>
-								<p className="text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200 ibm-plex">
+								<p className="text-coolGray-500 group-hover:text-coolGray-600 font-medium transition duration-200">
 									{dt.Description}
 								</p>
 							</div>
