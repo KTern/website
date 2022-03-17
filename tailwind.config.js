@@ -4,7 +4,7 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: {
-			body: ['myriad-pro', ' sans-serif', 'ibm-plex'],
+			body: ['myriad-pro', ' sans-serif'],
 		},
 		extend: {
 			screens: {
