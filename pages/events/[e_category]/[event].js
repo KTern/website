@@ -654,7 +654,7 @@ const [windowSize,setWindowSize]=useState(0)
                                       >
                                         {data.form.email}
                                       </label>
-                                      <Email />
+                                      <Email  name={'CONTACT_EMAIL'}/>
                                     </div>
                                     <div></div>
                                   </div>
@@ -1158,3 +1158,11 @@ export const getServerSideProps = async (ctx) => {
     },
   };
 };
+
+
+
+
+
+
+
+
