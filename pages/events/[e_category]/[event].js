@@ -89,45 +89,45 @@ export default function Events({ h_data, f_data, data }) {
     if (completed) setCountDownState(true);
     return (
       <div className="flex md:space-x-4  ">
-        <div className={`flex flex-col items-center uppercase text-white md:text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-white md:bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-white md:border-${data.heroSection.PrimaryColor} text-white md:text-${data.heroSection.SecondaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
+        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
+          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
             {days}
           </span>
-          <p className={` px-2 py-1 rounded-lg text-black md:text-${data.heroSection.SecondaryColor} bg-white md:bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
+          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
             Days
           </p>
         </div>
 
-        <span className={`items-center mb-10 flex justify-center text-white md:text-${data.heroSection.PrimaryColor} text-3xl`}>
+        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
           :
         </span>
-        <div className={`flex flex-col items-center uppercase text-white md:text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-white md:bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-white md:border-${data.heroSection.PrimaryColor} text-white md:text-${data.heroSection.SecondaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
+        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
+          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
             {hours}
           </span>
-          <p className={` px-2 py-1 rounded-lg text-black md:text-${data.heroSection.SecondaryColor} bg-white md:bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
+          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
             Hours
           </p>
         </div>
-        <span className={`items-center mb-10 flex justify-center text-white md:text-${data.heroSection.PrimaryColor} text-3xl`}>
+        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
           :
         </span>
-        <div className={`flex flex-col items-center uppercase text-white md:text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-white md:bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-white md:border-${data.heroSection.PrimaryColor} text-white md:text-${data.heroSection.SecondaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
+        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
+          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
             {minutes}
           </span>
-          <p className={` px-2 py-1 rounded-lg text-black md:text-${data.heroSection.SecondaryColor} bg-white md:bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
+          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
             Minutes
           </p>
         </div>
-        <span className={`items-center mb-10 flex justify-center text-white md:text-${data.heroSection.PrimaryColor} text-3xl`}>
+        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
           :
         </span>
-        <div className={`flex flex-col items-center uppercase text-white md:text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-white md:bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-white md:border-${data.heroSection.PrimaryColor} text-white md:text-${data.heroSection.SecondaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
+        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
+          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
             {seconds}
           </span>
-          <p className={` px-2 py-1 rounded-lg text-black md:text-${data.heroSection.SecondaryColor} bg-white md:bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
+          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
             Seconds
           </p>
         </div>
@@ -260,20 +260,20 @@ const [windowSize,setWindowSize]=useState(0)
             <div
               style={{
                 
-                backgroundImage: windowSize>540 ? `url(${data.heroSection.ImageURL})`:'url(/events-landing/bg.png)',
+                backgroundImage: windowSize>400 ? `url(${data.heroSection.ImageURL})`:`url(${data.heroSection.alternateImageUrl})`,
                 backgroundRepeat: "no-repeat",
               }}
               className=" sm:bg-mobileeventsbg  bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl !important"
             >
               <div className=" px-4 mx-auto pb-5">
                 <div className="mx-28 mt-10">
-                  <BreadCrumb color={`${windowSize>540?data.heroSection.PrimaryColor:'white'}`} b_data={breadcrumb} />
+                  <BreadCrumb color={data.heroSection.PrimaryColor} b_data={breadcrumb} />
                 </div>
                 <div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
-                  <span className={`block mb-4 mt-10 text-center  tracking-wide heading text-white md:text-${data.heroSection.PrimaryColor}`}>
+                  <span className={`block mb-4 mt-10 text-center  tracking-wide heading text-${data.heroSection.PrimaryColor}`}>
                     {data.heroSection.header}
                   </span>
-                  <h1 className={`max-w-xl mb-6 mx-auto  text-center text-white md:text-${data.heroSection.PrimaryColor} subheading  leading-tight`}>
+                  <h1 className={`max-w-xl mb-6 mx-auto  text-center text-${data.heroSection.PrimaryColor} subheading  leading-tight`}>
                     {data.heroSection.subHeading}
                   </h1>
                   {!countDownState && (
@@ -1158,7 +1158,6 @@ export const getServerSideProps = async (ctx) => {
     },
   };
 };
-
 
 
 
