@@ -31,13 +31,15 @@ export default function FeaturedResourcesComponent({ resources, stream, articles
 					</div>
 					<div className="grid grid-cols-12 gap-10 mt-10">
 						<div className="col-span-12 md:col-span-8 sm:col-span-10">
-							<div className="relative overflow-hidden border-b-2 border-maps">
-								<h4 className="px-3 py-1.5 tag-maps text-white uppercase text-sm inline-block font-medium">
+							<div className={`relative overflow-hidden border-b-2 border-${stream} `}>
+								<h4
+									className={`px-3 py-1.5 tag-${stream} text-white uppercase text-sm inline-block font-medium `}
+								>
 									{articles.Title}
 								</h4>
 							</div>
 							{articles.ResourcesList.map((dt1) => (
-								<div key="dt1" className="flex items-center py-5 border-b border-maps">
+								<div key="dt1" className={`flex items-center py-5 border-b border-${stream}`}>
 									<a className={`w-1/3 h-40 overflow-hidden bg-gray-400 `} href={dt1.PageURL}>
 										<img
 											className="w-full h-auto transition duration-300 ease-out transform scale-100 bg-cover hover:scale-105"
@@ -50,7 +52,7 @@ export default function FeaturedResourcesComponent({ resources, stream, articles
 										</h2>
 										<p className="text-sm text-white opacity-50 hover:opacity-100">{dt1.Description}</p>
 										<span className="relative flex mt-3 text-xs text-white opacity-90">
-											<span className="mr-1 font-normal text-xs p-2 border border-coolGray-200 border border-maps">
+											<span className={`mr-1 font-normal text-xs p-2 border border-coolGray-200 border border-${stream} `}>
 												{dt1.Tag}
 											</span>
 										</span>
@@ -83,7 +85,7 @@ export default function FeaturedResourcesComponent({ resources, stream, articles
 										</h2>
 										<p className="text-sm text-white opacity-50 hover:opacity-100">{dt2.Description}</p>
 										<span className="relative flex mt-3 text-xs text-white opacity-90">
-											<span className="mr-1 font-normal text-xs p-2 border border-coolGray-200 border border-maps">
+											<span className={`mr-1 font-normal text-xs p-2 border border-coolGray-200 border border-${stream}`}>
 												{dt2.Tag}
 											</span>
 										</span>

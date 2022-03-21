@@ -6,7 +6,6 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 import BreadCrumb from "../../../component/breadcrumb";
-import Email from "../../../component/pattern";
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
@@ -403,12 +402,21 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                   >
                                     <div>
                                       <label
-                                        className="label"
+                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                                         htmlFor="CONTACT_EMAIL"
                                       >
                                         {webinar_Data.FormFields.Email}
                                       </label>
-                                     <Email name={'CONTACT_EMAIL'}/>
+                                      <input
+                                        id="Email"
+                                        maxLength="100"
+                                        placeholder="Business Email"
+                                        name="CONTACT_EMAIL"
+                                        changeitem="SIGNUP_FORM_FIELD"
+                                        type="email"
+                                        required
+                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                                      />
                                     </div>
                                     <div></div>
                                   </div>
@@ -418,7 +426,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                   >
                                     <div>
                                       <label
-                                        className="label"
+                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                                         htmlFor="FIRSTNAME"
                                       >
                                         {webinar_Data.FormFields.FullName}
@@ -431,7 +439,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                         name="FIRSTNAME"
                                         changeitem="SIGNUP_FORM_FIELD"
                                         type="text"
-                                        className="input"
+                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                                       />
                                     </div>
                                     <div></div>

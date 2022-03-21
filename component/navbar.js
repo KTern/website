@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import FeatureCard from "./featureCard";
 import React, { useState, useRef, useEffect } from "react";
-import ListCard from "./listCard";
+
 import { useRouter } from "next/router";
 import HeaderCard from "./headerCard";
 function openNav() {
@@ -63,10 +63,11 @@ export default function Navbar({ h_data }) {
   };
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    router.events.on("routeChangeComplete", () => {
-      closeNav();
-    });
+    router.events.on('routeChangeComplete',()=>{
+      closeNav()
+    })
     return () => {
+      
       window.removeEventListener("scroll", listenToScroll);
     };
   }, []);
@@ -131,11 +132,11 @@ export default function Navbar({ h_data }) {
           )}
         {/*/ Top banner */}
 
-        <div className="flex  justify-between  items-center">
+        <div className="flex flex-wrap justify-between  items-center">
           {/* KTern Logo Desktop*/}
           <div className="hidden lg:block">
             <Link href={h_data.Logo.Url} passHref>
-              <a title={h_data.Logo.Title} className="md:mx-4 xl:mx-8">
+              <a title={h_data.Logo.Title} className="mx-8">
                 <Image
                   priority
                   className="text-lg font-medium xl:mx-20 "
@@ -150,7 +151,7 @@ export default function Navbar({ h_data }) {
           {/*/ KTern Logo Desktop */}
           {/* KTern Logo mobile */}
           <div className="hidden sm:block">
-            <Link href={h_data.Logo.Url} passHref>
+          <Link href={h_data.Logo.Url} passHref>
               <a
                 title={h_data.Logo.Title}
                 className=" hidden mx-6 sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
@@ -469,173 +470,10 @@ export default function Navbar({ h_data }) {
                   </div>
                 </div>
               </li>
-              {/* <li className="hoverable hover:border-2   hover:bg-secondary">
-                <input
-                  type="checkbox"
-                  value="selected"
-                  id="toggle-Solutions"
-                  className="toggle-input"
-                />
-                <label
-                  htmlFor="toggle-Solutions"
-                  className="block cursor-pointer py-3 px-6 lg:p-5 header  "
-                >
-                  Solutions
-                </label>
-                <div id="toggle-5" role="toggle" className="mega-menu  ">
-                  <div
-                    id="tag"
-                    className="divide-x space-x-10 flex bg-white mx-10 p-6 shadow-xl rounded-b-xl  border-b-4 border-dxaas-primary"
-                  >
-                    <div id="tag" className="w-1/6 px-4 h-full  ">
-                      <div>
-                        <h3 className="text-lg mb-2 font-bold">
-                          {h_data.Support.WhatsNewSection.Title}
-                        </h3>
-                        <p className="text-md mb-6">
-                          {h_data.Support.WhatsNewSection.Description}
-                        </p>
-                        <Link
-                          href={h_data.Support.WhatsNewSection.redirectURL}
-                          passhref
-                        >
-                          <a
-                            title={h_data.Support.WhatsNewSection.Title}
-                            className="inline-block py-2 px-6 bg-black hover:bg-gray-300 hover:text-black shadow text-sm text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase"
-                          >
-                            {h_data.Support.WhatsNewSection.ctaText}
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="w-5/6 px-6 overflow-y-scroll navbar-scroll max-h-screen">
-                      <ListCard
-                        cardData={[
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                            ],
-                          },
-                          {
-                            heading: "By Function",
-                            list: [
-                              { url: "/", value: "BPO" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
-                      
-                          {
-                            heading: "By Role",
-                            list: [
-                              { url: "/", value: "Product Manager" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
-                          {
-                            heading: "By Function",
-                            list: [
-                              { url: "/", value: "BPO" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
-                          {
-                            heading: "By Function",
-                            list: [
-                              { url: "/", value: "BPO" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                            ],
-                          },
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                            ],
-                          },
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                            ],
-                          },
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                              { url: "/a", value: "BPO",openNewTab:true },
-                              { url: "/b", value: "Insurance",openNewTab:false},
-                              { url: "/c", value: "Healthcare",openNewTab:true },
-                              { url: "/d", value: "Telecom" ,openNewTab:false},
-                            ],
-                          },
-                        ]}
-                      ></ListCard>
-                    </div>
-                  </div>
-                </div>
-              </li> */}
             </ul>
           </div>
           {/* /Header menu */}
-          <div className=" hidden lg:block flex-end  lg:my-auto md:space-x-3 xl:space-x-6 xl:mr-8 mr-1">
+          <div className=" hidden lg:block flex-end xl:mx-20 lg:my-auto mr-4 space-x-10">
             <Link href={h_data.PrimaryCTA.linkURL} passhref>
               <a
                 title={h_data.PrimaryCTA.buttonTitle}
@@ -707,180 +545,138 @@ export default function Navbar({ h_data }) {
                       Products
                     </span>
                   </summary>
-
+                  
                   {h_data.Products.map((dt) => (
-                    <div key="dt" className="py-1">
-                      <Link href={dt.redirectURL}>
-                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
-                          {dt.Title}
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* <hr/> */}
-                </details>
-              </li>
-              <li className="toggleable  py-1 bg-white ">
-                <details
-                  key="data"
-                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
-                >
-                  <summary
-                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className="col-span-11 text-lg font-semibold">
-                      Resources
-                    </span>
-                  </summary>
-
-                  {h_data.ResourcesList.map((dt) => (
-                    <div key="dt" className="py-1">
-                      <Link href={dt.redirectURL}>
-                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
-                          {dt.Title}
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* <hr/> */}
-                </details>
-              </li>
-              <li className="toggleable  py-1 bg-white ">
-                <details
-                  key="data"
-                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
-                >
-                  <summary
-                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className="col-span-11 text-lg font-semibold">
-                      Partners
-                    </span>
-                  </summary>
-
-                  {h_data.PartnersList.map((dt) => (
-                    <div key="dt" className="py-1">
-                      <Link href={dt.redirectURL}>
-                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
-                          {dt.Title}
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* <hr/> */}
-                </details>
-              </li>
-              <li className="toggleable  py-1 bg-white ">
-                <details
-                  key="data"
-                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
-                >
-                  <summary
-                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className="col-span-11 text-lg font-semibold">
-                      Company
-                    </span>
-                  </summary>
-
-                  {h_data.CompanyList.map((dt) => (
-                    <div key="dt" className="py-1">
-                      <Link href={dt.redirectURL}>
-                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
-                          {dt.Title}
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* <hr/> */}
-                </details>
-              </li>
-              <li className="toggleable  py-1 bg-white ">
-                <details
-                  key="data"
-                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
-                >
-                  <summary
-                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className="col-span-11 text-lg font-semibold">
-                      Support
-                    </span>
-                  </summary>
-
-                  {h_data.SupportList.map((dt) => (
-                    <div key="dt" className="py-1">
-                      <Link href={dt.redirectURL}>
-                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
-                          {dt.Title}
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* <hr/> */}
-                </details>
-              </li>
-              {/* <li className="toggleable  py-1 bg-white ">
-                <details
-                  key="data"
-                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
-                >
-                  <summary
-                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
-                  >
-                    <span className="col-span-11 text-lg font-semibold">
-                      Solutions
-                    </span>
-                  </summary>
-
-                  <div className="p-4 ">
-                      <ListCard
-                        cardData={[
-                          {
-                            heading: "By Industry",
-                            list: [
-                              { url: "/a", value: "BPO" },
-                              { url: "/b", value: "Insurance" },
-                              { url: "/c", value: "Healthcare" },
-                              { url: "/d", value: "Telecom" },
-                            ],
-                          },
-                          {
-                            heading: "By Function",
-                            list: [
-                              { url: "/", value: "BPO" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
                       
-                          {
-                            heading: "By Role",
-                            list: [
-                              { url: "/", value: "Product Manager" },
-                              { url: "/", value: "Insurance" },
-                              { url: "/", value: "Healthcare" },
-                              { url: "/", value: "Telecom" },
-                            ],
-                          },
-                          
-                        ]}
-                      ></ListCard>
+                    </Link>
                     </div>
-
+                  ))}
+                  
+                  {/* <hr/> */}
                 </details>
-              </li> */}
+              </li>
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
+                >
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Resources
+                    </span>
+                  </summary>
+                  
+                  {h_data.ResourcesList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
+              </li>
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
+                >
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Partners
+                    </span>
+                  </summary>
+                  
+                  {h_data.PartnersList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
+              </li>
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
+                >
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Company
+                    </span>
+                  </summary>
+                  
+                  {h_data.CompanyList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
+              </li>
+              <li className="toggleable  py-1 bg-white ">
+              <details
+                  key="data"
+                  className="m-header   relative overflow-hidden px-2  bg-white select-none "
+                >
+                  <summary
+                    className=" items-center grid grid-cols-12  px-2 cursor-pointer"
+                    style={{ listStyle: "none" }}
+                  >
+                    <span className="col-span-11 text-lg font-semibold">
+                     Support
+                    </span>
+                  </summary>
+                  
+                  {h_data.SupportList.map((dt) => (
+                    <div  key="dt" className="py-1">
+                    <Link
+                     
+                      href={dt.redirectURL}
+                    >
+                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
+                      
+                    </Link>
+                    </div>
+                  ))}
+                  
+                  {/* <hr/> */}
+                </details>
+              </li>
             </ul>
           </div>
           <div className="pt-6 mx-4 flex-col space-x-6">
@@ -902,7 +698,7 @@ export default function Navbar({ h_data }) {
             </Link>
           </div>
           <div className="mt-auto">
-            <p className="mt-6 mb-4 text-sm text-right text-gray-500">
+            <p className="mt-6 mb-4 text-sm text-center text-gray-500">
               <span>© 2021 All rights reserved.</span>
             </p>
           </div>

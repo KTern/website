@@ -8,7 +8,6 @@ import { SocialProfileJsonLd } from 'next-seo';
 import { FAQPageJsonLd } from 'next-seo';
 import BreadCrumb from "../../component/breadcrumb";
 import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
-import SEO from "../../component/seo";
 export default function News({data,h_data,f_data}){
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -20,8 +19,72 @@ export default function News({data,h_data,f_data}){
     }
     return (
        <>
-       <SEO data={data.PageSEO}></SEO>
-           
+            <NextSeo
+				title={data.PageSEO.PageTitle}
+				description={data.PageSEO.PageDescription}
+				canonical={data.PageSEO.CanonicalTag}
+				openGraph={{
+					url: `${data.PageSEO.PageURL}`,
+					title: `${data.PageSEO.PageTitle}`,
+					description: `${data.PageSEO.PageDescription}`,
+					images: [
+						{
+							url:`${data.PageSEO.ThumbnailImageURL}`,
+							width: 1920,
+							height: 1080,
+							alt: `${data.PageSEO.PageTitle}`,
+							type: 'image/png',
+						}
+					],
+					site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+				}}
+				twitter={{
+					handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+					site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+				}}
+				facebook={{
+					handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+					site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+					appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+				}}
+				// languageAlternates={[
+				// 	{
+				// 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+				// 		href: `${h_data.OtherSEO.languageAlternates.href}`,
+				// 	},
+				// ]}
+				additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "Nivedha",
+          },
+          {
+            name: "application-name",
+            content: "KTern.AI",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+        ]}
+				additionalLinkTags={[
+					{
+						rel: 'icon',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+					},
+					{
+						rel: 'apple-touch-icon',
+						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+						sizes: '76x76',
+					},
+					{
+						rel: 'manifest',
+						href: '/manifest.json',
+					},
+				]}
+			/>
 <BreadcrumbJsonLd
       itemListElements={breadcrumb}
     />
@@ -46,21 +109,21 @@ export default function News({data,h_data,f_data}){
         </section>
          {/*/ Page Header section */}
          {/* News List Section */}
-        <section className="py-20 grid md:grid-cols-3 lg:grid-cols-4 gap-6 px-10 ">
+        <section className="py-20 grid md:grid-cols-3 gap-4 px-10 ">
      {data.NewsCard.slice(0).reverse().map((dt)=>(  
           <Link key="dt" href={dt.PageUrl} >
               <a
                onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Card Click",section_name:"News Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.NewsTitle}`})}}  
-               className=" hover:shadow-xl  shadow-md border shadow-sky-600  rounded-lg  relative flex  flex-wrap px-2  group overflow-hidden false transition transform hover:-translate-y-3 duration-200 ">   
-             
+              className=" relative flex   px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">   
+              <span className={`absolute rounded-lg top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-secondary `} style={{height:'250px',width:'600px'}}></span>
               <div 
-              className="relative  rounded-lg  bg-white flex-col p-3   overflow-hidden false "
+                className={`relative  rounded-lg shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-primary `}
               >
-                <div className="  bg-white grid-rows-2 gap-3 mr-12 text-black">
+                <div className=" bg-white grid-rows-2 gap-3  mr-12 text-black">
                                             
                                            <div className="h-50">
                                             <h3 className="my-2  header mb-5 text-gray-800">{dt.NewsTitle}</h3>       
-                                           <div className=" bg-dxaas-primary mb-4 h-0.5 w-20"></div>
+                                           <div className="bg-dxaas-primary mb-4 h-0.5 w-20"></div>
                                            </div>
                                             <div className="h-1/2 navbar-s">{dt.Date}</div>
                                 </div>

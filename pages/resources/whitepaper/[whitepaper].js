@@ -8,7 +8,6 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../../component/breadcrumb";
-import Email from "../../../component/pattern";
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
@@ -334,7 +333,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab">
                         <label
-                          className="label"
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                           htmlFor="First_Name"
                         >
                           {data.FormFields.FirstName}
@@ -343,7 +342,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       <div className="zcwf_col_fld">
                         <input
                           required
-                          className="input"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="text"
                           id="First_Name"
                           name="First Name"
@@ -355,7 +354,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab">
                         <label
-                          className="label"
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                           htmlFor="Last_Name"
                         >
                           {data.FormFields.LastName}
@@ -364,7 +363,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       <div className="zcwf_col_fld">
                         <input
                           required
-                          className="input"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="text"
                           id="Last_Name"
                           name="Last Name"
@@ -376,14 +375,22 @@ This blueprint will help you define the right plan, the right effort estimate, t
                     <div className="zcwf_row">
                       <div className="zcwf_col_lab">
                         <label
-                          className="label"
+                          className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
                           htmlFor="Email"
                         >
                           {data.FormFields.Email}
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <Email/>
+                        <input
+                          required
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          type="email"
+                          ftype="email"
+                          id="Email"
+                          name="Email"
+                          maxLength="100"
+                        ></input>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
@@ -483,7 +490,8 @@ This blueprint will help you define the right plan, the right effort estimate, t
                           id="formsubmit"
                           value={data.FormFields.SubmitButton}
                           title="Submit"
-                          className="formsubmit form-button"
+                          className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
+                                            rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                         />
                       </div>
                     </div>
