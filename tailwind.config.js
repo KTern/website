@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 module.exports = {
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './component/**/*.{js,ts,jsx,tsx}'],
 	darkMode: false, // or 'media' or 'class'
@@ -8,7 +8,9 @@ module.exports = {
 		},
 		extend: {
 			screens: {
-				sm: { max: '1000px' },
+				sm: {
+					max: '1000px',
+				},
 			},
 			backgroundImage: (theme) => ({
 				hero: "url('https://storage.googleapis.com/ktern-public-files/website/Hero/ktern-ai-hero.png')",
@@ -46,85 +48,54 @@ module.exports = {
 				violet: colors.violet,
 				cyan: colors.cyan,
 				rose: colors.rose,
-
 				indigo: colors.indigo,
 				slate: colors.slate,
 				bg: '#F9FAFC',
 				zinc: '#fafafa',
 				projects: {
 					primary: '#2666BA',
-
 					secondary: '#DDE9F8',
-
 					50: '#BBD3F1',
-
 					100: '#78A6E3',
-
 					200: '#5690DC',
-
 					300: '#347AD5',
-
 					400: '#2666BA',
 				},
 				process: {
 					primary: '#795091',
-
 					secondary: '#D9CAE2',
-
 					50: '#C7B0D4',
-
 					100: '#B496C5',
-
 					200: '#A17BB7',
-
 					300: '#8E61A8',
-
 					400: '#634176',
 				},
 				maps: {
 					primary: '#E07F00',
-
 					secondary: '#FFDCAD',
-
 					50: '#FFCA85',
-
 					100: '#FFB85C',
-
 					200: '#FFA733',
-
 					300: '#FF950A',
-
 					400: '#F28900',
 					500: '#F28900',
 				},
 				mines: {
 					primary: '#BA2926',
-
 					secondary: '#F1BCBB',
-
 					50: '#EA9B99',
-
 					100: '#E37978',
-
 					200: '#DC5856',
-
 					300: '#D53734',
-
 					400: '#BA2926',
 				},
 				labs: {
 					primary: '#26BA2B',
-
 					secondary: '#BBF1BD',
-
 					50: '#99EA9C',
-
 					100: '#78E37B',
-
 					200: '#56DC5A',
-
 					300: '#34D539',
-
 					400: '#1C8720',
 				},
 				dxaas: {
