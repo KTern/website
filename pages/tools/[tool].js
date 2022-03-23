@@ -423,52 +423,10 @@ console.log(e.target)
            
           }}
         >
-<<<<<<< HEAD
-          
-          <div className="mx-10">
-            <BreadCrumb color={"white"} b_data={breadcrumb} />
-          </div>
-          {keyValue>-1 && keyValue< data.Quiz.length &&
-           <div className="flex items-center justify-center py-4">
-           <div className={`w-${data.Quiz.length*8}  absolute h-1 bg-bg rounded-full  `}></div>
-           <div className="flex items-center z-0 justify-center space-x-2 ">
-             {data.Quiz.map((key, index) => (
-               <span
-               onClick={(e) => {
-                 if(index+1==keyValue)
-                changeSlide("prev");
-                else if(index-1==keyValue)
-                validateForm()
-                else
-                  throwError("Please fill the required field.")
-                onClick({
-                  stream_score: resolve_stream_score("none"),
-                  event_name: "Button Click",
-                  section_name: "Form Section",
-                  page_source: `${data.PageSEO.PageTitle}`,
-                  label: `${data.Buttons[2].buttonTitle}`,
-                });
-              }}
-                 key="index"
-                 className={`cursor-pointer ${
-                   
-                   keyValue == index
-                     ? "bg-primary text-secondary border-2 border-bg"
-                     : "bg-secondary text-primary"
-                 } w-8 h-8 flex items-center justify-center  rounded-full `}
-               >
-                 {index + 1}
-               </span>
-             ))}
-           </div>
-         </div> }
-          <ToastContainer className="" position="bottom-right" />
-=======
          <div className="mx-10">
          <BreadCrumb  color={"white"} b_data={breadcrumb} />
          </div>
           <ToastContainer position="top-right" />
->>>>>>> a059170dacd5a03e4c1b809bc037063678291efa
           {keyValue == -1 && (
             <div className=" text-white flex flex-col events  items-center justify-center ">
               <h1 className="heading md:w-2/4 text-center mb-10">
