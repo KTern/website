@@ -1,7 +1,7 @@
-export default function ValuePoints({ data, stream }) {
+export default function ValuePoints({ data, stream, background }) {
 	return (
 		<>
-			<section className="bg-streamsBg py-12 bg-white overflow-hidden">
+			<section className={`bg-${background} py-12 bg-white overflow-hidden `}>
 				<div className="container px-4 mx-auto">
 					<div className="text-center">
 						<span

@@ -38,13 +38,15 @@ export default function DigitalStream({ pageData, headerData, footerData, backgr
 					stream={pageData.ProductsDevAttributes.Stream}
 					breadcrumb={pageData.PageSEO.BreadCrumb}
 					background={background}
+					feature={false}
 				></Hero>
-				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream}></ValuePoints>
+				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream} background={'white'}></ValuePoints>
 				<LogoBanner data={pageData.CustomerLogo} stream={pageData.ProductsDevAttributes.Stream}></LogoBanner>
 				<StreamFeatures
 					data={pageData.StreamFeatures}
 					source={pageData.PageSEO.PageTitle}
 					stream={pageData.ProductsDevAttributes.Stream}
+					button={true}
 				></StreamFeatures>
 				<MultiCarousel data={pageData.Bots} stream={pageData.ProductsDevAttributes.Stream}></MultiCarousel>
 				<Testimonial

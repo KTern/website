@@ -15,12 +15,16 @@ export default function CTABar1({ stream, data }) {
 						<div className="flex w-full md:w-auto lg:flex-shrink-0">
 							<a
 								href={data.PrimaryCTA.linkURL}
+								target="_blank"
+								rel="noreferrer"
 								className={`mr-4 block w-full px-5 py-3 text-base font-medium leading-6 text-center text-white transition duration-150 ease-in-out tag-${stream} md:inline-flexmd:shadow md:w-auto hover:bg-gray-400 focus:outline-none focus:shadow-outline rounded-r-xl hyperlink rounded-b-xl`}
 							>
 								{data.PrimaryCTA.buttonTitle}
 							</a>
 							<a
 								href={data.SecondaryCTA.linkURL}
+								target="_blank"
+								rel="noreferrer"
 								className="block w-full px-5 py-3 text-base font-medium leading-6 text-center text-white transition duration-150 ease-in-out bg-gray-600 md:inline-flex md:shadow md:w-auto hover:bg-gray-400 focus:outline-none focus:shadow-outline rounded-r-xl hyperlink rounded-b-xl"
 							>
 								{data.SecondaryCTA.buttonTitle}

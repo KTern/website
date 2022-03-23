@@ -16,6 +16,7 @@ export default function PartnerLandingPage({ pageData, headerData, footerData, s
 					source={pageData.PageSEO.PageTitle}
 					stream={stream}
 					background={'dxaas'}
+					button={false}
 				></StreamFeatures>
 				<ImageCard stream={stream} data={pageData.PartnerSolutions}></ImageCard>
 				<CTABar1 stream={stream} data={pageData.CTACard}></CTABar1>

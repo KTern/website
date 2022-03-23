@@ -41,17 +41,20 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 					stream={pageData.ProductsDevAttributes.Stream}
 					breadcrumb={pageData.PageSEO.BreadCrumb}
 					background={background}
+					feature={true}
 				></Hero>
-				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream}></ValuePoints>
 				<TestimonialSingle
 					data={pageData.CustomerTestimonial}
 					stream={pageData.ProductsDevAttributes.Stream}
 				></TestimonialSingle>
+				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream} background={'bg'}></ValuePoints>
+
 				<StreamFeatures
 					data={pageData.StreamFeatures}
 					source={pageData.PageSEO.PageTitle}
 					stream={pageData.ProductsDevAttributes.Stream}
 					background={'banner'}
+					button={true}
 				></StreamFeatures>
 				<Statistics stream={pageData.ProductsDevAttributes.Stream} data={pageData.Statistics}></Statistics>
 				<TabSet stream={pageData.ProductsDevAttributes.Stream} data={pageData.OtherFeatures}></TabSet>
@@ -60,10 +63,6 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 					title={pageData.FAQ.SectionTitle}
 					stream={pageData.ProductsDevAttributes.Stream}
 				/>
-				{/* <FeaturedResources
-					data={pageData.FeaturedResources}
-					stream={pageData.ProductsDevAttributes.Stream}
-				></FeaturedResources> */}
 				<FeaturedResourcesComponent
 					resources={pageData.ResourcesComponent}
 					stream={pageData.ProductsDevAttributes.Stream}

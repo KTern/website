@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Breadcrumbs from './breadcrumb-new';
 
-export default function Hero({ data, stream, breadcrumb, background }) {
+export default function Hero({ data, stream, breadcrumb, background, feature }) {
 	let form = data.ProductsBannerForm;
 	return (
 		<>
 			<section className={`relative  overflow-hidden`}>
-				<div className={` flex flex-wrap pb-4  ${background}-${stream}`} >
+				<div className={` flex flex-wrap pb-4  ${background}-${stream}`}>
 					<div className="w-full lg:w-1/2 pt-12 pb-6 flex justify-center">
 						<div className="px-12 pl-24 sm:p-8 sm:py-0">
 							<div className="ml-auto mb-8 lg:mb-8 m-4">
@@ -76,29 +76,35 @@ export default function Hero({ data, stream, breadcrumb, background }) {
 									<input type="hidden" id="scriptless" name="scriptless" value="yes"></input>
 								</form>
 							</div>
-							<div className="rating pt-5 sm:hidden">
-								<div className="rating-star"></div>
-								<div className="rating-star"></div>
-								<div className="rating-star"></div>
-								<div className="rating-star"></div>
-								<div className="rating-star"></div>
-								<span className="pl-3 text-gray-600">{data.ReviewStatement}</span>
-							</div>
-							<div className="flex flex-wrap items-center justify-center -mx-2 mb-6 mt-5 sm:hidden">
-								{data.ReviewImages.map((dt) => (
-									<div key="dt" className="w-1/4 md:w-1/4 lg:w-1/4">
-										<Image
-											priority
-											className={`mx-auto lg:mx-0 h-5`}
-											layout="responsive"
-											src={dt.imageURL}
-											alt={dt.imageDescription}
-											width={dt.width}
-											height={dt.height}
-										/>
+							{feature ? (
+								''
+							) : (
+								<div>
+									<div className="rating pt-5 sm:hidden">
+										<div className="rating-star"></div>
+										<div className="rating-star"></div>
+										<div className="rating-star"></div>
+										<div className="rating-star"></div>
+										<div className="rating-star"></div>
+										<span className="pl-3 text-gray-600">{data.ReviewStatement}</span>
 									</div>
-								))}
-							</div>
+									<div className="flex flex-wrap items-center justify-center -mx-2 mb-6 mt-5 sm:hidden">
+										{data.ReviewImages.map((dt) => (
+											<div key="dt" className="w-1/4 md:w-1/4 lg:w-1/4">
+												<Image
+													priority
+													className={`mx-auto lg:mx-0 h-5`}
+													layout="responsive"
+													src={dt.imageURL}
+													alt={dt.imageDescription}
+													width={dt.width}
+													height={dt.height}
+												/>
+											</div>
+										))}
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
 					<div className="w-full lg:w-1/2 pr-12 pt-24 sm:hidden">
@@ -109,7 +115,24 @@ export default function Hero({ data, stream, breadcrumb, background }) {
 									alt={data.BannerImage.imageDescription}
 									width={data.BannerImage.width}
 									height={data.BannerImage.height}
+									className="relative z-10 p-0 mt-10 transform rounded-xl lg:scale-110"
 								/>
+								{feature ? (
+									<div className="absolute top-0 right-0 w-full h-full mt-4 -mr-5 transform scale-125 rotate-135">
+										<svg
+											className="absolute top-0 w-full h-full transform fill-current lg:scale-x-150 text-purple-50"
+											viewBox="0 0 200 200"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M43.5,-76.5C55.9,-68.2,65.2,-55.6,71.9,-42.1C78.5,-28.6,82.7,-14.3,81.3,-0.8C79.8,12.7,72.8,25.3,64.7,36.3C56.5,47.2,47.2,56.3,36.2,63.3C25.2,70.2,12.6,75,-1.1,76.9C-14.8,78.9,-29.7,78,-43.7,72.8C-57.7,67.6,-70.9,58.1,-79.3,45.2C-87.7,32.4,-91.2,16.2,-90.7,0.3C-90.3,-15.7,-85.9,-31.4,-76.4,-42.3C-66.9,-53.1,-52.3,-59.2,-38.7,-66.9C-25.1,-74.5,-12.6,-83.7,1.5,-86.3C15.6,-88.8,31.1,-84.8,43.5,-76.5Z"
+												transform="translate(100 100)"
+											></path>
+										</svg>
+									</div>
+								) : (
+									''
+								)}
 							</div>
 						</div>
 					</div>

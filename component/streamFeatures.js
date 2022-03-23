@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Event from '../component/page_event';
 
-export default function StreamFeatures({ data, source, stream }) {
+export default function StreamFeatures({ data, source, stream, button }) {
 	// Amplitude Tracking onClick
 	function onClick(data) {
 		Event(data);
@@ -22,7 +22,7 @@ export default function StreamFeatures({ data, source, stream }) {
 									</span>
 									<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold ibm-plex">{dt.Title}</h1>
 									<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
-									<Link href={dt.CTAUrl} passHref>
+									{button ? (<Link href={dt.CTAUrl} passHref>
 										<a
 											onClick={() => {
 												onClick({
@@ -37,7 +37,7 @@ export default function StreamFeatures({ data, source, stream }) {
 										>
 											{dt.CTAText}
 										</a>
-									</Link>
+									</Link>) : ('')}
 								</div>
 
 								<div className=" w-full lg:w-1/2 px-8 flex items-center justify-center sm:hidden">
@@ -88,7 +88,7 @@ export default function StreamFeatures({ data, source, stream }) {
 										</span>
 										<h1 className="mb-4 text-3xl md:text-5xl leading-tight font-bold ibm-plex">{dt.Title}</h1>
 										<p className="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">{dt.Description}</p>
-										<Link href={dt.CTAUrl} passHref>
+										{button ? (<Link href={dt.CTAUrl} passHref>
 											<a
 												onClick={() => {
 													onClick({
@@ -103,7 +103,7 @@ export default function StreamFeatures({ data, source, stream }) {
 											>
 												{dt.CTAText}
 											</a>
-										</Link>
+										</Link>) : ('')}
 									</div>
 								</div>
 							</div>

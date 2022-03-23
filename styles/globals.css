@@ -1190,6 +1190,10 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   border-color: #2666BA;
 }
 
+.text-projects {
+  color: #2666BA;
+}
+
 /* Digital Process  */
 
 .section-process {
@@ -1232,6 +1236,9 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   border-color: #5449AB;
 }
 
+.text-process {
+  color: #5449AB;
+}
 /* Digital Labs  */
 
 .section-labs {
@@ -1274,6 +1281,10 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   border-color: #1C8720;
 }
 
+.text-labs {
+  color: #1C8720;
+}
+
 /* Digital Mines  */
 
 .section-mines {
@@ -1314,6 +1325,10 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
 .border-mines {
   --tw-border-opacity: 1;
   border-color: #BA2926;
+}
+
+.text-mines {
+  color: #BA2926;
 }
 /* Tabs  */
 .react-tabs {

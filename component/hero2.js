@@ -4,13 +4,13 @@ export default function Hero2({ data, stream, breadcrumb }) {
   return (
 		<>
 			<section>
-				<div className="relative pt-24 pb-2 bg-gray-900 border-b-4 border-purple-600 overflow-hidden">
+				<div className="relative pt-24 pb-16 bg-gray-900 border-b-4 border-purple-600 overflow-hidden">
 					<div className="container mx-auto px-4">
 						<div className="text-left">
 							{' '}
 							<Breadcrumbs breadcrumb={breadcrumb} />
 						</div>
-						<div className="max-w-2xl mx-auto text-center mb-10 md:mb-10">
+						<div className="max-w-2xl mx-auto text-center mb-10 md:mb-10 mt-10">
 							<img
 								className="hidden lg:block absolute inset-0 w-full"
 								src="https://shuffle.dev/atis-assets/background/lines.svg"
@@ -41,7 +41,7 @@ export default function Hero2({ data, stream, breadcrumb }) {
 									{data.CTAButtons[1].buttonTitle}
 								</a>
 							</div> */}
-							<div className="pb-2 pt-6">
+							{/* <div className="pb-2 pt-6">
 								<div className="flex flex-wrap  items-center justify-center">
 									<div className="mb-4 w-full md:w-1/2 lg:w-1/4  sm:hidden px-2">
 										<div className="p-8 bg-gray-50 rounded-r-2xl rounded-b-2xl">
@@ -71,7 +71,7 @@ export default function Hero2({ data, stream, breadcrumb }) {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

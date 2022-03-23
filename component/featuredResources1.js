@@ -61,7 +61,7 @@ export default function FeaturedResourcesComponent({ resources, stream, articles
 							))}
 						</div>
 
-						<div className="col-span-12 md:col-span-4 sm:col-span-10">
+						<div className="col-span-12 md:col-span-4 sm:col-span-10 sm:p-8">
 							<div className="relative overflow-hidden border-b-2 border-dxaas">
 								<h4 className="px-3 py-1.5 tag-dxaas text-white uppercase text-sm inline-block font-medium">
 									{news.Title}
@@ -83,7 +83,7 @@ export default function FeaturedResourcesComponent({ resources, stream, articles
 										<h2 className="relative mt-5 mb-3 text-xl font-bold leading-tight text-white hover:underline">
 											{dt2.Title}
 										</h2>
-										<p className="text-sm text-white opacity-50 hover:opacity-100">{dt2.Description}</p>
+										{/* <p className="text-sm text-white opacity-50 hover:opacity-100">{dt2.Description}</p> */}
 										<span className="relative flex mt-3 text-xs text-white opacity-90">
 											<span className={`mr-1 font-normal text-xs p-2 border border-coolGray-200 border border-${stream}`}>
 												{dt2.Tag}
