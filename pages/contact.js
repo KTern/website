@@ -7,7 +7,8 @@ import Head from "next/head";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from 'next/router';
 import BreadCrumb from "../component/breadcrumb"; 
- import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function Contact({ data, h_data, f_data }) {
+import Event, { resolve_interest_score, resolve_stream_score } from "../component/page_event";
+export default function Contact({ data, h_data, f_data }) {
   const router=useRouter();
   // console.log(router.query.message);
   if(router.query.message=="thanks"){
