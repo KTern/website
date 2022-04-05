@@ -1,39 +1,40 @@
-import Image from "next/image";
-import Link from "next/link";
-import Countdown from "react-countdown";
-import Layout from "../../../component/Layout";
-import React, { useState, useEffect } from "react";
-import Carousel from "react-multi-carousel";
-import image from "next/image";
-import Head from "next/head";
-import { Timeline } from "react-twitter-widgets";
-import Markdown from "markdown-to-jsx";
-import { useRouter } from "next/router";
-import BreadCrumb from "../../../component/breadcrumb";
-import ReactTooltip from "react-tooltip";
+import Image from 'next/image';
+import Link from 'next/link';
+import Countdown from 'react-countdown';
+import Layout from '../../../component/Layout';
+import React, { useState, useEffect } from 'react';
+import Carousel from 'react-multi-carousel';
+import image from 'next/image';
+import Head from 'next/head';
+import { Timeline } from 'react-twitter-widgets';
+import Markdown from 'markdown-to-jsx';
+import { useRouter } from 'next/router';
+import BreadCrumb from '../../../component/breadcrumb';
+import ReactTooltip from 'react-tooltip';
 // SEO Tags
-import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
 import { EventJsonLd } from 'next-seo';
+import Email from '../../../component/pattern';
 const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+	superLargeDesktop: {
+		// the naming can be any, depends on you.
+		breakpoint: { max: 4000, min: 3000 },
+		items: 5,
+	},
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 4,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 2,
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+	},
 };
 let events = [];
 import Event, { resolve_stream_score } from '../../../component/page_event';
@@ -64,103 +65,129 @@ import Event, { resolve_stream_score } from '../../../component/page_event';
 //   else events.push(e.value);
 // }
 export default function Events({ h_data, f_data, data }) {
-  function onClick(data){
-    Event(data)
-    }
-  const router = useRouter();
-  console.log(router.query.message);
- 
-  
-  let breadcrumb = [];
+	function onClick(data) {
+		Event(data);
+	}
+	const router = useRouter();
+	console.log(router.query.message);
+
+	let breadcrumb = [];
 	data.PageSEO.BreadCrumb.map((dt) => {
-	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+		breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
 	});
-  let performers=[]
-  data.speakers.speakersList.map((dt)=>{
-      performers.push({name:dt.speakerName})
-  })
-  const [countDownState, setCountDownState] = useState(false);
-  // Count down renderer
+	let performers = [];
+	data.speakers.speakersList.map((dt) => {
+		performers.push({ name: dt.speakerName });
+	});
+	const [countDownState, setCountDownState] = useState(false);
+	// Count down renderer
 
-  // @refresh reset
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    // console.log(completed)
+	// @refresh reset
+	const renderer = ({ days, hours, minutes, seconds, completed }) => {
+		// console.log(completed)
 
-    if (completed) setCountDownState(true);
-    return (
-      <div className="flex md:space-x-4  ">
-        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
-            {days}
-          </span>
-          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
-            Days
-          </p>
-        </div>
+		if (completed) setCountDownState(true);
+		return (
+			<div className="flex md:space-x-4  ">
+				<div
+					className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}
+				>
+					<span
+						className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}
+					>
+						{days}
+					</span>
+					<p
+						className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}
+					>
+						Days
+					</p>
+				</div>
 
-        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
-          :
-        </span>
-        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
-            {hours}
-          </span>
-          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
-            Hours
-          </p>
-        </div>
-        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
-          :
-        </span>
-        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
-            {minutes}
-          </span>
-          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
-            Minutes
-          </p>
-        </div>
-        <span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
-          :
-        </span>
-        <div className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}>
-          <span className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}>
-            {seconds}
-          </span>
-          <p className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}>
-            Seconds
-          </p>
-        </div>
-      </div>
-    );
-  };
-  // Message Container on Form Submission
-  const [thanksState,setThanksState]=useState(false)
-  
-  useEffect(() => {
-    if (router.query.message == 'thanks') {
-      setThanksState(true);
-  }
-    if (countDownState) {
-      window.addEventListener("click", validateForm);
-    }
-    window.addEventListener("popstate", () => {
-      router.reload();
-      setCountDownState(false);
-    });
-  }, []);
-  // Form checkbox Validation
-  function validateForm() {
-    if (events.length > 0) {
-      document.getElementById("eventsField").setCustomValidity("");
-      document.getElementById("zcWebOptin").disabled = false;
-    } else {
-      document
-        .getElementById("eventsField")
-        .setCustomValidity("Please select atleast one event");
-    }
-  }
-  return (
+				<span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
+					:
+				</span>
+				<div
+					className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}
+				>
+					<span
+						className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}
+					>
+						{hours}
+					</span>
+					<p
+						className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}
+					>
+						Hours
+					</p>
+				</div>
+				<span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
+					:
+				</span>
+				<div
+					className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}
+				>
+					<span
+						className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}
+					>
+						{minutes}
+					</span>
+					<p
+						className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}
+					>
+						Minutes
+					</p>
+				</div>
+				<span className={`items-center mb-10 flex justify-center text-${data.heroSection.PrimaryColor} text-3xl`}>
+					:
+				</span>
+				<div
+					className={`flex flex-col items-center uppercase text-${data.heroSection.PrimaryColor}  font-bold text-sm`}
+				>
+					<span
+						className={`h-16 w-16 items-center bg-${data.heroSection.PrimaryColor} bg-opacity-10 flex justify-center  border border-${data.heroSection.PrimaryColor}  text-${data.heroSection.PrimaryColor} shadow-xl rounded-full text-2xl font-bold  mb-2`}
+					>
+						{seconds}
+					</span>
+					<p
+						className={` px-2 py-1 rounded-lg text-${data.heroSection.SecondaryColor} bg-${data.heroSection.PrimaryColor} shadow-xl  font-bold`}
+					>
+						Seconds
+					</p>
+				</div>
+			</div>
+		);
+	};
+	// Message Container on Form Submission
+	const [thanksState, setThanksState] = useState(false);
+	const [windowSize, setWindowSize] = useState(0);
+	useEffect(() => {
+		if (router.query.message == 'thanks') {
+			setThanksState(true);
+		}
+		setWindowSize(window.innerWidth);
+		window.addEventListener('resize', () => {
+			setWindowSize(window.innerWidth);
+		});
+
+		if (countDownState) {
+			window.addEventListener('click', validateForm);
+		}
+		window.addEventListener('popstate', () => {
+			router.reload();
+			setCountDownState(false);
+		});
+	}, []);
+	// Form checkbox Validation
+	function validateForm() {
+		if (events.length > 0) {
+			document.getElementById('eventsField').setCustomValidity('');
+			document.getElementById('zcWebOptin').disabled = false;
+		} else {
+			document.getElementById('eventsField').setCustomValidity('Please select atleast one event');
+		}
+	}
+	return (
 		<>
 			<body className="">
 				<LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
@@ -244,30 +271,47 @@ export default function Events({ h_data, f_data, data }) {
 					performers={performers}
 					url={data.EventsSEO.WebUrl}
 				/>
+
 				<Layout h_data={h_data} f_data={f_data} className="events">
 					{/* Hero Section */}
 					<section className="overflow-hidden  pt-4">
-						<div className=" sm:bg-mobileeventsbg md:bg-roadshowbg bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl ">
+						<div
+							style={{
+								backgroundImage:
+									windowSize > 400
+										? `url(${data.heroSection.ImageURL})`
+										: `url(${data.heroSection.alternateImageUrl})`,
+								backgroundRepeat: 'no-repeat',
+							}}
+							className=" sm:bg-mobileeventsbg  bg-cover rounded-b-9xl pb-6 overflow-auto  shadow-xl !important"
+						>
 							<div className=" px-4 mx-auto pb-5">
 								<div className="mx-28 mt-10">
-									<BreadCrumb color={'white'} b_data={breadcrumb} />
+									<BreadCrumb color={data.heroSection.PrimaryColor} b_data={breadcrumb} />
 								</div>
 								<div className="relative flex flex-col items-center justify-center pt-2 z-20 mb-16 xl:mb-0">
-									<span className="block mb-4 mt-10 text-center  tracking-wide heading text-white">
+									<span
+										className={`block mb-4 mt-10 text-center  tracking-wide heading text-${data.heroSection.PrimaryColor}`}
+									>
 										{data.heroSection.header}
 									</span>
-									<h1 className="max-w-xl mb-6 mx-auto  text-center text-white subheading  leading-tight">
+									<h1
+										className={`max-w-xl mb-6 mx-auto  text-center text-${data.heroSection.PrimaryColor} subheading  leading-tight`}
+									>
 										{data.heroSection.subHeading}
 									</h1>
 									{!countDownState && <Countdown renderer={renderer} date={data.eventDate} className="mb-4" />}
 									{countDownState && (
-										<div className="text-black text-lg font-bold uppercase live-text p-3 rounded-md ">
+										<div
+											className={`text-${data.heroSection.SecondaryColor} text-lg font-bold uppercase live-text p-3 rounded-md `}
+										>
 											{data.alternateBannerText}
 										</div>
 									)}
 									<div className="flex space-x-4 mt-10">
 										<Link href={`${data.heroSection.primaryCTA.linkURL}`} passHref>
 											<a
+												target={data.heroSection.primaryCTA.openNewTab ? '_blank' : '_self'}
 												className={`inline-block py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
 											>
 												{data.heroSection.primaryCTA.buttonTitle}
@@ -276,6 +320,7 @@ export default function Events({ h_data, f_data, data }) {
 										{!countDownState && (
 											<Link href={`${data.heroSection.secondaryCTA.linkURL}`} passHref>
 												<a
+													target={data.heroSection.secondaryCTA.openNewTab ? '_blank' : '_self'}
 													className={`inline-block py-3 px-10  bg-white text-black hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
 												>
 													{data.heroSection.secondaryCTA.buttonTitle}
@@ -298,14 +343,14 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Hero Section */}
 					{/* Logos Section */}
-					<div id={data.SectionID.FeaturedPartners} className="anchor px-4 pt-14">
+					<div id={data.SectionID.FeaturedPartners} className="anchor pb-3 px-4 pt-10">
 						<div className=" px-4 mx-auto">
 							<h2 className="section-heading mt-2 mb-4 text-center">{data.TrustedByStatement}</h2>
 							{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
 						</div>
-						<Carousel className="bots flex p-6 items-center justify-center  z-10" responsive={responsive}>
+						<Carousel className="bots flex p-4 items-center lg:justify-center  z-10" responsive={responsive}>
 							{data.TrustedByLogos.map((dt) => (
-								<div key="dt" className="p-3 bots-card flex-row">
+								<div key="dt" className="text-center p-4">
 									<Image
 										priority
 										className=" w-auto lg:w-100"
@@ -321,7 +366,7 @@ export default function Events({ h_data, f_data, data }) {
 					</div>
 					{/* Logos Section */}
 					{/* Speakers Section */}
-					<section  id={data.SectionID.Speakers} className="anchor relative bg-white pb-10 sm:px-6 pt-5 events">
+					<section id={data.SectionID.Speakers} className="anchor relative bg-white pb-10 sm:px-6 pt-5 events">
 						<div className="container mx-auto text-center">
 							<div className=" mx-auto mb-8">
 								<span className="inline-block py-1 px-3 hyperlink bg-blue-100 text-gray-600 text-sm rounded-xl">
@@ -356,7 +401,7 @@ export default function Events({ h_data, f_data, data }) {
 					{/*/ Speakers Section */}
 					{/* Featured Events */}
 					{data.ToggleFeaturedEvents && (
-						<section  id={data.SectionID.FeaturedEvents} className="anchor events">
+						<section id={data.SectionID.FeaturedEvents} className="anchor events">
 							<section className=" md:px-10 py-10 bg-eventsbg bg-cover  mx-5">
 								<svg
 									className="absolute -mt-20 hidden lg:block"
@@ -379,122 +424,71 @@ export default function Events({ h_data, f_data, data }) {
 									</p>
 								</div>
 								<Carousel
-									className=" flex py-5 items-center  z-10 -mx-4 overflow-hidden "
+									className={`flex py-5 items-center lg:${
+										data.events.length >= 4 ? '' : 'justify-center'
+									}  z-10 -mx-4 overflow-hidden `}
 									responsive={responsive}
 								>
 									{data.events.map((data) => (
 										<div
 											key="data"
-											className="h-full w-80 relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500"
+											className="h-full w-80 relative flex  px-2  group  false transition transform hover:-translate-y-3 "
 										>
-											{data.OpenNewTab && (
-												<div
-													className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
-												>
-													<div className="bg-white">
+											<div
+												className={`relative  bg-white flex-col p-5 px-5  group false rounded-xl shadow-lg `}
+											>
+												<div className="bg-white">
+													<Link href={data.CTAUrl} passHref>
+														<a
+															target={data.OpenNewTab ? '_blank' : '_self'}
+															className="relative h-2/6 w-full block w-full  overflow-hidden rounded"
+														>
+															<Image
+																priority
+																className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+																src={data.Icon.imageURL}
+																alt={data.Icon.imageDescription}
+																width="550"
+																height="300"
+															/>
+														</a>
+													</Link>
+												</div>
+												<Link href={data.CTAUrl} passHref>
+													<a className="bg-white" target={data.OpenNewTab ? '_blank' : '_self'}>
+														<span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
+															{data.CardTitle}
+														</span>
+														<span className="bg-white block card-subheading h-2/6  leading-tight text-gray-700  hover:text-gray-900 ">
+															{data.CardDescription}
+														</span>
 														<Link href={data.CTAUrl} passHref>
 															<a
-																target="_blank"
-																className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+																target={data.OpenNewTab ? '_blank' : '_self'}
+																className="mb-10 flex bg-white w-full inline-flex  items-center   text-black hover:text-gray-400 group "
 															>
-																<Image
-																	priority
-																	className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-																	src={data.Icon.imageURL}
-																	alt={data.Icon.imageDescription}
-																	width="550"
-																	height="300"
-																/>
-															</a>
-														</Link>
-													</div>
-													<Link href={data.CTAUrl} passHref>
-														<a className="bg-white">
-															<span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
-																{data.CardTitle}
-															</span>
-															<span className="bg-white block card-subheading h-1/5  leading-tight text-gray-700  hover:text-gray-900 ">
-																{data.CardDescription}
-															</span>
-															<Link href={data.CTAUrl} passHref>
-																<a
-																	target="_blank"
-																	className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
+																<span className="hyperlink group-hover:text-gray-300">
+																	{data.CTAText}
+																</span>
+																<svg
+																	className="w-5 h-6 mt-1 ml-2  group-hover:text-gray-300"
+																	fill="none"
+																	stroke="currentColor"
+																	viewBox="0 0 24 24"
+																	xmlns="http://www.w3.org/2000/svg"
 																>
-																	<span className="hyperlink group-hover:text-gray-300">
-																		{data.CTAText}
-																	</span>
-																	<svg
-																		className="w-5 h-6 mt-1 ml-2  group-hover:text-gray-300"
-																		fill="none"
-																		stroke="currentColor"
-																		viewBox="0 0 24 24"
-																		xmlns="http://www.w3.org/2000/svg"
-																	>
-																		<path
-																			strokeLinecap="round"
-																			strokeLinejoin="round"
-																			strokeWidth="2"
-																			d="M17 8l4 4m0 0l-4 4m4-4H3"
-																		></path>
-																	</svg>
-																</a>
-															</Link>
-														</a>
-													</Link>
-												</div>
-											)}
-											{!data.OpenNewTab && (
-												<div
-													className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}
-												>
-													<div className="bg-white">
-														<Link href={data.CTAUrl} passHref>
-															<a className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
-																<Image
-																	priority
-																	className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-																	src={data.Icon.imageURL}
-																	alt={data.Icon.imageDescription}
-																	width="550"
-																	height="300"
-																/>
+																	<path
+																		strokeLinecap="round"
+																		strokeLinejoin="round"
+																		strokeWidth="2"
+																		d="M17 8l4 4m0 0l-4 4m4-4H3"
+																	></path>
+																</svg>
 															</a>
 														</Link>
-													</div>
-													<Link href={data.CTAUrl} passHref>
-														<a className="bg-white">
-															<span className="bg-white block text-md mb-2 font-bold leading-tight text-gray-700  hover:text-gray-900 ">
-																{data.CardTitle}
-															</span>
-															<span className="bg-white block card-subheading  leading-tight text-gray-700  hover:text-gray-900 ">
-																{data.CardDescription}
-															</span>
-															<Link href={data.CTAUrl} passHref>
-																<a className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
-																	<span className="hyperlink group-hover:text-gray-300">
-																		{data.CTAText}
-																	</span>
-																	<svg
-																		className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-																		fill="none"
-																		stroke="currentColor"
-																		viewBox="0 0 24 24"
-																		xmlns="http://www.w3.org/2000/svg"
-																	>
-																		<path
-																			strokeLinecap="round"
-																			strokeLinejoin="round"
-																			strokeWidth="2"
-																			d="M17 8l4 4m0 0l-4 4m4-4H3"
-																		></path>
-																	</svg>
-																</a>
-															</Link>
-														</a>
-													</Link>
-												</div>
-											)}
+													</a>
+												</Link>
+											</div>
 										</div>
 									))}
 								</Carousel>
@@ -502,50 +496,65 @@ export default function Events({ h_data, f_data, data }) {
 						</section>
 					)}
 					{/* /Featured Events */}
+
 					{/* Video Banner */}
-					{!data.isVideoSectionVisible && (
+					{data.IsVideoSectionVisible && (
 						<section
-						id={data.SectionID.EventVideo}
+							id={data.SectionID.EventVideo}
 							className="anchor events py-10 text-center justify-center items-center flex flex-col"
 						>
 							<h2 className="section-heading mb-3">{data.eventVideo.heading}</h2>
 							<p className="section-subheading mb-6 text-center">{data.eventVideo.subHeading}</p>
-							<div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+							{data.IsPodcastPage && (
 								<div>
-									<iframe
-										className="hidden lg:block"
-										style={{
-											height: 'calc(89vh - 100px)',
-											width: 'calc(130vh)',
-										}}
-										src={data.eventVideo.videoUrl}
-										title={data.eventVideo.heading}
-										frameBorder="0"
-										scrolling="no"
-										allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen
-									></iframe>
-									<iframe
-										className="lg:hidden block"
-										style={{
-											height: 'calc(59vh - 100px)',
-											width: 'calc(60vh)',
-										}}
-										src={data.eventVideo.videoUrl}
-										title={data.eventVideo.heading}
-										frameBorder="0"
-										scrolling="no"
-										allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen
-									></iframe>
+									<a rel="noreferrer" target="_blank" href={data.eventVideo.videoUrl}>
+										<img
+											src="https://www.gstatic.com/podcasts_console/promote/English_EN/EN_Google_Podcasts_Badge.svg"
+											width="150"
+											height="38"
+											alt="Listen on Google Podcasts"
+										/>
+									</a>
 								</div>
-							</div>
+							)}
+							{!data.IsPodcastPage && (
+								<div className="justify-center overflow-hidden bg-gradient-to-r from-sky-900 via-black to-sky-300 h-full w-full flex flex-wrap">
+									<div>
+										<iframe
+											className="hidden lg:block"
+											style={{
+												height: 'calc(89vh - 100px)',
+												width: 'calc(130vh)',
+											}}
+											src={data.eventVideo.videoUrl}
+											title={data.eventVideo.heading}
+											frameBorder="0"
+											scrolling="no"
+											allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowFullScreen
+										></iframe>
+										<iframe
+											className="lg:hidden block"
+											style={{
+												height: 'calc(59vh - 100px)',
+												width: 'calc(60vh)',
+											}}
+											src={data.eventVideo.videoUrl}
+											title={data.eventVideo.heading}
+											frameBorder="0"
+											scrolling="no"
+											allow="accelerometer;loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowFullScreen
+										></iframe>
+									</div>
+								</div>
+							)}
 						</section>
 					)}
 					{/* /Video Banner */}
 					{/* Register Section */}
-					{!data.isRegistrationFormVisible && (
-						<section  id={data.SectionID.Registration} className="anchor events">
+					{data.IsRegistrationFormVisible && (
+						<section id={data.SectionID.Registration} className="anchor events">
 							<section className="py-5 pb-10 px-5">
 								<div className="flex flex-col items-center justify-center text-center">
 									<p className="section-heading mb-2">{data.registerSection.header}</p>
@@ -614,15 +623,7 @@ export default function Events({ h_data, f_data, data }) {
 																			>
 																				{data.form.email}
 																			</label>
-																			<input
-																				required
-																				className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-																				maxLength="100"
-																				placeholder="Business Email"
-																				name="CONTACT_EMAIL"
-																				changeitem="SIGNUP_FORM_FIELD"
-																				type="email"
-																			/>
+																			<Email name={'CONTACT_EMAIL'} />
 																		</div>
 																		<div></div>
 																	</div>
@@ -636,7 +637,7 @@ export default function Events({ h_data, f_data, data }) {
 																			</label>
 																			<input
 																				required
-																				className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+																				className="block w-full px-4 py-4 mt-2 placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus: outline-none focus:border-black"
 																				maxLength="100"
 																				placeholder="Full Name"
 																				name="FIRSTNAME"
@@ -652,13 +653,13 @@ export default function Events({ h_data, f_data, data }) {
                                   >
                                     <div>
                                       <label
-                                        className="absolute px-2 ml-2 -mt-3 card-subheading font-bold text-black bg-white"
+                                        className="label"
                                         title="Events"
                                       >
                                         {data.form.events}
                                       </label>
 
-                                      <div className="  block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black">
+                                      <div className="  input">
                                         {data.form.eventsList.map((dt) => (
                                           <div
                                             key="dt"
@@ -786,7 +787,10 @@ export default function Events({ h_data, f_data, data }) {
 					)}
 					{/*/ Register Section */}
 					{/* Access Report */}
-					<section  id={data.SectionID.ValueReport} className="anchor relative bg-white py-20  events overflow-hidden">
+					<section
+						id={data.SectionID.ValueReport}
+						className="anchor relative bg-white py-20  events overflow-hidden"
+					>
 						<div className="hidden md:block absolute top-0 right-0 w-1/2 h-full  rounded-b-10xl"></div>
 						<div className="relative  mx-auto">
 							<div className="flex flex-wrap items-center text-center">
@@ -797,25 +801,15 @@ export default function Events({ h_data, f_data, data }) {
 									<p className="mb-10 section-subheading text-darkBlueGray-400">
 										{data.accessReportSection.CardDescription}
 									</p>
-									{data.accessReportSection.OpenNewTab && (
-										<Link href={data.accessReportSection.CTAUrl} passHref>
-											<a
-												target="_blank"
-												className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
-											>
-												{data.accessReportSection.CTAText}
-											</a>
-										</Link>
-									)}
-									{!data.accessReportSection.OpenNewTab && (
-										<Link href={data.accessReportSection.CTAUrl} passHref>
-											<a
-												className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
-											>
-												{data.accessReportSection.CTAText}
-											</a>
-										</Link>
-									)}
+
+									<Link href={data.accessReportSection.CTAUrl} passHref>
+										<a
+											target={data.accessReportSection.OpenNewTab ? '_blank' : '_self'}
+											className={`inline-block mb-10 md:mb-0 py-3 px-10  bg-black border-2 border-white text-white hover:bg-secondary hover:text-black shadow text-black  rounded-r-xl rounded-b-xl transition duration-200 uppercase border-2 border-black  hyperlink button`}
+										>
+											{data.accessReportSection.CTAText}
+										</a>
+									</Link>
 								</div>
 								<div className="relative w-full md:w-1/2 px-10   ">
 									<div className="md:hidden absolute bottom-0 left-0 h-full w-full rounded-b-xl10 "></div>
@@ -835,151 +829,87 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Access Report */}
 					{/* Featured Articles */}
-					<section  id={data.SectionID.Resources} className="events anchor px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center ">
+					<section
+						id={data.SectionID.Resources}
+						className="events anchor px-10 md:px-20 md:mx-20 mb-10 flex flex-col items-center justify-center "
+					>
 						<h2 className="section-heading mb-4 ">{data.featuredArticlesSectionHeading}</h2>
 						<p className="section-subheading mb-10 text-center">{data.featureArticlesSectionSubheading}</p>
 						<div className="grid lg:grid-cols-6 sm:grid-rows-2 gap-y-4  lg:gap-8 lg:mb-10">
 							<div className="lg:col-span-4 flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-								{data.featuredArticles[0].OpenNewTab && (
-									<Link href={data.featuredArticles[0].CTAUrl} passHref>
-										<a
-											target="_blank"
-											className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-										>
-											<div className="hidden lg:block">
-												<Image
-													priority
-													className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-													src={data.featuredArticles[0].Icon.imageURL}
-													alt={data.featuredArticles[0].Icon.imageDescription}
-													width={data.featuredArticles[0].Icon.width}
-													height={data.featuredArticles[0].Icon.height}
-												/>
-											</div>
-											<div className="lg:hidden block">
-												<Image
-													priority
-													className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-													src={data.featuredArticles[0].Icon.imageURL}
-													alt={data.featuredArticles[0].Icon.imageDescription}
-													width="650"
-													height="470"
-												/>
-											</div>
-											<div className="px-4 ">
-												<p className="md:text-lg text-md font-semibold  mb-2">
-													{data.featuredArticles[0].CardTitle}
-												</p>
-											</div>
-										</a>
-									</Link>
-								)}
-								{!data.featuredArticles[0].OpenNewTab && (
-									<Link href={data.featuredArticles[0].CTAUrl} passHref>
-										<a className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl">
-											<div className="hidden lg:block">
-												<Image
-													priority
-													className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-													src={data.featuredArticles[0].Icon.imageURL}
-													alt={data.featuredArticles[0].Icon.imageDescription}
-													width={data.featuredArticles[0].Icon.width}
-													height={data.featuredArticles[0].Icon.height}
-												/>
-											</div>
-											<div className="lg:hidden block">
-												<Image
-													priority
-													className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-													src={data.featuredArticles[0].Icon.imageURL}
-													alt={data.featuredArticles[0].Icon.imageDescription}
-													width="650"
-													height="470"
-												/>
-											</div>
-											<div className="px-4 ">
-												<p className="md:text-lg text-md font-semibold  mb-2">
-													{data.featuredArticles[0].CardTitle}
-												</p>
-											</div>
-										</a>
-									</Link>
-								)}
+								<Link href={data.featuredArticles[0].CTAUrl} passHref>
+									<a
+										target={data.featuredArticles[0].OpenNewTab ? '_blank' : '_self'}
+										className="relative  h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+									>
+										<div className="hidden lg:block">
+											<Image
+												priority
+												className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+												src={data.featuredArticles[0].Icon.imageURL}
+												alt={data.featuredArticles[0].Icon.imageDescription}
+												width={data.featuredArticles[0].Icon.width}
+												height={data.featuredArticles[0].Icon.height}
+											/>
+										</div>
+										<div className="lg:hidden block">
+											<Image
+												priority
+												className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+												src={data.featuredArticles[0].Icon.imageURL}
+												alt={data.featuredArticles[0].Icon.imageDescription}
+												width="650"
+												height="470"
+											/>
+										</div>
+										<div className="px-4 ">
+											<p className="md:text-lg text-md font-semibold  mb-2">
+												{data.featuredArticles[0].CardTitle}
+											</p>
+										</div>
+									</a>
+								</Link>
 							</div>
 
 							<div className="lg:col-span-2  flex flex-col items-center justify-center rounded-xl10 shadow-xl">
-								{data.featuredArticles[1].OpenNewTab && (
-									<Link href={data.featuredArticles[1].CTAUrl} passHref>
-										<a
-											target="_blank"
-											className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-										>
-											<Image
-												priority
-												className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-												src={data.featuredArticles[1].Icon.imageURL}
-												alt=""
-												width={data.featuredArticles[1].Icon.width}
-												height={data.featuredArticles[1].Icon.height}
-											/>
-											<p className="text-md mb-4 font-semibold px-4">{data.featuredArticles[1].CardTitle}</p>
-										</a>
-									</Link>
-								)}
-								{!data.featuredArticles[1].OpenNewTab && (
-									<Link href={data.featuredArticles[1].CTAUrl} passHref>
-										<a className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl">
-											<Image
-												priority
-												className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-												src={data.featuredArticles[1].Icon.imageURL}
-												alt=""
-												width={data.featuredArticles[1].Icon.width}
-												height={data.featuredArticles[1].Icon.height}
-											/>
-											<p className="text-md mb-4 font-semibold px-4">{data.featuredArticles[1].CardTitle}</p>
-										</a>
-									</Link>
-								)}
+								<Link href={data.featuredArticles[1].CTAUrl} passHref>
+									<a
+										target={data.featuredArticles[1].OpenNewTab ? '_blank' : '_self'}
+										className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+									>
+										<Image
+											priority
+											className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+											src={data.featuredArticles[1].Icon.imageURL}
+											alt=""
+											width={data.featuredArticles[1].Icon.width}
+											height={data.featuredArticles[1].Icon.height}
+										/>
+										<p className="text-md mb-4 font-semibold px-4">{data.featuredArticles[1].CardTitle}</p>
+									</a>
+								</Link>
 							</div>
 						</div>
 						<div className="grid sm:grid-rows-3 lg:grid-cols-3 gap-y-4  lg:gap-8">
 							{data.featuredArticles.map((dt, index) => {
 								return index > 1 ? (
 									<div key="dt" className=" flex items-center justify-center rounded-xl shadow-xl">
-										{dt.OpenNewTab && (
-											<Link href={dt.CTAUrl} passHref>
-												<a
-													target="_blank"
-													className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
-												>
-													<Image
-														priority
-														className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-														src={dt.Icon.imageURL}
-														alt={dt.Icon.imageDescription}
-														width={dt.Icon.width}
-														height={dt.Icon.height}
-													/>
-													<p className="text-md mb-4 font-semibold px-4">{dt.CardTitle}</p>
-												</a>
-											</Link>
-										)}
-										{!dt.OpenNewTab && (
-											<Link href={dt.CTAUrl} passHref>
-												<a className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl">
-													<Image
-														priority
-														className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
-														src={dt.Icon.imageURL}
-														alt={dt.Icon.imageDescription}
-														width={dt.Icon.width}
-														height={dt.Icon.height}
-													/>
-													<p className="text-md mb-4 font-semibold px-4">{dt.CardTitle}</p>
-												</a>
-											</Link>
-										)}
+										<Link href={dt.CTAUrl} passHref>
+											<a
+												target={dt.OpenNewTab ? '_blank' : '_self'}
+												className="relative h-full w-full block w-full h-44 overflow-hidden rounded-xl"
+											>
+												<Image
+													priority
+													className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105 "
+													src={dt.Icon.imageURL}
+													alt={dt.Icon.imageDescription}
+													width={dt.Icon.width}
+													height={dt.Icon.height}
+												/>
+												<p className="text-md mb-4 font-semibold px-4">{dt.CardTitle}</p>
+											</a>
+										</Link>
 									</div>
 								) : (
 									<></>
@@ -989,7 +919,10 @@ export default function Events({ h_data, f_data, data }) {
 					</section>
 					{/* /Featured Articles */}
 					{/* Discussions Section */}
-					<section  id={data.SectionID.SocialMediaFeed} className="events anchor py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10">
+					<section
+						id={data.SectionID.SocialMediaFeed}
+						className="events anchor py-20 grid lg:grid-cols-4 text-center sm:grid-rows-4 px-10"
+					>
 						<div className="lg:hidden block  flex flex-col px-10">
 							<h2 className="section-heading mb-4 mt-5">{data.discussionSection.heading}</h2>
 							<p className="section-subheading text-gray-400">{data.discussionSection.subHeading}</p>
@@ -1050,7 +983,7 @@ export default function Events({ h_data, f_data, data }) {
 				</Layout>
 			</body>
 		</>
-  );
+	);
 }
 // export const getStaticPaths = async () => {
 //   // dynamic route array values must be acquired here from strapi
@@ -1067,42 +1000,32 @@ export default function Events({ h_data, f_data, data }) {
 // };
 
 export const getServerSideProps = async (ctx) => {
-  const event_name = ctx.params.event;
+	const event_name = ctx.params.event;
+	const webcast = ctx.params.e_category;
+	const res = await fetch(`https://api.ktern.com/events-libraries?eventSlug=${event_name}&&categorySlug=${webcast}`, {
+		method: 'get',
+	});
 
-  const res = await fetch(
-    `https://api.ktern.com/events-libraries?eventSlug=${event_name}`,
-    {
-      method: "get",
-    }
-  );
-  // console.log(res)
-
-  const data = await res.json();
-  if (data[0] == undefined) {
-    ctx.res.setHeader("Location", "/404");
-    ctx.res.statusCode = 302;
-    ctx.res.end();
-  }
-  const res1 = await fetch("https://api.ktern.com/header", {
-    method: "get",
-  });
-  const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
-    method: "get",
-  });
-  const f_data = await res2.json();
-  return {
-    props: {
-      data: data[0],
-      h_data: h_data,
-      f_data: f_data,
-    },
-  };
+	const data = await res.json();
+	console.log(data);
+	if (data[0] == undefined) {
+		ctx.res.setHeader('Location', '/404');
+		ctx.res.statusCode = 302;
+		ctx.res.end();
+	}
+	const res1 = await fetch('https://api.ktern.com/header', {
+		method: 'get',
+	});
+	const h_data = await res1.json();
+	const res2 = await fetch('https://api.ktern.com/footer', {
+		method: 'get',
+	});
+	const f_data = await res2.json();
+	return {
+		props: {
+			data: data[0],
+			h_data: h_data,
+			f_data: f_data,
+		},
+	};
 };
-
-
-
-
-
-
-

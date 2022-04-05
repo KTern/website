@@ -5,18 +5,21 @@ export const pattern={
 export default function Email({class_name,name}){
     console.log(class_name)
     return (
-        <input
-                          type="email"
-                          ftype="email"
-                          id="Email"
-                          name={`${name!==undefined?name:'Email'}`}
-                          maxLength="100"
-                          className={`${class_name!==undefined?class_name:'input'}`}
-                          required
-                         
-                                        changeitem="SIGNUP_FORM_FIELD"
-                          pattern={pattern.pattern}
-                          title={pattern.title}
-                        />
-    )
+			<input
+				type="email"
+				ftype="email"
+				id="Email"
+				name={`${name !== undefined ? name : 'Email'}`}
+				maxLength="100"
+				className={`${
+					class_name !== undefined
+						? class_name
+						: 'block w-full px-4 py-4 mt-2 placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus: outline-none focus:border-black'
+				}`}
+				required
+				changeitem="SIGNUP_FORM_FIELD"
+				pattern={pattern.pattern}
+				title={pattern.title}
+			/>
+		);
 }
