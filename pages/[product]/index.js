@@ -13,6 +13,8 @@ import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
 import FeaturedResourcesComponent from '../../component/featuredResources1';
 
+
+
 export default function DigitalStream({ pageData, headerData, footerData, background }) {
 
 	// Testimonials JSON LD
