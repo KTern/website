@@ -20,6 +20,9 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 	useEffect(() => {
 		if (pageData == undefined) router.push('/404');
 	}, []);
+	
+	
+	
 	let breadcrumb = [];
 	pageData.PageSEO.BreadCrumb.map((dt) => {
 		breadcrumb.push({
