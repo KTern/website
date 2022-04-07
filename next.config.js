@@ -1,27 +1,43 @@
 module.exports = {
 	swcMinify: true,
+	async redirects() {
+		return [
+			{
+				source: '/company/contact',
+				destination: '/contact',
+				permanent: true,
+			},
+		];
+	},
+	async rewrites() {
+		return {
+			beforeFiles: [
+				{
+					source: '/company/contact',
+					destination: '/contact',
+				},
+			],
+			afterFiles: [
+				{
+					source: '/company/contact',
+					destination: '/contact',
+				},
+			],
+			fallback: [
+				{
+					source: '/company/contact',
+					destination: `https://ktern.com/contact`,
+				},
+			],
+		};
+	},
 	target: 'serverless',
 	reactStrictMode: true,
 	throwIfNamespace: false,
-	optimizeImages: true,
-	poweredByHeader: false,
-	compress: true,
-	trailingSlash: false,
-	devIndicators: {
-		buildActivityPosition: 'bottom-right',
-	},
+	optimizeImages: false,
 	i18n: {
-		locales: ['en'],
+		locales: ['en', 'de'],
 		defaultLocale: 'en',
-	},
-	generateBuildId: async () => {
-		// You can, for example, get the latest git commit hash here
-		return 'build-id';
-	},
-	eslint: {
-		// Warning: This allows production builds to successfully complete even if
-		// your project has ESLint errors.
-		ignoreDuringBuilds: true,
 	},
 	images: {
 		domains: [
@@ -49,8 +65,26 @@ module.exports = {
 			'stackoverflow.com',
 			'web.ktern.com',
 			'shuffle.dev',
-			'storage.googleapis.com',
+			'storage.googleapis.com'
 		],
+	},
+
+	headers() {
+		return [
+			{
+				// matching all API routes
+				source: '/api/:path*',
+				headers: [
+					{ key: 'Access-Control-Allow-Credentials', value: 'true' },
+					{ key: 'Access-Control-Allow-Origin', value: '*' },
+					{ key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT' },
+					{
+						key: 'Access-Control-Allow-Headers',
+						value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+					},
+				],
+			},
+		];
 	},
 };
 
