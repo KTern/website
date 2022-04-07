@@ -78,126 +78,126 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
   );
 }
 
-export const getStaticPaths = async () => {
+// export const getStaticPaths = async () => {
 	// dynamic route array values must be acquired here from strapi
-	const data = [
-		{
-			product: 'digital-maps',
-			feature: 'business-process-mining',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'custom-code-analysis',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'timeline-effort-estimation',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'landscape-assessment',
-		},
-		{
-			product: 'digital-maps',
-			feature: 'transformation-insights',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'digital-workspace',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'sap-activate-cockpit',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'social-collaboration',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'signoffs-workflows',
-		},
-		{
-			product: 'digital-projects',
-			feature: 'project-reporting',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-orchestration',
-		},
-		{
-			product: 'digital-process',
-			feature: 'sap-scope-item-cockpit',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-modelling',
-		},
-		{
-			product: 'digital-process',
-			feature: 'process-dashboards',
-		},
-		{
-			product: 'digital-process',
-			feature: 'custom-process-adaptation',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-repository',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-scripts-evidences-defects',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-reporting',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'test-scenario-recommendations',
-		},
-		{
-			product: 'digital-labs',
-			feature: 'uat-signoffs',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'change-impact-mining',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'test-fit-gaps',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'process-impact',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'change-impact-orchestration',
-		},
-		{
-			product: 'digital-mines',
-			feature: 'release-impact-analytics',
-		},
-	];
+// 	const data = [
+// 		{
+// 			product: 'digital-maps',
+// 			feature: 'business-process-mining',
+// 		},
+// 		{
+// 			product: 'digital-maps',
+// 			feature: 'custom-code-analysis',
+// 		},
+// 		{
+// 			product: 'digital-maps',
+// 			feature: 'timeline-effort-estimation',
+// 		},
+// 		{
+// 			product: 'digital-maps',
+// 			feature: 'landscape-assessment',
+// 		},
+// 		{
+// 			product: 'digital-maps',
+// 			feature: 'transformation-insights',
+// 		},
+// 		{
+// 			product: 'digital-projects',
+// 			feature: 'digital-workspace',
+// 		},
+// 		{
+// 			product: 'digital-projects',
+// 			feature: 'sap-activate-cockpit',
+// 		},
+// 		{
+// 			product: 'digital-projects',
+// 			feature: 'social-collaboration',
+// 		},
+// 		{
+// 			product: 'digital-projects',
+// 			feature: 'signoffs-workflows',
+// 		},
+// 		{
+// 			product: 'digital-projects',
+// 			feature: 'project-reporting',
+// 		},
+// 		{
+// 			product: 'digital-process',
+// 			feature: 'process-orchestration',
+// 		},
+// 		{
+// 			product: 'digital-process',
+// 			feature: 'sap-scope-item-cockpit',
+// 		},
+// 		{
+// 			product: 'digital-process',
+// 			feature: 'process-modelling',
+// 		},
+// 		{
+// 			product: 'digital-process',
+// 			feature: 'process-dashboards',
+// 		},
+// 		{
+// 			product: 'digital-process',
+// 			feature: 'custom-process-adaptation',
+// 		},
+// 		{
+// 			product: 'digital-labs',
+// 			feature: 'test-repository',
+// 		},
+// 		{
+// 			product: 'digital-labs',
+// 			feature: 'test-scripts-evidences-defects',
+// 		},
+// 		{
+// 			product: 'digital-labs',
+// 			feature: 'test-reporting',
+// 		},
+// 		{
+// 			product: 'digital-labs',
+// 			feature: 'test-scenario-recommendations',
+// 		},
+// 		{
+// 			product: 'digital-labs',
+// 			feature: 'uat-signoffs',
+// 		},
+// 		{
+// 			product: 'digital-mines',
+// 			feature: 'change-impact-mining',
+// 		},
+// 		{
+// 			product: 'digital-mines',
+// 			feature: 'test-fit-gaps',
+// 		},
+// 		{
+// 			product: 'digital-mines',
+// 			feature: 'process-impact',
+// 		},
+// 		{
+// 			product: 'digital-mines',
+// 			feature: 'change-impact-orchestration',
+// 		},
+// 		{
+// 			product: 'digital-mines',
+// 			feature: 'release-impact-analytics',
+// 		},
+// 	];
 
-	const paths = data.map((index) => {
-		return {
-			params: {
-				product: index.product,
-				feature: index.feature,
-			},
-		};
-	});
-	return {
-		paths,
-		fallback: false,
-	};
-};
+// 	const paths = data.map((index) => {
+// 		return {
+// 			params: {
+// 				product: index.product,
+// 				feature: index.feature,
+// 			},
+// 		};
+// 	});
+// 	return {
+// 		paths,
+// 		fallback: false,
+// 	};
+// };
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
 	const streamslug = ctx.params.product;
 	const featureslug = ctx.params.feature;
 
