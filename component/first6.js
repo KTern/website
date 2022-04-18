@@ -1,6 +1,6 @@
 export default function Fifth({data,stream}){
     return(
-        <a href={data.Resource[1].CTAUrl} target="_blank" rel="noreferrer">
+        <Link href={data.Resource[1].CTAUrl} target="_blank" rel="noreferrer">
 										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start bg-resourcesBg sm:px-8 sm:text-center sm:items-center sm:justify-center sm:p-2">
@@ -14,6 +14,6 @@ export default function Fifth({data,stream}){
 												</p>
 											</div>
 										</div>
-									</a>
+									</Link>
     )
 }

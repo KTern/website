@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Sixtheenth({data,stream}){
     return(
-        <a href={data.Resource[5].CTAUrl}>
+        <Link href={data.Resource[5].CTAUrl}>
 										<div className="relative h-64 mx-auto rounded sm:h-48">
 											<div className={`absolute inset-0 banner-${stream} rounded `}></div>
 											<div className="absolute inset-0 p-6 flex flex-col items-start sm:text-center sm:p-2">
@@ -15,6 +17,6 @@ export default function Sixtheenth({data,stream}){
 												</p>
 											</div>
 										</div>
-									</a>
+									</Link>
     )
 }

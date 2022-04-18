@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 export default function Seventh({data,stream}){
     return(
-        <a href={data.Resource[2].CTAUrl} target="_blank" rel="noreferrer">
+        <Link href={data.Resource[2].CTAUrl}> 
+		<a target="_blank" rel="noreferrer">
 										<div className="relative mx-auto rounded h-64 sm:h-48">
 											<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 											<div
@@ -21,6 +24,7 @@ export default function Seventh({data,stream}){
 												</p>
 											</div>
 										</div>
-									</a>
+										</a>
+									</Link>
     )
                                             }

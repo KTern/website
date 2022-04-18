@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Fourth({data , stream}){
     return(
-        <a href={data.Resource[1].CTAUrl}>
+        <Link href={data.Resource[1].CTAUrl}>
 									<div className="relative mx-auto rounded h-64 sm:h-48">
 										<div className={`absolute inset-0 bg-${stream} rounded`}></div>
 										<div
@@ -21,6 +23,6 @@ export default function Fourth({data , stream}){
 											</p>
 										</div>
 									</div>
-								</a>
+								</Link>
     )
 }
