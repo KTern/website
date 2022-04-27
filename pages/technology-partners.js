@@ -1,19 +1,19 @@
-import Layout from "../component/Layout";
-import Image from "next/image";
-import Link from "next/link";
-import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
-import { SocialProfileJsonLd } from "next-seo";
-import { FAQPageJsonLd } from "next-seo";
-import Carousel from "react-multi-carousel";
-import FAQ from "../component/faq";
-import Markdown from "markdown-to-jsx";
-import BreadCrumb from "../component/breadcrumb";
+import Layout from '../component/Layout';
+import Image from 'next/image';
+import Link from 'next/link';
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
+import { FAQPageJsonLd } from 'next-seo';
+import Carousel from 'react-multi-carousel';
+import FAQ from '../component/faq';
+import Markdown from 'markdown-to-jsx';
+import BreadCrumb from '../component/breadcrumb';
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
-} from "../component/page_event";
+} from '../component/page_event';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -42,10 +42,10 @@ export default function technical_partner({ data, h_data, f_data }) {
   function onClick(data) {
     Event(data);
   }
-  let faq=[]
-  data.FAQSection.map((dt)=>{
-    faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
-  })
+  let faq = [];
+  data.FAQSection.map((dt) => {
+    faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
+  });
   return (
     <>
       <NextSeo
@@ -62,7 +62,7 @@ export default function technical_partner({ data, h_data, f_data }) {
               width: 1920,
               height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
-              type: "image/png",
+              type: 'image/png',
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -86,40 +86,41 @@ export default function technical_partner({ data, h_data, f_data }) {
         // ]}
         additionalMetaTags={[
           {
-            property: "dc:creator",
-            content: "Nivedha",
+            property: 'dc:creator',
+            content: 'Nivedha',
           },
           {
-            name: "application-name",
-            content: "KTern.AI",
+            name: 'application-name',
+            content: 'KTern.AI',
           },
           {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
+            httpEquiv: 'x-ua-compatible',
+            content: 'IE=edge; chrome=1',
           },
         ]}
         additionalLinkTags={[
           {
-            rel: "icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+            rel: 'icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
           },
           {
-            rel: "apple-touch-icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
-            sizes: "76x76",
+            rel: 'apple-touch-icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+            sizes: '76x76',
           },
           {
-            rel: "manifest",
-            href: "/manifest.json",
+            rel: 'manifest',
+            href: '/manifest.json',
           },
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-
-      <FAQPageJsonLd
-        mainEntity={faq}
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
       />
+
+      <FAQPageJsonLd mainEntity={faq} />
       <Layout h_data={h_data} f_data={f_data}>
         <section className="w-full pt-16 py-8 bg-secondary">
           <div className="flex flex-col items-center space-x-14 px-4 mx-auto max-w-7xl lg:flex-row">
@@ -136,34 +137,34 @@ export default function technical_partner({ data, h_data, f_data }) {
               </p>
               <div className="md:flex md:items-center md:space-x-4 sm:space-y-6">
                 <Link href={data.PageHeader.primaryCTA.linkURL} passHref>
-                  <a 
-                   onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score("none"),
-                      event_name: "Button Click",
-                      section_name: "Hero Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.PageHeader.primaryCTA.buttonTitle}`,
-                    });
-                  }}
-                  className="lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button ">
+                  <a
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'Hero Section',
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.PageHeader.primaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="lg:inline-block py-4 px-6 bg-black hover:bg-gray-300 hover:text-black shadow uppercase text-white  rounded-r-xl hyperlink rounded-b-xl transition duration-200 button "
+                  >
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.PageHeader.secondaryCTA.linkURL} passHref>
                   <a
-                   onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score("none"),
-                      event_name: "Button Click",
-                      section_name: "Hero Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.PageHeader.secondaryCTA.buttonTitle}`,
-                    });
-                  }}
-                  className=" inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'Hero Section',
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.PageHeader.secondaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className=" inline-block sm:mb-4  md:mr-4  shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button"
+                  >
                     {data.PageHeader.secondaryCTA.buttonTitle}
                     <svg
                       className="inline-block w-2 ml-2"
@@ -177,7 +178,8 @@ export default function technical_partner({ data, h_data, f_data }) {
               </div>
             </div>
             <div className="hidden lg:block relative z-10 w-full h-full my-16 lg:my-0 lg:w-1/2">
-              <Image priority
+              <Image
+                priority
                 className="relative z-40 w-full h-full"
                 src={data.PageHeader.ImageURL}
                 alt="hero image"
@@ -202,7 +204,8 @@ export default function technical_partner({ data, h_data, f_data }) {
                 >
                   <div className="box-border flex flex-col  h-full px-2 py-8 mx-4 leading-6 border-solid sm:items-start sm:text-left">
                     <p className="max-w-max p-3 mb-2  font-medium hyperlink tracking-wider text-gray-900 uppercase bg-gray-200 rounded-full ">
-                      <Image priority
+                      <Image
+                        priority
                         src={data.Icon.imageURL}
                         height={data.Icon.height}
                         width={data.Icon.width}
@@ -234,7 +237,8 @@ export default function technical_partner({ data, h_data, f_data }) {
           <Carousel className="bots flex p-6  z-10" responsive={responsive}>
             {data.TrustedByLogos.map((dt) => (
               <div key="dt" className="p-3 bots-card flex-row">
-                <Image priority
+                <Image
+                  priority
                   className=" w-auto lg:w-100"
                   src={dt.imageURL}
                   alt={dt.imageDescription}
@@ -271,23 +275,22 @@ export default function technical_partner({ data, h_data, f_data }) {
                         {dt.StepTitle}
                       </h3>
                       <p className="card-subheading text-gray-200">
-                        
                         <Markdown
                           options={{
                             overrides: {
                               p: {
                                 props: {
-                                  className: "text-md text-justify ",
+                                  className: 'text-md text-justify ',
                                 },
                               },
                               strong: {
                                 props: {
-                                  className: "",
+                                  className: '',
                                 },
                               },
                               a: {
                                 props: {
-                                  className: "text-blue-900 hover:underline ",
+                                  className: 'text-blue-900 hover:underline ',
                                 },
                               },
                             },
@@ -324,32 +327,33 @@ export default function technical_partner({ data, h_data, f_data }) {
               <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link href={data.CTA.PrimaryCTA.linkURL} passHref>
                   <a
-                   onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score("none"),
-                      event_name: "Button Click",
-                      section_name: "CTA Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.CTA.PrimaryCTA.buttonTitle}`,
-                    });
-                  }} className="border-3 sm:px-16 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'CTA Section',
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.PrimaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="border-3 sm:px-16 border-white  inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 button border-2 border-black"
+                  >
                     {data.CTA.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
                 <Link href={data.CTA.SecondaryCTA.linkURL} passHref>
                   <a
-                   onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score("none"),
-                      event_name: "Button Click",
-                      section_name: "CTA Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.CTA.SecondaryCTA.buttonTitle}`,
-                    });
-                  }}
-                  className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'CTA Section',
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.SecondaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="  inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow  text-black  rounded-r-xl rounded-b-xl transition duration-200  border-2 border-black button"
+                  >
                     {data.CTA.SecondaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -364,16 +368,16 @@ export default function technical_partner({ data, h_data, f_data }) {
 export const getStaticProps = async () => {
   //    fetch strapi data
   const res = await fetch(`https://api.ktern.com/technology-partners`, {
-    method: "get",
+    method: 'get',
   });
   const data = await res.json();
   // console.log('data1', data);
-  const res1 = await fetch("https://api.ktern.com/header", {
-    method: "get",
+  const res1 = await fetch('https://api.ktern.com/header', {
+    method: 'get',
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
-    method: "get",
+  const res2 = await fetch('https://api.ktern.com/footer', {
+    method: 'get',
   });
   const f_data = await res2.json();
 
