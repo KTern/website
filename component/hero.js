@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Breadcrumbs from './breadcrumb-new';
+import Email from './pattern';
 /* eslint-disable react/prop-types */
 
 export default function Hero({
@@ -42,15 +43,12 @@ export default function Hero({
                 action="https://maillist-manage.in/weboptin.zc"
                 target="_zcSignup"
               >
-                <input
-                  className="relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded"
-                  type="text"
-                  placeholder={form.EmailPlaceholder}
-                  changeitem="SIGNUP_FORM_FIELD"
-                  name="CONTACT_EMAIL"
-                  id="EMBED_FORM_EMAIL_LABEL"
-                  required
-                />
+                <Email
+                  name={'Email'}
+                  class_name={
+                    'relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded'
+                  }
+                ></Email>
                 <button
                   className={`ml-4 sm:ml-0 sm:uppercase sm:w-3/4 sm:mt-1 inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
                   name="SIGNUP_SUBMIT_BUTTON"
@@ -67,12 +65,7 @@ export default function Hero({
                   name="submitType"
                   value="optinCustomView"
                 />
-                <input
-                  type="hidden"
-                  id="emailReportId"
-                  name="emailReportId"
-                  value=""
-                />
+
                 <input
                   type="hidden"
                   id="formType"

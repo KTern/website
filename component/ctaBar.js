@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import Email from './pattern';
+import React, { useEffect, useState } from 'react';
 
 export default function CtaBar({ stream, data }) {
   const formData = data.Form;
@@ -58,15 +59,12 @@ export default function CtaBar({ stream, data }) {
                   target="_zcSignup"
                   className="w-full"
                 >
-                  <input
-                    type="text"
-                    placeholder={formData.EmailPlaceholder}
-                    changeitem="SIGNUP_FORM_FIELD"
-                    name="CONTACT_EMAIL"
-                    id="EMBED_FORM_EMAIL_LABEL"
-                    required
-                    className="w-full py-4 pr-0 m-0 overflow-visible font-medium duration-300 border-2 border-gray-200 rounded-r-xl rounded-b-xl  outline-none sm:py-5 sm:pr-8 cursor-text pl-7 focus:outline-none focus-within:border-black-700 hover:border-gray-400"
-                  />
+                  <Email
+                    name={'CONTACT_EMAIL'}
+                    class_name={
+                      'w-full py-4 pr-0 m-0 overflow-visible font-medium duration-300 border-2 border-gray-200 rounded-r-xl rounded-b-xl  outline-none sm:py-5 sm:pr-8 cursor-text pl-7 focus:outline-none focus-within:border-black-700 hover:border-gray-400'
+                    }
+                  ></Email>
                   <button
                     className={`my-2 sm:relative absolute right-0 h-12 px-8 mr-3 text-white tag-${stream} rounded-r-xl rounded-b-xl `}
                     name="SIGNUP_SUBMIT_BUTTON"

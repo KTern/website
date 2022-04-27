@@ -13,7 +13,6 @@ import FeaturedResources from '../../component/featuredResources';
 import AppBanner from '../../component/appBanner';
 import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
-/* eslint-disable react/prop-types */
 
 export default function DigitalStream({
   pageData,
