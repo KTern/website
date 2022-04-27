@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable camelcase */
 import MultiCarousel from '../../component/carousel';
 import Hero from '../../component/hero';
 import Layout from '../../component/Layout';

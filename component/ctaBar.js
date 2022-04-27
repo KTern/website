@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
 import Email from './pattern';
 import React, { useEffect, useState } from 'react';
 
 export default function CtaBar({ stream, data }) {
   const formData = data.Form;
-
   return (
     <section className={`bg-${stream} py-16 px-28 sm:py-4 sm:px-4`}>
       <div className="container sm:px-0 sm:mx-0">

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-/* eslint-disable react/prop-types */
 
 export default function BreadCrumb({ b_data, color }) {
   return (

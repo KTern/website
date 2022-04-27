@@ -1,4 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
- 
+  "rules": {
+    "quotes": 1,
+    "react/prop-types": 1,
+    "linebreak-style": ["error", "windows"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "allowImplicit": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "ignoreImports": 0,
+    "react/react-in-jsx-scope": "off",
+
+    "no-tabs": "off",
+    "no-trailing-spaces": "off",
+    "no-shadow": "off",
+    "object-curly-newline": 0,
+    "react/jsx-boolean-value": 0,
+    "comma-dangle": 0,
+    "no-use-before-define": "off",
+    "no-confusing-arrow": "off",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "indent": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
 }
