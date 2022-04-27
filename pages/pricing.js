@@ -1,21 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-import Layout from "../component/Layout";
-import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
-import { SocialProfileJsonLd } from "next-seo";
+import Image from 'next/image';
+import Link from 'next/link';
+import Layout from '../component/Layout';
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
 
-import React, { useState, useRef, useEffect } from "react";
-import { isPlainObject } from "lodash";
-import Carousel from "react-multi-carousel";
-import FAQ from "../component/faq";
-import BreadCrumb from "../component/breadcrumb";
+import React, { useState, useRef, useEffect } from 'react';
+import { isPlainObject } from 'lodash';
+import Carousel from 'react-multi-carousel';
+import FAQ from '../component/faq';
+import BreadCrumb from '../component/breadcrumb';
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
-} from "../component/page_event";
-import Markdown from "markdown-to-jsx";
+} from '../component/page_event';
+import Markdown from 'markdown-to-jsx';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -35,7 +35,7 @@ const responsive = {
     items: 1,
   },
 };
-let selectedOptions = ["maps", "projects", "process", "labs", "mines"];
+let selectedOptions = ['maps', 'projects', 'process', 'labs', 'mines'];
 let total = 10;
 function handleClick(selectedOption) {
   if (!selectedOptions.includes(selectedOption)) {
@@ -48,13 +48,17 @@ function handleClick(selectedOption) {
   // console.log(selectedOptions)
 }
 function handleTotal() {
-  selectedOptions = ["maps", "projects", "process", "labs", "mines"];
+  selectedOptions = ['maps', 'projects', 'process', 'labs', 'mines'];
   total = 10;
 }
 export default function Pricing({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
-    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
+    breadcrumb.push({
+      position: dt.position,
+      name: dt.name,
+      item: dt.item,
+    });
   });
   // Amplitude Tracking onClick
   function onClick(data) {
@@ -68,44 +72,47 @@ export default function Pricing({ data, h_data, f_data }) {
   useEffect(() => {
     if (isMapsSelected) {
       if (process.browser)
-        document.getElementById("maps").style.borderColor = "blue";
+        document.getElementById('maps').style.borderColor = 'blue';
     } else {
       if (process.browser)
-        document.getElementById("maps").style.borderColor = "gray";
+        document.getElementById('maps').style.borderColor = 'gray';
     }
     if (isProjectsSelected) {
       if (process.browser)
-        document.getElementById("projects").style.borderColor = "blue";
+        document.getElementById('projects').style.borderColor = 'blue';
     } else {
       if (process.browser)
-        document.getElementById("projects").style.borderColor = "gray";
+        document.getElementById('projects').style.borderColor = 'gray';
     }
     if (isProcessSelected) {
       if (process.browser)
-        document.getElementById("process").style.borderColor = "blue";
+        document.getElementById('process').style.borderColor = 'blue';
     } else {
       if (process.browser)
-        document.getElementById("process").style.borderColor = "gray";
+        document.getElementById('process').style.borderColor = 'gray';
     }
     if (isLabsSelected) {
       if (process.browser)
-        document.getElementById("labs").style.borderColor = "blue";
+        document.getElementById('labs').style.borderColor = 'blue';
     } else {
       if (process.browser)
-        document.getElementById("labs").style.borderColor = "gray";
+        document.getElementById('labs').style.borderColor = 'gray';
     }
     if (isMinesSelected) {
       if (process.browser)
-        document.getElementById("mines").style.borderColor = "blue";
+        document.getElementById('mines').style.borderColor = 'blue';
     } else {
       if (process.browser)
-        document.getElementById("mines").style.borderColor = "gray";
+        document.getElementById('mines').style.borderColor = 'gray';
     }
   }, []);
-  let faq=[]
-  data.FAQSection.map((dt)=>{
-    faq.push({questionName:dt.Question,acceptedAnswerText:dt.Answer})
-  })
+  let faq = [];
+  data.FAQSection.map((dt) => {
+    faq.push({
+      questionName: dt.Question,
+      acceptedAnswerText: dt.Answer,
+    });
+  });
   return (
     <>
       <NextSeo
@@ -122,7 +129,7 @@ export default function Pricing({ data, h_data, f_data }) {
               width: 1920,
               height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
-              type: "image/png",
+              type: 'image/png',
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -146,37 +153,40 @@ export default function Pricing({ data, h_data, f_data }) {
         //  ]}
         additionalMetaTags={[
           {
-            property: "dc:creator",
-            content: "Nivedha",
+            property: 'dc:creator',
+            content: 'Nivedha',
           },
           {
-            name: "application-name",
-            content: "KTern.AI",
+            name: 'application-name',
+            content: 'KTern.AI',
           },
           {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
+            httpEquiv: 'x-ua-compatible',
+            content: 'IE=edge; chrome=1',
           },
         ]}
         additionalLinkTags={[
           {
-            rel: "icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+            rel: 'icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
           },
           {
-            rel: "apple-touch-icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
-            sizes: "76x76",
+            rel: 'apple-touch-icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+            sizes: '76x76',
           },
           {
-            rel: "manifest",
-            href: "/manifest.json",
+            rel: 'manifest',
+            href: '/manifest.json',
           },
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-    
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!-- Main Pricing Section-->         */}
         <section className="overflow-hidden text-gray-700 ">
@@ -209,7 +219,8 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image priority
+                                  <Image
+                                    priority
                                     src={data.PricingCard[0].StreamLogoURL}
                                     alt="Digital maps"
                                     height={40}
@@ -228,12 +239,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(false);
-                                      handleClick("maps");
+                                      handleClick('maps');
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score("none"),
-                                        event_name: "Button Click",
-                                        section_name: "Maps Section",
+                                          resolve_stream_score('none'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Maps Section',
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -251,12 +262,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(true);
-                                      handleClick("maps");
+                                      handleClick('maps');
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score("maps"),
-                                        event_name: "Button Click",
-                                        section_name: "Maps Section",
+                                          resolve_stream_score('maps'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Maps Section',
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -288,7 +299,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               key="dt"
                               className="inline-flex items-center mb-2 mr-2 card-subheading bg-secondary  px-3 py-1 bg-white  text-black rounded-full"
                             >
-                             <div> {dt.listItem}</div>
+                              <div> {dt.listItem}</div>
                             </div>
                           ))}
                         </div>
@@ -303,16 +314,15 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score("maps"),
-                                      event_name: "Link Click",
-                                      section_name: "Maps-Key Features Section",
+                                        resolve_stream_score('maps'),
+                                      event_name: 'Link Click',
+                                      section_name: 'Maps-Key Features Section',
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
                                   }}
                                   className="flex items-center mb-2 text-gray-600 card-subheading"
                                 >
-                                  
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -337,7 +347,6 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -354,7 +363,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               </p>
                             ))}
                           </div>
-                        </div>  
+                        </div>
                         <div className=" ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
@@ -366,7 +375,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image priority
+                                <Image
+                                  priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -408,7 +418,8 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image priority
+                                  <Image
+                                    priority
                                     src={data.PricingCard[1].StreamLogoURL}
                                     alt="Digital maps"
                                     height={40}
@@ -425,7 +436,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsProjectsSelected(false); handleClick("projects");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Projects Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
+                                    onClick={() => {
+                                      setIsProjectsSelected(false);
+                                      handleClick('projects');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('none'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Projects Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Unselect`,
+                                      });
+                                    }}
                                   >
                                     Unselect
                                   </button>
@@ -437,7 +459,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsProjectsSelected(true); handleClick("projects");onClick({stream_score:resolve_stream_score('projects'),event_name:"Button Click",section_name:"Projects Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
+                                    onClick={() => {
+                                      setIsProjectsSelected(true);
+                                      handleClick('projects');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('projects'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Projects Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Select`,
+                                      });
+                                    }}
                                   >
                                     Select
                                   </button>
@@ -456,7 +489,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                       
+
                         <div className="border-t  pt-5 mb-4 ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
@@ -477,19 +510,20 @@ export default function Pricing({ data, h_data, f_data }) {
                             </h2>
                             {data.PricingCard[1].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
-                                <a 
-                                 onClick={() => {
-                                  onClick({
-                                    stream_score:
-                                      resolve_stream_score("projects"),
-                                    event_name: "Link Click",
-                                    section_name: "Projects-Key Features Section",
-                                    page_source: `${data.PageSEO.PageTitle}`,
-                                    label: `${dt.listItem}`,
-                                  });
-                                }}
-                                className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  
+                                <a
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score:
+                                        resolve_stream_score('projects'),
+                                      event_name: 'Link Click',
+                                      section_name:
+                                        'Projects-Key Features Section',
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${dt.listItem}`,
+                                    });
+                                  }}
+                                  className="flex items-center mb-2 text-gray-600 card-subheading"
+                                >
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -514,7 +548,6 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -543,7 +576,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image priority
+                                <Image
+                                  priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -585,7 +619,8 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image priority
+                                  <Image
+                                    priority
                                     src={data.PricingCard[2].StreamLogoURL}
                                     alt="Digital process"
                                     height={40}
@@ -602,7 +637,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsProcessSelected(false); handleClick("process");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Process Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
+                                    onClick={() => {
+                                      setIsProcessSelected(false);
+                                      handleClick('process');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('none'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Process Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Unselect`,
+                                      });
+                                    }}
                                   >
                                     Unselect
                                   </button>
@@ -614,7 +660,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsProcessSelected(true); handleClick("process");onClick({stream_score:resolve_stream_score('process'),event_name:"Button Click",section_name:"Process Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
+                                    onClick={() => {
+                                      setIsProcessSelected(true);
+                                      handleClick('process');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('process'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Process Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Select`,
+                                      });
+                                    }}
                                   >
                                     Select
                                   </button>
@@ -633,7 +690,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                   
+
                         <div className="border-t  pt-5 mb-4 ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
@@ -655,18 +712,19 @@ export default function Pricing({ data, h_data, f_data }) {
                             {data.PricingCard[2].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
                                 <a
-                                 onClick={() => {
-                                  onClick({
-                                    stream_score:
-                                      resolve_stream_score("process"),
-                                    event_name: "Link Click",
-                                    section_name: "Process-Key Features Section",
-                                    page_source: `${data.PageSEO.PageTitle}`,
-                                    label: `${dt.listItem}`,
-                                  });
-                                }}
-                                className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score:
+                                        resolve_stream_score('process'),
+                                      event_name: 'Link Click',
+                                      section_name:
+                                        'Process-Key Features Section',
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${dt.listItem}`,
+                                    });
+                                  }}
+                                  className="flex items-center mb-2 text-gray-600 card-subheading"
+                                >
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -691,7 +749,6 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -720,7 +777,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image priority
+                                <Image
+                                  priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -762,7 +820,8 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image priority
+                                  <Image
+                                    priority
                                     src={data.PricingCard[3].StreamLogoURL}
                                     alt="Digital process"
                                     height={40}
@@ -779,7 +838,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsLabsSelected(false); handleClick("labs");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Labs Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
+                                    onClick={() => {
+                                      setIsLabsSelected(false);
+                                      handleClick('labs');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('none'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Labs Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Unselect`,
+                                      });
+                                    }}
                                   >
                                     Unselect
                                   </button>
@@ -791,7 +861,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsLabsSelected(true); handleClick("labs");onClick({stream_score:resolve_stream_score('labs'),event_name:"Button Click",section_name:"Labs Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
+                                    onClick={() => {
+                                      setIsLabsSelected(true);
+                                      handleClick('labs');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('labs'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Labs Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Select`,
+                                      });
+                                    }}
                                   >
                                     Select
                                   </button>
@@ -810,7 +891,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                      
+
                         <div className="border-t  pt-5 mb-4 ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
@@ -832,18 +913,18 @@ export default function Pricing({ data, h_data, f_data }) {
                             {data.PricingCard[3].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
                                 <a
-                                 onClick={() => {
-                                  onClick({
-                                    stream_score:
-                                      resolve_stream_score("labs"),
-                                    event_name: "Link Click",
-                                    section_name: "Labs-Key Features Section",
-                                    page_source: `${data.PageSEO.PageTitle}`,
-                                    label: `${dt.listItem}`,
-                                  });
-                                }}
-                                className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score:
+                                        resolve_stream_score('labs'),
+                                      event_name: 'Link Click',
+                                      section_name: 'Labs-Key Features Section',
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${dt.listItem}`,
+                                    });
+                                  }}
+                                  className="flex items-center mb-2 text-gray-600 card-subheading"
+                                >
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -868,7 +949,6 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -897,7 +977,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image priority
+                                <Image
+                                  priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -939,7 +1020,8 @@ export default function Pricing({ data, h_data, f_data }) {
                             <div className="flex flex-row justify-between">
                               <div className=" flex flex-row ">
                                 <span className="flex  w-10 h-8  mb-3 mr-0 bg-transparent rounded-lg">
-                                  <Image priority
+                                  <Image
+                                    priority
                                     src={data.PricingCard[4].StreamLogoURL}
                                     alt="Digital mines"
                                     height={40}
@@ -956,7 +1038,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsMinesSelected(false); handleClick("mines");onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Mines Section",page_source:`${data.PageSEO.PageTitle}`,label:`Unselect`})}}
+                                    onClick={() => {
+                                      setIsMinesSelected(false);
+                                      handleClick('mines');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('none'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Mines Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Unselect`,
+                                      });
+                                    }}
                                   >
                                     Unselect
                                   </button>
@@ -968,7 +1061,18 @@ export default function Pricing({ data, h_data, f_data }) {
                                   <button
                                     id="hey"
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
-                                    onClick={()=>{ setIsMinesSelected(true); handleClick("mines");onClick({stream_score:resolve_stream_score('mines'),event_name:"Button Click",section_name:"Mines Section",page_source:`${data.PageSEO.PageTitle}`,label:`Select`})}}
+                                    onClick={() => {
+                                      setIsMinesSelected(true);
+                                      handleClick('mines');
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score('mines'),
+                                        event_name: 'Button Click',
+                                        section_name: 'Mines Section',
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `Select`,
+                                      });
+                                    }}
                                   >
                                     Select
                                   </button>
@@ -987,7 +1091,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             </p>
                           </div>
                         </summary>
-                       
+
                         <div className="border-t  pt-5 mb-4 ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-3 text-lg font-bold  ">Bots</h2>
@@ -1009,18 +1113,19 @@ export default function Pricing({ data, h_data, f_data }) {
                             {data.PricingCard[4].KeyFeatures.map((dt) => (
                               <Link key="dt" href={dt.PageUrl}>
                                 <a
-                                 onClick={() => {
-                                  onClick({
-                                    stream_score:
-                                      resolve_stream_score("mines"),
-                                    event_name: "Link Click",
-                                    section_name: "Mines-Key Features Section",
-                                    page_source: `${data.PageSEO.PageTitle}`,
-                                    label: `${dt.listItem}`,
-                                  });
-                                }}
-                                className="flex items-center mb-2 text-gray-600 card-subheading">
-                                  
+                                  onClick={() => {
+                                    onClick({
+                                      stream_score:
+                                        resolve_stream_score('mines'),
+                                      event_name: 'Link Click',
+                                      section_name:
+                                        'Mines-Key Features Section',
+                                      page_source: `${data.PageSEO.PageTitle}`,
+                                      label: `${dt.listItem}`,
+                                    });
+                                  }}
+                                  className="flex items-center mb-2 text-gray-600 card-subheading"
+                                >
                                   <svg
                                     className="w-5 h-5 mr-1 text-black"
                                     fill="currentColor"
@@ -1045,7 +1150,6 @@ export default function Pricing({ data, h_data, f_data }) {
                                 key="dt"
                                 className="flex items-center mb-2 text-gray-600 card-subheading"
                               >
-                                
                                 <svg
                                   className="w-5 h-5 mr-1 text-black"
                                   fill="currentColor"
@@ -1074,7 +1178,8 @@ export default function Pricing({ data, h_data, f_data }) {
                               className="flex items-center mb-2 text-gray-600 card-subheading "
                             >
                               <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
-                                <Image priority
+                                <Image
+                                  priority
                                   src="https://static.thenounproject.com/png/925249-200.png"
                                   alt=""
                                   width={150}
@@ -1106,7 +1211,9 @@ export default function Pricing({ data, h_data, f_data }) {
                       <div className="flex flex-col w-full">
                         <div className="flex">
                           <div className="w-1/2">
-                            <h2 className="mb-1 card-heading text-white">Overall</h2>
+                            <h2 className="mb-1 card-heading text-white">
+                              Overall
+                            </h2>
                             <h1 className="flex items-center pb-4 mb-4 card-heading text-white border-b border-gray-200">
                               <span>${total}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-200">
@@ -1132,7 +1239,8 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={data.PricingCard[0].StreamLogoURL}
                                   alt="Digital Maps"
                                   height={30}
@@ -1151,7 +1259,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(false);
-                                      handleClick("maps");
+                                      handleClick('maps');
                                     }}
                                   >
                                     <p>Unselect</p>
@@ -1165,7 +1273,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(true);
-                                      handleClick("maps");
+                                      handleClick('maps');
                                     }}
                                   >
                                     <p>Select</p>
@@ -1180,7 +1288,8 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={data.PricingCard[1].StreamLogoURL}
                                   alt="Digital Projects"
                                   height={30}
@@ -1199,7 +1308,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(false);
-                                      handleClick("projects");
+                                      handleClick('projects');
                                     }}
                                   >
                                     Unselect
@@ -1213,7 +1322,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(true);
-                                      handleClick("projects");
+                                      handleClick('projects');
                                     }}
                                   >
                                     Select
@@ -1228,8 +1337,9 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image priority
-                                 src={data.PricingCard[2].StreamLogoURL}
+                                <Image
+                                  priority
+                                  src={data.PricingCard[2].StreamLogoURL}
                                   alt="Digital Process"
                                   height={30}
                                   width={30}
@@ -1247,7 +1357,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(false);
-                                      handleClick("process");
+                                      handleClick('process');
                                     }}
                                   >
                                     Unselect
@@ -1261,7 +1371,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(true);
-                                      handleClick("process");
+                                      handleClick('process');
                                     }}
                                   >
                                     Select
@@ -1275,8 +1385,9 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image priority
-                                 src={data.PricingCard[3].StreamLogoURL}
+                                <Image
+                                  priority
+                                  src={data.PricingCard[3].StreamLogoURL}
                                   alt="Digital Labs"
                                   height={30}
                                   width={30}
@@ -1294,7 +1405,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(false);
-                                      handleClick("labs");
+                                      handleClick('labs');
                                     }}
                                   >
                                     Unselect
@@ -1308,7 +1419,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(true);
-                                      handleClick("labs");
+                                      handleClick('labs');
                                     }}
                                   >
                                     Select
@@ -1322,7 +1433,8 @@ export default function Pricing({ data, h_data, f_data }) {
                           <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                             <div className="flex items-center">
                               <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={data.PricingCard[4].StreamLogoURL}
                                   alt="Digital Mines"
                                   height={30}
@@ -1341,7 +1453,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(false);
-                                      handleClick("mines");
+                                      handleClick('mines');
                                     }}
                                   >
                                     Unselect
@@ -1355,7 +1467,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(true);
-                                      handleClick("mines");
+                                      handleClick('mines');
                                     }}
                                   >
                                     Select
@@ -1367,44 +1479,47 @@ export default function Pricing({ data, h_data, f_data }) {
                         )}
                       </div>
                       <Markdown
-                              options={{
-                                overrides: {
-                                  p: {
-                                    props: {
-                                      className:
-                                        "text-white text-md text-justify ",
-                                    },
-                                  },
-                                  strong: {
-                                    props: {
-                                      className: "",
-                                    },
-                                  },
-                                  a:{
-                                    props:{
-                                      className:"text-blue-500 text-justify hover:underline "
-                                    }
-                                  }
-                                },
-                              }}
-                              className="text-white mb-2"
-                            >
-                             {data.PricingTerms}
-                            </Markdown>
+                        options={{
+                          overrides: {
+                            p: {
+                              props: {
+                                className: 'text-white text-md text-justify ',
+                              },
+                            },
+                            strong: {
+                              props: {
+                                className: '',
+                              },
+                            },
+                            a: {
+                              props: {
+                                className:
+                                  'text-blue-500 text-justify hover:underline ',
+                              },
+                            },
+                          },
+                        }}
+                        className="text-white mb-2"
+                      >
+                        {data.PricingTerms}
+                      </Markdown>
                       <div className="w-full">
-                        <button  onClick={() => {
-                          onClick({
-                            stream_score:
-                              resolve_stream_score("none"),
-                            event_name: "Button Click",
-                            section_name: "Pricing Contact Section",
-                            page_source: `${data.PageSEO.PageTitle}`,
-                            label: `Contact Sales`,
-                          });
-                        }} className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
+                        <button
+                          onClick={() => {
+                            onClick({
+                              stream_score: resolve_stream_score('none'),
+                              event_name: 'Button Click',
+                              section_name: 'Pricing Contact Section',
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `Contact Sales`,
+                            });
+                          }}
+                          className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none"
+                        >
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
-                            <Image priority
+                            <Image
+                              priority
                               layout="fill"
                               src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
@@ -1458,7 +1573,8 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image priority
+                              <Image
+                                priority
                                 src={data.PricingCard[0].StreamLogoURL}
                                 alt="Digital Maps"
                                 height={30}
@@ -1477,7 +1593,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMapsSelected(false);
-                                    handleClick("maps");
+                                    handleClick('maps');
                                   }}
                                 >
                                   Unselect
@@ -1491,7 +1607,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMapsSelected(true);
-                                    handleClick("maps");
+                                    handleClick('maps');
                                   }}
                                 >
                                   Select
@@ -1505,8 +1621,9 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image priority
-                               src={data.PricingCard[1].StreamLogoURL}
+                              <Image
+                                priority
+                                src={data.PricingCard[1].StreamLogoURL}
                                 alt="Digital Projects"
                                 height={30}
                                 width={30}
@@ -1524,7 +1641,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProjectsSelected(false);
-                                    handleClick("projects");
+                                    handleClick('projects');
                                   }}
                                 >
                                   Unselect
@@ -1538,7 +1655,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProjectsSelected(true);
-                                    handleClick("projects");
+                                    handleClick('projects');
                                   }}
                                 >
                                   Select
@@ -1552,8 +1669,9 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image priority
-                             src={data.PricingCard[2].StreamLogoURL}
+                              <Image
+                                priority
+                                src={data.PricingCard[2].StreamLogoURL}
                                 alt="Digital Process"
                                 height={30}
                                 width={30}
@@ -1571,7 +1689,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProcessSelected(false);
-                                    handleClick("process");
+                                    handleClick('process');
                                   }}
                                 >
                                   Unselect
@@ -1585,7 +1703,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProcessSelected(true);
-                                    handleClick("process");
+                                    handleClick('process');
                                   }}
                                 >
                                   Select
@@ -1599,8 +1717,9 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image priority
-                               src={data.PricingCard[3].StreamLogoURL}
+                              <Image
+                                priority
+                                src={data.PricingCard[3].StreamLogoURL}
                                 alt="Digital Labs"
                                 height={30}
                                 width={30}
@@ -1618,7 +1737,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsLabsSelected(false);
-                                    handleClick("labs");
+                                    handleClick('labs');
                                   }}
                                 >
                                   Unselect
@@ -1632,7 +1751,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsLabsSelected(true);
-                                    handleClick("labs");
+                                    handleClick('labs');
                                   }}
                                 >
                                   Select
@@ -1646,7 +1765,8 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div className="flex py-2 pl-5 pr-0 mb-4 bg-white rounded-lg overflow-hidden flex-row justify-between ">
                           <div className="flex items-center">
                             <span className="flex items-center justify-center w-8 h-8 mr-8 bg-transparent rounded-lg">
-                              <Image priority
+                              <Image
+                                priority
                                 src={data.PricingCard[4].StreamLogoURL}
                                 alt="Digital Mines"
                                 height={30}
@@ -1665,7 +1785,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMinesSelected(false);
-                                    handleClick("mines");
+                                    handleClick('mines');
                                   }}
                                 >
                                   Unselect
@@ -1679,7 +1799,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMinesSelected(true);
-                                    handleClick("mines");
+                                    handleClick('mines');
                                   }}
                                 >
                                   Select
@@ -1691,48 +1811,48 @@ export default function Pricing({ data, h_data, f_data }) {
                       )}
                     </div>
                     <Markdown
-                              options={{
-                                overrides: {
-                                  p: {
-                                    props: {
-                                      className:
-                                        "text-white text-md text-justify ",
-                                    },
-                                  },
-                                  strong: {
-                                    props: {
-                                      className: "",
-                                    },
-                                  },
-                                  a:{
-                                    props:{
-                                      className:"text-blue-500 text-justify hover:underline "
-                                    }
-                                  }
-                                },
-                              }}
-                              className="text-white mb-2"
-                            >
-                             {data.PricingTerms}
-                            </Markdown>
+                      options={{
+                        overrides: {
+                          p: {
+                            props: {
+                              className: 'text-white text-md text-justify ',
+                            },
+                          },
+                          strong: {
+                            props: {
+                              className: '',
+                            },
+                          },
+                          a: {
+                            props: {
+                              className:
+                                'text-blue-500 text-justify hover:underline ',
+                            },
+                          },
+                        },
+                      }}
+                      className="text-white mb-2"
+                    >
+                      {data.PricingTerms}
+                    </Markdown>
                     <div className="w-full">
                       <Link href="/contact">
                         <a
-                         onClick={() => {
-                          onClick({
-                            stream_score:
-                              resolve_stream_score("none"),
-                            event_name: "Button Click",
-                            section_name: "Pricing Contact Section",
-                            page_source: `${data.PageSEO.PageTitle}`,
-                            label: `Contact Sales`,
-                          });
-                        }}
-                        className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border-2 border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none">
-                          
+                          onClick={() => {
+                            onClick({
+                              stream_score: resolve_stream_score('none'),
+                              event_name: 'Button Click',
+                              section_name: 'Pricing Contact Section',
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `Contact Sales`,
+                            });
+                          }}
+                          className="inline-flex items-center button  justify-center w-full px-4 py-3 bg-black text-white button whitespace-no-wrap  border-2 border-gray-300 rounded-md shadow-sm hover:bg-gray-50 hover:text-black focus:outline-none focus:shadow-none"
+                        >
                           Contact Sales
                           <div className="w-4 h-4 ml-2 relative">
-                            <Image priority
+                            <Image
+                              priority
                               layout="fill"
                               src="/down-arrow-svgrepo-com.svg"
                               alt="down arrow"
@@ -1766,7 +1886,8 @@ export default function Pricing({ data, h_data, f_data }) {
             <Carousel className="bots flex p-10  " responsive={responsive}>
               {data.LogoSectionContent.map((dt) => (
                 <div key="dt" className="p-3 bots-card flex-row">
-                  <Image priority
+                  <Image
+                    priority
                     className=" w-auto lg:w-100"
                     src={dt.imageURL}
                     alt={dt.imageDescription}
@@ -1787,17 +1908,17 @@ export default function Pricing({ data, h_data, f_data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi
-  let res = await fetch("https://api.ktern.com/pricing", {
-    method: "get",
+  let res = await fetch('https://api.ktern.com/pricing', {
+    method: 'get',
   });
   let data = await res.json();
   // console.log(data);
-  const res1 = await fetch("https://api.ktern.com/header", {
-    method: "get",
+  const res1 = await fetch('https://api.ktern.com/header', {
+    method: 'get',
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
-    method: "get",
+  const res2 = await fetch('https://api.ktern.com/footer', {
+    method: 'get',
   });
   const f_data = await res2.json();
 
