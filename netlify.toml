@@ -1,9 +1,6 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://api.ktern.com/"
-  status = 200
-  force = true
-  conditions = {Role = ["admin", "cms"]}
-[redirects.headers]
-  X-From = "Netlify"
-  X-Api-Key = "some-api-key-string"
+[build]
+  publish = ".next"
+  command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
