@@ -43,7 +43,12 @@ export default function Hero({
                 action="https://maillist-manage.in/weboptin.zc"
                 target="_zcSignup"
               >
-                <Email name={'Email'}></Email>
+                <Email
+                  name={'Email'}
+                  class_name={
+                    'relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded'
+                  }
+                ></Email>
 
                 <button
                   className={`ml-4 sm:ml-0 sm:uppercase sm:w-3/4 sm:mt-1 inline-block p-4 w-full md:w-auto text-base leading-4 text-white tag-${stream} hover:bg-gray-600 font-medium text-center focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-r-xl rounded-b-xl transition duration-200 shadow`}
