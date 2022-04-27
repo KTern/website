@@ -9,25 +9,32 @@ import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from "next/router";
 import BreadCrumb from "../../../component/breadcrumb";
-import Event,{resolve_interest_score,resolve_stream_score}  from "../../../component/page_event";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../../../component/page_event";
+import Email from "../../../component/pattern";
 const Ebook_Landing = ({ data, h_data, f_data }) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
-// Amplitude Tracking onClick
-function onClick(data){
-  Event(data)
-  }
-  function onFormClick(data){
-    if(process.browser){
-     
-      localStorage.setItem('name',document.getElementById('First_Name').value+" "+document.getElementById('Last_Name').value);
-      localStorage.setItem('email',document.getElementById('Email').value)
-    }
-  //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
+  // Amplitude Tracking onClick
+  function onClick(data) {
     Event(data);
-
+  }
+  function onFormClick(data) {
+    if (process.browser) {
+      localStorage.setItem(
+        "name",
+        document.getElementById("First_Name").value +
+          " " +
+          document.getElementById("Last_Name").value
+      );
+      localStorage.setItem("email", document.getElementById("Email").value);
+    }
+    //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
+    Event(data);
   }
   const router = useRouter();
   // const handleSearch = (event) => {
@@ -37,7 +44,7 @@ function onClick(data){
   //     window.open("/resources", "_top");
   //   }
   // };
-  
+
   return (
     <>
       <NextSeo
@@ -107,11 +114,12 @@ function onClick(data){
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-     
-      <Head>
-     
-      </Head>
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
+      <Head></Head>
       <Layout h_data={h_data} f_data={f_data}>
         <section className={`w-full pt-8 ${data.StreamType}`}>
           <div className="flex flex-col items-center px-12 mx-auto lg:flex-row">
@@ -126,17 +134,26 @@ function onClick(data){
               </p>
               <div className="flex flex-row">
                 <Link href={data.PageHeader.primaryCTA.linkURL}>
-                  <a 
-                    onClick={()=>{onClick({stream_score:resolve_stream_score(data.StreamType),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PageHeader.primaryCTA.buttonTitle}`})}}  
-                  className=" inline-block border-2 border-white py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+                  <a
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score(data.StreamType),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.PageHeader.primaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className=" inline-block border-2 border-white py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink"
+                  >
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
-
               </div>
             </div>
             <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-              <Image priority
+              <Image
+                priority
                 width={500}
                 height={500}
                 alt="hero"
@@ -154,7 +171,6 @@ function onClick(data){
                 <div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
                   <div className="relative max-w-md">
                     <div className="pb-16 mb-8 border-b border-gray-400">
-                   
                       {/* <Link href={data.GoBackToResources.LinkURL} passHref>
                         <a 
                         className="inline-flex items-center pt-5  text-black hover:border-blue-500 group ">
@@ -171,51 +187,57 @@ function onClick(data){
                         </a>
                       </Link> */}
                       <div className="flex justify-end items-end mb-3">
-                        <Link  href={`https://twitter.com/intent/tweet?text=${data.PageHeader.header}&url=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='twitter'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                        <Link
+                          href={`https://twitter.com/intent/tweet?text=${data.PageHeader.header}&url=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
-                            width="20"
-                            height="30"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
-                      <Link  href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='Facebook'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          <a
+                            title="twitter"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
+                              width="20"
+                              height="30"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
+                        <Link
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
-                            width="20"
-                            height="20"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
-                      <Link  href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='LinkedIn'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          <a
+                            title="Facebook"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
+                              width="20"
+                              height="20"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
+                        <Link
+                          href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
-                            width="20"
-                            height="30"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
+                          <a
+                            title="LinkedIn"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
+                              width="20"
+                              height="30"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
                       </div>
                       <p className="mt-5 card-subheading text-gray-700 text md:text-left">
                         <Markdown
@@ -379,15 +401,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                          type="email"
-                          ftype="email"
-                          id="Email"
-                          name="Email"
-                          maxLength="100"
-                        ></input>
+                        <Email name={"Email"}></Email>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
@@ -464,10 +478,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       </div>
                     </div>
                     <div className="zcwf_row wfrm_fld_dpNn">
-                      <div
-                        className="zcwf_col_lab"
-                       
-                      >
+                      <div className="zcwf_col_lab">
                         <label htmlFor="CONTACTCF7">Stream Type</label>
                       </div>
                       <div className="zcwf_col_fld">
@@ -485,7 +496,17 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">
                         <input
-                         onClick={()=>{onFormClick({stream_score:resolve_stream_score(data.StreamType),event_name:"Form Click",section_name:"Download Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.EBookFormFields.SubmitButton}`})}}  
+                          onClick={() => {
+                            onFormClick({
+                              stream_score: resolve_stream_score(
+                                data.StreamType
+                              ),
+                              event_name: "Form Click",
+                              section_name: "Download Form Section",
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `${data.EBookFormFields.SubmitButton}`,
+                            });
+                          }}
                           type="submit"
                           id="formsubmit"
                           value={data.EBookFormFields.SubmitButton}
@@ -712,8 +733,8 @@ export const getServerSideProps = async (ctx) => {
   const ebook = ctx.params.ebook;
   const res = await fetch(`https://api.ktern.com/e-books?slug=${ebook}`);
   const data = await res.json();
-  if(data[0]==undefined){
-    ctx.res.setHeader('Location', '/404');
+  if (data[0] == undefined) {
+    ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }

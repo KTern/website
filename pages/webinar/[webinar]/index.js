@@ -12,6 +12,7 @@ import Event, {
 } from "../../../component/page_event";
 import Markdown from "markdown-to-jsx";
 import React, { useState, useRef, useEffect } from "react";
+import Email from "../../../component/pattern";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -329,19 +330,17 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <div className="flex items-center  py-5 rounded-xl">
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
-                        
-                      
-                          <Image
-                            priority
-                            id="panelist"
-                            width="150"
-                            height="150"
-                            className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
-                            src={member.AvatarURL}
-                            alt=""
-                            onMouseDown={(e) => handleClick(e)}
-                          />
-                      
+                        <Image
+                          priority
+                          id="panelist"
+                          width="150"
+                          height="150"
+                          className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
+                          src={member.AvatarURL}
+                          alt=""
+                          onMouseDown={(e) => handleClick(e)}
+                        />
+
                         <h3 className="font-bold   text-lg">{member.Name}</h3>
                         <p className="text-gray-500 hyperlink">
                           {member.Description}
@@ -407,16 +406,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                       >
                                         {webinar_Data.FormFields.Email}
                                       </label>
-                                      <input
-                                        id="Email"
-                                        maxLength="100"
-                                        placeholder="Business Email"
-                                        name="CONTACT_EMAIL"
-                                        changeitem="SIGNUP_FORM_FIELD"
-                                        type="email"
-                                        required
-                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                      />
+                                      <Email name={"CONTACT_EMAIL"}></Email>
                                     </div>
                                     <div></div>
                                   </div>
@@ -467,16 +457,19 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                                 className: "",
                                               },
                                             },
-                                            a:{
-                                                  props:{
-                                                    className:"text-blue-800"
-                                                  }
-                                            }
+                                            a: {
+                                              props: {
+                                                className: "text-blue-800",
+                                              },
+                                            },
                                           },
                                         }}
                                         className=""
                                       >
-                                        {webinar_Data.FormFields.PrivacyStatement}
+                                        {
+                                          webinar_Data.FormFields
+                                            .PrivacyStatement
+                                        }
                                       </Markdown>
                                     </label>
                                   </div>
