@@ -123,12 +123,12 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
 										{webinar_data.WebinarThanksPage.PageSubHeader}
 									</p>
 									<div className="flex space-x-6 items-center justify-center">
-										{/* <Link href="/" passHref>
+										<Link href="/webinars" passHref>
                       <a className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
-                        Return Home
+                        Return to Webinars
                       </a>
-                    </Link> */}
-										<ICalendarLink
+                    </Link>
+										{/* <ICalendarLink
 											event={event}
 											className="text-black "
 											onClick={() => {
@@ -144,7 +144,7 @@ export default function Thanks({ webinar_data, h_data,f_data }) {
 											<div className=" uppercase inline-block py-3 px-10 bg-white hover:bg-gray-50 hover:text-black shadow text-lg text-black font-bold rounded-r-xl rounded-b-xl transition duration-200 hyperlink">
 												{webinar_data.WebinarThanksPage.CTAButton.buttonTitle}
 											</div>
-										</ICalendarLink>
+										</ICalendarLink> */}
 									</div>
 								</div>
 							</div>

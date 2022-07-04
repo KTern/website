@@ -10,7 +10,7 @@ export default function Email({ class_name, name }) {
       type="email"
       ftype="email"
       id="Email"
-      placeholder="Enter your Buisness Email"
+      placeholder="Enter your Business Email"
       name={`${name !== undefined ? name : 'Email'}`}
       maxLength="100"
       className={`${
