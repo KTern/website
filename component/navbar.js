@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import Image from 'next/image';
-
 import Link from 'next/link';
 
 import React, { useState, useEffect } from 'react';
