@@ -55,7 +55,7 @@
     "react-view-slider": "^4.5.0",
     "remark-gfm": "3.0.1",
     "sharp": "^0.29.1",
-    "theme-ui": "^0.13.1"
+    "theme-ui": "^0.14.5"
   },
   "devDependencies": {
     "autoprefixer": "10.3.3",
