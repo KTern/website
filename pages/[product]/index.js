@@ -14,63 +14,72 @@ import FaqNew from '../../component/faqNew';
 import FeaturedResourcesComponent from '../../component/featuredResources1';
 
 
+  return (
+    <>
+      <SEO data={pageData.PageSEO} />
+      <SEOProduct
+        product={pageData.ProductsBanner.DigitalStreamTitle}
+        seo={pageData.PageSEO}
+        slogan={pageData.ProductsBanner.BannerHeadline}
+        testimonials={testimonials}
+        ratingValue={pageData.ProductsBanner.RatingValue}
+        reviewCount={pageData.ProductsBanner.ReviewCount}
+      />
+      <Layout h_data={headerData} f_data={footerData}>
+        <Hero
+          data={pageData.ProductsBanner}
+          stream={pageData.ProductsDevAttributes.Stream}
+          breadcrumb={pageData.PageSEO.BreadCrumb}
+          background={background}
+          pageSEODet={pageData.pageSEO}
+          feature={false}
+          index={false}
+        />
+        <ValuePoints
+          data={pageData.ValuePropositions}
+          stream={pageData.ProductsDevAttributes.Stream}
+          background={'white'}
+        />
+        <LogoBanner
+          data={pageData.CustomerLogo}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <StreamFeatures
+          data={pageData.StreamFeatures}
+          source={pageData.PageSEO.PageTitle}
+          stream={pageData.ProductsDevAttributes.Stream}
+          button={true}
+        />
+        <MultiCarousel
+          data={pageData.Bots}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <Testimonial
+          data={pageData.ProductsTestimonials}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <AppBanner
+          data={pageData.AcoladeBanner}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <FaqNew
+          data={pageData.ProductsFAQ}
+          title={pageData.ProductsFAQ.SectionTitle}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <FeaturedResources
+          data={pageData.FeaturedResources}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        {/* <FeaturedResourcesComponent></FeaturedResourcesComponent> */}
+        <CtaBar
+          data={pageData.CTABar}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+      </Layout>
+    </>
+  );
 
-export default function DigitalStream({ pageData, headerData, footerData, background }) {
-
-	// Testimonials JSON LD
-	let testimonials = [];
-	pageData.ProductsTestimonials.Testimonials.map((dt) => {
-		testimonials.push({ statement: dt.TestimonialStatement, author: dt.AuthorName });
-	});
-
-	return (
-		<>
-			<SEO data={pageData.PageSEO}></SEO>
-			<SEOProduct
-				product={pageData.ProductsBanner.DigitalStreamTitle}
-				seo={pageData.PageSEO}
-				slogan={pageData.ProductsBanner.BannerHeadline}
-				testimonials={testimonials}
-				ratingValue={pageData.ProductsBanner.RatingValue}
-				reviewCount={pageData.ProductsBanner.ReviewCount}
-			/>
-			<Layout h_data={headerData} f_data={footerData}>
-				<Hero
-					data={pageData.ProductsBanner}
-					stream={pageData.ProductsDevAttributes.Stream}
-					breadcrumb={pageData.PageSEO.BreadCrumb}
-					background={background}
-					feature={false}
-				></Hero>
-				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream} background={'white'}></ValuePoints>
-				<LogoBanner data={pageData.CustomerLogo} stream={pageData.ProductsDevAttributes.Stream}></LogoBanner>
-				<StreamFeatures
-					data={pageData.StreamFeatures}
-					source={pageData.PageSEO.PageTitle}
-					stream={pageData.ProductsDevAttributes.Stream}
-					button={true}
-				></StreamFeatures>
-				<MultiCarousel data={pageData.Bots} stream={pageData.ProductsDevAttributes.Stream}></MultiCarousel>
-				<Testimonial
-					data={pageData.ProductsTestimonials}
-					stream={pageData.ProductsDevAttributes.Stream}
-				></Testimonial>
-				<AppBanner data={pageData.AcoladeBanner} stream={pageData.ProductsDevAttributes.Stream}></AppBanner>
-				<FaqNew
-					data={pageData.ProductsFAQ}
-					title={pageData.ProductsFAQ.SectionTitle}
-					stream={pageData.ProductsDevAttributes.Stream}
-				/>
-				<FeaturedResources
-					data={pageData.FeaturedResources}
-					stream={pageData.ProductsDevAttributes.Stream}
-				></FeaturedResources>
-				{/* <FeaturedResourcesComponent></FeaturedResourcesComponent> */}
-				<CtaBar data={pageData.CTABar} stream={pageData.ProductsDevAttributes.Stream}></CtaBar>
-			</Layout>
-		</>
-	);
-}
 
 export const getStaticPaths = async () => {
 	// dynamic route array values must be acquired here from strapi

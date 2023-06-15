@@ -33,21 +33,28 @@ export default function Feature_Landing({ pageData, headerData, footerData, back
 		Event(data);
 	}
   return (
-		<>
-			<SEO data={pageData.PageSEO}></SEO>
-			<Layout h_data={headerData} f_data={footerData}>
-				<Hero
-					data={pageData.ProductsBanner}
-					stream={pageData.ProductsDevAttributes.Stream}
-					breadcrumb={pageData.PageSEO.BreadCrumb}
-					background={background}
-					feature={true}
-				></Hero>
-				<TestimonialSingle
-					data={pageData.CustomerTestimonial}
-					stream={pageData.ProductsDevAttributes.Stream}
-				></TestimonialSingle>
-				<ValuePoints data={pageData.ValuePropositions} stream={pageData.ProductsDevAttributes.Stream} background={'bg'}></ValuePoints>
+    <>
+      <SEO data={pageData.PageSEO} />
+      <Layout h_data={headerData} f_data={footerData}>
+        <Hero
+          data={pageData.ProductsBanner}
+          stream={pageData.ProductsDevAttributes.Stream}
+          breadcrumb={pageData.PageSEO.BreadCrumb}
+          background={background}
+          pageSEODet={pageData.pageSEO}
+          // eslint-disable-next-line react/jsx-boolean-value
+          feature={true}
+          index={false}
+        />
+        <TestimonialSingle
+          data={pageData.CustomerTestimonial}
+          stream={pageData.ProductsDevAttributes.Stream}
+        />
+        <ValuePoints
+          data={pageData.ValuePropositions}
+          stream={pageData.ProductsDevAttributes.Stream}
+          background={'bg'}
+        />
 
 				<StreamFeatures
 					data={pageData.StreamFeatures}
