@@ -13,7 +13,21 @@ import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
 import FeaturedResourcesComponent from '../../component/featuredResources1';
 
-
+export default function DigitalStream({
+	pageData,
+	headerData,
+	footerData,
+	background,
+  }) {
+	// Testimonials JSON LD
+	const testimonials = [];
+	// eslint-disable-next-line array-callback-return
+	pageData.ProductsTestimonials.Testimonials.map((dt) => {
+	  testimonials.push({
+		statement: dt.TestimonialStatement,
+		author: dt.AuthorName,
+	  });
+	});
   return (
     <>
       <SEO data={pageData.PageSEO} />
@@ -79,7 +93,7 @@ import FeaturedResourcesComponent from '../../component/featuredResources1';
       </Layout>
     </>
   );
-
+  }
 
 export const getStaticPaths = async () => {
 	// dynamic route array values must be acquired here from strapi
