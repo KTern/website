@@ -171,7 +171,7 @@ function Home({ data, h_data, f_data }) {
             pageSEODet={data.pageSEO}
             // background={background}
             // eslint-disable-next-line react/jsx-boolean-value
-            feature={false}
+            feature={true}
             index={true}
           />
           </section>
