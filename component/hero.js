@@ -200,6 +200,9 @@ export default function Hero({
                 </form>
               </div>
             )}
+
+
+            
             {index === true ? (
               <div>
                 {feature ? (
