@@ -20,6 +20,7 @@ export default function Hero({
   const form = data.ProductsBannerForm;
   return (
     <section className={'relative  overflow-hidden'}>
+      {index === true ? (<div className='py-4'></div>):('')}
       <div className={` flex flex-wrap pb-4  ${background}-${stream}`}>
         <div className="w-full lg:w-1/2 pt-12 pb-6 flex justify-center">
           <div className="px-12 pl-24 sm:p-8 sm:py-0">
@@ -220,9 +221,9 @@ export default function Hero({
                         </div>
                       ))}
                     </div> */}
-                    <div className="flex flex-wrap items-center justify-center -mx-2 mb-6 mt-5">
+                    <div className="flex flex-wrap items-start justify-start -mx-2 mb-6 mt-5">
                       {data.ReviewImages.map((dt) => (
-                        <div key={dt} className="w-1/4 md:w-1/4 lg:w-1/4">
+                        <div key={dt} className="w-1/3 md:w-1/3 lg:w-1/3">
                           <div style={{ maxHeight: '100px' }}>
                             <img
                               src={dt.imageURL}
@@ -308,13 +309,13 @@ export default function Hero({
         </div>
         {index === true ? (
           <div
-            className="w-full lg:w-1/2 pr-12 pt-24 sm:hidden"
+            className="w-full lg:w-1/2 pr-12 pt-12 sm:hidden"
             style={{
               backgroundColor: '#FFFFFF',
             }}
           >
             <div className="relative h-full items-center justify-center">
-              <div className={'relative mx-auto md:mr-0 max-w-max mb-8  p-8 '}>
+              <div className={'relative mx-auto md:mr-0 max-w-max mb-8  pr-8 '}>
                 <img
                   src={data.BannerImage.imageURL}
                   alt={data.BannerImage.imageDescription}
