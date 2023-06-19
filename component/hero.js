@@ -46,7 +46,7 @@ export default function Hero({
                   <h1 className="heading mt-4 mb-4 text-2xl lg:text-5xl font-semibold ease-in sm:text-center  ibm-plex">
                     {data.BannerHeadline}
                   </h1>
-                  <p className="text-lg text-gray-500 sm:text-center text-lg md:text-xl font-medium">
+                  <p className="text-lg text-gray-500 sm:text-center pr-8 md:text-xl font-medium">
                     {data.BannerSubHeadline}
                   </p>
                 </div>
@@ -226,7 +226,7 @@ export default function Hero({
                     </div> */}
                     <div className="flex flex-wrap items-start justify-start -mx-2 mb-6 mt-5">
                       {data.ReviewImages.map((dt) => (
-                        <div key={dt} className="w-1/3 md:w-1/3 lg:w-1/3">
+                        <div key={dt} className='pr-4'>
                           <div style={{ maxHeight: '100px' }}>
                             <img
                               src={dt.imageURL}
