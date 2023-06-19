@@ -5,7 +5,7 @@ import { LogoJsonLd } from 'next-seo';
 export default class MyDocument extends Document {
 	validateEmail240235000000441168() {
 		var form = document.forms['WebToContacts240235000000441168'];
-		// var emailFld = form.querySelectorAll('[ftype=email]');
+		var emailFld = form.querySelectorAll('[ftype=email]');
 		var i;
 		for (i = 0; i < emailFld.length; i++) {
 			var emailVal = emailFld[i].value;

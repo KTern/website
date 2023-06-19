@@ -386,7 +386,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                           required
                           className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
                           type="email"
-                          // ftype="email"
+                          ftype="email"
                           id="Email"
                           name="Email"
                           maxLength="100"
