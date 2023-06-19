@@ -176,7 +176,7 @@ function Home({ data, h_data, f_data }) {
           />
           </section>
           {/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
-          {/* <div className="px-4 py-0">
+          <div className="px-4 py-0">
             <div className=" px-4 mx-auto">
               <h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
                 {data.TrustedByStatement}
@@ -197,7 +197,7 @@ function Home({ data, h_data, f_data }) {
                 </div>
               ))}
             </Carousel>
-          </div> */}
+          </div>
           {/* <!-- /Customer logos Section --> */}{' '}
           {/* <!-- Streams Section --> */}
           <section className="relative items-center overflow-hidden w-full py-4 bg-white sm:py-8 md:py-4">
