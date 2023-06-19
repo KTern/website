@@ -7,7 +7,7 @@ export default function Email({class_name,name}){
     return (
 			<input
 				type="email"
-				ftype="email"
+				// ftype="email"
 				id="Email"
 				name={`${name !== undefined ? name : 'Email'}`}
 				maxLength="100"
