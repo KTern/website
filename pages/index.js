@@ -176,6 +176,7 @@ function Home({ data, h_data, f_data }) {
           />
           </section>
           {/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
+          <div className='py-8'></div>
           <div className="px-4 py-0">
             <div className=" px-4 mx-auto">
               <h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
