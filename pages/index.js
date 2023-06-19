@@ -169,8 +169,6 @@ function Home({ data, h_data, f_data }) {
             stream={data.ProductsDevAttributes.Stream}
             breadcrumb={data.pageSEO.BreadCrumb}
             pageSEODet={data.pageSEO}
-            // background={background}
-            // eslint-disable-next-line react/jsx-boolean-value
             feature={true}
             index={true}
           />
