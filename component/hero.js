@@ -224,7 +224,7 @@ export default function Hero({
                         </div>
                       ))}
                     </div> */}
-                    <div className="flex flex-wrap items-start justify-start -mx-2 mb-6 mt-5">
+                    <div className="flex flex-wrap items-start justify-start -mx-2 mb-6 mt-5 sm:justify-center">
                       {data.ReviewImages.map((dt) => (
                         <div key={dt} className='pr-4'>
                           <div style={{ maxHeight: '100px' }}>
