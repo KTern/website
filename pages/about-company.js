@@ -366,7 +366,7 @@ function onClick(data){
         <section className="w-full py-10 pb-16 bg-secondary">
                 <div className="flex flex-col items-center max-w-6xl px-10 mx-auto xl:px-0">
                     <p className="card-heading text-gray-400 uppercase">{data.ourcustomerstitle}</p>
-                    <div className="flex flex flex-wrap justify-center sm:flex-row space-x-16">
+                    <div className="flex flex flex-wrap justify-center sm:flex-row">
                         {data.TrustedByLogos.map((dt)=>(<div key="dt">
                           <Image priority src={dt.imageURL} height={dt.height} width={dt.width} alt={dt.imageDescription}/>
                         </div>))}
