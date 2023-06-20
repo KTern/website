@@ -1,15 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   NextSeo,
   BreadcrumbJsonLd,
   LogoJsonLd,
   SocialProfileJsonLd,
   SoftwareAppJsonLd,
-} from "next-seo";
-import Carousel from "react-multi-carousel";
-import Layout from "../component/Layout";
-import Event, { resolve_stream_score } from "../component/page_event";
+} from 'next-seo';
+import Carousel from 'react-multi-carousel';
+import Layout from '../component/Layout';
+import Event, { resolve_stream_score } from '../component/page_event';
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -32,33 +32,34 @@ const responsive = {
 function next(id, last) {
   let elem = document.getElementById(id);
   const styles = window.getComputedStyle(elem);
-  const amount = styles.getPropertyValue("--amount");
-  const gapV = styles.getPropertyValue("--gap-v");
+  const amount = styles.getPropertyValue('--amount');
+  const gapV = styles.getPropertyValue('--gap-v');
   const gapM = amount * gapV;
   const tokElem = document.getElementById(token);
   const tokStyles = window.getComputedStyle(tokElem);
   const iWidth = parseFloat(tokStyles.width);
   document
     .getElementById(id)
-    .scrollBy({ left: iWidth * amount + gapM, behavior: "smooth" });
+    .scrollBy({ left: iWidth * amount + gapM, behavior: 'smooth' });
 }
 
 function prev(id, last) {
   let elem = document.getElementById(id);
   const styles = window.getComputedStyle(elem);
-  const amount = styles.getPropertyValue("--amount");
-  const gapV = styles.getPropertyValue("--gap-v");
+  const amount = styles.getPropertyValue('--amount');
+  const gapV = styles.getPropertyValue('--gap-v');
   const gapM = amount * gapV;
   const tokElem = document.getElementById(token);
   const tokStyles = window.getComputedStyle(tokElem);
   const iWidth = parseFloat(tokStyles.width);
   document
     .getElementById(id)
-    .scrollBy({ left: -(iWidth * amount + gapM), behavior: "smooth" });
+    .scrollBy({ left: -(iWidth * amount + gapM), behavior: 'smooth' });
 }
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Hero from '../component/hero';
 // Send any events that are currently queued for sending.
 // Will automatically happen on the next event loop.
 
@@ -90,7 +91,7 @@ function Home({ data, h_data, f_data }) {
               width: 1920,
               height: 1080,
               alt: `${data.pageSEO.PageTitle}`,
-              type: "image/png",
+              type: 'image/png',
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -114,31 +115,31 @@ function Home({ data, h_data, f_data }) {
         // ]}
         additionalMetaTags={[
           {
-            property: "dc:creator",
-            content: "Nivedha",
+            property: 'dc:creator',
+            content: 'Nivedha',
           },
           {
-            name: "application-name",
-            content: "KTern.AI",
+            name: 'application-name',
+            content: 'KTern.AI',
           },
           {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
+            httpEquiv: 'x-ua-compatible',
+            content: 'IE=edge; chrome=1',
           },
         ]}
         additionalLinkTags={[
           {
-            rel: "icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+            rel: 'icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
           },
           {
-            rel: "apple-touch-icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
-            sizes: "76x76",
+            rel: 'apple-touch-icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+            sizes: '76x76',
           },
           {
-            rel: "manifest",
-            href: "/manifest.json",
+            rel: 'manifest',
+            href: '/manifest.json',
           },
         ]}
       />
@@ -153,8 +154,8 @@ function Home({ data, h_data, f_data }) {
         price="0"
         priceCurrency="USD"
         aggregateRating={{
-          ratingValue: "4.7",
-          reviewCount: "17",
+          ratingValue: '4.7',
+          reviewCount: '17',
         }}
         operatingSystem="Windows 10, Windows 11"
         applicationCategory="BusinessApplication"
@@ -162,65 +163,23 @@ function Home({ data, h_data, f_data }) {
       <div>
         <Layout h_data={h_data} f_data={f_data}>
           {/* <!-- Hero Section --> */}
-          <section className=" pt-24  relative overflow-hidden bg-white">
-            <div className=" bg-white  h-full">
-              <div className="xl:pb-80  bg-contain bg-no-repeat bg-bottom text-center xl:bg-hero bg-50% ">
-                <h2 className="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading">
-                  {data.pageHeaderDetails.header}
-                </h2>
-                <p className="p-6 mb-6 max-w-2xl mx-auto mb-12 pr-10 sm:sm-subheading subheading ">
-                  {data.pageHeaderDetails.subHeading}
-                </p>
-                <Link
-                  rel="noopener noreferrer"
-                  href={data.pageHeaderDetails.primaryCTA.linkURL}
-                >
-                  <a
-                    target="_blank"
-                    className="sm:mb-5 sm:sm-button inline-block py-3 px-14 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button"
-                    onClick={() => {
-                      onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Button Click",
-                        section_name: "Hero",
-                        page_source: `${data.pageSEO.PageTitle}`,
-                        label: `${data.pageHeaderDetails.primaryCTA.buttonTitle}`,
-                      });
-                    }}
-                  >
-                    {data.pageHeaderDetails.primaryCTA.buttonTitle}
-                  </a>
-                </Link>
-                <Link href={data.pageHeaderDetails.secondaryCTA.linkURL}>
-                  <a
-                    onClick={() => {
-                      onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Button Click",
-                        section_name: "Hero",
-                        page_source: `${data.pageSEO.PageTitle}`,
-                        label: `${data.pageHeaderDetails.secondaryCTA.buttonTitle}`,
-                      });
-                    }}
-                    className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-10 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black"
-                  >
-                    {data.pageHeaderDetails.secondaryCTA.buttonTitle}
-                  </a>
-                </Link>
-                <p className=" mx-auto   card-subheading text-gray-400 xl:mb-60 uppercase">
-                  {" "}
-                  {data.heroNote}{" "}
-                </p>
-              </div>
-            </div>
+          <section className="mt-8 top-0 mb-2  leading-normal sm:sm-heading heading">
+          <Hero
+            data={data.pageHeaderDetails}
+            stream={data.ProductsDevAttributes.Stream}
+            breadcrumb={data.pageSEO.BreadCrumb}
+            pageSEODet={data.pageSEO}
+            feature={true}
+            index={true}
+          />
           </section>
           {/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
+          <div className='py-8'></div>
           <div className="px-4 py-0">
             <div className=" px-4 mx-auto">
               <h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
                 {data.TrustedByStatement}
               </h2>
-              {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ab repudiandae et.</p> */}
             </div>
             <Carousel className="bots flex p-6  z-10" responsive={responsive}>
               {data.TrustedByLogos.map((dt) => (
@@ -238,7 +197,7 @@ function Home({ data, h_data, f_data }) {
               ))}
             </Carousel>
           </div>
-          {/* <!-- /Customer logos Section --> */}{" "}
+          {/* <!-- /Customer logos Section --> */}{' '}
           {/* <!-- Streams Section --> */}
           <section className="relative items-center overflow-hidden w-full py-4 bg-white sm:py-8 md:py-4">
             <svg
@@ -253,8 +212,8 @@ function Home({ data, h_data, f_data }) {
             </svg>
             <div className="px-10 mx-auto text-left max-w-7xl md:text-center pb-14 xl:px-0">
               <h2 className="mx-auto section-heading sm:text-xl sm:text-center ">
-                {" "}
-                {data.DigitalStreamsCardHeader}{" "}
+                {' '}
+                {data.DigitalStreamsCardHeader}{' '}
               </h2>
               <p className="max-w-full md:px-24 mt-5 section-subheading sm:text-center text-gray-600 md:mx-auto sm:sm-section-subheading">
                 {data.DigitalStreamsCardSubHeader}
@@ -296,14 +255,14 @@ function Home({ data, h_data, f_data }) {
                     />
                   </span>
                   <h3 className="card-heading font-bold">
-                    {" "}
-                    {data.DigitalStreamsCards[0].StreamTitle}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[0].StreamTitle}{' '}
                   </h3>
                   <p className="mt-4 card-subheading text-gray-700">
                     {data.DigitalStreamsCards[0].StreamDescription}
                   </p>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <ul className="space-y-2 h-full">
                     {data.DigitalStreamsCards[0].FeaturePoints.map(
@@ -318,11 +277,11 @@ function Home({ data, h_data, f_data }) {
                     )}
                   </ul>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <p className="mb-5 text-gray-600">
-                    {" "}
-                    {data.DigitalStreamsCards[0].StreamValuePoint}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[0].StreamValuePoint}{' '}
                   </p>
                   <Link
                     href={data.DigitalStreamsCards[0].LandingPageURL}
@@ -331,18 +290,18 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("maps"),
-                          event_name: "Link Click",
-                          section_name: "Streams Section",
+                          stream_score: resolve_stream_score('maps'),
+                          event_name: 'Link Click',
+                          section_name: 'Streams Section',
                           page_source: `${data.pageSEO.PageTitle}`,
-                          label: "Learn More-Digital Maps",
+                          label: 'Learn More-Digital Maps',
                         });
                       }}
                       className="inline-flex items-center pb-1  text-maps-primary hover:border-blue-500 group "
                     >
                       <span className="hyperlink group-hover:text-maps-300">
-                        {" "}
-                        Learn More{" "}
+                        {' '}
+                        Learn More{' '}
                       </span>
                       <svg
                         className="w-5 h-6 mt-1 ml-2 group-hover:text-maps-300"
@@ -378,14 +337,14 @@ function Home({ data, h_data, f_data }) {
                     />
                   </span>
                   <h3 className="card-heading font-bold">
-                    {" "}
-                    {data.DigitalStreamsCards[1].StreamTitle}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[1].StreamTitle}{' '}
                   </h3>
                   <p className="mt-4 card-subheading text-gray-700">
                     {data.DigitalStreamsCards[1].StreamDescription}
                   </p>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <ul className="space-y-2 h-full">
                     {data.DigitalStreamsCards[1].FeaturePoints.map(
@@ -400,11 +359,11 @@ function Home({ data, h_data, f_data }) {
                     )}
                   </ul>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <p className="mb-5 text-gray-600">
-                    {" "}
-                    {data.DigitalStreamsCards[1].StreamValuePoint}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[1].StreamValuePoint}{' '}
                   </p>
                   <Link
                     href={data.DigitalStreamsCards[1].LandingPageURL}
@@ -413,18 +372,18 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("projects"),
-                          event_name: "Link Click",
-                          section_name: "Streams Section",
+                          stream_score: resolve_stream_score('projects'),
+                          event_name: 'Link Click',
+                          section_name: 'Streams Section',
                           page_source: `${data.pageSEO.PageTitle}`,
-                          label: "Learn More-Digital Projects",
+                          label: 'Learn More-Digital Projects',
                         });
                       }}
                       className="inline-flex items-center pb-1  text-projects-primary hover:border-blue-500 group "
                     >
                       <span className="hyperlink group-hover:text-projects-300">
-                        {" "}
-                        Learn More{" "}
+                        {' '}
+                        Learn More{' '}
                       </span>
                       <svg
                         className="w-5 h-6 mt-1 ml-2 group-hover:text-projects-300"
@@ -460,14 +419,14 @@ function Home({ data, h_data, f_data }) {
                     />
                   </span>
                   <h3 className="card-heading font-bold">
-                    {" "}
-                    {data.DigitalStreamsCards[2].StreamTitle}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[2].StreamTitle}{' '}
                   </h3>
                   <p className="mt-4 card-subheading text-gray-700">
                     {data.DigitalStreamsCards[2].StreamDescription}
                   </p>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <ul className="space-y-2 h-full">
                     {data.DigitalStreamsCards[2].FeaturePoints.map(
@@ -482,11 +441,11 @@ function Home({ data, h_data, f_data }) {
                     )}
                   </ul>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <p className="mb-5 text-gray-600">
-                    {" "}
-                    {data.DigitalStreamsCards[2].StreamValuePoint}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[2].StreamValuePoint}{' '}
                   </p>
                   <Link
                     href={data.DigitalStreamsCards[2].LandingPageURL}
@@ -495,18 +454,18 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("process"),
-                          event_name: "Link Click",
-                          section_name: "Streams Section",
+                          stream_score: resolve_stream_score('process'),
+                          event_name: 'Link Click',
+                          section_name: 'Streams Section',
                           page_source: `${data.pageSEO.PageTitle}`,
-                          label: "Learn More-Digital Process",
+                          label: 'Learn More-Digital Process',
                         });
                       }}
                       className="inline-flex items-center pb-1  text-process-primary hover:border-blue-500 group "
                     >
                       <span className="hyperlink group-hover:text-process-300">
-                        {" "}
-                        Learn More{" "}
+                        {' '}
+                        Learn More{' '}
                       </span>
                       <svg
                         className="w-5 h-6 mt-1 ml-2 group-hover:text-process-300"
@@ -542,14 +501,14 @@ function Home({ data, h_data, f_data }) {
                     />
                   </span>
                   <h3 className="card-heading font-bold">
-                    {" "}
-                    {data.DigitalStreamsCards[3].StreamTitle}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[3].StreamTitle}{' '}
                   </h3>
                   <p className="mt-4 card-subheading text-gray-700">
                     {data.DigitalStreamsCards[3].StreamDescription}
                   </p>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <ul className="space-y-2 h-full">
                     {data.DigitalStreamsCards[3].FeaturePoints.map(
@@ -564,11 +523,11 @@ function Home({ data, h_data, f_data }) {
                     )}
                   </ul>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <p className="mb-5 text-gray-600">
-                    {" "}
-                    {data.DigitalStreamsCards[3].StreamValuePoint}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[3].StreamValuePoint}{' '}
                   </p>
                   <Link
                     href={data.DigitalStreamsCards[3].LandingPageURL}
@@ -577,18 +536,18 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("labs"),
-                          event_name: "Link Click",
-                          section_name: "Streams Section",
+                          stream_score: resolve_stream_score('labs'),
+                          event_name: 'Link Click',
+                          section_name: 'Streams Section',
                           page_source: `${data.pageSEO.PageTitle}`,
-                          label: "Learn More-Digital Labs",
+                          label: 'Learn More-Digital Labs',
                         });
                       }}
                       className="inline-flex items-center pb-1  text-labs-primary hover:border-blue-500 group "
                     >
                       <span className="hyperlink group-hover:text-labs-300">
-                        {" "}
-                        Learn More{" "}
+                        {' '}
+                        Learn More{' '}
                       </span>
                       <svg
                         className="w-5 h-6 mt-1 ml-2 group-hover:text-labs-300"
@@ -624,14 +583,14 @@ function Home({ data, h_data, f_data }) {
                     />
                   </span>
                   <h3 className="card-heading font-bold">
-                    {" "}
-                    {data.DigitalStreamsCards[4].StreamTitle}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[4].StreamTitle}{' '}
                   </h3>
                   <p className="mt-4 card-subheading text-gray-700">
                     {data.DigitalStreamsCards[4].StreamDescription}
                   </p>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <ul className="space-y-2 h-full">
                     {data.DigitalStreamsCards[4].FeaturePoints.map(
@@ -646,11 +605,11 @@ function Home({ data, h_data, f_data }) {
                     )}
                   </ul>
                   <div className="h-0.5 w-full border-b border-gray-200 my-8">
-                    {" "}
+                    {' '}
                   </div>
                   <p className="mb-5 text-gray-600">
-                    {" "}
-                    {data.DigitalStreamsCards[4].StreamValuePoint}{" "}
+                    {' '}
+                    {data.DigitalStreamsCards[4].StreamValuePoint}{' '}
                   </p>
                   <Link
                     href={data.DigitalStreamsCards[4].LandingPageURL}
@@ -659,18 +618,18 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("mines"),
-                          event_name: "Link Click",
-                          section_name: "Streams Section",
+                          stream_score: resolve_stream_score('mines'),
+                          event_name: 'Link Click',
+                          section_name: 'Streams Section',
                           page_source: `${data.pageSEO.PageTitle}`,
-                          label: "Learn More-Digital Mines",
+                          label: 'Learn More-Digital Mines',
                         });
                       }}
                       className="inline-flex items-center pb-1  text-mines-primary hover:border-blue-500 group "
                     >
                       <span className="hyperlink group-hover:text-mines-300">
-                        {" "}
-                        Learn More{" "}
+                        {' '}
+                        Learn More{' '}
                       </span>
                       <svg
                         className="w-5 h-6 mt-1 ml-2 group-hover:text-mines-300"
@@ -712,12 +671,12 @@ function Home({ data, h_data, f_data }) {
                       />
                     </span>
                     <h3 className="mb-4  card-heading">
-                      {" "}
-                      {product.CardTitle}{" "}
+                      {' '}
+                      {product.CardTitle}{' '}
                     </h3>
                     <p className="card-subheading text-gray-500">
-                      {" "}
-                      {product.CardDescription}{" "}
+                      {' '}
+                      {product.CardDescription}{' '}
                     </p>
                   </div>
                 ))}
@@ -742,8 +701,8 @@ function Home({ data, h_data, f_data }) {
                     <div className="mb-4">
                       <span className="card-heading"> {dt.CardTitle} </span>
                       <h3 className=" card-subheading">
-                        {" "}
-                        {dt.CardDescription}{" "}
+                        {' '}
+                        {dt.CardDescription}{' '}
                       </h3>
                     </div>
                     <div>
@@ -751,19 +710,19 @@ function Home({ data, h_data, f_data }) {
                         <a
                           onClick={() => {
                             onClick({
-                              stream_score: resolve_stream_score("none"),
-                              event_name: "Link Click",
-                              section_name: "Customer Success Stories Section",
+                              stream_score: resolve_stream_score('none'),
+                              event_name: 'Link Click',
+                              section_name: 'Customer Success Stories Section',
                               page_source: `${data.pageSEO.PageTitle}`,
                               label: `${dt.CTAText}`,
                             });
                           }}
-                          target={dt.OpenNewTab ? "_blank" : "_self"}
+                          target={dt.OpenNewTab ? '_blank' : '_self'}
                           className="inline-flex items-center pb-1  text-white hover:border-blue-500 group "
                         >
                           <span className="hyperlink group-hover:text-gray-400">
-                            {" "}
-                            {dt.CTAText}{" "}
+                            {' '}
+                            {dt.CTAText}{' '}
                           </span>
                           <svg
                             className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-400"
@@ -797,7 +756,7 @@ function Home({ data, h_data, f_data }) {
                     <div className="-ml-5 md:-ml-8">
                       <div
                         style={{
-                          width: "240px",
+                          width: '240px',
                         }}
                       >
                         <div className="Image__GatsbyObjectFitWrapper-sc-11886c9-0 gjizgk max-w-[200px] mx-0 mr-auto md:max-w-none transform transition-transform group-hover:scale-105 duration-700  mx-auto w-full">
@@ -815,21 +774,21 @@ function Home({ data, h_data, f_data }) {
                     </div>
                     <div className="flex flex-col items-start justify-end flex-auto ">
                       <h3 className="card-heading">
-                        {" "}
-                        {data.QuickLinks[0].CardTitle}{" "}
+                        {' '}
+                        {data.QuickLinks[0].CardTitle}{' '}
                       </h3>
                       <p className="mt-2 mb-4 card-subheading">
-                        {" "}
-                        {data.QuickLinks[0].CardDescription}{" "}
+                        {' '}
+                        {data.QuickLinks[0].CardDescription}{' '}
                       </p>
                       <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                         <Link href={data.QuickLinks[0].CTAUrl} passHref>
                           <a
                             onClick={() => {
                               onClick({
-                                stream_score: resolve_stream_score("none"),
-                                event_name: "Link Click",
-                                section_name: "Redirect Section",
+                                stream_score: resolve_stream_score('none'),
+                                event_name: 'Link Click',
+                                section_name: 'Redirect Section',
                                 page_source: `${data.pageSEO.PageTitle}`,
                                 label: `${data.QuickLinks[0].CTAText}`,
                               });
@@ -865,9 +824,9 @@ function Home({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Link Click",
-                        section_name: "Redirect Section",
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Link Click',
+                        section_name: 'Redirect Section',
                         page_source: `${data.pageSEO.PageTitle}`,
                         label: `${data.QuickLinks[1].CTAText}`,
                       });
@@ -877,12 +836,12 @@ function Home({ data, h_data, f_data }) {
                     <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                       <div>
                         <h3 className="mt-3 card-heading">
-                          {" "}
-                          {data.QuickLinks[1].CardTitle}{" "}
+                          {' '}
+                          {data.QuickLinks[1].CardTitle}{' '}
                         </h3>
                         <p className="mt-3 card-subheading">
-                          {" "}
-                          {data.QuickLinks[1].CardDescription}{" "}
+                          {' '}
+                          {data.QuickLinks[1].CardDescription}{' '}
                         </p>
                       </div>
                       <div className="mt-20">
@@ -930,9 +889,9 @@ function Home({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Link Click",
-                        section_name: "Redirect Section",
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Link Click',
+                        section_name: 'Redirect Section',
                         page_source: `${data.pageSEO.PageTitle}`,
                         label: `${data.QuickLinks[2].CTAText}`,
                       });
@@ -942,12 +901,12 @@ function Home({ data, h_data, f_data }) {
                     <div className="relative flex flex-col justify-between flex-1 mr-12 text-black">
                       <div>
                         <h3 className="mt-3 card-heading">
-                          {" "}
-                          {data.QuickLinks[2].CardTitle}{" "}
+                          {' '}
+                          {data.QuickLinks[2].CardTitle}{' '}
                         </h3>
                         <p className="mt-3 card-subheading">
-                          {" "}
-                          {data.QuickLinks[2].CardDescription}{" "}
+                          {' '}
+                          {data.QuickLinks[2].CardDescription}{' '}
                         </p>
                       </div>
                       <div className="mt-20">
@@ -994,24 +953,24 @@ function Home({ data, h_data, f_data }) {
               </div>
             </div>
           </section>
-          {/* <!-- /Redirect content Section --> */}{" "}
+          {/* <!-- /Redirect content Section --> */}{' '}
           {/* <!-- CTA Section --> */}
           <section
             className="relative py-5 2xl:py-10 bg-gray-700 overflow-hidden bg-no-repeat lg:bg-cta"
             style={{
-              backgroundColor: "#EAEDF2",
-              backgroundPosition: "bottom right",
+              backgroundColor: '#EAEDF2',
+              backgroundPosition: 'bottom right',
             }}
           >
             <div className="py-5 container px-3 mx-auto">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="my-5  section-heading ">
-                  {" "}
-                  {data.CTASection.CTATitle}{" "}
+                  {' '}
+                  {data.CTASection.CTATitle}{' '}
                 </h2>
                 <p className="section-subheading">
-                  {" "}
-                  {data.CTASection.CTADescription}{" "}
+                  {' '}
+                  {data.CTASection.CTADescription}{' '}
                 </p>
                 <div className="max-w-md mx-auto pb-10">
                   <p className="mb-5  card-subheading text-gray-800"> {} </p>
@@ -1019,9 +978,9 @@ function Home({ data, h_data, f_data }) {
                     <a
                       onClick={() => {
                         onClick({
-                          stream_score: resolve_stream_score("none"),
-                          event_name: "Button Click",
-                          section_name: "CTA Section",
+                          stream_score: resolve_stream_score('none'),
+                          event_name: 'Button Click',
+                          section_name: 'CTA Section',
                           page_source: `${data.pageSEO.PageTitle}`,
                           label: `${data.CTASection.CTAButtonText}`,
                         });
@@ -1043,18 +1002,18 @@ function Home({ data, h_data, f_data }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://api.ktern.com/index", {
-    method: "get",
+  const res = await fetch('https://api.ktern.com/index', {
+    method: 'get',
   });
   const data = await res.json();
 
-  const res1 = await fetch("https://api.ktern.com/header", {
-    method: "get",
+  const res1 = await fetch('https://api.ktern.com/header', {
+    method: 'get',
   });
   const h_data = await res1.json();
 
-  const res2 = await fetch("https://api.ktern.com/footer", {
-    method: "get",
+  const res2 = await fetch('https://api.ktern.com/footer', {
+    method: 'get',
   });
   const f_data = await res2.json();
 

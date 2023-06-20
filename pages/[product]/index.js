@@ -15,21 +15,20 @@ import CtaBar from '../../component/ctaBar';
 import FaqNew from '../../component/faqNew';
 
 export default function DigitalStream({
-  pageData,
-  headerData,
-  footerData,
-  background,
-}) {
-  // Testimonials JSON LD
-  const testimonials = [];
-  // eslint-disable-next-line array-callback-return
-  pageData.ProductsTestimonials.Testimonials.map((dt) => {
-    testimonials.push({
-      statement: dt.TestimonialStatement,
-      author: dt.AuthorName,
-    });
-  });
-
+	pageData,
+	headerData,
+	footerData,
+	background,
+  }) {
+	// Testimonials JSON LD
+	const testimonials = [];
+	// eslint-disable-next-line array-callback-return
+	pageData.ProductsTestimonials.Testimonials.map((dt) => {
+	  testimonials.push({
+		statement: dt.TestimonialStatement,
+		author: dt.AuthorName,
+	  });
+	});
   return (
     <>
       <SEO data={pageData.PageSEO} />
@@ -47,7 +46,9 @@ export default function DigitalStream({
           stream={pageData.ProductsDevAttributes.Stream}
           breadcrumb={pageData.PageSEO.BreadCrumb}
           background={background}
+          pageSEODet={pageData.pageSEO}
           feature={false}
+          index={false}
         />
         <ValuePoints
           data={pageData.ValuePropositions}
@@ -93,7 +94,7 @@ export default function DigitalStream({
       </Layout>
     </>
   );
-}
+  }
 
 export const getStaticPaths = async () => {
   // dynamic route array values must be acquired here from strapi

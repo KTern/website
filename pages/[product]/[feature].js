@@ -51,8 +51,10 @@ export default function Feature_Landing({
           stream={pageData.ProductsDevAttributes.Stream}
           breadcrumb={pageData.PageSEO.BreadCrumb}
           background={background}
+          pageSEODet={pageData.pageSEO}
           // eslint-disable-next-line react/jsx-boolean-value
           feature={true}
+          index={false}
         />
         <TestimonialSingle
           data={pageData.CustomerTestimonial}
