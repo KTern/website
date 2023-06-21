@@ -164,18 +164,17 @@ function Home({ data, h_data, f_data }) {
         <Layout h_data={h_data} f_data={f_data}>
           {/* <!-- Hero Section --> */}
           <section className="mt-8 top-0 mb-2  leading-normal sm:sm-heading heading">
-            <Hero
-              data={data.pageHeaderDetails}
-              stream={data.ProductsDevAttributes.Stream}
-              breadcrumb={data.pageSEO.BreadCrumb}
-              pageSEODet={data.pageSEO}
-              feature={true}
-              index={true}
-            />
+          <Hero
+            data={data.pageHeaderDetails}
+            stream={data.ProductsDevAttributes.Stream}
+            breadcrumb={data.pageSEO.BreadCrumb}
+            pageSEODet={data.pageSEO}
+            feature={true}
+            index={true}
+          />
           </section>
-          {/* <!--/ Hero Section --> */}{' '}
-          {/* <!--  Customer logos Section --> */}
-          <div className="py-8"></div>
+          {/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
+          <div className='py-8'></div>
           <div className="px-4 py-0">
             <div className=" px-4 mx-auto">
               <h2 className=" text-center  text-gray-500 section-heading sm:text-xl">
