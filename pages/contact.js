@@ -11,8 +11,67 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../component/page_event";
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((module) => module.MapContainer),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((module) => module.TileLayer),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
+const Marker = dynamic(
+  () => import("react-leaflet").then((module) => module.Marker),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
+const Popup = dynamic(
+  () => import("react-leaflet").then((module) => module.Popup),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
+let LeafletIcon;
+
+if (typeof window !== "undefined") {
+  LeafletIcon = require("leaflet").Icon;
+}
+
 export default function Contact({ data, h_data, f_data }) {
   const router = useRouter();
+  const customIcon = (Highlight) => {
+    if (typeof window !== "undefined") {
+      const icon = LeafletIcon;
+      if (icon) {
+        if (Highlight) {
+          return new icon({
+            iconUrl: "matched-marker-icon.png",
+            className: "matched-marker-icon",
+            iconSize: [26, 26],
+            iconAnchor: [12, 26]
+          });
+        } else {
+          return new icon({
+            iconUrl: "marker-icon.png",
+            className: "marker-icon",
+            iconSize: [26, 26],
+            iconAnchor: [12, 26]
+          });
+        }
+      }
+    }
+    return null;
+  };
   // console.log(router.query.message);
   if (router.query.message == "thanks") {
     if (process.browser)
@@ -665,54 +724,79 @@ export default function Contact({ data, h_data, f_data }) {
                 </p>
               </div>
             </div>
+          </div>
+          <div>
+            <h3 className="mt-5 mb-10 sm:text-center  heading text-black">
+              Our Locations
+            </h3>
+          </div>
+          <div className="flex items-center py-2 px-2 bg-black rounded-lg text-white">
+            <MapContainer
+              center={{
+                lat: data.MapPosition.Latitude,
+                lng: data.MapPosition.Longitude,
+              }}
+              zoom={data.AddressZoom}
+              style={{ height: "400px", width: "100%" }}
+            >
+              <TileLayer
+                attribution=""
+                url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+              />
 
-            {data.AddressLines.map((addressData) => (
-              <div className="py-2 px-5 mb-4 bg-black rounded-lg">
-                <div className="flex items-center">
-                  <p className="p-10 px-10   text-white">
-                  <Markdown
-                    options={{
-                      overrides: {
-                        h3: {
-                          props: {
-                            className: " mb-4 text-justify",
-                          },
-                        },
+              {data.AddressLines.map((addressData) => (
+                <Marker
+                  position={{
+                    lat: addressData.Latitude,
+                    lng: addressData.Longitude,
+                  }}
+                  icon={customIcon(addressData.Highlight)}
+                  key={addressData.id}
+                >
+                  <Popup>
+                    {/* {addressData.Address} */}
+                    <div className="flex items-center py-1 px-1 bg-black rounded-lg text-white">
+                      <Markdown
+                        options={{
+                          overrides: {
+                            h3: {
+                              props: {
+                                className: " mb-4 text-justify",
+                              },
+                            },
 
-                        h1: {
-                          props: {
-                            className: "text-2xl mb-4 text-justify",
+                            h1: {
+                              props: {
+                                className: "text-2xl mb-4 text-justify",
+                              },
+                            },
+                            li: {
+                              props: {
+                                className:
+                                  "text-justify list-decimal ml-3 mb-1 flex-col",
+                              },
+                            },
+                            p: {
+                              props: {
+                                className: "text-justify mb-3",
+                              },
+                            },
+                            ol: {
+                              props: {
+                                className: "mb-4 text-justify",
+                              },
+                            },
                           },
-                        },
-                        li: {
-                          props: {
-                            className:
-                              "text-justify list-decimal ml-3 mb-1 flex-col",
-                          },
-                        },
-                        p: {
-                          props: {
-                            className: "text-justify mb-3",
-                          },
-                        },
-                        ol: {
-                          props: {
-                            className: "mb-4 text-justify",
-                          },
-                        },
-                      },
-                    }}
-                    className=""
-                  >
-                    {addressData.Address}
-                  </Markdown>
-                    {/* <div>
-                      <p class="mb-3">{addressData.Address}</p>
-                    </div> */}
-                  </p>
-                </div>
-              </div>
-            ))}
+                        }}
+                        className=""
+                      >
+                        {addressData.Address}
+                      </Markdown>
+                    </div>
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
           </div>
         </section>
       </Layout>
