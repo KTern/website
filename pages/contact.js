@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../component/Layout";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
@@ -11,68 +12,10 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../component/page_event";
-import dynamic from "next/dynamic";
 
-const MapContainer = dynamic(
-  () => import("react-leaflet").then((module) => module.MapContainer),
-  {
-    ssr: false, // Disable server-side rendering
-  }
-);
-
-const TileLayer = dynamic(
-  () => import("react-leaflet").then((module) => module.TileLayer),
-  {
-    ssr: false, // Disable server-side rendering
-  }
-);
-
-const Marker = dynamic(
-  () => import("react-leaflet").then((module) => module.Marker),
-  {
-    ssr: false, // Disable server-side rendering
-  }
-);
-
-const Popup = dynamic(
-  () => import("react-leaflet").then((module) => module.Popup),
-  {
-    ssr: false, // Disable server-side rendering
-  }
-);
-
-let LeafletIcon;
-
-if (typeof window !== "undefined") {
-  LeafletIcon = require("leaflet").Icon;
-}
 
 export default function Contact({ data, h_data, f_data }) {
   const router = useRouter();
-  const customIcon = (Highlight) => {
-    if (typeof window !== "undefined") {
-      const icon = LeafletIcon;
-      if (icon) {
-        if (Highlight) {
-          return new icon({
-            iconUrl: "matched-marker-icon.png",
-            className: "matched-marker-icon",
-            iconSize: [26, 26],
-            iconAnchor: [12, 26]
-          });
-        } else {
-          return new icon({
-            iconUrl: "marker-icon.png",
-            className: "marker-icon",
-            iconSize: [26, 26],
-            iconAnchor: [12, 26]
-          });
-        }
-      }
-    }
-    return null;
-  };
-  // console.log(router.query.message);
   if (router.query.message == "thanks") {
     if (process.browser)
       document.getElementById("thanks_container").style.display = "block";
@@ -726,77 +669,20 @@ export default function Contact({ data, h_data, f_data }) {
             </div>
           </div>
           <div>
-            <h3 className="mt-5 mb-10 sm:text-center  heading text-black">
+            <h5 className="mt-5 mb-10 sm:text-center  heading text-black">
               Our Locations
-            </h3>
+            </h5>
           </div>
-          <div className="flex items-center py-2 px-2 bg-black rounded-lg text-white">
-            <MapContainer
-              center={{
-                lat: data.MapPosition.Latitude,
-                lng: data.MapPosition.Longitude,
-              }}
-              zoom={data.AddressZoom}
-              style={{ height: "400px", width: "100%" }}
-            >
-              <TileLayer
-                attribution=""
-                url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          <div>
+            <div className="w-full">
+              <Image
+                className="relative z-40 w-full h-full"
+                src={data.LocationsImage.imageURL}
+                alt={data.LocationsImage.imageDescription}
+                width={data.LocationsImage.width}
+                height={data.LocationsImage.height}
               />
-
-              {data.AddressLines.map((addressData) => (
-                <Marker
-                  position={{
-                    lat: addressData.Latitude,
-                    lng: addressData.Longitude,
-                  }}
-                  icon={customIcon(addressData.Highlight)}
-                  key={addressData.id}
-                >
-                  <Popup>
-                    {/* {addressData.Address} */}
-                    <div className="flex items-center py-1 px-1 bg-black rounded-lg text-white">
-                      <Markdown
-                        options={{
-                          overrides: {
-                            h3: {
-                              props: {
-                                className: " mb-4 text-justify",
-                              },
-                            },
-
-                            h1: {
-                              props: {
-                                className: "text-2xl mb-4 text-justify",
-                              },
-                            },
-                            li: {
-                              props: {
-                                className:
-                                  "text-justify list-decimal ml-3 mb-1 flex-col",
-                              },
-                            },
-                            p: {
-                              props: {
-                                className: "text-justify mb-3",
-                              },
-                            },
-                            ol: {
-                              props: {
-                                className: "mb-4 text-justify",
-                              },
-                            },
-                          },
-                        }}
-                        className=""
-                      >
-                        {addressData.Address}
-                      </Markdown>
-                    </div>
-                  </Popup>
-                </Marker>
-              ))}
-            </MapContainer>
+            </div>
           </div>
         </section>
       </Layout>
