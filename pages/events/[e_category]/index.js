@@ -21,27 +21,27 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (ctx) => {
-	// const name = params.e_category;
+	const name = params.e_category;
 
-	// const res = await fetch(`https://api.ktern.com/digital-streams?slug=${streamname}`, {
-	//   method: "get",
-	// });
+	const res = await fetch(`https://api.ktern.com/digital-streams?slug=${streamname}`, {
+	  method: "get",
+	});
 
-	// const data = await res.json();
-	//  console.log(data[0])
-	//     const res1 = await fetch('https://api.ktern.com/header', {
-	//       method: 'get',
-	//   });
-	// const h_data = await res1.json();
-	// const res2 = await fetch('https://api.ktern.com/footer', {
-	//       method: 'get',
-	//   });
-	//   const f_data = await res2.json();
+	const data = await res.json();
+	 console.log(data[0])
+	    const res1 = await fetch('https://api.ktern.com/header', {
+	      method: 'get',
+	  });
+	const h_data = await res1.json();
+	const res2 = await fetch('https://api.ktern.com/footer', {
+	      method: 'get',
+	  });
+	  const f_data = await res2.json();
 	return {
 		props: {
-			//     stream_data: data[ 0 ],
-			//     h_data: h_data,
-			//     f_data:f_data
+			    stream_data: data[ 0 ],
+			    h_data: h_data,
+			    f_data:f_data
 		},
 	};
 };
