@@ -15,16 +15,16 @@ export default function Events({ h_data, f_data, data }) {
 	data.PageSEO.BreadCrumb.map((dt) => {
 	  breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
 	});
-  // function formatDate(date) {
-  //   const dateFormat = new Date(date);
+  function formatDate(date) {
+    const dateFormat = new Date(date);
 
-  //   let formattedDate = dateFormat.toLocaleDateString("en-us", {
-  //     day: "2-digit",
-  //     month: "short",
-  //     year: "numeric",
-  //   });
-  //   return formattedDate;
-  // }
+    let formattedDate = dateFormat.toLocaleDateString("en-us", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+    return formattedDate;
+  }
   return (
     <>
      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
@@ -232,7 +232,7 @@ export default function Events({ h_data, f_data, data }) {
                     </a>
                     <div className="mx-4 w-px h-6 bg-gray-50"></div>
                     <p className="relative top-px uppercase tracking-widest hyperlink text-gray-200">
-                      {data.otherEvents[0].date}
+                      {formatDate(data.otherEvents[0].date)}
                     </p>
                   </div>
                   <h3 className="mb-2 font-heading leading-normal card-heading">
@@ -266,7 +266,7 @@ export default function Events({ h_data, f_data, data }) {
                         </p>
                         <div className="mx-4 w-px h-6 bg-gray-50"></div>
                         <p className="relative top-px uppercase tracking-widest text-xs text-gray-300">
-                          {data.otherEvents[1].date}
+                          {formatDate(data.otherEvents[1].date)}
                         </p>
                       </div>
                       <Link href={data.otherEvents[1].ctaUrl}>
@@ -288,7 +288,7 @@ export default function Events({ h_data, f_data, data }) {
                         </p>
                         <div className="mx-4 w-px h-6 bg-gray-50"></div>
                         <p className="relative top-px uppercase tracking-widest text-xs text-gray-300">
-                          {data.otherEvents[2].date}
+                          {formatDate(data.otherEvents[2].date)}
                         </p>
                       </div>
                   .    <Link href={data.otherEvents[2].ctaUrl}>
