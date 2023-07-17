@@ -107,9 +107,14 @@ export default function Hero({
                   target="_zcSignup"
                 >
                   <Email
-                    name={'Email'}
+                    maxLength="100"
+                    placeholder="Business Email"
+                    name="CONTACT_EMAIL"
+                    changeitem="SIGNUP_FORM_FIELD"
+                    type="email"
+                    required
                     class_name={
-                      'relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded'
+                      "relative mb-2 md:mb-0 w-full md:w-2/3 py-4 pl-4 text-sm border rounded"
                     }
                   ></Email>
                   <button
