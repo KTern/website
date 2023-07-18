@@ -35,21 +35,21 @@ const responsive = {
     items: 1,
   },
 };
-let selectedOptions = ['maps', 'projects', 'process', 'labs', 'mines'];
-let total = 10;
+let selectedOptions = ["maps", "projects", "process", "labs", "mines"];
+let total = 180;
 function handleClick(selectedOption) {
   if (!selectedOptions.includes(selectedOption)) {
     selectedOptions.push(selectedOption);
   } else {
     selectedOptions.splice(selectedOptions.indexOf(selectedOption), 1);
   }
-  total = selectedOptions.length * 3;
-  if (selectedOptions.length == 5) total = 10;
+  total = selectedOptions.length * 36;
+  if (selectedOptions.length == 5) total = 180;
   // console.log(selectedOptions)
 }
 function handleTotal() {
-  selectedOptions = ['maps', 'projects', 'process', 'labs', 'mines'];
-  total = 10;
+  selectedOptions = ["maps", "projects", "process", "labs", "mines"];
+  total = 180;
 }
 export default function Pricing({ data, h_data, f_data }) {
   let breadcrumb = [];
@@ -108,10 +108,7 @@ export default function Pricing({ data, h_data, f_data }) {
   }, []);
   let faq = [];
   data.FAQSection.map((dt) => {
-    faq.push({
-      questionName: dt.Question,
-      acceptedAnswerText: dt.Answer,
-    });
+    faq.push({ questionName: dt.Question, acceptedAnswerText: dt.Answer });
   });
   return (
     <>
@@ -282,7 +279,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-0 card-heading text-gray-900  border-gray-200">
                               <span>${data.PricingCard[0].Price}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-500">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                             <p className="mt-3 card-subheading  pb-4   text-gray-500">
@@ -364,7 +361,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className=" ">
+                        {/* <div className=" ">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -384,6 +381,54 @@ export default function Pricing({ data, h_data, f_data }) {
                                 />
                               </span>
                               {dt.listItem}
+                            </p>
+                          ))}
+                        </div> */}
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                            Continuous Value
+                            </h2>
+                          </div>
+                          {data.PricingCard[0].ContinuousValue.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              {/* <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span> */}
+                              {data.listItem}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                              Additional Info
+                            </h2>
+                          </div>
+                          {data.PricingCard[0].AdditionalInfo.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {data.listItem}
                             </p>
                           ))}
                         </div>
@@ -438,12 +483,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(false);
-                                      handleClick('projects');
+                                      handleClick("projects");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('none'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Projects Section',
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Projects Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -461,12 +506,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(true);
-                                      handleClick('projects');
+                                      handleClick("projects");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('projects'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Projects Section',
+                                          resolve_stream_score("projects"),
+                                        event_name: "Button Click",
+                                        section_name: "Projects Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -481,7 +526,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-0 card-heading text-gray-900  border-gray-200">
                               <span>${data.PricingCard[1].Price}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-500">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                             <p className="mt-3 card-subheading  pb-4   text-gray-500">
@@ -514,10 +559,10 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score('projects'),
-                                      event_name: 'Link Click',
+                                        resolve_stream_score("projects"),
+                                      event_name: "Link Click",
                                       section_name:
-                                        'Projects-Key Features Section',
+                                        "Projects-Key Features Section",
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
@@ -565,7 +610,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="">
+                        {/* <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -585,6 +630,54 @@ export default function Pricing({ data, h_data, f_data }) {
                                 />
                               </span>
                               {dt.listItem}
+                            </p>
+                          ))}
+                        </div> */}
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                            Continuous Value
+                            </h2>
+                          </div>
+                          {data.PricingCard[1].ContinuousValue.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              {/* <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span> */}
+                              {data.listItem}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                              Additional Info
+                            </h2>
+                          </div>
+                          {data.PricingCard[1].AdditionalInfo.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {data.listItem}
                             </p>
                           ))}
                         </div>
@@ -639,12 +732,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(false);
-                                      handleClick('process');
+                                      handleClick("process");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('none'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Process Section',
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Process Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -662,12 +755,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(true);
-                                      handleClick('process');
+                                      handleClick("process");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('process'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Process Section',
+                                          resolve_stream_score("process"),
+                                        event_name: "Button Click",
+                                        section_name: "Process Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -682,7 +775,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-0 card-heading text-gray-900  border-gray-200">
                               <span>${data.PricingCard[2].Price}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-500">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                             <p className="mt-3 card-subheading  pb-4   text-gray-500">
@@ -715,10 +808,10 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score('process'),
-                                      event_name: 'Link Click',
+                                        resolve_stream_score("process"),
+                                      event_name: "Link Click",
                                       section_name:
-                                        'Process-Key Features Section',
+                                        "Process-Key Features Section",
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
@@ -766,7 +859,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="">
+                        {/* <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -786,6 +879,54 @@ export default function Pricing({ data, h_data, f_data }) {
                                 />
                               </span>
                               {dt.listItem}
+                            </p>
+                          ))}
+                        </div> */}
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                            Continuous Value
+                            </h2>
+                          </div>
+                          {data.PricingCard[2].ContinuousValue.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              {/* <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span> */}
+                              {data.listItem}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                              Additional Info
+                            </h2>
+                          </div>
+                          {data.PricingCard[2].AdditionalInfo.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {data.listItem}
                             </p>
                           ))}
                         </div>
@@ -840,12 +981,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(false);
-                                      handleClick('labs');
+                                      handleClick("labs");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('none'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Labs Section',
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Labs Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -863,12 +1004,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(true);
-                                      handleClick('labs');
+                                      handleClick("labs");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('labs'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Labs Section',
+                                          resolve_stream_score("labs"),
+                                        event_name: "Button Click",
+                                        section_name: "Labs Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -883,7 +1024,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-0 card-heading text-gray-900  border-gray-200">
                               <span>${data.PricingCard[3].Price}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-500">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                             <p className="mt-3 card-subheading  pb-4   text-gray-500">
@@ -916,9 +1057,9 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score('labs'),
-                                      event_name: 'Link Click',
-                                      section_name: 'Labs-Key Features Section',
+                                        resolve_stream_score("labs"),
+                                      event_name: "Link Click",
+                                      section_name: "Labs-Key Features Section",
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
@@ -966,7 +1107,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="">
+                        {/* <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -986,6 +1127,54 @@ export default function Pricing({ data, h_data, f_data }) {
                                 />
                               </span>
                               {dt.listItem}
+                            </p>
+                          ))}
+                        </div> */}
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                            Continuous Value
+                            </h2>
+                          </div>
+                          {data.PricingCard[3].ContinuousValue.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              {/* <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span> */}
+                              {data.listItem}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                              Additional Info
+                            </h2>
+                          </div>
+                          {data.PricingCard[3].AdditionalInfo.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {data.listItem}
                             </p>
                           ))}
                         </div>
@@ -1040,12 +1229,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(false);
-                                      handleClick('mines');
+                                      handleClick("mines");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('none'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Mines Section',
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Mines Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -1063,12 +1252,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(true);
-                                      handleClick('mines');
+                                      handleClick("mines");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('mines'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Mines Section',
+                                          resolve_stream_score("mines"),
+                                        event_name: "Button Click",
+                                        section_name: "Mines Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -1083,7 +1272,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-0 card-heading text-gray-900  border-gray-200">
                               <span>${data.PricingCard[4].Price}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-500">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                             <p className="mt-3 card-subheading  pb-4   text-gray-500">
@@ -1116,10 +1305,10 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score('mines'),
-                                      event_name: 'Link Click',
+                                        resolve_stream_score("mines"),
+                                      event_name: "Link Click",
                                       section_name:
-                                        'Mines-Key Features Section',
+                                        "Mines-Key Features Section",
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
@@ -1167,7 +1356,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             ))}
                           </div>
                         </div>
-                        <div className="">
+                        {/* <div className="">
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">Users</h2>
                           </div>
@@ -1187,6 +1376,54 @@ export default function Pricing({ data, h_data, f_data }) {
                                 />
                               </span>
                               {dt.listItem}
+                            </p>
+                          ))}
+                        </div> */}
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                            Continuous Value
+                            </h2>
+                          </div>
+                          {data.PricingCard[4].ContinuousValue.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              {/* <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span> */}
+                              {data.listItem}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <div className="flex flex-row justify-between">
+                            <h2 className="mb-1 text-lg font-bold ">
+                              Additional Info
+                            </h2>
+                          </div>
+                          {data.PricingCard[4].AdditionalInfo.map((data) => (
+                            <p
+                              key="data"
+                              className="flex items-center mb-2 text-gray-600 card-subheading "
+                            >
+                              <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-white rounded-full">
+                                <Image
+                                  priority
+                                  src="https://static.thenounproject.com/png/925249-200.png"
+                                  alt=""
+                                  width={150}
+                                  height={150}
+                                />
+                              </span>
+                              {data.listItem}
                             </p>
                           ))}
                         </div>
@@ -1217,7 +1454,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             <h1 className="flex items-center pb-4 mb-4 card-heading text-white border-b border-gray-200">
                               <span>${total}K</span>
                               <span className="ml-1 text-lg font-normal text-gray-200">
-                                /MO
+                                /Year
                               </span>
                             </h1>
                           </div>
@@ -1232,7 +1469,7 @@ export default function Pricing({ data, h_data, f_data }) {
                               handleTotal();
                             }}
                           >
-                            Select all to save $5K 🎉
+                            Select all
                           </div>
                         </div>
                         {isMapsSelected && (
@@ -1483,18 +1720,18 @@ export default function Pricing({ data, h_data, f_data }) {
                           overrides: {
                             p: {
                               props: {
-                                className: 'text-white text-md text-justify ',
+                                className: "text-white text-md text-justify ",
                               },
                             },
                             strong: {
                               props: {
-                                className: '',
+                                className: "",
                               },
                             },
                             a: {
                               props: {
                                 className:
-                                  'text-blue-500 text-justify hover:underline ',
+                                  "text-blue-500 text-justify hover:underline ",
                               },
                             },
                           },
@@ -1507,9 +1744,9 @@ export default function Pricing({ data, h_data, f_data }) {
                         <button
                           onClick={() => {
                             onClick({
-                              stream_score: resolve_stream_score('none'),
-                              event_name: 'Button Click',
-                              section_name: 'Pricing Contact Section',
+                              stream_score: resolve_stream_score("none"),
+                              event_name: "Button Click",
+                              section_name: "Pricing Contact Section",
                               page_source: `${data.PageSEO.PageTitle}`,
                               label: `Contact Sales`,
                             });
@@ -1551,7 +1788,7 @@ export default function Pricing({ data, h_data, f_data }) {
                           <h1 className="flex items-center text-white pb-4 mb-4 card-heading  border-b border-gray-200">
                             <span>${total}K</span>
                             <span className="ml-1 text-lg font-normal text-gray-200">
-                              /MO
+                              /Year
                             </span>
                           </h1>
                         </div>
@@ -1566,7 +1803,7 @@ export default function Pricing({ data, h_data, f_data }) {
                             handleTotal();
                           }}
                         >
-                          Select all to save $5K 🎉
+                          Select all
                         </div>
                       </div>
                       {isMapsSelected && (
@@ -1815,18 +2052,18 @@ export default function Pricing({ data, h_data, f_data }) {
                         overrides: {
                           p: {
                             props: {
-                              className: 'text-white text-md text-justify ',
+                              className: "text-white text-md text-justify ",
                             },
                           },
                           strong: {
                             props: {
-                              className: '',
+                              className: "",
                             },
                           },
                           a: {
                             props: {
                               className:
-                                'text-blue-500 text-justify hover:underline ',
+                                "text-blue-500 text-justify hover:underline ",
                             },
                           },
                         },
@@ -1840,9 +2077,9 @@ export default function Pricing({ data, h_data, f_data }) {
                         <a
                           onClick={() => {
                             onClick({
-                              stream_score: resolve_stream_score('none'),
-                              event_name: 'Button Click',
-                              section_name: 'Pricing Contact Section',
+                              stream_score: resolve_stream_score("none"),
+                              event_name: "Button Click",
+                              section_name: "Pricing Contact Section",
                               page_source: `${data.PageSEO.PageTitle}`,
                               label: `Contact Sales`,
                             });

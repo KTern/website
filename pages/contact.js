@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../component/Layout";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
@@ -11,10 +12,10 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../component/page_event";
-import Email from "../component/pattern";
+
+
 export default function Contact({ data, h_data, f_data }) {
   const router = useRouter();
-  // console.log(router.query.message);
   if (router.query.message == "thanks") {
     if (process.browser)
       document.getElementById("thanks_container").style.display = "block";
@@ -657,6 +658,22 @@ export default function Contact({ data, h_data, f_data }) {
                   </Markdown>
                 </p>
               </div>
+            </div>
+          </div>
+          <div>
+            <h5 className="mt-5 mb-10 sm:text-center  heading text-black">
+              Our Locations
+            </h5>
+          </div>
+          <div>
+            <div className="w-full">
+              <Image
+                className="relative z-40 w-full h-full"
+                src={data.LocationsImage.imageURL}
+                alt={data.LocationsImage.imageDescription}
+                width={data.LocationsImage.width}
+                height={data.LocationsImage.height}
+              />
             </div>
           </div>
         </section>

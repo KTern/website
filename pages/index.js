@@ -172,6 +172,7 @@ function Home({ data, h_data, f_data }) {
             feature={true}
             index={true}
           />
+          
           </section>
           {/* <!--/ Hero Section --> */} {/* <!-- Customer logos Section --> */}
           <div className='py-8'></div>
