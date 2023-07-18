@@ -491,7 +491,7 @@ export const getServerSideProps = async () => {
   const res = await fetch("https://api.ktern.com/events", {
     method: "get",
   });
-  const adata = await res.json();
+  const data = await res.json();
   // console.log("data", data);
   const res1 = await fetch("https://api.ktern.com/header", {
     method: "get",
@@ -503,7 +503,7 @@ export const getServerSideProps = async () => {
   const f_data = await res2.json();
   return {
     props: {
-      data: adata,
+      data: data,
       h_data: h_data,
       f_data: f_data,
     },
