@@ -353,7 +353,15 @@ export default function Contact({ data, h_data, f_data }) {
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <Email name={"Email"}></Email>
+                        <input
+                          type="email"
+                          ftype="email"
+                          id="Email"
+                          name="Email"
+                          maxLength="100"
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          required
+                        />
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
