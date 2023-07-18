@@ -1007,12 +1007,12 @@ export const getServerSideProps = async (ctx) => {
 	});
 
 	const data = await res.json();
-	// console.log(data);
-	// if (data[0] == undefined) {
-	// 	ctx.res.setHeader('Location', '/404');
-	// 	ctx.res.statusCode = 302;
-	// 	ctx.res.end();
-	// }
+	console.log(data);
+	if (data[0] == undefined) {
+		ctx.res.setHeader('Location', '/404');
+		ctx.res.statusCode = 302;
+		ctx.res.end();
+	}
 	const res1 = await fetch('https://api.ktern.com/header', {
 		method: 'get',
 	});
