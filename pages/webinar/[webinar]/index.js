@@ -329,19 +329,17 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                   <div className="flex items-center  py-5 rounded-xl">
                     {webinar_Data.Panelists.map((member) => (
                       <div className="text-center mr-10" key={member}>
-                        
-                      
-                          <Image
-                            priority
-                            id="panelist"
-                            width="150"
-                            height="150"
-                            className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
-                            src={member.AvatarURL}
-                            alt=""
-                            onMouseDown={(e) => handleClick(e)}
-                          />
-                      
+                        <Image
+                          priority
+                          id="panelist"
+                          width="150"
+                          height="150"
+                          className="mx-auto rounded-full mb-2  border-3 border-black border-solid"
+                          src={member.AvatarURL}
+                          alt=""
+                          onMouseDown={(e) => handleClick(e)}
+                        />
+
                         <h3 className="font-bold   text-lg">{member.Name}</h3>
                         <p className="text-gray-500 hyperlink">
                           {member.Description}
@@ -467,16 +465,19 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                                 className: "",
                                               },
                                             },
-                                            a:{
-                                                  props:{
-                                                    className:"text-blue-800"
-                                                  }
-                                            }
+                                            a: {
+                                              props: {
+                                                className: "text-blue-800",
+                                              },
+                                            },
                                           },
                                         }}
                                         className=""
                                       >
-                                        {webinar_Data.FormFields.PrivacyStatement}
+                                        {
+                                          webinar_Data.FormFields
+                                            .PrivacyStatement
+                                        }
                                       </Markdown>
                                     </label>
                                   </div>
@@ -650,7 +651,7 @@ export const getServerSideProps = async (ctx) => {
   // console.log("in features", params.webinar);
   // data url from strapi)
   const res = await fetch(
-    `https://api.ktern.com/webinars?slug=${ctx.params.webinar}`,
+    `https://strapi.ktern.com/webinars?slug=${ctx.params.webinar}`,
     { method: "get" }
   );
   const data = await res.json();
@@ -659,11 +660,11 @@ export const getServerSideProps = async (ctx) => {
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

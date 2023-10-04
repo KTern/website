@@ -21,19 +21,22 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
   function onClick(data) {
     Event(data);
   }
-  function onFormClick(data){
-    if(process.browser){
-     
-      localStorage.setItem('name',document.getElementById('First_Name').value+" "+document.getElementById('Last_Name').value);
-      localStorage.setItem('email',document.getElementById('Email').value)
+  function onFormClick(data) {
+    if (process.browser) {
+      localStorage.setItem(
+        "name",
+        document.getElementById("First_Name").value +
+          " " +
+          document.getElementById("Last_Name").value
+      );
+      localStorage.setItem("email", document.getElementById("Email").value);
     }
-  //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
+    //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
     Event(data);
-   
   }
   return (
     <>
-     <NextSeo
+      <NextSeo
         title={data.PageSEO.PageTitle}
         description={data.PageSEO.PageDescription}
         canonical={data.PageSEO.CanonicalTag}
@@ -100,11 +103,12 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-     
-      <Head>
-       
-      </Head>
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
+      <Head></Head>
       <Layout h_data={h_data} f_data={f_data}>
         <section className={`${data.StreamName} w-full pt-10 `}>
           <div className="flex flex-col sm:px-4 md:items-center md:px-12 md:mx-auto lg:flex-row">
@@ -121,17 +125,26 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
               </p>
               <div className="flex flex-row">
                 <Link href={data.PageHeader.primaryCTA.linkURL}>
-                  <a 
-						 onClick={()=>{onClick({stream_score:resolve_stream_score(data.StreamName),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PageHeader.primaryCTA.buttonTitle}`})}}
-
-                  className="border-2 border-white inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink">
+                  <a
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score(data.StreamName),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.PageHeader.primaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="border-2 border-white inline-block py-3 px-10 mb-5 bg-black button  hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase hyperlink"
+                  >
                     {data.PageHeader.primaryCTA.buttonTitle}
                   </a>
                 </Link>
               </div>
             </div>
             <div className="hidden lg:block justify-end w-full  overflow-hidden md:w-1/3 md:pl-0">
-              <Image priority
+              <Image
+                priority
                 width={500}
                 height={500}
                 alt="hero"
@@ -163,52 +176,58 @@ const WhitePaper_Landing = ({ data, h_data, f_data }) => {
                           </span>
                         </a>
                       </Link> */}
-                         <div className="flex justify-end items-end mb-3">
-                        <Link  href={`https://twitter.com/intent/tweet?text=${data.PageHeader.header}&url=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='twitter'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                      <div className="flex justify-end items-end mb-3">
+                        <Link
+                          href={`https://twitter.com/intent/tweet?text=${data.PageHeader.header}&url=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
-                            width="20"
-                            height="30"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
-                      <Link  href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='Facebook'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          <a
+                            title="twitter"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
+                              width="20"
+                              height="30"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
+                        <Link
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
-                            width="20"
-                            height="20"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
-                      <Link  href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}>
-                        <a
-                          title='LinkedIn'
-                          target="_blank"
-                          className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          <a
+                            title="Facebook"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
+                              width="20"
+                              height="20"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
+                        <Link
+                          href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}
                         >
-                          
-                          <Image priority
-                            src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
-                            width="20"
-                            height="30"
-                            alt=""
-                          />
-                        </a>
-                      </Link>
+                          <a
+                            title="LinkedIn"
+                            target="_blank"
+                            className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-whites"
+                          >
+                            <Image
+                              priority
+                              src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
+                              width="20"
+                              height="30"
+                              alt=""
+                            />
+                          </a>
+                        </Link>
                       </div>
                       <p className="mt-5 card-subheading text-gray-700 text md:text-left">
                         <Markdown
@@ -485,7 +504,17 @@ This blueprint will help you define the right plan, the right effort estimate, t
                       <div className="zcwf_col_lab"></div>
                       <div className="zcwf_col_fld">
                         <input
-                         onClick={()=>{onFormClick({stream_score:resolve_stream_score(data.StreamName),event_name:"Form Click",section_name:"Download Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.FormFields.SubmitButton}`})}}
+                          onClick={() => {
+                            onFormClick({
+                              stream_score: resolve_stream_score(
+                                data.StreamName
+                              ),
+                              event_name: "Form Click",
+                              section_name: "Download Form Section",
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `${data.FormFields.SubmitButton}`,
+                            });
+                          }}
                           type="submit"
                           id="formsubmit"
                           value={data.FormFields.SubmitButton}
@@ -711,18 +740,18 @@ This blueprint will help you define the right plan, the right effort estimate, t
 export const getServerSideProps = async (ctx) => {
   const id = ctx.params.whitepaper;
   // strapi data url to be acquired
-  const res = await fetch(`https://api.ktern.com/whitepapers?slug=${id}`);
+  const res = await fetch(`https://strapi.ktern.com/whitepapers?slug=${id}`);
   const data = await res.json();
-  if(data[0]==undefined){
-    ctx.res.setHeader('Location', '/404');
+  if (data[0] == undefined) {
+    ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

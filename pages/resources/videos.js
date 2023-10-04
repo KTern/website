@@ -5,32 +5,26 @@ import useDynTabs from "react-dyn-tabs";
 export default function Videos({ h_data, f_data, data }) {
   let Tabs = [];
   data.tabs.forEach((ele) => {
-    
     let tab = {};
     let subtabs = [];
     tab["id"] = ele.tabId;
     tab["title"] = ele.tabName;
     ele.subTabs.forEach((ele1) => {
-     
       let videoList = [];
       let subtab = {};
       subtab["id"] = ele1.tabId;
       subtab["title"] = ele1.tabName;
       subtab["closable"] = false;
       data.videosList.forEach((video) => {
-      
-      
         if (video.tabId == ele.tabId && video.subTabId == ele1.tabId) {
-          videoList=video.videos;
+          videoList = video.videos;
         }
       });
       // console.log(videoList[0])
       // console.log("Videos",ele.tabName,ele1.tabName,videoList)
       subtab["panelComponent"] = (porps) => {
-        
         return (
           <div>
-         
             {videoList.map((dt) => (
               <p key="dt">{dt.title}</p>
             ))}
@@ -71,24 +65,26 @@ export default function Videos({ h_data, f_data, data }) {
           </p>
         </section>
         <section className="py-5 px-20 mx-auto flex flex-col items-center justify-center">
-        <TabList1></TabList1>
-        <div className="px-20"><PanelList1></PanelList1></div>
+          <TabList1></TabList1>
+          <div className="px-20">
+            <PanelList1></PanelList1>
+          </div>
         </section>
       </div>
     </Layout>
   );
 }
 export const getStaticProps = async () => {
-  const res = await fetch("https://api.ktern.com/videos-library", {
+  const res = await fetch("https://strapi.ktern.com/videos-library", {
     methos: "get",
   });
   const data = await res.json();
   // console.log("data",data);
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

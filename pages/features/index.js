@@ -9,18 +9,20 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import BreadCrumb from "../../component/breadcrumb";
 import { features } from "process";
-import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../../component/page_event";
 const Feature_index = ({ data, h_data, f_data }) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
- 
-  
+
   // Amplitude Tracking onClick
-  function onClick(data){
-    Event(data)
-    }
+  function onClick(data) {
+    Event(data);
+  }
   return (
     <>
       <NextSeo
@@ -90,8 +92,11 @@ const Feature_index = ({ data, h_data, f_data }) => {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-      
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
       <Layout h_data={h_data} f_data={f_data}>
         {/* HEader */}
         <section id="features" className="w-full py-32 background">
@@ -112,7 +117,15 @@ const Feature_index = ({ data, h_data, f_data }) => {
                   href={data.HeroSection.primaryCTA.linkURL}
                 >
                   <a
-                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.HeroSection.primaryCTA.buttonTitle}`})}}  
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.HeroSection.primaryCTA.buttonTitle}`,
+                      });
+                    }}
                     target="_blank"
                     className="sm:mb-4 inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow   text-white  rounded-r-xl rounded-b-xl transition duration-200 border-2 border-white button "
                   >
@@ -121,8 +134,17 @@ const Feature_index = ({ data, h_data, f_data }) => {
                 </Link>
                 <Link href={data.HeroSection.secondaryCTA.linkURL}>
                   <a
-                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"Hero Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.HeroSection.secondaryCTA.buttonTitle}`})}}  
-                   className="inline-block     shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.HeroSection.secondaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="inline-block     shadow-md py-3 px-6 hover:text-white   hover:bg-gray-300   text-black   rounded-r-xl bg-white rounded-b-xl transition duration-200 uppercase  button"
+                  >
                     {data.HeroSection.secondaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -135,36 +157,81 @@ const Feature_index = ({ data, h_data, f_data }) => {
         <section className="sm:hidden block flex sm:space-x-2 md:space-x-10 justify-center items-center  sm:py-5 md:p-5 bg-white shadow-2xl  sticky z-10 md:top-16 sm:top-10 border-2">
           <Link href="/features#digital-maps">
             <a
-             onClick={()=>{onClick({stream_score:resolve_stream_score('maps'),event_name:"Filter Click",section_name:"Filter Section",page_source:`${data.PageSEO.PageTitle}`,label:`Digital Maps-Filter`})}}  
-            className="hyperlink  uppercase hover:text-maps-primary">
+              onClick={() => {
+                onClick({
+                  stream_score: resolve_stream_score("maps"),
+                  event_name: "Filter Click",
+                  section_name: "Filter Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `Digital Maps-Filter`,
+                });
+              }}
+              className="hyperlink  uppercase hover:text-maps-primary"
+            >
               Digital Maps
             </a>
           </Link>
           <Link href="/features#digital-projects">
             <a
-            onClick={()=>{onClick({stream_score:resolve_stream_score('projects'),event_name:"Filter Click",section_name:"Filter Section",page_source:`${data.PageSEO.PageTitle}`,label:`Digital Projects-Filter`})}}  
-             className="hyperlink  uppercase hover:text-projects-primary">
+              onClick={() => {
+                onClick({
+                  stream_score: resolve_stream_score("projects"),
+                  event_name: "Filter Click",
+                  section_name: "Filter Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `Digital Projects-Filter`,
+                });
+              }}
+              className="hyperlink  uppercase hover:text-projects-primary"
+            >
               Digital Projects
             </a>
           </Link>
           <Link href="/features#digital-process">
             <a
-            onClick={()=>{onClick({stream_score:resolve_stream_score('process'),event_name:"Filter Click",section_name:"Filter Section",page_source:`${data.PageSEO.PageTitle}`,label:`Digital Process-Filter`})}}  
-            className="hyperlink  uppercase hover:text-process-primary">
+              onClick={() => {
+                onClick({
+                  stream_score: resolve_stream_score("process"),
+                  event_name: "Filter Click",
+                  section_name: "Filter Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `Digital Process-Filter`,
+                });
+              }}
+              className="hyperlink  uppercase hover:text-process-primary"
+            >
               Digital Process
             </a>
           </Link>
           <Link href="/features#digital-labs">
             <a
-            onClick={()=>{onClick({stream_score:resolve_stream_score('labs'),event_name:"Filter Click",section_name:"Filter Section",page_source:`${data.PageSEO.PageTitle}`,label:`Digital Labs-Filter`})}}  
-            className="hyperlink  uppercase hover:text-labs-primary">
+              onClick={() => {
+                onClick({
+                  stream_score: resolve_stream_score("labs"),
+                  event_name: "Filter Click",
+                  section_name: "Filter Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `Digital Labs-Filter`,
+                });
+              }}
+              className="hyperlink  uppercase hover:text-labs-primary"
+            >
               Digital Labs
             </a>
           </Link>
           <Link href="/features#digital-mines">
             <a
-            onClick={()=>{onClick({stream_score:resolve_stream_score('mines'),event_name:"Filter Click",section_name:"Filter Section",page_source:`${data.PageSEO.PageTitle}`,label:`Digital Mines-Filter`})}}  
-             className="hyperlink  uppercase hover:text-mines-primary">
+              onClick={() => {
+                onClick({
+                  stream_score: resolve_stream_score("mines"),
+                  event_name: "Filter Click",
+                  section_name: "Filter Section",
+                  page_source: `${data.PageSEO.PageTitle}`,
+                  label: `Digital Mines-Filter`,
+                });
+              }}
+              className="hyperlink  uppercase hover:text-mines-primary"
+            >
               Digital Mines
             </a>
           </Link>
@@ -190,15 +257,25 @@ const Feature_index = ({ data, h_data, f_data }) => {
                 {data.DigitalStreamSection[0].AllFeaturesCard.map((feature) => (
                   <div className="mb-10 " key="feature">
                     <Link href={feature.CTAUrl}>
-                      <a 
-                        onClick={()=>{onClick({stream_score:resolve_stream_score('maps'),event_name:"Card Click",section_name:"Features Section",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                      className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                      <a
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score("maps"),
+                            event_name: "Card Click",
+                            section_name: "Features Section",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `${feature.CTAText}-${feature.Title}`,
+                          });
+                        }}
+                        className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 "
+                      >
                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-maps-secondary "></span>
                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-maps-primary">
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Maps Icon"
@@ -215,8 +292,18 @@ const Feature_index = ({ data, h_data, f_data }) => {
                               <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                 <Link href={feature.CTAUrl} passHref>
                                   <a
-                                  onClick={()=>{onClick({stream_score:resolve_stream_score('maps'),event_name:"Card Click",section_name:"Features Section-Maps",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                                  className="inline-flex items-center pb-1  text-black group ">
+                                    onClick={() => {
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("maps"),
+                                        event_name: "Card Click",
+                                        section_name: "Features Section-Maps",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `${feature.CTAText}-${feature.Title}`,
+                                      });
+                                    }}
+                                    className="inline-flex items-center pb-1  text-black group "
+                                  >
                                     <span className="hyperlink group-hover:text-maps-primary">
                                       {feature.CTAText}
                                     </span>
@@ -270,14 +357,24 @@ const Feature_index = ({ data, h_data, f_data }) => {
                   <div className="mb-10 " key="feature">
                     <Link href={feature.CTAUrl}>
                       <a
-                        onClick={()=>{onClick({stream_score:resolve_stream_score('projects'),event_name:"Card Click",section_name:"Features Section-Projects",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                      className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score("projects"),
+                            event_name: "Card Click",
+                            section_name: "Features Section-Projects",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `${feature.CTAText}-${feature.Title}`,
+                          });
+                        }}
+                        className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 "
+                      >
                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-projects-secondary "></span>
                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-projects-primary">
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"
@@ -293,9 +390,20 @@ const Feature_index = ({ data, h_data, f_data }) => {
                             <div className="mt-2">
                               <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                 <Link href={feature.CTAUrl} passHref>
-                                  <a 
-                                   onClick={()=>{onClick({stream_score:resolve_stream_score('projects'),event_name:"Card Click",section_name:"Features Section-Projects",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                                  className="inline-flex items-center pb-1  text-black group ">
+                                  <a
+                                    onClick={() => {
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("projects"),
+                                        event_name: "Card Click",
+                                        section_name:
+                                          "Features Section-Projects",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `${feature.CTAText}-${feature.Title}`,
+                                      });
+                                    }}
+                                    className="inline-flex items-center pb-1  text-black group "
+                                  >
                                     <span className="hyperlink group-hover:text-projects-primary">
                                       {feature.CTAText}
                                     </span>
@@ -348,15 +456,25 @@ const Feature_index = ({ data, h_data, f_data }) => {
                 {data.DigitalStreamSection[2].AllFeaturesCard.map((feature) => (
                   <div className="mb-10 " key="feature">
                     <Link href={feature.CTAUrl}>
-                      <a 
-                       onClick={()=>{onClick({stream_score:resolve_stream_score('process'),event_name:"Card Click",section_name:"Features Section-Process",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                      className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                      <a
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score("process"),
+                            event_name: "Card Click",
+                            section_name: "Features Section-Process",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `${feature.CTAText}-${feature.Title}`,
+                          });
+                        }}
+                        className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 "
+                      >
                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-process-secondary "></span>
                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-process-primary">
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"
@@ -373,8 +491,19 @@ const Feature_index = ({ data, h_data, f_data }) => {
                               <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                 <Link href={feature.CTAUrl} passHref>
                                   <a
-                                   onClick={()=>{onClick({stream_score:resolve_stream_score('process'),event_name:"Card Click",section_name:"Features Section-Process",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                                    className="inline-flex items-center pb-1  text-black group ">
+                                    onClick={() => {
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("process"),
+                                        event_name: "Card Click",
+                                        section_name:
+                                          "Features Section-Process",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `${feature.CTAText}-${feature.Title}`,
+                                      });
+                                    }}
+                                    className="inline-flex items-center pb-1  text-black group "
+                                  >
                                     <span className="hyperlink group-hover:text-projects-primary">
                                       {feature.CTAText}
                                     </span>
@@ -428,14 +557,24 @@ const Feature_index = ({ data, h_data, f_data }) => {
                   <div className="mb-10" key="feature">
                     <Link href={feature.CTAUrl}>
                       <a
-                       onClick={()=>{onClick({stream_score:resolve_stream_score('labs'),event_name:"Card Click",section_name:"Features Section-Labs",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                       className="relative flex flex-auto   group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score("labs"),
+                            event_name: "Card Click",
+                            section_name: "Features Section-Labs",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `${feature.CTAText}-${feature.Title}`,
+                          });
+                        }}
+                        className="relative flex flex-auto   group overflow-hidden false transition transform hover:-translate-y-1 duration-500 "
+                      >
                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-labs-secondary "></span>
                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-labs-primary">
                           <div className="relative bg-white flex flex-col justify-between flex-1  text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Labs Icon"
@@ -452,8 +591,18 @@ const Feature_index = ({ data, h_data, f_data }) => {
                               <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                 <Link href={feature.CTAUrl} passHref>
                                   <a
-                                   onClick={()=>{onClick({stream_score:resolve_stream_score('labs'),event_name:"Card Click",section_name:"Features Section-Labs",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                                   className="inline-flex items-center pb-1  text-black group ">
+                                    onClick={() => {
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("labs"),
+                                        event_name: "Card Click",
+                                        section_name: "Features Section-Labs",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `${feature.CTAText}-${feature.Title}`,
+                                      });
+                                    }}
+                                    className="inline-flex items-center pb-1  text-black group "
+                                  >
                                     <span className="hyperlink group-hover:text-projects-primary">
                                       {feature.CTAText}
                                     </span>
@@ -506,15 +655,25 @@ const Feature_index = ({ data, h_data, f_data }) => {
                 {data.DigitalStreamSection[4].AllFeaturesCard.map((feature) => (
                   <div className="mb-10 " key="feature">
                     <Link href={feature.CTAUrl}>
-                      <a 
-                       onClick={()=>{onClick({stream_score:resolve_stream_score('mines'),event_name:"Card Click",section_name:"Features Section-Mines",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                      className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 ">
+                      <a
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score("mines"),
+                            event_name: "Card Click",
+                            section_name: "Features Section-Mines",
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: `${feature.CTAText}-${feature.Title}`,
+                          });
+                        }}
+                        className="relative flex flex-auto  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500 "
+                      >
                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-secondary  group-hover:bg-mines-secondary "></span>
                         <div className="relative shadow bg-white flex flex-auto p-5 px-5  group overflow-hidden false border border-black hover:border-mines-primary">
                           <div className="relative bg-white flex flex-col justify-between flex-1 mr-12 text-black">
                             <div className="flex ">
                               <div className="relative w-8 h-8">
-                                <Image priority
+                                <Image
+                                  priority
                                   src={feature.IconURL}
                                   layout="fill"
                                   alt="Digital Projects Icon"
@@ -531,8 +690,18 @@ const Feature_index = ({ data, h_data, f_data }) => {
                               <div className="icon-link transition-opacity duration-200 group-hover:opacity-50 icon-link--black">
                                 <Link href={feature.CTAUrl} passHref>
                                   <a
-                                   onClick={()=>{onClick({stream_score:resolve_stream_score('mines'),event_name:"Card Click",section_name:"Features Section-Mines",page_source:`${data.PageSEO.PageTitle}`,label:`${feature.CTAText}-${feature.Title}`})}}  
-                                  className="inline-flex items-center pb-1  text-black group ">
+                                    onClick={() => {
+                                      onClick({
+                                        stream_score:
+                                          resolve_stream_score("mines"),
+                                        event_name: "Card Click",
+                                        section_name: "Features Section-Mines",
+                                        page_source: `${data.PageSEO.PageTitle}`,
+                                        label: `${feature.CTAText}-${feature.Title}`,
+                                      });
+                                    }}
+                                    className="inline-flex items-center pb-1  text-black group "
+                                  >
                                     <span className="hyperlink group-hover:text-projects-primary">
                                       {feature.CTAText}
                                     </span>
@@ -582,8 +751,17 @@ const Feature_index = ({ data, h_data, f_data }) => {
               <div className="relative flex flex-col items-center w-full px-6 space-y-5  md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link href={data.CTA.PrimaryCTA.linkURL} passHref>
                   <a
-                   onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CTA.PrimaryCTA.buttonTitle}`})}}  
-                  className="  inline-block border-2 border-white py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.PrimaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className="  inline-block border-2 border-white py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
+                  >
                     {data.CTA.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -593,8 +771,16 @@ const Feature_index = ({ data, h_data, f_data }) => {
                   passHref
                 >
                   <a
-                                      onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.CTA.SecondaryCTA.buttonTitle}`})}}  
-                   target="_blank"
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.SecondaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    target="_blank"
                     className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
                   >
                     {data.CTA.SecondaryCTA.buttonTitle}
@@ -610,16 +796,16 @@ const Feature_index = ({ data, h_data, f_data }) => {
 };
 export const getStaticProps = async () => {
   // data url from strapi)
-  const res = await fetch("https://api.ktern.com/all-features", {
+  const res = await fetch("https://strapi.ktern.com/all-features", {
     method: "get",
   });
   const data = await res.json();
   // console.log("data",data)
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

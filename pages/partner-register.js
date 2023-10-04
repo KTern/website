@@ -8,8 +8,12 @@ import { SocialProfileJsonLd } from "next-seo";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { useRouter } from "next/router";
-import BreadCrumb from "../component/breadcrumb"; 
- import Event,{resolve_interest_score,resolve_stream_score} from "../component/page_event";export default function PartnerContact({ data, h_data, f_data }) {
+import BreadCrumb from "../component/breadcrumb";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../component/page_event";
+export default function PartnerContact({ data, h_data, f_data }) {
   const router = useRouter();
   // console.log(router.query.message);
   if (router.query.message == "thanks") {
@@ -21,19 +25,22 @@ import BreadCrumb from "../component/breadcrumb";
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
   // Amplitude Tracking onClick
-  function onClick(data){
-    Event(data)
+  function onClick(data) {
+    Event(data);
+  }
+  function onFormClick(data) {
+    if (process.browser) {
+      localStorage.setItem(
+        "name",
+        document.getElementById("First_Name").value +
+          " " +
+          document.getElementById("Last_Name").value
+      );
+      localStorage.setItem("email", document.getElementById("Email").value);
     }
-    function onFormClick(data){
-      if(process.browser){
-       
-        localStorage.setItem('name',document.getElementById('First_Name').value+" "+document.getElementById('Last_Name').value);
-        localStorage.setItem('email',document.getElementById('Email').value)
-      }
     //  console.log(localStorage.getItem('email'),localStorage.getItem('name'))
-      Event(data);
-  
-    }
+    Event(data);
+  }
   return (
     <>
       <Head>
@@ -43,44 +50,47 @@ import BreadCrumb from "../component/breadcrumb";
           src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=d282bac1d91514c46c75683473f967a121858ebbdbfb6e6b202f66f955b01cfegiddb887390625950606c3528f7d8a1164e437cac61a532b2d3cf089f26bcebb04cgid34012eca3464f95361fd8f71572f880aae345de7c6bd763484fe9bc1e9d54b4fgid4ee3a7e9ace6ab1be7c541b329164307"
         ></script>
       </Head>
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
       <NextSeo
-      	title={data.PageSEO.PageTitle}
-				description={data.PageSEO.PageDescription}
-				canonical={data.PageSEO.CanonicalTag}
-				openGraph={{
-					url: `${data.PageSEO.PageURL}`,
-					title: `${data.PageSEO.PageTitle}`,
-					description: `${data.PageSEO.PageDescription}`,
-					images: [
-						{
-							url:`${data.PageSEO.ThumbnailImageURL}`,
-							width: 1920,
-							height: 1080,
-							alt: `${data.PageSEO.PageTitle}`,
-							type: 'image/png',
-						}
-					],
-					site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
-				}}
-				twitter={{
-					handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
-					site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
-					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-				}}
-				facebook={{
-					handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
-					site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
-					cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-					appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
-				}}
-				// languageAlternates={[
-				// 	{
-				// 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
-				// 		href: `${h_data.OtherSEO.languageAlternates.href}`,
-				// 	},
-				// ]}
-				additionalMetaTags={[
+        title={data.PageSEO.PageTitle}
+        description={data.PageSEO.PageDescription}
+        canonical={data.PageSEO.CanonicalTag}
+        openGraph={{
+          url: `${data.PageSEO.PageURL}`,
+          title: `${data.PageSEO.PageTitle}`,
+          description: `${data.PageSEO.PageDescription}`,
+          images: [
+            {
+              url: `${data.PageSEO.ThumbnailImageURL}`,
+              width: 1920,
+              height: 1080,
+              alt: `${data.PageSEO.PageTitle}`,
+              type: "image/png",
+            },
+          ],
+          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+        }}
+        twitter={{
+          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        }}
+        facebook={{
+          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+        }}
+        // languageAlternates={[
+        // 	{
+        // 		hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+        // 		href: `${h_data.OtherSEO.languageAlternates.href}`,
+        // 	},
+        // ]}
+        additionalMetaTags={[
           {
             property: "dc:creator",
             content: "Nivedha",
@@ -94,29 +104,31 @@ import BreadCrumb from "../component/breadcrumb";
             content: "IE=edge; chrome=1",
           },
         ]}
-				additionalLinkTags={[
-					{
-						rel: 'icon',
-						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
-					},
-					{
-						rel: 'apple-touch-icon',
-						href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-						sizes: '76x76',
-					},
-					{
-						rel: 'manifest',
-						href: '/manifest.json',
-					},
-				]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+        ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
 
       <Layout h_data={h_data} f_data={f_data}>
         <div className="py-20 p-4 bg-partnercontact bg-secondary  w-full min-h-screen bg-white flex justify-center ">
           <div className=" zcwf_lblLeft crmWebToEntityForm w-full p-4 md:w-2/5 py-12 p-4 bg-white rounded-2xl md:shadow-xl z-20">
-            <div >
-              <div className="ml-4"><BreadCrumb color="black" b_data={breadcrumb}/></div>
+            <div>
+              <div className="ml-4">
+                <BreadCrumb color="black" b_data={breadcrumb} />
+              </div>
               <h1 className="mt-4  text-center mb-4 section-heading">
                 {data.PartnerRegistrationForm.FormTitle}
               </h1>
@@ -274,7 +286,13 @@ import BreadCrumb from "../component/breadcrumb";
               <div className="zcwf_row">
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
-                  <input className="mr-2" type="checkbox" id="privacy" value="true" required />
+                  <input
+                    className="mr-2"
+                    type="checkbox"
+                    id="privacy"
+                    value="true"
+                    required
+                  />
                   <label>
                     <Markdown
                       options={{
@@ -302,7 +320,15 @@ import BreadCrumb from "../component/breadcrumb";
                 <div className="zcwf_col_lab"></div>
                 <div className="zcwf_col_fld">
                   <input
-                  onClick={()=>{onFormClick({stream_score:resolve_stream_score('none'),event_name:"Form Click",section_name:"Partner Form Section",page_source:`${data.PageSEO.PageTitle}`,label:`${data.PartnerRegistrationForm.SubmitButton}`})}}
+                    onClick={() => {
+                      onFormClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Form Click",
+                        section_name: "Partner Form Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.PartnerRegistrationForm.SubmitButton}`,
+                      });
+                    }}
                     className="formsubmit cursor-pointer inline-block w-full button px-5 py-4 uppercase hyperlink text-center text-white transition duration-200 bg-black 
                                             rounded-r-xl rounded-b-xl transition duration-200 hover:bg-gray-500 ease"
                     type="submit"
@@ -321,15 +347,15 @@ import BreadCrumb from "../component/breadcrumb";
 }
 export const getStaticProps = async () => {
   // data url from strapi
-  const res = await fetch("https://api.ktern.com/partner-registration", {
+  const res = await fetch("https://strapi.ktern.com/partner-registration", {
     method: "get",
   });
   const data = await res.json();
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

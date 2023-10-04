@@ -383,7 +383,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[0].ContinuousValue.map((data) => (
@@ -632,7 +632,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[1].ContinuousValue.map((data) => (
@@ -881,7 +881,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[2].ContinuousValue.map((data) => (
@@ -1129,7 +1129,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[3].ContinuousValue.map((data) => (
@@ -1378,7 +1378,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[4].ContinuousValue.map((data) => (
@@ -2141,16 +2141,16 @@ export default function Pricing({ data, h_data, f_data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi
-  let res = await fetch("https://api.ktern.com/pricing", {
+  let res = await fetch("https://strapi.ktern.com/pricing", {
     method: "get",
   });
   let data = await res.json();
   // console.log(data);
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

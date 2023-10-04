@@ -93,7 +93,7 @@ export default function Resources({ data, h_data, f_data }) {
         document.getElementById("type").value = router.query.type;
     }
     if (router.query.stream) {
-      console.log(router.query.stream)
+      console.log(router.query.stream);
       let filterArray = {};
       filterArray.DigitalStream = router.query.stream;
 
@@ -187,8 +187,7 @@ export default function Resources({ data, h_data, f_data }) {
         <section className="w-full py-24 background overflow-hidden">
           <div className="flex flex-col items-center md:px-12 mx-auto lg:flex-row">
             <div className="relative z-20 flex flex-col sm:px-4 md:w-2/3 h-full ">
-              
-            <BreadCrumb color="white" b_data={breadcrumb} />
+              <BreadCrumb color="white" b_data={breadcrumb} />
               <p className="max-w-max px-2 py-1 mt-4 mb-5 font-medium hyperlink  text-gray-900 uppercase bg-gray-200 rounded-full ">
                 {data.ResourcesTranslations.Resources}
               </p>
@@ -263,8 +262,7 @@ export default function Resources({ data, h_data, f_data }) {
                 webkitAppearance: "none",
                 mozAppearance: "none",
                 appearance: "none",
-                background:
-                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {streamOptions.map((item) => (
@@ -295,8 +293,7 @@ export default function Resources({ data, h_data, f_data }) {
                 webkitAppearance: "none",
                 mozAppearance: "none",
                 appearance: "none",
-                background:
-                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {topicOptions.map((item) => (
@@ -328,8 +325,7 @@ export default function Resources({ data, h_data, f_data }) {
                 webkitAppearance: "none",
                 mozAppearance: "none",
                 appearance: "none",
-                background:
-                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {roleOptions.map((item) => (
@@ -361,8 +357,7 @@ export default function Resources({ data, h_data, f_data }) {
                 webkitAppearance: "none",
                 mozAppearance: "none",
                 appearance: "none",
-                background:
-                  "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
               }}
             >
               {resourceTypeOptions.map((item) => (
@@ -400,8 +395,19 @@ export default function Resources({ data, h_data, f_data }) {
                         <div className="">
                           <Link href={dt.ResourceURL} passHref>
                             <a
-                             onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
-                            className="relative block w-full h-44 overflow-hidden rounded">
+                              onClick={() => {
+                                onClick({
+                                  stream_score: resolve_stream_score(
+                                    dt.DigitalStream
+                                  ),
+                                  event_name: "Card Click",
+                                  section_name: "Resources Section",
+                                  page_source: `${data.PageSEO.PageTitle}`,
+                                  label: `${dt.ResourceTitle}-${dt.CTAText}`,
+                                });
+                              }}
+                              className="relative block w-full h-44 overflow-hidden rounded"
+                            >
                               <div
                                 className={`z-20 ${dt.DigitalStream} absolute hyperlink top:0 mx-2 mt-2 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-md uppercase text-gray-200 opacity-60 inline-block`}
                               >
@@ -424,7 +430,8 @@ export default function Resources({ data, h_data, f_data }) {
                                       </svg>
                                     </span>
                                   </div>
-                                  <Image priority
+                                  <Image
+                                    priority
                                     className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                     src={dt.ImageURL}
                                     alt="resource"
@@ -433,7 +440,8 @@ export default function Resources({ data, h_data, f_data }) {
                                   />
                                 </div>
                               ) : (
-                                <Image priority
+                                <Image
+                                  priority
                                   className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                   src={dt.ImageURL}
                                   alt="resource"
@@ -446,7 +454,18 @@ export default function Resources({ data, h_data, f_data }) {
                         </div>
                         <Link href={dt.ResourceURL} passHref>
                           <a
-                          onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}>
+                            onClick={() => {
+                              onClick({
+                                stream_score: resolve_stream_score(
+                                  dt.DigitalStream
+                                ),
+                                event_name: "Card Click",
+                                section_name: "Resources Section",
+                                page_source: `${data.PageSEO.PageTitle}`,
+                                label: `${dt.ResourceTitle}-${dt.CTAText}`,
+                              });
+                            }}
+                          >
                             <p className="hyperlink text-gray-400  uppercase mb-4">
                               {dt.ResourceTypeName}
                             </p>
@@ -455,8 +474,19 @@ export default function Resources({ data, h_data, f_data }) {
                             </span>
                             <Link href={dt.ResourceURL} passHref>
                               <a
-                              onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
-                               className="inline-flex items-center   text-black hover:text-gray-400 group ">
+                                onClick={() => {
+                                  onClick({
+                                    stream_score: resolve_stream_score(
+                                      dt.DigitalStream
+                                    ),
+                                    event_name: "Card Click",
+                                    section_name: "Resources Section",
+                                    page_source: `${data.PageSEO.PageTitle}`,
+                                    label: `${dt.ResourceTitle}-${dt.CTAText}`,
+                                  });
+                                }}
+                                className="inline-flex items-center   text-black hover:text-gray-400 group "
+                              >
                                 <span className="hyperlink group-hover:text-gray-300">
                                   {dt.CTAText}
                                 </span>
@@ -503,8 +533,17 @@ export default function Resources({ data, h_data, f_data }) {
               <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link href="/pricing" passHref>
                   <a
-                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`See Pricing`})}}
-                   className="  inline-block py-3 px-10 bg-black border-2 border-white hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `See Pricing`,
+                      });
+                    }}
+                    className="  inline-block py-3 px-10 bg-black border-2 border-white hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
+                  >
                     See Pricing
                   </a>
                 </Link>
@@ -514,8 +553,16 @@ export default function Resources({ data, h_data, f_data }) {
                   passHref
                 >
                   <a
-                  onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Button Click",section_name:"CTA Section",page_source:`${data.PageSEO.PageTitle}`,label:`Try it free`})}}
-                  target="_blank"
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `Try it free`,
+                      });
+                    }}
+                    target="_blank"
                     className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
                   >
                     Try it free
@@ -533,13 +580,13 @@ export default function Resources({ data, h_data, f_data }) {
 export const getStaticProps = async ({ params }) => {
   // console.log(params);
   // strapi data to be acquired
-  const res = await fetch("https://api.ktern.com/resources");
+  const res = await fetch("https://strapi.ktern.com/resources");
   const data = await res.json();
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();
