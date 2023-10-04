@@ -12,6 +12,7 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../../../component/page_event";
+import Email from "../../../component/pattern";
 const WhitePaper_Landing = ({ data, h_data, f_data }) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -401,15 +402,7 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <input
-                          required
-                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                          type="email"
-                          ftype="email"
-                          id="Email"
-                          name="Email"
-                          maxLength="100"
-                        ></input>
+                        <Email name={"Email"}></Email>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>

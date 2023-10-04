@@ -12,6 +12,7 @@ import Event, {
 } from "../../../component/page_event";
 import Markdown from "markdown-to-jsx";
 import React, { useState, useRef, useEffect } from "react";
+import Email from "../../../component/pattern";
 export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
   let breadcrumb = [];
   webinar_Data.PageSEO.BreadCrumb.map((dt) => {
@@ -405,16 +406,7 @@ export default function WebinarLanding({ webinar_Data, h_data, f_data }) {
                                       >
                                         {webinar_Data.FormFields.Email}
                                       </label>
-                                      <input
-                                        id="Email"
-                                        maxLength="100"
-                                        placeholder="Business Email"
-                                        name="CONTACT_EMAIL"
-                                        changeitem="SIGNUP_FORM_FIELD"
-                                        type="email"
-                                        required
-                                        className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
-                                      />
+                                      <Email name={"CONTACT_EMAIL"}></Email>
                                     </div>
                                     <div></div>
                                   </div>

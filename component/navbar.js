@@ -1,21 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+import Image from 'next/image';
+import Link from 'next/link';
 
-import FeatureCard from "./featureCard";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { useRouter } from "next/router";
-import HeaderCard from "./headerCard";
+import { useRouter } from 'next/router';
+
+import FeatureCard from './featureCard';
+
 function openNav() {
   if (process.browser) {
     // console.log("Clicked")
-    document.getElementById("navbar-menu").style.display = "block";
+    document.getElementById('navbar-menu').style.display = 'block';
   }
 }
 function closeNav() {
   if (process.browser) {
     // console.log("Clicked as well")
-    document.getElementById("navbar-menu").style.display = "none";
+    document.getElementById('navbar-menu').style.display = 'none';
   }
 }
 
@@ -24,6 +28,7 @@ export default function Navbar({ h_data }) {
   const router = useRouter();
 
   // const [ headerNew, changeHeader ] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [isProjectShown, setIsProjectShown] = useState(true);
   const [isProcessShown, setIsProcessShown] = useState(false);
   const [isMapsShown, setIsMapsShown] = useState(false);
@@ -49,11 +54,13 @@ export default function Navbar({ h_data }) {
   // console.log(router.pathname==='/')
 
   const listenToScroll = () => {
-    let heightToHideFrom = 0;
+    const heightToHideFrom = 0;
+    // eslint-disable-next-line operator-linebreak
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
     if (winScroll > heightToHideFrom) {
+      // eslint-disable-next-line no-unused-expressions
       isVisible && // to limit setting state only the first time
         setIsVisible(false);
     } else {
@@ -62,13 +69,12 @@ export default function Navbar({ h_data }) {
     }
   };
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    router.events.on('routeChangeComplete',()=>{
-      closeNav()
-    })
+    window.addEventListener('scroll', listenToScroll);
+    router.events.on('routeChangeComplete', () => {
+      closeNav();
+    });
     return () => {
-      
-      window.removeEventListener("scroll", listenToScroll);
+      window.removeEventListener('scroll', listenToScroll);
     };
   }, []);
 
@@ -78,8 +84,8 @@ export default function Navbar({ h_data }) {
         {/* Top banner */}
         {isVisible &&
           isOpen &&
-          router.pathname === "/" &&
-          h_data.Topbar.buttonTitle != "" && (
+          router.pathname === '/' &&
+          h_data.Topbar.buttonTitle != '' && (
             <div className="flex sm:hidden">
               <div
                 id="banner"
@@ -151,7 +157,7 @@ export default function Navbar({ h_data }) {
           {/*/ KTern Logo Desktop */}
           {/* KTern Logo mobile */}
           <div className="hidden sm:block">
-          <Link href={h_data.Logo.Url} passHref>
+            <Link href={h_data.Logo.Url} passHref>
               <a
                 title={h_data.Logo.Title}
                 className=" hidden mx-6 sm:block mr-auto text-2xl font-medium leading-none cursor-pointer"
@@ -238,7 +244,7 @@ export default function Navbar({ h_data }) {
                       ))}
                     </div>
                     <div className="flex justify-end pt-4">
-                      {" "}
+                      {' '}
                       <Link href={h_data.cta.linkURL} passHref>
                         <a
                           // onClick={()=>{onClick({stream_score:resolve_stream_score(dt.DigitalStream),event_name:"Card Click",section_name:"Resources Section",page_source:`${data.PageSEO.PageTitle}`,label:`${dt.ResourceTitle}-${dt.CTAText}`})}}
@@ -312,11 +318,11 @@ export default function Navbar({ h_data }) {
                     <div className="w-4/6 px-6  ">
                       <FeatureCard
                         id="tag"
-                        border={"none"}
+                        border={'none'}
                         space="0"
-                        color={"bg-secondary"}
-                        type={"cols"}
-                        bold={"font-semibold"}
+                        color={'bg-secondary'}
+                        type={'cols'}
+                        bold={'font-semibold'}
                         data={h_data.ResourcesList}
                       />
                     </div>
@@ -359,12 +365,12 @@ export default function Navbar({ h_data }) {
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
                         id="tag"
-                        border={"none"}
+                        border={'none'}
                         space="0"
-                        color={"bg-secondary"}
-                        type={"cols"}
+                        color={'bg-secondary'}
+                        type={'cols'}
                         data={h_data.PartnersList}
-                        bold={"font-semibold"}
+                        bold={'font-semibold'}
                       />
                     </div>
                   </div>
@@ -406,11 +412,11 @@ export default function Navbar({ h_data }) {
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
                         id="tag"
-                        border={"none"}
+                        border={'none'}
                         space="0"
-                        color={"bg-secondary"}
-                        type={"cols"}
-                        bold={"font-semibold"}
+                        color={'bg-secondary'}
+                        type={'cols'}
+                        bold={'font-semibold'}
                         data={h_data.CompanyList}
                       />
                     </div>
@@ -459,12 +465,12 @@ export default function Navbar({ h_data }) {
                     <div className="w-4/6 px-6 ">
                       <FeatureCard
                         id="tag"
-                        border={"none"}
+                        border={'none'}
                         space="0"
-                        color={"bg-secondary"}
-                        type={"cols"}
+                        color={'bg-secondary'}
+                        type={'cols'}
                         data={h_data.SupportList}
-                        bold={"font-semibold"}
+                        bold={'font-semibold'}
                       />
                     </div>
                   </div>
@@ -539,141 +545,131 @@ export default function Navbar({ h_data }) {
                 >
                   <summary
                     className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
+                    style={{ listStyle: 'none' }}
                   >
                     <span className="col-span-11 text-lg font-semibold">
                       Products
                     </span>
                   </summary>
-                  
+
                   {h_data.Products.map((dt) => (
-                    <div  key="dt" className="py-1">
-                    <Link
-                     
-                      href={dt.redirectURL}
-                    >
-                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
-                      
-                    </Link>
+                    <div key="dt" className="py-1">
+                      <Link href={dt.redirectURL}>
+                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
+                          {dt.Title}
+                        </a>
+                      </Link>
                     </div>
                   ))}
-                  
+
                   {/* <hr/> */}
                 </details>
               </li>
               <li className="toggleable  py-1 bg-white ">
-              <details
+                <details
                   key="data"
                   className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
                   <summary
                     className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
+                    style={{ listStyle: 'none' }}
                   >
                     <span className="col-span-11 text-lg font-semibold">
-                     Resources
+                      Resources
                     </span>
                   </summary>
-                  
+
                   {h_data.ResourcesList.map((dt) => (
-                    <div  key="dt" className="py-1">
-                    <Link
-                     
-                      href={dt.redirectURL}
-                    >
-                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
-                      
-                    </Link>
+                    <div key="dt" className="py-1">
+                      <Link href={dt.redirectURL}>
+                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
+                          {dt.Title}
+                        </a>
+                      </Link>
                     </div>
                   ))}
-                  
+
                   {/* <hr/> */}
                 </details>
               </li>
               <li className="toggleable  py-1 bg-white ">
-              <details
+                <details
                   key="data"
                   className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
                   <summary
                     className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
+                    style={{ listStyle: 'none' }}
                   >
                     <span className="col-span-11 text-lg font-semibold">
-                     Partners
+                      Partners
                     </span>
                   </summary>
-                  
+
                   {h_data.PartnersList.map((dt) => (
-                    <div  key="dt" className="py-1">
-                    <Link
-                     
-                      href={dt.redirectURL}
-                    >
-                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
-                      
-                    </Link>
+                    <div key="dt" className="py-1">
+                      <Link href={dt.redirectURL}>
+                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
+                          {dt.Title}
+                        </a>
+                      </Link>
                     </div>
                   ))}
-                  
+
                   {/* <hr/> */}
                 </details>
               </li>
               <li className="toggleable  py-1 bg-white ">
-              <details
+                <details
                   key="data"
                   className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
                   <summary
                     className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
+                    style={{ listStyle: 'none' }}
                   >
                     <span className="col-span-11 text-lg font-semibold">
-                     Company
+                      Company
                     </span>
                   </summary>
-                  
+
                   {h_data.CompanyList.map((dt) => (
-                    <div  key="dt" className="py-1">
-                    <Link
-                     
-                      href={dt.redirectURL}
-                    >
-                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
-                      
-                    </Link>
+                    <div key="dt" className="py-1">
+                      <Link href={dt.redirectURL}>
+                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
+                          {dt.Title}
+                        </a>
+                      </Link>
                     </div>
                   ))}
-                  
+
                   {/* <hr/> */}
                 </details>
               </li>
               <li className="toggleable  py-1 bg-white ">
-              <details
+                <details
                   key="data"
                   className="m-header   relative overflow-hidden px-2  bg-white select-none "
                 >
                   <summary
                     className=" items-center grid grid-cols-12  px-2 cursor-pointer"
-                    style={{ listStyle: "none" }}
+                    style={{ listStyle: 'none' }}
                   >
                     <span className="col-span-11 text-lg font-semibold">
-                     Support
+                      Support
                     </span>
                   </summary>
-                  
+
                   {h_data.SupportList.map((dt) => (
-                    <div  key="dt" className="py-1">
-                    <Link
-                     
-                      href={dt.redirectURL}
-                    >
-                      <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">{dt.Title}</a>
-                      
-                    </Link>
+                    <div key="dt" className="py-1">
+                      <Link href={dt.redirectURL}>
+                        <a className="  px-4 mx-2   text-md   text-gray-1000 leading-loose">
+                          {dt.Title}
+                        </a>
+                      </Link>
                     </div>
                   ))}
-                  
+
                   {/* <hr/> */}
                 </details>
               </li>

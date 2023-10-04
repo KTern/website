@@ -1,5 +1,10 @@
+
 import Navbar from "./navbar";
 import Footer from "./footer";
+
+/* eslint-disable camelcase */
+/* eslint-disable react/prop-types */
+
 export default function Layout({ children, h_data, f_data }) {
   //  console.log("Layout",h_data)
   return (
@@ -16,6 +21,7 @@ export default function Layout({ children, h_data, f_data }) {
 export const getStaticProps = async () => {
   const res = await fetch("https://strapi.ktern.com/header", {
     method: "get",
+
   });
   const data = await res.json();
   // console.log('data', data);
