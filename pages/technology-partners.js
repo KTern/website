@@ -1,19 +1,19 @@
-import Layout from '../component/Layout';
-import Image from 'next/image';
-import Link from 'next/link';
-import { NextSeo } from 'next-seo';
-import { BreadcrumbJsonLd } from 'next-seo';
-import { LogoJsonLd } from 'next-seo';
-import { SocialProfileJsonLd } from 'next-seo';
-import { FAQPageJsonLd } from 'next-seo';
-import Carousel from 'react-multi-carousel';
-import FAQ from '../component/faq';
-import Markdown from 'markdown-to-jsx';
-import BreadCrumb from '../component/breadcrumb';
+import Layout from "../component/Layout";
+import Image from "next/image";
+import Link from "next/link";
+import { NextSeo } from "next-seo";
+import { BreadcrumbJsonLd } from "next-seo";
+import { LogoJsonLd } from "next-seo";
+import { SocialProfileJsonLd } from "next-seo";
+import { FAQPageJsonLd } from "next-seo";
+import Carousel from "react-multi-carousel";
+import FAQ from "../component/faq";
+import Markdown from "markdown-to-jsx";
+import BreadCrumb from "../component/breadcrumb";
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
-} from '../component/page_event';
+} from "../component/page_event";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -62,7 +62,7 @@ export default function technical_partner({ data, h_data, f_data }) {
               width: 1920,
               height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
-              type: 'image/png',
+              type: "image/png",
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -86,31 +86,31 @@ export default function technical_partner({ data, h_data, f_data }) {
         // ]}
         additionalMetaTags={[
           {
-            property: 'dc:creator',
-            content: 'Nivedha',
+            property: "dc:creator",
+            content: "Nivedha",
           },
           {
-            name: 'application-name',
-            content: 'KTern.AI',
+            name: "application-name",
+            content: "KTern.AI",
           },
           {
-            httpEquiv: 'x-ua-compatible',
-            content: 'IE=edge; chrome=1',
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
           },
         ]}
         additionalLinkTags={[
           {
-            rel: 'icon',
-            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
           },
           {
-            rel: 'apple-touch-icon',
-            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-            sizes: '76x76',
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
           },
           {
-            rel: 'manifest',
-            href: '/manifest.json',
+            rel: "manifest",
+            href: "/manifest.json",
           },
         ]}
       />
@@ -140,9 +140,9 @@ export default function technical_partner({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'Hero Section',
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.PageHeader.primaryCTA.buttonTitle}`,
                       });
@@ -156,9 +156,9 @@ export default function technical_partner({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'Hero Section',
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "Hero Section",
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.PageHeader.secondaryCTA.buttonTitle}`,
                       });
@@ -280,17 +280,17 @@ export default function technical_partner({ data, h_data, f_data }) {
                             overrides: {
                               p: {
                                 props: {
-                                  className: 'text-md text-justify ',
+                                  className: "text-md text-justify ",
                                 },
                               },
                               strong: {
                                 props: {
-                                  className: '',
+                                  className: "",
                                 },
                               },
                               a: {
                                 props: {
-                                  className: 'text-blue-900 hover:underline ',
+                                  className: "text-blue-900 hover:underline ",
                                 },
                               },
                             },
@@ -329,9 +329,9 @@ export default function technical_partner({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'CTA Section',
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.CTA.PrimaryCTA.buttonTitle}`,
                       });
@@ -345,9 +345,9 @@ export default function technical_partner({ data, h_data, f_data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'CTA Section',
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.CTA.SecondaryCTA.buttonTitle}`,
                       });
@@ -367,17 +367,17 @@ export default function technical_partner({ data, h_data, f_data }) {
 }
 export const getStaticProps = async () => {
   //    fetch strapi data
-  const res = await fetch(`https://api.ktern.com/technology-partners`, {
-    method: 'get',
+  const res = await fetch(`https://strapi.ktern.com/technology-partners`, {
+    method: "get",
   });
   const data = await res.json();
   // console.log('data1', data);
-  const res1 = await fetch('https://api.ktern.com/header', {
-    method: 'get',
+  const res1 = await fetch("https://strapi.ktern.com/header", {
+    method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
-    method: 'get',
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
+    method: "get",
   });
   const f_data = await res2.json();
 

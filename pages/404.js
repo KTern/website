@@ -16,7 +16,6 @@ export default function Error({ data }) {
   return (
     <>
       <section className="relative py-10 2xl:py-20  overflow-hidden background ">
-       
         {/* <div className="hidden lg:block absolute top-0 right-0 h-40 lg:h-80 lg:mr-44 lg:mt-20">
           <Image priority src="/404/five-stars.svg" alt="" width={400} height={300} />
         </div> */}
@@ -38,18 +37,20 @@ export default function Error({ data }) {
           </div>
         </div>
         <div className=" grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto p-10 xl:px-64 mt-6">
-          {data.QuickLinks.map((dt) => 
-            (<div
+          {data.QuickLinks.map((dt) => (
+            <div
               key="dt"
               className="flex flex-col items-center space-y-4 justify-center shadow-xl border-2 text-center shadow-black rounded-xl bg-white"
-           style={{width:"100%",height:"140px"}} >
-              <h3 className="text-lg font-bold">{dt.CardTitle}</h3 >
-             <Link href={dt.CTAUrl}>
-               <a className="text-sm text-dxaas-primary border-b-2 border-dotted border-dxaas-primary">{dt.CTAText}</a>
-             </Link>
-
+              style={{ width: "100%", height: "140px" }}
+            >
+              <h3 className="text-lg font-bold">{dt.CardTitle}</h3>
+              <Link href={dt.CTAUrl}>
+                <a className="text-sm text-dxaas-primary border-b-2 border-dotted border-dxaas-primary">
+                  {dt.CTAText}
+                </a>
+              </Link>
             </div>
-        ))}
+          ))}
         </div>
       </section>
     </>
@@ -58,7 +59,7 @@ export default function Error({ data }) {
 
 export const getStaticProps = async () => {
   // data url from strapi
-  let res = await fetch("https://api.ktern.com/not-found", {
+  let res = await fetch("https://strapi.ktern.com/not-found", {
     method: "get",
   });
 

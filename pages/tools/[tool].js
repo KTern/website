@@ -107,11 +107,6 @@ export default function ValueAssesment({ h_data, f_data, data }) {
                 .toLowerCase()
                 .match(
                   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                ) &&
-              String(document.getElementById("form").text_field.value)
-                .toLowerCase()
-                .match(
-                  "^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.rum)(?!ymail.com)(?!linero.it)(?!outlook.com)(?!hotmail.it)(?!mail.ru)(?!yahoo.in)(?!hotmail.es)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$"
                 )
             ) {
               document.getElementById("button_field").disabled = false;
@@ -192,7 +187,7 @@ export default function ValueAssesment({ h_data, f_data, data }) {
     };
 
     console.log(JSON.stringify(val));
-    await fetch(`https://api.ktern.com/tools-reports`, {
+    await fetch(`https://strapi.ktern.com/tools-reports`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -540,7 +535,7 @@ export const getServerSideProps = async (ctx) => {
   //    fetch strapi data
 
   const res = await fetch(
-    `https://api.ktern.com/tools?QuizSlug=${ctx.params.tool}`,
+    `https://strapi.ktern.com/tools?QuizSlug=${ctx.params.tool}`,
     {
       method: "get",
     }
@@ -553,11 +548,11 @@ export const getServerSideProps = async (ctx) => {
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

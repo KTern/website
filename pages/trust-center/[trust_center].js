@@ -7,16 +7,19 @@ import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../component/breadcrumb";
-import Event,{resolve_interest_score,resolve_stream_score} from "../../component/page_event";
+import Event, {
+  resolve_interest_score,
+  resolve_stream_score,
+} from "../../component/page_event";
 export default function TrustCenter({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.pageSEO.BreadCrumb.map((dt) => {
     breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
   // Amplitude Tracking onClick
-  function onClick(data){
-    Event(data)
-    }
+  function onClick(data) {
+    Event(data);
+  }
   return (
     <>
       <NextSeo
@@ -86,8 +89,11 @@ export default function TrustCenter({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-    
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
       <Layout h_data={h_data} f_data={f_data}>
         {/* Header Section */}
         <section
@@ -184,22 +190,22 @@ export default function TrustCenter({ data, h_data, f_data }) {
                     </Markdown>
                   </div>
                 ))}
-                  <div className="md:hidden block flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
-                <Link href="#top" passHref>
-                  <a className=" rounded-full p-2  flex items-center justify-center text-black">
-                    <Image priority
-                      className=""
-                      src="/up-arrow.png"
-                      height="15"
-                      width="15"
-                      alt="up arrow"
-                    />
-                    &nbsp;&nbsp;Go To the Top
-                  </a>
-                </Link>
+                <div className="md:hidden block flex justify-center bg-white  text-center items-center  w-full rounded-md  sticky bottom-20">
+                  <Link href="#top" passHref>
+                    <a className=" rounded-full p-2  flex items-center justify-center text-black">
+                      <Image
+                        priority
+                        className=""
+                        src="/up-arrow.png"
+                        height="15"
+                        width="15"
+                        alt="up arrow"
+                      />
+                      &nbsp;&nbsp;Go To the Top
+                    </a>
+                  </Link>
+                </div>
               </div>
-              </div>
-            
             </div>
             <div className="hidden md:block w-full md:w-1/3  my-28 ">
               <div className="flex sm:space-x-2 md:space-x-10   sm:py-5 md:p-5 bg-white border-2  sticky z-10 md:top-16 sm:top-10 ">
@@ -211,8 +217,19 @@ export default function TrustCenter({ data, h_data, f_data }) {
                     <li key="dt" className="mt-1 list-decimal mx-5">
                       <Link href={dt.idURL} passHref>
                         <a
-                          onClick={()=>{onClick({stream_score:resolve_stream_score('none'),event_name:"Link Click",section_name:"Table Of Contents Section",page_source:`${data.pageSEO.PageTitle}`,label:`Content-${dt.idText}`})}}
-                           className="card-subheading ">{dt.idText}</a>
+                          onClick={() => {
+                            onClick({
+                              stream_score: resolve_stream_score("none"),
+                              event_name: "Link Click",
+                              section_name: "Table Of Contents Section",
+                              page_source: `${data.pageSEO.PageTitle}`,
+                              label: `Content-${dt.idText}`,
+                            });
+                          }}
+                          className="card-subheading "
+                        >
+                          {dt.idText}
+                        </a>
                       </Link>
                     </li>
                   ))}
@@ -244,20 +261,20 @@ export default function TrustCenter({ data, h_data, f_data }) {
 export const getServerSideProps = async (ctx) => {
   const id = ctx.params.trust_center;
   //    fetch strapi data
-  const res = await fetch(`https://api.ktern.com/trustcenters?slug=${id}`, {
+  const res = await fetch(`https://strapi.ktern.com/trustcenters?slug=${id}`, {
     method: "get",
   });
   const data = await res.json();
-  if(data[0]==undefined){
-    ctx.res.setHeader('Location', '/404');
+  if (data[0] == undefined) {
+    ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

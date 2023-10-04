@@ -13,7 +13,6 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../component/page_event";
-import Email from "../component/pattern";
 export default function PartnerContact({ data, h_data, f_data }) {
   const router = useRouter();
   // console.log(router.query.message);
@@ -272,7 +271,15 @@ export default function PartnerContact({ data, h_data, f_data }) {
                   </label>
                 </div>
                 <div className="zcwf_col_fld">
-                  <Email name={"Email"}></Email>
+                  <input
+                    required
+                    className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                    type="email"
+                    ftype="email"
+                    id="Email"
+                    name="Email"
+                    maxLength="100"
+                  />
                   <div className="zcwf_col_help"></div>
                 </div>
               </div>
@@ -340,15 +347,15 @@ export default function PartnerContact({ data, h_data, f_data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi
-  const res = await fetch("https://api.ktern.com/partner-registration", {
+  const res = await fetch("https://strapi.ktern.com/partner-registration", {
     method: "get",
   });
   const data = await res.json();
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

@@ -1,9 +1,9 @@
-import CTABar1 from '../component/ctaBar1';
-import Features from '../component/features';
-import ImageCard from '../component/imageCard';
-import Layout from '../component/Layout';
-import SEO from '../component/seo';
-import SimpleHero from '../component/simplehero';
+import CTABar1 from "../component/ctaBar1";
+import Features from "../component/features";
+import ImageCard from "../component/imageCard";
+import Layout from "../component/Layout";
+import SEO from "../component/seo";
+import SimpleHero from "../component/simplehero";
 
 export default function StrategicPartnersLandingPage({
   pageData,
@@ -36,17 +36,17 @@ export default function StrategicPartnersLandingPage({
 
 export const getStaticProps = async () => {
   //    fetch strapi data
-  const res = await fetch(`https://api.ktern.com/strategic-partners`, {
-    method: 'get',
+  const res = await fetch(`https://strapi.ktern.com/strategic-partners`, {
+    method: "get",
   });
   const data = await res.json();
   // console.log('data1', data);
-  const res1 = await fetch('https://api.ktern.com/header', {
-    method: 'get',
+  const res1 = await fetch("https://strapi.ktern.com/header", {
+    method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
-    method: 'get',
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
+    method: "get",
   });
   const f_data = await res2.json();
 
@@ -55,7 +55,7 @@ export const getStaticProps = async () => {
       pageData: data,
       headerData: h_data,
       footerData: f_data,
-      stream: 'dxaas',
+      stream: "dxaas",
     },
   };
 };

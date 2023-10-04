@@ -13,7 +13,6 @@ import Event, {
   resolve_interest_score,
   resolve_stream_score,
 } from "../../../component/page_event";
-import Email from "../../../component/pattern";
 const Ebook_Landing = ({ data, h_data, f_data }) => {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
@@ -401,7 +400,15 @@ This blueprint will help you define the right plan, the right effort estimate, t
                         </label>
                       </div>
                       <div className="zcwf_col_fld">
-                        <Email name={"Email"}></Email>
+                        <input
+                          required
+                          className="block w-full px-4 py-4 mt-2  placeholder-gray-400 bg-white border-2 border-gray-400 rounded-md focus:outline-none focus:border-black"
+                          type="email"
+                          ftype="email"
+                          id="Email"
+                          name="Email"
+                          maxLength="100"
+                        ></input>
                         <div className="zcwf_col_help"></div>
                       </div>
                     </div>
@@ -731,18 +738,18 @@ This blueprint will help you define the right plan, the right effort estimate, t
 // Fetch necessary data for the blog post using params.ebook
 export const getServerSideProps = async (ctx) => {
   const ebook = ctx.params.ebook;
-  const res = await fetch(`https://api.ktern.com/e-books?slug=${ebook}`);
+  const res = await fetch(`https://strapi.ktern.com/e-books?slug=${ebook}`);
   const data = await res.json();
   if (data[0] == undefined) {
     ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

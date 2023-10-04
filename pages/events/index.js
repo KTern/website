@@ -438,10 +438,115 @@ export default function Events({ h_data, f_data, data }) {
                   key="dt"
                   className="relative flex  px-2  group  false transition transform hover:-translate-y-1 duration-500"
                 >
-                  <div
-                    className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
-                  >
-                    <div className="bg-white">
+                  {dt.OpenNewTab && (
+                    <div
+                      className={`relative  bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl shadow-lg `}
+                    >
+                      <div className="bg-white">
+                        <Link href={dt.CTAUrl} passHref>
+                          <a
+                            onClick={() => {
+                              onClick({
+                                stream_score: resolve_stream_score(
+                                  dt.cssstreamtag
+                                ),
+                                event_name: "Card Click",
+                                section_name: "Related Resources Section",
+                                page_source: `${data.PageSEO.PageTitle}`,
+                                label: `${dt.CardTitle}-${dt.CTAUrl}`,
+                              });
+                            }}
+                            target="_blank"
+                            className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+                          >
+                            <Image
+                              priority
+                              className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                              src={dt.Icon.imageURL}
+                              alt={dt.Icon.imageDescription}
+                              width="550"
+                              height="300"
+                            />
+                          </a>
+                        </Link>
+                      </div>
+                      <Link href={dt.CTAUrl} passHref>
+                        <a
+                          className="bg-white"
+                          uonClick={() => {
+                            onClick({
+                              stream_score: resolve_stream_score(
+                                dt.cssstreamtag
+                              ),
+                              event_name: "Card Click",
+                              section_name: "Related Resources Section",
+                              page_source: `${data.PageSEO.PageTitle}`,
+                              label: `${dt.CardTitle}-${dt.CTAUrl}`,
+                            });
+                          }}
+                        >
+                          <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                            {dt.CardTitle}
+                          </span>
+                          <Link href={dt.CTAUrl} passHref>
+                            <a
+                              target="_blank"
+                              className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
+                            >
+                              <span className="hyperlink group-hover:text-gray-300">
+                                {dt.CTAText}
+                              </span>
+                              <svg
+                                className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                ></path>
+                              </svg>
+                            </a>
+                          </Link>
+                        </a>
+                      </Link>
+                    </div>
+                  )}
+                  {!dt.OpenNewTab && (
+                    <div
+                      className={`relative bg-white flex-col p-5 px-5  group overflow-hidden false rounded-xl  shadow-lg`}
+                    >
+                      <div className="bg-white">
+                        <Link href={dt.CTAUrl} passHref>
+                          <a
+                            onClick={() => {
+                              onClick({
+                                stream_score: resolve_stream_score(
+                                  dt.cssstreamtag
+                                ),
+                                event_name: "Card Click",
+                                section_name: "Related Resources Section",
+                                page_source: `${data.PageSEO.PageTitle}`,
+                                label: `${dt.CardTitle}-${dt.CTAUrl}`,
+                              });
+                            }}
+                            className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+                          >
+                            <Image
+                              priority
+                              className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                              src={data.Icon.imageURL}
+                              alt={data.Icon.imageDescription}
+                              width="550"
+                              height="300"
+                            />
+                          </a>
+                        </Link>
+                      </div>
                       <Link href={dt.CTAUrl} passHref>
                         <a
                           onClick={() => {
@@ -455,63 +560,49 @@ export default function Events({ h_data, f_data, data }) {
                               label: `${dt.CardTitle}-${dt.CTAUrl}`,
                             });
                           }}
-                          target={dt.OpenNewTab ? "_blank" : "_self"}
-                          className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
+                          className="bg-white"
                         >
-                          <Image
-                            priority
-                            className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                            src={dt.Icon.imageURL}
-                            alt={dt.Icon.imageDescription}
-                            width="550"
-                            height="300"
-                          />
+                          <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                            {data.CardTitle}
+                          </span>
+                          <Link href={dt.CTAUrl} passHref>
+                            <a
+                              onClick={() => {
+                                onClick({
+                                  stream_score: resolve_stream_score(
+                                    dt.cssstreamtag
+                                  ),
+                                  event_name: "Card Click",
+                                  section_name: "Related Resources Section",
+                                  page_source: `${data.PageSEO.PageTitle}`,
+                                  label: `${dt.CardTitle}-${dt.CTAUrl}`,
+                                });
+                              }}
+                              className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
+                            >
+                              <span className="hyperlink group-hover:text-gray-300">
+                                {dt.CTAText}
+                              </span>
+                              <svg
+                                className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                ></path>
+                              </svg>
+                            </a>
+                          </Link>
                         </a>
                       </Link>
                     </div>
-                    <Link href={dt.CTAUrl} passHref>
-                      <a
-                        className="bg-white"
-                        onClick={() => {
-                          onClick({
-                            stream_score: resolve_stream_score(dt.cssstreamtag),
-                            event_name: "Card Click",
-                            section_name: "Related Resources Section",
-                            page_source: `${data.PageSEO.PageTitle}`,
-                            label: `${dt.CardTitle}-${dt.CTAUrl}`,
-                          });
-                        }}
-                      >
-                        <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                          {dt.CardTitle}
-                        </span>
-                        <Link href={dt.CTAUrl} passHref>
-                          <a
-                            target="_blank"
-                            className="mb-6 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
-                          >
-                            <span className="hyperlink group-hover:text-gray-300">
-                              {dt.CTAText}
-                            </span>
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </a>
-                    </Link>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -615,16 +706,16 @@ export default function Events({ h_data, f_data, data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi)
-  const res = await fetch("https://api.ktern.com/events", {
+  const res = await fetch("https://strapi.ktern.com/events", {
     method: "get",
   });
   const data = await res.json();
   // console.log("data", data);
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

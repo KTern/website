@@ -61,10 +61,10 @@ export default function Webinar({ data, h_data, f_data }) {
       filterArray.RelatedStream = document.getElementById("stream").value;
     // if (document.getElementById('type').value!= 'allTypes')
     //     filterArray.ResourceType = document.getElementById('type').value
-    if (document.getElementById('topic').value!= 'allTopics')
-        filterArray.RelatedTopic = document.getElementById('topic').value
-    if (document.getElementById('role').value!= 'allRoles')
-      filterArray.RelatedRole=document.getElementById('role').value;
+    if (document.getElementById("topic").value != "allTopics")
+      filterArray.RelatedTopic = document.getElementById("topic").value;
+    if (document.getElementById("role").value != "allRoles")
+      filterArray.RelatedRole = document.getElementById("role").value;
     // console.log(filterArray);
 
     filter = _.filter(data.WebinarList, filterArray);
@@ -186,8 +186,11 @@ export default function Webinar({ data, h_data, f_data }) {
         ]}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd logo={process.env.NEXT_PUBLIC_LOGO} url={process.env.NEXT_PUBLIC_URL} />
-    
+      <LogoJsonLd
+        logo={process.env.NEXT_PUBLIC_LOGO}
+        url={process.env.NEXT_PUBLIC_URL}
+      />
+
       <Layout h_data={h_data} f_data={f_data}>
         {/* <!--Upcoming Webinar Section--> */}
 
@@ -272,7 +275,8 @@ export default function Webinar({ data, h_data, f_data }) {
                                           key="data"
                                           className="h-16 mr-6 rounded-full mr-10 "
                                         >
-                                          <Image priority
+                                          <Image
+                                            priority
                                             width="60%"
                                             height="60%"
                                             className="w-16 h-16 mr-6 rounded-full"
@@ -294,7 +298,8 @@ export default function Webinar({ data, h_data, f_data }) {
                                   </div>
                                   <div className="flex ">
                                     <div className="block mt-14  h-10 mr-4 relative left-0 flex flex-wrap items-center">
-                                      <Image priority
+                                      <Image
+                                        priority
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
@@ -306,7 +311,8 @@ export default function Webinar({ data, h_data, f_data }) {
                                       </time>
                                     </div>
                                     <div className="block mt-14  h-10 mr-4 relative left-0 flex-wrap flex items-center">
-                                      <Image priority
+                                      <Image
+                                        priority
                                         width="30%"
                                         height="30%"
                                         className=" w-full shadow-sm max-h-20 mr-10"
@@ -367,8 +373,7 @@ export default function Webinar({ data, h_data, f_data }) {
                   webkitAppearance: "none",
                   mozAppearance: "none",
                   appearance: "none",
-                  background:
-                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                  background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
                 }}
               >
                 {streamOptions.map((item) => (
@@ -392,8 +397,7 @@ export default function Webinar({ data, h_data, f_data }) {
                   webkitAppearance: "none",
                   mozAppearance: "none",
                   appearance: "none",
-                  background:
-                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                  background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
                 }}
               >
                 {roleOptions.map((item) => (
@@ -416,8 +420,7 @@ export default function Webinar({ data, h_data, f_data }) {
                   webkitAppearance: "none",
                   mozAppearance: "none",
                   appearance: "none",
-                  background:
-                    "url('/down-arrow.png') 92% / 8% no-repeat #fff",
+                  background: "url('/down-arrow.png') 92% / 8% no-repeat #fff",
                 }}
               >
                 {topicOptions.map((item) => (
@@ -482,7 +485,8 @@ export default function Webinar({ data, h_data, f_data }) {
                                   Digital {dt.RelatedStream}
                                 </span>
                               </div>
-                              <Image priority
+                              <Image
+                                priority
                                 className="bg-secondary object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
                                 src={dt.ImageURL}
                                 alt="resource"
@@ -562,17 +566,17 @@ export default function Webinar({ data, h_data, f_data }) {
               <div className="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <Link href={data.CTA.PrimaryCTA.linkURL} passHref>
                   <a
-                   onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score('none'),
-                      event_name: "Button Click",
-                      section_name: "CTA Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.CTA.PrimaryCTA.buttonTitle}`,
-                    });
-                  }}
-                  className=" border-2 border-white inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black">
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.PrimaryCTA.buttonTitle}`,
+                      });
+                    }}
+                    className=" border-2 border-white inline-block py-3 px-10 bg-black hover:bg-gray-300 hover:text-black shadow  button  text-white rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
+                  >
                     {data.CTA.PrimaryCTA.buttonTitle}
                   </a>
                 </Link>
@@ -582,16 +586,15 @@ export default function Webinar({ data, h_data, f_data }) {
                   passHref
                 >
                   <a
-                  onClick={() => {
-                    onClick({
-                      stream_score:
-                        resolve_stream_score('none'),
-                      event_name: "Button Click",
-                      section_name: "CTA Section",
-                      page_source: `${data.PageSEO.PageTitle}`,
-                      label: `${data.CTA.SecondaryCTA.buttonTitle}`,
-                    });
-                  }}
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score("none"),
+                        event_name: "Button Click",
+                        section_name: "CTA Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${data.CTA.SecondaryCTA.buttonTitle}`,
+                      });
+                    }}
                     target="_blank"
                     className="  inline-block py-3 px-10 bg-white button hover:bg-gray-50 hover:text-black shadow hyperlink  text-black rounded-r-xl rounded-b-xl transition duration-200 border-2 border-black"
                   >
@@ -610,16 +613,16 @@ export const getStaticProps = async () => {
   // data url from strapi
 
   // data url from strapi)
-  const res = await fetch("https://api.ktern.com/all-webinars", {
+  const res = await fetch("https://strapi.ktern.com/all-webinars", {
     method: "get",
   });
   const data = await res.json();
   // console.log("data", data)
-  const res1 = await fetch("https://api.ktern.com/header", {
+  const res1 = await fetch("https://strapi.ktern.com/header", {
     method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://api.ktern.com/footer", {
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
     method: "get",
   });
   const f_data = await res2.json();

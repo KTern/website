@@ -1,21 +1,21 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Layout from '../component/Layout';
-import { NextSeo } from 'next-seo';
-import { BreadcrumbJsonLd } from 'next-seo';
-import { LogoJsonLd } from 'next-seo';
-import { SocialProfileJsonLd } from 'next-seo';
+import Image from "next/image";
+import Link from "next/link";
+import Layout from "../component/Layout";
+import { NextSeo } from "next-seo";
+import { BreadcrumbJsonLd } from "next-seo";
+import { LogoJsonLd } from "next-seo";
+import { SocialProfileJsonLd } from "next-seo";
 
-import React, { useState, useRef, useEffect } from 'react';
-import { isPlainObject } from 'lodash';
-import Carousel from 'react-multi-carousel';
-import FAQ from '../component/faq';
-import BreadCrumb from '../component/breadcrumb';
+import React, { useState, useRef, useEffect } from "react";
+import { isPlainObject } from "lodash";
+import Carousel from "react-multi-carousel";
+import FAQ from "../component/faq";
+import BreadCrumb from "../component/breadcrumb";
 import Event, {
   resolve_interest_score,
   resolve_stream_score,
-} from '../component/page_event';
-import Markdown from 'markdown-to-jsx';
+} from "../component/page_event";
+import Markdown from "markdown-to-jsx";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -54,11 +54,7 @@ function handleTotal() {
 export default function Pricing({ data, h_data, f_data }) {
   let breadcrumb = [];
   data.PageSEO.BreadCrumb.map((dt) => {
-    breadcrumb.push({
-      position: dt.position,
-      name: dt.name,
-      item: dt.item,
-    });
+    breadcrumb.push({ position: dt.position, name: dt.name, item: dt.item });
   });
   // Amplitude Tracking onClick
   function onClick(data) {
@@ -72,38 +68,38 @@ export default function Pricing({ data, h_data, f_data }) {
   useEffect(() => {
     if (isMapsSelected) {
       if (process.browser)
-        document.getElementById('maps').style.borderColor = 'blue';
+        document.getElementById("maps").style.borderColor = "blue";
     } else {
       if (process.browser)
-        document.getElementById('maps').style.borderColor = 'gray';
+        document.getElementById("maps").style.borderColor = "gray";
     }
     if (isProjectsSelected) {
       if (process.browser)
-        document.getElementById('projects').style.borderColor = 'blue';
+        document.getElementById("projects").style.borderColor = "blue";
     } else {
       if (process.browser)
-        document.getElementById('projects').style.borderColor = 'gray';
+        document.getElementById("projects").style.borderColor = "gray";
     }
     if (isProcessSelected) {
       if (process.browser)
-        document.getElementById('process').style.borderColor = 'blue';
+        document.getElementById("process").style.borderColor = "blue";
     } else {
       if (process.browser)
-        document.getElementById('process').style.borderColor = 'gray';
+        document.getElementById("process").style.borderColor = "gray";
     }
     if (isLabsSelected) {
       if (process.browser)
-        document.getElementById('labs').style.borderColor = 'blue';
+        document.getElementById("labs").style.borderColor = "blue";
     } else {
       if (process.browser)
-        document.getElementById('labs').style.borderColor = 'gray';
+        document.getElementById("labs").style.borderColor = "gray";
     }
     if (isMinesSelected) {
       if (process.browser)
-        document.getElementById('mines').style.borderColor = 'blue';
+        document.getElementById("mines").style.borderColor = "blue";
     } else {
       if (process.browser)
-        document.getElementById('mines').style.borderColor = 'gray';
+        document.getElementById("mines").style.borderColor = "gray";
     }
   }, []);
   let faq = [];
@@ -126,7 +122,7 @@ export default function Pricing({ data, h_data, f_data }) {
               width: 1920,
               height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
-              type: 'image/png',
+              type: "image/png",
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -150,31 +146,31 @@ export default function Pricing({ data, h_data, f_data }) {
         //  ]}
         additionalMetaTags={[
           {
-            property: 'dc:creator',
-            content: 'Nivedha',
+            property: "dc:creator",
+            content: "Nivedha",
           },
           {
-            name: 'application-name',
-            content: 'KTern.AI',
+            name: "application-name",
+            content: "KTern.AI",
           },
           {
-            httpEquiv: 'x-ua-compatible',
-            content: 'IE=edge; chrome=1',
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
           },
         ]}
         additionalLinkTags={[
           {
-            rel: 'icon',
-            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
+            rel: "icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
           },
           {
-            rel: 'apple-touch-icon',
-            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
-            sizes: '76x76',
+            rel: "apple-touch-icon",
+            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+            sizes: "76x76",
           },
           {
-            rel: 'manifest',
-            href: '/manifest.json',
+            rel: "manifest",
+            href: "/manifest.json",
           },
         ]}
       />
@@ -236,12 +232,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(false);
-                                      handleClick('maps');
+                                      handleClick("maps");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('none'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Maps Section',
+                                          resolve_stream_score("none"),
+                                        event_name: "Button Click",
+                                        section_name: "Maps Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Unselect`,
                                       });
@@ -259,12 +255,12 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(true);
-                                      handleClick('maps');
+                                      handleClick("maps");
                                       onClick({
                                         stream_score:
-                                          resolve_stream_score('maps'),
-                                        event_name: 'Button Click',
-                                        section_name: 'Maps Section',
+                                          resolve_stream_score("maps"),
+                                        event_name: "Button Click",
+                                        section_name: "Maps Section",
                                         page_source: `${data.PageSEO.PageTitle}`,
                                         label: `Select`,
                                       });
@@ -311,9 +307,9 @@ export default function Pricing({ data, h_data, f_data }) {
                                   onClick={() => {
                                     onClick({
                                       stream_score:
-                                        resolve_stream_score('maps'),
-                                      event_name: 'Link Click',
-                                      section_name: 'Maps-Key Features Section',
+                                        resolve_stream_score("maps"),
+                                      event_name: "Link Click",
+                                      section_name: "Maps-Key Features Section",
                                       page_source: `${data.PageSEO.PageTitle}`,
                                       label: `${dt.listItem}`,
                                     });
@@ -387,7 +383,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[0].ContinuousValue.map((data) => (
@@ -636,7 +632,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[1].ContinuousValue.map((data) => (
@@ -885,7 +881,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[2].ContinuousValue.map((data) => (
@@ -1133,7 +1129,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[3].ContinuousValue.map((data) => (
@@ -1382,7 +1378,7 @@ export default function Pricing({ data, h_data, f_data }) {
                         <div>
                           <div className="flex flex-row justify-between">
                             <h2 className="mb-1 text-lg font-bold ">
-                            Continuous Value
+                              Continuous Value
                             </h2>
                           </div>
                           {data.PricingCard[4].ContinuousValue.map((data) => (
@@ -1496,7 +1492,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(false);
-                                      handleClick('maps');
+                                      handleClick("maps");
                                     }}
                                   >
                                     <p>Unselect</p>
@@ -1510,7 +1506,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMapsSelected(true);
-                                      handleClick('maps');
+                                      handleClick("maps");
                                     }}
                                   >
                                     <p>Select</p>
@@ -1545,7 +1541,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(false);
-                                      handleClick('projects');
+                                      handleClick("projects");
                                     }}
                                   >
                                     Unselect
@@ -1559,7 +1555,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProjectsSelected(true);
-                                      handleClick('projects');
+                                      handleClick("projects");
                                     }}
                                   >
                                     Select
@@ -1594,7 +1590,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(false);
-                                      handleClick('process');
+                                      handleClick("process");
                                     }}
                                   >
                                     Unselect
@@ -1608,7 +1604,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsProcessSelected(true);
-                                      handleClick('process');
+                                      handleClick("process");
                                     }}
                                   >
                                     Select
@@ -1642,7 +1638,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(false);
-                                      handleClick('labs');
+                                      handleClick("labs");
                                     }}
                                   >
                                     Unselect
@@ -1656,7 +1652,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsLabsSelected(true);
-                                      handleClick('labs');
+                                      handleClick("labs");
                                     }}
                                   >
                                     Select
@@ -1690,7 +1686,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(false);
-                                      handleClick('mines');
+                                      handleClick("mines");
                                     }}
                                   >
                                     Unselect
@@ -1704,7 +1700,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                     className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                     onClick={() => {
                                       setIsMinesSelected(true);
-                                      handleClick('mines');
+                                      handleClick("mines");
                                     }}
                                   >
                                     Select
@@ -1830,7 +1826,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMapsSelected(false);
-                                    handleClick('maps');
+                                    handleClick("maps");
                                   }}
                                 >
                                   Unselect
@@ -1844,7 +1840,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMapsSelected(true);
-                                    handleClick('maps');
+                                    handleClick("maps");
                                   }}
                                 >
                                   Select
@@ -1878,7 +1874,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProjectsSelected(false);
-                                    handleClick('projects');
+                                    handleClick("projects");
                                   }}
                                 >
                                   Unselect
@@ -1892,7 +1888,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProjectsSelected(true);
-                                    handleClick('projects');
+                                    handleClick("projects");
                                   }}
                                 >
                                   Select
@@ -1926,7 +1922,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProcessSelected(false);
-                                    handleClick('process');
+                                    handleClick("process");
                                   }}
                                 >
                                   Unselect
@@ -1940,7 +1936,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsProcessSelected(true);
-                                    handleClick('process');
+                                    handleClick("process");
                                   }}
                                 >
                                   Select
@@ -1974,7 +1970,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsLabsSelected(false);
-                                    handleClick('labs');
+                                    handleClick("labs");
                                   }}
                                 >
                                   Unselect
@@ -1988,7 +1984,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsLabsSelected(true);
-                                    handleClick('labs');
+                                    handleClick("labs");
                                   }}
                                 >
                                   Select
@@ -2022,7 +2018,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMinesSelected(false);
-                                    handleClick('mines');
+                                    handleClick("mines");
                                   }}
                                 >
                                   Unselect
@@ -2036,7 +2032,7 @@ export default function Pricing({ data, h_data, f_data }) {
                                   className="inline-flex items-center justify-center mr-2 px-4 py-1 hyperlink text-gray-600 whitespace-no-wrap bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none"
                                   onClick={() => {
                                     setIsMinesSelected(true);
-                                    handleClick('mines');
+                                    handleClick("mines");
                                   }}
                                 >
                                   Select
@@ -2145,17 +2141,17 @@ export default function Pricing({ data, h_data, f_data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi
-  let res = await fetch('https://api.ktern.com/pricing', {
-    method: 'get',
+  let res = await fetch("https://strapi.ktern.com/pricing", {
+    method: "get",
   });
   let data = await res.json();
   // console.log(data);
-  const res1 = await fetch('https://api.ktern.com/header', {
-    method: 'get',
+  const res1 = await fetch("https://strapi.ktern.com/header", {
+    method: "get",
   });
   const h_data = await res1.json();
-  const res2 = await fetch('https://api.ktern.com/footer', {
-    method: 'get',
+  const res2 = await fetch("https://strapi.ktern.com/footer", {
+    method: "get",
   });
   const f_data = await res2.json();
 

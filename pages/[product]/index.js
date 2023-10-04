@@ -1,34 +1,33 @@
-/* eslint-disable no-undef */
-/* eslint-disable camelcase */
-import MultiCarousel from '../../component/carousel';
-import Hero from '../../component/hero';
-import Layout from '../../component/Layout';
-import LogoBanner from '../../component/logo-banner';
-import SEO from '../../component/seo';
-import SEOProduct from '../../component/seo-product';
-import StreamFeatures from '../../component/streamFeatures';
-import Testimonial from '../../component/testimonial';
-import ValuePoints from '../../component/valuePoints';
-import FeaturedResources from '../../component/featuredResources';
-import AppBanner from '../../component/appBanner';
-import CtaBar from '../../component/ctaBar';
-import FaqNew from '../../component/faqNew';
+import MultiCarousel from "../../component/carousel";
+import Hero from "../../component/hero";
+import Layout from "../../component/Layout";
+import LogoBanner from "../../component/logo-banner";
+import SEO from "../../component/seo";
+import SEOProduct from "../../component/seo-product";
+import StreamFeatures from "../../component/streamFeatures";
+import Testimonial from "../../component/testimonial";
+import ValuePoints from "../../component/valuePoints";
+import FeaturedResources from "../../component/featuredResources";
+import AppBanner from "../../component/appBanner";
+import CtaBar from "../../component/ctaBar";
+import FaqNew from "../../component/faqNew";
+import FeaturedResourcesComponent from "../../component/featuredResources1";
 
 export default function DigitalStream({
-	pageData,
-	headerData,
-	footerData,
-	background,
-  }) {
-	// Testimonials JSON LD
-	const testimonials = [];
-	// eslint-disable-next-line array-callback-return
-	pageData.ProductsTestimonials.Testimonials.map((dt) => {
-	  testimonials.push({
-		statement: dt.TestimonialStatement,
-		author: dt.AuthorName,
-	  });
-	});
+  pageData,
+  headerData,
+  footerData,
+  background,
+}) {
+  // Testimonials JSON LD
+  const testimonials = [];
+  // eslint-disable-next-line array-callback-return
+  pageData.ProductsTestimonials.Testimonials.map((dt) => {
+    testimonials.push({
+      statement: dt.TestimonialStatement,
+      author: dt.AuthorName,
+    });
+  });
   return (
     <>
       <SEO data={pageData.PageSEO} />
@@ -53,7 +52,7 @@ export default function DigitalStream({
         <ValuePoints
           data={pageData.ValuePropositions}
           stream={pageData.ProductsDevAttributes.Stream}
-          background={'white'}
+          background={"white"}
         />
         <LogoBanner
           data={pageData.CustomerLogo}
@@ -94,21 +93,23 @@ export default function DigitalStream({
       </Layout>
     </>
   );
-  }
+}
 
 export const getStaticPaths = async () => {
   // dynamic route array values must be acquired here from strapi
   const data = [
-    { product: 'digital-maps' },
-    { product: 'digital-projects' },
-    { product: 'digital-process' },
-    { product: 'digital-labs' },
-    { product: 'digital-mines' },
+    { product: "digital-maps" },
+    { product: "digital-projects" },
+    { product: "digital-process" },
+    { product: "digital-labs" },
+    { product: "digital-mines" },
   ];
 
-  const paths = data.map((index) => ({
-    params: { product: index.product },
-  }));
+  const paths = data.map((index) => {
+    return {
+      params: { product: index.product },
+    };
+  });
   return {
     paths,
     fallback: false,
@@ -119,25 +120,25 @@ export const getStaticProps = async ({ params }) => {
   const stream = params.product;
 
   // Page
-  const page = await fetch(`https://api.ktern.com/products?slug=${stream}`, {
-    method: 'get',
+  const page = await fetch(`https://strapi.ktern.com/products?slug=${stream}`, {
+    method: "get",
   });
-  if (page === undefined) {
-    ctx.res.setHeader('Location', '/404');
+  if (page == undefined) {
+    ctx.res.setHeader("Location", "/404");
     ctx.res.statusCode = 302;
     ctx.res.end();
   }
   const p_data = await page.json();
 
   // Header
-  const header = await fetch('https://api.ktern.com/header', {
-    method: 'get',
+  const header = await fetch("https://strapi.ktern.com/header", {
+    method: "get",
   });
   const h_data = await header.json();
 
   // Footer
-  const footer = await fetch('https://api.ktern.com/footer', {
-    method: 'get',
+  const footer = await fetch("https://strapi.ktern.com/footer", {
+    method: "get",
   });
   const f_data = await footer.json();
 
@@ -146,7 +147,7 @@ export const getStaticProps = async ({ params }) => {
       pageData: p_data[0],
       headerData: h_data,
       footerData: f_data,
-      background: 'section',
+      background: "section",
     },
   };
 };
