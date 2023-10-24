@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import BreadCrumb from "../../component/breadcrumb";
-import Layout from "../../component/Layout";
-import ReactPlayer from "react-player";
-import { NextSeo } from "next-seo";
-import { BreadcrumbJsonLd } from "next-seo";
-import { LogoJsonLd } from "next-seo";
-import Event, { resolve_stream_score } from "../../component/page_event";
+import Image from 'next/image';
+import Link from 'next/link';
+import BreadCrumb from '../../component/breadcrumb';
+import Layout from '../../component/Layout';
+import ReactPlayer from 'react-player';
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
+import Event, { resolve_stream_score } from '../../component/page_event';
 export default function Events({ h_data, f_data, data }) {
   function onClick(data) {
     Event(data);
@@ -18,10 +18,10 @@ export default function Events({ h_data, f_data, data }) {
   function formatDate(date) {
     const dateFormat = new Date(date);
 
-    let formattedDate = dateFormat.toLocaleDateString("en-us", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
+    let formattedDate = dateFormat.toLocaleDateString('en-us', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
     });
     return formattedDate;
   }
@@ -45,7 +45,7 @@ export default function Events({ h_data, f_data, data }) {
               width: 1920,
               height: 1080,
               alt: `${data.PageSEO.PageTitle}`,
-              type: "image/png",
+              type: 'image/png',
             },
           ],
           site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
@@ -69,31 +69,31 @@ export default function Events({ h_data, f_data, data }) {
         //  ]}
         additionalMetaTags={[
           {
-            property: "dc:creator",
-            content: "Nivedha",
+            property: 'dc:creator',
+            content: 'Nivedha',
           },
           {
-            name: "application-name",
-            content: "KTern.AI",
+            name: 'application-name',
+            content: 'KTern.AI',
           },
           {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
+            httpEquiv: 'x-ua-compatible',
+            content: 'IE=edge; chrome=1',
           },
         ]}
         additionalLinkTags={[
           {
-            rel: "icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+            rel: 'icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico',
           },
           {
-            rel: "apple-touch-icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
-            sizes: "76x76",
+            rel: 'apple-touch-icon',
+            href: 'https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png',
+            sizes: '76x76',
           },
           {
-            rel: "manifest",
-            href: "/manifest.json",
+            rel: 'manifest',
+            href: '/manifest.json',
           },
         ]}
       />
@@ -104,7 +104,7 @@ export default function Events({ h_data, f_data, data }) {
           <div className="container md:px-4 mx-auto">
             <div className="md:grid md:grid-cols-2 md:items-center md:gap-16">
               <div className="relative px-20 mb-10 md:mb-0 text-center md:text-left z-10">
-                <BreadCrumb color={"white"} b_data={breadcrumb} />
+                <BreadCrumb color={'white'} b_data={breadcrumb} />
                 <h1 className="mb-3 mt-4 text-6xl font-bold  leading-tight">
                   {data.bannerSection.header}
                 </h1>
@@ -115,9 +115,9 @@ export default function Events({ h_data, f_data, data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Button Click",
-                        section_name: "Hero Section",
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'Hero Section',
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.bannerSection.primaryCTA.buttonTitle}`,
                       });
@@ -152,7 +152,7 @@ export default function Events({ h_data, f_data, data }) {
                     className="mb-8 text-black  section-heading uppercase "
                     style={{
                       textShadow:
-                        " 0px 15px 5px rgba(0,0,0,0.1),0px 0px 1px rgba(0,0,0,0.5),-4px 8px 5px rgba(0,0,0,0.4)",
+                        ' 0px 15px 5px rgba(0,0,0,0.1),0px 0px 1px rgba(0,0,0,0.5),-4px 8px 5px rgba(0,0,0,0.4)',
                     }}
                   >
                     {data.highlightedEvent.header}
@@ -167,9 +167,9 @@ export default function Events({ h_data, f_data, data }) {
                       <a
                         onClick={() => {
                           onClick({
-                            stream_score: resolve_stream_score("none"),
-                            event_name: "Button Click",
-                            section_name: "Highlighted Events Section",
+                            stream_score: resolve_stream_score('none'),
+                            event_name: 'Button Click',
+                            section_name: 'Highlighted Events Section',
                             page_source: `${data.PageSEO.PageTitle}`,
                             label: `${data.highlightedEvent.primaryCTA.buttonTitle}`,
                           });
@@ -188,9 +188,9 @@ export default function Events({ h_data, f_data, data }) {
                       <a
                         onClick={() => {
                           onClick({
-                            stream_score: resolve_stream_score("none"),
-                            event_name: "Button Click",
-                            section_name: "Highlighted Events Section",
+                            stream_score: resolve_stream_score('none'),
+                            event_name: 'Button Click',
+                            section_name: 'Highlighted Events Section',
                             page_source: `${data.PageSEO.PageTitle}`,
                             label: `${data.highlightedEvent.secondaryCTA.buttonTitle}`,
                           });
@@ -220,7 +220,7 @@ export default function Events({ h_data, f_data, data }) {
                 />
                 <div
                   className="absolute"
-                  style={{ top: "3%", left: "9%", width: "82%", height: "90%" }}
+                  style={{ top: '3%', left: '9%', width: '82%', height: '90%' }}
                 >
                   <Image
                     priority
@@ -243,7 +243,7 @@ export default function Events({ h_data, f_data, data }) {
               {data.otherEventsTitle}
             </h2>
             <div className="grid md:grid-cols-6 grid-row-2 lg:gap-y-10 md:gap-x-4">
-              <div className="relative md:col-span-4 mb-40 lg:mb-0   md:px-4 ">
+              <div className="relative md:col-span-6 mb-40 lg:mb-0 h-96  md:px-4 ">
                 <div>
                   <Image
                     priority
@@ -253,8 +253,8 @@ export default function Events({ h_data, f_data, data }) {
                     alt=""
                   />
                 </div>
-                <div className="absolute   md:left-1/2  md:transform md:-translate-x-1/2 md:top-60 md:px-6 w-full">
-                  <div className="py-6  border-t-4 rounded-tr-xl border-black px-4 md:px-10 bg-white z-10 rounded-xl shadow-xl">
+                <div className="absolute flex justify-center  md:left-1/2  md:transform md:-translate-x-1/2 md:top-24 md:px-6 w-full">
+                  <div className="py-6 w-4/5 border-t-4 rounded-tr-xl border-black px-4 md:px-10 bg-white z-10 rounded-xl shadow-xl">
                     <div className="flex items-center mb-4">
                       <a
                         className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600"
@@ -278,9 +278,9 @@ export default function Events({ h_data, f_data, data }) {
                       <a
                         onClick={() => {
                           onClick({
-                            stream_score: resolve_stream_score("none"),
-                            event_name: "Card Click",
-                            section_name: "Others Events Section",
+                            stream_score: resolve_stream_score('none'),
+                            event_name: 'Card Click',
+                            section_name: 'Others Events Section',
                             page_source: `${data.PageSEO.PageTitle}`,
                             label: `${data.otherEvents[0].ctaText}`,
                           });
@@ -294,98 +294,44 @@ export default function Events({ h_data, f_data, data }) {
                 </div>
                 <div className="h-48 xl:h-80 bg-gray-50 rounded-b-9xl"></div>
               </div>
-              <div className="relative md:col-span-2  px-4">
-                <div className="flex flex-col space-y-10 p -mx-4">
-                  <Link href={data.otherEvents[1].ctaUrl}>
-                    <a
-                      onClick={() => {
-                        onClick({
-                          stream_score: resolve_stream_score("none"),
-                          event_name: "Card Click",
-                          section_name: "Others Events Section",
-                          page_source: `${data.PageSEO.PageTitle}`,
-                          label: `${data.otherEvents[0].ctaText}`,
-                        });
-                      }}
-                      className="relative border-t-4 rounded-tr-xl border-black"
-                    >
-                      <div className="py-12 px-6 md:px-14 bg-white rounded-tr-xl shadow-md">
-                        <div className="flex items-center mb-4">
-                          <p className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600">
-                            {data.otherEvents[1].tag}
-                          </p>
-                          <div className="mx-4 w-px h-6 bg-gray-50"></div>
-                          <p className="relative top-px uppercase tracking-widest text-xs text-gray-300">
-                            {formatDate(data.otherEvents[1].date)}
-                          </p>
+            </div>
+          </div>
+          <div className="container py-8 mx-auto">
+            <div className="relative md:col-span-2 px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {data.otherEvents.slice(1).map((event, index) => (
+                  <div key={index}>
+                    <Link href={event.ctaUrl}>
+                      <a
+                        onClick={() => {
+                          onClick({
+                            stream_score: resolve_stream_score('none'),
+                            event_name: 'Card Click',
+                            section_name: 'Others Events Section',
+                            page_source: `${data.PageSEO.PageTitle}`,
+                            label: event.ctaText,
+                          });
+                        }}
+                        className="relative border-t-4 rounded-tr-xl border-black block"
+                      >
+                        <div className="py-12 px-6 md:px-14 max-h-56 h-56 bg-white rounded-tr-xl shadow-md">
+                          <div className="flex items-center mb-4">
+                            <p className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600">
+                              {event.tag}
+                            </p>
+                            <div className="mx-4 w-px h-6 bg-gray-50"></div>
+                            <p className="relative top-px uppercase tracking-widest text-xs text-gray-300">
+                              {formatDate(event.date)}
+                            </p>
+                          </div>
+                          <h3 className="font-heading leading-normal card-heading">
+                            {event.heading}
+                          </h3>
                         </div>
-                        <Link href={data.otherEvents[1].ctaUrl}>
-                          <a
-                            onClick={() => {
-                              onClick({
-                                stream_score: resolve_stream_score("none"),
-                                event_name: "Card Click",
-                                section_name: "Others Events Section",
-                                page_source: `${data.PageSEO.PageTitle}`,
-                                label: `${data.otherEvents[1].ctaText}`,
-                              });
-                            }}
-                            className="inline-block "
-                          >
-                            <h3 className="font-heading leading-normal card-heading">
-                              {data.otherEvents[1].heading}
-                            </h3>
-                          </a>
-                        </Link>
-                      </div>
-                    </a>
-                  </Link>
-                  <Link href={data.otherEvents[2].ctaUrl}>
-                    <a
-                      onClick={() => {
-                        onClick({
-                          stream_score: resolve_stream_score("none"),
-                          event_name: "Card Click",
-                          section_name: "Others Events Section",
-                          page_source: `${data.PageSEO.PageTitle}`,
-                          label: `${data.otherEvents[2].ctaText}`,
-                        });
-                      }}
-                      className="relative border-t-4 rounded-tr-xl border-black"
-                    >
-                      <div className="py-12 px-6 md:px-14 bg-white rounded-tr-xl shadow-md">
-                        <div className="flex items-center mb-4">
-                          <p className="inline-block font-heading text-lg leading-5 text-purple-500 hover:text-purple-600">
-                            {data.otherEvents[2].tag}
-                          </p>
-                          <div className="mx-4 w-px h-6 bg-gray-50"></div>
-                          <p className="relative top-px uppercase tracking-widest text-xs text-gray-300">
-                            {formatDate(data.otherEvents[2].date)}
-                          </p>
-                        </div>
-                        .{" "}
-                        <Link href={data.otherEvents[2].ctaUrl}>
-                          <a
-                            onClick={() => {
-                              onClick({
-                                stream_score: resolve_stream_score("none"),
-                                event_name: "Card Click",
-                                section_name: "Others Events Section",
-                                page_source: `${data.PageSEO.PageTitle}`,
-                                label: `${data.otherEvents[2].ctaText}`,
-                              });
-                            }}
-                            className="inline-block "
-                          >
-                            <h3 className="font-heading leading-normal card-heading">
-                              {data.otherEvents[2].heading}
-                            </h3>
-                          </a>
-                        </Link>
-                      </div>
-                    </a>
-                  </Link>
-                </div>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -401,7 +347,7 @@ export default function Events({ h_data, f_data, data }) {
             <div>
               <iframe
                 className="hidden lg:block"
-                style={{ height: "calc(89vh - 100px)", width: "calc(130vh)" }}
+                style={{ height: 'calc(89vh - 100px)', width: 'calc(130vh)' }}
                 src="https://www.youtube.com/embed/AK-K74D-mTM?rel=0?version=3&autoplay=1&&showinfo=0&loop=1&playlist=AK-K74D-mTM&mute=1"
                 title="YouTube video player"
                 frameBorder="0"
@@ -411,7 +357,7 @@ export default function Events({ h_data, f_data, data }) {
               ></iframe>
               <iframe
                 className="lg:hidden block"
-                style={{ height: "calc(59vh - 100px)", width: "calc(60vh)" }}
+                style={{ height: 'calc(59vh - 100px)', width: 'calc(60vh)' }}
                 src="https://www.youtube.com/embed/AK-K74D-mTM?rel=0?version=3&autoplay=1&&showinfo=0&loop=1&playlist=AK-K74D-mTM&mute=1"
                 title="YouTube video player"
                 frameBorder="0"
@@ -450,8 +396,8 @@ export default function Events({ h_data, f_data, data }) {
                                 stream_score: resolve_stream_score(
                                   dt.cssstreamtag
                                 ),
-                                event_name: "Card Click",
-                                section_name: "Related Resources Section",
+                                event_name: 'Card Click',
+                                section_name: 'Related Resources Section',
                                 page_source: `${data.PageSEO.PageTitle}`,
                                 label: `${dt.CardTitle}-${dt.CTAUrl}`,
                               });
@@ -478,8 +424,8 @@ export default function Events({ h_data, f_data, data }) {
                               stream_score: resolve_stream_score(
                                 dt.cssstreamtag
                               ),
-                              event_name: "Card Click",
-                              section_name: "Related Resources Section",
+                              event_name: 'Card Click',
+                              section_name: 'Related Resources Section',
                               page_source: `${data.PageSEO.PageTitle}`,
                               label: `${dt.CardTitle}-${dt.CTAUrl}`,
                             });
@@ -528,8 +474,8 @@ export default function Events({ h_data, f_data, data }) {
                                 stream_score: resolve_stream_score(
                                   dt.cssstreamtag
                                 ),
-                                event_name: "Card Click",
-                                section_name: "Related Resources Section",
+                                event_name: 'Card Click',
+                                section_name: 'Related Resources Section',
                                 page_source: `${data.PageSEO.PageTitle}`,
                                 label: `${dt.CardTitle}-${dt.CTAUrl}`,
                               });
@@ -554,8 +500,8 @@ export default function Events({ h_data, f_data, data }) {
                               stream_score: resolve_stream_score(
                                 dt.cssstreamtag
                               ),
-                              event_name: "Card Click",
-                              section_name: "Related Resources Section",
+                              event_name: 'Card Click',
+                              section_name: 'Related Resources Section',
                               page_source: `${data.PageSEO.PageTitle}`,
                               label: `${dt.CardTitle}-${dt.CTAUrl}`,
                             });
@@ -572,8 +518,8 @@ export default function Events({ h_data, f_data, data }) {
                                   stream_score: resolve_stream_score(
                                     dt.cssstreamtag
                                   ),
-                                  event_name: "Card Click",
-                                  section_name: "Related Resources Section",
+                                  event_name: 'Card Click',
+                                  section_name: 'Related Resources Section',
                                   page_source: `${data.PageSEO.PageTitle}`,
                                   label: `${dt.CardTitle}-${dt.CTAUrl}`,
                                 });
@@ -611,9 +557,9 @@ export default function Events({ h_data, f_data, data }) {
                 <a
                   onClick={() => {
                     onClick({
-                      stream_score: resolve_stream_score("none"),
-                      event_name: "Link Click",
-                      section_name: "Related Resources Section",
+                      stream_score: resolve_stream_score('none'),
+                      event_name: 'Link Click',
+                      section_name: 'Related Resources Section',
                       page_source: `${data.PageSEO.PageTitle}`,
                       label: `See All Webinars`,
                     });
@@ -658,9 +604,9 @@ export default function Events({ h_data, f_data, data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Button Click",
-                        section_name: "CTA Section",
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'CTA Section',
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.ctaSection.PrimaryCTA.buttonTitle}`,
                       });
@@ -674,9 +620,9 @@ export default function Events({ h_data, f_data, data }) {
                   <a
                     onClick={() => {
                       onClick({
-                        stream_score: resolve_stream_score("none"),
-                        event_name: "Button Click",
-                        section_name: "CTA Section",
+                        stream_score: resolve_stream_score('none'),
+                        event_name: 'Button Click',
+                        section_name: 'CTA Section',
                         page_source: `${data.PageSEO.PageTitle}`,
                         label: `${data.ctaSection.SecondaryCTA.buttonTitle}`,
                       });
@@ -706,17 +652,17 @@ export default function Events({ h_data, f_data, data }) {
 }
 export const getStaticProps = async () => {
   // data url from strapi)
-  const res = await fetch("https://strapi.ktern.com/events", {
-    method: "get",
+  const res = await fetch('https://strapi.ktern.com/events', {
+    method: 'get',
   });
   const data = await res.json();
   // console.log("data", data);
-  const res1 = await fetch("https://strapi.ktern.com/header", {
-    method: "get",
+  const res1 = await fetch('https://strapi.ktern.com/header', {
+    method: 'get',
   });
   const h_data = await res1.json();
-  const res2 = await fetch("https://strapi.ktern.com/footer", {
-    method: "get",
+  const res2 = await fetch('https://strapi.ktern.com/footer', {
+    method: 'get',
   });
   const f_data = await res2.json();
   return {
