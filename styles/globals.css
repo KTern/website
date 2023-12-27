@@ -4,7 +4,7 @@
 @import "react-multi-carousel/lib/styles.css";
 @import "react-tabs/style/react-tabs.css";
 @import "react-dropdown/style.css";
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rethink Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&display=swap');
 @import "react-dyn-tabs/style/react-dyn-tabs.css";
 @import "react-dyn-tabs/themes/react-dyn-tabs-card.css";
@@ -97,18 +97,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -132,28 +132,28 @@ video {
 /* Fonts */
 
 .header {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
 
 .navbar-h {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
 }
 
 .navbar-s {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 400;
   line-height: 20px;
   font-size: 14px;
 }
 
 .hyperlink {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 14px;
   text-decoration: none;
   font-weight: 600;
@@ -161,7 +161,7 @@ video {
 }
 
 .sm-hyperlink {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 24px;
@@ -176,7 +176,7 @@ a:hover {
 }
 
 .button {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 700;
   text-decoration: none;
   font-size: 14px;
@@ -210,7 +210,7 @@ a:hover {
 }
 
 .sm-button {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   text-decoration: none;
   font-weight: 700;
   font-size: 10px;
@@ -219,7 +219,7 @@ a:hover {
 }
 
 .heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 800;
   font-size: 40px;
   line-height: 50px;
@@ -239,21 +239,21 @@ a:hover {
 }
 
 .sm-heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 50px;
 }
 
 .subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 31px;
 }
 
 .sm-subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 31px;
@@ -272,56 +272,56 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 } */
 
 .card-heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 700;
   line-height: 34px;
   font-size: 24px;
 }
 
 .sm-card-heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 700;
   line-height: 30px;
   font-size: 24px;
 }
 
 .card-subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
 }
 
 .sm-card-subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 11px;
   font-weight: 500;
   line-height: 25px;
 }
 
 .section-heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 34px;
   font-weight: 700;
   line-height: 50px;
 }
 
 .sm-section-heading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 50px;
 }
 
 .section-subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 31px;
 }
 
 .sm-section-subheading {
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 31px;
@@ -329,7 +329,7 @@ nav.p-0.bg-white.w-full.fixed.z-1.shadow-md {
 
 .container {
   width: 100%;
-  font-family: "Barlow", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
 }
