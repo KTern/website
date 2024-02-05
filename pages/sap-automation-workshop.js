@@ -4,7 +4,7 @@ export default function ScheduleDemo({ h_data, f_data }) {
       <div className="flex justify-center px-2 items-center">
         <iframe
           style={{
-            height: 'calc(130vh)',
+            height: '100vh',
             width: 'calc(130vw)',
           }}
           src="https://outlook.office365.com/owa/calendar/DigitalTransformationExpertSession@kaartech.com/bookings/"
