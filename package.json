@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
-    "postbuild": "next-sitemap",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -60,7 +59,6 @@
   },
   "devDependencies": {
     "autoprefixer": "10.3.3",
-    "next-sitemap": "^1.6.203",
     "postcss": "8.3.6",
     "prettier": "^2.6.2",
     "stylelint-config-recommended": "5.0.0",
