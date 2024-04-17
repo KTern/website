@@ -12,7 +12,7 @@
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.2",
-    "@mui/material": "^5.2.2", 
+    "@mui/material": "^5.2.2",
     "@varld/popover": "^0.1.0",
     "amplitude-js": "^8.13.1",
     "axios": "^1.6.8",
@@ -26,7 +26,7 @@
     "markdown-to-jsx": "7.1.3",
     "next": "^14.2.1",
     "next-seo": "4.28.1",
-    "nextjs-breadcrumbs": "^0.9.4",
+    "nextjs-breadcrumbs": "^0.10.0", // Upgraded version to support React 18.2.0
     "nextjs-cors": "^2.2.0",
     "nookies": "2.5.2",
     "pretty-checkbox": "^3.0.3",
