@@ -4,8 +4,8 @@
 @import "react-multi-carousel/lib/styles.css";
 @import "react-tabs/style/react-tabs.css";
 @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&display=swap');
-@import "react-dyn-tabs/style/react-dyn-tabs.css";
-@import "react-dyn-tabs/themes/react-dyn-tabs-card.css";
+/* @import "react-dyn-tabs/style/react-dyn-tabs.css";
+@import "react-dyn-tabs/themes/react-dyn-tabs-card.css"; */
 @import url("../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css");
 img,
 svg,
