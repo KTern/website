@@ -63,38 +63,39 @@ export default function Hero({
             </div>
             {index === true ? (
               <div className='sm:text-center'>
-                <Link rel="noopener noreferrer" href={data.primaryCTA.linkURL}>
-                  <a
-                    target="_blank"
-                    className="sm:mb-5 md:px-14 lg:px-14 sm:sm-button inline-block py-3 px-2 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button"
-                    onClick={() => {
-                      onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'Hero',
-                        page_source: `${pageSEODet.PageTitle}`,
-                        label: `${data.primaryCTA.buttonTitle}`,
-                      });
-                    }}
-                  >
-                    {data.primaryCTA.buttonTitle}
-                  </a>
+                <Link
+                  rel="noopener noreferrer"
+                  href={data.primaryCTA.linkURL}
+                  target="_blank"
+                  className="sm:mb-5 md:px-14 lg:px-14 sm:sm-button inline-block py-3 px-2 border-2 border-black   bg-black hover:bg-gray-300 hover:text-black shadow  text-white  rounded-r-xl rounded-b-xl transition duration-200 uppercase header button"
+                  onClick={() => {
+                    onClick({
+                      stream_score: resolve_stream_score('none'),
+                      event_name: 'Button Click',
+                      section_name: 'Hero',
+                      page_source: `${pageSEODet.PageTitle}`,
+                      label: `${data.primaryCTA.buttonTitle}`,
+                    });
+                  }}>
+
+                  {data.primaryCTA.buttonTitle}
+
                 </Link>
-                <Link href={data.secondaryCTA.linkURL}>
-                  <a
-                    onClick={() => {
-                      onClick({
-                        stream_score: resolve_stream_score('none'),
-                        event_name: 'Button Click',
-                        section_name: 'Hero',
-                        page_source: `${pageSEODet.PageTitle}`,
-                        label: `${data.secondaryCTA.buttonTitle}`,
-                      });
-                    }}
-                    className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-2 md:px-14 lg:px-14 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black"
-                  >
-                    {data.secondaryCTA.buttonTitle}
-                  </a>
+                <Link
+                  href={data.secondaryCTA.linkURL}
+                  onClick={() => {
+                    onClick({
+                      stream_score: resolve_stream_score('none'),
+                      event_name: 'Button Click',
+                      section_name: 'Hero',
+                      page_source: `${pageSEODet.PageTitle}`,
+                      label: `${data.secondaryCTA.buttonTitle}`,
+                    });
+                  }}
+                  className="mb-4 inline-block mx-5   shadow-md bg-white-500 py-3 px-2 md:px-14 lg:px-14 hover:bg-gray-300  sm:sm-button text-black   rounded-r-xl rounded-b-xl transition duration-200 uppercase header button border-2 border-black">
+
+                  {data.secondaryCTA.buttonTitle}
+
                 </Link>
               </div>
             ) : (

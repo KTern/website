@@ -18,75 +18,77 @@ export default function FeatureCard({
         {data.map((dt) => (
           <div id="tag" key="dt">
             {dt.OpenInNewTab && (
-              <Link id="tag" href={dt.redirectURL} passHref>
-                <a
-                  id="tag"
-                  target="_blank"
-                  className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}
-                >
-                  <div id="tag" className="flex space-x-4">
-                    {dt.Icon !== undefined && (
-                      <Link id="tag" href={dt.redirectURL} passHref>
-                        <a target="_blank" id="tag">
-                          <Image
-                            priority
-                            id="tag"
-                            src={dt.Icon.logoUrl}
-                            width={dt.Icon.width}
-                            height={dt.Icon.width}
-                            alt={dt.Icon.altText}
-                          />
-                        </a>
-                      </Link>
-                    )}
-                    <Link id="tag" href={dt.redirectURL}>
-                      <a target="_blank" id="tag">
-                        <p id="tag" className={`${bold}`}>
-                          {dt.Title}
-                        </p>
-                        {/* <p id="tag" className="navbar-s text-gray-400">
-                  {dt.Description}
-                </p> */}
-                      </a>
-                    </Link>
-                  </div>
-                </a>
-              </Link>
+              (<Link
+                id="tag"
+                href={dt.redirectURL}
+                passHref
+                target="_blank"
+                className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
+
+                <div id="tag" className="flex space-x-4">
+                  {dt.Icon !== undefined && (
+                    (<Link id="tag" href={dt.redirectURL} passHref target="_blank">
+
+                      <Image
+                        priority
+                        id="tag"
+                        src={dt.Icon.logoUrl}
+                        width={dt.Icon.width}
+                        height={dt.Icon.width}
+                        alt={dt.Icon.altText}
+                      />
+
+                    </Link>)
+                  )}
+                  <Link id="tag" href={dt.redirectURL} target="_blank">
+
+                    <p id="tag" className={`${bold}`}>
+                      {dt.Title}
+                    </p>
+                    {/* <p id="tag" className="navbar-s text-gray-400">
+              {dt.Description}
+            </p> */}
+
+                  </Link>
+                </div>
+
+              </Link>)
             )}
             {!dt.OpenInNewTab && (
-              <Link id="tag" href={dt.redirectURL} passHref>
-                <a
-                  id="tag"
-                  className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}
-                >
-                  <div id="tag" className="flex space-x-4">
-                    {dt.Icon !== undefined && (
-                      <Link id="tag" href={dt.redirectURL} passHref>
-                        <a id="tag">
-                          <Image
-                            priority
-                            id="tag"
-                            src={dt.Icon.logoUrl}
-                            width={dt.Icon.width}
-                            height={dt.Icon.width}
-                            alt={dt.Icon.altText}
-                          />
-                        </a>
-                      </Link>
-                    )}
-                    <Link id="tag" href={dt.redirectURL}>
-                      <a id="tag">
-                        <p id="tag" className={`${bold}`}>
-                          {dt.Title}
-                        </p>
-                        {/* <p id="tag" className="navbar-s text-gray-400">
-                  {dt.Description}
-                </p> */}
-                      </a>
-                    </Link>
-                  </div>
-                </a>
-              </Link>
+              (<Link
+                id="tag"
+                href={dt.redirectURL}
+                passHref
+                className={`flex space-x-3 rounded-md ${border} hover:${color} p-2 w-full`}>
+
+                <div id="tag" className="flex space-x-4">
+                  {dt.Icon !== undefined && (
+                    (<Link id="tag" href={dt.redirectURL} passHref>
+
+                      <Image
+                        priority
+                        id="tag"
+                        src={dt.Icon.logoUrl}
+                        width={dt.Icon.width}
+                        height={dt.Icon.width}
+                        alt={dt.Icon.altText}
+                      />
+
+                    </Link>)
+                  )}
+                  <Link id="tag" href={dt.redirectURL}>
+
+                    <p id="tag" className={`${bold}`}>
+                      {dt.Title}
+                    </p>
+                    {/* <p id="tag" className="navbar-s text-gray-400">
+              {dt.Description}
+            </p> */}
+
+                  </Link>
+                </div>
+
+              </Link>)
             )}
           </div>
         ))}

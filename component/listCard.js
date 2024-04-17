@@ -20,15 +20,15 @@ export default function ListCard({ cardData }) {
           <div className="flex flex-col ">
             {data.list.map((dt, index) => (
               // eslint-disable-next-line react/no-array-index-key
-              <Link key={index} href={dt.url}>
-                <a
-                  target={dt.openNewTab ? '_blank' : '_self'}
-                  className="p-1 pl-4 pr-6   text-black  hover:text-sky-400  justify-center"
-                  href="/#"
-                >
-                  {dt.value}
-                </a>
-              </Link>
+              (<Link
+                key={index}
+                href={dt.url}
+                target={dt.openNewTab ? '_blank' : '_self'}
+                className="p-1 pl-4 pr-6   text-black  hover:text-sky-400  justify-center">
+
+                {dt.value}
+
+              </Link>)
             ))}
           </div>
         </div>

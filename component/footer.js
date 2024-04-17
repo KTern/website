@@ -11,7 +11,7 @@ export default function Footer({ f_data }) {
       <div className=" divide-y md:px-10 mx-auto ">
         <div className="flex   lg:mb-2 lg:mb-0 ">
           <div className="w-full  lg:w-1/3 lg:mb-2 md:mb-0">
-            <Link className="  text-white   " href="/#" passHref>
+            <Link className="  text-white   " href="/#" passHref legacyBehavior>
               <Image
                 priority
                 src={f_data.WhiteLogoUrl}
@@ -26,21 +26,22 @@ export default function Footer({ f_data }) {
               <div className="w-full lg:w-1/2">
                 <div className="flex lg:justify-end mb-6 lg:mb-10">
                   {f_data.SocialMediaLinks.map((dt) => (
-                    <Link key="dt" href={dt.Url}>
-                      <a
-                        title={dt.Title}
-                        target="_blank"
-                        className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full"
-                      >
-                        <Image
-                          priority
-                          src={dt.ImageUrl}
-                          width="20"
-                          height="30"
-                          alt=""
-                        />
-                      </a>
-                    </Link>
+                    (<Link
+                      key="dt"
+                      href={dt.Url}
+                      title={dt.Title}
+                      target="_blank"
+                      className="flex justify-center items-center w-10 h-10 mr-4 bg-white rounded-full">
+
+                      <Image
+                        priority
+                        src={dt.ImageUrl}
+                        width="20"
+                        height="30"
+                        alt=""
+                      />
+
+                    </Link>)
                   ))}
                 </div>
               </div>
@@ -73,25 +74,25 @@ export default function Footer({ f_data }) {
             <div className="  text-white">
               <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mb-10 gap-5 ">
                 {f_data.FooterStreamsSection.map((dt) => (
-                  <Link key="dt" href={dt.PageURL}>
-                    <a className="px-2 space-y-2 ">
-                      <div className="text-gray-400 hyperlink uppercase">
-                        {dt.DXStatement}
-                      </div>
-                      <div className="card-subheading ">
-                        {dt.OneLineStatement}
-                      </div>
-                      <div>
-                        <Image
-                          priority
-                          src={dt.DigitalStreamsLogo.imageURL}
-                          alt={dt.DigitalStreamsLogo.imageDescription}
-                          width={dt.DigitalStreamsLogo.width}
-                          height={dt.DigitalStreamsLogo.height}
-                        />
-                      </div>
-                    </a>
-                  </Link>
+                  (<Link key="dt" href={dt.PageURL} className="px-2 space-y-2 ">
+
+                    <div className="text-gray-400 hyperlink uppercase">
+                      {dt.DXStatement}
+                    </div>
+                    <div className="card-subheading ">
+                      {dt.OneLineStatement}
+                    </div>
+                    <div>
+                      <Image
+                        priority
+                        src={dt.DigitalStreamsLogo.imageURL}
+                        alt={dt.DigitalStreamsLogo.imageDescription}
+                        width={dt.DigitalStreamsLogo.width}
+                        height={dt.DigitalStreamsLogo.height}
+                      />
+                    </div>
+
+                  </Link>)
                 ))}
               </div>
             </div>
@@ -106,14 +107,14 @@ export default function Footer({ f_data }) {
                   <ul className="">
                     {dt.NavItems.map((dt) => (
                       <li key="dt" className="mb-2 w-full ">
-                        <Link href={dt.linkURL}>
-                          <a
-                            target={dt.openNewTab ? '_blank' : '_self'}
-                            className=" text-gray-200 hover:text-gray-100 w-full"
-                            style={{ fontWeight: 300, fontSize: '15px' }}
-                          >
-                            {dt.buttonTitle}
-                          </a>
+                        <Link
+                          href={dt.linkURL}
+                          target={dt.openNewTab ? '_blank' : '_self'}
+                          className=" text-gray-200 hover:text-gray-100 w-full"
+                          style={{ fontWeight: 300, fontSize: '15px' }}>
+
+                          {dt.buttonTitle}
+
                         </Link>
                       </li>
                     ))}
@@ -123,20 +124,20 @@ export default function Footer({ f_data }) {
             </div>
             <div className="flex mb-4">
               {f_data.ImageButton.map((dt) => (
-                <Link key="dt" href={dt.Url}>
-                  <a target="_blank" className="" title={dt.Title}>
-                    <div className=" ">
-                      <Image
-                        priority
-                        width={150}
-                        src={dt.ImageUrl}
-                        className="sm:w-20 mb-6 h-auto text-white "
-                        alt="Available on SAP Store"
-                        height="50%"
-                      />
-                    </div>
-                  </a>
-                </Link>
+                (<Link key="dt" href={dt.Url} target="_blank" className="" title={dt.Title}>
+
+                  <div className=" ">
+                    <Image
+                      priority
+                      width={150}
+                      src={dt.ImageUrl}
+                      className="sm:w-20 mb-6 h-auto text-white "
+                      alt="Available on SAP Store"
+                      height="50"
+                    />
+                  </div>
+
+                </Link>)
               ))}
             </div>
           </div>
@@ -155,13 +156,13 @@ export default function Footer({ f_data }) {
             <p className="py-10   space-x-3 lg:block  text-gray-200 ">
               {f_data.LegalLinks.map((dt) => (
                 <span key="dt" className=" ">
-                  <Link href={dt.linkURL}>
-                    <a
-                      target={dt.openNewTab ? '_blank' : '_self'}
-                      style={{ fontWeight: 300, fontSize: '13px' }}
-                    >
-                      {dt.buttonTitle}
-                    </a>
+                  <Link
+                    href={dt.linkURL}
+                    target={dt.openNewTab ? '_blank' : '_self'}
+                    style={{ fontWeight: 300, fontSize: '13px' }}>
+
+                    {dt.buttonTitle}
+
                   </Link>
                 </span>
               ))}

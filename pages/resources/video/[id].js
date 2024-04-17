@@ -26,333 +26,328 @@ export default function Video({ data, h_data, f_data, v_data }) {
     Event(data);
   }
 
-  return (
-    <>
-      <Head>
-        <script src="https://www.youtube.com/iframe_api" async></script>
-      </Head>
-      <NextSeo
-        title={data.PageSEO.PageTitle}
-        description={data.PageSEO.PageDescription}
-        canonical={data.PageSEO.CanonicalTag}
-        openGraph={{
-          url: `${data.PageSEO.PageURL}`,
-          title: `${data.PageSEO.PageTitle}`,
-          description: `${data.PageSEO.PageDescription}`,
-          images: [
-            {
-              url: `${data.PageSEO.ThumbnailImageURL}`,
-              width: 1920,
-              height: 1080,
-              alt: `${data.PageSEO.PageTitle}`,
-              type: "image/png",
-            },
-          ],
-          site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
-        }}
-        twitter={{
-          handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
-          site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
-          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-        }}
-        facebook={{
-          handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
-          site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
-          cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
-          appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
-        }}
-        // languageAlternates={[
-        //   {
-        //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
-        //     href: `${h_data.OtherSEO.languageAlternates.href}`,
-        //   },
-        // ]}
-        additionalMetaTags={[
+  return <>
+    <Head>
+      <script src="https://www.youtube.com/iframe_api" async></script>
+    </Head>
+    <NextSeo
+      title={data.PageSEO.PageTitle}
+      description={data.PageSEO.PageDescription}
+      canonical={data.PageSEO.CanonicalTag}
+      openGraph={{
+        url: `${data.PageSEO.PageURL}`,
+        title: `${data.PageSEO.PageTitle}`,
+        description: `${data.PageSEO.PageDescription}`,
+        images: [
           {
-            property: "dc:creator",
-            content: "Nivedha",
+            url: `${data.PageSEO.ThumbnailImageURL}`,
+            width: 1920,
+            height: 1080,
+            alt: `${data.PageSEO.PageTitle}`,
+            type: "image/png",
           },
-          {
-            name: "application-name",
-            content: "KTern.AI",
-          },
-          {
-            httpEquiv: "x-ua-compatible",
-            content: "IE=edge; chrome=1",
-          },
-        ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
-            sizes: "76x76",
-          },
-          {
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-        ]}
-      />
-      <BreadcrumbJsonLd itemListElements={breadcrumb} />
-      <LogoJsonLd
-        logo={process.env.NEXT_PUBLIC_LOGO}
-        url={process.env.NEXT_PUBLIC_URL}
-      />
+        ],
+        site_name: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+      }}
+      twitter={{
+        handle: `${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`,
+        site: `${process.env.NEXT_PUBLIC_TWITTER_SITE}`,
+        cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+      }}
+      facebook={{
+        handle: `${process.env.NEXT_PUBLIC_FACEBOOK_HANDLE}`,
+        site: `${process.env.NEXT_PUBLIC_FACEBOOK_SITE}`,
+        cardType: `${process.env.NEXT_PUBLIC_CARD_TYPE}`,
+        appId: `${process.env.NEXT_PUBLIC_FB_APPID}`,
+      }}
+      // languageAlternates={[
+      //   {
+      //     hrefLang: `${h_data.OtherSEO.languageAlternates.hrefLang}`,
+      //     href: `${h_data.OtherSEO.languageAlternates.href}`,
+      //   },
+      // ]}
+      additionalMetaTags={[
+        {
+          property: "dc:creator",
+          content: "Nivedha",
+        },
+        {
+          name: "application-name",
+          content: "KTern.AI",
+        },
+        {
+          httpEquiv: "x-ua-compatible",
+          content: "IE=edge; chrome=1",
+        },
+      ]}
+      additionalLinkTags={[
+        {
+          rel: "icon",
+          href: "https://storage.googleapis.com/ktern-public-files/website/icons/favicon.ico",
+        },
+        {
+          rel: "apple-touch-icon",
+          href: "https://storage.googleapis.com/ktern-public-files/website/icons/apple-touch-icon-76x76.png",
+          sizes: "76x76",
+        },
+        {
+          rel: "manifest",
+          href: "/manifest.json",
+        },
+      ]}
+    />
+    <BreadcrumbJsonLd itemListElements={breadcrumb} />
+    <LogoJsonLd
+      logo={process.env.NEXT_PUBLIC_LOGO}
+      url={process.env.NEXT_PUBLIC_URL}
+    />
 
-      {/* <VideoJsonLd
-        name='How to make a Party Coffee Cake'
-        description='This is how you make a Party Coffee Cake.'
-        contentUrl='http://www.example.com/video123.mp4'
-        embedUrl='http://www.example.com/videoplayer?video=123'
-        uploadDate='2018-02-05T08:00:00+08:00'
-      
-        thumbnailUrls={[
-          "https://example.com/photos/1x1/photo.jpg",
-          "https://example.com/photos/4x3/photo.jpg",
-          "https://example.com/photos/16x9/photo.jpg",
-        ]}
-      /> */}
-      <Layout h_data={h_data} f_data={f_data}>
-        <section
-          className={`py-28 px-4 md:px-20 w-full bg-${data.VideoLandingPage.DigitalStream}-secondary `}
-        >
-          <BreadCrumb color="black" b_data={breadcrumb} />
-          <div className="md:space-x-10 md:flex md:items-center justify-center text-center">
-            <div className="md:w-1/2 sm: w-full">
-              <p
-                className={`max-w-max mt-4 px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}
-              >
-                {data.Tag}
-              </p>
-              <h2 className=" section-heading mb-5 text-justify">
-                {data.VideoLandingPage.PageHeader}
-              </h2>
-              <p className=" section-subheading text-justify">
-                {" "}
-                <Markdown
-                  options={{
-                    overrides: {
-                      h3: {
-                        props: {
-                          className: "text-2xl mb-4 text-justify",
-                        },
-                      },
-                      h1: {
-                        props: {
-                          className: "text-2xl mb-4 text-justify",
-                        },
-                      },
-                      li: {
-                        props: {
-                          className:
-                            "text-justify list-decimal ml-3 mb-1 flex-col",
-                        },
-                      },
-                      p: {
-                        props: {
-                          className: "text-justify mb-3",
-                        },
-                      },
-                      ol: {
-                        props: {
-                          className: "mb-4 text-justify",
-                        },
+    {/* <VideoJsonLd
+      name='How to make a Party Coffee Cake'
+      description='This is how you make a Party Coffee Cake.'
+      contentUrl='http://www.example.com/video123.mp4'
+      embedUrl='http://www.example.com/videoplayer?video=123'
+      uploadDate='2018-02-05T08:00:00+08:00'
+    
+      thumbnailUrls={[
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg",
+      ]}
+    /> */}
+    <Layout h_data={h_data} f_data={f_data}>
+      <section
+        className={`py-28 px-4 md:px-20 w-full bg-${data.VideoLandingPage.DigitalStream}-secondary `}
+      >
+        <BreadCrumb color="black" b_data={breadcrumb} />
+        <div className="md:space-x-10 md:flex md:items-center justify-center text-center">
+          <div className="md:w-1/2 sm: w-full">
+            <p
+              className={`max-w-max mt-4 px-2 py-1 mb-5 ${data.VideoLandingPage.DigitalStream} hyperlink text-white uppercase  rounded-full `}
+            >
+              {data.Tag}
+            </p>
+            <h2 className=" section-heading mb-5 text-justify">
+              {data.VideoLandingPage.PageHeader}
+            </h2>
+            <p className=" section-subheading text-justify">
+              {" "}
+              <Markdown
+                options={{
+                  overrides: {
+                    h3: {
+                      props: {
+                        className: "text-2xl mb-4 text-justify",
                       },
                     },
-                  }}
-                  className=""
-                >
-                  {data.VideoLandingPage.Description}
-                </Markdown>
-              </p>
-              <div className="flex justify-end items-end mb-3">
-                <Link
-                  href={`https://twitter.com/intent/tweet?text=${data.VideoLandingPage.PageHeader}&url=${data.PageSEO.PageURL}/`}
-                >
-                  <a
-                    title="twitter"
-                    target="_blank"
-                    className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
-                  >
-                    <Image
-                      priority
-                      src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
-                      width="20"
-                      height="30"
-                      alt=""
-                    />
-                  </a>
-                </Link>
-                <Link
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}
-                >
-                  <a
-                    title="Facebook"
-                    target="_blank"
-                    className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
-                  >
-                    <Image
-                      priority
-                      src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
-                      width="20"
-                      height="20"
-                      alt=""
-                    />
-                  </a>
-                </Link>
-                <Link
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}
-                >
-                  <a
-                    title="LinkedIn"
-                    target="_blank"
-                    className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white"
-                  >
-                    <Image
-                      priority
-                      src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
-                      width="20"
-                      height="30"
-                      alt=""
-                    />
-                  </a>
-                </Link>
-              </div>
+                    h1: {
+                      props: {
+                        className: "text-2xl mb-4 text-justify",
+                      },
+                    },
+                    li: {
+                      props: {
+                        className:
+                          "text-justify list-decimal ml-3 mb-1 flex-col",
+                      },
+                    },
+                    p: {
+                      props: {
+                        className: "text-justify mb-3",
+                      },
+                    },
+                    ol: {
+                      props: {
+                        className: "mb-4 text-justify",
+                      },
+                    },
+                  },
+                }}
+                className=""
+              >
+                {data.VideoLandingPage.Description}
+              </Markdown>
+            </p>
+            <div className="flex justify-end items-end mb-3">
+              <Link
+                href={`https://twitter.com/intent/tweet?text=${data.VideoLandingPage.PageHeader}&url=${data.PageSEO.PageURL}/`}
+                title="twitter"
+                target="_blank"
+                className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white">
+
+                <Image
+                  priority
+                  src="https://storage.googleapis.com/ktern-public-files/website/Thumbnails/twitter.svg"
+                  width="20"
+                  height="30"
+                  alt=""
+                />
+
+              </Link>
+              <Link
+                href={`https://www.facebook.com/sharer/sharer.php?u=${data.PageSEO.PageURL}/`}
+                title="Facebook"
+                target="_blank"
+                className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white">
+
+                <Image
+                  priority
+                  src="https://storage.googleapis.com/ktern-public-files/website/icons/facebook.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+
+              </Link>
+              <Link
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${data.PageSEO.PageURL}/`}
+                title="LinkedIn"
+                target="_blank"
+                className="flex justify-center items-center w-12 h-12 mr-4 shadow-xl  rounded-full bg-white">
+
+                <Image
+                  priority
+                  src="https://storage.googleapis.com/ktern-public-files/website/icons/linkedIn.svg"
+                  width="20"
+                  height="30"
+                  alt=""
+                />
+
+              </Link>
             </div>
-            <div className="md:w-1/2 w-full">
-              <div className="md:px-20 md:p-4 md:mx-auto ">
-                <div className="content-box">
-                  <iframe
-                    id="vid-player"
-                    height={300}
-                    width="100%"
-                    src={data.VideoLandingPage.VideoEmbedUrl}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+          </div>
+          <div className="md:w-1/2 w-full">
+            <div className="md:px-20 md:p-4 md:mx-auto ">
+              <div className="content-box">
+                <iframe
+                  id="vid-player"
+                  height={300}
+                  width="100%"
+                  src={data.VideoLandingPage.VideoEmbedUrl}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
-        </section>
-        {/* Related Resources Section */}
-        <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
-          <div className="px-2 mx-auto max-w-7xl">
-            <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
-              <h2 className="section-heading  text-gray-800 ">
-                {data.VideoLandingPage.RelatedResources}
-              </h2>
-            </div>
+        </div>
+      </section>
+      {/* Related Resources Section */}
+      <section className="w-full pt-8 bg-white sm:pt-12 md:pt-16">
+        <div className="px-2 mx-auto max-w-7xl">
+          <div className="flex justify-center w-full pb-5 mb-4 border-gray-200">
+            <h2 className="section-heading  text-gray-800 ">
+              {data.VideoLandingPage.RelatedResources}
+            </h2>
+          </div>
 
-            <div className="grid md:grid-cols-4 gap-6 mb-6">
-              {v_data.map((dt) => (
+          <div className="grid md:grid-cols-4 gap-6 mb-6">
+            {v_data.map((dt) => (
+              <div
+                key="dt"
+                className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500"
+              >
+                <span
+                  className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.VideoLandingPage.DigitalStream}-secondary `}
+                  style={{ height: "400px", width: "345px" }}
+                ></span>
                 <div
-                  key="dt"
-                  className="relative flex  px-2  group overflow-hidden false transition transform hover:-translate-y-1 duration-500"
+                  className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${dt.VideoLandingPage.DigitalStream}-primary `}
                 >
-                  <span
-                    className={`absolute top-0 left-0 h-full mt-1 ml-1 bg-secondary  group-hover:bg-${dt.VideoLandingPage.DigitalStream}-secondary `}
-                    style={{ height: "400px", width: "345px" }}
-                  ></span>
-                  <div
-                    className={`relative shadow bg-white flex-col p-5 px-5  group overflow-hidden false border border-black hover:border-${dt.VideoLandingPage.DigitalStream}-primary `}
-                  >
-                    <div className="bg-white">
-                      <Link href={dt.PageSEO.PageURL} passHref>
-                        <a
-                          onClick={() => {
-                            onClick({
-                              stream_score: resolve_stream_score(
-                                dt.VideoLandingPage.DigitalStream
-                              ),
-                              event_name: "Card Click",
-                              section_name: "Latest Videos Section",
-                              page_source: `${data.PageSEO.PageTitle}`,
-                              label: `${dt.LatestVideoCTA}`,
-                            });
-                          }}
-                          className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded"
-                        >
-                          <Image
-                            priority
-                            className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
-                            src={dt.PageSEO.ThumbnailImageURL}
-                            alt={dt.VideoLandingPage.PageHeader}
-                            width="550"
-                            height="300"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <Link href={dt.PageSEO.PageURL} passHref>
-                      <a
-                        onClick={() => {
-                          onClick({
-                            stream_score: resolve_stream_score(
-                              dt.VideoLandingPage.DigitalStream
-                            ),
-                            event_name: "Card Click",
-                            section_name: "Latest Videos Section",
-                            page_source: `${data.PageSEO.PageTitle}`,
-                            label: `${dt.LatestVideoCTA}`,
-                          });
-                        }}
-                        className="bg-white"
-                      >
-                        <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
-                          {dt.VideoTitle}
-                        </span>
-                        <Link href={dt.PageSEO.PageURL} passHref>
-                          <a
-                            onClick={() => {
-                              onClick({
-                                stream_score: resolve_stream_score(
-                                  dt.VideoLandingPage.DigitalStream
-                                ),
-                                event_name: "Card Click",
-                                section_name: "Latest Videos Section",
-                                page_source: `${data.PageSEO.PageTitle}`,
-                                label: `${dt.LatestVideoCTA}`,
-                              });
-                            }}
-                            className="sm:mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group "
-                          >
-                            <span className="hyperlink group-hover:text-gray-300">
-                              {dt.LatestVideoCTA}
-                            </span>
-                            <svg
-                              className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                              ></path>
-                            </svg>
-                          </a>
-                        </Link>
-                      </a>
+                  <div className="bg-white">
+                    <Link
+                      href={dt.PageSEO.PageURL}
+                      passHref
+                      onClick={() => {
+                        onClick({
+                          stream_score: resolve_stream_score(
+                            dt.VideoLandingPage.DigitalStream
+                          ),
+                          event_name: "Card Click",
+                          section_name: "Latest Videos Section",
+                          page_source: `${data.PageSEO.PageTitle}`,
+                          label: `${dt.LatestVideoCTA}`,
+                        });
+                      }}
+                      className="relative h-3/5 w-full block w-full h-44 overflow-hidden rounded">
+
+                      <Image
+                        priority
+                        className="bg-secondary  object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105"
+                        src={dt.PageSEO.ThumbnailImageURL}
+                        alt={dt.VideoLandingPage.PageHeader}
+                        width="550"
+                        height="300"
+                      />
+
                     </Link>
                   </div>
+                  <Link
+                    href={dt.PageSEO.PageURL}
+                    passHref
+                    onClick={() => {
+                      onClick({
+                        stream_score: resolve_stream_score(
+                          dt.VideoLandingPage.DigitalStream
+                        ),
+                        event_name: "Card Click",
+                        section_name: "Latest Videos Section",
+                        page_source: `${data.PageSEO.PageTitle}`,
+                        label: `${dt.LatestVideoCTA}`,
+                      });
+                    }}
+                    className="bg-white">
+
+                    <span className="bg-white block card-subheading h-1/5 font-semibold leading-tight text-gray-700 mb-4 hover:text-gray-900 ">
+                      {dt.VideoTitle}
+                    </span>
+                    <Link
+                      href={dt.PageSEO.PageURL}
+                      passHref
+                      onClick={() => {
+                        onClick({
+                          stream_score: resolve_stream_score(
+                            dt.VideoLandingPage.DigitalStream
+                          ),
+                          event_name: "Card Click",
+                          section_name: "Latest Videos Section",
+                          page_source: `${data.PageSEO.PageTitle}`,
+                          label: `${dt.LatestVideoCTA}`,
+                        });
+                      }}
+                      className="sm:mb-4 flex bg-white w-full inline-flex h-1/5 items-center   text-black hover:text-gray-400 group ">
+
+                      <span className="hyperlink group-hover:text-gray-300">
+                        {dt.LatestVideoCTA}
+                      </span>
+                      <svg
+                        className="w-5 h-6 mt-1 ml-2 group-hover:text-gray-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        ></path>
+                      </svg>
+
+                    </Link>
+
+                  </Link>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      </Layout>
-    </>
-  );
+        </div>
+      </section>
+    </Layout>
+  </>;
 }
 
 export const getServerSideProps = async (ctx) => {
