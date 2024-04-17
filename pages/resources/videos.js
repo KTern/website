@@ -1,6 +1,6 @@
 import Layout from "../../component/Layout";
 import React from "react";
-import useDynTabs from "react-dyn-tabs";
+// import useDynTabs from "react-dyn-tabs";
 
 export default function Videos({ h_data, f_data, data }) {
   let Tabs = [];
