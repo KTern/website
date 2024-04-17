@@ -37,7 +37,7 @@
     "react-canvas-confetti": "^1.3.0",
     "react-countdown": "^2.3.2",
     "react-dom": "^18.2.0",
-    "react-dropdown": "1.9.2",
+    "react-dropdown": "^2.0.1",
     "react-dyn-tabs": "^4.6.2",
     "react-gtm-module": "^2.0.11",
     "react-icalendar-link": "3.0.2",
