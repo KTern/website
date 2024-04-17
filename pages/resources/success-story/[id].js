@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from "next-seo";
 import { LogoJsonLd } from "next-seo";
 import { SocialProfileJsonLd } from "next-seo";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+// import remarkGfm from "remark-gfm";
 import Markdown from "markdown-to-jsx";
 import BreadCrumb from "../../../component/breadcrumb";
 import Event, {

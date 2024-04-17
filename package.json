@@ -43,10 +43,11 @@
     "react-simple-popover": "^0.2.4",
     "react-slider": "^2.0.1",
     "react-slider-component": "^0.0.5",
-    "react-tabs": "^4.0.0", 
+    "react-tabs": "^4.0.0",
     "react-toast": "^1.0.3",
     "react-tooltip": "^4.2.21",
-    "react-twitter-widgets": "^1.10.0"
+    "react-twitter-widgets": "^1.10.0",
+    "react-view-slider": "^4.6.2"
   },
   "devDependencies": {
     "autoprefixer": "10.3.3",
