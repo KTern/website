@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Head from "next/head";
 import Link from "next/link"
 import TagManager from "react-gtm-module"
+import { clarity } from 'react-microsoft-clarity';
 
 import { SocialProfileJsonLd } from "next-seo";
 import {page_event} from "../component/page_event"
@@ -14,6 +15,7 @@ const tagManagerArgs = {
 import { StoreProvider } from '../component/modal';
 function MyApp ({ Component, pageProps }) {
   const router = useRouter()
+  clarity.init('kuw9ejkqcg');
 // if(process.browser)
 // console.log(document)
   useEffect(() => {
